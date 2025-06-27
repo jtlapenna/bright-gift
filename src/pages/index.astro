@@ -189,10 +189,10 @@ const blogPosts = await getCollection('blog');
 					throw new Error(errorMsg);
 				}
 				const { ideas } = await response.json();
-				if (!ideas || !ideas.length) {
-					resultsContainer.innerHTML = `<p class="text-gray-400 text-center col-span-full" role="status">No gift ideas found. Try different details or regenerate.</p>`;
-				} else {
+				if (Array.isArray(ideas) && ideas.length) {
 					resultsContainer.innerHTML = renderIdeaCards(ideas);
+				} else {
+					resultsContainer.innerHTML = `<p class="text-red-500 text-center" role="alert">No gift ideas found or failed to parse results. Please try again.</p>`;
 				}
 				lastInputs = { recipient, interests, budget, style: selectedStyle };
 			} catch (error) {
