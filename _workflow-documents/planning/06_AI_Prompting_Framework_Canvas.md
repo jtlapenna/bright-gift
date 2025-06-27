@@ -15,16 +15,16 @@ Define how AI prompts are structured to produce high-quality, context-aware, mon
 
 ### 🔹 Dynamic Prompt Formula:
 ```
-"Suggest [3–5] [style preference] gift ideas for [recipient description]. 
+"Suggest [6–9] [style preference] gift ideas for [recipient description]. 
 They enjoy [interests]. Budget is under [$X]. 
-Each gift should include a title, a short description, and a product category tag."
+Each gift should include a title, a short description, and a product category tag. Style should be reflected in the tone and ideas."
 ```
 
 ### 🔹 Example Prompt:
 ```
-Suggest 5 handmade gift ideas for a 40-year-old dad who loves cooking and hiking. 
+Suggest 8 handmade gift ideas for a 40-year-old dad who loves cooking and hiking. 
 Keep each under $50. Focus on artisan, outdoorsy, and kitchen-themed items. 
-Return in markdown format with title, short description, and product tag.
+Return in markdown format with title, short description, and product tag. Style should be prominent in the ideas and tone.
 ```
 
 ---
@@ -83,6 +83,12 @@ Parsed into:
 | Default prompt   | Defined in code with template tokens           |
 | Prompt testing   | Weekly review + A/B tests of style impact      |
 | Edge cases       | Prompt trims extra input or asks for clarity   |
+| Prompt count     | Now requests 6–9 ideas per user request       |
+
+---
+
+## 🟢 Progress Notes
+- Updated prompt logic to request 6–9 ideas and make style prominent in both ideas and tone. Prompt builder will be updated accordingly.
 
 ---
 

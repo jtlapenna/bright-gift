@@ -1,6 +1,6 @@
 /// <reference types="astro/client" />
 import type { APIRoute } from 'astro';
-import { buildPrompt, type PromptData } from '../../utils/promptBuilder';
+import { buildPrompt, type PromptData } from '../../utils/promptBuilder.js';
 import OpenAI from 'openai';
 
 const openai = new OpenAI({
@@ -38,8 +38,8 @@ export const POST: APIRoute = async ({ request }) => {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
-  } catch (error) {
-    console.error(error);
-    return new Response(JSON.stringify({ error: 'Failed to generate ideas' }), { status: 500 });
+  } catch (error: any) {
+    console.error('OpenAI API error:', error);
+    return new Response(JSON.stringify({ error: error?.message || String(error) }), { status: 500 });
   }
 }; 
