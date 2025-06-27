@@ -97,7 +97,7 @@ const blogPosts = await getCollection('blog');
 				<h2 class="text-3xl font-bold text-center mb-12">Featured Gift Guides</h2>
 				<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 					{blogPosts.length > 0 ? (
-						blogPosts.slice(0, 3).map(post => (
+						blogPosts.slice(0, 6).map(post => (
 							<article class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col" tabindex="0" aria-label={`Guide: ${post.data.title}`}> 
 								<img src={post.data.image} alt={post.data.title} class="h-40 w-full object-cover">
 								<div class="p-6 flex-1 flex flex-col">

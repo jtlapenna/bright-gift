@@ -1,7 +1,7 @@
 ---
 title: "Eco-Friendly Gift Guide"
 description: "Sustainable and environmentally conscious gift options."
-image: "/placeholder-eco.jpg"
+image: "/placeholders/eco.jpg"
 date: "2024-06-25"
 ---
 

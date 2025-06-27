@@ -1,7 +1,7 @@
 ---
 title: "Gifts for Tech Lovers"
 description: "The best gadgets and smart gifts for the techies in your life."
-image: "/placeholder-tech.jpg"
+image: "/placeholders/tech.jpg"
 date: "2024-06-27"
 ---
 

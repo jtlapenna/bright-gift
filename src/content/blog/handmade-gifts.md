@@ -1,7 +1,7 @@
 ---
 title: "Handmade Gift Ideas"
 description: "Personal and thoughtful handmade gifts that show you care."
-image: "/placeholder-handmade.jpg"
+image: "/placeholders/handmade.jpg"
 date: "2024-06-26"
 ---
 
