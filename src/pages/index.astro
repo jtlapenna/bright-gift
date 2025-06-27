@@ -69,6 +69,27 @@ const blogPosts = await getCollection('blog');
 			</div>
 		</section>
 
+		<!-- Results Section -->
+		<section id="results" class="py-20 px-4">
+			<div class="max-w-4xl mx-auto">
+				<h2 class="text-3xl font-bold text-center mb-12">Your Gift Ideas</h2>
+				<!-- Loading state placeholder -->
+				<div id="loading" class="text-center hidden">
+					<p>Generating ideas...</p>
+				</div>
+				<!-- Results will be injected here -->
+				<div id="results-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" role="list" aria-live="polite">
+					<p id="empty-state" class="text-center text-gray-400 col-span-full">Enter details above and click Generate to see gift ideas!</p>
+				</div>
+				<!-- Regenerate Suggestions Button -->
+				<div class="text-center mt-8">
+					<button id="regenerate-btn" type="button" class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-bold py-2 px-6 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+						Regenerate Suggestions
+					</button>
+				</div>
+			</div>
+		</section>
+
 		<!-- Featured Gift Guides Grid -->
 		<!-- TODO: Make this grid dynamic using Astro content collections from src/content/blog/ -->
 		<section id="featured-guides" class="py-20 px-4">
@@ -102,25 +123,15 @@ const blogPosts = await getCollection('blog');
 			</div>
 		</section>
 
-		<!-- Results Section -->
-		<section id="results" class="py-20 px-4">
-			<div class="max-w-4xl mx-auto">
-				<h2 class="text-3xl font-bold text-center mb-12">Your Gift Ideas</h2>
-				<!-- Loading state placeholder -->
-				<div id="loading" class="text-center hidden">
-					<p>Generating ideas...</p>
-				</div>
-				<!-- Results will be injected here -->
-				<div id="results-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" role="list" aria-live="polite">
-					<p id="empty-state" class="text-center text-gray-400 col-span-full">Enter details above and click Generate to see gift ideas!</p>
-				</div>
-				<!-- Regenerate Suggestions Button -->
-				<div class="text-center mt-8">
-					<button id="regenerate-btn" type="button" class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-bold py-2 px-6 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
-						Regenerate Suggestions
-					</button>
-				</div>
-			</div>
+		<!-- About the Tool / SEO Content Block -->
+		<section id="about-tool" class="py-16 px-4 max-w-3xl mx-auto text-center" itemscope itemtype="https://schema.org/WebPage">
+			<h2 class="text-2xl font-bold mb-4" itemprop="headline">About the AI Gift Idea Generator</h2>
+			<p class="text-gray-700 dark:text-gray-300 mb-6" itemprop="description">
+				Bright Gift's AI Gift Idea Generator helps you find the perfect present for anyone, instantly. Just enter a few details and our advanced AI suggests unique, thoughtful gifts tailored to your recipient's interests, style, and budget. Save time, discover new ideas, and shop smarter—all in one place.
+			</p>
+			<a href="#tool" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors" aria-label="Try the AI Gift Finder now">
+				Try the AI Gift Finder
+			</a>
 		</section>
 
 	</main>

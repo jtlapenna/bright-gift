@@ -17,6 +17,7 @@
    - [ ] Save favorites (localStorage)
    - [x] Accessibility: labels, tab order, ARIA (in progress/complete)
    - [x] Error handling and empty state (complete)
+   - [x] Results section moved above blog grid (complete)
 3. **Featured Gift Guides Grid**
    - [ ] Dynamically populate from blog posts
    - [ ] Show 3–6 posts with image, title, link
@@ -152,5 +153,6 @@
 - Regenerate Suggestions button and Amazon affiliate link added to result cards.
 - Accessibility improved: ARIA roles/labels, radio group for style selector, results as live region.
 - Error/empty state polish: clear, accessible messages for empty, error, and incomplete form states. Client-side validation added.
+- Results section moved above blog grid for improved UX and alignment with layout plan.
 - Next: move to Featured Gift Guides Grid section of homepage.
 
