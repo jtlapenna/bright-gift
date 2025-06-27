@@ -10,13 +10,23 @@ async function fetchEtsyProduct(keywords, token) {
       'Content-Type': 'application/json'
     }
   });
-  if (!res.ok) return null;
+  if (!res.ok) {
+    console.error('Etsy API error:', res.status, await res.text());
+    return null;
+  }
   const data = await res.json();
   const product = data.results?.[0];
-  if (!product) return null;
+  if (!product) {
+    console.warn('No Etsy product found for', keywords);
+    return null;
+  }
+  const imageUrl = product.images?.[0]?.url_fullxfull || null;
+  if (!imageUrl) {
+    console.warn('No image found for Etsy product', product);
+  }
   return {
     url: product.url,
-    image: product.images?.[0]?.url_fullxfull || null
+    image: imageUrl
   };
 }
 
