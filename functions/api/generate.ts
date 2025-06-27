@@ -1,26 +1,19 @@
-/// <reference types="astro/client" />
-import type { APIRoute } from 'astro';
-import { buildPrompt, type PromptData } from '../../utils/promptBuilder.js';
+import { buildPrompt, type PromptData } from '../../src/utils/promptBuilder.js';
 import OpenAI from 'openai';
 
-const openai = new OpenAI({
-  apiKey: import.meta.env.OPENAI_API_KEY,
-});
-
-export const POST: APIRoute = async ({ request }) => {
+export const onRequestPost = async (context) => {
+  const { request, env } = context;
   const data = await request.json();
-
   const { recipient, interests, budget, style } = data as PromptData;
 
   if (!recipient || !interests || !budget) {
     return new Response(
-      JSON.stringify({
-        error: 'Missing required fields',
-      }),
+      JSON.stringify({ error: 'Missing required fields' }),
       { status: 400 }
     );
   }
 
+  const openai = new OpenAI({ apiKey: env.OPENAI_API_KEY });
   const prompt = buildPrompt({ recipient, interests, budget, style });
 
   try {
@@ -31,9 +24,7 @@ export const POST: APIRoute = async ({ request }) => {
         { role: 'user', content: prompt },
       ],
     });
-
     const ideas = completion.choices[0]?.message?.content?.trim() || '';
-
     return new Response(JSON.stringify({ ideas }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
