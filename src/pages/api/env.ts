@@ -1,10 +1,11 @@
-export async function GET() {
-  // Return all environment variables as JSON (for debugging only!)
+export async function GET({ locals, request, params, site, env }) {
+  // Try to access env vars via Cloudflare runtime context
   return new Response(
-    JSON.stringify(process.env, null, 2),
-    {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' }
-    }
+    JSON.stringify({
+      now: Date.now(),
+      env: env || {},
+      locals: locals || {}
+    }, null, 2),
+    { status: 200, headers: { 'Content-Type': 'application/json' } }
   );
 } 
