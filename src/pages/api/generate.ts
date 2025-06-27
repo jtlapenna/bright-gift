@@ -1,8 +1,7 @@
-import { buildPrompt, type PromptData } from '../../src/utils/promptBuilder.js';
+import { buildPrompt, type PromptData } from '../../utils/promptBuilder.js';
 import OpenAI from 'openai';
 
-export const onRequestPost = async (context) => {
-  const { request, env } = context;
+export const POST = async ({ request }) => {
   const data = await request.json();
   const { recipient, interests, budget, style } = data as PromptData;
 
@@ -13,7 +12,7 @@ export const onRequestPost = async (context) => {
     );
   }
 
-  const openai = new OpenAI({ apiKey: env.OPENAI_API_KEY });
+  const openai = new OpenAI({ apiKey: import.meta.env.OPENAI_API_KEY });
   const prompt = buildPrompt({ recipient, interests, budget, style });
 
   try {
