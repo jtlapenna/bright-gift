@@ -16,7 +16,7 @@
    - [x] Affiliate link placeholder (Amazon, tracking ID bright-gift-20)
    - [ ] Save favorites (localStorage)
    - [x] Accessibility: labels, tab order, ARIA (in progress/complete)
-   - [ ] Error handling and empty state
+   - [x] Error handling and empty state (complete)
 3. **Featured Gift Guides Grid**
    - [ ] Dynamically populate from blog posts
    - [ ] Show 3–6 posts with image, title, link
@@ -151,5 +151,6 @@
 ## 🟢 Progress Notes
 - Regenerate Suggestions button and Amazon affiliate link added to result cards.
 - Accessibility improved: ARIA roles/labels, radio group for style selector, results as live region.
-- Next: error/empty state polish or move to next homepage section (Featured Gift Guides Grid).
+- Error/empty state polish: clear, accessible messages for empty, error, and incomplete form states. Client-side validation added.
+- Next: move to Featured Gift Guides Grid section of homepage.
 
