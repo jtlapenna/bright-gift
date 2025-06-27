@@ -182,8 +182,13 @@ const blogPosts = await getCollection('blog');
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify({ recipient, interests, budget, style: selectedStyle }),
 				});
+				let errorMsg = 'Failed to get ideas.';
 				if (!response.ok) {
-					throw new Error('Failed to get ideas.');
+					try {
+						const err = await response.json();
+						errorMsg = err.error || errorMsg;
+					} catch {}
+					throw new Error(errorMsg);
 				}
 				const { ideas } = await response.json();
 				const html = await marked.parse(ideas);
