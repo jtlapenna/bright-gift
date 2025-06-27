@@ -142,7 +142,7 @@ const blogPosts = await getCollection('blog');
 		const form = document.querySelector('form');
 		const resultsContainer = document.getElementById('results-container');
 		const loadingIndicator = document.getElementById('loading');
-		const styleButtons = document.querySelectorAll<HTMLButtonElement>('button[type="button"]');
+		const styleButtons = document.querySelectorAll('button[type="button"]');
 		const regenerateBtn = document.getElementById('regenerate-btn');
 		const emptyState = document.getElementById('empty-state');
 
@@ -163,11 +163,10 @@ const blogPosts = await getCollection('blog');
 
 		form.addEventListener('submit', async (event) => {
 			event.preventDefault();
-			// Client-side validation for required fields
 			const formData = new FormData(form);
-			const recipient = formData.get('recipient') as string;
-			const interests = formData.get('interests') as string;
-			const budget = formData.get('budget') as string;
+			const recipient = formData.get('recipient');
+			const interests = formData.get('interests');
+			const budget = formData.get('budget');
 			if (!recipient || !interests || !budget) {
 				resultsContainer.innerHTML = `<p class="text-red-500 text-center" role="alert">Please fill in all required fields.</p>`;
 				return;
@@ -176,7 +175,6 @@ const blogPosts = await getCollection('blog');
 			resultsContainer.innerHTML = '';
 
 			try {
-				const { marked } = await import('marked');
 				const response = await fetch('/api/generate', {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
@@ -191,11 +189,10 @@ const blogPosts = await getCollection('blog');
 					throw new Error(errorMsg);
 				}
 				const { ideas } = await response.json();
-				const html = await marked.parse(ideas);
-				if (!html.trim()) {
+				if (!ideas || !ideas.length) {
 					resultsContainer.innerHTML = `<p class="text-gray-400 text-center col-span-full" role="status">No gift ideas found. Try different details or regenerate.</p>`;
 				} else {
-					resultsContainer.innerHTML = htmlToCards(html);
+					resultsContainer.innerHTML = renderIdeaCards(ideas);
 				}
 				lastInputs = { recipient, interests, budget, style: selectedStyle };
 			} catch (error) {
@@ -205,13 +202,11 @@ const blogPosts = await getCollection('blog');
 			}
 		});
 
-		// Regenerate Suggestions handler
 		regenerateBtn.addEventListener('click', async () => {
 			if (!lastInputs.recipient) return;
 			loadingIndicator.classList.remove('hidden');
 			resultsContainer.innerHTML = '';
 			try {
-				const { marked } = await import('marked');
 				const response = await fetch('/api/generate', {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
@@ -219,8 +214,7 @@ const blogPosts = await getCollection('blog');
 				});
 				if (!response.ok) throw new Error('Failed to get ideas.');
 				const { ideas } = await response.json();
-				const html = await marked.parse(ideas);
-				resultsContainer.innerHTML = htmlToCards(html);
+				resultsContainer.innerHTML = renderIdeaCards(ideas);
 			} catch (error) {
 				resultsContainer.innerHTML = `<p class="text-red-500 text-center">${error.message}</p>`;
 			} finally {
@@ -229,48 +223,18 @@ const blogPosts = await getCollection('blog');
 		});
 	});
 
-	function htmlToCards(htmlString) {
-		const parser = new DOMParser();
-		const doc = parser.parseFromString(htmlString, 'text/html');
-		let cardsHtml = '';
-
-		// Find all <strong> elements (gift titles)
-		doc.querySelectorAll('strong').forEach(titleEl => {
-			const title = titleEl.innerText || '';
-			// The description is usually the next sibling text node or <br> separated
-			let description = '';
-			let tag = '';
-			let node = titleEl.parentNode;
-			if (node) {
-				// Find the text after the <strong> (description)
-				const textNodes = Array.from(node.childNodes).filter(n => n.nodeType === Node.TEXT_NODE && n.textContent.trim());
-				if (textNodes.length > 0) {
-					description = textNodes[0].textContent.trim();
-				}
-				// Find the tag (look for <em> or _Tag: ..._)
-				const em = node.querySelector('em');
-				if (em) {
-					tag = em.innerText.replace('Tag: ', '');
-				} else {
-					// Fallback: look for _Tag: ..._ in text
-					const tagMatch = node.textContent.match(/_Tag: (.+?)_/);
-					if (tagMatch) tag = tagMatch[1];
-				}
-			}
-			cardsHtml += `
-				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-fade-in" role="listitem">
-					<h3 class="font-bold text-lg mb-2">${title}</h3>
-					<p class="text-gray-600 dark:text-gray-300 mb-4">${description}</p>
-					${tag ? `<span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">${tag}</span>` : ''}
-					<!-- Affiliate Link Button -->
-					<a href="https://www.amazon.com/s?k=${encodeURIComponent(title)}&tag=bright-gift-20" target="_blank" rel="nofollow noopener" class="inline-block mt-4 bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full transition-colors" aria-label="Search for ${title} on Amazon (affiliate link)">
-						Find on Amazon
-					</a>
-				</div>
-			`;
-		});
-
-		return cardsHtml;
+	function renderIdeaCards(ideas) {
+		return ideas.map(idea => `
+			<div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-fade-in flex flex-col items-center" role="listitem">
+				${idea.image ? `<img src="${idea.image}" alt="${idea.title}" class="h-40 w-full object-cover mb-4 rounded" loading="lazy">` : ''}
+				<h3 class="font-bold text-lg mb-2 text-center">${idea.title}</h3>
+				<p class="text-gray-600 dark:text-gray-300 mb-4 text-center">${idea.description}</p>
+				${idea.tag ? `<span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full mb-2">${idea.tag}</span>` : ''}
+				<a href="${idea.link}" target="_blank" rel="nofollow noopener" class="inline-block mt-4 bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full transition-colors" aria-label="View ${idea.title} (affiliate link)">
+					Find on ${/etsy/i.test(idea.link) ? 'Etsy' : 'Amazon'}
+				</a>
+			</div>
+		`).join('');
 	}
 
 	const style = document.createElement('style');
