@@ -229,16 +229,34 @@ const blogPosts = await getCollection('blog');
 		});
 	});
 
-	function htmlToCards(htmlString: string): string {
+	function htmlToCards(htmlString) {
 		const parser = new DOMParser();
 		const doc = parser.parseFromString(htmlString, 'text/html');
 		let cardsHtml = '';
-		
-		doc.querySelectorAll('li').forEach(item => {
-			const title = item.querySelector('strong')?.innerText || '';
-			const description = item.childNodes[1]?.textContent?.trim() || '';
-			const tag = item.querySelector('em')?.innerText.replace('Tag: ', '') || '';
 
+		// Find all <strong> elements (gift titles)
+		doc.querySelectorAll('strong').forEach(titleEl => {
+			const title = titleEl.innerText || '';
+			// The description is usually the next sibling text node or <br> separated
+			let description = '';
+			let tag = '';
+			let node = titleEl.parentNode;
+			if (node) {
+				// Find the text after the <strong> (description)
+				const textNodes = Array.from(node.childNodes).filter(n => n.nodeType === Node.TEXT_NODE && n.textContent.trim());
+				if (textNodes.length > 0) {
+					description = textNodes[0].textContent.trim();
+				}
+				// Find the tag (look for <em> or _Tag: ..._)
+				const em = node.querySelector('em');
+				if (em) {
+					tag = em.innerText.replace('Tag: ', '');
+				} else {
+					// Fallback: look for _Tag: ..._ in text
+					const tagMatch = node.textContent.match(/_Tag: (.+?)_/);
+					if (tagMatch) tag = tagMatch[1];
+				}
+			}
 			cardsHtml += `
 				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-fade-in" role="listitem">
 					<h3 class="font-bold text-lg mb-2">${title}</h3>
