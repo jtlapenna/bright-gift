@@ -1,9 +1,8 @@
 ---
-title: "Eco-Friendly Gifts"
-description: "Sustainable and thoughtful gifts for every occasion."
+title: "Eco-Friendly Gift Guide"
+description: "Sustainable and environmentally conscious gift options."
 image: "/placeholder-eco.jpg"
-slug: "eco-friendly-gifts"
-date: 2024-06-26
+date: "2024-06-25"
 ---
 
 Give a gift that's good for the planet! Discover our favorite eco-friendly picks for all ages.

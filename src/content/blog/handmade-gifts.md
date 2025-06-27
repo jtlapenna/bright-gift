@@ -1,9 +1,8 @@
 ---
-title: "Unique Handmade Gifts"
-description: "One-of-a-kind presents crafted with love and care."
+title: "Handmade Gift Ideas"
+description: "Personal and thoughtful handmade gifts that show you care."
 image: "/placeholder-handmade.jpg"
-slug: "unique-handmade-gifts"
-date: 2024-06-25
+date: "2024-06-26"
 ---
 
 Support artisans and surprise your loved ones with these unique handmade gifts.
