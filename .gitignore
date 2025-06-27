@@ -17,4 +17,4 @@ yarn-error.log*
 pnpm-debug.log*
 
 # System
-.DS_Store 
+.DS_Store
