@@ -17,23 +17,23 @@ import Layout from '../layouts/Layout.astro';
 		<section id="tool" class="py-20 px-4">
 			<div class="max-w-2xl mx-auto bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
 				<h2 class="text-3xl font-bold text-center mb-8">Gift Finder</h2>
-				<form>
+				<form aria-label="Gift Finder Form">
 					<!-- Recipient Info -->
 					<div class="mb-4">
 						<label for="recipient" class="block text-gray-700 dark:text-gray-300 font-bold mb-2">Who are you shopping for?</label>
-						<input type="text" id="recipient" name="recipient" class="w-full px-3 py-2 border rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., my 30-year-old brother">
+						<input type="text" id="recipient" name="recipient" aria-required="true" class="w-full px-3 py-2 border rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., my 30-year-old brother">
 					</div>
 
 					<!-- Interests -->
 					<div class="mb-4">
 						<label for="interests" class="block text-gray-700 dark:text-gray-300 font-bold mb-2">What do they like?</label>
-						<input type="text" id="interests" name="interests" class="w-full px-3 py-2 border rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., hiking, sci-fi movies, craft beer">
+						<input type="text" id="interests" name="interests" aria-required="true" class="w-full px-3 py-2 border rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., hiking, sci-fi movies, craft beer">
 					</div>
 
 					<!-- Budget -->
 					<div class="mb-4">
 						<label for="budget" class="block text-gray-700 dark:text-gray-300 font-bold mb-2">What's your budget?</label>
-						<select id="budget" name="budget" class="w-full px-3 py-2 border rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+						<select id="budget" name="budget" aria-required="true" class="w-full px-3 py-2 border rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
 							<option value="25">Under $25</option>
 							<option value="50" selected>Under $50</option>
 							<option value="100">Under $100</option>
@@ -41,18 +41,19 @@ import Layout from '../layouts/Layout.astro';
 						</select>
 					</div>
 
-					<!-- Style -->
+					<!-- Style Selector as Radio Group -->
 					<div class="mb-6">
 						<label class="block text-gray-700 dark:text-gray-300 font-bold mb-2">What's the style?</label>
-						<div class="flex flex-wrap gap-2">
-							<button type="button" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">Funny</button>
-							<button type="button" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">Handmade</button>
-							<button type="button" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">Eco-Friendly</button>
-							<button type="button" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">Quirky</button>
-							<button type="button" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">Techy</button>
-							<button type="button" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">Luxury</button>
-							<button type="button" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">LGBTQ+ Owned</button>
-							<button type="button" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">BIPOC Owned</button>
+						<div class="flex flex-wrap gap-2" role="radiogroup" aria-label="Gift Style">
+							<!-- Each button is a radio -->
+							<button type="button" role="radio" aria-checked="false" tabindex="0" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">Funny</button>
+							<button type="button" role="radio" aria-checked="false" tabindex="-1" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">Handmade</button>
+							<button type="button" role="radio" aria-checked="false" tabindex="-1" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">Eco-Friendly</button>
+							<button type="button" role="radio" aria-checked="false" tabindex="-1" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">Quirky</button>
+							<button type="button" role="radio" aria-checked="false" tabindex="-1" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">Techy</button>
+							<button type="button" role="radio" aria-checked="false" tabindex="-1" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">Luxury</button>
+							<button type="button" role="radio" aria-checked="false" tabindex="-1" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">LGBTQ+ Owned</button>
+							<button type="button" role="radio" aria-checked="false" tabindex="-1" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">BIPOC Owned</button>
 						</div>
 					</div>
 
@@ -75,13 +76,19 @@ import Layout from '../layouts/Layout.astro';
 					<p>Generating ideas...</p>
 				</div>
 				<!-- Results will be injected here -->
-				<div id="results-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div id="results-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" role="list" aria-live="polite">
 					<!-- Example Card -->
 					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
 						<h3 class="font-bold text-lg mb-2">Example Gift Idea</h3>
 						<p class="text-gray-600 dark:text-gray-300 mb-4">This is where the short, AI-generated description of the gift will appear.</p>
 						<span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Example Tag</span>
 					</div>
+				</div>
+				<!-- Regenerate Suggestions Button -->
+				<div class="text-center mt-8">
+					<button id="regenerate-btn" type="button" class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-bold py-2 px-6 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+						Regenerate Suggestions
+					</button>
 				</div>
 			</div>
 		</section>
@@ -95,8 +102,10 @@ import Layout from '../layouts/Layout.astro';
 		const resultsContainer = document.getElementById('results-container');
 		const loadingIndicator = document.getElementById('loading');
 		const styleButtons = document.querySelectorAll<HTMLButtonElement>('button[type="button"]');
+		const regenerateBtn = document.getElementById('regenerate-btn');
 
 		let selectedStyle = '';
+		let lastInputs = {};
 
 		styleButtons.forEach(button => {
 			button.addEventListener('click', () => {
@@ -137,6 +146,31 @@ import Layout from '../layouts/Layout.astro';
 				const html = await marked.parse(ideas);
 				resultsContainer.innerHTML = htmlToCards(html);
 
+				lastInputs = { recipient, interests, budget, style: selectedStyle };
+
+			} catch (error) {
+				resultsContainer.innerHTML = `<p class="text-red-500 text-center">${error.message}</p>`;
+			} finally {
+				loadingIndicator.classList.add('hidden');
+			}
+		});
+
+		// Regenerate Suggestions handler
+		regenerateBtn.addEventListener('click', async () => {
+			if (!lastInputs.recipient) return;
+			loadingIndicator.classList.remove('hidden');
+			resultsContainer.innerHTML = '';
+			try {
+				const { marked } = await import('marked');
+				const response = await fetch('/api/generate', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify(lastInputs),
+				});
+				if (!response.ok) throw new Error('Failed to get ideas.');
+				const { ideas } = await response.json();
+				const html = await marked.parse(ideas);
+				resultsContainer.innerHTML = htmlToCards(html);
 			} catch (error) {
 				resultsContainer.innerHTML = `<p class="text-red-500 text-center">${error.message}</p>`;
 			} finally {
@@ -156,10 +190,14 @@ import Layout from '../layouts/Layout.astro';
 			const tag = item.querySelector('em')?.innerText.replace('Tag: ', '') || '';
 
 			cardsHtml += `
-				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-fade-in">
+				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-fade-in" role="listitem">
 					<h3 class="font-bold text-lg mb-2">${title}</h3>
 					<p class="text-gray-600 dark:text-gray-300 mb-4">${description}</p>
 					${tag ? `<span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">${tag}</span>` : ''}
+					<!-- Affiliate Link Button -->
+					<a href="https://www.amazon.com/s?k=${encodeURIComponent(title)}&tag=bright-gift-20" target="_blank" rel="nofollow noopener" class="inline-block mt-4 bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full transition-colors" aria-label="Search for ${title} on Amazon (affiliate link)">
+						Find on Amazon
+					</a>
 				</div>
 			`;
 		});
