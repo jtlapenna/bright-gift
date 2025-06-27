@@ -1,0 +1,17 @@
+---
+description: Ensure AI runs a quick self-audit before finalizing any code change
+globs:
+  - "**/*.ts"
+  - "**/*.js"
+  - "**/*.py"
+alwaysApply: true
+---
+
+# Self-Review Checklist
+
+Before submitting or committing, agent must:
+1. Run lint and formatter (e.g. `npm run lint && npm run format`).  
+2. Execute tests (`npm test` or `pytest`).  
+3. Confirm no TODO/FIXME comments remain.  
+4. Verify that all new functions have docstrings or JSDoc.  
+5. Summarize changes in a brief bullet list.

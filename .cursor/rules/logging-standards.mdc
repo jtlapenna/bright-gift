@@ -1,0 +1,15 @@
+---
+description: Enforce consistent, structured logging
+globs:
+  - "src/**/*.ts"
+  - "src/**/*.js"
+  - "src/**/*.py"
+alwaysApply: false
+---
+
+# Logging Standards
+
+- Use a central logger (e.g., Winston, Bunyan, Python’s `logging`).  
+- Log at appropriate levels: `debug`, `info`, `warn`, `error`.  
+- Include request IDs or correlation IDs in every log entry.  
+- Avoid logging sensitive data (PII, credentials).

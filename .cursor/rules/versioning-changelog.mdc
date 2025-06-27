@@ -1,0 +1,29 @@
+---
+description: Auto-update CHANGELOG.md with semantic version bumps and entry templates
+globs:
+  - "CHANGELOG.md"
+  - "package.json"
+alwaysApply: true
+---
+
+# Versioning & Changelog
+
+1. **Semantic Versioning**  
+   - On “feat”: bump **minor** (X.Y+1.0)  
+   - On “fix”: bump **patch** (X.Y.Z+1)  
+   - On “BREAKING CHANGE”: bump **major** (X+1.0.0)
+
+2. **CHANGELOG.md Updates**  
+   - Prepend a new section under the unreleased header:  
+     ```
+     ## [Unreleased]
+     ### Added
+     - Short, imperative bullet (e.g. “Add user profile endpoint”)
+     ### Fixed
+     - “Fix null-pointer in payment flow”
+     ```  
+   - After release, replace `[Unreleased]` with `[vX.Y.Z] – YYYY-MM-DD` and create a fresh “Unreleased” section above.
+
+3. **Automation**  
+   - Agent must modify both `package.json` and `CHANGELOG.md` together.  
+   - Use npm script or CLI tool (e.g. `standard-version`) where possible.  

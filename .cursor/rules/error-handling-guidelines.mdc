@@ -1,0 +1,16 @@
+---
+description: Enforce robust error handling patterns
+globs:
+  - "src/**/*.ts"
+  - "src/**/*.js"
+  - "src/**/*.py"
+alwaysApply: false
+---
+
+# Error-Handling Guidelines
+
+- Wrap external calls (I/O, network, DB) in try/catch (or `except`).  
+- Provide meaningful error messages—include context and possible causes.  
+- Do not swallow errors silently; rethrow or log appropriately.  
+- Use domain-specific error types (e.g., `ValidationError`, `NotFoundError`).  
+- Clean up resources (files, connections) in a `finally` block.

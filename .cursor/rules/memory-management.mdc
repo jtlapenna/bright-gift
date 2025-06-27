@@ -1,0 +1,14 @@
+---
+description: |
+globs: 
+alwaysApply: true
+---
+
+# Memory Management
+
+- **Remembering…**: At the start of each session, load relevant memory to recall project context.  
+- **Reference Memory**: Whenever making design or code decisions, explicitly reference stored knowledge as “memory.”  
+- **Update Memory**:
+  1. Create or update entities in the knowledge graph (components, modules, files).  
+  2. Define relationships (imports, dependencies, hierarchies).  
+  3. Store observations about patterns, performance considerations, and architectural decisions.

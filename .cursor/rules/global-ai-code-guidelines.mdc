@@ -1,0 +1,24 @@
+---
+description: |
+  Best practices for any AI-powered code generation across JS, TS, Python, etc.
+alwaysApply: false
+globs:
+  - "**/*.ts"
+  - "**/*.js"
+  - "**/*.py"
+  - "**/*.tsx"
+  - "**/*.jsx"
+---
+
+# Global AI Code-Generation Guidelines
+
+- **Minimalism**: Write as few lines of code as possible.  
+- **Commenting**: Label each block with a brief purpose comment.  
+- **Clarity**: Use early returns to reduce nesting.  
+- **DRY**: Follow best practices and avoid repetition.  
+- **Plan First**: Provide step-by-step pseudocode before implementation.  
+- **Verify**: Ensure code compiles, runs tests, and is bug-free before finalizing.  
+- **Honesty**: If uncertain, explicitly state so rather than hallucinating.  
+- **Imports & Naming**: Include all needed imports; name components clearly.  
+- **Modularity**: Break large tasks into smaller, testable chunks.  
+- **Brevity**: Be concise—minimize unnecessary prose.

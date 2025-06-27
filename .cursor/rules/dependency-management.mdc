@@ -1,0 +1,14 @@
+---
+description: Prevent unused or outdated dependencies
+globs:
+  - "package.json"
+  - "requirements.txt"
+alwaysApply: true
+---
+
+# Dependency Management
+
+- Scan for unused dependencies (`npm prune && npm ls --depth=0`).  
+- Pin versions for production dependencies (avoid `^` or `latest`).  
+- Group devDependencies separately.  
+- After adding/removing a package, run a full build to catch missing modules.

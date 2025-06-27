@@ -1,0 +1,14 @@
+---
+description: Remind agent to consider performance implications
+globs:
+  - "src/**/*.ts"
+  - "src/**/*.js"
+alwaysApply: false
+---
+
+# Performance & Optimization
+
+- Avoid O(n²) algorithms on large datasets—use hashing or streaming.  
+- Defer heavy computations off the main thread or use pagination.  
+- Cache repeated external calls or database queries.  
+- Benchmark critical paths and log timings for future analysis.

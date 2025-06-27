@@ -1,0 +1,181 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="AI Gift Idea Generator | Find the Perfect Gift in Seconds">
+	<main class="font-sans text-gray-800 dark:text-gray-200">
+		<!-- Hero Section -->
+		<section class="bg-white dark:bg-gray-800 text-center py-20">
+			<h1 class="text-5xl font-bold mb-4">Find the Perfect Gift in Seconds</h1>
+			<p class="text-xl text-gray-600 dark:text-gray-300 mb-8">Personalized gift ideas powered by AI – just tell us who you're shopping for.</p>
+			<button class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">
+				Try the Free Gift Finder
+			</button>
+		</section>
+
+		<!-- Tool Section -->
+		<section id="tool" class="py-20 px-4">
+			<div class="max-w-2xl mx-auto bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
+				<h2 class="text-3xl font-bold text-center mb-8">Gift Finder</h2>
+				<form>
+					<!-- Recipient Info -->
+					<div class="mb-4">
+						<label for="recipient" class="block text-gray-700 dark:text-gray-300 font-bold mb-2">Who are you shopping for?</label>
+						<input type="text" id="recipient" name="recipient" class="w-full px-3 py-2 border rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., my 30-year-old brother">
+					</div>
+
+					<!-- Interests -->
+					<div class="mb-4">
+						<label for="interests" class="block text-gray-700 dark:text-gray-300 font-bold mb-2">What do they like?</label>
+						<input type="text" id="interests" name="interests" class="w-full px-3 py-2 border rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., hiking, sci-fi movies, craft beer">
+					</div>
+
+					<!-- Budget -->
+					<div class="mb-4">
+						<label for="budget" class="block text-gray-700 dark:text-gray-300 font-bold mb-2">What's your budget?</label>
+						<select id="budget" name="budget" class="w-full px-3 py-2 border rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+							<option value="25">Under $25</option>
+							<option value="50" selected>Under $50</option>
+							<option value="100">Under $100</option>
+							<option value="200">Under $200</option>
+						</select>
+					</div>
+
+					<!-- Style -->
+					<div class="mb-6">
+						<label class="block text-gray-700 dark:text-gray-300 font-bold mb-2">What's the style?</label>
+						<div class="flex flex-wrap gap-2">
+							<button type="button" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">Funny</button>
+							<button type="button" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">Handmade</button>
+							<button type="button" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">Eco-Friendly</button>
+							<button type="button" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">Quirky</button>
+							<button type="button" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">Techy</button>
+							<button type="button" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">Luxury</button>
+							<button type="button" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">LGBTQ+ Owned</button>
+							<button type="button" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm hover:bg-gray-300 dark:hover:bg-gray-500">BIPOC Owned</button>
+						</div>
+					</div>
+
+					<!-- Submit Button -->
+					<div class="text-center">
+						<button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors">
+							Generate Gift Ideas
+						</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<!-- Results Section -->
+		<section id="results" class="py-20 px-4">
+			<div class="max-w-4xl mx-auto">
+				<h2 class="text-3xl font-bold text-center mb-12">Your Gift Ideas</h2>
+				<!-- Loading state placeholder -->
+				<div id="loading" class="text-center hidden">
+					<p>Generating ideas...</p>
+				</div>
+				<!-- Results will be injected here -->
+				<div id="results-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<!-- Example Card -->
+					<div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+						<h3 class="font-bold text-lg mb-2">Example Gift Idea</h3>
+						<p class="text-gray-600 dark:text-gray-300 mb-4">This is where the short, AI-generated description of the gift will appear.</p>
+						<span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Example Tag</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+</Layout>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const form = document.querySelector('form');
+		const resultsContainer = document.getElementById('results-container');
+		const loadingIndicator = document.getElementById('loading');
+		const styleButtons = document.querySelectorAll<HTMLButtonElement>('button[type="button"]');
+
+		let selectedStyle = '';
+
+		styleButtons.forEach(button => {
+			button.addEventListener('click', () => {
+				styleButtons.forEach(btn => {
+					btn.classList.remove('bg-blue-600', 'text-white');
+					btn.classList.add('bg-gray-200', 'text-gray-700');
+				});
+				button.classList.add('bg-blue-600', 'text-white');
+				button.classList.remove('bg-gray-200', 'text-gray-700');
+				selectedStyle = button.innerText;
+			});
+		});
+
+		form.addEventListener('submit', async (event) => {
+			event.preventDefault();
+			
+			const formData = new FormData(form);
+			const recipient = formData.get('recipient') as string;
+			const interests = formData.get('interests') as string;
+			const budget = formData.get('budget') as string;
+
+			loadingIndicator.classList.remove('hidden');
+			resultsContainer.innerHTML = '';
+
+			try {
+				const { marked } = await import('marked');
+				const response = await fetch('/api/generate', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ recipient, interests, budget, style: selectedStyle }),
+				});
+
+				if (!response.ok) {
+					throw new Error('Failed to get ideas.');
+				}
+
+				const { ideas } = await response.json();
+				const html = await marked.parse(ideas);
+				resultsContainer.innerHTML = htmlToCards(html);
+
+			} catch (error) {
+				resultsContainer.innerHTML = `<p class="text-red-500 text-center">${error.message}</p>`;
+			} finally {
+				loadingIndicator.classList.add('hidden');
+			}
+		});
+	});
+
+	function htmlToCards(htmlString: string): string {
+		const parser = new DOMParser();
+		const doc = parser.parseFromString(htmlString, 'text/html');
+		let cardsHtml = '';
+		
+		doc.querySelectorAll('li').forEach(item => {
+			const title = item.querySelector('strong')?.innerText || '';
+			const description = item.childNodes[1]?.textContent?.trim() || '';
+			const tag = item.querySelector('em')?.innerText.replace('Tag: ', '') || '';
+
+			cardsHtml += `
+				<div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-fade-in">
+					<h3 class="font-bold text-lg mb-2">${title}</h3>
+					<p class="text-gray-600 dark:text-gray-300 mb-4">${description}</p>
+					${tag ? `<span class="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">${tag}</span>` : ''}
+				</div>
+			`;
+		});
+
+		return cardsHtml;
+	}
+
+	const style = document.createElement('style');
+	style.innerHTML = `
+		@keyframes fadeIn {
+			from { opacity: 0; transform: translateY(10px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+		.animate-fade-in {
+			animation: fadeIn 0.5s ease-out forwards;
+		}
+	`;
+	document.head.appendChild(style);
+</script> 

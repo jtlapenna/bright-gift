@@ -1,0 +1,13 @@
+---
+description: |
+  Enforce that all project documentation lives in the `_workflow` directory.
+alwaysApply: true
+globs:
+  - "**/*"
+---
+
+# Documentation Structure
+
+- **All** documentation files **must** reside in the `_workflow` folder.  
+- The `_workflow` directory contains planning, architecture, and development docs.  
+- **Never** create new doc directories or move files outside `_workflow`.

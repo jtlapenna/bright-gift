@@ -1,0 +1,19 @@
+---
+description: Standardize Git commit messages
+globs:
+  - ".git/COMMIT_EDITMSG"
+alwaysApply: true
+---
+
+# Commit-Message Format
+
+Use this template:
+```
+<type>(<scope>): <short description>  
+
+<body>               # optional, 1–2 sentences  
+<footer>             # optional, e.g. “Closes #123”
+```
+- **type**: feat, fix, docs, style, refactor, test, chore  
+- **scope**: the area of change (e.g., “auth”, “ui”, “api”)  
+- Limit the first line to fifty characters.
