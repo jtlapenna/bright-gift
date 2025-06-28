@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 
 // Get all blog posts, excluding drafts
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
-const allGiftGuides = await getCollection('giftGuides', ({ data }) => !data.draft);
+const allGiftGuides = await getCollection('gift-guides', ({ data }) => !data.draft);
 const allFaqs = await getCollection('faqs', ({ data }) => !data.draft);
 
 // Sort by date (newest first)

@@ -4,7 +4,15 @@ import { getCollection } from 'astro:content';
 import heroImage from '../assets/hero-image.png';
 // Phosphor Icons for Amazon placeholders
 import { DeviceMobile, Book, TShirt, House, Tree, CookingPot, PuzzlePiece, Lipstick, SoccerBall, PawPrint, Baby, Car, Briefcase, MusicNote, Heartbeat, ShoppingBag } from 'phosphor-icons';
+
 const blogPosts = await getCollection('blog');
+const giftGuides = await getCollection('gift-guides');
+
+// Combine and sort all content by date
+const allContent = [
+	...blogPosts.map(post => ({ ...post, type: 'blog' })),
+	...giftGuides.map(guide => ({ ...guide, type: 'gift-guide' }))
+].sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 ---
 
 <Layout title="AI Gift Idea Generator | Find the Perfect Gift in Seconds">
@@ -113,14 +121,14 @@ const blogPosts = await getCollection('blog');
 			<div class="max-w-5xl mx-auto">
 				<h2 class="text-3xl font-bold text-center mb-12 font-poppins text-[#1C2E4A]">Featured Gift Guides</h2>
 				<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-					{blogPosts.length > 0 ? (
-						blogPosts.slice(0, 6).map(post => (
-							<article class="bg-[#A3E4DB] rounded-2xl shadow-lg overflow-hidden flex flex-col" tabindex="0" aria-label={`Guide: ${post.data.title}`}> 
-								<img src={post.data.image} alt={post.data.title} class="h-40 w-full object-cover rounded-t-xl shadow">
+					{allContent.length > 0 ? (
+						allContent.slice(0, 6).map(item => (
+							<article class="bg-[#A3E4DB] rounded-2xl shadow-lg overflow-hidden flex flex-col" tabindex="0" aria-label={`Guide: ${item.data.title}`}> 
+								<img src={item.data.image} alt={item.data.title} class="h-40 w-full object-cover rounded-t-xl shadow">
 								<div class="p-6 flex-1 flex flex-col">
-									<h3 class="font-bold text-lg mb-2 font-poppins text-[#1C2E4A]">{post.data.title}</h3>
-									<p class="text-[#333] mb-4 flex-1 font-inter">{post.data.description}</p>
-									<a href={`/blog/${post.slug}`} class="mt-auto inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-2 px-4 rounded-full transition-colors font-poppins shadow" aria-label={`Read ${post.data.title} guide`}>Read Guide</a>
+									<h3 class="font-bold text-lg mb-2 font-poppins text-[#1C2E4A]">{item.data.title}</h3>
+									<p class="text-[#333] mb-4 flex-1 font-inter">{item.data.description}</p>
+									<a href={`/blog/${item.slug}`} class="mt-auto inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-2 px-4 rounded-full transition-colors font-poppins shadow" aria-label={`Read ${item.data.title} guide`}>Read Guide</a>
 								</div>
 							</article>
 						))

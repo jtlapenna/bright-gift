@@ -2,10 +2,12 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
+export const prerender = true;
+
 // Generate static paths for all content
 export async function getStaticPaths() {
   const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
-  const giftGuides = await getCollection('giftGuides', ({ data }) => !data.draft);
+  const giftGuides = await getCollection('gift-guides', ({ data }) => !data.draft);
   const faqs = await getCollection('faqs', ({ data }) => !data.draft);
 
   const paths = [
