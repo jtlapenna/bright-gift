@@ -159,8 +159,6 @@ Beautiful journals for tracking plant growth, care schedules, and observations m
 **Price Range:** $25–75  
 Gift cards to local plant shops or online retailers allow plant lovers to choose exactly what they want. Many shops also offer care classes or workshops that can be included.
 
-> 🤖 **Want more personalized gift ideas? Our [AI Gift Finder](https://bright-gift.com) can suggest the perfect plant gifts based on your budget, occasion, and the recipient's specific interests!**
-
 ---
 
 ## Tips for Choosing Plant Gifts Under $75
@@ -171,8 +169,6 @@ Gift cards to local plant shops or online retailers allow plant lovers to choose
 4. **Include care instructions:** Always provide care information, especially for living gifts.
 5. **Consider the season:** Some plants are better gifted during certain times of the year.
 6. **Bundle items:** Combine a plant with a pot or care tool for a complete gift package.
-
-> 💡 **Need help matching gifts to specific plant lovers? Try our [Gift Idea Generator](https://bright-gift.com) – it asks smart questions to find the perfect present!**
 
 ---
 
@@ -200,8 +196,6 @@ Gift cards to local plant shops or online retailers allow plant lovers to choose
 ---
 
 Remember, the best plant gifts are those that show you understand and appreciate their passion for growing things. Whether it's a rare plant, a beautiful pot, or a useful tool, any gift that supports their plant journey will be deeply appreciated—especially when it fits within a budget!
-
-> 🎁 **Still not sure what to choose? Let our [AI Gift Finder](https://bright-gift.com) help you discover the perfect plant gift for your special someone!**
 
 ---
 

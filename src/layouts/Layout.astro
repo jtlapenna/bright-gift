@@ -6,6 +6,8 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+
+const isHome = Astro.url.pathname === "/";
 ---
 
 <!doctype html>
@@ -19,12 +21,14 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<header class="w-full bg-[#FEF2D3] border-b border-slate-100 py-3 px-4 flex items-center">
-			<a href="/" class="flex items-center gap-2">
-				<img src="/bright-gift-logo.png" alt="BrightGift logo" class="h-10 w-auto" style="display:inline-block;" />
-				<span class="sr-only">BrightGift Home</span>
-			</a>
-		</header>
+		{ !isHome && (
+			<header class="w-full bg-[#FEF2D3] border-b border-slate-100 py-3 px-4 flex items-center">
+				<a href="/" class="flex items-center gap-2">
+					<img src="/bright-gift-logo.png" alt="BrightGift logo" class="h-10 w-auto" style="display:inline-block;" />
+					<span class="sr-only">BrightGift Home</span>
+				</a>
+			</header>
+		)}
 		<slot />
 	</body>
 </html> 
