@@ -197,5 +197,6 @@ Gift cards to local plant shops or online retailers allow plant lovers to choose
 
 Remember, the best plant gifts are those that show you understand and appreciate their passion for growing things. Whether it's a rare plant, a beautiful pot, or a useful tool, any gift that supports their plant journey will be deeply appreciated—especially when it fits within a budget!
 
+---
 
 *Looking for more gift ideas? Check out our other gift guides for different budgets and interests. Have a specific plant lover in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present!* 
