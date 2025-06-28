@@ -152,36 +152,6 @@ const readTime = post.data.readTime || 5;
           <article class="prose prose-lg max-w-none">
             <Content />
           </article>
-
-          <!-- Affiliate Links Section -->
-          {post.data.affiliateLinks && post.data.affiliateLinks.length > 0 && (
-            <div class="mt-12 p-6 bg-slate-50 rounded-lg">
-              <h3 class="text-xl font-semibold text-slate-900 mb-4">
-                Recommended Products
-              </h3>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {post.data.affiliateLinks.map((link) => (
-                  <a 
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="block p-4 bg-white rounded-lg border border-slate-200 hover:border-coral-300 hover:shadow-md transition-all"
-                  >
-                    <div class="flex items-center justify-between">
-                      <span class="text-slate-900 font-medium">{link.text}</span>
-                      <span class="text-coral-600 text-sm">
-                        {link.platform === 'amazon' ? 'View on Amazon' : 
-                         link.platform === 'etsy' ? 'View on Etsy' : 'View Product'}
-                      </span>
-                    </div>
-                  </a>
-                ))}
-              </div>
-              <p class="text-xs text-slate-500 mt-4">
-                *As an Amazon Associate and Etsy affiliate, we earn from qualifying purchases.
-              </p>
-            </div>
-          )}
         </div>
 
         <!-- Sidebar -->
