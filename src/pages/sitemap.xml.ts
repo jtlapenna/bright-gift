@@ -13,16 +13,24 @@ export async function GET() {
     '/blog',
     '/about',
     '/privacy',
-    '/terms'
+    '/terms',
+    '/top-gifts'
   ];
 
   // Generate URLs for static pages
-  const staticUrls = staticPages.map(page => ({
-    url: `${baseUrl}${page}`,
-    lastmod: new Date().toISOString(),
-    changefreq: page === '' ? 'daily' : 'weekly',
-    priority: page === '' ? 1.0 : 0.8
-  }));
+  const staticUrls = staticPages.map(page => {
+    // Set a lower priority for the top-gifts page until it's ready to be linked in navigation
+    // This page is currently hidden from navigation until we have the necessary content
+    const priority = page === '' ? 1.0 : 
+                    page === '/top-gifts' ? 0.5 : 0.8;
+    
+    return {
+      url: `${baseUrl}${page}`,
+      lastmod: new Date().toISOString(),
+      changefreq: page === '' ? 'daily' : 'weekly',
+      priority
+    };
+  });
 
   // Generate URLs for blog posts
   const blogUrls = blogPosts.map(post => ({

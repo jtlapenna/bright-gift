@@ -1,0 +1,197 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Define gift categories with their links
+const giftCategories = [
+  {
+    title: "Top 10 Gifts for Coffee Lovers",
+    slug: "gifts-for-coffee-lovers",
+    image: "/placeholders/coffee.jpg",
+    description: "Perfect presents for caffeine enthusiasts, from specialty beans to brewing equipment."
+  },
+  {
+    title: "Top 10 Gifts for Plant Parents",
+    slug: "gifts-for-plant-lovers",
+    image: "/placeholders/plants.jpg",
+    description: "Thoughtful gifts for those with a green thumb, from rare plants to stylish planters."
+  },
+  {
+    title: "Top 10 Tech Gifts Under $50",
+    slug: "tech-gifts-under-50",
+    image: "/placeholders/tech.jpg",
+    description: "Budget-friendly gadgets and accessories that any tech enthusiast will appreciate."
+  },
+  {
+    title: "Top 10 Gifts for Coworkers",
+    slug: "gifts-under-25-for-coworkers",
+    image: "/placeholders/coworkers.jpg",
+    description: "Appropriate and thoughtful gifts for workplace relationships that won't break the bank."
+  },
+  {
+    title: "Top 10 Sustainable Gifts",
+    slug: "eco-friendly-gifts",
+    image: "/placeholders/eco.jpg",
+    description: "Environmentally conscious presents that are both thoughtful and planet-friendly."
+  },
+  {
+    title: "Top 10 Last-Minute Amazon Gifts",
+    slug: "last-minute-amazon-gifts",
+    image: "/placeholders/amazon.jpg",
+    description: "Quick-shipping options for when you need a great gift in a hurry with Prime delivery."
+  }
+];
+
+// Define categories for the breadcrumb
+const breadcrumbData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://bright-gift.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Top 10 Gift Ideas",
+      "item": "https://bright-gift.com/top-gifts"
+    }
+  ]
+};
+
+// Define webpage schema
+const webpageData = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Top 10 Gift Ideas - Ultimate Gift Guide for Any Occasion",
+  "description": "Discover our curated selection of the top 10 gift ideas for any occasion. Find the perfect present with our expert recommendations.",
+  "url": "https://bright-gift.com/top-gifts",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": giftCategories.map((category, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "url": `https://bright-gift.com/blog/${category.slug}`,
+      "name": category.title
+    }))
+  }
+};
+---
+
+<Layout 
+  title="Top 10 Gift Ideas - Ultimate Gift Guide for Any Occasion"
+  description="Discover our curated selection of the top 10 gift ideas for any occasion. Find the perfect present with our expert recommendations."
+  image="/images/homepage-banner.webp"
+  keywords={["top gifts", "best gift ideas", "gift recommendations", "top 10 gifts", "ultimate gift guide"]}
+  canonical="https://bright-gift.com/top-gifts"
+  ogType="website"
+  twitterCard="summary_large_image"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
+  <script type="application/ld+json" set:html={JSON.stringify(webpageData)} />
+
+  <main class="font-sans text-gray-800 dark:text-gray-200">
+    <!-- Breadcrumb -->
+    <nav class="bg-slate-50 py-3 px-4 mb-6">
+      <div class="max-w-6xl mx-auto">
+        <ol class="flex text-sm">
+          <li><a href="/" class="text-coral-500 hover:underline">Home</a></li>
+          <li class="mx-2 text-slate-400">/</li>
+          <li class="text-slate-600">Top 10 Gift Ideas</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-[#FEF2D3] py-12 px-4 mb-8">
+      <div class="max-w-6xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 font-poppins text-[#1C2E4A]">Top 10 Gift Ideas</h1>
+        <p class="text-xl text-[#333] max-w-3xl mx-auto font-inter">
+          Our expertly curated selection of the best gift ideas for any occasion. Find the perfect present with these top recommendations.
+        </p>
+      </div>
+    </header>
+
+    <!-- Intro Section -->
+    <section class="max-w-4xl mx-auto px-4 py-6 mb-8">
+      <p class="text-lg text-[#333]">
+        Finding the perfect gift can be challenging, but we've done the hard work for you. Browse our carefully selected lists of top-rated gifts by category to quickly find something that will delight your recipient, whatever their interests or your budget.
+      </p>
+      <div class="mt-6 bg-[#FEF2D3] p-4 rounded-lg flex items-center">
+        <span class="text-2xl mr-2">🎯</span>
+        <p class="text-[#1C2E4A]">
+          Not sure where to start? Try our <a href="/#tool" class="font-semibold text-[#FF6B6B] hover:underline">Gift Idea Generator</a> for instant personalized recommendations.
+        </p>
+      </div>
+    </section>
+
+    <!-- Gift Categories Section -->
+    <section class="max-w-5xl mx-auto px-4 py-8">
+      <div class="space-y-12">
+        {giftCategories.map((category) => (
+          <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/3 relative">
+              <img 
+                src={category.image} 
+                alt={category.title} 
+                class="h-full w-full object-cover" 
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6 md:w-2/3">
+              <h2 class="text-2xl font-bold mb-3 font-poppins text-[#1C2E4A]">
+                <a href={`/blog/${category.slug}`} class="hover:text-[#FF6B6B]">
+                  {category.title}
+                </a>
+              </h2>
+              <p class="text-[#333] mb-4">{category.description}</p>
+              <a 
+                href={`/blog/${category.slug}`} 
+                class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-2 px-6 rounded-full transition-colors font-poppins shadow"
+              >
+                View Gift Ideas
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- SEO Content Section -->
+    <section class="bg-slate-50 py-12 px-4 mt-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-bold mb-6 font-poppins text-[#1C2E4A] text-center">Why Our Gift Guides Stand Out</h2>
+        <div class="prose prose-lg mx-auto">
+          <p>At BrightGift, we understand that finding the perfect gift is about more than just checking a box. It's about showing someone you care enough to find something that resonates with their interests and passions. Our gift guides are meticulously researched and regularly updated to ensure we're recommending only the best options.</p>
+          
+          <p>When curating our top 10 lists, we consider multiple factors:</p>
+          
+          <ul>
+            <li><strong>Quality and durability</strong> - We prioritize items that will stand the test of time</li>
+            <li><strong>Value for money</strong> - Great gifts don't have to break the bank</li>
+            <li><strong>Uniqueness</strong> - We search for items that aren't the same old gifts everyone gives</li>
+            <li><strong>Recipient satisfaction</strong> - Based on reviews and feedback from real gift recipients</li>
+            <li><strong>Shipping availability</strong> - Especially important for last-minute shoppers</li>
+          </ul>
+          
+          <p>Whether you're shopping for a birthday, holiday, anniversary, or "just because," our categorized gift guides make it easy to find something perfect for anyone on your list.</p>
+          
+          <p>Can't find exactly what you're looking for? Our <a href="/#tool" class="text-coral-500 hover:underline">AI Gift Finder tool</a> can provide personalized recommendations based on your specific recipient and budget.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-2xl font-bold mb-4 font-poppins text-[#1C2E4A]">Need More Personalized Gift Ideas?</h2>
+        <p class="text-lg text-[#333] mb-6">Our AI Gift Finder can help you discover the perfect gift based on your recipient's interests and your budget.</p>
+        <a href="/#tool" class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins text-lg shadow">
+          Try Our Gift Finder
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout> 

@@ -13,6 +13,51 @@ const allContent = [
 	...blogPosts.map(post => ({ ...post, type: 'blog' })),
 	...giftGuides.map(guide => ({ ...guide, type: 'gift-guide' }))
 ].sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+// Define structured data for the homepage
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "BrightGift - AI Gift Idea Generator",
+	"url": "https://bright-gift.com",
+	"description": "Find the perfect gift in seconds with our AI-powered gift idea generator. Personalized recommendations for any recipient, budget, and occasion.",
+	"potentialAction": {
+		"@type": "SearchAction",
+		"target": "https://bright-gift.com/#tool?recipient={recipient}&interests={interests}",
+		"query-input": [
+			"required name=recipient",
+			"required name=interests"
+		]
+	}
+};
+
+// Organization schema
+const organizationData = {
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"name": "BrightGift",
+	"url": "https://bright-gift.com",
+	"logo": "https://bright-gift.com/bright-gift-logo.png",
+	"sameAs": [
+		"https://twitter.com/brightgift",
+		"https://www.facebook.com/brightgift",
+		"https://www.instagram.com/brightgift"
+	]
+};
+
+// Breadcrumb schema
+const breadcrumbData = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement": [
+		{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Home",
+			"item": "https://bright-gift.com"
+		}
+	]
+};
 ---
 
 <Layout 
@@ -24,6 +69,10 @@ const allContent = [
 	ogType="website"
 	twitterCard="summary_large_image"
 >
+	<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+	<script type="application/ld+json" set:html={JSON.stringify(organizationData)} />
+	<script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
+
 	<main class="font-sans text-gray-800 dark:text-gray-200">
 		<!-- Mobile/Tablet Hero (locked) -->
 		<section class="block md:hidden relative w-full bg-[#FEF2D3] shadow-lg border-t-8 border-[#FF6B6B] mt-0 mx-auto px-0 py-0 flex flex-col items-center justify-center min-h-[85px]">

@@ -48,6 +48,18 @@ Drive long-term, compounding organic traffic to the AI Gift Idea Generator site 
 | Tool Landing Pages     | Static pages optimized for keywords (e.g. /funny-gift-finder)|
 | FAQs and Glossary      | Schema-rich content answering gifting-related questions   |
 
+### 📋 Priority Content Development
+
+> **NOTE**: A "Top 10 Gifts" hub page has been created but is currently hidden from navigation. This page should be added back to the navigation once we have created the necessary gift guide articles for the following categories:
+> - Top 10 Gifts for Coffee Lovers
+> - Top 10 Gifts for Plant Parents
+> - Top 10 Tech Gifts Under $50
+> - Top 10 Gifts for Coworkers
+> - Top 10 Sustainable Gifts
+> - Top 10 Last-Minute Amazon Gifts
+>
+> This hub page will be valuable for internal linking and SEO once the content is available.
+
 ---
 
 ## 🏗 Site Architecture

@@ -18,7 +18,7 @@ This document outlines the architecture and workflow for an automated system to 
 
 ### Phase 1: Idea Generation
 - 🧩 **Trigger**: Weekly or on-demand (via CLI or n8n)
-- ✍️ **Prompt**: GPT agent generates 3 blog ideas using Jeff’s style guide and predefined content categories:
+- ✍️ **Prompt**: GPT agent generates 3 blog ideas using Jeff's style guide and predefined content categories:
   - Mainstream (e.g. trending topics)
   - Alternative/subculture (e.g. niche/identity-driven gifting)
   - Cutting-edge (e.g. AI-generated gifts, NFTs, etc.)
@@ -28,6 +28,18 @@ This document outlines the architecture and workflow for an automated system to 
   - Target keywords
   - Suggested product category
 - 🔁 **Delivery**: Sent to Jeff via email or saved to GitHub Issues/Inbox for review
+
+### Priority Content Categories
+
+> **NOTE**: A "Top 10 Gifts" hub page has been created but is currently hidden from navigation. When generating content ideas, prioritize creating articles for the following categories to enable the hub page:
+> - Top 10 Gifts for Coffee Lovers
+> - Top 10 Gifts for Plant Parents
+> - Top 10 Tech Gifts Under $50
+> - Top 10 Gifts for Coworkers
+> - Top 10 Sustainable Gifts
+> - Top 10 Last-Minute Amazon Gifts
+>
+> Once these articles are created, the hub page can be added back to the navigation.
 
 ### Phase 2: Approval & Notes
 - Jeff selects one idea and optionally adds notes (via email reply, GitHub comment, or n8n UI form)

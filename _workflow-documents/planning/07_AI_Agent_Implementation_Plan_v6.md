@@ -162,6 +162,7 @@
 
 - [ ] Define long-tail keywords (using [SEO Canvas keyword types](./04_SEO_Strategy_Canvas.md#-core-keyword-types))
 - [ ] Generate first 5-10 blog posts (targeting [SEO Canvas content pillars](./04_SEO_Strategy_Canvas.md#-content-pillars))
+- [ ] Create content for the Top 10 Gift categories (see note below about the hub page)
 - **Why**: Drive organic traffic and establish site authority (supports [SEO Canvas traffic goals](./04_SEO_Strategy_Canvas.md#-seo-goals))
 
 ### 2. **SEO Enhancements** [🤖 AI Agent Task - HIGH PRIORITY]
@@ -187,6 +188,14 @@
 - ✅ All core MVP features are live: homepage, hero, tool, OpenAI integration, SSR, product card UI, affiliate link structure, and robust error handling.
 - ✅ Product card UI is visually robust, responsive, and on-brand (recent tweaks: icon color, product name, tag, loading spinner, etc.).
 - ✅ Cloudflare Pages SSR and environment variable handling are stable.
+- ✅ Top 10 Gifts hub page has been created but is hidden from navigation until we create the necessary gift guide content.
+- 🟡 **TO DO:** Create content for the following Top 10 Gift categories:
+  - Top 10 Gifts for Coffee Lovers
+  - Top 10 Gifts for Plant Parents
+  - Top 10 Tech Gifts Under $50
+  - Top 10 Gifts for Coworkers
+  - Top 10 Sustainable Gifts
+  - Top 10 Last-Minute Amazon Gifts
 - 🟡 **TO DO:** Make the hero/tool container responsive so the tool is always above the fold.
 - 🟡 **TO DO:** Integrate Etsy and other affiliate sites for product links/images (currently only Amazon is robust).
 - 🟡 **TO DO:** Update the "BIPOC Owned" tag to "Black Owned" for clarity and inclusivity. Consider adding other useful tags such as:

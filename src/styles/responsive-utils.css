@@ -1,0 +1,65 @@
+/**
+ * Responsive Utilities for Locking Elements at Specific Breakpoints
+ * 
+ * This approach explicitly separates markup for each breakpoint (mobile, tablet, desktop)
+ * to ensure pixel-perfect control and prevent cross-breakpoint interference.
+ * 
+ * Key principles:
+ * 1. Use mobile-locked, tablet-locked, desktop-locked classes to show/hide elements at specific breakpoints
+ * 2. Create separate containers with breakpoint-specific styling for each responsive variant
+ * 3. Apply appropriate spacing, sizing, and layout for each breakpoint
+ * 4. Avoid "leaky" styles by using explicit show/hide classes
+ * 
+ * Breakpoints:
+ * - Mobile: default to sm (<640px)
+ * - Tablet: sm to md (640px-768px)
+ * - Desktop: md and above (>768px)
+ */
+
+/* Responsive Utilities for Locking Elements at Specific Breakpoints */
+
+/* Mobile Only (default to sm) */
+.mobile-only {
+  @apply block sm:hidden;
+}
+
+/* Tablet Only */
+.tablet-only {
+  @apply hidden sm:block md:hidden;
+}
+
+/* Mobile and Tablet */
+.mobile-tablet-only {
+  @apply block md:hidden;
+}
+
+/* Desktop Only */
+.desktop-only {
+  @apply hidden md:block;
+}
+
+/* Explicitly lock spacing and layout for each breakpoint */
+.mobile-spacing {
+  @apply p-4 sm:p-0 md:p-0 lg:p-0 xl:p-0;
+}
+
+.tablet-spacing {
+  @apply p-0 sm:p-6 md:p-0 lg:p-0 xl:p-0;
+}
+
+.desktop-spacing {
+  @apply p-0 sm:p-0 md:p-8 lg:p-10 xl:p-12;
+}
+
+/* Prevent "leaky" styles - these are the critical classes */
+.mobile-locked {
+  @apply block sm:hidden !important;
+}
+
+.tablet-locked {
+  @apply hidden sm:block md:hidden !important;
+}
+
+.desktop-locked {
+  @apply hidden md:block !important;
+} 
