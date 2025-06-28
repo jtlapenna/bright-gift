@@ -13,9 +13,9 @@ export interface Props {
 
 const { 
 	title, 
-	description = "AI Gift Idea Generator - Find the perfect gift in seconds with personalized recommendations powered by AI",
-	image = "/images/bright-gift-og-default.jpg",
-	keywords = ["gift ideas", "AI gifts", "personalized gifts", "gift finder"],
+	description = "Find the perfect gift in seconds with our AI-powered gift idea generator. Personalized recommendations for any recipient, budget, and occasion.",
+	image = "/images/homepage-banner.webp",
+	keywords = ["gift ideas", "AI gifts", "personalized gifts", "gift finder", "gift recommendations", "birthday gifts", "holiday gifts"],
 	canonical,
 	ogType = "website",
 	twitterCard = "summary_large_image"
@@ -23,6 +23,7 @@ const {
 
 const isHome = Astro.url.pathname === "/";
 const canonicalUrl = canonical || Astro.url.href;
+const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.site || Astro.url.origin).toString();
 ---
 
 <!doctype html>
@@ -54,20 +55,20 @@ const canonicalUrl = canonical || Astro.url.href;
 		<meta property="og:url" content={canonicalUrl} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:image" content={new URL(image, Astro.url)} />
+		<meta property="og:image" content={fullImageUrl} />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 		<meta property="og:site_name" content="BrightGift" />
 		<meta property="og:locale" content="en_US" />
 		
 		<!-- Twitter -->
-		<meta property="twitter:card" content={twitterCard} />
-		<meta property="twitter:url" content={canonicalUrl} />
-		<meta property="twitter:title" content={title} />
-		<meta property="twitter:description" content={description} />
-		<meta property="twitter:image" content={new URL(image, Astro.url)} />
-		<meta property="twitter:site" content="@brightgift" />
-		<meta property="twitter:creator" content="@brightgift" />
+		<meta name="twitter:card" content={twitterCard} />
+		<meta name="twitter:url" content={canonicalUrl} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={fullImageUrl} />
+		<meta name="twitter:site" content="@brightgift" />
+		<meta name="twitter:creator" content="@brightgift" />
 		
 		<!-- Additional SEO -->
 		<meta name="theme-color" content="#FF6B6B" />
