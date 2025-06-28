@@ -63,13 +63,8 @@ if (type === 'gift-guide' && post.data.affiliateLinks) {
   }));
 }
 
-// Calculate read time
-function calculateReadTime(content: string): number {
-  const wordCount = content.split(/\s+/).length;
-  return Math.ceil(wordCount / 200);
-}
-
-const readTime = post.data.readTime || calculateReadTime(post.body);
+// Use the read time from frontmatter or default to 5 minutes
+const readTime = post.data.readTime || 5;
 ---
 
 <Layout 

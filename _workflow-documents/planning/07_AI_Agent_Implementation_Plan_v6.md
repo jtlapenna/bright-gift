@@ -199,6 +199,7 @@
   - Sustainable
   - Handmade
   - Small Business
+  - Plants
 - 🟡 **TO DO:** Blog/SEO content system (see [04.1_blog-system.md](./04.1_blog-system.md) for detailed implementation plan).
 - ❓ If any other features are not marked as complete, please confirm with the user.
 
