@@ -19,6 +19,12 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<header class="w-full bg-white border-b border-slate-100 py-3 px-4 flex items-center">
+			<a href="/" class="flex items-center gap-2">
+				<img src="/bright-gift-logo.png" alt="BrightGift logo" class="h-10 w-auto" style="display:inline-block;" />
+				<span class="sr-only">BrightGift Home</span>
+			</a>
+		</header>
 		<slot />
 	</body>
 </html> 

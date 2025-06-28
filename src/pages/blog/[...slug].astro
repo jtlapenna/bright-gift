@@ -99,46 +99,24 @@ const readTime = post.data.readTime || 5;
               {type === 'gift-guide' ? 'Gift Guide' : type === 'faq' ? 'FAQ' : 'Blog Post'}
             </span>
           </div>
-
-          <!-- Title -->
-          <h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
-            {post.data.title}
-          </h1>
-
-          <!-- Description -->
-          <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-6 drop-shadow">
-            {post.data.description}
-          </p>
-
-          <!-- Meta Info -->
-          <div class="flex items-center justify-center gap-4 text-sm md:text-base font-medium">
-            <span class="bg-black/60 text-white px-3 py-1 rounded-full flex items-center gap-2">
-              <time datetime={post.data.date} class="">
-                {new Date(post.data.date).toLocaleDateString('en-US', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
-                })}
-              </time>
-              <span>•</span>
-              <span>{readTime} min read</span>
-              {post.data.author && (
-                <>
-                  <span>•</span>
-                  <span>By {post.data.author}</span>
-                </>
-              )}
-            </span>
-          </div>
         </div>
       </div>
     </div>
 
     <!-- Main Content -->
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <!-- Article Content -->
-        <div class="lg:col-span-2">
+        <div class="lg:col-span-9">
+          <!-- Title, Sub-heading, Date/Read Time -->
+          <h1 class="text-4xl md:text-5xl font-bold mb-2 drop-shadow-lg" style="font-family: 'Poppins', 'Raleway', Arial, sans-serif; color: #1C2E4A;">{post.data.title}</h1>
+          <div class="flex items-center gap-3 mb-2">
+            <span class="inline-block bg-coral-500 text-white text-sm px-3 py-1 rounded-full font-semibold tracking-wide">{type === 'gift-guide' ? 'Gift Guide' : type === 'faq' ? 'FAQ' : 'Blog Post'}</span>
+            <span class="text-sm text-gray-500">{new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            <span class="text-sm text-gray-400">• {readTime} min read</span>
+          </div>
+          <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mb-6" style="font-family: 'Inter', 'Open Sans', Arial, sans-serif;">{post.data.description}</p>
+
           <!-- Tags -->
           {post.data.tags && post.data.tags.length > 0 && (
             <div class="flex flex-wrap gap-2 mb-8">
@@ -157,11 +135,10 @@ const readTime = post.data.readTime || 5;
         </div>
 
         <!-- Sidebar -->
-        <div class="lg:col-span-1">
-          <!-- Table of Contents (if needed) -->
+        <div class="lg:col-span-3 lg:pl-4">
           <div class="sticky top-8">
             <!-- Share Buttons -->
-            <div class="bg-slate-50 p-6 rounded-lg mb-6">
+            <div class="bg-slate-50 p-6 rounded-lg mb-6 shadow-md">
               <h4 class="font-semibold text-slate-900 mb-3">Share this post</h4>
               <div class="flex gap-2">
                 <a 
@@ -201,7 +178,7 @@ const readTime = post.data.readTime || 5;
             </div>
 
             <!-- Related Posts (placeholder) -->
-            <div class="bg-slate-50 p-6 rounded-lg">
+            <div class="bg-slate-50 p-6 rounded-lg shadow-md">
               <h4 class="font-semibold text-slate-900 mb-3">Related Posts</h4>
               <p class="text-slate-600 text-sm">
                 More gift ideas and guides coming soon!
@@ -215,22 +192,61 @@ const readTime = post.data.readTime || 5;
 </Layout>
 
 <style>
+  html, body {
+    font-family: 'Inter', 'Open Sans', Arial, sans-serif;
+    color: #333333;
+    background: #fff;
+  }
   .prose {
-    color: #374151;
+    color: #333333;
+    font-family: 'Inter', 'Open Sans', Arial, sans-serif;
+  }
+  .prose h1, .prose h2, .prose h3, .prose h4 {
+    font-family: 'Poppins', 'Raleway', Arial, sans-serif;
+    color: #1C2E4A;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .prose h1 {
+    font-size: 2.5rem;
   }
   .prose h2 {
-    color: #111827;
-    font-size: 1.875rem;
-    font-weight: 700;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
   }
   .prose h3 {
-    color: #111827;
     font-size: 1.5rem;
+  }
+  .prose a {
+    color: #ea580c;
+    text-decoration: underline;
     font-weight: 600;
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
+    background: linear-gradient(90deg, #fef3c7 60%, #f59e42 100%);
+    border-radius: 0.2em;
+    padding: 0.05em 0.2em;
+    transition: background 0.2s, color 0.2s;
+  }
+  .prose a:hover {
+    color: #fff;
+    background: #FF6B6B;
+  }
+  .prose .amazon-link {
+    display: inline-block;
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+    padding: 0.2em 0.9em;
+    background: #FF6B6B;
+    color: #fff !important;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.95em;
+    text-decoration: none;
+    box-shadow: 0 1px 4px 0 #ff6b6b22;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  }
+  .prose .amazon-link:hover {
+    background: #1C2E4A;
+    color: #fff !important;
+    box-shadow: 0 2px 8px 0 #1c2e4a33;
   }
   .prose p {
     margin-bottom: 1.25rem;
@@ -242,17 +258,6 @@ const readTime = post.data.readTime || 5;
   }
   .prose li {
     margin-bottom: 0.5rem;
-  }
-  .prose a {
-    color: #ea580c;
-    text-decoration: underline;
-  }
-  .prose a:hover {
-    color: #c2410c;
-  }
-  .prose strong {
-    font-weight: 600;
-    color: #111827;
   }
   .prose blockquote {
     background: #fef3c7;
@@ -280,21 +285,8 @@ const readTime = post.data.readTime || 5;
   .prose li {
     margin-bottom: 0.75rem;
   }
-  .prose a {
-    color: #ea580c;
-    text-decoration: underline;
-    font-weight: 600;
-    background: linear-gradient(90deg, #fef3c7 60%, #f59e42 100%);
-    border-radius: 0.2em;
-    padding: 0.05em 0.2em;
-    transition: background 0.2s, color 0.2s;
-  }
-  .prose a:hover {
-    color: #fff;
-    background: #ea580c;
-  }
   .prose strong {
-    font-weight: 700;
+    font-weight: 600;
     color: #111827;
   }
   .prose pre {
@@ -304,5 +296,26 @@ const readTime = post.data.readTime || 5;
     font-size: 1em;
     margin: 2rem 0;
     overflow-x: auto;
+  }
+  .prose .cta-button {
+    display: inline-block;
+    margin: 2rem 0 1rem 0;
+    padding: 0.85em 2.2em;
+    background: #FF6B6B;
+    color: #fff !important;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 1.15em;
+    text-decoration: none;
+    box-shadow: 0 2px 12px 0 #ff6b6b33;
+    letter-spacing: 0.01em;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    text-align: center;
+  }
+  .prose .cta-button:hover, .prose .cta-button:focus {
+    background: #1C2E4A;
+    color: #fff !important;
+    box-shadow: 0 4px 16px 0 #1c2e4a33;
+    outline: none;
   }
 </style> 
