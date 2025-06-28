@@ -8,20 +8,20 @@ const blogPosts = await getCollection('blog');
 <Layout title="AI Gift Idea Generator | Find the Perfect Gift in Seconds">
 	<main class="font-sans text-gray-800 dark:text-gray-200">
 		<!-- Hero Section -->
-		<section class="relative w-full bg-[#FEF2D3] shadow-lg border-t-8 border-[#FF6B6B] mt-0 mx-auto px-0 py-12 flex flex-col items-center justify-center min-h-[400px] rounded-b-3xl">
+		<section class="relative w-full bg-[#FEF2D3] shadow-lg border-t-8 border-[#FF6B6B] mt-0 mx-auto px-0 py-6 flex flex-col items-center justify-center min-h-[350px] rounded-b-3xl">
 			<div class="absolute top-0 right-0 mt-6 mr-10 flex gap-8 font-semibold text-[#1C2E4A] text-lg z-10">
 				<a href="/" class="hover:underline underline-offset-4 rounded">Home</a>
 				<a href="/blog" class="hover:underline underline-offset-4 rounded">Blog</a>
 				<a href="/about" class="hover:underline underline-offset-4 rounded">About</a>
 			</div>
 			<div class="flex flex-row items-center justify-center w-full max-w-5xl gap-8 px-6">
-				<div class="flex-1 flex flex-col items-center justify-center text-center">
-					<img src="/bright-gift-logo.png" alt="BrightGift logo" class="h-20 mb-6" />
-					<h1 class="text-5xl font-bold font-poppins text-[#1C2E4A] mb-3">Let's Find Something Fun!</h1>
-					<p class="text-xl font-inter text-[#333] mb-6">Surprise them in style – let's get gifting!</p>
+				<div class="flex-1 flex flex-col items-start justify-center text-left">
+					<img src="/bright-gift-logo.png" alt="BrightGift logo" class="h-16 mb-4" />
+					<h1 class="text-3xl md:text-4xl font-bold font-poppins text-[#1C2E4A] mb-2 whitespace-nowrap">Let's Find Something Fun!</h1>
+					<p class="text-lg font-inter text-[#333] mb-4">Surprise them in style – let's get gifting!</p>
 				</div>
-				<div class="flex-1 flex items-center justify-center">
-					<img src={heroImage.src} alt="Fun gift items: plant book, dino mug, taco plush" class="max-h-[330px] w-auto" />
+				<div class="flex-1 flex items-center justify-center relative">
+					<img src="/hero-image.png" alt="Fun gift items: plant book, dino mug, taco plush" class="max-h-[412px] w-auto absolute left-1/2 -translate-x-1/2" style="bottom:-240px;" />
 				</div>
 			</div>
 		</section>
