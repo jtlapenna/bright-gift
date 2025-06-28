@@ -196,6 +196,8 @@ const blogPosts = await getCollection('blog');
 
 		form.addEventListener('submit', async (event) => {
 			event.preventDefault();
+			// Scroll to results section immediately
+			document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
 			const formData = new FormData(form);
 			const recipient = formData.get('recipient');
 			const interests = formData.get('interests');
@@ -226,8 +228,6 @@ const blogPosts = await getCollection('blog');
 					resultsContainer.innerHTML = renderIdeaCards(ideas);
 					regenerateBtn.classList.remove('hidden');
 					regenerateBtn.style.display = '';
-					// Scroll to results section
-					document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
 				} else {
 					resultsContainer.innerHTML = `<p class="text-red-500 text-center" role="alert">No gift ideas found or failed to parse results. Please try again.</p>`;
 					regenerateBtn.classList.add('hidden');
@@ -296,7 +296,8 @@ const blogPosts = await getCollection('blog');
 			let iconHtml = '';
 			if (idea.icon) {
 				const iconPath = iconSvgMap[idea.icon] || iconSvgMap['ShoppingBag'];
-				iconHtml = `<img src="${iconPath}" alt="${idea.icon || 'ShoppingBag'} icon" class="h-20 w-20 mb-6 mt-2" loading="lazy" style="filter: brightness(0) invert(1);" />`;
+				// CSS filter for #1C2E4A (dark blue)
+				iconHtml = `<img src="${iconPath}" alt="${idea.icon || 'ShoppingBag'} icon" class="h-20 w-20 mb-6 mt-2" loading="lazy" style="filter: brightness(0) saturate(100%) invert(13%) sepia(22%) saturate(1162%) hue-rotate(176deg) brightness(97%) contrast(98%);" />`;
 			}
 			return `
 				<div class="flex flex-col items-center justify-between bg-[#A3E4DB] rounded-2xl shadow-lg p-8 min-h-[480px] transition-transform hover:-translate-y-1 hover:shadow-2xl animate-fade-in" role="listitem">
