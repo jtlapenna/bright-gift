@@ -3,22 +3,82 @@ import '../styles/tailwind.css';
 
 export interface Props {
 	title: string;
+	description?: string;
+	image?: string;
+	keywords?: string[];
+	canonical?: string;
+	ogType?: string;
+	twitterCard?: string;
 }
 
-const { title } = Astro.props;
+const { 
+	title, 
+	description = "AI Gift Idea Generator - Find the perfect gift in seconds with personalized recommendations powered by AI",
+	image = "/images/bright-gift-og-default.jpg",
+	keywords = ["gift ideas", "AI gifts", "personalized gifts", "gift finder"],
+	canonical,
+	ogType = "website",
+	twitterCard = "summary_large_image"
+} = Astro.props;
 
 const isHome = Astro.url.pathname === "/";
+const canonicalUrl = canonical || Astro.url.href;
 ---
 
 <!doctype html>
 <html lang="en" class="dark">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="AI Gift Idea Generator" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Primary Meta Tags -->
 		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords.join(', ')} />
+		<meta name="author" content="BrightGift" />
+		<meta name="robots" content="index, follow" />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href={canonicalUrl} />
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content={ogType} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(image, Astro.url)} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:site_name" content="BrightGift" />
+		<meta property="og:locale" content="en_US" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content={twitterCard} />
+		<meta property="twitter:url" content={canonicalUrl} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL(image, Astro.url)} />
+		<meta property="twitter:site" content="@brightgift" />
+		<meta property="twitter:creator" content="@brightgift" />
+		
+		<!-- Additional SEO -->
+		<meta name="theme-color" content="#FF6B6B" />
+		<meta name="msapplication-TileColor" content="#FF6B6B" />
+		<meta name="application-name" content="BrightGift" />
+		
+		<!-- Preconnect to external domains for performance -->
+		<link rel="preconnect" href="https://www.amazon.com" />
+		<link rel="preconnect" href="https://www.etsy.com" />
+		<link rel="dns-prefetch" href="https://www.amazon.com" />
+		<link rel="dns-prefetch" href="https://www.etsy.com" />
 	</head>
 	<body>
 		{ !isHome && (

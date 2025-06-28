@@ -1,16 +1,20 @@
 ---
 title: "Gifts for Plant Lovers Under $75: 15 Perfect Presents for Green Thumbs"
+metaTitle: "15 Best Gifts for Plant Lovers Under $75 in 2024 - From Rare Plants to Stylish Accessories"
+metaDescription: "Find the perfect gift for plant enthusiasts under $75! Discover rare houseplants, stylish planters, care tools, and accessories that every green thumb will love."
 description: "Discover thoughtful gifts for plant enthusiasts under $75, from rare houseplants to stylish plant accessories that will make any green thumb happy."
-image: "/images/gift-guides/plant-lovers-under-75.png"
 date: "2024-07-27"
+image: "/images/gift-guides/plant-lovers-under-75.png"
+ogImage: "/images/gift-guides/plant-lovers-under-75.png"
+tags: ["plant-lovers", "houseplants", "gardening", "under-75", "budget-friendly", "any-occasion"]
+keywords: ["gifts for plant lovers", "plant gifts under 75", "houseplant gifts", "gardening gifts", "plant accessories", "budget plant gifts"]
+readTime: 8
+featured: true
+draft: false
 recipient: "plant-lovers"
 budget: "under-75"
 occasion: "any"
 style: "mixed"
-metaTitle: "15 Best Gifts for Plant Lovers Under $75 in 2024 - From Rare Plants to Stylish Accessories"
-metaDescription: "Find the perfect gift for plant enthusiasts under $75! Discover rare houseplants, stylish planters, care tools, and accessories that every green thumb will love."
-keywords: ["gifts for plant lovers", "plant gifts under 75", "houseplant gifts", "gardening gifts", "plant accessories", "budget plant gifts"]
-tags: ["plant-lovers", "houseplants", "gardening", "under-75", "budget-friendly", "any-occasion"]
 affiliateLinks:
   - text: "Monstera Adansonii (Swiss Cheese Vine)"
     url: "https://www.amazon.com/s?k=monstera+adansonii&tag=bright-gift-20"
@@ -54,9 +58,6 @@ affiliateLinks:
   - text: "Plant Journal or Planner"
     url: "https://www.amazon.com/s?k=plant+journal+planner&tag=bright-gift-20"
     platform: "amazon"
-readTime: 8
-featured: true
-draft: false
 ---
 
 ## Why Plant Lovers Make Great Gift Recipients

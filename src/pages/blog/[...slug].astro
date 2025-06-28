@@ -74,6 +74,9 @@ const readTime = post.data.readTime || 5;
   description={description}
   image={image}
   keywords={keywords}
+  canonical={Astro.url.href}
+  ogType="article"
+  twitterCard="summary_large_image"
 >
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
