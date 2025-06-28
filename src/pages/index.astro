@@ -261,7 +261,6 @@ const blogPosts = await getCollection('blog');
 	});
 
 	function renderIdeaCards(ideas) {
-		// Map icon name to SVG filename
 		const iconSvgMap = {
 			DeviceMobile: '/icons/DeviceMobile.svg',
 			Book: '/icons/Book.svg',
@@ -282,13 +281,13 @@ const blogPosts = await getCollection('blog');
 		};
 		return ideas.map(idea => {
 			let iconHtml = '';
-			if (idea.icon && iconSvgMap[idea.icon]) {
-				// Render SVG icon for Amazon
-				iconHtml = `<img src="${iconSvgMap[idea.icon]}" alt="${idea.icon} icon" class="h-20 w-20 mb-4" loading="lazy" />`;
+			if (idea.icon) {
+				const iconPath = iconSvgMap[idea.icon] || iconSvgMap['ShoppingBag'];
+				iconHtml = `<img src="${iconPath}" alt="${idea.icon || 'ShoppingBag'} icon" class="h-20 w-20 mb-4" loading="lazy" />`;
 			}
 			return `
 				<div class="bg-[#A3E4DB] rounded-2xl shadow-lg p-6 flex flex-col items-center text-center animate-fade-in" role="listitem">
-					${idea.image ? `<img src="${idea.image}" alt="${idea.title}" class="h-40 w-full object-cover mb-4 rounded-xl shadow" loading="lazy">` : iconHtml}
+					${iconHtml || (idea.image ? `<img src="${idea.image}" alt="${idea.title}" class="h-40 w-full object-cover mb-4 rounded-xl shadow" loading="lazy">` : '')}
 					<h3 class="font-bold text-xl mb-2 font-poppins text-[#1C2E4A]">${idea.title}</h3>
 					<p class="text-[#333] mb-4 font-inter">${idea.description}</p>
 					${idea.tag ? `<span class="inline-block bg-[#FFDE59] text-[#1C2E4A] text-xs font-semibold px-3 py-1 rounded-full mb-2">${idea.tag}</span>` : ''}
