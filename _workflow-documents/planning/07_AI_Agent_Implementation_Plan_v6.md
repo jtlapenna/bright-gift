@@ -2,6 +2,7 @@
 
 > This plan is structured for an AI agent (e.g. in Cursor) to execute autonomously where possible. 
 > Prompts are included to identify steps requiring human input, and detailed directives clarify all development actions.
+> Cross-references: [04_SEO_Strategy_Canvas.md](./04_SEO_Strategy_Canvas.md) | [04.1_blog-system.md](./04.1_blog-system.md)
 
 ---
 
@@ -103,58 +104,140 @@
 
 ## 📝 PHASE 2 – CONTENT & SEO [🔄 IN PROGRESS - NEXT FOCUS]
 
-### 9. Blog Page Setup [🔄 NEXT TASK]
-- [ ] Create blog index page (`src/pages/blog/index.astro`).
-- [ ] Build blog post template at `src/pages/blog/[...slug].astro`.
-- [ ] Render post content from markdown files stored in `/src/content/blog/` directory.
-- [ ] Add RSS feed support for blog post syndication.
-- [ ] Allow sorting or filtering by style tag or gift category.
-- [ ] Include estimated read time on post previews.
-- [ ] Paginate results if over 10 posts.
-- [ ] Implement lazy loading for post previews.
-- [ ] Add breadcrumbs for navigation context.
-- [ ] Include post date, category tag, and link to full post.
+> **Cross-reference:** This phase implements the blog system outlined in [04.1_blog-system.md](./04.1_blog-system.md) and supports SEO goals from [04_SEO_Strategy_Canvas.md](./04_SEO_Strategy_Canvas.md).
+
+### 9. Blog Page Setup [✅ COMPLETE]
+> **Implementation:** Follows [Blog System Plan Section 8](./04.1_blog-system.md#8-implementation-steps-supports-ai-agent-plan-phase-2)
+
+- [x] Create blog index page (`src/pages/blog/index.astro`).
+- [x] Build blog post template at `src/pages/blog/[...slug].astro`.
+- [x] Set up Astro Content Collections for blog posts, guides, and FAQs (supports [SEO Canvas site architecture](./04_SEO_Strategy_Canvas.md#-site-architecture)).
+- [x] Create content directory structure (`/src/content/blog/`, `/src/content/gift-guides/`, `/src/content/faqs/`).
+- [x] Define Markdown frontmatter schema (title, desc, tags, meta, images, links).
+- [x] Render post content from markdown files stored in `/src/content/blog/` directory.
+- [x] Add RSS feed support for blog post syndication.
+- [x] Allow sorting or filtering by style tag or gift category (supports [SEO Canvas categories](./04_SEO_Strategy_Canvas.md#-site-architecture)).
+- [x] Include estimated read time on post previews.
+- [x] Paginate results if over 10 posts.
+- [x] Implement lazy loading for post previews.
+- [x] Add breadcrumbs for navigation context.
+- [x] Include post date, category tag, and link to full post.
+- [x] Implement internal linking: Blog ↔ Tool, Blog ↔ Blog, Blog ↔ Guides (supports [SEO Canvas internal linking strategy](./04_SEO_Strategy_Canvas.md#-site-architecture)).
+
+**✅ COMPLETED (2024-07-27):**
+- Enhanced content schema with SEO fields, affiliate links, and categorization
+- Created responsive blog index page with filtering, pagination, and modern UI
+- Built dynamic blog post template with structured data, social sharing, and affiliate sections
+- Added sample content for all three content types (blog, gift guides, FAQs)
+- Implemented SEO optimization with meta tags, structured data, and Open Graph
+- Successfully tested build process
 
 ### 10. Initial Content Creation & SEO
-- [ ] Define 10–20 long-tail gift-related keywords
-- [ ] Generate and approve first 5–10 blog posts
-- [ ] Add meta tags, Open Graph, sitemap, and internal linking
+> **Implementation:** Follows [Blog System Plan Section 6](./04.1_blog-system.md#6-content-pillars-implementation-from-seo-canvas) and [SEO Canvas keyword strategy](./04_SEO_Strategy_Canvas.md#-keyword-strategy)
+
+- [ ] Define 10–20 long-tail gift-related keywords (using [SEO Canvas keyword types](./04_SEO_Strategy_Canvas.md#-core-keyword-types)).
+- [ ] Generate and approve first 5–10 blog posts (targeting [SEO Canvas content pillars](./04_SEO_Strategy_Canvas.md#-content-pillars)).
+- [ ] Add meta tags, Open Graph, sitemap, and internal linking (following [SEO Canvas on-page optimization](./04_SEO_Strategy_Canvas.md#-on-page-optimization)).
+- [ ] Implement AI-assisted content generation (leverages existing OpenAI integration from Phase 1).
 
 ### 11. SEO Optimization [🤖 AI Agent Task]
-- [ ] Add meta title and description for homepage and posts
-- [ ] Optimize headers and alt text
-- [ ] Generate and deploy `sitemap.xml`
-- [ ] Include internal linking between tool and blog
-- [ ] Validate presence of `twitter:card` and `og:type` for social embedding
-- [ ] Set fallback values to avoid blank preview links
-- [ ] Add canonical link tag to prevent duplicate content issues
-- [ ] Ensure Open Graph (`og:title`, `og:image`) is set for link previews
+> **Implementation:** Follows [Blog System Plan Section 4](./04.1_blog-system.md#4-on-page-seo-automation-matches-seo-canvas)
+
+- [ ] Add meta title and description for homepage and posts (clear + clickworthy, problem + solution CTA).
+- [ ] Optimize headers and alt text (exact match keywords, AI-generated alt text).
+- [ ] Generate and deploy `sitemap.xml`.
+- [ ] Include internal linking between tool and blog (supports [SEO Canvas internal linking](./04_SEO_Strategy_Canvas.md#-site-architecture)).
+- [ ] Validate presence of `twitter:card` and `og:type` for social embedding.
+- [ ] Set fallback values to avoid blank preview links.
+- [ ] Add canonical link tag to prevent duplicate content issues.
+- [ ] Ensure Open Graph (`og:title`, `og:image`) is set for link previews.
+- [ ] Implement structured data markup for gift lists and FAQs (supports [SEO Canvas future enhancements](./04_SEO_Strategy_Canvas.md#-future-seo-enhancements)).
 
 ---
 
 ## 🎯 IMMEDIATE NEXT PRIORITIES
 
-### 1. **Blog Page Setup** [🤖 AI Agent Task - HIGH PRIORITY]
-- [ ] Create blog index and post templates
-- [ ] Set up content directory structure
-- **Why**: Foundation for SEO content and affiliate monetization
+### 1. **Initial Content Creation** [🔧 Human + 🤖 AI Agent - HIGH PRIORITY]
+> **Cross-reference:** [Blog System Plan Section 7](./04.1_blog-system.md#7-keyword-strategy-integration-from-seo-canvas)
 
-### 2. **Initial Content Creation** [🔧 Human + 🤖 AI Agent - HIGH PRIORITY]
-- [ ] Define long-tail keywords
-- [ ] Generate first 5-10 blog posts
-- **Why**: Drive organic traffic and establish site authority
+- [ ] Define long-tail keywords (using [SEO Canvas keyword types](./04_SEO_Strategy_Canvas.md#-core-keyword-types))
+- [ ] Generate first 5-10 blog posts (targeting [SEO Canvas content pillars](./04_SEO_Strategy_Canvas.md#-content-pillars))
+- **Why**: Drive organic traffic and establish site authority (supports [SEO Canvas traffic goals](./04_SEO_Strategy_Canvas.md#-seo-goals))
 
-### 3. **SEO Enhancements** [🤖 AI Agent Task]
+### 2. **SEO Enhancements** [🤖 AI Agent Task - HIGH PRIORITY]
+> **Cross-reference:** [Blog System Plan Section 4](./04.1_blog-system.md#4-on-page-seo-automation-matches-seo-canvas)
+
 - [ ] Add meta tags, Open Graph, sitemap, and internal linking
-- **Why**: Improve discoverability and social sharing
+- [ ] Implement structured data markup for gift lists and FAQs
+- [ ] Set up Google Search Console and analytics tracking
+- **Why**: Improve discoverability and social sharing (supports [SEO Canvas on-page optimization](./04_SEO_Strategy_Canvas.md#-on-page-optimization))
+
+### 3. **Hero/Tool Container Responsiveness** [🤖 AI Agent Task - MEDIUM PRIORITY]
+- [ ] Make the hero/tool container responsive so the tool is always above the fold
+- **Why**: Improve user experience and conversion rates
+
+### 4. **Etsy Integration** [🤖 AI Agent Task - MEDIUM PRIORITY]
+- [ ] Fix Etsy API integration for handmade style gifts
+- [ ] Add Etsy product links and images to gift suggestions
+- **Why**: Expand affiliate revenue and provide more diverse gift options
 
 ---
+
+## 🟡 CURRENT STATUS & NOTES (2024-07-27)
+- ✅ All core MVP features are live: homepage, hero, tool, OpenAI integration, SSR, product card UI, affiliate link structure, and robust error handling.
+- ✅ Product card UI is visually robust, responsive, and on-brand (recent tweaks: icon color, product name, tag, loading spinner, etc.).
+- ✅ Cloudflare Pages SSR and environment variable handling are stable.
+- 🟡 **TO DO:** Make the hero/tool container responsive so the tool is always above the fold.
+- 🟡 **TO DO:** Integrate Etsy and other affiliate sites for product links/images (currently only Amazon is robust).
+- 🟡 **TO DO:** Update the "BIPOC Owned" tag to "Black Owned" for clarity and inclusivity. Consider adding other useful tags such as:
+  - AAPI Owned
+  - Latinx Owned
+  - Women Owned
+  - LGBTQ+ Owned
+  - Veteran Owned
+  - Disability Owned
+  - Sustainable
+  - Handmade
+  - Small Business
+- 🟡 **TO DO:** Blog/SEO content system (see [04.1_blog-system.md](./04.1_blog-system.md) for detailed implementation plan).
+- ❓ If any other features are not marked as complete, please confirm with the user.
+
+---
+
+## 🐞 Open Issues (2024-07-27)
+- [ ] Product images are broken in gift idea cards. (Is this still an issue? Please confirm.)
+- [ ] Handmade/Etsy style does not return Etsy links or products. (Etsy integration still needed.)
+- [ ] Card layout should be wider and less tall for better UX. (Recent UI changes improved this, but further tweaks may be desired.)
+- [ ] **Hero/tool container needs to be made responsive so the tool is always above the fold.**
+- [ ] **Integrate Etsy and other affiliate sites for product links/images.**
+- [ ] Next: Fix image URLs, debug/fix Etsy integration, and improve card layout.
+
+---
+
+## ✅ COMPLETED (2024-07-27)
+- Astro project setup, Tailwind, and directory structure
+- GitHub/Cloudflare Pages integration
+- Environment variable handling for SSR
+- Homepage, hero, and tool UI
+- OpenAI prompt system and backend integration
+- Product card UI (responsive, accessible, on-brand)
+- Amazon affiliate link structure
+- Robust error handling and loading states
+- Accessibility and responsive design
+- Iterative UI/UX improvements (per user feedback)
+
+---
+
+## Remaining Tasks
+- [ ] Blog page setup and content system (see [04.1_blog-system.md](./04.1_blog-system.md))
+- [ ] Initial content creation and SEO (supports [04_SEO_Strategy_Canvas.md](./04_SEO_Strategy_Canvas.md) goals)
+- [ ] SEO enhancements (meta tags, Open Graph, sitemap, internal linking)
+- [ ] Make hero/tool container responsive so tool is always above the fold
+- [ ] Integrate Etsy and other affiliate sites for product links/images
+- [ ] (Confirm with user) Fix any remaining product image or card layout issues
+
+<!-- If any items above are uncertain, please confirm with the user. -->
 
 # ✅ END OF AI-AUTOMATION PLAN
 
 ---
-## 🐞 Open Issues (2024-07-27)
-- [ ] Product images are broken in gift idea cards.
-- [ ] Handmade/Etsy style does not return Etsy links or products.
-- [ ] Card layout should be wider and less tall for better UX.
-- [ ] Next: Fix image URLs, debug/fix Etsy integration, and improve card layout.

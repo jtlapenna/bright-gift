@@ -1,0 +1,198 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+// Get all blog posts, excluding drafts
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const allGiftGuides = await getCollection('giftGuides', ({ data }) => !data.draft);
+const allFaqs = await getCollection('faqs', ({ data }) => !data.draft);
+
+// Sort by date (newest first)
+const sortedPosts = allPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+const sortedGiftGuides = allGiftGuides.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+const sortedFaqs = allFaqs.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+// Combine all content for the blog index
+const allContent = [
+  ...sortedPosts.map(post => ({ ...post, type: 'blog' })),
+  ...sortedGiftGuides.map(guide => ({ ...guide, type: 'gift-guide' })),
+  ...sortedFaqs.map(faq => ({ ...faq, type: 'faq' }))
+].sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+// Pagination (10 posts per page)
+const postsPerPage = 10;
+const currentPage = 1; // TODO: Add URL parameter support
+const startIndex = (currentPage - 1) * postsPerPage;
+const endIndex = startIndex + postsPerPage;
+const paginatedContent = allContent.slice(startIndex, endIndex);
+
+// Calculate read time (rough estimate: 200 words per minute)
+function calculateReadTime(content: string): number {
+  const wordCount = content.split(/\s+/).length;
+  return Math.ceil(wordCount / 200);
+}
+---
+
+<Layout 
+  title="Gift Ideas Blog - BrightGift" 
+  description="Discover thoughtful gift ideas, seasonal guides, and expert tips for finding the perfect presents for everyone in your life."
+>
+  <div class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <!-- Hero Section -->
+    <div class="bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold text-slate-900 mb-4">
+            Gift Ideas Blog
+          </h1>
+          <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+            Expert-curated gift guides, seasonal inspiration, and thoughtful ideas to help you find the perfect presents for every occasion and person.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <!-- Filter and Sort Controls -->
+      <div class="mb-8 flex flex-wrap gap-4 items-center justify-between">
+        <div class="flex flex-wrap gap-2">
+          <span class="text-sm font-medium text-slate-700">Filter by:</span>
+          <button class="px-3 py-1 text-sm bg-coral-100 text-coral-800 rounded-full hover:bg-coral-200 transition-colors">
+            All Posts
+          </button>
+          <button class="px-3 py-1 text-sm bg-slate-100 text-slate-700 rounded-full hover:bg-slate-200 transition-colors">
+            Gift Guides
+          </button>
+          <button class="px-3 py-1 text-sm bg-slate-100 text-slate-700 rounded-full hover:bg-slate-200 transition-colors">
+            Seasonal
+          </button>
+          <button class="px-3 py-1 text-sm bg-slate-100 text-slate-700 rounded-full hover:bg-slate-200 transition-colors">
+            FAQs
+          </button>
+        </div>
+        <div class="text-sm text-slate-500">
+          Showing {paginatedContent.length} of {allContent.length} posts
+        </div>
+      </div>
+
+      <!-- Posts Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {paginatedContent.map((post) => (
+          <article class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow">
+            <!-- Post Image -->
+            <div class="aspect-video bg-slate-200 relative overflow-hidden">
+              <img 
+                src={post.data.image} 
+                alt={post.data.title}
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+              {post.data.featured && (
+                <div class="absolute top-2 left-2 bg-coral-500 text-white text-xs px-2 py-1 rounded">
+                  Featured
+                </div>
+              )}
+              {post.type === 'gift-guide' && (
+                <div class="absolute top-2 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">
+                  Gift Guide
+                </div>
+              )}
+            </div>
+
+            <!-- Post Content -->
+            <div class="p-6">
+              <!-- Category and Date -->
+              <div class="flex items-center gap-2 text-sm text-slate-500 mb-2">
+                <span class="capitalize">{post.type.replace('-', ' ')}</span>
+                <span>•</span>
+                <time datetime={post.data.date}>
+                  {new Date(post.data.date).toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                  })}
+                </time>
+                {post.data.readTime && (
+                  <>
+                    <span>•</span>
+                    <span>{post.data.readTime} min read</span>
+                  </>
+                )}
+              </div>
+
+              <!-- Title -->
+              <h2 class="text-xl font-semibold text-slate-900 mb-3 line-clamp-2">
+                <a href={`/blog/${post.slug}`} class="hover:text-coral-600 transition-colors">
+                  {post.data.title}
+                </a>
+              </h2>
+
+              <!-- Description -->
+              <p class="text-slate-600 mb-4 line-clamp-3">
+                {post.data.description}
+              </p>
+
+              <!-- Tags -->
+              {post.data.tags && post.data.tags.length > 0 && (
+                <div class="flex flex-wrap gap-1 mb-4">
+                  {post.data.tags.slice(0, 3).map((tag) => (
+                    <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">
+                      {tag}
+                    </span>
+                  ))}
+                  {post.data.tags.length > 3 && (
+                    <span class="text-xs text-slate-500">+{post.data.tags.length - 3} more</span>
+                  )}
+                </div>
+              )}
+
+              <!-- Read More Link -->
+              <a 
+                href={`/blog/${post.slug}`}
+                class="inline-flex items-center text-coral-600 hover:text-coral-700 font-medium text-sm transition-colors"
+              >
+                Read more
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- Pagination -->
+      {allContent.length > postsPerPage && (
+        <div class="mt-12 flex justify-center">
+          <nav class="flex items-center gap-2">
+            <button class="px-3 py-2 text-sm bg-white border border-slate-300 rounded-md hover:bg-slate-50 transition-colors">
+              Previous
+            </button>
+            <span class="px-3 py-2 text-sm text-slate-700">
+              Page {currentPage} of {Math.ceil(allContent.length / postsPerPage)}
+            </span>
+            <button class="px-3 py-2 text-sm bg-white border border-slate-300 rounded-md hover:bg-slate-50 transition-colors">
+              Next
+            </button>
+          </nav>
+        </div>
+      )}
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style> 
