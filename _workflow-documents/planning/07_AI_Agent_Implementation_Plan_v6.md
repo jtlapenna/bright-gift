@@ -13,10 +13,10 @@
 - [x] Select the "Empty" project template.
 - [x] Add Tailwind CSS integration using `npx astro add tailwind`.
 - [x] Create the following directory structure:
-  ```
-  /project-root
-  ├── /public              # Static assets (images, icons)
-  ├── /src
+```
+/project-root
+├── /public              # Static assets (images, icons)
+├── /src
   │   ├── /components      # Reusable Astro/UI components (.astro)
   │   ├── /layouts         # Base page layouts (Layout.astro)
   │   ├── /pages           # Site pages and API routes (.astro, .ts)
@@ -84,8 +84,9 @@
 ### 7. OpenAI Integration [✅ COMPLETE]
 - [x] Create a serverless API route at `src/pages/api/generate.ts`.
 - [x] Function receives form data, builds prompt using `promptBuilder`
-- [x] Securely calls OpenAI API using key from `import.meta.env.OPENAI_API_KEY`
+- [x] Securely calls OpenAI API using key from `locals.runtime.env.OPENAI_API_KEY` (Cloudflare SSR pattern)
 - [x] Handles API response and returns suggestions as JSON
+- [x] Debugged and resolved Cloudflare Pages SSR environment variable injection: must use `locals.runtime.env` for secrets, not process.env or import.meta.env.
 
 ### 8. Display Results [✅ COMPLETE]
 - [x] Render markdown into cards showing:
@@ -150,3 +151,10 @@
 ---
 
 # ✅ END OF AI-AUTOMATION PLAN
+
+---
+## 🐞 Open Issues (2024-07-27)
+- [ ] Product images are broken in gift idea cards.
+- [ ] Handmade/Etsy style does not return Etsy links or products.
+- [ ] Card layout should be wider and less tall for better UX.
+- [ ] Next: Fix image URLs, debug/fix Etsy integration, and improve card layout.

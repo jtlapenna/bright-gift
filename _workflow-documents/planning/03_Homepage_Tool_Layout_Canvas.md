@@ -13,6 +13,7 @@
    - [ ] Display 3–5 AI-generated gifts as cards
    - [ ] Each card: title, description, tag, affiliate link
    - [x] Regenerate suggestions button (complete)
+   - [x] SSR OpenAI integration working with secure runtime secrets (Cloudflare SSR env pattern)
    - [x] Affiliate link placeholder (Amazon, tracking ID bright-gift-20)
    - [ ] Save favorites (localStorage)
    - [x] Accessibility: labels, tab order, ARIA (in progress/complete)

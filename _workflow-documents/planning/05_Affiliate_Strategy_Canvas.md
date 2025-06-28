@@ -33,6 +33,18 @@ Monetize AI-generated gift ideas and blog content by embedding well-placed affil
 - Links open in new tabs
 - Optional button format for better CTR
 
+### Implementation Notes (2024-07-27)
+- Etsy: Use Etsy API with OAuth2 token to fetch real product links and images for AI-generated gift ideas with 'Handmade' or similar style. Display the first product's image and link in the card.
+- Amazon: Use search URLs with keywords for now; upgrade to Product Advertising API when eligible. No product images for Amazon search fallback yet.
+- All cards: Always display a product image if available from the affiliate source (Etsy, etc.).
+- Fallback: If no direct product match, use the first result from the search for both link and image.
+
+### Issues & Next Steps (2024-07-27)
+- [ ] Product images are broken (likely invalid or missing URLs from affiliate sources).
+- [ ] Handmade/Etsy style does not return Etsy links or products—verify Etsy API integration and token.
+- [ ] Card layout: Make cards wider and less tall for better UX.
+- [ ] Next: Fix image URLs, debug/fix Etsy integration, and improve card layout.
+
 ---
 
 ## 🧠 Style-Based Routing

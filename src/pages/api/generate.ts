@@ -2,11 +2,11 @@ import { buildPrompt, type PromptData } from '../../utils/promptBuilder.js';
 import OpenAI from 'openai';
 
 // Helper to fetch Etsy product for a keyword
-async function fetchEtsyProduct(keywords, token) {
+async function fetchEtsyProduct(keywords, apiKey) {
   const url = `https://openapi.etsy.com/v3/application/listings/active?keywords=${encodeURIComponent(keywords)}&limit=1&includes=images`;
   const res = await fetch(url, {
     headers: {
-      'Authorization': `Bearer ${token}`,
+      'x-api-key': apiKey,
       'Content-Type': 'application/json'
     }
   });
@@ -50,8 +50,14 @@ export const POST = async ({ request, locals }) => {
     );
   }
 
-  // Get Etsy OAuth2 token from env
-  const etsyToken = locals?.runtime?.env?.ETSY_OAUTH_TOKEN;
+  // Get Etsy API key from env (not OAuth2 token)
+  const etsyApiKey = locals?.runtime?.env?.ETSY_API_KEY;
+  // Log presence of Etsy API key (not the value)
+  if (etsyApiKey) {
+    console.log('Etsy API key found in environment.');
+  } else {
+    console.warn('Etsy API key NOT found in environment. Etsy integration will not work.');
+  }
 
   const openai = new OpenAI({ apiKey });
   const prompt = buildPrompt({ recipient, interests, budget, style });
@@ -76,9 +82,9 @@ export const POST = async ({ request, locals }) => {
       const tag = match[3].trim();
       let link = null;
       let image = null;
-      if (/handmade|etsy/i.test(tag) && etsyToken) {
-        // Try to fetch Etsy product
-        const product = await fetchEtsyProduct(title, etsyToken);
+      if (/handmade|etsy/i.test(tag) && etsyApiKey) {
+        // Try to fetch Etsy product using API key
+        const product = await fetchEtsyProduct(title, etsyApiKey);
         if (product) {
           link = product.url;
           image = product.image;

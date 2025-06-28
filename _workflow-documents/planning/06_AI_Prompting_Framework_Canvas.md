@@ -89,6 +89,7 @@ Parsed into:
 
 ## 🟢 Progress Notes
 - Updated prompt logic to request 6–9 ideas and make style prominent in both ideas and tone. Prompt builder will be updated accordingly.
+- SSR OpenAI integration is now working on Cloudflare Pages using locals.runtime.env for secrets. Prompt-to-SSR-to-AI roundtrip is complete and secure.
 
 ---
 
