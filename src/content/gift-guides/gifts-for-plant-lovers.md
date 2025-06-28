@@ -59,12 +59,6 @@ featured: true
 draft: false
 ---
 
-# Gifts for Plant Lovers Under $75: 15 Perfect Presents for Green Thumbs
-
-Plant lovers are a special breed—they find joy in watching things grow, care deeply about living things, and often have a deep connection to nature. Finding the perfect gift for them doesn't have to break the bank! Here are our top picks for gifts under $75 that will make any plant enthusiast's day.
-
-> 💡 **Need personalized gift suggestions? Try our [AI Gift Finder](https://bright-gift.com) to get custom recommendations based on your specific plant lover's preferences!**
-
 ## Why Plant Lovers Make Great Gift Recipients
 
 Plant people are typically patient, nurturing, and appreciate the beauty of growth and life. They often enjoy learning about different species and care techniques, making them receptive to a wide variety of plant-related gifts. Whether they're beginners or experienced green thumbs, there's always something new to discover in the world of plants.
@@ -211,8 +205,8 @@ Remember, the best plant gifts are those that show you understand and appreciate
 
 ---
 
-<a href="/gift-finder" class="cta-button" target="_blank" rel="noopener">Try the AI Gift Finder</a>
+<a href="https://bright-gift.com" class="cta-button" target="_blank" rel="noopener">Try the Gift Idea Generator</a>
 
 ---
 
-*Looking for more gift ideas? Check out our other gift guides for different budgets and interests. Have a specific plant lover in mind? Our [AI gift finder](https://bright-gift.com) can help you discover the perfect present!* 
+*Looking for more gift ideas? Check out our other gift guides for different budgets and interests. Have a specific plant lover in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present!* 
