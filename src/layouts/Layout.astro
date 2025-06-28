@@ -79,6 +79,15 @@ const canonicalUrl = canonical || Astro.url.href;
 		<link rel="preconnect" href="https://www.etsy.com" />
 		<link rel="dns-prefetch" href="https://www.amazon.com" />
 		<link rel="dns-prefetch" href="https://www.etsy.com" />
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9T1R5LN5VG"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'G-9T1R5LN5VG');
+		</script>
 	</head>
 	<body>
 		{ !isHome && (
