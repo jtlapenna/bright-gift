@@ -11,7 +11,7 @@ const iconNames = [
   'Tree',           // Outdoor/Gear
   'CookingPot',     // Kitchen/Food
   'PuzzlePiece',    // Toys/Games
-  'Flower',         // Beauty/Personal (was Lipstick)
+  'Flower',         // Beauty/Personal, Gardening/Plant
   'SoccerBall',     // Sports
   'PawPrint',       // Pets
   'Baby',           // Baby
@@ -19,7 +19,12 @@ const iconNames = [
   'Briefcase',      // Office/Work
   'MusicNote',      // Music
   'Heartbeat',      // Health/Wellness
-  'ShoppingBag'     // Generic/Other
+  'ShoppingBag',    // Generic/Other
+  'BeerBottle',     // Beverages
+  'Pencil',         // Stationery
+  'Package',        // Subscription Box
+  'Wrench',         // DIY
+  'Smiley'          // Humor
 ];
 const icons = require('phosphor-react');
 
