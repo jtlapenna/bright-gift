@@ -46,22 +46,26 @@ const allContent = [
 			</div>
 		</section>
 
-		<!-- Desktop Hero (centered, side-by-side, left-aligned text) -->
-		<section class="hidden md:block relative w-full bg-[#FEF2D3] shadow-lg border-t-8 border-[#FF6B6B] mt-0 mx-auto px-0 py-6 min-h-[275px] rounded-b-3xl">
-			<div class="absolute top-0 right-0 mt-6 mr-10 flex gap-8 font-semibold text-[#1C2E4A] text-lg z-10">
-				<a href="/" class="hover:underline underline-offset-4 rounded">Home</a>
-				<a href="/blog" class="hover:underline underline-offset-4 rounded">Blog</a>
-				<a href="#about-tool" class="hover:underline underline-offset-4 rounded">About</a>
-			</div>
-			<div class="flex flex-row items-center justify-center gap-8 max-w-4xl mx-auto">
-				<div class="flex flex-col items-start justify-center text-left">
+		<!-- Desktop Hero (fixed cream banner height, image overlaps bottom) -->
+		<section class="hidden md:block relative w-full bg-transparent mt-0 mx-auto px-0">
+			<!-- Cream banner background -->
+			<div class="absolute top-0 left-0 w-full h-[200px] bg-[#FEF2D3] shadow-lg border-t-8 border-[#FF6B6B] rounded-b-3xl z-0"></div>
+			<!-- Hero content wrapper -->
+			<div class="relative flex flex-row items-center justify-center gap-8 max-w-4xl mx-auto" style="height: 200px;">
+				<div class="flex flex-col items-start justify-center text-left z-10 pt-10">
 					<img src="/bright-gift-logo.png" alt="BrightGift logo" class="h-24 mb-4" />
 					<h1 class="text-3xl font-bold font-poppins text-[#1C2E4A] mb-2 whitespace-nowrap">Let's Find Something Fun!</h1>
 					<p class="text-lg font-inter text-[#333] mb-4">Surprise them in style – let's get gifting!</p>
 				</div>
-				<div class="flex items-center justify-center">
-					<img src="/hero-image.png" alt="Fun gift items: plant book, dino mug, taco plush" class="max-h-[412px] w-auto" />
+				<div class="flex items-center justify-center relative z-10" style="height: 200px;">
+					<img src="/hero-image.png" alt="Fun gift items: plant book, dino mug, taco plush" class="max-h-[412px] w-auto absolute left-1/2 -translate-x-1/2" style="bottom:-60px;" />
 				</div>
+			</div>
+			<!-- Nav links -->
+			<div class="absolute top-0 right-0 mt-6 mr-10 flex gap-8 font-semibold text-[#1C2E4A] text-lg z-20">
+				<a href="/" class="hover:underline underline-offset-4 rounded">Home</a>
+				<a href="/blog" class="hover:underline underline-offset-4 rounded">Blog</a>
+				<a href="#about-tool" class="hover:underline underline-offset-4 rounded">About</a>
 			</div>
 		</section>
 
