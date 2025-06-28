@@ -30,6 +30,42 @@ async function fetchEtsyProduct(keywords, apiKey) {
   };
 }
 
+// Phosphor icon mapping for Amazon placeholders
+const amazonCategoryIconMap = {
+  tech: 'DeviceMobile',
+  electronics: 'DeviceMobile',
+  books: 'Book',
+  fashion: 'TShirt',
+  apparel: 'TShirt',
+  clothing: 'TShirt',
+  home: 'House',
+  decor: 'House',
+  outdoor: 'Tree',
+  gear: 'Tree',
+  kitchen: 'CookingPot',
+  food: 'CookingPot',
+  toys: 'PuzzlePiece',
+  games: 'PuzzlePiece',
+  beauty: 'Lipstick',
+  personal: 'Lipstick',
+  sports: 'SoccerBall',
+  pets: 'PawPrint',
+  baby: 'Baby',
+  automotive: 'Car',
+  office: 'Briefcase',
+  music: 'MusicNote',
+  health: 'Heartbeat',
+  generic: 'ShoppingBag'
+};
+
+function getAmazonIcon(tag) {
+  const lower = tag.toLowerCase();
+  for (const [key, icon] of Object.entries(amazonCategoryIconMap)) {
+    if (lower.includes(key)) return icon;
+  }
+  return amazonCategoryIconMap.generic;
+}
+
 export const POST = async ({ request, locals }) => {
   const data = await request.json();
   const { recipient, interests, budget, style } = data as PromptData;
@@ -92,12 +128,13 @@ export const POST = async ({ request, locals }) => {
           link = `https://www.etsy.com/search?q=${encodeURIComponent(title)}`;
           image = '/placeholders/handmade.jpg';
         }
+        ideas.push({ title, description, tag, link, image });
       } else {
-        // Fallback: Amazon search (no image)
+        // Fallback: Amazon search (no image, use icon)
         link = `https://www.amazon.com/s?k=${encodeURIComponent(title)}&tag=bright-gift-20`;
-        image = '/placeholders/amazon.jpg';
+        const icon = getAmazonIcon(tag);
+        ideas.push({ title, description, tag, link, icon });
       }
-      ideas.push({ title, description, tag, link, image });
     }
 
     // Always return an array; fallback if parsing fails

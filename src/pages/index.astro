@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import heroImage from '../assets/hero-image.png';
+// Phosphor Icons for Amazon placeholders
+import { DeviceMobile, Book, TShirt, House, Tree, CookingPot, PuzzlePiece, Lipstick, SoccerBall, PawPrint, Baby, Car, Briefcase, MusicNote, Heartbeat, ShoppingBag } from 'phosphor-icons';
 const blogPosts = await getCollection('blog');
 ---
 
@@ -259,17 +261,28 @@ const blogPosts = await getCollection('blog');
 	});
 
 	function renderIdeaCards(ideas) {
-		return ideas.map(idea => `
-			<div class="bg-[#A3E4DB] rounded-2xl shadow-lg p-6 flex flex-col items-center text-center animate-fade-in" role="listitem">
-				${idea.image ? `<img src="${idea.image}" alt="${idea.title}" class="h-40 w-full object-cover mb-4 rounded-xl shadow" loading="lazy">` : ''}
-				<h3 class="font-bold text-xl mb-2 font-poppins text-[#1C2E4A]">${idea.title}</h3>
-				<p class="text-[#333] mb-4 font-inter">${idea.description}</p>
-				${idea.tag ? `<span class="inline-block bg-[#FFDE59] text-[#1C2E4A] text-xs font-semibold px-3 py-1 rounded-full mb-2">${idea.tag}</span>` : ''}
-				<a href="${idea.link}" target="_blank" rel="nofollow noopener" class="inline-block mt-4 bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-2 px-4 rounded-full transition-colors font-poppins shadow" aria-label="View ${idea.title} (affiliate link)">
-					Find on ${/etsy/i.test(idea.link) ? 'Etsy' : 'Amazon'}
-				</a>
-			</div>
-		`).join('');
+		// Helper to get icon component by name
+		const iconMap = {
+			DeviceMobile, Book, TShirt, House, Tree, CookingPot, PuzzlePiece, Lipstick, SoccerBall, PawPrint, Baby, Car, Briefcase, MusicNote, Heartbeat, ShoppingBag
+		};
+		return ideas.map(idea => {
+			let iconHtml = '';
+			if (idea.icon && iconMap[idea.icon]) {
+				// Render Phosphor Icon for Amazon
+				iconHtml = `<span class="flex items-center justify-center mb-4"><svg width="80" height="80" fill="#1C2E4A" aria-label="${idea.icon} icon">${iconMap[idea.icon].toString()}</svg></span>`;
+			}
+			return `
+				<div class="bg-[#A3E4DB] rounded-2xl shadow-lg p-6 flex flex-col items-center text-center animate-fade-in" role="listitem">
+					${idea.image ? `<img src="${idea.image}" alt="${idea.title}" class="h-40 w-full object-cover mb-4 rounded-xl shadow" loading="lazy">` : iconHtml}
+					<h3 class="font-bold text-xl mb-2 font-poppins text-[#1C2E4A]">${idea.title}</h3>
+					<p class="text-[#333] mb-4 font-inter">${idea.description}</p>
+					${idea.tag ? `<span class="inline-block bg-[#FFDE59] text-[#1C2E4A] text-xs font-semibold px-3 py-1 rounded-full mb-2">${idea.tag}</span>` : ''}
+					<a href="${idea.link}" target="_blank" rel="nofollow noopener" class="inline-block mt-4 bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-2 px-4 rounded-full transition-colors font-poppins shadow" aria-label="View ${idea.title} (affiliate link)">
+						Find on ${/etsy/i.test(idea.link) ? 'Etsy' : 'Amazon'}
+					</a>
+				</div>
+			`;
+		}).join('');
 	}
 
 	const style = document.createElement('style');
