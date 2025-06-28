@@ -193,9 +193,10 @@ const readTime = post.data.readTime || 5;
               <h4 class="font-semibold text-slate-900 mb-3">Share this post</h4>
               <div class="flex gap-2">
                 <a 
-                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.data.title)}&url=${encodeURIComponent(Astro.url.href)}`}
+                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.data.title)}&url=${encodeURIComponent(Astro.canonicalURL)}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="Share on Twitter"
                   class="p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
                 >
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -203,9 +204,10 @@ const readTime = post.data.readTime || 5;
                   </svg>
                 </a>
                 <a 
-                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(Astro.url.href)}`}
+                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(Astro.canonicalURL)}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="Share on Facebook"
                   class="p-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
                 >
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -213,9 +215,10 @@ const readTime = post.data.readTime || 5;
                   </svg>
                 </a>
                 <a 
-                  href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(Astro.url.href)}&description=${encodeURIComponent(post.data.title)}`}
+                  href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(Astro.canonicalURL)}&media=${encodeURIComponent(post.data.image)}&description=${encodeURIComponent(post.data.title)}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="Share on Pinterest"
                   class="p-2 bg-red-500 text-white rounded hover:bg-red-600 transition-colors"
                 >
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
