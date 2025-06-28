@@ -82,9 +82,6 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 		<link rel="dns-prefetch" href="https://www.etsy.com" />
 		<link rel="preconnect" href="https://analytics.ahrefs.com" />
 
-		<!-- Ahrefs Web Analytics -->
-		<script src="https://analytics.ahrefs.com/analytics.js" data-key="Quv9lM6wKm4wMy6MXyBE4w" async></script>
-
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9T1R5LN5VG"></script>
 		<script>
@@ -93,6 +90,9 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 		  gtag('js', new Date());
 		  gtag('config', 'G-9T1R5LN5VG');
 		</script>
+
+		<!-- Ahrefs Web Analytics -->
+		<script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="Quv9IM6wKm4wMy6MXyBE4w" async></script>
 	</head>
 	<body>
 		{ !isHome && (
