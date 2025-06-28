@@ -254,4 +254,55 @@ const readTime = post.data.readTime || 5;
     font-weight: 600;
     color: #111827;
   }
+  .prose blockquote {
+    background: #fef3c7;
+    border-left: 6px solid #f59e42;
+    color: #92400e;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+    font-style: normal;
+    font-size: 1.1em;
+    position: relative;
+  }
+  .prose blockquote::before {
+    content: "💡 ";
+    font-size: 1.3em;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+  }
+  .prose ul, .prose ol {
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    padding-left: 2rem;
+  }
+  .prose li {
+    margin-bottom: 0.75rem;
+  }
+  .prose a {
+    color: #ea580c;
+    text-decoration: underline;
+    font-weight: 600;
+    background: linear-gradient(90deg, #fef3c7 60%, #f59e42 100%);
+    border-radius: 0.2em;
+    padding: 0.05em 0.2em;
+    transition: background 0.2s, color 0.2s;
+  }
+  .prose a:hover {
+    color: #fff;
+    background: #ea580c;
+  }
+  .prose strong {
+    font-weight: 700;
+    color: #111827;
+  }
+  .prose pre {
+    background: #f3f4f6;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1em;
+    margin: 2rem 0;
+    overflow-x: auto;
+  }
 </style> 
