@@ -14,9 +14,9 @@ const blogPosts = await getCollection('blog');
 				<a href="/blog" class="hover:underline underline-offset-4 rounded">Blog</a>
 				<a href="/about" class="hover:underline underline-offset-4 rounded">About</a>
 			</div>
-			<div class="flex flex-row items-center justify-center w-full max-w-5xl gap-8 px-6">
+			<div class="flex flex-row items-center justify-center w-full max-w-4xl gap-8 px-6">
 				<div class="flex-1 flex flex-col items-start justify-center text-left">
-					<img src="/bright-gift-logo.png" alt="BrightGift logo" class="h-16 mb-4" />
+					<img src="/bright-gift-logo.png" alt="BrightGift logo" class="h-24 mb-4" />
 					<h1 class="text-3xl md:text-4xl font-bold font-poppins text-[#1C2E4A] mb-2 whitespace-nowrap">Let's Find Something Fun!</h1>
 					<p class="text-lg font-inter text-[#333] mb-4">Surprise them in style – let's get gifting!</p>
 				</div>
@@ -34,19 +34,19 @@ const blogPosts = await getCollection('blog');
 					<!-- Recipient Info -->
 					<div class="mb-4">
 						<label for="recipient" class="block font-bold mb-2 text-[#1C2E4A]">Who are you shopping for?</label>
-						<input type="text" id="recipient" name="recipient" aria-required="true" class="w-full px-4 py-3 border-2 border-[#A3E4DB] rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#FF6B6B]" placeholder="e.g., my 30-year-old brother">
+						<input type="text" id="recipient" name="recipient" aria-required="true" class="w-full px-4 py-3 border-2 border-[#A3E4DB] rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#FFDE59] text-[#1C2E4A]" placeholder="e.g., my 30-year-old brother">
 					</div>
 
 					<!-- Interests -->
 					<div class="mb-4">
 						<label for="interests" class="block font-bold mb-2 text-[#1C2E4A]">What do they like?</label>
-						<input type="text" id="interests" name="interests" aria-required="true" class="w-full px-4 py-3 border-2 border-[#A3E4DB] rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#FF6B6B]" placeholder="e.g., hiking, sci-fi movies, craft beer">
+						<input type="text" id="interests" name="interests" aria-required="true" class="w-full px-4 py-3 border-2 border-[#A3E4DB] rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#FFDE59] text-[#1C2E4A]" placeholder="e.g., hiking, sci-fi movies, craft beer">
 					</div>
 
 					<!-- Budget -->
 					<div class="mb-4">
 						<label for="budget" class="block font-bold mb-2 text-[#1C2E4A]">What's your budget?</label>
-						<select id="budget" name="budget" aria-required="true" class="w-full px-4 py-3 border-2 border-[#A3E4DB] rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#FF6B6B]">
+						<select id="budget" name="budget" aria-required="true" class="w-full px-4 py-3 border-2 border-[#A3E4DB] rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#FFDE59] text-[#1C2E4A] text-gray-400">
 							<option value="25">Under $25</option>
 							<option value="50" selected>Under $50</option>
 							<option value="100">Under $100</option>
@@ -93,7 +93,7 @@ const blogPosts = await getCollection('blog');
 				</div>
 				<!-- Regenerate Suggestions Button -->
 				<div class="text-center mt-8">
-					<button id="regenerate-btn" type="button" class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-bold py-2 px-6 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+					<button id="regenerate-btn" type="button" class="hidden bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins text-lg shadow" style="display:none;">
 						Regenerate Suggestions
 					</button>
 				</div>
@@ -108,7 +108,7 @@ const blogPosts = await getCollection('blog');
 					{blogPosts.length > 0 ? (
 						blogPosts.slice(0, 6).map(post => (
 							<article class="bg-[#A3E4DB] rounded-2xl shadow-lg overflow-hidden flex flex-col" tabindex="0" aria-label={`Guide: ${post.data.title}`}> 
-								<img src={post.data.image} alt={post.data.title} class="h-40 w-full object-cover rounded-xl shadow">
+								<img src={post.data.image} alt={post.data.title} class="h-40 w-full object-cover rounded-t-xl shadow">
 								<div class="p-6 flex-1 flex flex-col">
 									<h3 class="font-bold text-lg mb-2 font-poppins text-[#1C2E4A]">{post.data.title}</h3>
 									<p class="text-[#333] mb-4 flex-1 font-inter">{post.data.description}</p>
@@ -134,11 +134,11 @@ const blogPosts = await getCollection('blog');
 
 		<!-- About the Tool / SEO Content Block -->
 		<section id="about-tool" class="py-16 px-4 max-w-3xl mx-auto text-center" itemscope itemtype="https://schema.org/WebPage">
-			<h2 class="text-2xl font-bold mb-4" itemprop="headline">About the AI Gift Idea Generator</h2>
-			<p class="text-gray-700 dark:text-gray-300 mb-6" itemprop="description">
+			<h2 class="text-2xl font-bold mb-4 font-poppins text-[#1C2E4A]" itemprop="headline">About the AI Gift Idea Generator</h2>
+			<p class="text-[#333] mb-6 font-inter" itemprop="description">
 				Bright Gift's AI Gift Idea Generator helps you find the perfect present for anyone, instantly. Just enter a few details and our advanced AI suggests unique, thoughtful gifts tailored to your recipient's interests, style, and budget. Save time, discover new ideas, and shop smarter—all in one place.
 			</p>
-			<a href="#tool" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors" aria-label="Try the AI Gift Finder now">
+			<a href="#tool" class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins text-lg shadow" aria-label="Try the AI Gift Finder now">
 				Try the AI Gift Finder
 			</a>
 		</section>
@@ -216,12 +216,18 @@ const blogPosts = await getCollection('blog');
 				const { ideas } = await response.json();
 				if (Array.isArray(ideas) && ideas.length) {
 					resultsContainer.innerHTML = renderIdeaCards(ideas);
+					regenerateBtn.classList.remove('hidden');
+					regenerateBtn.style.display = '';
 				} else {
 					resultsContainer.innerHTML = `<p class="text-red-500 text-center" role="alert">No gift ideas found or failed to parse results. Please try again.</p>`;
+					regenerateBtn.classList.add('hidden');
+					regenerateBtn.style.display = 'none';
 				}
 				lastInputs = { recipient, interests, budget, style: selectedStyle };
 			} catch (error) {
 				resultsContainer.innerHTML = `<p class="text-red-500 text-center" role="alert">${error.message}</p>`;
+				regenerateBtn.classList.add('hidden');
+				regenerateBtn.style.display = 'none';
 			} finally {
 				loadingIndicator.classList.add('hidden');
 			}
@@ -240,8 +246,12 @@ const blogPosts = await getCollection('blog');
 				if (!response.ok) throw new Error('Failed to get ideas.');
 				const { ideas } = await response.json();
 				resultsContainer.innerHTML = renderIdeaCards(ideas);
+				regenerateBtn.classList.add('hidden');
+				regenerateBtn.style.display = 'none';
 			} catch (error) {
 				resultsContainer.innerHTML = `<p class="text-red-500 text-center">${error.message}</p>`;
+				regenerateBtn.classList.add('hidden');
+				regenerateBtn.style.display = 'none';
 			} finally {
 				loadingIndicator.classList.add('hidden');
 			}
