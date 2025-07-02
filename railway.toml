@@ -1,8 +1,5 @@
-[build]
-builder = "nixpacks"
-
 [deploy]
-startCommand = "node index.js"
+startCommand = "node test-server.js"
 healthcheckPath = "/health"
 healthcheckTimeout = 300
 
