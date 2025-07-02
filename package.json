@@ -3,11 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "echo 'No build step required for Node.js app'",
+    "postinstall": "echo 'Post-install complete'"
   },
   "dependencies": {
     "express": "^5.1.0",
     "puppeteer": "^24.11.2"
+  },
+  "devDependencies": {
+    "node-fetch": "^2.6.7"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "keywords": [],
   "author": "",
