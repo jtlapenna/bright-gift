@@ -1,33 +1,16 @@
 {
-  "name": "gift-idea-generator",
-  "type": "module",
-  "version": "0.0.1",
-  "engines": {
-    "node": ">=18.20.8"
-  },
+  "name": "brightgift-puppeteer",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "check-links": "node src/pages/broken-links-checker.js"
+    "start": "node index.js"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.0",
-    "@astrojs/tailwind": "^6.0.2",
-    "@tailwindcss/typography": "^0.5.16",
-    "astro": "^5.10.1",
-    "cheerio": "^1.0.0-rc.12",
     "express": "^5.1.0",
-    "marked": "^16.0.0",
-    "node-fetch": "^2.6.12",
-    "openai": "^5.8.2",
-    "phosphor-icons": "^1.4.2",
-    "phosphor-react": "^1.4.1",
-    "puppeteer": "^24.11.2",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "tailwindcss": "^3.4.17"
-  }
+    "puppeteer": "^24.11.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "BrightGift Puppeteer image automation server"
 }
