@@ -141,8 +141,28 @@ app.use((err, req, res, next) => {
 });
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => {
+
+// Add error handling for server startup
+const server = app.listen(port, () => {
   console.log(`[STARTUP] Puppeteer server running on port ${port}`);
   console.log(`[STARTUP] Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`[STARTUP] Memory usage: ${Math.round(process.memoryUsage().heapUsed / 1024 / 1024)}MB`);
+  console.log(`[STARTUP] Server started successfully`);
+});
+
+// Handle server errors
+server.on('error', (error) => {
+  console.error(`[STARTUP] Server error:`, error);
+  process.exit(1);
+});
+
+// Handle uncaught exceptions
+process.on('uncaughtException', (error) => {
+  console.error(`[STARTUP] Uncaught Exception:`, error);
+  process.exit(1);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error(`[STARTUP] Unhandled Rejection at:`, promise, 'reason:', reason);
+  process.exit(1);
 }); 
