@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["chromium", "libx11", "libxcomposite", "libxcursor", "libxdamage", "libxext", "libxfixes", "libxi", "libxrandr", "libxrender", "libxss", "libxtst", "ca-certificates", "fonts-liberation", "libappindicator3-1", "xdg-utils", "atk", "at-spi2-atk", "gtk3", "libdrm", "libxkbcommon", "libxshmfence"]
+nixPkgs = ["chromium", "libx11", "libxcomposite", "libxcursor", "libxdamage", "libxext", "libxfixes", "libxi", "libxrandr", "libxrender", "libxss", "libxtst", "ca-certificates", "fonts-liberation", "xdg-utils", "atk", "at-spi2-atk", "gtk3"]
 
 [phases.install]
 cmds = ["npm ci --only=production"]

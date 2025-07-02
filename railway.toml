@@ -2,11 +2,9 @@
 builder = "nixpacks"
 
 [deploy]
-startCommand = "node index.js"
+startCommand = "chmod +x start.sh && ./start.sh"
 healthcheckPath = "/health"
 healthcheckTimeout = 300
-restartPolicyType = "on_failure"
-restartPolicyMaxRetries = 3
 
 [deploy.envs]
 NODE_ENV = "production" 
