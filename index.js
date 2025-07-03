@@ -32,29 +32,12 @@ app.post('/generate', async (req, res) => {
   try {
     console.log(`[${requestId}] Launching Puppeteer browser...`);
     
-         // Railway-optimized Puppeteer configuration
-     browser = await puppeteer.launch({
-       headless: true,
-       executablePath: process.env.CHROME_BIN || undefined,
-       args: [
-         '--no-sandbox',
-         '--disable-setuid-sandbox',
-         '--disable-dev-shm-usage',
-         '--disable-accelerated-2d-canvas',
-         '--no-first-run',
-         '--no-zygote',
-         '--single-process',
-         '--disable-gpu',
-         '--disable-background-timer-throttling',
-         '--disable-backgrounding-occluded-windows',
-         '--disable-renderer-backgrounding',
-         '--disable-web-security',
-         '--disable-features=VizDisplayCompositor',
-         '--memory-pressure-off',
-         '--max_old_space_size=4096'
-       ],
-       timeout: 30000 // 30 second timeout for browser launch
-     });
+    browser = await puppeteer.launch({
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      executablePath: process.env.CHROME_PATH || '/opt/bin/chromium',
+      timeout: 30000
+    });
     
     console.log(`[${requestId}] Browser launched successfully`);
     
@@ -68,7 +51,7 @@ app.post('/generate', async (req, res) => {
     console.log(`[${requestId}] Navigating to ChatGPT...`);
     await page.goto('https://chatgpt.com/g/g-68659216a67c8191a91604afe44e6655-brightgift-image-generator', { 
       waitUntil: 'networkidle2',
-      timeout: 60000 // 60 second timeout for navigation
+      timeout: 60000
     });
     
     console.log(`[${requestId}] Page loaded successfully`);
@@ -143,7 +126,7 @@ app.use((err, req, res, next) => {
 const port = process.env.PORT || 3000;
 
 // Add error handling for server startup
-const server = app.listen(port, () => {
+const server = app.listen(port, '0.0.0.0', () => {
   console.log(`[STARTUP] Puppeteer server running on port ${port}`);
   console.log(`[STARTUP] Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`[STARTUP] Memory usage: ${Math.round(process.memoryUsage().heapUsed / 1024 / 1024)}MB`);

@@ -38,7 +38,7 @@ console.log('[STARTUP] Starting test server...');
 console.log('[STARTUP] Environment:', process.env.NODE_ENV || 'development');
 console.log('[STARTUP] Port:', port);
 
-const server = app.listen(port, () => {
+const server = app.listen(port, '0.0.0.0', () => {
   console.log(`[STARTUP] Test server running on port ${port}`);
   console.log(`[STARTUP] Memory usage: ${Math.round(process.memoryUsage().heapUsed / 1024 / 1024)}MB`);
   console.log(`[STARTUP] Server started successfully`);
