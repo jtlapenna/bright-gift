@@ -1,6 +1,9 @@
 const express = require('express');
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const app = express();
+
+puppeteer.use(StealthPlugin());
 
 // Middleware for request logging
 app.use(express.json());
@@ -58,7 +61,28 @@ app.post('/generate', async (req, res) => {
     
     console.log(`[${requestId}] Page loaded successfully`);
 
-    // Wait for and type the prompt
+    // === Automate Google login if needed ===
+    // Click "Sign in with Google"
+    try {
+      await page.waitForSelector('button[data-provider="google"]', { timeout: 15000 });
+      await page.click('button[data-provider="google"]');
+      console.log(`[${requestId}] Clicked 'Sign in with Google' button`);
+      // Google login flow
+      await page.waitForSelector('input[type="email"]', { timeout: 15000 });
+      await page.type('input[type="email"]', process.env.GOOGLE_EMAIL);
+      await page.keyboard.press('Enter');
+      await page.waitForTimeout(2000);
+      await page.waitForSelector('input[type="password"]', { timeout: 15000 });
+      await page.type('input[type="password"]', process.env.GOOGLE_PASSWORD);
+      await page.keyboard.press('Enter');
+      await page.waitForNavigation({ waitUntil: 'networkidle2', timeout: 60000 });
+      console.log(`[${requestId}] Google login completed`);
+    } catch (loginErr) {
+      console.error(`[${requestId}] Google login automation failed:`, loginErr.message);
+      // Continue anyway, as the page may not require login or may already be logged in
+    }
+    // ===============================
+
     console.log(`[${requestId}] Waiting for textarea...`);
     try {
       await page.waitForSelector('textarea', { timeout: 30000 });
@@ -66,13 +90,20 @@ app.post('/generate', async (req, res) => {
       console.error(`[${requestId}] Error waiting for selector:`, waitErr.message);
       // Save screenshot and HTML for debugging
       const screenshotPath = `/tmp/${requestId}-debug.png`;
-      const htmlPath = `/tmp/${requestId}-debug.html`;
-      await page.screenshot({ path: screenshotPath });
       const html = await page.content();
       const fs = require('fs');
-      fs.writeFileSync(htmlPath, html);
+      await page.screenshot({ path: screenshotPath });
+      fs.writeFileSync(`/tmp/${requestId}-debug.html`, html);
       console.log(`[${requestId}] Screenshot saved to ${screenshotPath}`);
-      console.log(`[${requestId}] HTML saved to ${htmlPath}`);
+      // Log only the <body> content
+      const bodyMatch = html.match(/<body[\s\S]*?>[\s\S]*?<\/body>/i);
+      if (bodyMatch) {
+        console.log(`[${requestId}] <body> content:\n${bodyMatch[0]}`);
+      } else {
+        console.log(`[${requestId}] <body> tag not found in HTML.`);
+      }
+      // Log the first 500 characters of the HTML
+      console.log(`[${requestId}] HTML (first 500 chars):\n${html.substring(0, 500)}`);
       throw waitErr;
     }
     console.log(`[${requestId}] Textarea found, typing prompt...`);
