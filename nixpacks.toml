@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["nodejs", "chromium"]
+
+[phases.install]
+cmds = ["npm ci --only=production"]
+
+[phases.build]
+cmds = ["echo 'No build step required'"]
+
+[start]
+cmd = "node test-server.js" 
