@@ -218,11 +218,11 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal server error', details: err.message });
 });
 
-const port = process.env.PORT || 3000;
+const PORT = 3001;
 
 // Add error handling for server startup
-const server = app.listen(port, '0.0.0.0', () => {
-  console.log(`[STARTUP] Puppeteer server running on port ${port}`);
+const server = app.listen(PORT, '0.0.0.0', () => {
+  console.log(`[STARTUP] Puppeteer server running on port ${PORT}`);
   console.log(`[STARTUP] Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`[STARTUP] Memory usage: ${Math.round(process.memoryUsage().heapUsed / 1024 / 1024)}MB`);
   console.log(`[STARTUP] Server started successfully`);
