@@ -1,9 +1,9 @@
 import { getCollection } from 'astro:content';
 
 export async function GET() {
-  const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
-  const giftGuides = await getCollection('gift-guides', ({ data }) => !data.draft);
-  const faqs = await getCollection('faqs', ({ data }) => !data.draft);
+  const blogPosts = await getCollection('blog', ({ data }: { data: { draft?: boolean; date: string; } }) => !data.draft);
+  const giftGuides = await getCollection('gift-guides', ({ data }: { data: { draft?: boolean; date: string; } }) => !data.draft);
+  const faqs = await getCollection('faqs', ({ data }: { data: { draft?: boolean; date: string; } }) => !data.draft);
 
   const baseUrl = 'https://bright-gift.com';
   
@@ -33,7 +33,7 @@ export async function GET() {
   });
 
   // Generate URLs for blog posts
-  const blogUrls = blogPosts.map(post => ({
+  const blogUrls = blogPosts.map((post: { slug: string; data: { date: string; } }) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastmod: new Date(post.data.date).toISOString(),
     changefreq: 'monthly',
@@ -41,7 +41,7 @@ export async function GET() {
   }));
 
   // Generate URLs for gift guides
-  const guideUrls = giftGuides.map(guide => ({
+  const guideUrls = giftGuides.map((guide: { slug: string; data: { date: string; } }) => ({
     url: `${baseUrl}/blog/${guide.slug}`,
     lastmod: new Date(guide.data.date).toISOString(),
     changefreq: 'monthly',
@@ -49,7 +49,7 @@ export async function GET() {
   }));
 
   // Generate URLs for FAQs
-  const faqUrls = faqs.map(faq => ({
+  const faqUrls = faqs.map((faq: { slug: string; data: { date: string; } }) => ({
     url: `${baseUrl}/blog/${faq.slug}`,
     lastmod: new Date(faq.data.date).toISOString(),
     changefreq: 'monthly',
