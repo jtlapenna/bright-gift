@@ -77,32 +77,86 @@ app.post('/generate', async (req, res) => {
     
     console.log(`[${requestId}] Page loaded successfully`);
 
-    console.log(`[${requestId}] Waiting for textarea...`);
-    try {
-      await page.waitForSelector('textarea', { timeout: 30000 });
-    } catch (waitErr) {
-      console.error(`[${requestId}] Error waiting for selector:`, waitErr.message);
+    // Debug: Check what page we're actually on
+    console.log(`[${requestId}] Current URL:`, await page.url());
+    const pageTitle = await page.title();
+    console.log(`[${requestId}] Page title:`, pageTitle);
+
+    // Check for common page states
+    const loginButton = await page.$('button[data-provider="google"]');
+    const loginText = await page.$('text="Sign in"');
+    const errorText = await page.$('text="Error"');
+    
+    if (loginButton) {
+      console.log(`[${requestId}] Login button found - cookies may not be working`);
+    }
+    if (loginText) {
+      console.log(`[${requestId}] Login text found - authentication required`);
+    }
+    if (errorText) {
+      console.log(`[${requestId}] Error text found on page`);
+    }
+
+    // Try multiple selectors for the input area
+    console.log(`[${requestId}] Looking for input elements...`);
+    const selectors = [
+      'textarea',
+      'div[contenteditable="true"]',
+      'input[type="text"]',
+      '[data-testid="chat-input"]',
+      '.chat-input',
+      '#prompt-textarea'
+    ];
+
+    let foundSelector = null;
+    for (const selector of selectors) {
+      try {
+        const element = await page.$(selector);
+        if (element) {
+          console.log(`[${requestId}] Found element with selector: ${selector}`);
+          foundSelector = selector;
+          break;
+        }
+      } catch (err) {
+        console.log(`[${requestId}] Selector ${selector} not found`);
+      }
+    }
+
+    if (!foundSelector) {
+      console.log(`[${requestId}] No input element found, saving debug info...`);
       // Save screenshot and HTML for debugging
       const screenshotPath = `/tmp/${requestId}-debug.png`;
       const html = await page.content();
       const fs = require('fs');
-      await page.screenshot({ path: screenshotPath });
+      await page.screenshot({ path: screenshotPath, fullPage: true });
       fs.writeFileSync(`/tmp/${requestId}-debug.html`, html);
       console.log(`[${requestId}] Screenshot saved to ${screenshotPath}`);
-      // Log only the <body> content
-      const bodyMatch = html.match(/<body[\s\S]*?>[\s\S]*?<\/body>/i);
-      if (bodyMatch) {
-        console.log(`[${requestId}] <body> content:\n${bodyMatch[0]}`);
-      } else {
-        console.log(`[${requestId}] <body> tag not found in HTML.`);
-      }
-      // Log the first 500 characters of the HTML
-      console.log(`[${requestId}] HTML (first 500 chars):\n${html.substring(0, 500)}`);
-      throw waitErr;
+      
+      // Log page structure
+      const bodyContent = await page.evaluate(() => {
+        return {
+          title: document.title,
+          url: window.location.href,
+          bodyText: document.body.innerText.substring(0, 500),
+          forms: document.forms.length,
+          inputs: document.querySelectorAll('input, textarea, [contenteditable]').length
+        };
+      });
+      console.log(`[${requestId}] Page structure:`, bodyContent);
+      
+      throw new Error('No input element found on page - may need to refresh cookies');
     }
-    console.log(`[${requestId}] Textarea found, typing prompt...`);
+
+    console.log(`[${requestId}] Using selector: ${foundSelector}`);
     
-    await page.type('textarea', prompt);
+    // Clear any existing content and type the prompt
+    await page.click(foundSelector);
+    await page.keyboard.down('Control');
+    await page.keyboard.press('KeyA');
+    await page.keyboard.up('Control');
+    await page.keyboard.press('Backspace');
+    
+    await page.type(foundSelector, prompt);
     console.log(`[${requestId}] Prompt typed, pressing Enter...`);
     await page.keyboard.press('Enter');
 
