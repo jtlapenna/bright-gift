@@ -35,11 +35,12 @@ app.post('/generate', async (req, res) => {
   
   try {
     console.log(`[${requestId}] Launching Puppeteer browser...`);
-    
+    const chromiumPath = process.env.CHROME_PATH || '/usr/bin/chromium-browser';
+    console.log(`[${requestId}] Using Chromium executablePath: ${chromiumPath}`);
     browser = await puppeteer.launch({
       headless: true,
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
-      executablePath: process.env.CHROME_PATH || '/opt/bin/chromium',
+      executablePath: chromiumPath,
       timeout: 30000
     });
     
