@@ -1,16 +1,27 @@
 {
-  "name": "brightgift-puppeteer",
+  "name": "bright-gift",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf dist",
+    "compile": "tsc"
   },
   "dependencies": {
-    "express": "^5.1.0",
-    "puppeteer": "^24.11.2"
+    "express": "^5.1.0"
   },
-  "keywords": [],
+  "devDependencies": {
+    "@types/node": "^24.0.10",
+    "astro": "^5.11.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "gift",
+    "ideas",
+    "automation"
+  ],
   "author": "",
   "license": "ISC",
-  "description": "BrightGift Puppeteer image automation server"
+  "description": "BrightGift main project for gift idea generation"
 }

@@ -142,4 +142,4 @@ Wireless earbuds are essential for modern office communication and productivity.
 
 ---
 
-*Looking for more gift ideas? Check out our other gift guides for different budgets and relationships. Have a specific coworker in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their unique interests and work style!* 
+*Looking for more gift ideas? Check out our other gift guides for different budgets and relationships, including our [Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget/). Have a specific coworker in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their unique preferences.* 

@@ -200,4 +200,4 @@ Remember, the best plant gifts are those that show you understand and appreciate
 
 ---
 
-*Looking for more gift ideas? Check out our other gift guides for different budgets and interests. Have a specific plant lover in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present!* 
+*Looking for more gift ideas? Check out our other gift guides for different budgets and interests, including our [Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget/). Have a specific plant lover in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present!* 
