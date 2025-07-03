@@ -1,8 +1,9 @@
-const express = require('express');
-const puppeteer = require('puppeteer-extra');
-const StealthPlugin = require('puppeteer-extra-plugin-stealth');
-const app = express();
+import express from 'express';
+import puppeteer from 'puppeteer-extra';
+import StealthPlugin from 'puppeteer-extra-plugin-stealth';
+import fs from 'fs';
 
+const app = express();
 puppeteer.use(StealthPlugin());
 
 // Middleware for request logging
@@ -127,7 +128,6 @@ app.post('/generate', async (req, res) => {
       // Save screenshot and HTML for debugging
       const screenshotPath = `/tmp/${requestId}-debug.png`;
       const html = await page.content();
-      const fs = require('fs');
       await page.screenshot({ path: screenshotPath, fullPage: true });
       fs.writeFileSync(`/tmp/${requestId}-debug.html`, html);
       console.log(`[${requestId}] Screenshot saved to ${screenshotPath}`);

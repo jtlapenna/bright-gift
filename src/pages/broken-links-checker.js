@@ -1,11 +1,11 @@
 // Broken Links Checker Script
 // This script can be run monthly to check for broken links on the site
 
-const fs = require('fs');
-const path = require('path');
-const fetch = require('node-fetch');
-const cheerio = require('cheerio');
-const { getCollection } = require('@astrojs/astro/dist/content');
+import fs from 'fs';
+import path from 'path';
+import fetch from 'node-fetch';
+import cheerio from 'cheerio';
+import { getCollection } from '@astrojs/astro/dist/content';
 
 // URLs to check (internal and external)
 const urls = [];
