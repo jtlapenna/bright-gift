@@ -53,6 +53,22 @@ app.post('/generate', async (req, res) => {
     await page.setViewport({ width: 1280, height: 720 });
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
     
+    // Load and set cookies from environment variable
+    console.log(`[${requestId}] Loading session cookies...`);
+    const cookiesJson = process.env.CHATGPT_COOKIES;
+    if (!cookiesJson) {
+      throw new Error('CHATGPT_COOKIES environment variable not set');
+    }
+    
+    try {
+      const cookies = JSON.parse(cookiesJson);
+      await page.setCookie(...cookies);
+      console.log(`[${requestId}] Successfully set ${cookies.length} cookies`);
+    } catch (cookieErr) {
+      console.error(`[${requestId}] Error parsing cookies:`, cookieErr.message);
+      throw new Error('Invalid cookie format in CHATGPT_COOKIES environment variable');
+    }
+    
     console.log(`[${requestId}] Navigating to ChatGPT...`);
     await page.goto('https://chatgpt.com/g/g-68659216a67c8191a91604afe44e6655-brightgift-image-generator', { 
       waitUntil: 'networkidle2',
@@ -60,28 +76,6 @@ app.post('/generate', async (req, res) => {
     });
     
     console.log(`[${requestId}] Page loaded successfully`);
-
-    // === Automate Google login if needed ===
-    // Click "Sign in with Google"
-    try {
-      await page.waitForSelector('button[data-provider="google"]', { timeout: 15000 });
-      await page.click('button[data-provider="google"]');
-      console.log(`[${requestId}] Clicked 'Sign in with Google' button`);
-      // Google login flow
-      await page.waitForSelector('input[type="email"]', { timeout: 15000 });
-      await page.type('input[type="email"]', process.env.GOOGLE_EMAIL);
-      await page.keyboard.press('Enter');
-      await page.waitForTimeout(2000);
-      await page.waitForSelector('input[type="password"]', { timeout: 15000 });
-      await page.type('input[type="password"]', process.env.GOOGLE_PASSWORD);
-      await page.keyboard.press('Enter');
-      await page.waitForNavigation({ waitUntil: 'networkidle2', timeout: 60000 });
-      console.log(`[${requestId}] Google login completed`);
-    } catch (loginErr) {
-      console.error(`[${requestId}] Google login automation failed:`, loginErr.message);
-      // Continue anyway, as the page may not require login or may already be logged in
-    }
-    // ===============================
 
     console.log(`[${requestId}] Waiting for textarea...`);
     try {
