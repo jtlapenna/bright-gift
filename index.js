@@ -60,7 +60,21 @@ app.post('/generate', async (req, res) => {
 
     // Wait for and type the prompt
     console.log(`[${requestId}] Waiting for textarea...`);
-    await page.waitForSelector('textarea', { timeout: 30000 });
+    try {
+      await page.waitForSelector('textarea', { timeout: 30000 });
+    } catch (waitErr) {
+      console.error(`[${requestId}] Error waiting for selector:`, waitErr.message);
+      // Save screenshot and HTML for debugging
+      const screenshotPath = `/tmp/${requestId}-debug.png`;
+      const htmlPath = `/tmp/${requestId}-debug.html`;
+      await page.screenshot({ path: screenshotPath });
+      const html = await page.content();
+      const fs = require('fs');
+      fs.writeFileSync(htmlPath, html);
+      console.log(`[${requestId}] Screenshot saved to ${screenshotPath}`);
+      console.log(`[${requestId}] HTML saved to ${htmlPath}`);
+      throw waitErr;
+    }
     console.log(`[${requestId}] Textarea found, typing prompt...`);
     
     await page.type('textarea', prompt);
