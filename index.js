@@ -11,8 +11,12 @@ app.use((req, res, next) => {
 
 // Health check endpoint
 app.get('/health', (req, res) => {
-  console.log('[HEALTH] Health check requested');
-  res.json({ status: 'healthy', timestamp: new Date().toISOString() });
+  res.status(200).json({ status: 'ok' });
+});
+
+// Simple test endpoint for debugging
+app.get('/test', (req, res) => {
+  res.status(200).json({ message: 'Test endpoint working' });
 });
 
 app.post('/generate', async (req, res) => {
