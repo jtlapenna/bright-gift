@@ -74,38 +74,40 @@ module.exports = {
     );
   },
   POST: async ({ request, locals }: { request: any, locals: any }) => {
-    const data = await request.json();
-    const { recipient, interests, budget, style } = data as typeof PromptData;
-
-    if (!recipient || !interests || !budget) {
-      return new Response(
-        JSON.stringify({ error: 'Missing required fields' }),
-        { status: 400 }
-      );
-    }
-
-    // Get the OpenAI API key from Cloudflare SSR runtime context
-    const apiKey = locals?.runtime?.env?.OPENAI_API_KEY;
-    if (!apiKey) {
-      return new Response(
-        JSON.stringify({ error: 'OpenAI API key not found in SSR runtime context' }),
-        { status: 500 }
-      );
-    }
-
-    // Get Etsy API key from env (not OAuth2 token)
-    const etsyApiKey = locals?.runtime?.env?.ETSY_API_KEY;
-    // Log presence of Etsy API key (not the value)
-    if (etsyApiKey) {
-      console.log('Etsy API key found in environment.');
-    } else {
-      console.warn('Etsy API key NOT found in environment. Etsy integration will not work.');
-    }
-
-    const openai = new OpenAI({ apiKey });
-    const prompt = buildPrompt({ recipient, interests, budget, style });
-
+    console.log('POST /api/generate invoked');
+    let data;
     try {
+      data = await request.json();
+      console.log('POST /api/generate received data:', data);
+      const { recipient, interests, budget, style } = data;
+      if (!recipient || !interests || !budget) {
+        return new Response(
+          JSON.stringify({ error: 'Missing required fields' }),
+          { status: 400 }
+        );
+      }
+
+      // Get the OpenAI API key from Cloudflare SSR runtime context
+      const apiKey = locals?.runtime?.env?.OPENAI_API_KEY;
+      if (!apiKey) {
+        return new Response(
+          JSON.stringify({ error: 'OpenAI API key not found in SSR runtime context' }),
+          { status: 500 }
+        );
+      }
+
+      // Get Etsy API key from env (not OAuth2 token)
+      const etsyApiKey = locals?.runtime?.env?.ETSY_API_KEY;
+      // Log presence of Etsy API key (not the value)
+      if (etsyApiKey) {
+        console.log('Etsy API key found in environment.');
+      } else {
+        console.warn('Etsy API key NOT found in environment. Etsy integration will not work.');
+      }
+
+      const openai = new OpenAI({ apiKey });
+      const prompt = buildPrompt({ recipient, interests, budget, style });
+
       const completion = await openai.chat.completions.create({
         model: 'gpt-4-turbo',
         messages: [
@@ -160,8 +162,8 @@ module.exports = {
         headers: { 'Content-Type': 'application/json' },
       });
     } catch (error: any) {
-      console.error('OpenAI API error:', error);
-      return new Response(JSON.stringify({ error: error?.message || String(error) }), { status: 500 });
+      console.error('POST /api/generate error:', error);
+      return new Response(JSON.stringify({ error: error && error.message ? error.message : String(error) }), { status: 500 });
     }
   }
 }; 
