@@ -1,5 +1,5 @@
-const { buildPrompt, PromptData } = require('../../utils/promptBuilder.js');
-const OpenAI = require('openai');
+import { buildPrompt } from '../../utils/promptBuilder.js';
+import OpenAI from 'openai';
 
 // Helper to fetch Etsy product for a keyword
 async function fetchEtsyProduct(keywords: string, apiKey: string) {
