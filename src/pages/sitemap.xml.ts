@@ -1,9 +1,10 @@
 import { getCollection } from 'astro:content';
 
 export async function GET() {
-  const blogPosts = await getCollection('blog', ({ data }: { data: { draft?: boolean; date: string; } }) => !data.draft);
-  const giftGuides = await getCollection('gift-guides', ({ data }: { data: { draft?: boolean; date: string; } }) => !data.draft);
-  const faqs = await getCollection('faqs', ({ data }: { data: { draft?: boolean; date: string; } }) => !data.draft);
+  // Only include published (draft: false) content
+  const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
+  const giftGuides = await getCollection('gift-guides', ({ data }) => !data.draft);
+  const faqs = await getCollection('faqs', ({ data }) => !data.draft);
 
   const baseUrl = 'https://bright-gift.com';
   
@@ -32,24 +33,24 @@ export async function GET() {
     };
   });
 
-  // Generate URLs for blog posts
-  const blogUrls = blogPosts.map((post: { slug: string; data: { date: string; } }) => ({
+  // Only include real, published blog posts
+  const blogUrls = blogPosts.map(post => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastmod: new Date(post.data.date).toISOString(),
     changefreq: 'monthly',
     priority: 0.7
   }));
 
-  // Generate URLs for gift guides
-  const guideUrls = giftGuides.map((guide: { slug: string; data: { date: string; } }) => ({
-    url: `${baseUrl}/blog/${guide.slug}`,
+  // Only include real, published gift guides under /gift-guides/
+  const guideUrls = giftGuides.map(guide => ({
+    url: `${baseUrl}/gift-guides/${guide.slug}/`,
     lastmod: new Date(guide.data.date).toISOString(),
     changefreq: 'monthly',
     priority: 0.8
   }));
 
-  // Generate URLs for FAQs
-  const faqUrls = faqs.map((faq: { slug: string; data: { date: string; } }) => ({
+  // Only include real, published FAQs
+  const faqUrls = faqs.map(faq => ({
     url: `${baseUrl}/blog/${faq.slug}`,
     lastmod: new Date(faq.data.date).toISOString(),
     changefreq: 'monthly',
@@ -60,12 +61,7 @@ export async function GET() {
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allUrls.map(url => `  <url>
-    <loc>${url.url}</loc>
-    <lastmod>${url.lastmod}</lastmod>
-    <changefreq>${url.changefreq}</changefreq>
-    <priority>${url.priority}</priority>
-  </url>`).join('\n')}
+${allUrls.map(url => `  <url>\n    <loc>${url.url}</loc>\n    <lastmod>${url.lastmod}</lastmod>\n    <changefreq>${url.changefreq}</changefreq>\n    <priority>${url.priority}</priority>\n  </url>`).join('\n')}
 </urlset>`;
 
   return new Response(sitemap, {
