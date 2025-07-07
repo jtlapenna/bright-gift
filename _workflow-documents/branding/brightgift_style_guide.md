@@ -1,16 +1,15 @@
-
 # 🌟 BrightGift Brand Style Guide (Modern & Friendly Theme)
 
 ## 1. Brand Voice & Messaging
 - **Tone**: Friendly, clear, helpful with a touch of charm
-- **Tagline**: *“Let’s Find Something Fun!”*
+- **Tagline**: *"Let's Find Something Fun!"*
 - **Voice Guidelines**:
   - Keep language inclusive and gender-neutral
   - Use short, action-oriented phrases for CTAs
   - Favor warmth and curiosity over exuberance
   - Examples:
-    - “Need a gift for someone tricky? We’ve got ideas.”
-    - “Smart, surprising gifts picked just for them.”
+    - "Need a gift for someone tricky? We've got ideas."
+    - "Smart, surprising gifts picked just for them."
 
 ---
 
@@ -33,8 +32,8 @@
 
 | Use Case           | Font                     | Style & Notes                         |
 |--------------------|--------------------------|---------------------------------------|
-| Logo – “Bright”    | Pacifico or Fredoka      | Handwritten, playful                  |
-| Logo – “Gift”      | Poppins or Nunito        | Rounded sans serif                    |
+| Logo – "Bright"    | Pacifico or Fredoka      | Handwritten, playful                  |
+| Logo – "Gift"      | Poppins or Nunito        | Rounded sans serif                    |
 | Headers            | Poppins / Raleway        | Medium/Bold weight, sentence case     |
 | Body Text          | Open Sans / Inter        | Light to Regular weight               |
 | Buttons & CTAs     | Poppins Bold             | Uppercase or sentence case            |
@@ -45,7 +44,7 @@
 
 ## 4. Logo Usage
 
-- **Primary Logo**: “Bright” in script + “Gift” in rounded sans with a gift box + sparkles icon
+- **Primary Logo**: "Bright" in script + "Gift" in rounded sans with a gift box + sparkles icon
 - **Icon Alone**: Confetti-wrapped gift box in coral or yellow
 - **Favicon**: Minimalistic spark or ribbon icon in solid color
 
@@ -72,6 +71,7 @@
 - **Cards**: Realistic product photography with color-matched backdrops
 - **Icons**: Thin-line or filled style, rounded edges
 - **Animations**: Subtle confetti bursts or hover tilts (keep lightweight)
+- **Blog Banner & OG Images**: Never include logos or text overlays. Images should be visually engaging and brand-aligned, but free of any branding marks or written content for maximum flexibility and clarity in social sharing and previews.
 
 ---
 

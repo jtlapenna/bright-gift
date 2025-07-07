@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.buildPrompt = buildPrompt;
-function buildPrompt(data) {
+export function buildPrompt(data) {
     const { recipient, interests, budget, style } = data;
     // Always request 6–9 ideas (randomly pick a number in that range for variety)
     const ideaCount = Math.floor(Math.random() * 4) + 6; // 6, 7, 8, or 9
