@@ -335,6 +335,8 @@ const breadcrumbData = {
 
 		regenerateBtn.addEventListener('click', async () => {
 			if (!lastInputs.recipient) return;
+			// Scroll to loading indicator when regenerating
+			loadingIndicator.scrollIntoView({ behavior: 'smooth' });
 			loadingIndicator.classList.remove('hidden');
 			resultsContainer.innerHTML = '';
 			try {
