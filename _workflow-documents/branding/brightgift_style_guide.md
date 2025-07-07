@@ -72,6 +72,7 @@
 - **Icons**: Thin-line or filled style, rounded edges
 - **Animations**: Subtle confetti bursts or hover tilts (keep lightweight)
 - **Blog Banner & OG Images**: Never include logos or text overlays. Images should be visually engaging and brand-aligned, but free of any branding marks or written content for maximum flexibility and clarity in social sharing and previews.
+- **Social Images**: Square (1:1 ratio), recommended size 1200×1200px. Designed for Instagram, Pinterest, and other platforms that favor square images. No logos or text overlays; focus on visually engaging, brand-aligned content.
 
 ---
 

@@ -44,6 +44,30 @@
 // ✅ Step 4: POST image metadata back to n8n or GitHub
 
 // ─────────────────────────────────────────────
+// 🔄 UPDATED AUTHENTICATION & SESSION STRATEGY (2024-07)
+
+/**
+ * We are switching to a Hybrid: Persistent Context + Automated Login Fallback approach for Puppeteer authentication.
+ *
+ * Why:
+ * - Manual cookie management is brittle and requires frequent updates.
+ * - Persistent browser context (userDataDir) keeps sessions/cookies between runs, reducing login frequency.
+ * - If the session expires or login is required, Puppeteer will detect the login page and automate the login flow using credentials from environment variables.
+ *
+ * Benefits:
+ * - Minimal manual maintenance (no more updating cookies by hand)
+ * - More robust to session expiry and browser updates
+ * - Secure: credentials are stored in env vars, not code
+ *
+ * Implementation Outline:
+ * 1. Launch Puppeteer with a persistent userDataDir (e.g., './my-session').
+ * 2. On navigation, check if login is required (look for login form/selectors).
+ * 3. If login is needed, fill in credentials and submit.
+ * 4. Continue with normal automation (prompt entry, image extraction, etc.).
+ * 5. Session/cookies persist for future runs, but fallback to login if needed.
+ */
+
+// ─────────────────────────────────────────────
 // ✅ PHASE 2 (Later Optimization)
 
 // ▸ Run Puppeteer on Railway or Fly.io
