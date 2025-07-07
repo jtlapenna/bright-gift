@@ -39,16 +39,19 @@ const amazonCategoryIconMap = {
   apparel: 'TShirt',
   clothing: 'TShirt',
   home: 'House',
-  decor: 'FrameCorners',
-  outdoor: 'Tree',
-  gear: 'Backpack',
+  decor: 'FrameCorners', // decor
+  outdoor: 'Backpack', // outdoor gear
+  'outdoor gear': 'Backpack', // outdoor gear
+  gear: 'Backpack', // outdoor gear
   kitchen: 'CookingPot',
   food: 'CookingPot',
   toys: 'PuzzlePiece',
   games: 'PuzzlePiece',
-  beauty: 'Sparkle',
-  makeup: 'Sparkle',
+  beauty: 'Sparkle', // beauty/makeup
+  makeup: 'Sparkle', // beauty/makeup
   personal: 'Flower',
+  personalized: 'Gift', // personalized gift
+  'personalized gift': 'Gift', // personalized gift
   sports: 'SoccerBall',
   pets: 'PawPrint',
   baby: 'Baby',
@@ -57,7 +60,7 @@ const amazonCategoryIconMap = {
   music: 'MusicNote',
   health: 'Heartbeat',
   generic: 'ShoppingBag',
-  jewelry: 'Diamond',
+  jewelry: 'Diamond', // jewelry
   'art supplies': 'PaintBrush',
   craft: 'Scissors',
   art: 'Palette',
@@ -65,6 +68,7 @@ const amazonCategoryIconMap = {
   film: 'FilmSlate',
   lighting: 'Lamp',
   stationary: 'Note',
+  stationery: 'Note',
   entertainment: 'Ticket',
   safety: 'Shield',
   helmet: 'Shield'

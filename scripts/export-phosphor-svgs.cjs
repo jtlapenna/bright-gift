@@ -37,7 +37,8 @@ const iconNames = [
   'Lamp',           // Lighting
   'Note',           // Stationary
   'Ticket',         // Entertainment
-  'FrameCorners'    // Decor
+  'FrameCorners',   // Decor
+  'Gift'             // Personalized Gift
 ];
 const icons = require('phosphor-react');
 

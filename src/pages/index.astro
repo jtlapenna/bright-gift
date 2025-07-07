@@ -335,8 +335,8 @@ const breadcrumbData = {
 
 		regenerateBtn.addEventListener('click', async () => {
 			if (!lastInputs.recipient) return;
-			// Scroll to loading indicator when regenerating
-			loadingIndicator.scrollIntoView({ behavior: 'smooth' });
+			// Scroll to results section before clearing results
+			document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
 			loadingIndicator.classList.remove('hidden');
 			resultsContainer.innerHTML = '';
 			try {
@@ -394,7 +394,8 @@ const breadcrumbData = {
 			Lamp: '/icons/Lamp.svg',
 			Note: '/icons/Note.svg',
 			Ticket: '/icons/Ticket.svg',
-			FrameCorners: '/icons/FrameCorners.svg'
+			FrameCorners: '/icons/FrameCorners.svg',
+			Gift: '/icons/Gift.svg'
 		};
 		return ideas.map(idea => {
 			let iconHtml = '';
