@@ -24,7 +24,20 @@ const iconNames = [
   'Pencil',         // Stationery
   'Package',        // Subscription Box
   'Wrench',         // DIY
-  'Smiley'          // Humor
+  'Smiley',         // Humor
+  // New icons for additional categories
+  'Diamond',        // Jewelry
+  'PaintBrush',     // Art Supplies
+  'Sparkle',        // Beauty/Makeup
+  'Backpack',       // Outdoor Gear
+  'Shield',         // Safety Gear (alternative to Helmet)
+  'Scissors',       // Craft
+  'Palette',        // Art & Design
+  'FilmSlate',      // Film Gear
+  'Lamp',           // Lighting
+  'Note',           // Stationary
+  'Ticket',         // Entertainment
+  'FrameCorners'    // Decor
 ];
 const icons = require('phosphor-react');
 

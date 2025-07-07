@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import heroImage from '../assets/hero-image.png';
 // Phosphor Icons for Amazon placeholders
-import { DeviceMobile, Book, TShirt, House, Tree, CookingPot, PuzzlePiece, Lipstick, SoccerBall, PawPrint, Baby, Car, Briefcase, MusicNote, Heartbeat, ShoppingBag } from 'phosphor-icons';
+import { DeviceMobile, Book, TShirt, House, Tree, CookingPot, PuzzlePiece, SoccerBall, PawPrint, Baby, Car, Briefcase, MusicNote, Heartbeat, ShoppingBag } from 'phosphor-icons';
 
 const blogPosts = await getCollection('blog');
 const giftGuides = await getCollection('gift-guides');
@@ -380,7 +380,19 @@ const breadcrumbData = {
 			Pencil: '/icons/Pencil.svg',
 			Package: '/icons/Package.svg',
 			Wrench: '/icons/Wrench.svg',
-			Smiley: '/icons/Smiley.svg'
+			Smiley: '/icons/Smiley.svg',
+			Diamond: '/icons/Diamond.svg',
+			PaintBrush: '/icons/PaintBrush.svg',
+			Sparkle: '/icons/Sparkle.svg',
+			Backpack: '/icons/Backpack.svg',
+			Shield: '/icons/Shield.svg',
+			Scissors: '/icons/Scissors.svg',
+			Palette: '/icons/Palette.svg',
+			FilmSlate: '/icons/FilmSlate.svg',
+			Lamp: '/icons/Lamp.svg',
+			Note: '/icons/Note.svg',
+			Ticket: '/icons/Ticket.svg',
+			FrameCorners: '/icons/FrameCorners.svg'
 		};
 		return ideas.map(idea => {
 			let iconHtml = '';
