@@ -33,21 +33,29 @@ export async function GET() {
     };
   });
 
-  // Only include real, published blog posts
-  const blogUrls = blogPosts.map(post => ({
-    url: `${baseUrl}/blog/${post.id}`,
-    lastmod: new Date(post.data.date).toISOString(),
-    changefreq: 'monthly',
-    priority: 0.7
-  }));
+  // Exclude specific slugs/IDs from sitemap (404s in GSC)
+  const excludedBlogSlugs = ['sample-post', 'handmade-gifts'];
+  const excludedGuideSlugs = ['gifts-for-plant-lovers'];
 
-  // Only include real, published gift guides under /gift-guides/
-  const guideUrls = giftGuides.map(guide => ({
-    url: `${baseUrl}/gift-guides/${guide.id}/`,
-    lastmod: new Date(guide.data.date).toISOString(),
-    changefreq: 'monthly',
-    priority: 0.8
-  }));
+  // Only include real, published blog posts, excluding problematic slugs
+  const blogUrls = blogPosts
+    .filter(post => !excludedBlogSlugs.includes(post.id))
+    .map(post => ({
+      url: `${baseUrl}/blog/${post.id}`,
+      lastmod: new Date(post.data.date).toISOString(),
+      changefreq: 'monthly',
+      priority: 0.7
+    }));
+
+  // Only include real, published gift guides under /gift-guides/, excluding problematic slugs
+  const guideUrls = giftGuides
+    .filter(guide => !excludedGuideSlugs.includes(guide.id))
+    .map(guide => ({
+      url: `${baseUrl}/gift-guides/${guide.id}/`,
+      lastmod: new Date(guide.data.date).toISOString(),
+      changefreq: 'monthly',
+      priority: 0.8
+    }));
 
   // Only include real, published FAQs
   const faqUrls = faqs.map(faq => ({
