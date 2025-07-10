@@ -1,8 +1,8 @@
 ---
 title: "30 Unique Gift Ideas for New Parents: Baby Shower & Beyond (Under $75)"
-metaTitle: "30 Unique Baby Gift Ideas: Baby Shower & New Parent Gifts | BrightGift"
-metaDescription: "Looking for unique baby gifts? Discover 30 thoughtful gift ideas for new parents under $75. From baby showers to newborn celebrations, find presents that stand out and support growing families!"
-description: "Find the perfect baby gift with our curated selection of unique presents for new parents, from baby showers to newborn celebrations, all under $75."
+metaTitle: "30 Unique Baby Gift Ideas: Baby Shower & New Parent Gifts | BrightGift AI Gift Idea Generator"
+metaDescription: "Looking for unique baby gifts? Discover 30 thoughtful gift ideas for new parents under $75. Use our AI gift idea generator to shop smarter and find the perfect present for baby showers and newborn celebrations!"
+description: "Find the perfect baby gift with our curated selection of unique presents for new parents, from baby showers to newborn celebrations, all under $75. Try our AI-powered gift idea generator for personalized suggestions."
 date: "2025-01-07"
 image: "/images/gift-guides/new-parents-30/baby-banner.webp"
 ogImage: "/images/gift-guides/new-parents-30/baby-banner.webp"
@@ -22,7 +22,7 @@ Welcoming a new baby is one of life's most joyous occasions, and choosing the ri
 
 The best baby gifts combine practicality with personal touches, offering solutions for common new parent challenges while creating lasting memories. From sustainable options that align with eco-conscious values to personalized keepsakes that grow with the child, thoughtful gifts can make a real difference in a new family's life.
 
-> 🎯 **Not sure what type of baby gift would be most appreciated? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on the parents' style, baby's age, and your budget!**
+> 🎯 **Not sure what type of baby gift would be most appreciated? Our [AI Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on the parents' style, baby's age, and your budget!**
 
 ---
 
@@ -278,4 +278,4 @@ Bedtime essentials including sleep sacks, books, and white noise machine. Helps 
 
 ---
 
-*Looking for more baby gift ideas? Check out our other gift guides for different budgets and occasions. Have a specific new parent in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their style, values, and needs!* 
+*Looking for more baby gift inspiration? Check out our other gift guides for different occasions and budgets. Or, try our [AI Gift Idea Generator](https://bright-gift.com) to discover the perfect baby present based on the parents' preferences and baby's needs!* 

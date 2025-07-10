@@ -1,8 +1,8 @@
 ---
 title: "20 Ethical Gift Ideas for Eco-Conscious Loved Ones (Under $75)"
-metaTitle: "20 Ethical Gift Ideas Under $75: Sustainable & Eco-Friendly Gifts | BrightGift"
-metaDescription: "Looking for ethical gifts? Discover 20 sustainable gift ideas under $75 for eco-conscious loved ones. From Fair Trade to B Corp certified, find thoughtful presents that make a positive impact!"
-description: "Find the perfect ethical present with our curated selection of sustainable gifts under $75 that support eco-conscious values and make a positive environmental impact."
+metaTitle: "20 Ethical Gift Ideas Under $75: Sustainable & Eco-Friendly Gifts | BrightGift AI Gift Idea Generator"
+metaDescription: "Looking for ethical gifts? Discover 20 sustainable gift ideas under $75 for eco-conscious loved ones. Use our AI gift idea generator to shop smarter and find thoughtful presents that make a positive impact!"
+description: "Find the perfect ethical present with our curated selection of sustainable gifts under $75 that support eco-conscious values and make a positive environmental impact. Try our AI-powered gift idea generator for personalized suggestions."
 date: "2025-01-07"
 image: "/images/blog/ethical-gifts-under-75/eco-banner-OG.webp"
 ogImage: "/images/blog/ethical-gifts-under-75/eco-banner-OG.webp"
@@ -22,7 +22,7 @@ In today's world, more people are choosing to live sustainably and make purchasi
 
 When shopping for ethical gifts, look for certifications like Fair Trade, B Corp, USDA Organic, and other verified sustainability labels. These certifications ensure that products meet strict environmental and social responsibility standards, making your gift choices more meaningful and impactful.
 
-> 🎯 **Not sure what type of ethical gift would be most appreciated? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect sustainable present based on their values, lifestyle, and environmental priorities!**
+> 🎯 **Not sure what type of ethical gift would be most appreciated? Our [AI Gift Idea Generator](https://bright-gift.com) can help you discover the perfect sustainable present based on their values, lifestyle, and environmental priorities!**
 
 ---
 
@@ -230,4 +230,4 @@ Every ethical gift you choose makes a difference:
 
 ---
 
-*Looking for more gift ideas? Check out our other gift guides for different occasions and budgets, including our guide to [thoughtful housewarming gifts](https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75). Have a specific eco-conscious loved one in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect sustainable present based on their values, lifestyle, and environmental priorities!* 
+*Looking for more ethical gift inspiration? Check out our other sustainable gift guides for different budgets and values. Or, try our [AI Gift Idea Generator](https://bright-gift.com) to discover the perfect ethical present based on their environmental priorities and lifestyle!* 

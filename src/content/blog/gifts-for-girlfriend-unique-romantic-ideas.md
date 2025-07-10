@@ -1,8 +1,8 @@
 ---
 title: "15 Thoughtful Gifts for Your Girlfriend That Aren't Cliché (But Still Romantic)"
-metaTitle: "Gifts for Girlfriend: 15 Unique, Romantic & Thoughtful Ideas | BrightGift"
-metaDescription: "Impress your girlfriend with these 15 unique, romantic, and thoughtful gifts that go beyond clichés. Discover the best gifts for your girlfriend under $50 and make her feel truly special."
-description: "Find the perfect present with our curated list of 15 thoughtful, non-cliché gifts for your girlfriend—romantic, unique, and sure to impress."
+metaTitle: "Gifts for Girlfriend: 15 Unique, Romantic & Thoughtful Ideas | BrightGift AI Gift Idea Generator"
+metaDescription: "Impress your girlfriend with these 15 unique, romantic, and thoughtful gifts that go beyond clichés. Use our AI gift idea generator to shop smarter and find the perfect present for your girlfriend under $50 and make her feel truly special."
+description: "Find the perfect present with our curated list of 15 thoughtful, non-cliché gifts for your girlfriend—romantic, unique, and sure to impress. Try our AI-powered gift idea generator for personalized suggestions."
 date: "2024-07-07"
 image: "/images/blog/gifts-for-girlfriend-unique-romantic-ideas/girlfriend-banner.webp"
 ogImage: "/images/blog/gifts-for-girlfriend-unique-romantic-ideas/girlfriend-og.webp"
@@ -19,7 +19,7 @@ draft: false
 
 Let's be honest: your girlfriend is one-of-a-kind, and she deserves a gift that's just as special. Forget the tired teddy bears and last-minute roses—this guide is packed with creative, romantic, and meaningful ideas that show you truly care. Whether you're celebrating an anniversary, birthday, or just want to make her smile, these gifts are designed to impress and create lasting memories.
 
-> 🎯 **Not sure what type of gift will wow your girlfriend? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on her style, interests, and your budget!**
+> 🎯 **Not sure what type of gift will wow your girlfriend? Our [AI Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on her style, interests, and your budget!**
 
 ---
 
@@ -110,4 +110,4 @@ Blend of tech and sentiment: upload photos from both your phones to keep memorie
 
 ---
 
-*Looking for more inspiration? Explore our other [gift guides](https://bright-gift.com/blog) or try the [Gift Idea Generator](https://bright-gift.com) for personalized suggestions!* 
+*Looking for more inspiration? Explore our other [gift guides](https://bright-gift.com/blog) or try the [AI Gift Idea Generator](https://bright-gift.com) for personalized suggestions!* 

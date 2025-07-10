@@ -1,4 +1,4 @@
-{
+ {
   "name": "BrightGift Blog Processing Workflow",
   "nodes": [
     {
@@ -232,6 +232,223 @@
       ],
       "id": "c5cc4a5d-fe98-41ed-a4fc-da2444f865f6",
       "name": "hardcoded test"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 5,
+        "filters": {
+          "q": "subject:\"Re: PREVIEW:\" newer_than:1d is:unread"
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        2000,
+        0
+      ],
+      "id": "approval-gmail-trigger",
+      "name": "Check for Approval Emails",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "2jsb6Z1IiQiBhEa5",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "function decodeBase64(str) {\n  return Buffer.from(str.replace(/-/g, '+').replace(/_/g, '/'), 'base64').toString('utf-8');\n}\n\n// Extract the plain text part from the Gmail payload\nconst parts = $json.payload?.parts || [];\nconst textPart = parts.find(p => p.mimeType === 'text/plain');\nconst encoded = textPart?.body?.data;\n\nconst decodedBody = encoded ? decodeBase64(encoded) : '';\n\n// Check for approval keywords\nconst isApproved = /\\b(approved|approve|yes|publish|live|go)\\b/i.test(decodedBody);\nconst isRejected = /\\b(rejected|reject|no|don't publish|stop)\\b/i.test(decodedBody);\n\n// Extract slug from subject line or email body\nconst subjectSlugMatch = $json.payload?.headers?.find(h => h.name === 'Subject')?.value?.match(/PREVIEW:\\s*(.+)/i);\nconst bodySlugMatch = decodedBody.match(/preview-bright-gift\\.pages\\.dev\\/([\\w-]+)/i);\n\nconst slug = subjectSlugMatch?.[1]?.trim() || bodySlugMatch?.[1] || null;\n\n// Extract any notes or feedback\nconst notesMatch = decodedBody.match(/Notes[:：]?\\s*([\\s\\S]*?)(?:\\r?\\nOn\\s|\\r?\\n>|\\r?\\n?$)/i);\nconst notes = notesMatch?.[1]?.trim() || null;\n\nreturn [\n  {\n    json: {\n      isApproved,\n      isRejected,\n      slug,\n      notes,\n      decodedBody,\n      emailId: $json.id,\n      threadId: $json.threadId,\n      internalDate: $json.internalDate\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2200,
+        0
+      ],
+      "id": "approval-parser",
+      "name": "Parse Approval Response"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "approval-check",
+              "leftValue": "={{ $json.isApproved }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2400,
+        0
+      ],
+      "id": "approval-decision",
+      "name": "Is Approved?"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "file",
+        "operation": "get",
+        "owner": {
+          "__rl": true,
+          "value": "jtlapenna",
+          "mode": "name"
+        },
+        "repository": {
+          "__rl": true,
+          "value": "bright-gift",
+          "mode": "name"
+        },
+        "filePath": "src/content/blog/{{ $json.slug }}.md",
+        "additionalParameters": {
+          "branch": {
+            "branch": "preview"
+          }
+        }
+      },
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1,
+      "position": [
+        2600,
+        -100
+      ],
+      "id": "get-preview-file",
+      "name": "Get Preview File",
+      "credentials": {
+        "githubOAuth2Api": {
+          "id": "kYk6Zcu2QIpZ7Prl",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Update frontmatter to remove draft status\nconst content = $json.content;\nconst decodedContent = Buffer.from(content, 'base64').toString('utf-8');\n\n// Remove draft status from frontmatter\nconst updatedContent = decodedContent.replace(/\\nstatus:\\s*draft\\s*\\n/, '\\n');\n\nreturn [\n  {\n    json: {\n      slug: $node[\"approval-parser\"].json.slug,\n      content: updatedContent,\n      commitMessage: `Publish blog post: ${$node[\"approval-parser\"].json.slug}`\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2800,
+        -100
+      ],
+      "id": "prepare-live-content",
+      "name": "Prepare Live Content"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "file",
+        "owner": {
+          "__rl": true,
+          "value": "jtlapenna",
+          "mode": "name"
+        },
+        "repository": {
+          "__rl": true,
+          "value": "bright-gift",
+          "mode": "name"
+        },
+        "filePath": "src/content/blog/{{ $json.slug }}.md",
+        "fileContent": "={{ $json.content }}",
+        "commitMessage": "={{ $json.commitMessage }}",
+        "additionalParameters": {
+          "branch": {
+            "branch": "main"
+          }
+        }
+      },
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1,
+      "position": [
+        3000,
+        -100
+      ],
+      "id": "commit-to-main",
+      "name": "Commit to Main Branch",
+      "credentials": {
+        "githubOAuth2Api": {
+          "id": "kYk6Zcu2QIpZ7Prl",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/75cdc55a-776c-43fe-8f35-73ff440adf03",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3200,
+        -100
+      ],
+      "id": "trigger-live-deploy",
+      "name": "Trigger Live Deployment"
+    },
+    {
+      "parameters": {
+        "sendTo": "jeff.lapenna@gmail.com",
+        "subject": "=✅ PUBLISHED: {{ $node[\"approval-parser\"].json.slug }}",
+        "message": "=Great news! Your blog post has been published to the live site:  🔗 https://bright-gift.com/{{ $node[\"approval-parser\"].json.slug }}  The post is now live and indexed by search engines.  Thanks!",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        3400,
+        -100
+      ],
+      "id": "publish-confirmation",
+      "name": "Send Publish Confirmation",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "2jsb6Z1IiQiBhEa5",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "jeff.lapenna@gmail.com",
+        "subject": "=❌ REJECTED: {{ $node[\"approval-parser\"].json.slug }}",
+        "message": "=Your blog post has been rejected.  Notes: {{ $node[\"approval-parser\"].json.notes || 'No notes provided' }}  The post remains in preview and can be edited.  Thanks!",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        2600,
+        100
+      ],
+      "id": "rejection-notification",
+      "name": "Send Rejection Notification",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "2jsb6Z1IiQiBhEa5",
+          "name": "Gmail account"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -322,7 +539,101 @@
       "main": [
         []
       ]
-    }
+    },
+         "approval-gmail-trigger": {
+       "main": [
+         [
+           {
+             "node": "approval-parser",
+             "type": "main",
+             "index": 0
+           }
+         ]
+       ]
+     },
+     "approval-parser": {
+       "main": [
+         [
+           {
+             "node": "approval-decision",
+             "type": "main",
+             "index": 0
+           }
+         ]
+       ]
+     },
+     "approval-decision": {
+       "main": [
+         [
+           {
+             "node": "get-preview-file",
+             "type": "main",
+             "index": 0
+           }
+         ],
+         [
+           {
+             "node": "rejection-notification",
+             "type": "main",
+             "index": 0
+           }
+         ]
+       ]
+     },
+     "get-preview-file": {
+       "main": [
+         [
+           {
+             "node": "prepare-live-content",
+             "type": "main",
+             "index": 0
+           }
+         ]
+       ]
+     },
+     "prepare-live-content": {
+       "main": [
+         [
+           {
+             "node": "commit-to-main",
+             "type": "main",
+             "index": 0
+           }
+         ]
+       ]
+     },
+     "commit-to-main": {
+       "main": [
+         [
+           {
+             "node": "trigger-live-deploy",
+             "type": "main",
+             "index": 0
+           }
+         ]
+       ]
+     },
+     "trigger-live-deploy": {
+       "main": [
+         [
+           {
+             "node": "publish-confirmation",
+             "type": "main",
+             "index": 0
+           }
+         ]
+       ]
+     },
+     "publish-confirmation": {
+       "main": [
+         []
+       ]
+     },
+     "rejection-notification": {
+       "main": [
+         []
+       ]
+     }
   },
   "active": false,
   "settings": {

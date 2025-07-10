@@ -60,13 +60,53 @@ const breadcrumbData = {
 		}
 	]
 };
+
+// FAQPage schema
+const faqData = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [
+		{
+			"@type": "Question",
+			"name": "How does the AI Gift Idea Generator work?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Our AI Gift Idea Generator uses advanced artificial intelligence to analyze your recipient's interests, style, and budget. It then suggests unique, thoughtful gifts by matching your input to a curated database of products and ideas, ensuring every recommendation is relevant and personalized."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "What makes AI gift suggestions better?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "AI gift suggestions are tailored to your needs in real time. Unlike generic lists, our AI considers your recipient's personality, preferences, and occasion, delivering creative and unexpected ideas you might not find elsewhere. This saves you time and helps you discover truly memorable gifts."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "Are AI gift generators accurate?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "AI gift generators become more accurate with detailed input. The more specific information you provide about your recipient's interests, lifestyle, and preferences, the better the recommendations will be. They work best when combined with your personal knowledge of the recipient."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "How do I get the best results from AI gift generators?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Provide detailed information about your recipient including their hobbies, lifestyle, recent life changes, and previous gift preferences. Be specific about the occasion and budget. The more context you give, the more personalized and accurate the recommendations will be."
+			}
+		}
+	]
+};
 ---
 
 <Layout 
 	title="AI Gift Idea Generator | Find the Perfect Gift in Seconds"
-	description="Find the perfect gift in seconds with our AI-powered gift idea generator. Personalized recommendations for any recipient, budget, and occasion. Try our free gift finder today!"
+	description="Find the perfect gift in seconds with our AI-powered gift idea generator. Personalized recommendations for any recipient, budget, and occasion. Try our free AI gift finder today!"
 	image="/images/homepage-banner.webp"
-	keywords={["gift ideas", "AI gifts", "personalized gifts", "gift finder", "gift recommendations", "birthday gifts", "holiday gifts"]}
+	keywords={["gift ideas", "AI gifts", "personalized gifts", "gift finder", "gift recommendations", "birthday gifts", "holiday gifts", "AI gift search", "AI gift matching", "AI-powered gift tool"]}
 	canonical="https://bright-gift.com"
 	ogType="website"
 	twitterCard="summary_large_image"
@@ -74,6 +114,7 @@ const breadcrumbData = {
 	<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 	<script type="application/ld+json" set:html={JSON.stringify(organizationData)} />
 	<script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
+	<script type="application/ld+json" set:html={JSON.stringify(faqData)} />
 
 	<main class="font-sans text-gray-800 dark:text-gray-200">
 		<!-- Mobile/Tablet Hero (locked) -->
@@ -86,12 +127,12 @@ const breadcrumbData = {
 			<div class="mt-16 w-full">
 				<div class="flex flex-col items-center justify-center w-full max-w-4xl gap-4 px-2">
 					<div class="flex-1 flex flex-col items-center justify-center text-center">
-						<img src="/bright-gift-logo.png" alt="BrightGift logo" class="h-16 mb-2" />
-						<h1 class="text-2xl mb-1 font-bold font-poppins text-[#1C2E4A]">Let's Find Something Fun!</h1>
-						<p class="text-base font-inter text-[#333] mb-0">Surprise them in style – let's get gifting!</p>
+						<img src="/bright-gift-logo.png" alt="BrightGift logo - AI gift idea generator" class="h-16 mb-2" />
+						<h1 class="text-2xl mb-1 font-bold font-poppins text-[#1C2E4A]">Find the Perfect Gift with AI!</h1>
+						<p class="text-base font-inter text-[#333] mb-0">AI-powered gift suggestions for any recipient, budget, or occasion. Try our free AI gift finder today!</p>
 					</div>
 					<div class="flex-1 flex items-center justify-center relative">
-						<img src="/hero-image.png" alt="Fun gift items: plant book, dino mug, taco plush" class="max-h-40 w-auto -mb-8" />
+						<img src="/hero-image.png" alt="AI-powered gift suggestions interface" class="max-h-40 w-auto -mb-8" />
 					</div>
 				</div>
 			</div>
@@ -104,12 +145,12 @@ const breadcrumbData = {
 			<!-- Hero content wrapper -->
 			<div class="relative flex flex-row items-center justify-center gap-8 max-w-4xl mx-auto pt-10 z-10">
 				<div class="flex flex-col items-start justify-center text-left mt-[-40px]">
-					<img src="/bright-gift-logo.png" alt="BrightGift logo" class="h-24 mb-4" />
-					<h1 class="text-3xl font-bold font-poppins text-[#1C2E4A] mb-2 whitespace-nowrap">Let's Find Something Fun!</h1>
-					<p class="text-lg font-inter text-[#333] mb-4">Surprise them in style – let's get gifting!</p>
+					<img src="/bright-gift-logo.png" alt="BrightGift logo - AI gift idea generator" class="h-24 mb-4" />
+					<h1 class="text-3xl font-bold font-poppins text-[#1C2E4A] mb-2 whitespace-nowrap">Find the Perfect Gift with AI!</h1>
+					<p class="text-lg font-inter text-[#333] mb-4">AI-powered gift suggestions for any recipient, budget, or occasion. Try our free AI gift finder today!</p>
 				</div>
 				<div class="flex items-center justify-center">
-					<img src="/hero-image.png" alt="Fun gift items: plant book, dino mug, taco plush" class="max-h-[380px] w-auto" />
+					<img src="/hero-image.png" alt="AI-powered gift suggestions interface" class="max-h-[380px] w-auto" />
 				</div>
 			</div>
 			<!-- Nav links -->
@@ -123,7 +164,8 @@ const breadcrumbData = {
 		<!-- Tool Section -->
 		<section id="tool" class="pt-[3.3rem] py-20 px-4">
 			<div class="max-w-2xl mx-auto bg-[#A3E4DB] p-10 rounded-2xl shadow-lg">
-				<h2 class="text-3xl font-bold text-center mb-8 font-poppins text-[#1C2E4A]">Gift Finder</h2>
+				<h2 class="text-3xl font-bold text-center mb-8 font-poppins text-[#1C2E4A]">AI Gift Finder</h2>
+				<p class="text-center text-[#1C2E4A] mb-4">Powered by advanced AI, our tool finds gifts for any recipient, budget, or occasion. Try AI gift matching now!</p>
 				<form aria-label="Gift Finder Form">
 					<!-- Recipient Info -->
 					<div class="mb-4">
@@ -166,7 +208,7 @@ const breadcrumbData = {
 					<!-- Submit Button -->
 					<div class="text-center">
 						<button type="submit" class="w-full bg-[#FF6B6B] text-white font-bold py-3 px-8 rounded-full hover:bg-[#ff4c4c] transition-colors font-poppins text-lg shadow">
-							Generate Gift Ideas
+							Generate AI Gift Ideas
 						</button>
 					</div>
 				</form>
@@ -236,11 +278,44 @@ const breadcrumbData = {
 		<section id="about-tool" class="py-16 px-4 max-w-3xl mx-auto text-center" itemscope itemtype="https://schema.org/WebPage">
 			<h2 class="text-2xl font-bold mb-4 font-poppins text-[#1C2E4A]" itemprop="headline">About the AI Gift Idea Generator</h2>
 			<p class="text-[#333] mb-6 font-inter" itemprop="description">
-				Bright Gift's AI Gift Idea Generator helps you find the perfect present for anyone, instantly. Just enter a few details and our advanced AI suggests unique, thoughtful gifts tailored to your recipient's interests, style, and budget. Save time, discover new ideas, and shop smarter—all in one place.
+				Bright Gift's AI Gift Idea Generator helps you find the perfect present for anyone, instantly. Our AI-powered gift finder analyzes your input and delivers creative, relevant gift ideas in seconds. Experience the future of gift shopping with AI-driven recommendations.
 			</p>
 			<a href="#tool" class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins text-lg shadow" aria-label="Try the AI Gift Finder now">
 				Try the AI Gift Finder
 			</a>
+		</section>
+
+		<!-- FAQ Section -->
+		<section id="faq" class="py-16 px-4 bg-gray-50">
+			<div class="max-w-3xl mx-auto">
+				<h2 class="text-3xl font-bold text-center mb-12 font-poppins text-[#1C2E4A]">Frequently Asked Questions</h2>
+				<div class="space-y-6">
+					<div class="bg-white p-6 rounded-lg shadow-md">
+						<h3 class="text-xl font-semibold mb-3 text-[#1C2E4A]">How does the AI Gift Idea Generator work?</h3>
+						<p class="text-[#333] font-inter">
+							Our AI Gift Idea Generator uses advanced artificial intelligence to analyze your recipient's interests, style, and budget. It then suggests unique, thoughtful gifts by matching your input to a curated database of products and ideas, ensuring every recommendation is relevant and personalized.
+						</p>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow-md">
+						<h3 class="text-xl font-semibold mb-3 text-[#1C2E4A]">What makes AI gift suggestions better?</h3>
+						<p class="text-[#333] font-inter">
+							AI gift suggestions are tailored to your needs in real time. Unlike generic lists, our AI considers your recipient's personality, preferences, and occasion, delivering creative and unexpected ideas you might not find elsewhere. This saves you time and helps you discover truly memorable gifts.
+						</p>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow-md">
+						<h3 class="text-xl font-semibold mb-3 text-[#1C2E4A]">Are AI gift generators accurate?</h3>
+						<p class="text-[#333] font-inter">
+							AI gift generators become more accurate with detailed input. The more specific information you provide about your recipient's interests, lifestyle, and preferences, the better the recommendations will be. They work best when combined with your personal knowledge of the recipient.
+						</p>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow-md">
+						<h3 class="text-xl font-semibold mb-3 text-[#1C2E4A]">How do I get the best results from AI gift generators?</h3>
+						<p class="text-[#333] font-inter">
+							Provide detailed information about your recipient including their hobbies, lifestyle, recent life changes, and previous gift preferences. Be specific about the occasion and budget. The more context you give, the more personalized and accurate the recommendations will be.
+						</p>
+					</div>
+				</div>
+			</div>
 		</section>
 
 	</main>

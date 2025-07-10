@@ -1,8 +1,8 @@
 ---
 title: "25 Unique Anniversary Gift Ideas (Under $50, for Her/Him) — Timeless & Thoughtful"
-metaTitle: "25 Unique Anniversary Gift Ideas Under $50: Timeless & Thoughtful | BrightGift"
-metaDescription: "Looking for the perfect anniversary gift? Discover 25 unique anniversary gift ideas under $50 that are thoughtful, memorable, and perfect for any relationship milestone. Shop smarter today!"
-description: "Find the perfect anniversary present with our curated selection of unique, thoughtful gifts under $50 that celebrate your relationship milestones."
+metaTitle: "25 Unique Anniversary Gift Ideas Under $50: Timeless & Thoughtful | BrightGift AI Gift Idea Generator"
+metaDescription: "Looking for the perfect anniversary gift? Discover 25 unique anniversary gift ideas under $50 that are thoughtful, memorable, and perfect for any relationship milestone. Use our AI gift idea generator to shop smarter and find the perfect present for any occasion!"
+description: "Find the perfect anniversary present with our curated selection of unique, thoughtful gifts under $50 that celebrate your relationship milestones. Try our AI-powered gift idea generator for personalized suggestions."
 date: "2025-01-07"
 image: "/images/blog/anniversary-gifts-under-50/anniversary-banner.webp"
 ogImage: "/images/blog/anniversary-gifts-under-50/anniversary-og.webp"
@@ -22,7 +22,7 @@ Anniversaries are special milestones that deserve celebration, regardless of you
 
 The key to choosing the perfect anniversary gift is understanding what makes your partner feel loved and appreciated. Some people value experiences, others cherish personalized items, and many appreciate practical gifts that show you pay attention to their daily needs.
 
-> 🎯 **Not sure what type of anniversary gift your partner would love? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their interests, style, and your relationship dynamic!**
+> 🎯 **Not sure what type of anniversary gift your partner would love? Our [AI Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their interests, style, and your relationship dynamic!**
 
 ---
 
@@ -169,4 +169,4 @@ A beautiful vintage-style recipe book for couples to cook together. This gift en
 
 ---
 
-*Looking for more gift ideas? Check out our other gift guides for different occasions and budgets, including our guide to [unique gifts for girlfriends](https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas). Have a specific anniversary milestone coming up? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on your partner's interests and your relationship dynamic!* 
+*Looking for more gift ideas? Check out our other gift guides for different occasions and budgets, including our guide to [unique gifts for girlfriends](https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas). Have a specific anniversary milestone coming up? Our [AI Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on your partner's interests and your relationship dynamic!* 

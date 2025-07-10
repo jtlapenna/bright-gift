@@ -1,8 +1,8 @@
 ---
 title: "Eco-Friendly Gift Ideas for Every Budget (Sustainable & Thoughtful)"
-metaTitle: "Eco-Friendly Gifts: 15 Sustainable Gift Ideas for Every Budget | BrightGift"
-metaDescription: "Looking for the perfect eco-friendly gift? Discover 15 sustainable gift ideas for every budget, including green gifts under $25. Shop smarter today!"
-description: "Find the perfect present with our curated selection of eco-friendly and sustainable gifts for every budget."
+metaTitle: "Eco-Friendly Gifts: 15 Sustainable Gift Ideas for Every Budget | BrightGift AI Gift Idea Generator"
+metaDescription: "Looking for the perfect eco-friendly gift? Discover 15 sustainable gift ideas for every budget, including green gifts under $25. Use our AI gift idea generator to shop smarter and find the perfect present for any occasion!"
+description: "Find the perfect present with our curated selection of eco-friendly and sustainable gifts for every budget. Try our AI-powered gift idea generator for personalized suggestions."
 date: "2025-07-03"
 image: "/images/blog/eco-friendly-gift-ideas-banner.webp"
 ogImage: "/images/blog/eco-friendly-gift-ideas-og.webp"
@@ -22,7 +22,7 @@ draft: false
 
 Choosing sustainable gifts isn't just a trend—it's a meaningful way to show you care about both your loved ones and the planet. Eco-friendly gifts are thoughtful, practical, and help reduce waste, making them perfect for any occasion. Whether you're shopping for a birthday, holiday, or just because, these green gift ideas are sure to delight.
 
-> 🎯 **Not sure what type of eco-friendly gift to buy? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their interests and values!**
+> 🎯 **Not sure what type of eco-friendly gift to buy? Our [AI Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their interests and values!**
 
 ---
 
@@ -95,4 +95,4 @@ Encourage eco-friendly habits with a stylish countertop compost bin for food scr
 
 ![Eco-friendly gift ideas social: illustrated gift box with green ribbon, surrounded by icons for water bottle, tote, plant, solar charger, and recycling](/images/blog/eco-friendly-gift-ideas-social.webp "Eco-friendly gift ideas social image")
 
-*Looking for more green gift ideas? Check out our other gift guides for different budgets and interests. Or, try our [Gift Idea Generator](https://bright-gift.com) to discover the perfect eco-friendly present!* 
+*Looking for more green gift ideas? Check out our other gift guides for different budgets and interests. Or, try our [AI gift idea generator](https://bright-gift.com) to discover the perfect eco-friendly present!* 
