@@ -1,0 +1,337 @@
+{
+  "name": "BrightGift Blog Processing Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "/blog-received",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -240,
+        0
+      ],
+      "id": "230d91a1-b460-4ebf-9e37-38c0a9669b11",
+      "name": "Webhook",
+      "webhookId": "ca5a9fce-7631-412b-8d49-38c14868b1db",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "=https://api.openai.com/v1/threads/{{ $json.body.thread_id }}/messages",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "1b023bdf-9811-4eb0-ad27-64a00637618e",
+      "name": "HTTP Request",
+      "credentials": {
+        "openAiApi": {
+          "id": "xhYw6tK9BPVC7BMo",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get assistant's message (first in data array)\nconst raw = $json.data?.[0]?.content?.[0]?.text?.value;\n\nif (!raw) {\n  throw new Error(\"No assistant response found\");\n}\n\n// Remove ```json wrapper if present\nconst cleaned = raw.replace(/^```(?:json)?\\n/, '').replace(/```$/, '').trim();\n\nlet parsed;\ntry {\n  parsed = JSON.parse(cleaned);\n} catch (err) {\n  throw new Error(\"Could not parse assistant response: \" + err.message);\n}\n\nconst { title, slug, description, category, body } = parsed;\n\n// Validate critical fields\nif (!slug || !body || !category) {\n  throw new Error(\"Missing required blog metadata (slug, category, or body)\");\n}\n\nif (![\"blog\", \"gift-guides\", \"marketing\"].includes(category)) {\n  throw new Error(`Invalid category: ${category}`);\n}\n\nconst date = new Date().toISOString().split(\"T\")[0];\nconst imagePath = `/images/${category}/${slug}/banner.webp`;\nconst filename = `${slug}.md`;\nconst commitMessage = `Add draft blog post for slug: ${slug}`;\nconst branch = `preview`;\n\n// ✅ Include draft status in frontmatter\nconst frontmatter = `---\\ntitle: \"${title || slug}\"\\ndate: \"${date}\"\\nslug: \"${slug}\"\\ncategory: \"${category}\"\\ndescription: \"${description || ''}\"\\nfeatured_image: \"${imagePath}\"\\nstatus: draft\\n---`;\n\nconst markdown = `${frontmatter}\\n\\n${body}`;\n\nreturn [\n  {\n    json: {\n      blogPost: markdown,\n      filename,\n      commitMessage,\n      branch,\n      category,\n      slug\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        0
+      ],
+      "id": "36cfe101-bf8b-4ba0-a572-619818c93c81",
+      "name": "Code2"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "file",
+        "owner": {
+          "__rl": true,
+          "value": "jtlapenna",
+          "mode": "name"
+        },
+        "repository": {
+          "__rl": true,
+          "value": "bright-gift",
+          "mode": "name"
+        },
+        "filePath": "src/content/{{ $json.category }}/{{ $json.filename }}",
+        "fileContent": "={{ $node[\"Code2\"].json.blogPost }}",
+        "commitMessage": "={{ $node[\"Code2\"].json.commitMessage }}",
+        "additionalParameters": {
+          "branch": {
+            "branch": "=preview"
+          }
+        }
+      },
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        0
+      ],
+      "id": "6ded8f75-b483-4ff9-baa5-f9c49e750d80",
+      "name": "GitHub",
+      "credentials": {
+        "githubOAuth2Api": {
+          "id": "kYk6Zcu2QIpZ7Prl",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/75cdc55a-776c-43fe-8f35-73ff440adf03",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1580,
+        0
+      ],
+      "id": "95df82c7-9f10-4b68-bde7-efaf661fc519",
+      "name": "HTTP Request12"
+    },
+    {
+      "parameters": {
+        "sendTo": "jeff.lapenna@gmail.com",
+        "subject": "=PREVIEW: {{ $node[\"Code2\"].json.slug }}",
+        "message": "=Hi!  Your blog post preview is ready:  🔗 https://preview-bright-gift.pages.dev/{{ $node[\"Code2\"].json.slug }}  Please review it and reply with either: ✅ \"Approved\" to publish it live 📝 Suggestions or edits  Thanks!",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1780,
+        0
+      ],
+      "id": "bd7a8e1a-263d-4059-9b96-fd3cb519d002",
+      "name": "Gmail7",
+      "webhookId": "e0ef8bcb-78de-413c-b99b-022640c223cc",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "2jsb6Z1IiQiBhEa5",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://api.github.com/repos/jtlapenna/bright-gift/git/ref/heads/main",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "githubApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/vnd.github+json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        800,
+        0
+      ],
+      "id": "5867a223-b8d2-4ef9-858c-fb5a0ec8fe15",
+      "name": "Get Main SHA",
+      "alwaysOutputData": true,
+      "credentials": {
+        "githubApi": {
+          "id": "36ql9jDsFZ0o5PgW",
+          "name": "GitHub account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.github.com/repos/jtlapenna/bright-gift/git/refs",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "githubApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/vnd.github+json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ \n  JSON.stringify({\n    ref: \"refs/heads/preview-\" + $node[\"Code2\"].json.slug,\n    sha: $node[\"Get Main SHA\"].json.object.sha\n  }) \n}}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1100,
+        220
+      ],
+      "id": "6a0212a3-0219-408b-9062-d8509a89015a",
+      "name": "Create Branch",
+      "credentials": {
+        "githubApi": {
+          "id": "36ql9jDsFZ0o5PgW",
+          "name": "GitHub account 2"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -260,
+        -640
+      ],
+      "id": "15335a1a-b338-4ba7-a922-873badd6ed35",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  {\n    json: {\n      headers: {\n        host: \"thepeakbeyond.app.n8n.cloud\",\n        \"user-agent\": \"axios/1.7.4\",\n        \"content-length\": \"113\",\n        accept: \"application/json,text/html,application/xhtml+xml,application/xml,text/*;q=0.9, image/*;q=0.8, */*;q=0.7\",\n        \"accept-encoding\": \"gzip, br\",\n        \"cdn-loop\": \"cloudflare; loops=1; subreqs=1\",\n        \"cf-connecting-ip\": \"4.182.88.118\",\n        \"cf-ew-via\": \"15\",\n        \"cf-ipcountry\": \"DE\",\n        \"cf-ray\": \"95cc07cae1009137-FRA\",\n        \"cf-visitor\": '{\"scheme\":\"https\"}',\n        \"cf-worker\": \"n8n.cloud\",\n        \"content-type\": \"application/json\",\n        \"x-forwarded-for\": \"4.182.88.118, 172.70.251.60\",\n        \"x-forwarded-host\": \"thepeakbeyond.app.n8n.cloud\",\n        \"x-forwarded-port\": \"443\",\n        \"x-forwarded-proto\": \"https\",\n        \"x-forwarded-server\": \"traefik-prod-users-gwc-3-6db8488cf7-fd82b\",\n        \"x-is-trusted\": \"yes\",\n        \"x-real-ip\": \"4.182.88.118\"\n      },\n      params: {},\n      query: {},\n      body: {\n        thread_id: \"thread_57mWtgtvF7fSjKVVKtkEgOy4\",\n        slug: \"unique-gifts-for-coffee-enthusiasts-brewed-to-perfection\"\n      },\n      webhookUrl: \"https://thepeakbeyond.app.n8n.cloud/webhook/blog-received\",\n      executionMode: \"production\"\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -40,
+        -640
+      ],
+      "id": "c5cc4a5d-fe98-41ed-a4fc-da2444f865f6",
+      "name": "hardcoded test"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Code2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code2": {
+      "main": [
+        [
+          {
+            "node": "Get Main SHA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request12": {
+      "main": [
+        [
+          {
+            "node": "Gmail7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GitHub": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Main SHA": {
+      "main": [
+        [
+          {
+            "node": "GitHub",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Branch": {
+      "main": [
+        []
+      ]
+    },
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "hardcoded test",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "hardcoded test": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "a56f7b6b-95d4-4f31-947c-0ed2dd373fa1",
+  "meta": {
+    "instanceId": "010748b7a1466c46dced3f8b2bdbc3bc174722f0672e5a4c9529354f5ff306f8"
+  },
+  "id": "QiNm92Bq30h6iUDG",
+  "tags": []
+}
