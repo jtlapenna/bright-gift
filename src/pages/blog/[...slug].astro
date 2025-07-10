@@ -6,9 +6,10 @@ export const prerender = true;
 
 // Generate static paths for all content
 export async function getStaticPaths() {
-  const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
-  const giftGuides = await getCollection('gift-guides', ({ data }) => !data.draft);
-  const faqs = await getCollection('faqs', ({ data }) => !data.draft);
+  const isPreview = import.meta.env.IS_PREVIEW === 'true';
+  const blogPosts = await getCollection('blog', ({ data }) => isPreview || !data.draft);
+  const giftGuides = await getCollection('gift-guides', ({ data }) => isPreview || !data.draft);
+  const faqs = await getCollection('faqs', ({ data }) => isPreview || !data.draft);
 
   const paths = [
     ...blogPosts.map((post) => ({ params: { slug: post.slug }, props: { post, type: 'blog' } })),

@@ -1,10 +1,11 @@
 import { getCollection } from 'astro:content';
 
 export async function GET() {
-  // Only include published (draft: false) content
-  const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
-  const giftGuides = await getCollection('gift-guides', ({ data }) => !data.draft);
-  const faqs = await getCollection('faqs', ({ data }) => !data.draft);
+  // Only include published (draft: false) content, unless in preview
+  const isPreview = import.meta.env.IS_PREVIEW === 'true';
+  const blogPosts = await getCollection('blog', ({ data }) => isPreview || !data.draft);
+  const giftGuides = await getCollection('gift-guides', ({ data }) => isPreview || !data.draft);
+  const faqs = await getCollection('faqs', ({ data }) => isPreview || !data.draft);
 
   const baseUrl = 'https://bright-gift.com';
   

@@ -2,10 +2,11 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
-// Get all blog posts, excluding drafts
-const allPosts = await getCollection('blog', ({ data }) => !data.draft);
-const allGiftGuides = await getCollection('gift-guides', ({ data }) => !data.draft);
-const allFaqs = await getCollection('faqs', ({ data }) => !data.draft);
+// Get all blog posts, excluding drafts unless in preview
+const isPreview = import.meta.env.IS_PREVIEW === 'true';
+const allPosts = await getCollection('blog', ({ data }) => isPreview || !data.draft);
+const allGiftGuides = await getCollection('gift-guides', ({ data }) => isPreview || !data.draft);
+const allFaqs = await getCollection('faqs', ({ data }) => isPreview || !data.draft);
 
 // Sort by date (newest first)
 const sortedPosts = allPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
