@@ -8,12 +8,10 @@ export const prerender = true;
 export async function getStaticPaths() {
   const isPreview = import.meta.env.IS_PREVIEW === 'true';
   const blogPosts = await getCollection('blog', ({ data }) => isPreview || !data.draft);
-  const giftGuides = await getCollection('blog', ({ data }) => isPreview || !data.draft);
   const faqs = await getCollection('faqs', ({ data }) => isPreview || !data.draft);
 
   const paths = [
-    ...blogPosts.map((post) => ({ params: { slug: post.slug }, props: { post, type: 'blog' } })),
-    ...giftGuides.map((guide) => ({ params: { slug: guide.slug }, props: { post: guide, type: 'gift-guide' } })),
+    ...blogPosts.map((post) => ({ params: { slug: post.slug }, props: { post, type: post.data.category || 'blog' } })),
     ...faqs.map((faq) => ({ params: { slug: faq.slug }, props: { post: faq, type: 'faq' } }))
   ];
 
@@ -23,21 +21,43 @@ export async function getStaticPaths() {
 const { post, type } = Astro.props;
 const { Content } = await post.render();
 
-// SEO meta data
-const title = post.data.metaTitle || post.data.title;
-const description = post.data.metaDescription || post.data.description;
-const image = post.data.ogImage || post.data.image;
-const keywords = post.data.keywords || [];
+// Fallbacks for required fields
+const fallbackImage = '/images/homepage-banner.webp';
+const fallbackTitle = 'Untitled Post';
+const fallbackDescription = 'No description available.';
+const fallbackDate = '1970-01-01';
+const fallbackKeywords = ['gift ideas'];
+
+// Helper to log warnings in dev
+function warn(msg) {
+  if (import.meta.env.DEV) console.warn(msg);
+}
+
+// Validate required fields
+const requiredFields = ['title', 'description', 'date', 'image', 'ogImage', 'keywords'];
+for (const field of requiredFields) {
+  if (!post.data[field]) {
+    warn(`[WARN] Missing required frontmatter field: ${field} in post: ${post.slug}`);
+  }
+}
+
+const title = post.data.title || fallbackTitle;
+const description = post.data.description || fallbackDescription;
+const image = post.data.image || fallbackImage;
+const ogImage = post.data.ogImage || image;
+const socialImage = post.data.socialImage || ogImage;
+const keywords = post.data.keywords || fallbackKeywords;
+const date = post.data.date || fallbackDate;
 
 // Structured data for SEO
 const structuredData = {
   "@context": "https://schema.org",
   "@type": type === 'gift-guide' ? "GiftList" : "Article",
-  "headline": post.data.title,
-  "description": post.data.description,
+  "headline": title,
+  "description": description,
   "image": image,
-  "datePublished": post.data.date,
-  "dateModified": post.data.date,
+  "datePublished": date,
+  "dateModified": date,
   "author": {
     "@type": "Organization",
     "name": "BrightGift"
@@ -87,8 +107,8 @@ const readTime = post.data.readTime || 5;
       <!-- Hero Image -->
       <div class="h-96 bg-slate-200 relative overflow-hidden">
         <img 
-          src={post.data.image} 
-          alt={post.data.title}
+          src={image} 
+          alt={title}
           class="w-full h-full object-cover"
         />
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -113,13 +133,13 @@ const readTime = post.data.readTime || 5;
         <!-- Article Content -->
         <div class="lg:col-span-9">
           <!-- Title, Sub-heading, Date/Read Time -->
-          <h1 class="text-4xl md:text-5xl font-bold mb-2 drop-shadow-lg" style="font-family: 'Poppins', 'Raleway', Arial, sans-serif; color: #1C2E4A;">{post.data.title}</h1>
+          <h1 class="text-4xl md:text-5xl font-bold mb-2 drop-shadow-lg" style="font-family: 'Poppins', 'Raleway', Arial, sans-serif; color: #1C2E4A;">{title}</h1>
           <div class="flex items-center gap-3 mb-2">
             <span class="inline-block bg-coral-500 text-white text-sm px-3 py-1 rounded-full font-semibold tracking-wide">{type === 'gift-guide' ? 'Gift Guide' : type === 'faq' ? 'FAQ' : 'Blog Post'}</span>
-            <span class="text-sm text-gray-500">{new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            <span class="text-sm text-gray-500">{new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
             <span class="text-sm text-gray-400">• {readTime} min read</span>
           </div>
-          <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mb-6" style="font-family: 'Inter', 'Open Sans', Arial, sans-serif;">{post.data.description}</p>
+          <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mb-6" style="font-family: 'Inter', 'Open Sans', Arial, sans-serif;">{description}</p>
 
           <!-- Tags -->
           {post.data.tags && post.data.tags.length > 0 && (
@@ -149,7 +169,7 @@ const readTime = post.data.readTime || 5;
               <h4 class="font-semibold text-slate-900 mb-3">Share this post</h4>
               <div class="flex gap-2">
                 <a 
-                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.data.title)}&url=${encodeURIComponent(Astro.canonicalURL)}`}
+                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(Astro.canonicalURL)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Share on Twitter"
@@ -171,7 +191,7 @@ const readTime = post.data.readTime || 5;
                   </svg>
                 </a>
                 <a 
-                  href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(Astro.canonicalURL)}&media=${encodeURIComponent(post.data.image)}&description=${encodeURIComponent(post.data.title)}`}
+                  href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(Astro.canonicalURL)}&media=${encodeURIComponent(image)}&description=${encodeURIComponent(title)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Share on Pinterest"
