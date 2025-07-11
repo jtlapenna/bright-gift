@@ -8,7 +8,7 @@ export const prerender = true;
 export async function getStaticPaths() {
   const isPreview = import.meta.env.IS_PREVIEW === 'true';
   const blogPosts = await getCollection('blog', ({ data }) => isPreview || !data.draft);
-  const giftGuides = await getCollection('gift-guides', ({ data }) => isPreview || !data.draft);
+  const giftGuides = await getCollection('blog', ({ data }) => isPreview || !data.draft);
   const faqs = await getCollection('faqs', ({ data }) => isPreview || !data.draft);
 
   const paths = [

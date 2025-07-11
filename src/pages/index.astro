@@ -8,7 +8,7 @@ import { DeviceMobile, Book, TShirt, House, Tree, CookingPot, PuzzlePiece, Socce
 // Load blog posts and gift guides, including drafts only in preview
 const isPreview = import.meta.env.IS_PREVIEW === 'true';
 const blogPosts = await getCollection('blog', ({ data }) => isPreview || !data.draft);
-const giftGuides = await getCollection('gift-guides', ({ data }) => isPreview || !data.draft);
+const giftGuides = await getCollection('blog', ({ data }) => isPreview || !data.draft);
 
 // Combine and sort all content by date
 const allContent = [

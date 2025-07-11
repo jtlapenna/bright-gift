@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 // Get all blog posts, excluding drafts unless in preview
 const isPreview = import.meta.env.IS_PREVIEW === 'true';
 const allPosts = await getCollection('blog', ({ data }) => isPreview || !data.draft);
-const allGiftGuides = await getCollection('gift-guides', ({ data }) => isPreview || !data.draft);
+const allGiftGuides = await getCollection('blog', ({ data }) => isPreview || !data.draft);
 const allFaqs = await getCollection('faqs', ({ data }) => isPreview || !data.draft);
 
 // Sort by date (newest first)
