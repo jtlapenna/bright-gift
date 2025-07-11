@@ -22,7 +22,7 @@ This document provides a prioritized, step-by-step checklist for diagnosing why 
 
 **How:**
 - On GitHub, switch to the `preview` branch.
-- Check that your new markdown files exist in `src/content/blog/` or `src/content/gift-guides/`.
+- Check that your new markdown files exist in `src/content/blog/`.
 - **What to look for:**
   - The markdown file for your new post should be present in the correct folder.
   - If missing, check your n8n workflow or GitHub action for errors.

@@ -65,7 +65,7 @@ Drive long-term, compounding organic traffic to the AI Gift Idea Generator site 
 ## 🏗 Site Architecture
 
 - Astro (Static Site Generation)
-- Descriptive URLs: `/gift-guides/eco-friendly-cooking-gifts/`
+- Descriptive URLs: `/blog/eco-friendly-cooking-gifts/`
 - Blog categories: recipient, interest, budget, occasion, tone
 - Internal linking: tool → blog → tool → blog
 - Rich snippets for gift lists and FAQ content

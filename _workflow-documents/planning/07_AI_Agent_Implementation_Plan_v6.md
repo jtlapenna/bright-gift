@@ -112,7 +112,7 @@
 - [x] Create blog index page (`src/pages/blog/index.astro`).
 - [x] Build blog post template at `src/pages/blog/[...slug].astro`.
 - [x] Set up Astro Content Collections for blog posts, guides, and FAQs (supports [SEO Canvas site architecture](./04_SEO_Strategy_Canvas.md#-site-architecture)).
-- [x] Create content directory structure (`/src/content/blog/`, `/src/content/gift-guides/`, `/src/content/faqs/`).
+- [x] Create content directory structure (`/src/content/blog/`, `/src/content/faqs/`).
 - [x] Define Markdown frontmatter schema (title, desc, tags, meta, images, links).
 - [x] Render post content from markdown files stored in `/src/content/blog/` directory.
 - [x] Add RSS feed support for blog post syndication.
@@ -209,7 +209,7 @@
   - Handmade
   - Small Business
   - Plants
-- 🟡 **TO DO:** Blog/SEO content system (see [04.1_blog-system.md](./04.1_blog-system.md) for detailed implementation plan).
+  - Blog/SEO content system (see [04.1_blog-system.md](./04.1_blog-system.md) for detailed implementation plan).
 - ❓ If any other features are not marked as complete, please confirm with the user.
 
 ---

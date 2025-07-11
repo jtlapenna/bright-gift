@@ -26,7 +26,7 @@ Moving into a new home is a major milestone—and the perfect opportunity to giv
 # Internal Links to Related Content
 - See our [Best Home Gifts on Amazon](https://bright-gift.com/blog/best-home-gifts-on-amazon-2024).
 - Explore [Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget).
-- Check out [Gifts for Plant Lovers](https://bright-gift.com/gift-guides/gifts-for-plant-lovers).
+- Check out [Gifts for Plant Lovers](https://bright-gift.com/blog/gifts-for-plant-lovers).
 - Discover [Gifts for Remote Workers Under $50](https://bright-gift.com/blog/gifts-for-remote-workers-under-50).
 
 ---
