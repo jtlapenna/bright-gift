@@ -139,27 +139,23 @@ const faqData = {
 			</div>
 		</section>
 
-		<!-- Desktop Hero (side-by-side, centered, no overlap) -->
-		<section class="hidden md:block relative w-full bg-transparent mt-0 mx-auto px-0" style="min-height:320px;">
-			<!-- Cream banner background -->
-			<div class="absolute top-0 left-0 w-full h-[360px] bg-[#FEF2D3] shadow-lg border-t-8 border-[#FF6B6B] z-0"></div>
-			<!-- Hero content wrapper -->
-			<div class="relative flex flex-row items-center justify-center gap-8 max-w-4xl mx-auto pt-10 z-10">
-				<div class="flex flex-col items-start justify-center text-left mt-[-40px]">
-					<img src="/bright-gift-logo.png" alt="BrightGift logo - AI gift idea generator" class="h-24 mb-4" />
-					<h1 class="text-3xl font-bold font-poppins text-[#1C2E4A] mb-2 whitespace-nowrap">Find the Perfect Gift with AI!</h1>
-					<p class="text-lg font-inter text-[#333] mb-4">AI-powered gift suggestions for any recipient, budget, or occasion. Try our free AI gift finder today!</p>
-				</div>
-				<div class="flex items-center justify-center">
-					<img src="/hero-image.png" alt="AI-powered gift suggestions interface" class="max-h-[380px] w-auto" />
-				</div>
-			</div>
-			<!-- Nav links -->
-			<div class="absolute top-0 right-0 mt-6 mr-10 flex gap-8 font-semibold text-[#1C2E4A] text-lg z-20">
+		<!-- Desktop Hero (centered, overlapping image) -->
+		<section class="hidden md:block relative w-full bg-[#FEF2D3] shadow-lg border-t-8 border-[#FF6B6B] mt-0 mx-auto px-0 py-6 flex flex-col items-center justify-center min-h-[350px] rounded-b-3xl">
+			<div class="absolute top-0 right-0 mt-6 mr-10 flex gap-8 font-semibold text-[#1C2E4A] text-lg z-10">
 				<a href="/" class="hover:underline underline-offset-4 rounded">Home</a>
 				<a href="/blog" class="hover:underline underline-offset-4 rounded">Blog</a>
 				<a href="#about-tool" class="hover:underline underline-offset-4 rounded">About</a>
 				<a href="#faq" class="hover:underline underline-offset-4 rounded">FAQ</a>
+			</div>
+			<div class="flex flex-row items-center justify-center w-full max-w-5xl gap-8 px-6">
+				<div class="flex-1 flex flex-col items-start justify-center text-left">
+					<img src="/bright-gift-logo.png" alt="BrightGift logo - AI gift idea generator" class="h-24 mb-4" />
+					<h1 class="text-3xl font-bold font-poppins text-[#1C2E4A] mb-2 whitespace-nowrap">Find the Perfect Gift with AI!</h1>
+					<p class="text-lg font-inter text-[#333] mb-4">AI-powered gift suggestions for any recipient, budget, or occasion. Try our free AI gift finder today!</p>
+				</div>
+				<div class="flex-1 flex items-center justify-center relative">
+					<img src="/hero-image.png" alt="AI-powered gift suggestions interface" class="max-h-[412px] w-auto absolute left-1/2 -translate-x-1/2" style="bottom:-240px;" />
+				</div>
 			</div>
 		</section>
 
