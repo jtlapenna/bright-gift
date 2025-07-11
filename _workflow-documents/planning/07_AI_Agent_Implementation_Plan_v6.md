@@ -2,7 +2,7 @@
 
 > This plan is structured for an AI agent (e.g. in Cursor) to execute autonomously where possible. 
 > Prompts are included to identify steps requiring human input, and detailed directives clarify all development actions.
-> Cross-references: [04_SEO_Strategy_Canvas.md](./04_SEO_Strategy_Canvas.md) | [04.1_blog-system.md](./04.1_blog-system.md)
+> Cross-references: [04_SEO_Strategy_Canvas.md](./04_SEO_Strategy_Canvas.md) | [04.1_blog-system.md](./04.1_blog-system.md) | [04.3_SEO_Guide.md](./04.3_SEO_Guide.md)
 
 ---
 
