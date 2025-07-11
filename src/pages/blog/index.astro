@@ -5,18 +5,15 @@ import { getCollection } from 'astro:content';
 // Get all blog posts, excluding drafts unless in preview
 const isPreview = import.meta.env.IS_PREVIEW === 'true';
 const allPosts = await getCollection('blog', ({ data }) => isPreview || !data.draft);
-const allGiftGuides = await getCollection('blog', ({ data }) => isPreview || !data.draft);
 const allFaqs = await getCollection('faqs', ({ data }) => isPreview || !data.draft);
 
 // Sort by date (newest first)
 const sortedPosts = allPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
-const sortedGiftGuides = allGiftGuides.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 const sortedFaqs = allFaqs.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
 // Combine all content for the blog index
 const allContent = [
-  ...sortedPosts.map(post => ({ ...post, type: 'blog' })),
-  ...sortedGiftGuides.map(guide => ({ ...guide, type: 'gift-guide' })),
+  ...sortedPosts.map(post => ({ ...post, type: post.data.category || 'blog' })),
   ...sortedFaqs.map(faq => ({ ...faq, type: 'faq' }))
 ].sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 

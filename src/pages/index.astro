@@ -8,13 +8,8 @@ import { DeviceMobile, Book, TShirt, House, Tree, CookingPot, PuzzlePiece, Socce
 // Load blog posts and gift guides, including drafts only in preview
 const isPreview = import.meta.env.IS_PREVIEW === 'true';
 const blogPosts = await getCollection('blog', ({ data }) => isPreview || !data.draft);
-const giftGuides = await getCollection('blog', ({ data }) => isPreview || !data.draft);
-
 // Combine and sort all content by date
-const allContent = [
-	...blogPosts.map(post => ({ ...post, type: 'blog' })),
-	...giftGuides.map(guide => ({ ...guide, type: 'gift-guide' }))
-].sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+const allContent = blogPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
 // Define structured data for the homepage
 const structuredData = {
