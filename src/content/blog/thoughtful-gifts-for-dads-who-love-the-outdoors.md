@@ -44,3 +44,4 @@ Simplify your dad’s adventures with innovative gadgets. Multi-tool kits, colla
 For more ideas, visit our [Gift Idea Generator](/blog/gifts-for-dads) and if you enjoyed this list, please leave feedback on our [outdoor feedback](/blog/outdoor-feedback) page. Let us help you make your dad's next outdoor adventure his best one yet!
 
 Stay tuned to explore more seasonal gift guides that cater to every dad's unique interests.
+
