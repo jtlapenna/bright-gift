@@ -1,9 +1,9 @@
 ---
 title: "Unique Gifts for Board Game Enthusiasts"
-slug: "unique-gifts-for-board-game-enthusiasts"
-image: "/images/blog/unique-gifts-for-board-game-enthusiasts/unique-gifts-for-board-game-enthusiasts-banner.webp"
-ogImage: "/images/blog/unique-gifts-for-board-game-enthusiasts/unique-gifts-for-board-game-enthusiasts-og.webp"
-socialImage: "/images/blog/unique-gifts-for-board-game-enthusiasts/unique-gifts-for-board-game-enthusiasts-social.webp"
+slug: "unique-gifts-for-board-game-enthusiasts-level-up-their-game-night"
+image: "/images/blog/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night-banner.webp"
+ogImage: "/images/blog/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night-og.webp"
+socialImage: "/images/blog/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night-social.webp"
 category: "gift-guides"
 description: "Discover the perfect gifts for board game lovers! From strategy games to quirky accessories, find unique picks that will enhance their game nights."
 keywords: "gifts for board game enthusiasts, unique board game gifts, board game accessories, strategy games, novelty game items"
