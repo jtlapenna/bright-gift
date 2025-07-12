@@ -29,6 +29,8 @@ const blog = defineCollection({
     readTime: z.number().optional(),
     featured: z.boolean().optional(),
     draft: z.boolean().optional(),
+    // Defensive: enforce valid slug
+    slug: z.string().regex(/^[a-zA-Z0-9_-]+$/),
   })
 });
 
@@ -62,6 +64,8 @@ const giftGuides = defineCollection({
     readTime: z.number().optional(),
     featured: z.boolean().optional(),
     draft: z.boolean().optional(),
+    // Defensive: enforce valid slug
+    slug: z.string().regex(/^[a-zA-Z0-9_-]+$/),
   })
 });
 
@@ -84,6 +88,8 @@ const faqs = defineCollection({
     twitterCard: z.string().optional(),
     featured: z.boolean().optional(),
     draft: z.boolean().optional(),
+    // Defensive: enforce valid slug
+    slug: z.string().regex(/^[a-zA-Z0-9_-]+$/),
   })
 });
 
