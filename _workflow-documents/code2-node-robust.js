@@ -1,4 +1,4 @@
-// Robust n8n code2 node for blog post processing and error handling
+// UPDATED: Robust n8n Code2 node for blog post processing, schema enforcement, and error handling
 try {
   // --- Extract and clean the raw JSON string ---
   let raw = items[0].json.data?.[0]?.content?.[0]?.text?.value || '';
@@ -35,6 +35,10 @@ try {
         title: '',
         description: '',
         date: new Date().toISOString().split("T")[0],
+        imageDirectory: '',
+        imageFiles: [],
+        imagePaths: {},
+        validation: { passed: false, errors: ['JSON parsing failed'], fixes: {} },
         error: 'JSON parsing failed',
         errorMessage: parseError.message,
         originalContent: cleaned.substring(0, 200) + '...',
@@ -52,29 +56,51 @@ try {
     markdown = markdown.replace(/^```/, '').replace(/```$/, '').trim();
   }
 
-  // If there are multiple frontmatter blocks, keep only the first one
-  const firstFrontmatter = markdown.indexOf('---');
-  const secondFrontmatter = markdown.indexOf('---', firstFrontmatter + 3);
-  if (firstFrontmatter !== -1 && secondFrontmatter !== -1) {
-    const afterFrontmatter = markdown.slice(secondFrontmatter + 3).trim();
-    const body = afterFrontmatter.replace(/^(title|slug|image|ogImage|socialImage|category|description|keywords|date|status):.*$/gm, '').trim();
-    markdown = markdown.slice(0, secondFrontmatter + 3) + '\n\n' + body;
+  // --- Enforce schema: generate slug, image paths, etc. ---
+  function slugify(text) {
+    return (text || '')
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '')
+      .replace(/[\s_-]+/g, '-')
+      .replace(/^-+|-+$/g, '');
   }
 
-  // --- Defensive: Ensure required fields are present ---
-  const slug = parsed.slug;
-  const title = parsed.title || slug || '';
-  const category = parsed.category || '';
+  const title = parsed.title || '';
   const description = parsed.description || '';
+  const keywords = parsed.keywords || '';
+  const slug = slugify(title);
+  const category = 'gift-guides';
   const date = new Date().toISOString().split("T")[0];
   const filename = slug ? `${slug}.md` : 'untitled.md';
+  const branch = 'preview';
   const commitMessage = slug
     ? `Add draft blog post for slug: ${slug}`
     : `ERROR: Blog post not created due to missing slug`;
-  const branch = "preview";
+
+  // Image paths and directory
+  const imageDirectory = slug ? `public/images/blog/${slug}` : '';
+  const imageFiles = slug ? [
+    `${slug}-banner.webp`,
+    `${slug}-og.webp`,
+    `${slug}-social.webp`
+  ] : [];
+  const imagePaths = slug ? {
+    banner: `/images/blog/${slug}/${slug}-banner.webp`,
+    og: `/images/blog/${slug}/${slug}-og.webp`,
+    social: `/images/blog/${slug}/${slug}-social.webp`
+  } : {};
+
+  // --- Defensive: Ensure required fields are present ---
+  const errors = [];
+  const fixes = {};
+  if (!title) errors.push('Missing title');
+  if (!description) errors.push('Missing description');
+  if (!keywords) errors.push('Missing keywords');
+  if (!slug) errors.push('Missing slug');
+  if (!markdown) errors.push('Missing markdown body');
 
   // If required fields are missing, return error structure
-  if (!slug || !markdown || !category) {
+  if (errors.length > 0) {
     return [{
       json: {
         blogPost: markdown,
@@ -82,21 +108,48 @@ try {
         commitMessage: `ERROR: Blog post not created due to missing required metadata`,
         branch,
         category,
-        slug: slug || '',
+        slug,
         title,
         description,
         date,
-        error: 'Missing required blog metadata (slug, category, or body)',
-        errorMessage: '',
-        status: 'failed'
+        imageDirectory,
+        imageFiles,
+        imagePaths,
+        validation: { passed: false, errors, fixes },
+        error: 'Missing required blog metadata',
+        errorMessage: errors.join('; '),
+        status: 'failed',
+        ...parsed
       }
     }];
   }
 
+  // --- Build YAML frontmatter ---
+  function toYAML(obj) {
+    return [
+      '---',
+      `title: "${obj.title.replace(/"/g, '\"')}"`,
+      `slug: "${obj.slug}"`,
+      `image: "${imagePaths.banner}"`,
+      `ogImage: "${imagePaths.og}"`,
+      `socialImage: "${imagePaths.social}"`,
+      `category: "${category}"`,
+      `description: "${obj.description.replace(/"/g, '\"')}"`,
+      `keywords: "${obj.keywords}"`,
+      `date: "${date}"`,
+      `status: "draft"`,
+      '---'
+    ].join('\n');
+  }
+
+  // Prepend frontmatter to markdown body
+  const frontmatter = toYAML({ title, slug, description, keywords });
+  const markdownWithFrontmatter = `${frontmatter}\n\n${markdown}`;
+
   // --- Success: Return all required fields for downstream nodes ---
   return [{
     json: {
-      blogPost: markdown,
+      blogPost: markdownWithFrontmatter,
       filename,
       commitMessage,
       branch,
@@ -105,6 +158,10 @@ try {
       title,
       description,
       date,
+      imageDirectory,
+      imageFiles,
+      imagePaths,
+      validation: { passed: true, errors: [], fixes },
       status: 'success',
       ...parsed // include all original parsed fields for flexibility
     }
@@ -123,6 +180,10 @@ try {
       title: '',
       description: '',
       date: new Date().toISOString().split("T")[0],
+      imageDirectory: '',
+      imageFiles: [],
+      imagePaths: {},
+      validation: { passed: false, errors: ['Processing failed'], fixes: {} },
       error: 'Processing failed',
       errorMessage: error.message,
       status: 'failed'
