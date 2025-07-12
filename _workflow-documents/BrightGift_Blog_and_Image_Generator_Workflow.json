@@ -1,0 +1,2071 @@
+{
+  "name": "BrightGift Blog and Image Generator Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 5,
+        "filters": {
+          "q": "subject:\"Re: Blog Ideas Ready for Review\" newer_than:1d is:unread"
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        3540,
+        60
+      ],
+      "id": "9942b458-5a1c-492c-a290-e02260172189",
+      "name": "Gmail2",
+      "webhookId": "b1da5e34-b141-44bf-96e1-27326cb0b9df",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "2jsb6Z1IiQiBhEa5",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "1573ba95-d704-438a-9e09-0078109dd77d",
+              "leftValue": "={{ $json.includesChoice }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        5040,
+        60
+      ],
+      "id": "9220d8c6-8831-4bbc-9a2d-7bd618c8d6a6",
+      "name": "If3"
+    },
+    {
+      "parameters": {
+        "sendTo": "jeff.lapenna@gmail.com",
+        "subject": "BrightGift Response Error – No Choice Detected",
+        "emailType": "text",
+        "message": "Hey Jeff — we received a reply, but couldn't find a valid \"--- IDEA X ---\" format in the message.  Please reply using the format:  --- IDEA 1 --- Notes: Optional message here  Once you do, we'll process it automatically.",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        5360,
+        220
+      ],
+      "id": "954a125f-1400-47b3-9a5b-089eaa2897ac",
+      "name": "Gmail4",
+      "webhookId": "11d7b793-2a93-47c8-8596-bad1e0bdcad8",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "2jsb6Z1IiQiBhEa5",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "errorMessage": "No choice was detected, so Jeff was alerted."
+      },
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        5520,
+        220
+      ],
+      "id": "ff322de5-4cd0-4b9b-8d34-60b66738ea95",
+      "name": "Stop and Error1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.openai.com/v1/threads/{{ $json.thread_id }}/messages",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"role\": \"user\",\n  \"content\": {{ JSON.stringify($json.message.content) }}\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        5740,
+        -40
+      ],
+      "id": "5dd044a7-72ea-4c10-8b9f-8a354f18d06a",
+      "name": "HTTP Request7",
+      "credentials": {
+        "openAiApi": {
+          "id": "xhYw6tK9BPVC7BMo",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.openai.com/v1/threads/{{ $json[\"thread_id\"] }}/messages",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        7240,
+        -280
+      ],
+      "id": "aadf4b68-7c49-45a9-8b9f-605475dd1246",
+      "name": "HTTP Request9",
+      "credentials": {
+        "openAiApi": {
+          "id": "xhYw6tK9BPVC7BMo",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 60
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        6200,
+        260
+      ],
+      "id": "f63678f0-c35b-4b84-a571-3c8d3f06668c",
+      "name": "Wait1",
+      "webhookId": "1bfec4cd-7f16-4afc-9a18-d97185c6573f"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"retryCount\": 1\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        6460,
+        260
+      ],
+      "id": "237b3527-cd12-4cbf-b9e5-050810921139",
+      "name": "Initialize Retry Counter2"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "0a10063e-afd0-49a3-9e73-58eabd2ab613",
+              "name": "retryCount",
+              "value": "={{$json[\"retryCount\"] ? $json[\"retryCount\"] + 1 : 1}}",
+              "type": "number"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        7280,
+        240
+      ],
+      "id": "50ef2e72-b36f-4406-949c-68cdbf67aaf1",
+      "name": "Initialize Retry Counter3"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "774ef589-3410-4eab-8201-de543aa597a7",
+              "leftValue": "={{$json[\"retryCount\"]}}",
+              "rightValue": 10,
+              "operator": {
+                "type": "number",
+                "operation": "lt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        7280,
+        480
+      ],
+      "id": "14cc0776-3d75-42ec-9ff3-24078932a32c",
+      "name": "If5"
+    },
+    {
+      "parameters": {
+        "sendTo": "jeff.lapenna@gmail.com",
+        "subject": "❌ BrightGift Agent Timeout Alert after 10 Tries",
+        "message": "=The BrightGift GPT blog post agent failed to complete its response after 10 attempts.\n\nTimestamp: {{ $now }}\nWorkflow: {{ $workflow.name }}\n\nPlease review the logs in n8n and rerun the assistant manually if needed.",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        7460,
+        500
+      ],
+      "id": "77131236-60f8-4bdd-9a3a-94a81a263c33",
+      "name": "Gmail5",
+      "webhookId": "7c138831-9b81-46f6-b82a-3f28df7f0093",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "2jsb6Z1IiQiBhEa5",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "errorMessage": "GPT blog assistant failed after maximum retries. Alert email sent to Jeff."
+      },
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        7600,
+        500
+      ],
+      "id": "5e07c06c-f8d5-41e6-82ff-2d6fd04262e1",
+      "name": "Stop and Error2"
+    },
+    {
+      "parameters": {
+        "jsCode": "const contentBlock = $json.data[0].content[0].text.value;\n\n// Try to extract JSON block using regex\nconst match = contentBlock.match(/```json([\\s\\S]*?)```/);\n\nif (match) {\n  try {\n    const parsed = JSON.parse(match[1].trim());\n    return [{ json: parsed }];\n  } catch (err) {\n    return [{ json: { error: \"Failed to parse JSON block\", rawContent: contentBlock } }];\n  }\n} else {\n  return [{ json: { error: \"No JSON block found\", rawContent: contentBlock } }];\n}"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        7480,
+        40
+      ],
+      "id": "2dd67da2-b4ac-4c0c-976f-e63163e734d2",
+      "name": "Code3"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.openai.com/v1/threads/{{ $node[\"HTTP Request13\"].json[\"id\"] }}/messages",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $node[\"Code12\"].json[\"message\"] }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        8060,
+        40
+      ],
+      "id": "bcbfb6d4-3ab9-46be-aa6f-58f96b985bcf",
+      "name": "Request Image Prompts",
+      "credentials": {
+        "openAiApi": {
+          "id": "xhYw6tK9BPVC7BMo",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const messages = $json.data || [];\n\n// Defensive: Check if messages is a non-empty array\nif (!Array.isArray(messages) || messages.length === 0) {\n  throw new Error(\"No messages found in input data. Input: \" + JSON.stringify($json, null, 2));\n}\n\n// Find the last assistant message\nconst last = messages.find(m => m.role === 'assistant');\n\n// Defensive: Log messages for debugging if assistant message is missing or malformed\nif (!last || !last.content || !last.content[0] || !last.content[0].text || !last.content[0].text.value) {\n  console.log(\"DEBUG: messages = \", JSON.stringify(messages, null, 2));\n  throw new Error(\"No valid assistant response found\");\n}\n\nlet raw = last.content[0].text.value.trim();\n\n// Remove Markdown code block wrapper if present\nif (raw.startsWith(\"```json\")) {\n  raw = raw.replace(/^```json/, \"\").replace(/```$/, \"\").trim();\n}\n\n// Sanity check: JSON should still start and end correctly\nif (!raw.startsWith(\"{\") || !raw.endsWith(\"}\")) {\n  throw new Error(\"Assistant response is not valid JSON:\\n\\n\" + raw);\n}\n\nlet parsed;\ntry {\n  parsed = JSON.parse(raw);\n} catch (err) {\n  throw new Error(\"Failed to parse JSON:\\n\\n\" + raw);\n}\n\nconst { slug, prompts } = parsed;\n\n// Defensive: Check that prompts is an array\nif (!Array.isArray(prompts)) {\n  throw new Error(\"Parsed assistant response does not contain a valid 'prompts' array:\\n\\n\" + raw);\n}\n\nconst outputs = prompts.map(p => ({\n  json: {\n    slug,\n    label: p.label,\n    prompt: p.text\n  }\n}));\n\nreturn outputs;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        9420,
+        40
+      ],
+      "id": "e95e036a-9482-4042-8f05-fc61260834fd",
+      "name": "Code4",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 15
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        3320,
+        260
+      ],
+      "id": "0807dbb9-36b6-4ee3-8ed5-959145097f53",
+      "name": "Schedule Trigger",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "jsCode": "function decodeBase64(str) {\n  return Buffer.from(str.replace(/-/g, '+').replace(/_/g, '/'), 'base64').toString('utf-8');\n}\n\n// Extract the plain text part from the Gmail payload\nconst parts = $json.payload?.parts || [];\nconst textPart = parts.find(p => p.mimeType === 'text/plain');\nconst encoded = textPart?.body?.data;\n\nconst decodedBody = encoded ? decodeBase64(encoded) : '';\n\n// Look for IDEA format: \"--- IDEA X ---\" instead of \"Choice: X\"\nconst ideaMatch = decodedBody.match(/---\\s*IDEA\\s*(\\d+)\\s*---/i);\nconst threadMatch = decodedBody.match(/thread_[\\w-]+/i);\nconst notesMatch = decodedBody.match(/Notes[:：]?\\s*([\\s\\S]*?)(?:\\r?\\nOn\\s|\\r?\\n>|\\r?\\n?$)/i);\n\nconst choice = ideaMatch ? parseInt(ideaMatch[1], 10) : null;\nconst thread_id = threadMatch?.[0] || null;\nconst notes = notesMatch?.[1]?.trim() || null;\n\n// Extract selected IDEA block\nlet selectedIdeaBlock = null;\nif (choice) {\n  const ideaRegex = new RegExp(\n    `---\\\\s*IDEA\\\\s*${choice}\\\\s*---([\\\\s\\\\S]*?)(?=\\\\n---\\\\s*IDEA\\\\s*\\\\d+\\\\s*---|\\\\n?$)`,\n    'i'\n  );\n  const match = decodedBody.match(ideaRegex);\n  selectedIdeaBlock = match?.[1]?.trim() || null;\n}\n\nconst fieldLabels = {\n  'Title': 'title',\n  'Meta Description': 'metaDescription',\n  'Primary Keywords': 'primaryKeywords',\n  'Secondary Keywords': 'secondaryKeywords',\n  'Affiliate Product Category': 'affiliateCategory',\n  'Recommended Cluster Tags': 'clusterTags',\n  'Applied Style Lens': 'styleLens',\n  'Internal Link Targets': 'internalLinks',\n};\n\nconst extractedFields = {};\nif (selectedIdeaBlock) {\n  for (const [label, key] of Object.entries(fieldLabels)) {\n    const regex = new RegExp(`\\\\*?${label}\\\\*?[:：]?\\\\s*([\\\\s\\\\S]*?)(?=\\\\n\\\\*?[A-Z][^:\\\\n]{2,30}\\\\*?[:：]|\\\\n?$)`, 'i');\n    const match = selectedIdeaBlock.match(regex);\n    extractedFields[key] = match ? match[1].trim().replace(/\\r?\\n/g, ' ') : null;\n  }\n\n  // Convert comma-separated lists into arrays\n  if (extractedFields.clusterTags) {\n    extractedFields.clusterTags = extractedFields.clusterTags.split(',').map(s => s.trim());\n  }\n  if (extractedFields.internalLinks) {\n    extractedFields.internalLinks = extractedFields.internalLinks.split(',').map(s => s.trim());\n  }\n}\n\nreturn [\n  {\n    json: {\n      thread_id,\n      choice,\n      notes,\n      selectedIdea: selectedIdeaBlock,\n      includesChoice: choice !== null,\n      internalDate: $json.internalDate || null,\n      decodedBody, // Optional: remove when stable\n      ...extractedFields\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4360,
+        60
+      ],
+      "id": "cc8c2021-546e-46be-8c72-78e665feaea9",
+      "name": "Code6"
+    },
+    {
+      "parameters": {
+        "url": "=https://gmail.googleapis.com/gmail/v1/users/me/messages/{{ $json.id }}?format=full",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "gmailOAuth2",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        4160,
+        60
+      ],
+      "id": "1ed9876b-d046-447c-b24f-dca64df1b77e",
+      "name": "HTTP Request",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "2jsb6Z1IiQiBhEa5",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.openai.com/v1/threads/{{ $node[\"HTTP Request3\"].json[\"thread_id\"] }}/runs/{{ $node[\"HTTP Request3\"].json[\"id\"] }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "=assistants=v2"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        6720,
+        260
+      ],
+      "id": "b6215729-a5b2-4414-bd04-c7061a2c34ca",
+      "name": "HTTP Request1",
+      "credentials": {
+        "openAiApi": {
+          "id": "xhYw6tK9BPVC7BMo",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d3a990bd-c72b-430b-b426-4166bea9f854",
+              "leftValue": "={{ $json[\"status\"] }}",
+              "rightValue": "completed",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            },
+            {
+              "id": "65613922-8a1d-4261-9082-221029d2b3ce",
+              "leftValue": "={{ $json[\"status\"] }}",
+              "rightValue": "in_progress",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        6940,
+        100
+      ],
+      "id": "72087b4c-a614-4aa9-b8c7-b88132bbc918",
+      "name": "Check run status"
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw = $json.content?.[0]?.text || '{}';\n\nlet parsed = {};\ntry {\n  parsed = JSON.parse(raw);\n} catch (err) {\n  parsed = { error: 'Failed to parse JSON', raw };\n}\n\nreturn [\n  {\n    json: {\n      ...parsed,\n      includesChoice: parsed.choice !== null && parsed.choice !== undefined,\n    },\n  },\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4800,
+        60
+      ],
+      "id": "8a342265-c54f-4223-a5dc-8085345aab49",
+      "name": "Code5"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  {\n    json: {\n      role: \"user\",\n      content: [\n        {\n          type: \"text\",\n          text: JSON.stringify({\n            thread_id: $json.thread_id || null,\n            choice: $json.choice || null,\n            notes: $json.notes || null,\n            title: $json.title || null,\n            metaDescription: $json.metaDescription || null,\n            primaryKeywords: $json.primaryKeywords || null,\n            secondaryKeywords: $json.secondaryKeywords || null,\n            affiliateCategory: $json.affiliateCategory || null,\n            clusterTags: $json.clusterTags || [],\n            styleLens: $json.styleLens || null,\n            internalLinks: $json.internalLinks || []\n          }, null, 2) // pretty-printed JSON\n        }\n      ]\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4580,
+        60
+      ],
+      "id": "192731d5-6a9c-4c0c-bca9-789d298d8c2b",
+      "name": "Code8"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/threads",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        5360,
+        -40
+      ],
+      "id": "55ffc989-2edf-420e-a088-f9a042815c02",
+      "name": "HTTP Request2",
+      "credentials": {
+        "openAiApi": {
+          "id": "xhYw6tK9BPVC7BMo",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const threadId = $json.id; // from HTTP Request2\nconst input = $node[\"Code5\"].json; // ← change this to the correct node\n\nconst messageText = `\nTitle: ${input.title}\nMeta Description: ${input.metaDescription}\nPrimary Keywords: ${input.primaryKeywords}\nSecondary Keywords: ${input.secondaryKeywords}\nAffiliate Category: ${input.affiliateCategory}\nCluster Tags: ${(input.clusterTags || []).join(\", \")}\nStyle Lens: ${input.styleLens}\nInternal Links: ${(input.internalLinks || []).join(\", \")}\nNotes: ${input.notes}\nChoice: ${input.choice}\nThread ID: ${threadId}\n`.trim();\n\nreturn [\n  {\n    json: {\n      thread_id: threadId,\n      message: {\n        role: \"user\",\n        content: [\n          {\n            type: \"text\",\n            text: messageText\n          }\n        ]\n      }\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        5540,
+        -40
+      ],
+      "id": "64f9c5df-cdb2-45e4-93e4-fbb3463ac5c7",
+      "name": "Code11"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.openai.com/v1/threads/{{ $node[\"HTTP Request7\"].json.thread_id }}/runs",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"assistant_id\": \"asst_SmgfZEsn92ntXHCAl7GCgtac\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        5940,
+        -40
+      ],
+      "id": "14900045-9e54-43e8-86d5-0aedb21699bf",
+      "name": "HTTP Request3",
+      "credentials": {
+        "openAiApi": {
+          "id": "xhYw6tK9BPVC7BMo",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const threadId = $node[\"HTTP Request13\"].json[\"id\"];\nconst input = $node[\"If3\"].json;\nconst title = input.title || \"Untitled Blog\";\nconst meta = input.metaDescription || input.notes || \"No description provided.\";\n\nreturn [\n  {\n    json: {\n      thread_id: threadId,\n      message: {\n        role: \"user\",\n        content: [\n          {\n            type: \"text\",\n            text: `Title: ${title}\\nExcerpt: ${meta}`\n          }\n        ]\n      }\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        7880,
+        40
+      ],
+      "id": "1a1049e2-ca57-44ea-83b1-64b44c33c648",
+      "name": "Code12"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.openai.com/v1/threads/{{ $json.thread_id }}/runs",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"assistant_id\": \"asst_tholLMDBMGjJbgjy9TTbQ6qo\",\n  \"response_format\": \"auto\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        8260,
+        40
+      ],
+      "id": "cd0ebfc1-05c2-4385-9b73-a5490e778240",
+      "name": "HTTP Request4",
+      "credentials": {
+        "openAiApi": {
+          "id": "xhYw6tK9BPVC7BMo",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/threads",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        7680,
+        40
+      ],
+      "id": "2fd1f77c-23c1-484d-9a31-16444d8acf6b",
+      "name": "HTTP Request13",
+      "credentials": {
+        "openAiApi": {
+          "id": "xhYw6tK9BPVC7BMo",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "11988cd2-e2fc-456f-ae12-2d92a65326f6",
+              "name": "run_id",
+              "value": "={{ $json[\"id\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "5e0ee230-04cd-4621-b67b-1ff549310468",
+              "name": "thread_id",
+              "value": "={{ $json[\"thread_id\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        8540,
+        40
+      ],
+      "id": "dbb55262-bddc-465f-ac14-bf6ef2281dc3",
+      "name": "Store Run ID"
+    },
+    {
+      "parameters": {
+        "amount": 45
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        8840,
+        40
+      ],
+      "id": "c779a704-a3f2-4187-b681-2ecab86636e8",
+      "name": "Wait",
+      "webhookId": "7c6069ca-14ca-4a5f-97c8-ab6fb9da5083"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.openai.com//v1/threads/{{ $json.thread_id }}/runs/{{ $json.run_id }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        9020,
+        40
+      ],
+      "id": "1e216b56-8d7d-4d0b-a59e-859246e4dc15",
+      "name": "Check Run Status",
+      "credentials": {
+        "openAiApi": {
+          "id": "xhYw6tK9BPVC7BMo",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.openai.com/v1/threads/{{ $json.thread_id }}/messages",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        9220,
+        40
+      ],
+      "id": "6789ce4e-84cd-4d26-903b-422b7bc66196",
+      "name": "Get Prompt Message",
+      "credentials": {
+        "openAiApi": {
+          "id": "xhYw6tK9BPVC7BMo",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "prompt",
+        "include": "allOtherFields",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        9620,
+        40
+      ],
+      "id": "e915cf8e-50e0-48a9-8e6a-c1a602bcfcd7",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c7e664c4-2b78-4a05-ad88-fece95244913",
+              "name": "label",
+              "value": "={{ $json.label }}",
+              "type": "string"
+            },
+            {
+              "id": "faa1545d-6c8a-4a69-8818-35b03f9293db",
+              "name": "filename",
+              "value": "={{ $json.label }}.webp",
+              "type": "string"
+            },
+            {
+              "id": "f0dc2643-9ab3-4c55-b57b-b2276c4f3922",
+              "name": "prompt",
+              "value": "={{ $json.prompt }}",
+              "type": "string"
+            },
+            {
+              "id": "8ecc7370-4233-40ad-9867-81409add643b",
+              "name": "slug",
+              "value": "={{ $json.slug }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        9840,
+        200
+      ],
+      "id": "bbbb29f9-46da-4da5-96a0-76c6b59419dc",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        10080,
+        60
+      ],
+      "id": "0de0bd59-7c50-4d16-9340-8d50b448c043",
+      "name": "Merge1"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        3320,
+        -120
+      ],
+      "id": "8a2e3cf0-2771-47a2-a5b9-714099a79e0d",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "jsCode": "const messages = $input.all();\nlet latestValid = null;\n\nfor (const item of messages) {\n  const snippet = item.json.snippet || '';\n  // Look for IDEA format: \"--- IDEA X ---\" instead of \"Choice: X\"\n  const hasIdea = /---\\s*IDEA\\s*\\d+\\s*---/i.test(snippet);\n\n  if (hasIdea) {\n    const ideaMatch = snippet.match(/---\\s*IDEA\\s*(\\d+)\\s*---/i);\n    const threadMatch = snippet.match(/thread_[\\w-]+/i);\n\n    if (ideaMatch && threadMatch) {\n      latestValid = {\n        id: item.json.id,\n        threadId: item.json.threadId,\n        thread_id: threadMatch[0],\n        choice: parseInt(ideaMatch[1], 10),\n        snippet: snippet,\n        internalDate: item.json.internalDate,\n      };\n      break; // stop at the first valid one\n    }\n  }\n}\n\nreturn latestValid ? [ { json: latestValid } ] : [];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3740,
+        60
+      ],
+      "id": "57202ecf-d1b9-4ad1-b695-6a8e2394368e",
+      "name": "Code19"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://thepeakbeyond.app.n8n.cloud/webhook/blog-received",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "thread_id",
+              "value": "={{$json.thread_id}}"
+            },
+            {
+              "name": "slug",
+              "value": "={{$json.slug}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        10820,
+        -260
+      ],
+      "id": "ff8b3c31-762b-4d60-bce3-5a2bd228eee1",
+      "name": "HTTP Request16"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        10400,
+        -260
+      ],
+      "id": "40545817-c58e-4602-9ec2-d6cbe8d79d20",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "mode": "chooseBranch",
+        "useDataOfInput": 2
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        11220,
+        40
+      ],
+      "id": "abadfbe4-c796-425d-9881-14dfbc7eb9d3",
+      "name": "Merge2"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "2e5ebe53-423f-4dfa-b57c-92c8ea556a50",
+              "name": "thread_id",
+              "value": "={{$json.data[0]?.thread_id}}",
+              "type": "string"
+            },
+            {
+              "id": "4bb951dd-3f0e-4464-8788-f829737f671a",
+              "name": "slug",
+              "value": "={{$json.slug}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        10620,
+        -260
+      ],
+      "id": "0b6ae1ca-a6ca-4800-9611-c7b64360ab43",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/images/generations",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{\n{\n\"model\": \"gpt-image-1\",\n\"prompt\": $json.prompt,\n\"n\": 1,\n\"size\": $json.label === 'social' ? '1024x1024' : '1536x1024',\n\"quality\": \"high\"\n}\n}}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        12020,
+        40
+      ],
+      "id": "7d90ba1b-4b8b-4f65-9ce7-2d3c9063ebe6",
+      "name": "Generate Image (gpt-image-1)",
+      "retryOnFail": true,
+      "credentials": {
+        "openAiApi": {
+          "id": "xhYw6tK9BPVC7BMo",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "return {\n  json: {\n    filename: $json.filename,\n    base64: $json.data[0].b64_json\n  }\n}"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12160,
+        40
+      ],
+      "id": "71d523eb-13de-4b75-b433-ef2c83669ec3",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=  https://api.github.com/repos/jtlapenna/bright-gift/contents/public/images/tmp/{{ $json.slug }}-{{ $json.filename }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "githubApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/vnd.github+json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "n8n"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"message\": \"Add temp image {{ $json.filename }}\",\n  \"content\": \"{{ $json.base64 }}\",\n  \"branch\": \"main\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        13360,
+        680
+      ],
+      "id": "f2f49b15-0c54-415a-9735-c9995af61171",
+      "name": "HTTP Request5",
+      "credentials": {
+        "githubApi": {
+          "id": "36ql9jDsFZ0o5PgW",
+          "name": "GitHub account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        12420,
+        300
+      ],
+      "id": "85ab5fc9-1a55-4c20-a731-0ac08b9e35ae",
+      "name": "Merge3"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "04373730-3999-4d29-be07-8fecb8366ed6",
+              "name": "filename",
+              "value": "={{$json[\"filename\"]}}",
+              "type": "string"
+            },
+            {
+              "id": "49ad26f4-a421-4951-8318-4c514bb59c43",
+              "name": "slug",
+              "value": "={{$json[\"slug\"]}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        11800,
+        320
+      ],
+      "id": "bb500869-a52a-4e95-b7bc-fb5aa695f20a",
+      "name": "Edit Fields2"
+    },
+    {
+      "parameters": {
+        "url": "={{ \n  'https://ik.imagekit.io/brightgift/tr:f-webp' + \n  ($json[\"imageUrl\"] || '')\n    .trim()\n    .replace(/\\?.*$/, '') // Remove query params\n    .replace(/^https?:\\/\\/[^/]+\\/jtlapenna\\/bright-gift\\/main/, '') \n}}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        14160,
+        540
+      ],
+      "id": "205323dc-3e5f-4141-9b8f-b26d46e06cff",
+      "name": "download image",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://api.github.com/repos/jtlapenna/bright-gift/contents/public/images/blog/{{ $json.slug }}/{{ $json.filename }}?ref=preview",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "githubApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/vnd.github+json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "n8n"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={\n  \"message\": \"Add {{ $json.filename }}\",\n  \"content\": \"{{ $json.base64 }}\",\n  \"branch\": \"preview\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        15340,
+        900
+      ],
+      "id": "a43ade0c-cc07-4d8b-b11a-1cab82f0e777",
+      "name": "github image upload",
+      "credentials": {
+        "githubApi": {
+          "id": "36ql9jDsFZ0o5PgW",
+          "name": "GitHub account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "54b78d4a-1f50-4402-9888-383277b830e4",
+              "name": "filename",
+              "value": "={{ \n  $json.slug + '-' + \n  (\n    $itemIndex === 0 ? 'banner' :\n    $itemIndex === 1 ? 'social' :\n    $itemIndex === 2 ? 'og' :\n    'image-' + $itemIndex\n  ) + '.webp'\n}}",
+              "type": "string"
+            },
+            {
+              "id": "bc1d31a6-f290-4d98-a57b-ae63a7c63fee",
+              "name": "slug",
+              "value": "={{ $json.slug }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        14860,
+        540
+      ],
+      "id": "9b05308c-66e1-469c-9de8-8024079e314f",
+      "name": "renameImages1"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "if ($binary && $binary.data && $binary.data.data) {\n  const buffer = Buffer.from($binary.data.data, 'base64');\n  return {\n    json: {\n      ...$json,\n      content: buffer.toString('base64'),\n      binary_size: buffer.length,\n    },\n    binary: {\n      data: $binary.data,\n    }\n  };\n} else {\n  return {\n    json: {\n      ...$json,\n      error: 'No binary data found'\n    }\n  };\n}"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        14380,
+        540
+      ],
+      "id": "798a4186-b5c2-4095-8f68-922316924b02",
+      "name": "Code7"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "8a38a833-3be6-46cc-95ba-b804a7d5ab7b",
+              "name": "imageUrl",
+              "value": "=  {{$json[\"content\"][\"download_url\"]}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        13920,
+        540
+      ],
+      "id": "c4127dbc-6e34-4d01-ba67-d0311a6b837f",
+      "name": "Edit Fields3"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        14620,
+        300
+      ],
+      "id": "e38ecc12-4deb-41fc-9338-c97ce95f524e",
+      "name": "Merge4"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "file",
+        "operation": "delete",
+        "owner": {
+          "__rl": true,
+          "value": "jtlapenna",
+          "mode": "name"
+        },
+        "repository": {
+          "__rl": true,
+          "value": "bright-gift",
+          "mode": "name"
+        },
+        "filePath": "=public/images/tmp/{{ $json.slug }}-{{ $json.filename }}",
+        "commitMessage": "Remove temporary image after ImageKit conversion"
+      },
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1,
+      "position": [
+        15560,
+        540
+      ],
+      "id": "03cb662b-ca3d-457e-b5a6-c20f8fba7615",
+      "name": "GitHub",
+      "credentials": {
+        "githubOAuth2Api": {
+          "id": "kYk6Zcu2QIpZ7Prl",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        15280,
+        320
+      ],
+      "id": "8865d2cf-048d-4886-818c-53d2dd0542a6",
+      "name": "Merge5"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        12960,
+        560
+      ],
+      "id": "c8c8cab7-6aa9-4482-81be-b1f0d45af0b3",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        13560,
+        680
+      ],
+      "id": "54ccd9af-d526-489c-a811-b8b71b8adcaa",
+      "name": "Wait2",
+      "webhookId": "7629b6d2-9ab4-4850-ab07-9d54a85d7b30"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        15100,
+        900
+      ],
+      "id": "49606120-29dd-4a9a-9f5f-a4427d43224c",
+      "name": "Loop Over Items1"
+    },
+    {
+      "parameters": {
+        "amount": 15
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        15540,
+        900
+      ],
+      "id": "87fedbb9-d42e-44d0-8870-8999f3e052c0",
+      "name": "Wait3",
+      "webhookId": "a7209db8-2941-4b5f-b7e6-6bca10912f16"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Gmail2": {
+      "main": [
+        [
+          {
+            "node": "Code19",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If3": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gmail4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail4": {
+      "main": [
+        [
+          {
+            "node": "Stop and Error1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request9": {
+      "main": [
+        [
+          {
+            "node": "Code3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "Initialize Retry Counter2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Initialize Retry Counter2": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Initialize Retry Counter3": {
+      "main": [
+        [
+          {
+            "node": "If5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail5": {
+      "main": [
+        [
+          {
+            "node": "Stop and Error2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If5": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gmail5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code3": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Request Image Prompts": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code4": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Gmail2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code6": {
+      "main": [
+        [
+          {
+            "node": "Code8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request7": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Code6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Check run status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check run status": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request9",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Initialize Retry Counter3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code5": {
+      "main": [
+        [
+          {
+            "node": "If3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code8": {
+      "main": [
+        [
+          {
+            "node": "Code5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Code11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code11": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request3": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code12": {
+      "main": [
+        [
+          {
+            "node": "Request Image Prompts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request4": {
+      "main": [
+        [
+          {
+            "node": "Store Run ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request13": {
+      "main": [
+        [
+          {
+            "node": "Code12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Store Run ID": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Check Run Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Run Status": {
+      "main": [
+        [
+          {
+            "node": "Get Prompt Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Prompt Message": {
+      "main": [
+        [
+          {
+            "node": "Code4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          },
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Gmail2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code19": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request16": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge2": {
+      "main": [
+        [
+          {
+            "node": "Generate Image (gpt-image-1)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Edit Fields2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Image (gpt-image-1)": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Merge3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge3": {
+      "main": [
+        [
+          {
+            "node": "Merge4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields2": {
+      "main": [
+        [
+          {
+            "node": "Merge3",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "HTTP Request5": {
+      "main": [
+        [
+          {
+            "node": "Wait2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "download image": {
+      "main": [
+        [
+          {
+            "node": "Code7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "renameImages1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code7": {
+      "main": [
+        [
+          {
+            "node": "Merge4",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Edit Fields3": {
+      "main": [
+        [
+          {
+            "node": "download image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge4": {
+      "main": [
+        [
+          {
+            "node": "renameImages1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "github image upload": {
+      "main": [
+        [
+          {
+            "node": "Wait3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge5": {
+      "main": [
+        [
+          {
+            "node": "GitHub",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP Request5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait2": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items1": {
+      "main": [
+        [
+          {
+            "node": "Merge5",
+            "type": "main",
+            "index": 1
+          }
+        ],
+        [
+          {
+            "node": "github image upload",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait3": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "2306ccb1-7471-4506-a411-a6ca4150ad22",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "010748b7a1466c46dced3f8b2bdbc3bc174722f0672e5a4c9529354f5ff306f8"
+  },
+  "id": "3CsJihWmidgun9nz",
+  "tags": []
+}
