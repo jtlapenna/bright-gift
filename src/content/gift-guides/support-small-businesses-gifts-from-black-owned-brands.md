@@ -4,7 +4,7 @@ date: "2025-07-11"
 slug: "support-small-businesses-gifts-from-black-owned-brands"
 category: "gift-guides"
 description: "Celebrate diversity by gifting from Black-owned brands. Unique and meaningful gifts that give back!"
-featured_image: "/images/gift-guides/support-small-businesses-gifts-from-black-owned-brands/banner.webp"
+image: "/images/gift-guides/plant-lovers-under-75.png"
 status: draft
 ---
 

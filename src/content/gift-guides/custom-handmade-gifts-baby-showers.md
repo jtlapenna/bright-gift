@@ -4,7 +4,7 @@ date: "2025-07-11"
 slug: "custom-handmade-gifts-baby-showers"
 category: "gift-guides"
 description: "Explore custom and handmade gifts for baby showers that will be cherished forever! Perfect for new parents."
-featured_image: "/images/gift-guides/custom-handmade-gifts-baby-showers/banner.webp"
+image: "/images/gift-guides/plant-lovers-under-75.png"
 status: draft
 ---
 

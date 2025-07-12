@@ -4,7 +4,7 @@ date: "2025-07-11"
 slug: "handmade-gifts-from-lgbtq-owned-businesses-youll-love"
 category: "gift-guides"
 description: "Celebrate diversity with unique handmade gifts from LGBTQ+-owned businesses that are perfect for any occasion!"
-featured_image: "/images/gift-guides/handmade-gifts-from-lgbtq-owned-businesses-youll-love/banner.webp"
+image: "/images/gift-guides/plant-lovers-under-75.png"
 status: draft
 ---
 

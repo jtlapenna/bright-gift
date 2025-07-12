@@ -4,7 +4,7 @@ date: "2025-07-11"
 slug: "vintage-inspired-gifts-for-retro-lovers"
 category: "gift-guides"
 description: "Delight retro enthusiasts with vintage-inspired gifts! Perfect for those who cherish nostalgic aesthetics and classic designs."
-featured_image: "/images/gift-guides/vintage-inspired-gifts-for-retro-lovers/banner.webp"
+image: "/images/gift-guides/plant-lovers-under-75.png"
 status: draft
 ---
 

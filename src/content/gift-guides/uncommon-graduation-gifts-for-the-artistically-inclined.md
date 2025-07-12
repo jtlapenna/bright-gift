@@ -4,7 +4,7 @@ date: "2025-07-11"
 slug: "uncommon-graduation-gifts-for-the-artistically-inclined"
 category: "gift-guides"
 description: "Find uncommon and inspiring graduation gifts tailored for eager artists ready to create their future. Encourage their passions with unique options!"
-featured_image: "/images/gift-guides/uncommon-graduation-gifts-for-the-artistically-inclined/banner.webp"
+image: "/images/gift-guides/plant-lovers-under-75.png"
 status: draft
 ---
 

@@ -4,7 +4,7 @@ date: "2025-07-11"
 slug: "unique-gifts-for-dads-who-love-fishing"
 category: "gift-guides"
 description: "Discover unique fishing gifts that every dad will love. From practical gear to quirky accessories, find the perfect gift to make his fishing trips even more enjoyable!"
-featured_image: "/images/gift-guides/unique-gifts-for-dads-who-love-fishing/banner.webp"
+image: "/images/gift-guides/plant-lovers-under-75.png"
 status: draft
 ---
 

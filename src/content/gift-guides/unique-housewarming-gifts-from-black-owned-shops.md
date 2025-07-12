@@ -4,7 +4,7 @@ date: "2025-07-11"
 slug: "unique-housewarming-gifts-from-black-owned-shops"
 category: "gift-guides"
 description: "Support Black-owned businesses while finding the perfect unique housewarming gift. Check out these lovely options!"
-featured_image: "/images/gift-guides/unique-housewarming-gifts-from-black-owned-shops/banner.webp"
+image: "/images/gift-guides/plant-lovers-under-75.png"
 status: draft
 ---
 

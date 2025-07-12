@@ -4,7 +4,7 @@ date: "2025-07-11"
 slug: "unique-birthday-gifts-for-teens-break-the-mold"
 category: "gift-guides"
 description: "Find one-of-a-kind birthday gifts for teens that stand out from the crowd. Celebrate their individuality with creative ideas!"
-featured_image: "/images/gift-guides/unique-birthday-gifts-for-teens-break-the-mold/banner.webp"
+image: "/images/gift-guides/plant-lovers-under-75.png"
 status: draft
 ---
 

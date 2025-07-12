@@ -4,7 +4,7 @@ date: "2025-07-11"
 slug: "handmade-pet-gifts-animal-lovers"
 category: "gift-guides"
 description: "Discover delightful handmade gifts for pet lovers that combine love for animals with unique craftsmanship."
-featured_image: "/images/gift-guides/handmade-pet-gifts-animal-lovers/banner.webp"
+image: "/images/gift-guides/plant-lovers-under-75.png"
 status: draft
 ---
 

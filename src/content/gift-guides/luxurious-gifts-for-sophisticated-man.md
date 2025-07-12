@@ -4,7 +4,7 @@ date: "2025-07-11"
 slug: "luxurious-gifts-for-sophisticated-man"
 category: "gift-guides"
 description: "Find the perfect luxury gifts for men, from stylish watches to premium grooming products. Great for birthdays and special occasions!"
-featured_image: "/images/gift-guides/luxurious-gifts-for-sophisticated-man/banner.webp"
+image: "/images/gift-guides/plant-lovers-under-75.png"
 status: draft
 ---
 

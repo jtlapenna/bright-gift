@@ -4,7 +4,7 @@ date: "2025-07-11"
 slug: "black-owned-business-gifts-to-celebrate-black-history-month"
 category: "gift-guides"
 description: "Support and celebrate Black History Month by gifting products from Black-owned businesses. Unique gifts with purpose!"
-featured_image: "/images/gift-guides/black-owned-business-gifts-to-celebrate-black-history-month/banner.webp"
+image: "/images/gift-guides/plant-lovers-under-75.png"
 status: draft
 ---
 
