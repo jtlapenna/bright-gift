@@ -26,7 +26,12 @@ const { Content } = await post.render();
 const title = post.data.metaTitle || post.data.title;
 const description = post.data.metaDescription || post.data.description;
 const image = post.data.ogImage || post.data.image;
-const keywords = post.data.keywords || [];
+// Ensure keywords is always an array, even if frontmatter provides a string
+const keywords = Array.isArray(post.data.keywords)
+  ? post.data.keywords
+  : (typeof post.data.keywords === 'string'
+      ? post.data.keywords.split(',').map(k => k.trim())
+      : []);
 
 // Structured data for SEO
 const structuredData = {
