@@ -16,7 +16,8 @@ export async function getStaticPaths() {
     ...faqs.map((faq) => ({ params: { slug: faq.slug }, props: { post: faq, type: 'faq' } }))
   ];
 
-  return paths;
+  // Defensive: always return an array
+  return Array.isArray(paths) ? paths : [];
 }
 
 const { post, type } = Astro.props;
