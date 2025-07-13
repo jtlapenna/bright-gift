@@ -123,3 +123,4 @@ All logs are prefixed with timestamps and request IDs for easy debugging.
 - Browser instances are properly closed on completion/error
 - Memory optimization flags are set for Railway environment
 - Automatic cleanup prevents memory leaks 
+<!-- Trigger deployment: inconsequential change --> 
