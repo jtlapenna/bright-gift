@@ -6,13 +6,11 @@ export const prerender = true;
 
 // Generate static paths for all content
 export async function getStaticPaths() {
-  const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
-  const giftGuides = await getCollection('gift-guides', ({ data }) => !data.draft);
-  const faqs = await getCollection('faqs', ({ data }) => !data.draft);
+  const blogPosts = await getCollection('blog', ({ data }) => data.status === 'published');
+  const faqs = await getCollection('faqs', ({ data }) => data.status === 'published');
 
   const paths = [
     ...blogPosts.map((post) => ({ params: { slug: post.slug }, props: { post, type: 'blog' } })),
-    ...giftGuides.map((guide) => ({ params: { slug: guide.slug }, props: { post: guide, type: 'gift-guide' } })),
     ...faqs.map((faq) => ({ params: { slug: faq.slug }, props: { post: faq, type: 'faq' } }))
   ];
 

@@ -1,10 +1,9 @@
 import { getCollection } from 'astro:content';
 
 export async function GET() {
-  // Only include published (draft: false) content
-  const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
-  const giftGuides = await getCollection('gift-guides', ({ data }) => !data.draft);
-  const faqs = await getCollection('faqs', ({ data }) => !data.draft);
+  // Only include published content
+  const blogPosts = await getCollection('blog', ({ data }) => data.status === 'published');
+  const faqs = await getCollection('faqs', ({ data }) => data.status === 'published');
 
   const baseUrl = 'https://bright-gift.com';
   
@@ -35,26 +34,15 @@ export async function GET() {
 
   // Exclude specific slugs/IDs from sitemap (404s in GSC)
   const excludedBlogSlugs = ['sample-post', 'handmade-gifts'];
-  const excludedGuideSlugs = ['gifts-for-plant-lovers'];
 
   // Only include real, published blog posts, excluding problematic slugs
   const blogUrls = blogPosts
     .filter(post => !excludedBlogSlugs.includes(post.id))
     .map(post => ({
-      url: `${baseUrl}/blog/${post.id}`,
+      url: `${baseUrl}/blog/${post.data.slug}/`,
       lastmod: new Date(post.data.date).toISOString(),
       changefreq: 'monthly',
       priority: 0.7
-    }));
-
-  // Only include real, published gift guides under /gift-guides/, excluding problematic slugs
-  const guideUrls = giftGuides
-    .filter(guide => !excludedGuideSlugs.includes(guide.id))
-    .map(guide => ({
-      url: `${baseUrl}/gift-guides/${guide.id}/`,
-      lastmod: new Date(guide.data.date).toISOString(),
-      changefreq: 'monthly',
-      priority: 0.8
     }));
 
   // Only include real, published FAQs
@@ -65,7 +53,7 @@ export async function GET() {
     priority: 0.6
   }));
 
-  const allUrls = [...staticUrls, ...blogUrls, ...guideUrls, ...faqUrls];
+  const allUrls = [...staticUrls, ...blogUrls, ...faqUrls];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

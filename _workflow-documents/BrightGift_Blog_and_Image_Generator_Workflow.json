@@ -374,8 +374,8 @@
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.2,
       "position": [
-        3320,
-        260
+        3220,
+        140
       ],
       "id": "0807dbb9-36b6-4ee3-8ed5-959145097f53",
       "name": "Schedule Trigger",
@@ -893,8 +893,8 @@
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        3320,
-        -120
+        3220,
+        -340
       ],
       "id": "8a2e3cf0-2771-47a2-a5b9-714099a79e0d",
       "name": "When clicking ‘Test workflow’"
@@ -911,43 +911,6 @@
       ],
       "id": "57202ecf-d1b9-4ad1-b695-6a8e2394368e",
       "name": "Code19"
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "https://thepeakbeyond.app.n8n.cloud/webhook/blog-received",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Content-Type",
-              "value": "application/json"
-            }
-          ]
-        },
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "thread_id",
-              "value": "={{$json.thread_id}}"
-            },
-            {
-              "name": "slug",
-              "value": "={{$json.slug}}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "position": [
-        10820,
-        -260
-      ],
-      "id": "ff8b3c31-762b-4d60-bce3-5a2bd228eee1",
-      "name": "HTTP Request16"
     },
     {
       "parameters": {
@@ -972,7 +935,7 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3,
       "position": [
-        11220,
+        11300,
         40
       ],
       "id": "abadfbe4-c796-425d-9881-14dfbc7eb9d3",
@@ -1030,7 +993,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        12020,
+        11660,
         40
       ],
       "id": "7d90ba1b-4b8b-4f65-9ce7-2d3c9063ebe6",
@@ -1051,7 +1014,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        12160,
+        11840,
         40
       ],
       "id": "71d523eb-13de-4b75-b433-ef2c83669ec3",
@@ -1084,8 +1047,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        13360,
-        680
+        13040,
+        640
       ],
       "id": "f2f49b15-0c54-415a-9735-c9995af61171",
       "name": "HTTP Request5",
@@ -1105,7 +1068,7 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3,
       "position": [
-        12420,
+        12160,
         300
       ],
       "id": "85ab5fc9-1a55-4c20-a731-0ac08b9e35ae",
@@ -1142,7 +1105,7 @@
     },
     {
       "parameters": {
-        "url": "={{ \n  'https://ik.imagekit.io/brightgift/tr:f-webp' + \n  ($json[\"imageUrl\"] || '')\n    .trim()\n    .replace(/\\?.*$/, '') // Remove query params\n    .replace(/^https?:\\/\\/[^/]+\\/jtlapenna\\/bright-gift\\/main/, '') \n}}",
+        "url": "={{\n  'https://ik.imagekit.io/brightgift' +\n  (\n    ($json[\"imageUrl\"] || '')\n      .trim()\n      .replace(/\\?.*$/, '') // Remove existing query params\n      .replace(/^https?:\\/\\/[^/]+\\/jtlapenna\\/bright-gift\\/main/, '')\n  ) +\n  '?tr=w-1200,f-webp,q-80'\n}}",
         "options": {
           "response": {
             "response": {
@@ -1154,8 +1117,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        14160,
-        540
+        13640,
+        560
       ],
       "id": "205323dc-3e5f-4141-9b8f-b26d46e06cff",
       "name": "download image",
@@ -1189,8 +1152,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        15340,
-        900
+        16260,
+        700
       ],
       "id": "a43ade0c-cc07-4d8b-b11a-1cab82f0e777",
       "name": "github image upload",
@@ -1225,8 +1188,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        14860,
-        540
+        15600,
+        760
       ],
       "id": "9b05308c-66e1-469c-9de8-8024079e314f",
       "name": "renameImages1"
@@ -1234,13 +1197,13 @@
     {
       "parameters": {
         "mode": "runOnceForEachItem",
-        "jsCode": "if ($binary && $binary.data && $binary.data.data) {\n  const buffer = Buffer.from($binary.data.data, 'base64');\n  return {\n    json: {\n      ...$json,\n      content: buffer.toString('base64'),\n      binary_size: buffer.length,\n    },\n    binary: {\n      data: $binary.data,\n    }\n  };\n} else {\n  return {\n    json: {\n      ...$json,\n      error: 'No binary data found'\n    }\n  };\n}"
+        "jsCode": "let binaryKey = null;\nif ($binary) {\n  if ($binary.data && $binary.data.data && $binary.data.fileSize !== \"0 B\" && $binary.data.mimeType.startsWith('image/')) {\n    binaryKey = 'data';\n  } else if ($binary.image && $binary.image.data && $binary.image.fileSize !== \"0 B\" && $binary.image.mimeType.startsWith('image/')) {\n    binaryKey = 'image';\n  }\n}\n\nif (binaryKey) {\n  const buffer = Buffer.from($binary[binaryKey].data, 'base64');\n  return {\n    json: {\n      ...$json,\n      base64: buffer.toString('base64'),\n      binary_size: buffer.length,\n      binary_key_used: binaryKey\n    },\n    binary: {\n      [binaryKey]: $binary[binaryKey],\n    }\n  };\n} else {\n  return {\n    json: {\n      ...$json,\n      error: 'No valid image binary data found',\n      binary_debug: $binary\n    }\n  };\n}"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        14380,
-        540
+        13800,
+        560
       ],
       "id": "798a4186-b5c2-4095-8f68-922316924b02",
       "name": "Code7"
@@ -1262,8 +1225,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        13920,
-        540
+        13480,
+        560
       ],
       "id": "c4127dbc-6e34-4d01-ba67-d0311a6b837f",
       "name": "Edit Fields3"
@@ -1277,8 +1240,8 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3,
       "position": [
-        14620,
-        300
+        14060,
+        320
       ],
       "id": "e38ecc12-4deb-41fc-9338-c97ce95f524e",
       "name": "Merge4"
@@ -1298,13 +1261,13 @@
           "value": "bright-gift",
           "mode": "name"
         },
-        "filePath": "=public/images/tmp/{{ $json.slug }}-{{ $json.filename }}",
+        "filePath": "=public/images/tmp/{{ $json.filename.trim() }}",
         "commitMessage": "Remove temporary image after ImageKit conversion"
       },
       "type": "n8n-nodes-base.github",
       "typeVersion": 1,
       "position": [
-        15560,
+        16540,
         540
       ],
       "id": "03cb662b-ca3d-457e-b5a6-c20f8fba7615",
@@ -1317,16 +1280,12 @@
       }
     },
     {
-      "parameters": {
-        "mode": "combine",
-        "combineBy": "combineByPosition",
-        "options": {}
-      },
+      "parameters": {},
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3,
       "position": [
-        15280,
-        320
+        16160,
+        340
       ],
       "id": "8865d2cf-048d-4886-818c-53d2dd0542a6",
       "name": "Merge5"
@@ -1338,8 +1297,8 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3,
       "position": [
-        12960,
-        560
+        12740,
+        580
       ],
       "id": "c8c8cab7-6aa9-4482-81be-b1f0d45af0b3",
       "name": "Loop Over Items"
@@ -1349,8 +1308,8 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "position": [
-        13560,
-        680
+        13240,
+        640
       ],
       "id": "54ccd9af-d526-489c-a811-b8b71b8adcaa",
       "name": "Wait2",
@@ -1363,8 +1322,8 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3,
       "position": [
-        15100,
-        900
+        16020,
+        700
       ],
       "id": "49606120-29dd-4a9a-9f5f-a4427d43224c",
       "name": "Loop Over Items1"
@@ -1376,12 +1335,547 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "position": [
-        15540,
-        900
+        16460,
+        700
       ],
       "id": "87fedbb9-d42e-44d0-8870-8999f3e052c0",
       "name": "Wait3",
       "webhookId": "a7209db8-2941-4b5f-b7e6-6bca10912f16"
+    },
+    {
+      "parameters": {
+        "jsCode": "// UPDATED: Robust n8n Code2 node for blog post processing, schema enforcement, and error handling\ntry {\n  // --- Extract and clean the raw JSON string ---\n  let raw = items[0].json.data?.[0]?.content?.[0]?.text?.value || '';\n  let cleaned = raw.trim();\n\n  // Remove code block wrappers if present\n  if (cleaned.startsWith('```json')) {\n    cleaned = cleaned.replace(/^```json/, '').replace(/```$/, '').trim();\n  } else if (cleaned.startsWith('```')) {\n    cleaned = cleaned.replace(/^```/, '').replace(/```$/, '').trim();\n  }\n\n  // Remove any leading/trailing non-JSON text\n  const firstBrace = cleaned.indexOf('{');\n  const lastBrace = cleaned.lastIndexOf('}');\n  if (firstBrace !== -1 && lastBrace !== -1) {\n    cleaned = cleaned.substring(firstBrace, lastBrace + 1);\n  }\n\n  // --- Parse JSON ---\n  let parsed;\n  try {\n    parsed = JSON.parse(cleaned);\n  } catch (parseError) {\n    // On JSON parse error, return all expected fields with fallback values\n    return [{\n      json: {\n        blogPost: '',\n        filename: 'error.md',\n        commitMessage: `ERROR: Blog post not created due to JSON parse error`,\n        branch: 'preview',\n        category: '',\n        slug: '',\n        title: '',\n        description: '',\n        date: new Date().toISOString().split(\"T\")[0],\n        imageDirectory: '',\n        imageFiles: [],\n        imagePaths: {},\n        validation: { passed: false, errors: ['JSON parsing failed'], fixes: {} },\n        error: 'JSON parsing failed',\n        errorMessage: parseError.message,\n        originalContent: cleaned.substring(0, 200) + '...',\n        status: 'failed'\n      }\n    }];\n  }\n\n  // --- Clean and process markdown body ---\n  let markdown = parsed.body || '';\n  markdown = markdown.trim();\n  if (markdown.startsWith('```markdown')) {\n    markdown = markdown.replace(/^```markdown/, '').replace(/```$/, '').trim();\n  } else if (markdown.startsWith('```')) {\n    markdown = markdown.replace(/^```/, '').replace(/```$/, '').trim();\n  }\n\n  // --- Enforce schema: generate slug, image paths, etc. ---\n  function slugify(text) {\n    return (text || '')\n      .toLowerCase()\n      .replace(/[^\\w\\s-]/g, '')\n      .replace(/[\\s_-]+/g, '-')\n      .replace(/^-+|-+$/g, '');\n  }\n\n  const title = parsed.title || '';\n  const description = parsed.description || '';\n  const keywords = parsed.keywords || '';\n  // Use parsed.slug if present, else slugify(title)\n  const slug = parsed.slug ? slugify(parsed.slug) : slugify(title);\n  const category = 'gift-guides';\n  const date = new Date().toISOString().split(\"T\")[0];\n  const filename = slug ? `${slug}.md` : 'untitled.md';\n  const branch = 'preview';\n  const commitMessage = slug\n    ? `Add draft blog post for slug: ${slug}`\n    : `ERROR: Blog post not created due to missing slug`;\n\n  // Image paths and directory\n  const imageDirectory = slug ? `public/images/blog/${slug}` : '';\n  const imageFiles = slug ? [\n    `${slug}-banner.webp`,\n    `${slug}-og.webp`,\n    `${slug}-social.webp`\n  ] : [];\n  const imagePaths = slug ? {\n    banner: `/images/blog/${slug}/${slug}-banner.webp`,\n    og: `/images/blog/${slug}/${slug}-og.webp`,\n    social: `/images/blog/${slug}/${slug}-social.webp`\n  } : {};\n\n  // --- Defensive: Ensure required fields are present ---\n  const errors = [];\n  const fixes = {};\n  if (!title) errors.push('Missing title');\n  if (!description) errors.push('Missing description');\n  if (!keywords) errors.push('Missing keywords');\n  if (!slug) errors.push('Missing slug');\n  if (!markdown) errors.push('Missing markdown body');\n\n  // If required fields are missing, return error structure\n  if (errors.length > 0) {\n    return [{\n      json: {\n        blogPost: markdown,\n        filename,\n        commitMessage: `ERROR: Blog post not created due to missing required metadata`,\n        branch,\n        category,\n        slug,\n        title,\n        description,\n        date,\n        imageDirectory,\n        imageFiles,\n        imagePaths,\n        validation: { passed: false, errors, fixes },\n        error: 'Missing required blog metadata',\n        errorMessage: errors.join('; '),\n        status: 'failed',\n        ...parsed\n      }\n    }];\n  }\n\n  // --- Build YAML frontmatter ---\n  function toYAML(obj) {\n    return [\n      '---',\n      `title: \"${obj.title.replace(/\"/g, '\\\"')}\"`,\n      `slug: \"${obj.slug}\"`,\n      `image: \"${imagePaths.banner}\"`,\n      `ogImage: \"${imagePaths.og}\"`,\n      `socialImage: \"${imagePaths.social}\"`,\n      `category: \"${category}\"`,\n      `description: \"${obj.description.replace(/\"/g, '\\\"')}\"`,\n      `keywords: \"${obj.keywords}\"`,\n      `date: \"${date}\"`,\n      `status: \"draft\"`,\n      '---'\n    ].join('\\n');\n  }\n\n  // Prepend frontmatter to markdown body\n  const frontmatter = toYAML({ title, slug, description, keywords });\n  const markdownWithFrontmatter = `${frontmatter}\\n\\n${markdown}`;\n\n  // --- Success: Return all required fields for downstream nodes ---\n  return [{\n    json: {\n      blogPost: markdownWithFrontmatter,\n      filename,\n      commitMessage,\n      branch,\n      category,\n      slug,\n      title,\n      description,\n      date,\n      imageDirectory,\n      imageFiles,\n      imagePaths,\n      validation: { passed: true, errors: [], fixes },\n      status: 'success',\n      ...parsed // include all original parsed fields for flexibility\n    }\n  }];\n\n} catch (error) {\n  // Handle any other errors, return all expected fields with fallback values\n  return [{\n    json: {\n      blogPost: '',\n      filename: 'error.md',\n      commitMessage: `ERROR: Blog post not created due to processing error`,\n      branch: 'preview',\n      category: '',\n      slug: '',\n      title: '',\n      description: '',\n      date: new Date().toISOString().split(\"T\")[0],\n      imageDirectory: '',\n      imageFiles: [],\n      imagePaths: {},\n      validation: { passed: false, errors: ['Processing failed'], fixes: {} },\n      error: 'Processing failed',\n      errorMessage: error.message,\n      status: 'failed'\n    }\n  }];\n} "
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        14620,
+        760
+      ],
+      "id": "2a00d959-1592-497d-9d38-92d455bd8d63",
+      "name": "Code2"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/75cdc55a-776c-43fe-8f35-73ff440adf03",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        16980,
+        540
+      ],
+      "id": "3368e9f9-1c26-4fa6-a898-0e443c6d6da3",
+      "name": "HTTP Request12",
+      "retryOnFail": true,
+      "waitBetweenTries": 3000
+    },
+    {
+      "parameters": {
+        "sendTo": "jeff.lapenna@gmail.com",
+        "subject": "=BRIGHT GIFT PREVIEW: {{ $node[\"Code2\"].json.slug }}",
+        "message": "=Hi! Your blog post preview is ready:  🔗 {{$json.previewUrl}}  \nPlease review it and reply with either: ✅ \"Approved\" to publish it live 📝 Suggestions or edits\n\nThanks!",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        17560,
+        540
+      ],
+      "id": "f288692b-cd0b-4748-9f8d-6388a359538a",
+      "name": "Gmail7",
+      "webhookId": "e0ef8bcb-78de-413c-b99b-022640c223cc",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "2jsb6Z1IiQiBhEa5",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://api.github.com/repos/jtlapenna/bright-gift/git/ref/heads/main",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "githubApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/vnd.github+json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        15340,
+        560
+      ],
+      "id": "f595fcc6-4255-413d-944b-ae8be8aa56af",
+      "name": "Get Main SHA",
+      "alwaysOutputData": true,
+      "credentials": {
+        "githubApi": {
+          "id": "36ql9jDsFZ0o5PgW",
+          "name": "GitHub account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 5,
+        "filters": {
+          "q": "subject:\"Re: PREVIEW:\" newer_than:1d is:unread"
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        18840,
+        540
+      ],
+      "id": "0b371ebf-6c02-4ffa-9fd1-c5ceaa76d8c3",
+      "name": "Check for Approval Emails",
+      "webhookId": "a92972d8-9b71-4132-9a8b-1007b14fa529",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "2jsb6Z1IiQiBhEa5",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "function decodeBase64(str) {\n  return Buffer.from(str.replace(/-/g, '+').replace(/_/g, '/'), 'base64').toString('utf-8');\n}\n\n// Extract the plain text part from the Gmail payload\nconst parts = $json.payload?.parts || [];\nconst textPart = parts.find(p => p.mimeType === 'text/plain');\nconst encoded = textPart?.body?.data;\n\nconst decodedBody = encoded ? decodeBase64(encoded) : '';\n\n// Check for approval keywords\nconst isApproved = /\\b(approved|approve|yes|publish|live|go)\\b/i.test(decodedBody);\nconst isRejected = /\\b(rejected|reject|no|don't publish|stop)\\b/i.test(decodedBody);\n\n// Extract slug from subject line or email body\nconst subjectSlugMatch = $json.payload?.headers?.find(h => h.name === 'Subject')?.value?.match(/PREVIEW:\\s*(.+)/i);\nconst bodySlugMatch = decodedBody.match(/preview-bright-gift\\.pages\\.dev\\/([\\w-]+)/i);\n\nconst slug = subjectSlugMatch?.[1]?.trim() || bodySlugMatch?.[1] || null;\n\n// Extract any notes or feedback\nconst notesMatch = decodedBody.match(/Notes[:：]?\\s*([\\s\\S]*?)(?:\\r?\\nOn\\s|\\r?\\n>|\\r?\\n?$)/i);\nconst notes = notesMatch?.[1]?.trim() || null;\n\nreturn [\n  {\n    json: {\n      isApproved,\n      isRejected,\n      slug,\n      notes,\n      decodedBody,\n      emailId: $json.id,\n      threadId: $json.threadId,\n      internalDate: $json.internalDate\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        19040,
+        540
+      ],
+      "id": "dea2d301-6aea-44f7-964a-9e5c6c71cf89",
+      "name": "Parse Approval Response"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "approval-check",
+              "leftValue": "={{ $json.isApproved }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        19240,
+        540
+      ],
+      "id": "7f80c88d-f937-4954-9a8d-23c60a918343",
+      "name": "Is Approved?"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "file",
+        "operation": "get",
+        "owner": {
+          "__rl": true,
+          "value": "jtlapenna",
+          "mode": "name"
+        },
+        "repository": {
+          "__rl": true,
+          "value": "bright-gift",
+          "mode": "name"
+        },
+        "filePath": "src/content/blog/{{ $json.slug }}.md",
+        "additionalParameters": {}
+      },
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1,
+      "position": [
+        19460,
+        380
+      ],
+      "id": "a8a522e7-5ad7-4c49-ac99-e4f1b6e8a3bf",
+      "name": "Get Preview File",
+      "credentials": {
+        "githubOAuth2Api": {
+          "id": "kYk6Zcu2QIpZ7Prl",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Update frontmatter to remove draft status\nconst content = $json.content;\nconst decodedContent = Buffer.from(content, 'base64').toString('utf-8');\n\n// Remove draft status from frontmatter\nconst updatedContent = decodedContent.replace(/\\nstatus:\\s*draft\\s*\\n/, '\\n');\n\nreturn [\n  {\n    json: {\n      slug: $node[\"approval-parser\"].json.slug,\n      content: updatedContent,\n      commitMessage: `Publish blog post: ${$node[\"approval-parser\"].json.slug}`\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        19680,
+        520
+      ],
+      "id": "a7ec6990-7def-4c47-9b46-d72bef691860",
+      "name": "Prepare Live Content"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "file",
+        "owner": {
+          "__rl": true,
+          "value": "jtlapenna",
+          "mode": "name"
+        },
+        "repository": {
+          "__rl": true,
+          "value": "bright-gift",
+          "mode": "name"
+        },
+        "filePath": "src/content/blog/{{ $json.slug }}.md",
+        "fileContent": "={{ $json.content }}",
+        "commitMessage": "={{ $json.commitMessage }}",
+        "additionalParameters": {
+          "branch": {
+            "branch": "main"
+          }
+        }
+      },
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1,
+      "position": [
+        19900,
+        520
+      ],
+      "id": "e8eef73e-fd7a-4417-8d14-31e50bd97009",
+      "name": "Commit to Main Branch",
+      "credentials": {
+        "githubOAuth2Api": {
+          "id": "kYk6Zcu2QIpZ7Prl",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/75cdc55a-776c-43fe-8f35-73ff440adf03",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        20160,
+        520
+      ],
+      "id": "11a8d272-68ec-403a-8699-6da43d11975e",
+      "name": "Trigger Live Deployment"
+    },
+    {
+      "parameters": {
+        "sendTo": "jeff.lapenna@gmail.com",
+        "subject": "=✅ PUBLISHED: {{ $node[\"approval-parser\"].json.slug }}",
+        "message": "=Great news! Your blog post has been published to the live site:  🔗 https://bright-gift.com/{{ $node[\"approval-parser\"].json.slug }}  The post is now live and indexed by search engines.  Thanks!",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        20380,
+        520
+      ],
+      "id": "5d23b420-95ba-448d-8755-1dfd618dc7ce",
+      "name": "Send Publish Confirmation",
+      "webhookId": "6d8857af-8f3b-41f6-b2da-c87aebb6e787",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "2jsb6Z1IiQiBhEa5",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "file",
+        "owner": {
+          "__rl": true,
+          "value": "jtlapenna",
+          "mode": "name"
+        },
+        "repository": {
+          "__rl": true,
+          "value": "bright-gift",
+          "mode": "name"
+        },
+        "filePath": "=src/content/blog/{{$node[\"Code2\"].json.filename}}",
+        "fileContent": "={{ $node[\"Code2\"].json.blogPost }}",
+        "commitMessage": "={{ $node[\"Code2\"].json.commitMessage }}",
+        "additionalParameters": {
+          "branch": {
+            "branch": "=preview"
+          }
+        }
+      },
+      "type": "n8n-nodes-base.github",
+      "typeVersion": 1,
+      "position": [
+        16780,
+        540
+      ],
+      "id": "0072bd02-72cb-4fcc-916a-1bc6638a6e48",
+      "name": "GitHub1",
+      "credentials": {
+        "githubOAuth2Api": {
+          "id": "kYk6Zcu2QIpZ7Prl",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://api.cloudflare.com/client/v4/accounts/3daae940fcb6fc5b8bbd9bb8fcc62854/pages/projects/bright-gift/deployments?branch=preview",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer MQpUr9PGg4Uld6TbkfFvRIdbwjb5zHyHc_O8ywRm"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        17200,
+        540
+      ],
+      "id": "37f37904-ba2e-4479-a989-b80509d377ad",
+      "name": "HTTP Request8"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{\n  json: {\n    previewUrl: `${$json.result[0].url}/blog/${$node[\"Code2\"].json.slug}`\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        17380,
+        540
+      ],
+      "id": "d9331416-bb60-40de-92e7-0b3af01aefd6",
+      "name": "Code1"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        14820,
+        500
+      ],
+      "id": "ef568479-88c1-46a4-a4f5-075872b46a1c",
+      "name": "Merge6"
+    },
+    {
+      "parameters": {
+        "includeOtherFields": true,
+        "include": "except",
+        "excludeFields": "={{ $json.slug }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        14460,
+        440
+      ],
+      "id": "17431fb7-d29e-4f2b-a724-7b7a80a896c6",
+      "name": "Edit Fields4"
+    },
+    {
+      "parameters": {
+        "includeOtherFields": true,
+        "include": "except",
+        "excludeFields": "={{ $json.slug }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        15320,
+        320
+      ],
+      "id": "de38b97c-af41-4794-9a30-214438ae2c7d",
+      "name": "Edit Fields5"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "bac40fad-b22b-4d49-9d63-aea73521768d",
+              "name": "slug",
+              "value": "={{$json.slug || $json['slug_from_code2']}}",
+              "type": "string"
+            },
+            {
+              "id": "8c926829-34f7-498f-aead-243d5a863d55",
+              "name": "base64",
+              "value": "={{$json.base64 || $json['base64_from_edit fields4']}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        15040,
+        500
+      ],
+      "id": "51f228e5-c801-4c2e-82bf-c30b07bd3f24",
+      "name": "Edit Fields6"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "bac40fad-b22b-4d49-9d63-aea73521768d",
+              "name": "slug",
+              "value": "={{$json.slug || $json['slug_from_code2']}}",
+              "type": "string"
+            },
+            {
+              "id": "8c926829-34f7-498f-aead-243d5a863d55",
+              "name": "base64",
+              "value": "={{$json.base64 || $json['base64_from_edit fields4']}}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        15800,
+        700
+      ],
+      "id": "22a0a38d-f5c4-4e04-8535-560b9642ee1e",
+      "name": "Edit Fields7"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "numberInputs": 3,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        15360,
+        940
+      ],
+      "id": "e29421d1-a912-4d21-9e7c-c7d7dce51af1",
+      "name": "Merge7"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Generate a single random 4-digit number for this run\nconst rand = Math.floor(1000 + Math.random() * 9000);\n\nconst baseSlug = \"fun-gifts-for-the-holiday-hostess-make-their-party-shine\";\nconst items = [\n  {\n    \"slug\": `${baseSlug}-${rand}`,\n    \"label\": \"banner\",\n    \"prompt\": \"A whimsical scene showcasing an array of holiday-themed hostess gifts. This includes a visually delightful composition of cartoonish 3D-style objects like a festive serving tray, quirky wine stoppers, and gently floating wrapped presents with ribbons. Add subtle 2D decorative sparkles and swirling lines around the items to enhance the cheerful holiday spirit. Dimension ratio is 16:9 with a width of 1200px. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic. Use text only in social images.\",\n    \"filename\": `${baseSlug}-${rand}-banner.webp`\n  },\n  {\n    \"slug\": `${baseSlug}-${rand}`,\n    \"label\": \"social\",\n    \"prompt\": \"A square scene showcasing an assortment of whimsical holiday gifts perfect for a hostess, featuring items like a decorative cheese board, a fun cocktail shaker, and elegantly wrapped small boxes. Include playful 3D-style cartoon objects, accented with 2D elements like sparkle icons and motion lines. Centered above the gifts, the image reads 'Fun Gifts for the Holiday Hostess: Make Their Party Shine' in cheerful, creative text. Dimension ratio 1:1, size 1200x1200. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic. Use text only in social images.\",\n    \"filename\": `${baseSlug}-${rand}-social.webp`\n  },\n  {\n    \"slug\": `${baseSlug}-${rand}`,\n    \"label\": \"og\",\n    \"prompt\": \"A charming flat-lay of diverse hostess gifts aimed to bring joy to any holiday party. The composition includes a mix of 3D-style carton objects like vibrant cocktail glasses, colorful napkins, and appealingly wrapped gifts, alongside decorative 2D sparkles and swirling lines for added whimsy. The arrangement is tidy and engaging. Dimension ratio is 16:9 with a width of 1200px. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic. Use text only in social images.\",\n    \"filename\": `${baseSlug}-${rand}-og.webp`\n  }\n];\n\n// Return as n8n items\nreturn items.map(item => ({ json: item }));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12340,
+        -160
+      ],
+      "id": "e025c1af-093d-442c-9a05-33d32e770f77",
+      "name": "Code10"
+    },
+    {
+      "parameters": {
+        "jsCode": "function randomSuffix() {\n  return Math.floor(1000 + Math.random() * 9000); // 4-digit random number\n}\n\nconst baseSlug = \"best-gifts-for-gardening-enthusiasts-in-2023\";\nconst rand = randomSuffix();\n\nconst slug = `${baseSlug}-${rand}`;\nconst base64Webp = \"UklGRhIAAABXRUJQVlA4ICwAAAAwAQCdASoEAAQAAVAfCWkA\"; // 1x1 transparent webp\nconst thread_id = \"thread_7oM2XmAE8DYWCqSZ9Wt1qqmD\"; // <-- Dummy thread_id for testing\n\nreturn [\n  {\n    json: {\n      base64: base64Webp,\n      filename: `${slug}-banner.webp`,\n      slug: slug,\n      imageUrl: `https://raw.githubusercontent.com/jtlapenna/bright-gift/main/public/images/tmp/${slug}-banner.webp`,\n      error: \"No binary data found\",\n      thread_id: thread_id\n    }\n  },\n  {\n    json: {\n      base64: base64Webp,\n      filename: `${slug}-social.webp`,\n      slug: slug,\n      imageUrl: `https://raw.githubusercontent.com/jtlapenna/bright-gift/main/public/images/tmp/${slug}-social.webp`,\n      error: \"No binary data found\",\n      thread_id: thread_id\n    }\n  },\n  {\n    json: {\n      base64: base64Webp,\n      filename: `${slug}-og.webp`,\n      slug: slug,\n      imageUrl: `https://raw.githubusercontent.com/jtlapenna/bright-gift/main/public/images/tmp/${slug}-og.webp`,\n      error: \"No binary data found\",\n      thread_id: thread_id\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        14140,
+        80
+      ],
+      "id": "2b52c3ce-2c00-4930-9588-66207d4d766b",
+      "name": "Edit Fields8"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.openai.com/v1/threads/{{$item(0).$node[\"Edit Fields\"].json.thread_id}}/messages",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "OpenAI-Beta",
+              "value": "assistants=v2"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        14340,
+        680
+      ],
+      "id": "d7e7a17e-2fb3-4f69-94ff-446ea7d101f0",
+      "name": "REAL REQUEST NODE1",
+      "credentials": {
+        "openAiApi": {
+          "id": "xhYw6tK9BPVC7BMo",
+          "name": "OpenAi account 2"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -1539,13 +2033,7 @@
     },
     "Schedule Trigger": {
       "main": [
-        [
-          {
-            "node": "Gmail2",
-            "type": "main",
-            "index": 0
-          }
-        ]
+        []
       ]
     },
     "Code6": {
@@ -1807,17 +2295,6 @@
         ]
       ]
     },
-    "HTTP Request16": {
-      "main": [
-        [
-          {
-            "node": "Merge2",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Merge": {
       "main": [
         [
@@ -1849,7 +2326,7 @@
       "main": [
         [
           {
-            "node": "HTTP Request16",
+            "node": "Merge2",
             "type": "main",
             "index": 0
           }
@@ -1931,7 +2408,7 @@
       "main": [
         [
           {
-            "node": "Loop Over Items1",
+            "node": "Edit Fields7",
             "type": "main",
             "index": 0
           }
@@ -1964,12 +2441,17 @@
       "main": [
         [
           {
-            "node": "renameImages1",
+            "node": "Edit Fields5",
             "type": "main",
             "index": 0
           },
           {
-            "node": "Merge5",
+            "node": "Edit Fields4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "REAL REQUEST NODE1",
             "type": "main",
             "index": 0
           }
@@ -2055,13 +2537,275 @@
           }
         ]
       ]
+    },
+    "Code2": {
+      "main": [
+        [
+          {
+            "node": "Merge6",
+            "type": "main",
+            "index": 1
+          },
+          {
+            "node": "Merge7",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "HTTP Request12": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail7": {
+      "main": [
+        [
+          {
+            "node": "Check for Approval Emails",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Main SHA": {
+      "main": [
+        [
+          {
+            "node": "Merge7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check for Approval Emails": {
+      "main": [
+        [
+          {
+            "node": "Parse Approval Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Approval Response": {
+      "main": [
+        [
+          {
+            "node": "Is Approved?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Is Approved?": {
+      "main": [
+        [
+          {
+            "node": "Get Preview File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Preview File": {
+      "main": [
+        [
+          {
+            "node": "Prepare Live Content",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Live Content": {
+      "main": [
+        [
+          {
+            "node": "Commit to Main Branch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Commit to Main Branch": {
+      "main": [
+        [
+          {
+            "node": "Trigger Live Deployment",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Trigger Live Deployment": {
+      "main": [
+        [
+          {
+            "node": "Send Publish Confirmation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GitHub1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request8": {
+      "main": [
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "Gmail7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GitHub": {
+      "main": [
+        [
+          {
+            "node": "GitHub1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge6": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields4": {
+      "main": [
+        [
+          {
+            "node": "Merge6",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Edit Fields5": {
+      "main": [
+        [
+          {
+            "node": "Merge5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields6": {
+      "main": [
+        [
+          {
+            "node": "Get Main SHA",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge7",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Edit Fields7": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge7": {
+      "main": [
+        [
+          {
+            "node": "renameImages1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code10": {
+      "main": [
+        []
+      ]
+    },
+    "Edit Fields8": {
+      "main": [
+        []
+      ]
+    },
+    "REAL REQUEST NODE1": {
+      "main": [
+        [
+          {
+            "node": "Code2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": true,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "2aaab0c2-5cb2-4bf4-9888-2dd4538c3385",
+  "versionId": "9be99c6e-9223-4efd-b3b9-73bcb8862849",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "010748b7a1466c46dced3f8b2bdbc3bc174722f0672e5a4c9529354f5ff306f8"

@@ -34,40 +34,7 @@ const blog = defineCollection({
   })
 });
 
-// Schema for gift guides (specific content type)
-const giftGuides = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    image: z.string(),
-    date: z.string(),
-    // Gift-specific fields
-    recipient: z.string().optional(), // "tech-lovers", "plant-moms", etc.
-    budget: z.string().optional(), // "under-25", "50-100", etc.
-    occasion: z.string().optional(), // "christmas", "birthday", etc.
-    style: z.string().optional(), // "handmade", "eco-friendly", etc.
-    // SEO fields
-    metaTitle: z.string().optional(),
-    metaDescription: z.string().optional(),
-    keywords: z.array(z.string()).optional(),
-    tags: z.array(z.string()).optional(),
-    // Affiliate fields
-    affiliateLinks: z.array(z.object({
-      text: z.string(),
-      url: z.string(),
-      platform: z.enum(['amazon', 'etsy', 'other']).optional(),
-    })).optional(),
-    // Social fields
-    ogImage: z.string().optional(),
-    twitterCard: z.string().optional(),
-    // Content metadata
-    readTime: z.number().optional(),
-    featured: z.boolean().optional(),
-    draft: z.boolean().optional(),
-    // Defensive: enforce valid slug
-    slug: z.string().regex(/^[a-zA-Z0-9_-]+$/),
-  })
-});
+
 
 // Schema for FAQs
 const faqs = defineCollection({
@@ -93,4 +60,4 @@ const faqs = defineCollection({
   })
 });
 
-export const collections = { blog, 'gift-guides': giftGuides, faqs }; 
+export const collections = { blog, faqs }; 
