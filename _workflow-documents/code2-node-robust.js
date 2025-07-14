@@ -68,7 +68,8 @@ try {
   const title = parsed.title || '';
   const description = parsed.description || '';
   const keywords = parsed.keywords || '';
-  const slug = slugify(title);
+  // Use parsed.slug if present, else slugify(title)
+  const slug = parsed.slug ? slugify(parsed.slug) : slugify(title);
   const category = 'gift-guides';
   const date = new Date().toISOString().split("T")[0];
   const filename = slug ? `${slug}.md` : 'untitled.md';
