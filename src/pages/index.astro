@@ -383,23 +383,16 @@ const faqData = {
 			button.addEventListener('click', () => {
 				const style = button.dataset.style;
 				const isSelected = button.getAttribute('aria-pressed') === 'true';
-				const originalColor = originalColors[style];
 
 				if (isSelected) {
 					// Deselect the button
 					selectedStyles = selectedStyles.filter(s => s !== style);
 					button.setAttribute('aria-pressed', 'false');
-					// Reset to original color state
-					button.classList.remove('bg-[#FF6B6B]', 'text-white', 'border-[#FF6B6B]', 'shadow-md');
-					button.classList.add(originalColor.bg, originalColor.text, originalColor.border, originalColor.hover, originalColor.hoverBorder);
 				} else {
 					// Select the button (if under limit)
 					if (selectedStyles.length < 3) {
 						selectedStyles.push(style);
 						button.setAttribute('aria-pressed', 'true');
-						// Apply selected state
-						button.classList.remove(originalColor.bg, originalColor.text, originalColor.border, originalColor.hover, originalColor.hoverBorder);
-						button.classList.add('bg-[#FF6B6B]', 'text-white', 'border-[#FF6B6B]', 'shadow-md');
 					}
 				}
 				
