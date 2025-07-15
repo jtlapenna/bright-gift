@@ -179,6 +179,41 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
     });
   } catch (error: any) {
     console.error('POST /api/generate error:', error);
-    return new Response(JSON.stringify({ error: error && error.message ? error.message : String(error) }), { status: 500 });
+    
+    // Provide user-friendly error messages based on error type
+    let userMessage = "We're having trouble generating gift ideas right now. Please try again in a moment.";
+    let statusCode = 500;
+    
+    if (error?.message) {
+      const errorMessage = error.message.toLowerCase();
+      
+      // Handle OpenAI API quota/billing errors
+      if (errorMessage.includes('quota') || errorMessage.includes('billing') || errorMessage.includes('429')) {
+        userMessage = "We're experiencing high demand right now. Please try again in a few minutes.";
+        statusCode = 429;
+      }
+      // Handle rate limiting
+      else if (errorMessage.includes('rate limit') || errorMessage.includes('too many requests')) {
+        userMessage = "We're a bit busy right now. Please wait a moment and try again.";
+        statusCode = 429;
+      }
+      // Handle authentication errors
+      else if (errorMessage.includes('authentication') || errorMessage.includes('api key') || errorMessage.includes('unauthorized')) {
+        userMessage = "We're having technical difficulties. Please try again later.";
+        statusCode = 500;
+      }
+      // Handle network/timeout errors
+      else if (errorMessage.includes('timeout') || errorMessage.includes('network') || errorMessage.includes('fetch')) {
+        userMessage = "The connection is taking longer than expected. Please try again.";
+        statusCode = 408;
+      }
+      // Handle OpenAI model errors
+      else if (errorMessage.includes('model') || errorMessage.includes('gpt')) {
+        userMessage = "Our AI service is temporarily unavailable. Please try again in a few minutes.";
+        statusCode = 503;
+      }
+    }
+    
+    return new Response(JSON.stringify({ error: userMessage }), { status: statusCode });
   }
 } 
