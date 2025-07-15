@@ -32,91 +32,91 @@ From practical accessories that improve gameplay to decorative items that celebr
 **Price Range:** $25-$45
 
 Enhance their gaming with personalized metal dice that reflect their adventurer's spirit. These premium dice feature custom engravings, unique designs, and a satisfying weight that makes every roll feel epic. Perfect for players who want to stand out at the table and add a touch of personalization to their gaming experience.
-[View on Amazon](https://www.amazon.com/s?k=custom+engraved+metal+dice+set&tag=bright-gift-20)
+<a href="https://www.amazon.com/s?k=custom+engraved+metal+dice+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### 2. D&D Adventure Books Collection
 **Price Range:** $30-$50
 
 Delve deeper into new quests with the latest expansion books filled with rich lore, challenging encounters, and creative storylines. These books provide endless inspiration for both players and Dungeon Masters, offering new worlds to explore and adventures to undertake. Perfect for expanding their D&D library and discovering new content.
-[View on Amazon](https://www.amazon.com/s?k=D%26D+adventure+books+collection&tag=bright-gift-20)
+<a href="https://www.amazon.com/s?k=D%26D+adventure+books+collection&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### 3. Detailed Miniature Figurines Set
 **Price Range:** $20-$40
 
 Bring battles to life on the tabletop with highly detailed miniatures that represent their characters and enemies. These painted or unpainted figures add visual depth to combat encounters and help players visualize their adventures. Available in various themes and character types to match their campaign setting.
-[View on Amazon](https://www.amazon.com/s?k=detailed+miniature+figurines+D%26D&tag=bright-gift-20)
+<a href="https://www.amazon.com/s?k=detailed+miniature+figurines+D%26D&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### 4. Premium Game Master Screen
 **Price Range:** $25-$45
 
 Help Dungeon Masters weave their stories with a decorative and functional screen that keeps their notes organized and hidden from players. These screens feature beautiful artwork, useful reference tables, and sturdy construction that withstands regular use. Perfect for DMs who want to enhance their storytelling setup.
-[View on Amazon](https://www.amazon.com/s?k=premium+game+master+screen+D%26D&tag=bright-gift-20)
+<a href="https://www.amazon.com/s?k=premium+game+master+screen+D%26D&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### 5. Personalized Character Sheet Portfolio
 **Price Range:** $15-$30
 
 Allow players to track their characters' progress with customized character sheets and a professional portfolio to keep them organized. These portfolios protect character sheets from damage and provide a dedicated space for notes, spell cards, and campaign information. Ideal for players who take their character development seriously.
-[View on Amazon](https://www.amazon.com/s?k=personalized+character+sheet+portfolio&tag=bright-gift-20)
+<a href="https://www.amazon.com/s?k=personalized+character+sheet+portfolio&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### 6. Potion Bottle Dice Set
 **Price Range:** $20-$35
 
 For a magical twist, gift them potions filled with colorful dice that look like they belong in an alchemist's workshop. These unique dice sets come in decorative bottles with themed designs that add atmosphere to their gaming sessions. Perfect for players who appreciate creative and thematic accessories.
-[View on Amazon](https://www.amazon.com/s?k=potion+bottle+dice+set+D%26D&tag=bright-gift-20)
+<a href="https://www.amazon.com/s?k=potion+bottle+dice+set+D%26D&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### 7. D&D-Themed T-Shirts and Apparel
 **Price Range:** $15-$30
 
 Let them showcase their love for the game with creative, themed apparel featuring iconic D&D artwork, funny sayings, or class-specific designs. These shirts and accessories allow them to express their passion for the game even when they're not at the table. Available in various styles and designs to suit different preferences.
-[View on Amazon](https://www.amazon.com/s?k=D%26D+themed+tshirts+apparel&tag=bright-gift-20)
+<a href="https://www.amazon.com/s?k=D%26D+themed+tshirts+apparel&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### 8. Spell Cards and Reference Materials
 **Price Range:** $18-$35
 
 Keep their spells organized and easily accessible with comprehensive spell cards and reference materials. These cards provide quick access to spell descriptions, casting times, and effects, making gameplay smoother and more efficient. Perfect for spellcasters who need to manage multiple spells during combat.
-[View on Amazon](https://www.amazon.com/s?k=spell+cards+reference+materials+D%26D&tag=bright-gift-20)
+<a href="https://www.amazon.com/s?k=spell+cards+reference+materials+D%26D&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### 9. Gaming Table Accessories
 **Price Range:** $20-$40
 
 Enhance their gaming setup with practical accessories like dice trays, initiative trackers, and condition markers. These tools help keep games organized and running smoothly, especially during complex combat encounters. Perfect for groups that want to streamline their gameplay experience.
-[View on Amazon](https://www.amazon.com/s?k=gaming+table+accessories+D%26D&tag=bright-gift-20)
+<a href="https://www.amazon.com/s?k=gaming+table+accessories+D%26D&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### 10. D&D Art Books and Lore Collections
 **Price Range:** $25-$45
 
 Immerse them in the rich world of D&D with beautifully illustrated art books and lore collections. These books showcase the stunning artwork and detailed world-building that makes D&D so captivating. Perfect for players who love to dive deep into the game's lore and visual design.
-[View on Amazon](https://www.amazon.com/s?k=D%26D+art+books+lore+collections&tag=bright-gift-20)
+<a href="https://www.amazon.com/s?k=D%26D+art+books+lore+collections&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### 11. Custom Dice Bags and Storage
 **Price Range:** $12-$25
 
 Keep their dice organized and protected with custom dice bags featuring D&D themes, character designs, or personalized elements. These bags come in various sizes and styles to accommodate different dice collections and personal preferences. Perfect for players who have amassed a collection of dice sets.
-[View on Amazon](https://www.amazon.com/s?k=custom+dice+bags+storage+D%26D&tag=bright-gift-20)
+<a href="https://www.amazon.com/s?k=custom+dice+bags+storage+D%26D&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### 12. Gaming Notebooks and Journals
 **Price Range:** $10-$25
 
 Help them document their adventures with themed notebooks and journals designed specifically for D&D players. These notebooks provide space for character notes, campaign logs, and creative ideas, helping them keep track of their gaming journey. Perfect for players who love to write and document their experiences.
-[View on Amazon](https://www.amazon.com/s?k=gaming+notebooks+journals+D%26D&tag=bright-gift-20)
+<a href="https://www.amazon.com/s?k=gaming+notebooks+journals+D%26D&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### 13. Ambient Music and Sound Effects
 **Price Range:** $15-$30
 
 Create immersive gaming atmospheres with ambient music collections and sound effect sets designed for tabletop RPGs. These audio resources help set the mood for different scenes and locations, enhancing the storytelling experience. Perfect for Dungeon Masters who want to add audio elements to their campaigns.
-[View on Amazon](https://www.amazon.com/s?k=ambient+music+sound+effects+D%26D&tag=bright-gift-20)
+<a href="https://www.amazon.com/s?k=ambient+music+sound+effects+D%26D&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### 14. D&D Board Games and Card Games
 **Price Range:** $20-$40
 
 Expand their gaming experience with D&D-themed board games and card games that can be enjoyed between sessions or as standalone experiences. These games offer different ways to engage with the D&D universe and provide entertainment for the whole gaming group. Perfect for players who want more ways to enjoy their favorite fantasy world.
-[View on Amazon](https://www.amazon.com/s?k=D%26D+board+games+card+games&tag=bright-gift-20)
+<a href="https://www.amazon.com/s?k=D%26D+board+games+card+games&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### 15. Gaming Room Decor and Artwork
 **Price Range:** $25-$50
 
 Transform their gaming space with decorative items featuring D&D artwork, maps, and thematic elements. These pieces can include posters, wall art, decorative maps, and other items that create an immersive gaming environment. Perfect for players who want to make their gaming area feel like a true adventurer's haven.
-[View on Amazon](https://www.amazon.com/s?k=gaming+room+decor+artwork+D%26D&tag=bright-gift-20)
+<a href="https://www.amazon.com/s?k=gaming+room+decor+artwork+D%26D&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 > **Pro Tip:** Consider their role in the game (Dungeon Master vs. Player) and their experience level when choosing a gift. DMs might appreciate campaign-building tools, while players might prefer character-focused accessories.
 
