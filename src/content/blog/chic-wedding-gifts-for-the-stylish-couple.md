@@ -6,7 +6,7 @@ ogImage: "/images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gi
 socialImage: "/images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-social.webp"
 category: "gift-guides"
 description: "Discover chic wedding gifts for stylish couples that set them up for life together—browse our elegant picks!"
-keywords: "wedding gifts, chic gifts for couples, elegant wedding gifts, practical wedding gifts, personalized wedding gifts"
+keywords: ["wedding gifts", "chic gifts for couples", "elegant wedding gifts", "practical wedding gifts", "personalized wedding gifts"]
 date: "2025-07-15"
 draft: false
 status: "published"

@@ -143,7 +143,7 @@ const readTime = post.data.readTime || 5;
           <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mb-6" style="font-family: 'Inter', 'Open Sans', Arial, sans-serif;">{description}</p>
 
           <!-- Tags -->
-          {post.data.tags && post.data.tags.length > 0 && (
+          {post.data.tags && Array.isArray(post.data.tags) && post.data.tags.length > 0 && (
             <div class="flex flex-wrap gap-2 mb-8">
               {post.data.tags.map((tag) => (
                 <span class="bg-slate-100 text-slate-700 text-sm px-3 py-1 rounded-full">
