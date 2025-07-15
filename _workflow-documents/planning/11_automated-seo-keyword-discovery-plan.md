@@ -108,6 +108,266 @@ flowchart TD
 
 ---
 
+## N8N Workflow Node Map (Detailed Implementation)
+
+### **Workflow Overview**
+```
+SEO Assistant → Topic Generation → Keyword Expansion → Metrics Collection → AI Ranking → Email Notification → Content Generation
+```
+
+### **1. Workflow Trigger**
+```
+┌─────────────────┐
+│   Webhook Node  │ ← Manual trigger or scheduled cron
+│   (Trigger)     │
+└─────────────────┘
+```
+
+### **2. SEO Assistant: Blog Content Audit**
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│  HTTP Request   │───▶│   Code Node     │───▶│   Set Node      │
+│  (Fetch Blog)   │    │ (Parse JSON)    │    │ (Store Topics)  │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         ▼                       ▼                       ▼
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Error Trigger │    │   Code Node     │    │   IF Node       │
+│   (Retry Logic) │    │ (Extract Meta)  │    │ (Validate Data) │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+**Node Details:**
+- **HTTP Request:** `GET https://bright-gift.com/api/blog-posts` or crawl sitemap
+- **Code Node:** Parse response, extract titles, tags, keywords
+- **Set Node:** Store existing topics in workflow data
+- **Error Trigger:** Retry on failure, alert if no posts found
+
+### **3. Topic Generation & Deduplication**
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│  OpenAI Node    │───▶│   Code Node     │───▶│   Set Node      │
+│ (Seed Topics)   │    │ (Parse Topics)  │    │ (Store Seeds)   │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         ▼                       ▼                       ▼
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│  HTTP Request   │    │   Code Node     │    │   Code Node     │
+│ (Google Trends) │    │ (Deduplicate)   │    │ (Fuzzy Match)   │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+**Node Details:**
+- **OpenAI Node:** Generate 20 new topic ideas based on existing content
+- **HTTP Request:** Fetch trending topics from Google Trends API
+- **Code Node:** Remove duplicates using fuzzy matching
+- **Set Node:** Store final seed topics
+
+### **4. Long-Tail Keyword Expansion**
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Split In Batches│───▶│  OpenAI Node    │───▶│   Code Node     │
+│   (Topic List)   │    │ (Keyword Gen)   │    │ (Parse Keywords)│
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         ▼                       ▼                       ▼
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Merge Node    │◀───│   Code Node     │◀───│   Code Node     │
+│ (All Keywords)  │    │ (Flatten Array) │    │ (Validate)      │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+**Node Details:**
+- **Split In Batches:** Process topics in batches of 5
+- **OpenAI Node:** Generate 10-15 long-tail keywords per topic
+- **Code Node:** Parse and validate keyword format
+- **Merge Node:** Combine all keywords into single array
+
+### **5. Metrics Collection (Parallel Processing)**
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Split In Batches│───▶│  HTTP Request   │───▶│   Code Node     │
+│   (Keywords)     │    │ (Keyword API)   │    │ (Parse Metrics) │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         ▼                       ▼                       ▼
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   HTTP Request  │    │   Code Node     │    │   Set Node      │
+│ (SERP Scrape)   │    │ (Competition)   │    │ (Store Results) │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+**Node Details:**
+- **Split In Batches:** Process keywords in batches (API rate limits)
+- **HTTP Request:** Query Ubersuggest/SEMrush API for volume/competition
+- **HTTP Request:** Scrape Google SERP for competition signals
+- **Code Node:** Calculate competition score (brands vs forums)
+- **Set Node:** Store metrics with keywords
+
+### **6. AI Ranking & Selection**
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Code Node     │───▶│  OpenAI Node    │───▶│   Code Node     │
+│ (Score Calc)    │    │ (Rank Keywords) │    │ (Parse Top 5)   │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         ▼                       ▼                       ▼
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Set Node      │    │   Code Node     │    │   Set Node      │
+│ (Store Scores)  │    │ (Format Email)  │    │ (Email Data)    │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+**Node Details:**
+- **Code Node:** Calculate score = (Volume × Intent) / (Competition + Brands)
+- **OpenAI Node:** Select top 5 keywords based on scoring
+- **Code Node:** Format results for email
+- **Set Node:** Prepare email payload
+
+### **7. Email Notification & Reply Handling**
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│  Email Node     │───▶│   Wait Node     │───▶│  IMAP Node      │
+│ (Send Results)  │    │ (24-48 hours)   │    │ (Check Reply)   │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         ▼                       ▼                       ▼
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Code Node     │    │   Code Node     │    │   IF Node       │
+│ (Parse Reply)   │    │ (Extract Choice)│    │ (Has Reply?)    │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+**Node Details:**
+- **Email Node:** Send formatted results to your email
+- **Wait Node:** Wait 24-48 hours for reply
+- **IMAP Node:** Check for reply emails
+- **Code Node:** Extract chosen keyword from reply
+- **IF Node:** Branch based on whether reply received
+
+### **8. Content Generation Trigger**
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│  HTTP Request   │───▶│   Code Node     │───▶│   Webhook Node  │
+│ (Content API)   │    │ (Format Payload)│    │ (Trigger Blog)  │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         ▼                       ▼                       ▼
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Email Node    │    │   Code Node     │    │   Set Node      │
+│ (Alert Success) │    │ (Log Results)   │    │ (Store Final)   │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+**Node Details:**
+- **HTTP Request:** Trigger your existing content generation workflow
+- **Code Node:** Format payload with keyword and metrics
+- **Webhook Node:** Send to your blog generation endpoint
+- **Email Node:** Alert on completion
+- **Code Node:** Log final results
+
+### **Error Handling Nodes (Throughout)**
+
+#### **Retry Logic**
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Error Trigger │───▶│   Wait Node     │───▶│  HTTP Request   │
+│   (API Fail)    │    │ (Exponential)   │    │ (Retry)         │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+#### **Fallback Logic**
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   IF Node       │───▶│  OpenAI Node    │───▶│   Set Node      │
+│ (No Results?)   │    │ (Fallback Gen)  │    │ (Use Fallback)  │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+#### **Alert System**
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Error Trigger │───▶│  Email Node     │───▶│   Code Node     │
+│   (Any Error)   │    │ (Alert Admin)   │    │ (Log Error)     │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+### **Data Flow Structure**
+
+#### **Workflow Variables**
+```javascript
+// Stored in n8n workflow data
+{
+  existingTopics: [],
+  seedTopics: [],
+  allKeywords: [],
+  keywordMetrics: [],
+  topKeywords: [],
+  selectedKeyword: null,
+  finalResults: {}
+}
+```
+
+#### **Node Configuration Examples**
+
+**OpenAI Node (Topic Generation):**
+```javascript
+// Prompt
+"Given these existing blog topics: {{ $json.existingTopics.join(', ') }}, suggest 20 new, diverse, high-potential gift guide topics not yet covered. Focus on unique audiences, occasions, or trends. Return as JSON array."
+
+// Response parsing
+return JSON.parse($json.choices[0].message.content);
+```
+
+**HTTP Request Node (Keyword API):**
+```javascript
+// Headers
+{
+  "Authorization": "Bearer {{ $env.UBERSUGGEST_API_KEY }}",
+  "Content-Type": "application/json"
+}
+
+// Body
+{
+  "keyword": "{{ $json.keyword }}",
+  "country": "us"
+}
+```
+
+**Code Node (Scoring):**
+```javascript
+const score = (volume * intentWeight) / (competition + brandPresence);
+return {
+  keyword: $json.keyword,
+  score: score,
+  metrics: $json.metrics
+};
+```
+
+### **Workflow Execution Flow**
+
+1. **Manual Trigger** → Start workflow
+2. **Blog Audit** → Fetch existing content (5 nodes)
+3. **Topic Generation** → Create new seeds (6 nodes)
+4. **Keyword Expansion** → Generate long-tail keywords (4 nodes)
+5. **Metrics Collection** → Gather SEO data (6 nodes)
+6. **AI Ranking** → Score and select best (6 nodes)
+7. **Email Notification** → Send results (3 nodes)
+8. **Reply Handling** → Wait and parse reply (4 nodes)
+9. **Content Generation** → Trigger blog creation (6 nodes)
+
+**Total Nodes:** ~40-50 nodes with error handling
+
+### **Integration Points**
+
+- **Railway API:** For backend processing and data storage
+- **Cloudflare:** For optional dashboard review
+- **Existing Workflow:** Webhook trigger for content generation
+- **Email System:** IMAP for reply monitoring
+- **External APIs:** Keyword research tools
+
+---
+
 ## Tech Stack Roles (Expanded)
 
 | Component   | Role                                                                 |
@@ -204,91 +464,3 @@ flowchart TD
 - All steps orchestrated with n8n, using Railway for backend logic and Cloudflare for optional UI.
 - OpenAI powers both topic/keyword generation and ranking.
 - Modular and extensible for future needs. 
-
----
-
-## n8n Node Workflow Outline
-
-This section describes a recommended n8n workflow for automating the SEO long-tail keyword discovery process. Each step corresponds to a node or group of nodes in n8n.
-
-### 1. Trigger Node
-- **Type:** Webhook (manual trigger or scheduled cron)
-- **Purpose:** Start the workflow on demand or at a scheduled interval.
-
-### 2. Fetch Existing Blog Topics
-- **Type:** HTTP Request (or Code node)
-- **Purpose:** Fetch all published blog post metadata (titles, slugs, tags) from your site or content repo.
-- **Config:**
-  - URL: API endpoint, file path, or RSS feed
-  - Parse response for topic extraction
-
-### 3. Generate New Seed Topics
-- **Type:** OpenAI (or HTTP Request to OpenAI API)
-- **Purpose:** Generate new, unique seed topics not already covered.
-- **Config:**
-  - Prompt includes list of existing topics
-  - Output: Array of new seed topics
-
-### 4. Expand to Long-Tail Keywords
-- **Type:** OpenAI (or HTTP Request)
-- **Purpose:** For each seed, generate 10–20 long-tail keyword ideas.
-- **Config:**
-  - Loop over each seed topic
-  - Output: Array of keyword ideas per seed
-
-### 5. Fetch Keyword Metrics
-- **Type:** HTTP Request (to keyword API, e.g., Ubersuggest, SEMrush, SerpAPI)
-- **Purpose:** Retrieve search volume, competition, and CPC for each keyword.
-- **Config:**
-  - API key and endpoint
-  - Loop over each keyword
-  - Handle rate limits and errors
-
-### 6. SERP Analysis (Optional)
-- **Type:** HTTP Request (to SerpAPI) or Code node (Puppeteer/Playwright)
-- **Purpose:** Analyze Google SERP for competition (forums, brands, etc.)
-- **Config:**
-  - Parse SERP results for brand/forum presence
-
-### 7. Score & Rank Keywords
-- **Type:** Code node
-- **Purpose:** Calculate a score for each keyword based on metrics and SERP analysis.
-- **Config:**
-  - Implement scoring formula
-  - Sort and select top N keywords
-
-### 8. AI Selection of Best Ideas
-- **Type:** OpenAI (or HTTP Request)
-- **Purpose:** Have AI review and select the best keywords for your goals.
-- **Config:**
-  - Prompt includes scored keyword list
-  - Output: Final selection
-
-### 9. Compose and Send Email
-- **Type:** Email node (SMTP or Gmail)
-- **Purpose:** Send the top keyword ideas to your email address.
-- **Config:**
-  - Format results as a table or list
-  - Include all relevant metrics and suggestions
-
-### 10. Wait for User Reply
-- **Type:** IMAP Email node (or webhook)
-- **Purpose:** Monitor inbox for your reply/selection.
-- **Config:**
-  - Extract chosen keyword/topic from reply
-
-### 11. Trigger Content Generation
-- **Type:** HTTP Request (to content assistant API or webhook)
-- **Purpose:** Pass selected keyword and context to the next step in your pipeline.
-- **Config:**
-  - Include all relevant data in payload
-
-### 12. Error Handling & Logging
-- **Type:** Error Trigger, Set, and Code nodes
-- **Purpose:** Log errors, send alerts, and handle retries at each step.
-
----
-
-**Note:**
-- Each step can be further modularized or enhanced with additional nodes for deduplication, analytics integration, or manual review.
-- Use n8n’s built-in looping, branching, and conditional logic to handle edge cases and workflow variations. 

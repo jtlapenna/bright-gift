@@ -163,16 +163,59 @@ const faqData = {
 
 					<!-- Style Selector as Chips -->
 					<div class="mb-6">
-						<label class="block font-bold mb-2 text-[#1C2E4A]">What's the style?</label>
-						<div class="flex flex-wrap gap-2" role="radiogroup" aria-label="Gift Style">
-							<button type="button" role="radio" aria-checked="false" tabindex="0" class="bg-[#FFDE59] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#FFF9F3] transition">🌱 Eco-Friendly</button>
-							<button type="button" role="radio" aria-checked="false" tabindex="-1" class="bg-[#A3E4DB] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#FFF9F3] transition">🖐️ Handmade</button>
-							<button type="button" role="radio" aria-checked="false" tabindex="-1" class="bg-[#FF6B6B] text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#ff4c4c] transition">🎉 Funny</button>
-							<button type="button" role="radio" aria-checked="false" tabindex="-1" class="bg-[#FFDE59] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#FFF9F3] transition">🌈 LGBTQ+ Owned</button>
-							<button type="button" role="radio" aria-checked="false" tabindex="-1" class="bg-[#A3E4DB] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#FFF9F3] transition">💡 Quirky</button>
-							<button type="button" role="radio" aria-checked="false" tabindex="-1" class="bg-[#FF6B6B] text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#ff4c4c] transition">💎 Luxury</button>
-							<button type="button" role="radio" aria-checked="false" tabindex="-1" class="bg-[#FFDE59] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#FFF9F3] transition">📚 Techy</button>
-							<button type="button" role="radio" aria-checked="false" tabindex="-1" class="bg-[#A3E4DB] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#FFF9F3] transition">🧑‍🤝‍🧑 BIPOC Owned</button>
+						<label class="block font-bold mb-2 text-[#1C2E4A]">What's the style? (Select up to 3)</label>
+						<div class="flex flex-wrap gap-2" role="group" aria-label="Gift Style Selection">
+							<button type="button" 
+								data-style="eco-friendly"
+								class="style-chip bg-[#A3E4DB] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#A3E4DB] hover:bg-[#8DD4C8] hover:border-[#8DD4C8] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
+								aria-pressed="false">
+								🌱 Eco-Friendly
+							</button>
+							<button type="button" 
+								data-style="handmade"
+								class="style-chip bg-[#A3E4DB] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#A3E4DB] hover:bg-[#8DD4C8] hover:border-[#8DD4C8] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
+								aria-pressed="false">
+								🖐️ Handmade
+							</button>
+							<button type="button" 
+								data-style="funny"
+								class="style-chip bg-[#A3E4DB] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#A3E4DB] hover:bg-[#8DD4C8] hover:border-[#8DD4C8] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
+								aria-pressed="false">
+								🎉 Funny
+							</button>
+							<button type="button" 
+								data-style="lgbtq-owned"
+								class="style-chip bg-[#A3E4DB] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#A3E4DB] hover:bg-[#8DD4C8] hover:border-[#8DD4C8] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
+								aria-pressed="false">
+								🌈 LGBTQ+ Owned
+							</button>
+							<button type="button" 
+								data-style="quirky"
+								class="style-chip bg-[#A3E4DB] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#A3E4DB] hover:bg-[#8DD4C8] hover:border-[#8DD4C8] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
+								aria-pressed="false">
+								💡 Quirky
+							</button>
+							<button type="button" 
+								data-style="luxury"
+								class="style-chip bg-[#A3E4DB] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#A3E4DB] hover:bg-[#8DD4C8] hover:border-[#8DD4C8] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
+								aria-pressed="false">
+								💎 Luxury
+							</button>
+							<button type="button" 
+								data-style="techy"
+								class="style-chip bg-[#A3E4DB] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#A3E4DB] hover:bg-[#8DD4C8] hover:border-[#8DD4C8] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
+								aria-pressed="false">
+								📚 Techy
+							</button>
+							<button type="button" 
+								data-style="bipoc-owned"
+								class="style-chip bg-[#A3E4DB] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#A3E4DB] hover:bg-[#8DD4C8] hover:border-[#8DD4C8] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
+								aria-pressed="false">
+								🧑‍🤝‍🧑 BIPOC Owned
+							</button>
+						</div>
+						<div class="mt-2 text-sm text-[#1C2E4A] opacity-75">
+							<span id="selection-count">0</span> of 3 styles selected
 						</div>
 					</div>
 
@@ -316,21 +359,59 @@ const faqData = {
 		const styleButtons = document.querySelectorAll('button[type="button"]');
 		const regenerateBtn = document.getElementById('regenerate-btn');
 		const emptyState = document.getElementById('empty-state');
+		const selectionCount = document.getElementById('selection-count');
 
-		let selectedStyle = '';
+		let selectedStyles = [];
 		let lastInputs = {};
 
-		styleButtons.forEach(button => {
+		// Multi-select style chip functionality
+		const styleChips = document.querySelectorAll('.style-chip');
+		
+		styleChips.forEach(button => {
 			button.addEventListener('click', () => {
-				styleButtons.forEach(btn => {
-					btn.classList.remove('bg-blue-600', 'text-white');
-					btn.classList.add('bg-gray-200', 'text-gray-700');
-				});
-				button.classList.add('bg-blue-600', 'text-white');
-				button.classList.remove('bg-gray-200', 'text-gray-700');
-				selectedStyle = button.innerText;
+				const style = button.dataset.style;
+				const isSelected = button.getAttribute('aria-pressed') === 'true';
+
+				if (isSelected) {
+					// Deselect the button
+					selectedStyles = selectedStyles.filter(s => s !== style);
+					button.setAttribute('aria-pressed', 'false');
+					// Reset to normal state
+					button.classList.remove('bg-[#FF6B6B]', 'text-white', 'border-[#FF6B6B]', 'shadow-md');
+					button.classList.add('bg-[#A3E4DB]', 'text-[#1C2E4A]', 'border-[#A3E4DB]');
+				} else {
+					// Select the button (if under limit)
+					if (selectedStyles.length < 3) {
+						selectedStyles.push(style);
+						button.setAttribute('aria-pressed', 'true');
+						// Apply selected state
+						button.classList.remove('bg-[#A3E4DB]', 'text-[#1C2E4A]', 'border-[#A3E4DB]');
+						button.classList.add('bg-[#FF6B6B]', 'text-white', 'border-[#FF6B6B]', 'shadow-md');
+					}
+				}
+				
+				// Update disabled state for remaining buttons
+				updateButtonStates();
+				updateSelectionCount();
 			});
 		});
+
+		function updateButtonStates() {
+			styleChips.forEach(button => {
+				const isSelected = button.getAttribute('aria-pressed') === 'true';
+				const isDisabled = !isSelected && selectedStyles.length >= 3;
+				
+				if (isDisabled) {
+					button.classList.add('opacity-50', 'cursor-not-allowed');
+					button.classList.remove('hover:bg-[#8DD4C8]', 'hover:border-[#8DD4C8]');
+				} else {
+					button.classList.remove('opacity-50', 'cursor-not-allowed');
+					if (!isSelected) {
+						button.classList.add('hover:bg-[#8DD4C8]', 'hover:border-[#8DD4C8]');
+					}
+				}
+			});
+		}
 
 		form.addEventListener('submit', async (event) => {
 			event.preventDefault();
@@ -351,7 +432,7 @@ const faqData = {
 				const response = await fetch('/api/generate', {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
-					body: JSON.stringify({ recipient, interests, budget, style: selectedStyle }),
+					body: JSON.stringify({ recipient, interests, budget, styles: selectedStyles }),
 				});
 				let errorMsg = 'Failed to get ideas.';
 				if (!response.ok) {
@@ -371,7 +452,7 @@ const faqData = {
 					regenerateBtn.classList.add('hidden');
 					regenerateBtn.style.display = 'none';
 				}
-				lastInputs = { recipient, interests, budget, style: selectedStyle };
+				lastInputs = { recipient, interests, budget, styles: selectedStyles };
 			} catch (error) {
 				resultsContainer.innerHTML = `<p class="text-red-500 text-center" role="alert">${error.message}</p>`;
 				regenerateBtn.classList.add('hidden');
@@ -406,6 +487,10 @@ const faqData = {
 				loadingIndicator.classList.add('hidden');
 			}
 		});
+
+		function updateSelectionCount() {
+			selectionCount.textContent = `${selectedStyles.length} of 3 styles selected`;
+		}
 	});
 
 	function renderIdeaCards(ideas) {
@@ -474,6 +559,29 @@ const faqData = {
 		}
 		.animate-fade-in {
 			animation: fadeIn 0.5s ease-out forwards;
+		}
+		
+		/* Style chip animations and states */
+		.style-chip {
+			transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		
+		.style-chip:hover:not(.cursor-not-allowed) {
+			transform: translateY(-1px);
+		}
+		
+		.style-chip:active {
+			transform: translateY(0);
+		}
+		
+		/* Selected state with subtle glow */
+		.style-chip[aria-pressed="true"] {
+			box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+		}
+		
+		/* Disabled state */
+		.style-chip.cursor-not-allowed {
+			pointer-events: none;
 		}
 	`;
 	document.head.appendChild(style);
