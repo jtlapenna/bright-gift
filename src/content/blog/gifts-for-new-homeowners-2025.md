@@ -23,7 +23,7 @@ Moving into a new home is a major milestone—and the perfect opportunity to giv
 
 ---
 
-# Internal Links to Related Content
+# More Gift Inspiration
 - See our [Best Home Gifts on Amazon](https://bright-gift.com/blog/best-home-gifts-on-amazon-2024).
 - Explore [Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget).
 - Check out [Gifts for Plant Lovers](https://bright-gift.com/gift-guides/gifts-for-plant-lovers).

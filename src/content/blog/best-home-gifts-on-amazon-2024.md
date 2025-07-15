@@ -23,7 +23,7 @@ Finding the perfect home gift can be a challenge, but Amazon makes it easy with 
 
 ---
 
-# Internal Links to Related Content
+# More Gift Inspiration
 - See our full guide to [Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget).
 - Explore [Gifts for Plant Lovers](https://bright-gift.com/gift-guides/gifts-for-plant-lovers).
 - Check out [Gifts for Remote Workers Under $50](https://bright-gift.com/blog/gifts-for-remote-workers-under-50).

@@ -21,7 +21,7 @@ Working from home is here to stay, and finding the right gift for remote workers
 
 ---
 
-# Internal Links to Related Content
+# More Gift Inspiration
 
 - See our full guide to [Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget).
 - Explore [Gifts for Plant Lovers](https://bright-gift.com/gift-guides/gifts-for-plant-lovers).
