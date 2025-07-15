@@ -24,10 +24,10 @@ Working from home is here to stay, and finding the right gift for remote workers
 # More Gift Inspiration
 
 - See our full guide to [Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget).
-- Explore [Gifts for Plant Lovers](https://bright-gift.com/gift-guides/gifts-for-plant-lovers).
-- Check out [Gifts for Gamers Under $50](https://bright-gift.com/gift-guides/gifts-for-gamers-under-50).
-- Discover [Gifts Under $25 for Coworkers](https://bright-gift.com/gift-guides/gifts-under-25-for-coworkers).
-- Learn more in our [FAQs about Gift Giving](https://bright-gift.com/faqs/).
+- Explore [Gifts for Plant Lovers](https://bright-gift.com/blog/gifts-for-plant-lovers).
+- Check out [Gifts for Gamers Under $50](https://bright-gift.com/blog/gifts-for-gamers-under-50).
+- Discover [Gifts Under $25 for Coworkers](https://bright-gift.com/blog/gifts-under-25-for-coworkers).
+
 
 ---
 

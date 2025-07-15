@@ -26,12 +26,12 @@ Let's be honest: your girlfriend is one-of-a-kind, and she deserves a gift that'
 ## 15 Thoughtful Gifts for Your Girlfriend (That Aren't Cliché)
 
 ### 1. Custom Star Map Print
-<a href="https://www.etsy.com/search?q=custom+star+map" class="amazon-link" target="_blank" rel="noopener">View on Etsy</a>
+<a href="https://www.amazon.com/s?k=custom+star+map+print&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $30–$60  
 A personalized map of the night sky from your first date or another special moment. Romantic, meaningful, and a beautiful keepsake for her space.
 
 ### 2. Handmade Jewelry Box
-<a href="https://www.uncommongoods.com/search.html?search=handmade+jewelry+box" class="amazon-link" target="_blank" rel="noopener">View on Uncommon Goods</a>
+<a href="https://www.amazon.com/s?k=handmade+jewelry+box+wooden&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $40–$80  
 Support artisans with a unique, hand-crafted jewelry box—perfect for storing her favorite pieces and adding a personal touch to her dresser.
 
@@ -46,7 +46,7 @@ Keep the romance playful with a book full of creative date ideas and challenges 
 Bring the cinema home! Cozy up for movie marathons or surprise her with a backyard film night.
 
 ### 5. Pressed Flower Keepsake Frame
-<a href="https://www.etsy.com/search?q=pressed+flower+frame" class="amazon-link" target="_blank" rel="noopener">View on Etsy</a>
+<a href="https://www.amazon.com/s?k=pressed+flower+frame+keepsake&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $20–$45  
 Sustainable, sentimental, and perfect for preserving a special bouquet or memory.
 
@@ -56,12 +56,12 @@ Sustainable, sentimental, and perfect for preserving a special bouquet or memory
 A bundle with a pillowcase, scrunchie, and eye mask—luxurious comfort for her nightly routine.
 
 ### 7. DIY Date Night Kits
-<a href="https://www.uncommongoods.com/search.html?search=date+night+kit" class="amazon-link" target="_blank" rel="noopener">View on Uncommon Goods</a>
+<a href="https://www.amazon.com/s?k=date+night+kit+couples+activity&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $25–$60  
 Choose from artsy, spa, or cooking-themed kits for a fun, hands-on experience together.
 
 ### 8. Monthly Love Letter Subscription
-<a href="https://www.etsy.com/search?q=love+letter+subscription" class="amazon-link" target="_blank" rel="noopener">View on Etsy</a>
+<a href="https://www.amazon.com/s?k=love+letter+subscription+romantic&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $15–$30/month  
 Handwritten, romantic notes delivered to her door—old-school romance, modern delivery.
 
@@ -71,22 +71,22 @@ Handwritten, romantic notes delivered to her door—old-school romance, modern d
 For the music-loving girlfriend: pair a favorite album with a cute, portable player.
 
 ### 10. Custom Soundwave Art
-<a href="https://www.etsy.com/search?q=custom+soundwave+art" class="amazon-link" target="_blank" rel="noopener">View on Etsy</a>
+<a href="https://www.amazon.com/s?k=custom+soundwave+art+personalized&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $35–$70  
 Turn your voice ("I love you") or a favorite song into a visual work of art.
 
 ### 11. Aromatherapy Shower Steamers
-<a href="https://www.earthhero.com/?s=shower+steamer" class="amazon-link" target="_blank" rel="noopener">View on EarthHero</a>
+<a href="https://www.amazon.com/s?k=aromatherapy+shower+steamer+relaxing&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $18–$30  
 A daily self-care treat—eco-friendly, relaxing, and perfect for unwinding after a long day.
 
 ### 12. Sustainable Candle Set with Hidden Message
-<a href="https://www.etsy.com/search?q=hidden+message+candle" class="amazon-link" target="_blank" rel="noopener">View on Etsy</a>
+<a href="https://www.amazon.com/s?k=hidden+message+candle+romantic&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $20–$40  
 Candles that reveal a sweet message as they burn—thoughtful, eco-friendly, and romantic.
 
 ### 13. Tiny Terrarium Necklace
-<a href="https://www.etsy.com/search?q=terrarium+necklace" class="amazon-link" target="_blank" rel="noopener">View on Etsy</a>
+<a href="https://www.amazon.com/s?k=terrarium+necklace+plant+jewelry&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $25–$50  
 Nature-inspired wearable art for the girlfriend who loves plants and unique jewelry.
 

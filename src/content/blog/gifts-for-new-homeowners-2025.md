@@ -26,7 +26,7 @@ Moving into a new home is a major milestone—and the perfect opportunity to giv
 # More Gift Inspiration
 - See our [Best Home Gifts on Amazon](https://bright-gift.com/blog/best-home-gifts-on-amazon-2024).
 - Explore [Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget).
-- Check out [Gifts for Plant Lovers](https://bright-gift.com/gift-guides/gifts-for-plant-lovers).
+- Check out [Gifts for Plant Lovers](https://bright-gift.com/blog/gifts-for-plant-lovers).
 - Discover [Gifts for Remote Workers Under $50](https://bright-gift.com/blog/gifts-for-remote-workers-under-50).
 
 ---
@@ -34,7 +34,7 @@ Moving into a new home is a major milestone—and the perfect opportunity to giv
 ## Top Housewarming Gifts for New Homeowners (2025)
 
 ### 1. Personalized Doormat  
-<a href="https://www.etsy.com/search?q=personalized+doormat&utm_source=brightgift" class="amazon-link" target="_blank" rel="noopener">View on Etsy</a>  
+<a href="https://www.amazon.com/s?k=personalized+doormat+housewarming&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>  
 **Price Range:** $25–$50  
 A custom doormat with their family name or a fun message adds a personal touch to any entryway.
 
@@ -54,12 +54,12 @@ Fresh herbs year-round! A countertop garden kit is both practical and fun for co
 A set of high-quality candles helps create a cozy, welcoming atmosphere in any new home.
 
 ### 5. Houseplant Starter Bundle  
-<a href="https://www.etsy.com/search?q=houseplant+bundle&utm_source=brightgift" class="amazon-link" target="_blank" rel="noopener">View on Etsy</a>  
+<a href="https://www.amazon.com/s?k=houseplant+starter+bundle+indoor+plants&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>  
 **Price Range:** $30–$60  
 A collection of easy-care plants brings life and color to their new space.
 
 ### 6. Engraved Cheese Board Set  
-<a href="https://www.etsy.com/search?q=engraved+cheese+board&utm_source=brightgift" class="amazon-link" target="_blank" rel="noopener">View on Etsy</a>  
+<a href="https://www.amazon.com/s?k=engraved+cheese+board+personalized&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>  
 **Price Range:** $35–$70  
 Perfect for entertaining, this personalized board is both beautiful and functional.
 
@@ -79,7 +79,7 @@ Help them relax and unwind with a sleek diffuser for their favorite scents.
 Upgrade their kitchen with a set of must-have tools for cooking and baking.
 
 ### 10. Wall Art Print  
-<a href="https://www.etsy.com/search?q=wall+art+print&utm_source=brightgift" class="amazon-link" target="_blank" rel="noopener">View on Etsy</a>  
+<a href="https://www.amazon.com/s?k=wall+art+print+home+decor&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>  
 **Price Range:** $20–$50  
 A modern or custom art print adds personality and style to their new home.
 
