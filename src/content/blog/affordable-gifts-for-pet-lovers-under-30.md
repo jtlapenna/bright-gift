@@ -8,7 +8,7 @@ category: "gift-guides"
 description: "Delight the pet lovers in your life with budget-friendly gifts under $30. Discover fun and practical items for furry friends!"
 keywords: "gifts for pet lovers under $30, affordable pet gifts, budget pet gifts, pet accessories, cute pet items"
 date: "2025-07-15"
-status: "draft"
+status: "published"
 ---
 
 *As an Amazon Associate, we earn from qualifying purchases.*
