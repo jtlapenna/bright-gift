@@ -5,8 +5,6 @@ metaDescription: "Find the perfect affordable gifts for pet lovers under $30! Di
 description: "Discover 15 affordable and thoughtful gifts for pet lovers under $30. From personalized items to practical accessories, find the perfect present for any animal enthusiast."
 date: "2025-07-15"
 image: "/images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-banner.webp"
-ogImage: "/images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-og.webp"
-socialImage: "/images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-social.webp"
 category: "gift-guides"
 tags: ["pet gifts", "affordable gifts", "budget gifts", "pet accessories", "animal lovers"]
 keywords: ["affordable gifts for pet lovers", "pet gifts under $30", "budget pet gifts", "gifts for animal lovers", "cheap pet gifts", "pet accessories under $30"]

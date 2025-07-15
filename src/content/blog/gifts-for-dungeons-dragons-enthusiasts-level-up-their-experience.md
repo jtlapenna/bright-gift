@@ -5,8 +5,6 @@ metaDescription: "Discover the perfect gifts for Dungeons & Dragons players! Fro
 description: "Find the perfect gifts for Dungeons & Dragons enthusiasts with our curated guide. From custom dice to adventure books, discover 15 epic ways to enhance their D&D experience."
 date: "2025-07-15"
 image: "/images/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience-banner.webp"
-ogImage: "/images/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience-og.webp"
-socialImage: "/images/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience-social.webp"
 category: "gift-guides"
 tags: ["D&D gifts", "tabletop RPG", "gaming gifts", "Dungeons & Dragons", "roleplaying games"]
 keywords: ["gifts for Dungeons & Dragons", "D&D gifts", "tabletop RPG gifts", "gaming gifts", "D&D accessories", "roleplaying game gifts"]
