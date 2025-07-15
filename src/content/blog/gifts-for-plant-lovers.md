@@ -4,8 +4,8 @@ metaTitle: "15 Best Gifts for Plant Lovers Under $75 in 2024 - From Rare Plants 
 metaDescription: "Find the perfect gift for plant enthusiasts under $75! Discover rare houseplants, stylish planters, care tools, and accessories that every green thumb will love."
 description: "Discover thoughtful gifts for plant enthusiasts under $75, from rare houseplants to stylish plant accessories that will make any green thumb happy."
 date: "2024-07-27"
-image: "/images/gift-guides/plant-lovers-under-75.png"
-ogImage: "/images/gift-guides/plant-lovers-under-75.png"
+image: "/images/blog/plant-lovers-under-75/plant-lovers-under-75.png"
+ogImage: "/images/blog/plant-lovers-under-75/plant-lovers-under-75.png"
 tags: ["plant-lovers", "houseplants", "gardening", "under-75", "budget-friendly", "any-occasion"]
 keywords: ["gifts for plant lovers", "plant gifts under 75", "houseplant gifts", "gardening gifts", "plant accessories", "budget plant gifts"]
 readTime: 8

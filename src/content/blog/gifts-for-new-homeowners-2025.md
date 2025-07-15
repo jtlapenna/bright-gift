@@ -4,8 +4,8 @@ metaTitle: "Best Housewarming Gifts 2025: Unique Ideas for New Homeowners | Brig
 metaDescription: "Looking for the perfect housewarming gift? Discover the best gifts for new homeowners in 2025—unique, practical, and sure to impress. Shop our top picks for every style and budget!"
 description: "Find the perfect housewarming gift with our curated selection of unique and practical gifts for new homeowners in 2025."
 date: "2025-07-05"
-image: "/images/gift-guides/new-homeowners/new-homeowners-banner.webp"
-ogImage: "/images/gift-guides/new-homeowners/new-homeowners-OG.webp"
+image: "/images/blog/new-homeowners/new-homeowners-banner.webp"
+ogImage: "/images/blog/new-homeowners/new-homeowners-OG.webp"
 tags: ["housewarming", "new homeowners", "gift guide", "home gifts", "2025"]
 keywords: ["housewarming gifts", "gifts for new homeowners", "best housewarming gifts 2025", "unique housewarming ideas", "practical housewarming gifts"]
 readTime: 8

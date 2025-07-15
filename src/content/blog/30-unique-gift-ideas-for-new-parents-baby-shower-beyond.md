@@ -4,9 +4,9 @@ metaTitle: "30 Unique Baby Gift Ideas: Baby Shower & New Parent Gifts | BrightGi
 metaDescription: "Looking for unique baby gifts? Discover 30 thoughtful gift ideas for new parents under $75. From baby showers to newborn celebrations, find presents that stand out and support growing families!"
 description: "Find the perfect baby gift with our curated selection of unique presents for new parents, from baby showers to newborn celebrations, all under $75."
 date: "2025-01-07"
-image: "/images/gift-guides/new-parents-30/baby-banner.webp"
-ogImage: "/images/gift-guides/new-parents-30/baby-banner.webp"
-socialImage: "/images/gift-guides/new-parents-30/baby-social.webp"
+image: "/images/blog/new-parents-30/baby-banner.webp"
+ogImage: "/images/blog/new-parents-30/baby-banner.webp"
+socialImage: "/images/blog/new-parents-30/baby-social.webp"
 tags: ["baby gifts", "baby shower gifts", "new parent gifts", "under $75", "unique baby gifts", "eco-friendly baby gifts"]
 keywords: ["unique baby gifts", "baby shower gift ideas", "gifts for new parents", "eco-friendly baby gifts under 75", "baby gifts under 50", "unique baby shower gifts", "gifts for new moms", "baby milestone gifts"]
 readTime: 10

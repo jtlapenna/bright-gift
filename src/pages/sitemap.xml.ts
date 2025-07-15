@@ -4,8 +4,6 @@ export async function GET() {
   // Only include published (draft: false) content, unless in preview
   const isPreview = import.meta.env.IS_PREVIEW === 'true';
   const blogPosts = await getCollection('blog', ({ data }) => isPreview || !data.draft);
-  const giftGuides = await getCollection('gift-guides', ({ data }) => isPreview || !data.draft);
-  const faqs = await getCollection('faqs', ({ data }) => isPreview || !data.draft);
 
   const baseUrl = 'https://bright-gift.com';
   
@@ -36,7 +34,6 @@ export async function GET() {
 
   // Exclude specific slugs/IDs from sitemap (404s in GSC)
   const excludedBlogSlugs = ['sample-post', 'handmade-gifts'];
-  const excludedGuideSlugs = ['gifts-for-plant-lovers'];
 
   // Only include real, published blog posts, excluding problematic slugs
   const blogUrls = blogPosts
@@ -48,25 +45,7 @@ export async function GET() {
       priority: 0.7
     }));
 
-  // Only include real, published gift guides under /gift-guides/, excluding problematic slugs
-  const guideUrls = giftGuides
-    .filter(guide => !excludedGuideSlugs.includes(guide.id))
-    .map(guide => ({
-      url: `${baseUrl}/gift-guides/${guide.id}/`,
-      lastmod: new Date(guide.data.date).toISOString(),
-      changefreq: 'monthly',
-      priority: 0.8
-    }));
-
-  // Only include real, published FAQs
-  const faqUrls = faqs.map(faq => ({
-    url: `${baseUrl}/blog/${faq.id}`,
-    lastmod: new Date(faq.data.date).toISOString(),
-    changefreq: 'monthly',
-    priority: 0.6
-  }));
-
-  const allUrls = [...staticUrls, ...blogUrls, ...guideUrls, ...faqUrls];
+  const allUrls = [...staticUrls, ...blogUrls];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
