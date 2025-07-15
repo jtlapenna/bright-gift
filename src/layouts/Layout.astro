@@ -95,6 +95,22 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 
 		<!-- Ahrefs Web Analytics -->
 		<script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="Quv9IM6wKm4wMy6MXyBE4w" async></script>
+
+		<!-- Amazon Link Processing Script -->
+		<script is:inline>
+		  // Post-process the rendered content to add amazon-link class to "View on Amazon" links
+		  document.addEventListener('DOMContentLoaded', function() {
+		    const articleContent = document.getElementById('article-content');
+		    if (articleContent) {
+		      const links = articleContent.querySelectorAll('a');
+		      links.forEach(link => {
+		        if (link.textContent.includes('View on Amazon')) {
+		          link.classList.add('amazon-link');
+		        }
+		      });
+		    }
+		  });
+		</script>
 	</head>
 	<body>
 		{ !isHome && (

@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import { processAmazonLinks } from '../../utils/processAmazonLinks.js';
 
 export const prerender = true;
 
@@ -153,7 +154,7 @@ const readTime = post.data.readTime || 5;
           )}
 
           <!-- Article Body -->
-          <article class="prose prose-lg max-w-none">
+          <article class="prose prose-lg max-w-none" id="article-content">
             <Content />
             <div class="text-center">
               <a href="https://bright-gift.com" class="cta-button" target="_blank" rel="noopener">Try the Gift Idea Generator</a>
