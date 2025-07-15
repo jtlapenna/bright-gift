@@ -6,7 +6,7 @@ ogImage: "/images/blog/fun-graduation-gifts-for-creative-minds/fun-graduation-gi
 socialImage: "/images/blog/fun-graduation-gifts-for-creative-minds/fun-graduation-gifts-for-creative-minds-social.webp"
 category: "gift-guides"
 description: "Celebrate creativity with fun graduation gifts for creative minds. Explore our list of unique and inspiring gifts they'll cherish!"
-keywords: "graduation gifts for creatives, unique graduation gifts, gifts for graduates, creative gift ideas, fun graduation presents"
+keywords: ["graduation gifts for creatives", "unique graduation gifts", "gifts for graduates", "creative gift ideas", "fun graduation presents"]
 date: "2025-07-15"
 draft: false
 status: "published"
