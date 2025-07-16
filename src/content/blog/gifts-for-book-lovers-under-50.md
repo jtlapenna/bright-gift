@@ -26,6 +26,9 @@ affiliateLinks:
   - text: "Personalized Bookmark Set"
     url: "https://www.amazon.com/s?k=personalized+bookmark+set&tag=bright-gift-20"
     platform: "amazon"
+  - text: "Reading Journal"
+    url: "https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20"
+    platform: "amazon"
 ---
 
 *As an Amazon Associate and Bookshop.org affiliate, we earn from qualifying purchases. This post contains affiliate links, which means we may earn a commission if you click through and make a purchase, at no additional cost to you.*
@@ -89,7 +92,7 @@ A clip-on reading light that attaches to books or e-readers. Perfect for reading
 A sturdy book stand that holds books open hands-free. Great for cooking from cookbooks or reading while eating.
 
 ### 9. Reading Journal
-<a href="https://bookshop.org/a/brightgift/9781641522944" class="amazon-link" target="_blank" rel="noopener">View on Bookshop.org</a>
+<a href="https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $12-18  
 A beautiful journal for tracking books read, favorite quotes, and reading goals. Perfect for organized book lovers.
 
@@ -126,12 +129,12 @@ A monthly book subscription service that delivers curated books based on their p
 ## Budget-Friendly Gift Combinations
 
 **Under $30:**
-- [Reading Journal](https://bookshop.org/a/brightgift/9781641522944) + [Personalized Bookmark](https://www.amazon.com/s?k=personalized+bookmark&tag=bright-gift-20)
+- [Reading Journal](https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20) + [Personalized Bookmark](https://www.amazon.com/s?k=personalized+bookmark&tag=bright-gift-20)
 - [Book Lover's Candle](https://www.amazon.com/s?k=book+lover+candle&tag=bright-gift-20) + [Reading Light](https://www.amazon.com/s?k=reading+light&tag=bright-gift-20)
 
 **Under $50:**
 - [Must-Read Book](https://bookshop.org/a/brightgift/9780525559474) + [Cozy Blanket](https://www.amazon.com/s?k=reading+blanket&tag=bright-gift-20) + [Bookmark](https://www.amazon.com/s?k=bookmark+set&tag=bright-gift-20)
-- [Book Stand](https://www.amazon.com/s?k=book+stand&tag=bright-gift-20) + [Literary Tote](https://www.amazon.com/s?k=literary+tote+bag&tag=bright-gift-20) + [Reading Journal](https://bookshop.org/a/brightgift/9781641522944)
+- [Book Stand](https://www.amazon.com/s?k=book+stand&tag=bright-gift-20) + [Literary Tote](https://www.amazon.com/s?k=literary+tote+bag&tag=bright-gift-20) + [Reading Journal](https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20)
 
 ---
 
