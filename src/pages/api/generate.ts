@@ -1,8 +1,6 @@
 import { buildPrompt } from '../../utils/promptBuilder.js';
 import OpenAI from 'openai';
 
-
-
 // Helper to generate Bookshop.org affiliate link
 function generateBookshopLink(keywords: string, affiliateId: string) {
   // Bookshop.org uses a simple search URL format with affiliate tracking
@@ -13,6 +11,19 @@ function generateBookshopLink(keywords: string, affiliateId: string) {
 // Helper to generate direct Bookshop.org book link (when ISBN is available)
 function generateBookshopDirectLink(isbn: string, affiliateId: string) {
   return `https://bookshop.org/a/${affiliateId}/${isbn}`;
+}
+
+// Helper to generate better Amazon search links
+function generateAmazonLink(title: string, tag: string) {
+  // Extract key search terms from title for better results
+  const searchTerms = title
+    .replace(/[^\w\s]/g, ' ') // Remove special characters
+    .split(' ')
+    .filter(word => word.length > 2) // Filter out short words
+    .slice(0, 4) // Take first 4 meaningful words
+    .join(' ');
+  
+  return `https://www.amazon.com/s?k=${encodeURIComponent(searchTerms)}&tag=bright-gift-20`;
 }
 
 // Phosphor icon mapping for Amazon placeholders
@@ -56,7 +67,10 @@ const amazonCategoryIconMap = {
   stationery: 'Note',
   entertainment: 'Ticket',
   safety: 'Shield',
-  helmet: 'Shield'
+  helmet: 'Shield',
+  'reading accessories': 'Book',
+  'literary gifts': 'Book',
+  'book journal': 'Note'
 };
 
 function getAmazonIcon(tag: string) {
@@ -65,6 +79,44 @@ function getAmazonIcon(tag: string) {
     if (lower.includes(key)) return icon;
   }
   return amazonCategoryIconMap.generic;
+}
+
+// Helper to determine if an item should go to Bookshop.org or Amazon
+function determineAffiliateSource(title: string, tag: string, styles: string[]) {
+  const lowerTitle = title.toLowerCase();
+  const lowerTag = tag.toLowerCase();
+  
+  // Check if book-lover style is selected
+  const isBookLoverStyle = styles && styles.includes('book-lover');
+  
+  // For book-lover style, use specific categorization
+  if (isBookLoverStyle) {
+    // Books go to Bookshop.org
+    if (lowerTag === 'book' || 
+        lowerTag.includes('book') && !lowerTag.includes('accessory') && !lowerTag.includes('gift')) {
+      return 'bookshop';
+    }
+    
+    // Reading accessories and literary gifts go to Amazon
+    if (lowerTag === 'reading accessories' || 
+        lowerTag === 'literary gifts' || 
+        lowerTag === 'book journal' ||
+        lowerTag.includes('bookmark') ||
+        lowerTag.includes('reading light') ||
+        lowerTag.includes('book stand') ||
+        lowerTag.includes('reading journal')) {
+      return 'amazon';
+    }
+  }
+  
+  // Fallback logic for non-book-lover styles
+  if (/book|reading|literature|novel|author|fiction|nonfiction|poetry|magazine|journal/i.test(lowerTag) && 
+      /book|reading|literature|novel|author|fiction|nonfiction|poetry|magazine|journal/i.test(lowerTitle)) {
+    return 'bookshop';
+  }
+  
+  // Everything else goes to Amazon
+  return 'amazon';
 }
 
 export async function GET() {
@@ -97,8 +149,6 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
       );
     }
 
-
-
     // Get Bookshop.org affiliate ID from env
     const bookshopAffiliateId = locals?.runtime?.env?.BOOKSHOP_AFFILIATE_ID || 'brightgift';
     console.log('Bookshop.org affiliate ID:', bookshopAffiliateId);
@@ -124,29 +174,22 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
       const description = match[2].trim();
       const tag = match[3].trim();
       let link = null;
-      let image = null;
-      // Determine affiliate source based on tag and content
-      if (/book|reading|literature|novel|author|fiction|nonfiction|poetry|magazine|journal/i.test(tag) || /book|reading|literature|novel|author|fiction|nonfiction|poetry|magazine|journal/i.test(title)) {
+      let icon = null;
+      
+      // Determine affiliate source based on improved logic
+      const affiliateSource = determineAffiliateSource(title, tag, styles);
+      
+      if (affiliateSource === 'bookshop') {
         // Bookshop.org for book-related items
         link = generateBookshopLink(title, bookshopAffiliateId);
-        const icon = 'Book';
-        ideas.push({ title, description, tag, link, icon });
-      } else if (/reading|bookmark|light|journal|accessory/i.test(tag) && /reading|book|literary/i.test(title)) {
-        // Amazon for reading accessories when book-lover style is selected
-        link = `https://www.amazon.com/s?k=${encodeURIComponent(title)}&tag=bright-gift-20`;
-        const icon = getAmazonIcon(tag);
-        ideas.push({ title, description, tag, link, icon });
-      } else if (/handmade|artisan|craft/i.test(tag)) {
-        // Handmade items go to Amazon for now (until Etsy approval)
-        link = `https://www.amazon.com/s?k=${encodeURIComponent(title)}&tag=bright-gift-20`;
-        const icon = getAmazonIcon(tag);
-        ideas.push({ title, description, tag, link, icon });
+        icon = 'Book';
       } else {
-        // Fallback: Amazon search (no image, use icon)
-        link = `https://www.amazon.com/s?k=${encodeURIComponent(title)}&tag=bright-gift-20`;
-        const icon = getAmazonIcon(tag);
-        ideas.push({ title, description, tag, link, icon });
+        // Amazon for everything else
+        link = generateAmazonLink(title, tag);
+        icon = getAmazonIcon(tag);
       }
+      
+      ideas.push({ title, description, tag, link, icon });
     }
 
     // Always return an array; fallback if parsing fails
@@ -201,6 +244,9 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
       }
     }
     
-    return new Response(JSON.stringify({ error: userMessage }), { status: statusCode });
+    return new Response(
+      JSON.stringify({ error: userMessage }),
+      { status: statusCode, headers: { 'Content-Type': 'application/json' } }
+    );
   }
 } 

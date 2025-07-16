@@ -70,7 +70,7 @@ function buildPrompt(data) {
     
     // Add specific guidance for book-lover style to ensure mix of books and accessories
     if (styles && styles.includes('book-lover')) {
-        prompt += `\n\nSPECIAL INSTRUCTIONS FOR BOOK LOVERS: When suggesting gifts for book lovers, include a balanced mix of:\n- Books (fiction, non-fiction, genre-specific, or themed books)\n- Reading accessories (bookmarks, reading lights, book stands, reading journals)\n- Literary-themed items (book-themed jewelry, tote bags, candles, etc.)\n\nUse tags like "Books", "Reading Accessories", "Literary Gifts", "Bookmarks", "Reading Lights", "Book Journal", etc. to help categorize the items properly.`;
+        prompt += `\n\nSPECIAL INSTRUCTIONS FOR BOOK LOVERS: When suggesting gifts for book lovers, include a balanced mix of:\n- Books (fiction, non-fiction, genre-specific, or themed books) - use tag "Book"\n- Reading accessories (bookmarks, reading lights, book stands, reading journals) - use tag "Reading Accessories"\n- Literary-themed items (book-themed jewelry, tote bags, candles, etc.) - use tag "Literary Gifts"\n\nIMPORTANT: For books, suggest popular, well-known titles that are likely to be available on Bookshop.org. Avoid obscure or out-of-print books. For reading accessories and literary gifts, suggest common, widely-available items that can be found on Amazon.\n\nUse these specific tags:\n- "Book" for actual books (fiction, non-fiction, etc.)\n- "Reading Accessories" for bookmarks, reading lights, book stands, etc.\n- "Literary Gifts" for book-themed items like jewelry, tote bags, candles\n- "Book Journal" for reading journals or book tracking items`;
     }
     
     // Add specific guidance for horror + funny combination

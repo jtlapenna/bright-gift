@@ -20,7 +20,7 @@ const blog = defineCollection({
     affiliateLinks: z.array(z.object({
       text: z.string(),
       url: z.string(),
-      platform: z.enum(['amazon', 'etsy', 'other']).optional(),
+      platform: z.enum(['amazon', 'bookshop', 'other']).optional(),
     })).optional(),
     // Social and Open Graph
     ogImage: z.string().optional(),
@@ -53,7 +53,7 @@ const giftGuides = defineCollection({
     affiliateLinks: z.array(z.object({
       text: z.string(),
       url: z.string(),
-      platform: z.enum(['amazon', 'etsy', 'other']).optional(),
+      platform: z.enum(['amazon', 'bookshop', 'other']).optional(),
     })).optional(),
     // Social fields
     ogImage: z.string().optional(),

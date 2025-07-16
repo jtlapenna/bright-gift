@@ -21,7 +21,7 @@ const blog = defineCollection({
         affiliateLinks: z.array(z.object({
             text: z.string(),
             url: z.string(),
-            platform: z.enum(['amazon', 'etsy', 'other']).optional(),
+            platform: z.enum(['amazon', 'bookshop', 'other']).optional(),
         })).optional(),
         // Social and Open Graph
         ogImage: z.string().optional(),
@@ -49,12 +49,12 @@ const giftGuides = defineCollection({
         metaDescription: z.string().optional(),
         keywords: z.array(z.string()).optional(),
         tags: z.array(z.string()).optional(),
-        // Affiliate fields
-        affiliateLinks: z.array(z.object({
-            text: z.string(),
-            url: z.string(),
-            platform: z.enum(['amazon', 'etsy', 'other']).optional(),
-        })).optional(),
+            // Affiliate fields
+    affiliateLinks: z.array(z.object({
+        text: z.string(),
+        url: z.string(),
+        platform: z.enum(['amazon', 'bookshop', 'other']).optional(),
+    })).optional(),
         // Social fields
         ogImage: z.string().optional(),
         twitterCard: z.string().optional(),
