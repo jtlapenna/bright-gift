@@ -71,4 +71,4 @@ function buildPrompt(data) {
     return prompt;
 }
 
-module.exports = { buildPrompt };
+export { buildPrompt };
