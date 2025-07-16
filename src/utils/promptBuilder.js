@@ -6,13 +6,14 @@ function buildPrompt(data) {
     // Style definitions for better AI understanding
     const styleDefinitions = {
         'eco-friendly': 'environmentally conscious, sustainable materials, reusable, biodegradable, or energy-efficient items',
-        'handmade': 'crafted by artisans, unique, one-of-a-kind, personalized, or locally made items',
+        'handmade': 'crafted by artisans, unique, one-of-a-kind, personalized, or locally made items (available on Amazon)',
         'funny': 'humorous, witty, gag gifts, novelty items, or items with clever humor',
         'pride-gifts': 'LGBTQ+ themed, rainbow colors, inclusive, supportive, or pride-related items',
         'quirky': 'unusual, unexpected, offbeat, creative, or conversation-starting items',
         'luxury': 'premium quality, high-end, sophisticated, elegant, or indulgent items',
         'techy': 'technology-focused, gadgets, innovative, smart devices, or digital items',
-        'cultural-gifts': 'celebrating diverse cultures, traditional items, cultural heritage, or international gifts'
+        'cultural-gifts': 'celebrating diverse cultures, traditional items, cultural heritage, or international gifts',
+        'book-lover': 'books from Bookshop.org (supporting independent bookstores), reading accessories from Amazon, literary-themed items, bookmarks, reading lights, or book-related gifts'
     };
     
     // Build style-specific guidance
@@ -48,6 +49,9 @@ function buildPrompt(data) {
                 case 'cultural-gifts':
                     styleGuidance += `\n- For cultural-gifts: Celebrate diverse cultures, traditional items, or cultural heritage.`;
                     break;
+                case 'book-lover':
+                    styleGuidance += `\n- For book-lover: Include a mix of books from Bookshop.org (supporting independent bookstores) and reading accessories from Amazon. Focus on literary-themed items, reading enhancement tools, and book-related gifts.`;
+                    break;
                 default:
                     styleGuidance += `\n- For ${style}: Incorporate ${style} elements appropriately.`;
             }
@@ -63,6 +67,11 @@ function buildPrompt(data) {
     prompt += ` The budget is under $${budget}.`;
     prompt += styleGuidance;
     prompt += `\n\nReturn the response as a markdown-formatted list. Each item should have a title, a short (1-2 sentence) description that clearly shows the style elements, and a product category tag. For example:\n\n**1. Handmade Wooden Gaming Dice Set**  \nArtisan-crafted wooden dice with quirky gaming references carved into each side - perfect for tabletop gamers who appreciate unique, conversation-starting accessories.  \n_Tag: Games_\n`;
+    
+    // Add specific guidance for book-lover style to ensure mix of books and accessories
+    if (styles && styles.includes('book-lover')) {
+        prompt += `\n\nSPECIAL INSTRUCTIONS FOR BOOK LOVERS: When suggesting gifts for book lovers, include a balanced mix of:\n- Books (fiction, non-fiction, genre-specific, or themed books)\n- Reading accessories (bookmarks, reading lights, book stands, reading journals)\n- Literary-themed items (book-themed jewelry, tote bags, candles, etc.)\n\nUse tags like "Books", "Reading Accessories", "Literary Gifts", "Bookmarks", "Reading Lights", "Book Journal", etc. to help categorize the items properly.`;
+    }
     
     // Add specific guidance for horror + funny combination
     if (interests && interests.toLowerCase().includes('horror') && styles && styles.includes('funny')) {

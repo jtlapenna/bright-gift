@@ -1,33 +1,18 @@
 import { buildPrompt } from '../../utils/promptBuilder.js';
 import OpenAI from 'openai';
 
-// Helper to fetch Etsy product for a keyword
-async function fetchEtsyProduct(keywords: string, apiKey: string) {
-  const url = `https://openapi.etsy.com/v3/application/listings/active?keywords=${encodeURIComponent(keywords)}&limit=1&includes=images`;
-  const res = await fetch(url, {
-    headers: {
-      'x-api-key': apiKey,
-      'Content-Type': 'application/json'
-    }
-  });
-  if (!res.ok) {
-    console.error('Etsy API error:', res.status, await res.text());
-    return null;
-  }
-  const data = await res.json();
-  const product = data.results?.[0];
-  if (!product) {
-    console.warn('No Etsy product found for', keywords);
-    return null;
-  }
-  const imageUrl = product.images?.[0]?.url_fullxfull || null;
-  if (!imageUrl) {
-    console.warn('No image found for Etsy product', product);
-  }
-  return {
-    url: product.url,
-    image: imageUrl
-  };
+
+
+// Helper to generate Bookshop.org affiliate link
+function generateBookshopLink(keywords: string, affiliateId: string) {
+  // Bookshop.org uses a simple search URL format with affiliate tracking
+  const searchQuery = encodeURIComponent(keywords);
+  return `https://bookshop.org/search?keywords=${searchQuery}&affiliate=${affiliateId}`;
+}
+
+// Helper to generate direct Bookshop.org book link (when ISBN is available)
+function generateBookshopDirectLink(isbn: string, affiliateId: string) {
+  return `https://bookshop.org/a/${affiliateId}/${isbn}`;
 }
 
 // Phosphor icon mapping for Amazon placeholders
@@ -112,14 +97,11 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
       );
     }
 
-    // Get Etsy API key from env (not OAuth2 token)
-    const etsyApiKey = locals?.runtime?.env?.ETSY_API_KEY;
-    // Log presence of Etsy API key (not the value)
-    if (etsyApiKey) {
-      console.log('Etsy API key found in environment.');
-    } else {
-      console.warn('Etsy API key NOT found in environment. Etsy integration will not work.');
-    }
+
+
+    // Get Bookshop.org affiliate ID from env
+    const bookshopAffiliateId = locals?.runtime?.env?.BOOKSHOP_AFFILIATE_ID || 'brightgift';
+    console.log('Bookshop.org affiliate ID:', bookshopAffiliateId);
 
     const openai = new OpenAI({ apiKey });
     const prompt = buildPrompt({ recipient, interests, budget, styles });
@@ -143,17 +125,22 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
       const tag = match[3].trim();
       let link = null;
       let image = null;
-      if (/handmade|etsy/i.test(tag) && etsyApiKey) {
-        // Try to fetch Etsy product using API key
-        const product = await fetchEtsyProduct(title, etsyApiKey);
-        if (product) {
-          link = product.url;
-          image = product.image;
-        } else {
-          link = `https://www.etsy.com/search?q=${encodeURIComponent(title)}`;
-          image = '/placeholders/handmade.jpg';
-        }
-        ideas.push({ title, description, tag, link, image });
+      // Determine affiliate source based on tag and content
+      if (/book|reading|literature|novel|author|fiction|nonfiction|poetry|magazine|journal/i.test(tag) || /book|reading|literature|novel|author|fiction|nonfiction|poetry|magazine|journal/i.test(title)) {
+        // Bookshop.org for book-related items
+        link = generateBookshopLink(title, bookshopAffiliateId);
+        const icon = 'Book';
+        ideas.push({ title, description, tag, link, icon });
+      } else if (/reading|bookmark|light|journal|accessory/i.test(tag) && /reading|book|literary/i.test(title)) {
+        // Amazon for reading accessories when book-lover style is selected
+        link = `https://www.amazon.com/s?k=${encodeURIComponent(title)}&tag=bright-gift-20`;
+        const icon = getAmazonIcon(tag);
+        ideas.push({ title, description, tag, link, icon });
+      } else if (/handmade|artisan|craft/i.test(tag)) {
+        // Handmade items go to Amazon for now (until Etsy approval)
+        link = `https://www.amazon.com/s?k=${encodeURIComponent(title)}&tag=bright-gift-20`;
+        const icon = getAmazonIcon(tag);
+        ideas.push({ title, description, tag, link, icon });
       } else {
         // Fallback: Amazon search (no image, use icon)
         link = `https://www.amazon.com/s?k=${encodeURIComponent(title)}&tag=bright-gift-20`;
