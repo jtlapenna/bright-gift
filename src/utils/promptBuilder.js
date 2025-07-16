@@ -1,15 +1,74 @@
-export function buildPrompt(data) {
-    const { recipient, interests, budget, style } = data;
+function buildPrompt(data) {
+    const { recipient, interests, budget, styles } = data;
     // Always request 6–9 ideas (randomly pick a number in that range for variety)
     const ideaCount = Math.floor(Math.random() * 4) + 6; // 6, 7, 8, or 9
-    let prompt = `Suggest ${ideaCount} ${style ? style + ' ' : ''}gift ideas for ${recipient}.`;
+    
+    // Style definitions for better AI understanding
+    const styleDefinitions = {
+        'eco-friendly': 'environmentally conscious, sustainable materials, reusable, biodegradable, or energy-efficient items',
+        'handmade': 'crafted by artisans, unique, one-of-a-kind, personalized, or locally made items',
+        'funny': 'humorous, witty, gag gifts, novelty items, or items with clever humor',
+        'pride-gifts': 'LGBTQ+ themed, rainbow colors, inclusive, supportive, or pride-related items',
+        'quirky': 'unusual, unexpected, offbeat, creative, or conversation-starting items',
+        'luxury': 'premium quality, high-end, sophisticated, elegant, or indulgent items',
+        'techy': 'technology-focused, gadgets, innovative, smart devices, or digital items',
+        'cultural-gifts': 'celebrating diverse cultures, traditional items, cultural heritage, or international gifts'
+    };
+    
+    // Build style-specific guidance
+    let styleGuidance = '';
+    if (styles && Array.isArray(styles) && styles.length > 0) {
+        const styleDescriptions = styles.map(style => styleDefinitions[style] || style).join(', ');
+        styleGuidance = `\n\nIMPORTANT: Each gift idea MUST incorporate these style elements: ${styleDescriptions}.`;
+        
+        // Generate dynamic guidance for each selected style
+        styles.forEach(style => {
+            switch(style) {
+                case 'eco-friendly':
+                    styleGuidance += `\n- For eco-friendly: Focus on environmentally conscious, sustainable, reusable, or biodegradable items.`;
+                    break;
+                case 'handmade':
+                    styleGuidance += `\n- For handmade: Focus on artisan-crafted, unique, one-of-a-kind, or personalized items.`;
+                    break;
+                case 'funny':
+                    styleGuidance += `\n- For funny: Include humor, wit, gag gifts, or novelty elements that will make them laugh.`;
+                    break;
+                case 'pride-gifts':
+                    styleGuidance += `\n- For pride-gifts: Include LGBTQ+ themes, rainbow colors, inclusive, or supportive elements.`;
+                    break;
+                case 'quirky':
+                    styleGuidance += `\n- For quirky: Choose unusual, unexpected, offbeat, or conversation-starting items.`;
+                    break;
+                case 'luxury':
+                    styleGuidance += `\n- For luxury: Focus on premium quality, high-end, sophisticated, or elegant items.`;
+                    break;
+                case 'techy':
+                    styleGuidance += `\n- For techy: Include technology-focused gadgets, innovative, or smart devices.`;
+                    break;
+                case 'cultural-gifts':
+                    styleGuidance += `\n- For cultural-gifts: Celebrate diverse cultures, traditional items, or cultural heritage.`;
+                    break;
+                default:
+                    styleGuidance += `\n- For ${style}: Incorporate ${style} elements appropriately.`;
+            }
+        });
+        
+        styleGuidance += `\n- Combine these styles naturally - multiple styles can work together in creative ways.`;
+    }
+    
+    let prompt = `Suggest ${ideaCount} creative gift ideas for ${recipient}.`;
     if (interests) {
         prompt += ` They enjoy ${interests}.`;
     }
-    if (style) {
-        prompt += ` The style should be clearly reflected in the ideas and tone.`;
-    }
     prompt += ` The budget is under $${budget}.`;
-    prompt += `\n\nReturn the response as a markdown-formatted list. Each item should have a title, a short (1-2 sentence) description, and a product category tag. For example:\n\n**1. Awesome Gadget**  \nThis is a cool gadget that does amazing things.  \n_Tag: Tech_\n`;
+    prompt += styleGuidance;
+    prompt += `\n\nReturn the response as a markdown-formatted list. Each item should have a title, a short (1-2 sentence) description that clearly shows the style elements, and a product category tag. For example:\n\n**1. Handmade Wooden Gaming Dice Set**  \nArtisan-crafted wooden dice with quirky gaming references carved into each side - perfect for tabletop gamers who appreciate unique, conversation-starting accessories.  \n_Tag: Games_\n`;
+    
+    // Add specific guidance for horror + funny combination
+    if (interests && interests.toLowerCase().includes('horror') && styles && styles.includes('funny')) {
+        prompt += `\n\nSPECIAL NOTE: Since this involves horror interests with funny style, focus on horror-themed items that are intentionally humorous, witty, or have a playful take on scary themes. Think "funny horror" - items that horror fans would find amusing rather than genuinely frightening.`;
+    }
     return prompt;
 }
+
+module.exports = { buildPrompt };

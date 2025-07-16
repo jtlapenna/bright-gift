@@ -95,7 +95,7 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
   try {
     data = await request.json();
     console.log('POST /api/generate received data:', data);
-    const { recipient, interests, budget, style } = data;
+    const { recipient, interests, budget, styles } = data;
     if (!recipient || !interests || !budget) {
       return new Response(
         JSON.stringify({ error: 'Missing required fields' }),
@@ -122,7 +122,7 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
     }
 
     const openai = new OpenAI({ apiKey });
-    const prompt = buildPrompt({ recipient, interests, budget, style });
+    const prompt = buildPrompt({ recipient, interests, budget, styles });
 
     const completion = await openai.chat.completions.create({
       model: 'gpt-4-turbo',
