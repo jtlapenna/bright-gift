@@ -91,9 +91,9 @@ function determineAffiliateSource(title: string, tag: string, styles: string[]) 
   
   // For book-lover style, use specific categorization
   if (isBookLoverStyle) {
-    // Books go to Bookshop.org
+    // Books go to Bookshop.org - must be tagged exactly as "Book" or contain "book" but not "journal" or "accessory"
     if (lowerTag === 'book' || 
-        lowerTag.includes('book') && !lowerTag.includes('accessory') && !lowerTag.includes('gift')) {
+        (lowerTag.includes('book') && !lowerTag.includes('journal') && !lowerTag.includes('accessory') && !lowerTag.includes('gift'))) {
       return 'bookshop';
     }
     
@@ -104,14 +104,18 @@ function determineAffiliateSource(title: string, tag: string, styles: string[]) 
         lowerTag.includes('bookmark') ||
         lowerTag.includes('reading light') ||
         lowerTag.includes('book stand') ||
-        lowerTag.includes('reading journal')) {
+        lowerTag.includes('reading journal') ||
+        lowerTag.includes('journal') ||
+        lowerTag.includes('accessory')) {
       return 'amazon';
     }
   }
   
-  // Fallback logic for non-book-lover styles
-  if (/book|reading|literature|novel|author|fiction|nonfiction|poetry|magazine|journal/i.test(lowerTag) && 
-      /book|reading|literature|novel|author|fiction|nonfiction|poetry|magazine|journal/i.test(lowerTitle)) {
+  // Fallback logic for non-book-lover styles - be more specific about books
+  if (lowerTag === 'book' || 
+      (lowerTag.includes('book') && !lowerTag.includes('journal') && !lowerTag.includes('accessory')) ||
+      (lowerTag.includes('fiction') || lowerTag.includes('nonfiction') || lowerTag.includes('novel') || lowerTag.includes('poetry')) &&
+      !lowerTag.includes('journal') && !lowerTag.includes('accessory')) {
     return 'bookshop';
   }
   
