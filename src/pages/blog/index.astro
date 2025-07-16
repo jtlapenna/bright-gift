@@ -2,6 +2,10 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
+// Get URL parameters for pagination
+const url = new URL(Astro.request.url);
+const currentPage = parseInt(url.searchParams.get('page') || '1');
+
 // Get all blog posts, excluding drafts unless in preview
 const isPreview = import.meta.env.IS_PREVIEW === 'true';
 const allPosts = await getCollection('blog', ({ data }) => isPreview || !data.draft);
@@ -19,8 +23,11 @@ const allContent = [
 
 // Pagination (10 posts per page)
 const postsPerPage = 10;
-const currentPage = 1; // TODO: Add URL parameter support
-const startIndex = (currentPage - 1) * postsPerPage;
+const totalPages = Math.ceil(allContent.length / postsPerPage);
+
+// Validate current page
+const validPage = Math.max(1, Math.min(currentPage, totalPages));
+const startIndex = (validPage - 1) * postsPerPage;
 const endIndex = startIndex + postsPerPage;
 const paginatedContent = allContent.slice(startIndex, endIndex);
 
@@ -28,6 +35,17 @@ const paginatedContent = allContent.slice(startIndex, endIndex);
 function calculateReadTime(content: string): number {
   const wordCount = content.split(/\s+/).length;
   return Math.ceil(wordCount / 200);
+}
+
+// Generate pagination URLs
+function getPageUrl(page: number): string {
+  const url = new URL(Astro.request.url);
+  if (page === 1) {
+    url.searchParams.delete('page');
+  } else {
+    url.searchParams.set('page', page.toString());
+  }
+  return url.pathname + url.search;
 }
 ---
 
@@ -156,15 +174,33 @@ function calculateReadTime(content: string): number {
       {allContent.length > postsPerPage && (
         <div class="mt-12 flex justify-center">
           <nav class="flex items-center gap-2">
-            <button class="px-3 py-2 text-sm bg-white border border-slate-300 rounded-md hover:bg-slate-50 transition-colors">
-              Previous
-            </button>
+            {validPage > 1 ? (
+              <a href={getPageUrl(validPage - 1)}>
+                <button class="px-3 py-2 text-sm bg-white border border-slate-300 rounded-md hover:bg-slate-50 transition-colors">
+                  Previous
+                </button>
+              </a>
+            ) : (
+              <button class="px-3 py-2 text-sm bg-slate-100 border border-slate-300 rounded-md text-slate-400 cursor-not-allowed" disabled>
+                Previous
+              </button>
+            )}
+            
             <span class="px-3 py-2 text-sm text-slate-700">
-              Page {currentPage} of {Math.ceil(allContent.length / postsPerPage)}
+              Page {validPage} of {totalPages}
             </span>
-            <button class="px-3 py-2 text-sm bg-white border border-slate-300 rounded-md hover:bg-slate-50 transition-colors">
-              Next
-            </button>
+            
+            {validPage < totalPages ? (
+              <a href={getPageUrl(validPage + 1)}>
+                <button class="px-3 py-2 text-sm bg-white border border-slate-300 rounded-md hover:bg-slate-50 transition-colors">
+                  Next
+                </button>
+              </a>
+            ) : (
+              <button class="px-3 py-2 text-sm bg-slate-100 border border-slate-300 rounded-md text-slate-400 cursor-not-allowed" disabled>
+                Next
+              </button>
+            )}
           </nav>
         </div>
       )}
