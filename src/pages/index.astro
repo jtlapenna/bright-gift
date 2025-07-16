@@ -213,6 +213,12 @@ const faqData = {
 								aria-pressed="false">
 								🌍 Cultural Gifts
 							</button>
+							<button type="button" 
+								data-style="book-lover"
+								class="style-chip bg-[#FFDE59] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#FFDE59] hover:bg-[#FFF9F3] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
+								aria-pressed="false">
+								📖 Book Lover
+							</button>
 						</div>
 						<div class="mt-2 text-sm text-[#1C2E4A] opacity-75">
 							<span id="selection-count">0</span> of 3 styles selected
@@ -376,7 +382,8 @@ const faqData = {
 			'quirky': { bg: 'bg-[#A3E4DB]', text: 'text-[#1C2E4A]', border: 'border-[#A3E4DB]', hover: 'hover:bg-[#FFF9F3]' },
 			'luxury': { bg: 'bg-[#FF6B6B]', text: 'text-white', border: 'border-[#FF6B6B]', hover: 'hover:bg-[#ff4c4c]' },
 			'techy': { bg: 'bg-[#FFDE59]', text: 'text-[#1C2E4A]', border: 'border-[#FFDE59]', hover: 'hover:bg-[#FFF9F3]' },
-			'cultural-gifts': { bg: 'bg-[#A3E4DB]', text: 'text-[#1C2E4A]', border: 'border-[#A3E4DB]', hover: 'hover:bg-[#FFF9F3]' }
+			'cultural-gifts': { bg: 'bg-[#A3E4DB]', text: 'text-[#1C2E4A]', border: 'border-[#A3E4DB]', hover: 'hover:bg-[#FFF9F3]' },
+			'book-lover': { bg: 'bg-[#FFDE59]', text: 'text-[#1C2E4A]', border: 'border-[#FFDE59]', hover: 'hover:bg-[#FFF9F3]' }
 		};
 		
 		styleChips.forEach(button => {
@@ -598,7 +605,7 @@ const faqData = {
 					<p class="text-[#333] mb-4 font-inter text-base text-center line-clamp-4">${idea.description}</p>
 					${idea.tag ? `<span class="inline-block bg-[#FFDE59] text-[#1C2E4A] text-xs font-semibold px-4 py-1 rounded-full mb-6 mt-auto">${idea.tag}</span>` : ''}
 					<a href="${idea.link}" target="_blank" rel="nofollow noopener" class="w-full bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center" aria-label="View ${idea.title} (affiliate link)">
-						Find on ${/etsy/i.test(idea.link) ? 'Etsy' : 'Amazon'}
+						Find on ${/bookshop/i.test(idea.link) ? 'Bookshop.org' : 'Amazon'}
 					</a>
 				</div>
 			`;
