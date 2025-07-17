@@ -1,8 +1,8 @@
 ---
 title: "Chic Wedding Gifts for the Stylish Couple"
 description: "Discover chic wedding gifts for stylish couples that set them up for life together—browse our elegant picks!"
-pubDate: "2025-07-15"
-heroImage: "/images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-banner.webp"
+date: "2025-07-15"
+image: "/images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-banner.webp"
 ogImage: "/images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-og.webp"
 socialImage: "/images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-social.webp"
 tags: ["wedding gifts", "chic gifts", "elegant gifts", "couple gifts", "home decor"]

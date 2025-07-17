@@ -1,8 +1,8 @@
 ---
 title: "Unique Gifts for Board Game Enthusiasts: 15 Perfect Ideas to Level Up Their Game Night"
 description: "Level up their game night with our curated selection of unique gifts for board game enthusiasts, from strategy games to quirky accessories that enhance the gaming experience."
-pubDate: "2024-01-15"
-heroImage: "/images/blog/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night-banner.webp"
+date: "2024-01-15"
+image: "/images/blog/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night-banner.webp"
 ogImage: "/images/blog/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night-og.webp"
 socialImage: "/images/blog/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night-social.webp"
 tags: ["board game gifts", "gaming gifts", "strategy games", "game accessories", "game night", "hobby gifts"]

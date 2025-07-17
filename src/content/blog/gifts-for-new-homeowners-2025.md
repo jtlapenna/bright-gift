@@ -1,8 +1,8 @@
 ---
 title: "Gifts for New Homeowners: Unique Housewarming Gift Ideas for 2025"
 description: "Find the perfect housewarming gift with our curated selection of unique and practical gifts for new homeowners in 2025."
-pubDate: "2025-07-05"
-heroImage: "/images/blog/new-homeowners/new-homeowners-banner.webp"
+date: "2025-07-05"
+image: "/images/blog/new-homeowners/new-homeowners-banner.webp"
 ogImage: "/images/blog/new-homeowners/new-homeowners-OG.webp"
 socialImage: "/images/blog/new-homeowners/new-homeowners-social.webp"
 tags: ["housewarming", "new homeowners", "gift guide", "home gifts", "2025"]

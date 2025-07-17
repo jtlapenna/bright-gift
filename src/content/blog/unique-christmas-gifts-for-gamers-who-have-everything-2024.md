@@ -1,8 +1,8 @@
 ---
 title: "Unique Christmas Gifts for Gamers Who Have Everything 2024"
 description: "Find the perfect Christmas gift for gamers who seem to have it all with our curated selection of unique gaming accessories, collectibles, and experiences."
-pubDate: "2025-01-15"
-heroImage: "/images/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/unique-christmas-gifts-for-gamers-who-have-everything-2024-banner.webp"
+date: "2025-01-15"
+image: "/images/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/unique-christmas-gifts-for-gamers-who-have-everything-2024-banner.webp"
 ogImage: "/images/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/unique-christmas-gifts-for-gamers-who-have-everything-2024-og.webp"
 socialImage: "/images/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/unique-christmas-gifts-for-gamers-who-have-everything-2024-social.webp"
 tags: ["gaming gifts", "christmas gifts", "unique gifts", "gamers", "holiday gifts", "2024"]

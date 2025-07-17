@@ -1,8 +1,8 @@
 ---
 title: "Gifts for Dungeons & Dragons Enthusiasts: 15 Epic Ways to Level Up Their Experience"
 description: "Find the perfect gifts for Dungeons & Dragons enthusiasts with our curated guide. From custom dice to adventure books, discover 15 epic ways to enhance their D&D experience."
-pubDate: "2025-07-15"
-heroImage: "/images/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience-banner.webp"
+date: "2025-07-15"
+image: "/images/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience-banner.webp"
 ogImage: "/images/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience-og.webp"
 socialImage: "/images/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience-social.webp"
 tags: ["D&D gifts", "tabletop RPG", "gaming gifts", "Dungeons & Dragons", "roleplaying games"]

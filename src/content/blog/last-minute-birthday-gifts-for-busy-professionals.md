@@ -1,8 +1,8 @@
 ---
 title: "Last-Minute Birthday Gifts for Busy Professionals: 15 Thoughtful Ideas Under $100"
 description: "Find the perfect last-minute birthday gift for busy professionals with our curated selection of thoughtful, practical presents that show you care without breaking the bank."
-pubDate: "2024-01-15"
-heroImage: "/images/blog/last-minute-birthday-gifts-for-busy-professionals/last-minute-birthday-gifts-for-busy-professionals-banner.webp"
+date: "2024-01-15"
+image: "/images/blog/last-minute-birthday-gifts-for-busy-professionals/last-minute-birthday-gifts-for-busy-professionals-banner.webp"
 ogImage: "/images/blog/last-minute-birthday-gifts-for-busy-professionals/last-minute-birthday-gifts-for-busy-professionals-og.webp"
 socialImage: "/images/blog/last-minute-birthday-gifts-for-busy-professionals/last-minute-birthday-gifts-for-busy-professionals-social.webp"
 tags: ["birthday gifts", "last-minute gifts", "professional gifts", "office gifts", "practical gifts", "under $100"]
