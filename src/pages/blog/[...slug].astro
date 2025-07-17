@@ -128,6 +128,13 @@ const readTime = post.data.readTime || 5;
       </div>
     </div>
 
+    <!-- Affiliate Disclosure -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+      <p class="text-xs text-gray-500 italic text-center">
+        As an Amazon Associate and Bookshop.org affiliate, we earn from qualifying purchases. This post contains affiliate links, which means we may earn a commission if you click through and make a purchase, at no additional cost to you.
+      </p>
+    </div>
+
     <!-- Main Content -->
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -259,8 +266,7 @@ const readTime = post.data.readTime || 5;
   }
   .prose .amazon-link {
     display: inline-block;
-    margin-top: 0.25em;
-    margin-bottom: 0.5em;
+    margin-left: 1rem;
     padding: 0.2em 0.9em;
     background: #FF6B6B;
     color: #fff !important;
@@ -376,5 +382,47 @@ const readTime = post.data.readTime || 5;
     color: #1C2E4A !important;
     background: none;
     outline: none;
+  }
+
+  /* Product layout styles - ensure price and link are on same line */
+  .prose h3 + p {
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Style for price range and link container */
+  .prose .product-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .prose .price-range {
+    font-weight: 600;
+    color: #374151;
+    white-space: nowrap;
+  }
+  
+  .prose .product-link {
+    display: inline-block;
+  }
+  
+  /* Fallback for when content doesn't use the product-meta class */
+  .prose p:last-child:has(.amazon-link) {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Ensure price range text is styled consistently */
+  .prose strong:contains("Price Range:") {
+    font-weight: 600;
+    color: #374151;
+  }
+  
+  /* Override Amazon link margins to keep on same line as price */
+  .prose .amazon-link {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
 </style> 
