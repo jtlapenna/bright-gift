@@ -1,0 +1,453 @@
+{
+  "name": "BrightGift Social Poster",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "social-media-trigger",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "69dacc74-9628-4e21-8198-22171cb27cc9",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -1320,
+        100
+      ],
+      "webhookId": "social-media-automation"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { success: true, message: 'Social media automation triggered', postSlug: $json.slug } }}",
+        "options": {}
+      },
+      "id": "ec930b6b-96a1-4d1a-8e52-78b8ce441889",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [
+        -1100,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://bright-gift.com/api/blog-posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5427160d-269f-4c2c-ad3c-4f75999fca88",
+      "name": "Fetch Blog Content",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -880,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse blog post data for social media\nconst blogPost = $input.first().json;\n\n// Extract key information for social media\nconst postData = {\n  title: blogPost.title,\n  description: blogPost.description,\n  slug: blogPost.slug,\n  url: `https://bright-gift.com/blog/${blogPost.slug}`,\n  themes: blogPost.tags || [],\n  keywords: blogPost.keywords || [],\n  image: blogPost.image,\n  socialImage: blogPost.socialImage,\n  ogImage: blogPost.ogImage,\n  bannerImage: blogPost.bannerImage,\n  category: blogPost.category,\n  date: blogPost.date\n};\n\n// Determine target audience based on tags\nconst audience = [];\nif (postData.themes.includes('budget-friendly') || postData.themes.includes('under-50')) {\n  audience.push('budget conscious');\n}\nif (postData.themes.includes('handmade') || postData.themes.includes('etsy')) {\n  audience.push('handmade lovers');\n}\nif (postData.themes.includes('eco-friendly') || postData.themes.includes('sustainable')) {\n  audience.push('eco conscious');\n}\nif (postData.themes.includes('tech') || postData.themes.includes('gadgets')) {\n  audience.push('tech enthusiasts');\n}\n\n// Extract key quotes or highlights from description\nconst keyQuotes = [postData.description];\n\nreturn {\n  postData: {\n    ...postData,\n    audience,\n    keyQuotes,\n    affiliateLinks: ['amazon', 'etsy'],\n    publishingTimestamp: new Date().toISOString()\n  }\n};"
+      },
+      "id": "4a7947b3-ea36-4865-a662-23d478aacad5",
+      "name": "Content Analysis",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -660,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Select best existing image or determine if generation is needed\nconst postData = $input.first().json.postData;\n\n// Priority order for social media images\nlet selectedImage = null;\nlet imageType = null;\nlet needsGeneration = false;\n\nif (postData.socialImage) {\n  selectedImage = postData.socialImage;\n  imageType = 'social';\n} else if (postData.ogImage) {\n  selectedImage = postData.ogImage;\n  imageType = 'og';\n} else if (postData.bannerImage) {\n  selectedImage = postData.bannerImage;\n  imageType = 'banner';\n} else {\n  needsGeneration = true;\n  imageType = 'generated';\n}\n\n// Ensure full URL\nif (selectedImage && !selectedImage.startsWith('http')) {\n  selectedImage = `https://bright-gift.com${selectedImage}`;\n}\n\nreturn {\n  selectedImage,\n  imageType,\n  imageUrl: selectedImage,\n  needsGeneration,\n  postData\n};"
+      },
+      "id": "6d6c1ebd-8150-4723-92ec-88b115d1b924",
+      "name": "Image Selection",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -440,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "needs-generation",
+              "leftValue": "={{ $json.needsGeneration }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equal"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "80439397-5fd7-41b7-bd63-549178cf5c70",
+      "name": "Needs Image Generation?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -220,
+        100
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "f0e39887-1295-4e49-9e34-3d4b5b87e9fb",
+      "name": "Generate Image Prompt",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1.3,
+      "position": [
+        20,
+        -80
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "ab25210e-c8a2-41f4-9cd3-c4921d42d877",
+      "name": "Generate Social Image",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1.3,
+      "position": [
+        220,
+        -80
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Process generated image or use existing image\nconst input = $input.first().json;\n\nlet finalImageUrl;\nlet imageType;\n\nif (input.url) {\n  // Newly generated image\n  finalImageUrl = input.url;\n  imageType = 'generated';\n} else {\n  // Using existing image\n  finalImageUrl = input.imageUrl;\n  imageType = input.imageType;\n}\n\nreturn {\n  imageUrl: finalImageUrl,\n  imageType,\n  postData: input.postData || $('Image Selection').first().json.postData\n};"
+      },
+      "id": "0461ba01-f98a-494a-8412-974a8945136b",
+      "name": "Merge Image Results",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Prepare image for all social media platforms\nconst input = $input.first().json;\nconst imageUrl = input.imageUrl;\nconst postData = input.postData;\n\n// Platform-specific image handling\nconst platforms = [\n  { name: 'instagram', ratio: '1:1', crop: 'none' },\n  { name: 'twitter', ratio: '16:9', crop: 'center' },\n  { name: 'facebook', ratio: '1.91:1', crop: 'center' },\n  { name: 'linkedin', ratio: '1.91:1', crop: 'center' },\n  { name: 'pinterest', ratio: '2:3', crop: 'center' }\n];\n\nreturn {\n  universalImage: imageUrl,\n  platforms,\n  postData,\n  imageType: input.imageType\n};"
+      },
+      "id": "71db3cce-b77b-4d2a-93b4-21ed448bbf70",
+      "name": "Image Optimization",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        660,
+        100
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "3e58ee14-d50e-47cf-9c23-030335d40971",
+      "name": "Social Content Generator",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1.3,
+      "position": [
+        880,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse AI-generated social media content\nconst aiResponse = $input.first().json.choices[0].message.content;\nconst postData = $('Image Optimization').first().json.postData;\n\n// Extract platform-specific content\nconst platforms = ['twitter', 'linkedin', 'instagram', 'facebook', 'pinterest'];\nconst socialPosts = {};\n\n// Parse the AI response to extract content for each platform\n// This is a simplified parser - you may need to adjust based on AI output format\nplatforms.forEach(platform => {\n  const platformRegex = new RegExp(`${platform}[:\\s]*([\\s\\S]*?)(?=\\n\\w+:|$)`, 'i');\n  const match = aiResponse.match(platformRegex);\n  \n  if (match) {\n    socialPosts[platform] = {\n      content: match[1].trim(),\n      imageUrl: $('Image Optimization').first().json.universalImage,\n      url: postData.url,\n      platform\n    };\n  } else {\n    // Fallback content if parsing fails\n    socialPosts[platform] = {\n      content: `Check out our latest gift guide: ${postData.title} - ${postData.url}`,\n      imageUrl: $('Image Optimization').first().json.universalImage,\n      url: postData.url,\n      platform\n    };\n  }\n});\n\nreturn {\n  socialPosts,\n  postData,\n  totalPosts: Object.keys(socialPosts).length\n};"
+      },
+      "id": "6288d416-9e19-4073-bebd-3715cd6df21d",
+      "name": "Parse Social Content",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Calculate optimal posting times and schedule posts\nconst socialPosts = $input.first().json.socialPosts;\nconst postData = $input.first().json.postData;\n\n// Platform-specific posting times (in hours from now)\nconst postingSchedule = {\n  twitter: [2, 6, 10], // 2, 6, 10 hours from now\n  linkedin: [4, 8], // 4, 8 hours from now\n  instagram: [3, 7], // 3, 7 hours from now\n  facebook: [5, 9], // 5, 9 hours from now\n  pinterest: [1, 11] // 1, 11 hours from now\n};\n\nconst scheduledPosts = [];\nconst now = new Date();\n\nObject.entries(socialPosts).forEach(([platform, post]) => {\n  const times = postingSchedule[platform] || [2];\n  \n  times.forEach(hoursFromNow => {\n    const scheduledTime = new Date(now.getTime() + (hoursFromNow * 60 * 60 * 1000));\n    \n    scheduledPosts.push({\n      platform,\n      content: post.content,\n      image: post.imageUrl,\n      url: post.url,\n      scheduledTime: scheduledTime.toISOString(),\n      postId: `${platform}_${Date.now()}_${hoursFromNow}`\n    });\n  });\n});\n\nreturn {\n  scheduledPosts,\n  totalPosts: scheduledPosts.length,\n  postData\n};"
+      },
+      "id": "610f6813-59e8-4d57-a350-e145edad6bd4",
+      "name": "Posting Schedule Manager",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1320,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "tweet"
+      },
+      "id": "184185a9-c86d-4562-98f3-5f9d2ac60176",
+      "name": "Twitter Post",
+      "type": "n8n-nodes-base.twitter",
+      "typeVersion": 2,
+      "position": [
+        1540,
+        -100
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "linkedInOAuth2Api",
+        "operation": "post"
+      },
+      "id": "358b0bd9-cd22-423f-bdfc-c743ebd446cb",
+      "name": "LinkedIn Post",
+      "type": "n8n-nodes-base.linkedIn",
+      "typeVersion": 1,
+      "position": [
+        1540,
+        100
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "4cd7d434-48e6-4e47-9d5e-70159a9a81f7",
+      "name": "Facebook Post",
+      "type": "n8n-nodes-base.facebook",
+      "typeVersion": 1,
+      "position": [
+        1540,
+        280
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "b39dc687-7538-4c9f-b826-9d3fb57ed54c",
+      "name": "Pinterest Post",
+      "type": "n8n-nodes-base.pinterest",
+      "typeVersion": 1,
+      "position": [
+        1540,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Collect results from all social media posts\nconst results = $input.all();\nconst postData = $('Posting Schedule Manager').first().json.postData;\n\nconst postedResults = results.map(result => {\n  const data = result.json;\n  return {\n    platform: data.platform || 'unknown',\n    success: !data.error,\n    postId: data.id || data.postId || null,\n    url: data.url || null,\n    timestamp: new Date().toISOString(),\n    error: data.error || null\n  };\n});\n\nconst summary = {\n  totalPosts: postedResults.length,\n  successfulPosts: postedResults.filter(r => r.success).length,\n  failedPosts: postedResults.filter(r => !r.success).length,\n  postData,\n  results: postedResults\n};\n\nreturn summary;"
+      },
+      "id": "99558989-285d-497e-9b08-92546082b5c5",
+      "name": "Collect Results",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1760,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "gmailOAuth2Api",
+        "subject": "🎯 Social Media Posts Published - {{ $json.postData.title }}",
+        "message": "=<h2>Social Media Automation Complete</h2>\n<p><strong>Blog Post:</strong> {{ $json.postData.title }}</p>\n<p><strong>URL:</strong> <a href=\"{{ $json.postData.url }}\">{{ $json.postData.url }}</a></p>\n\n<h3>Posting Results:</h3>\n<ul>\n<li>Total Posts: {{ $json.totalPosts }}</li>\n<li>Successful: {{ $json.successfulPosts }}</li>\n<li>Failed: {{ $json.failedPosts }}</li>\n</ul>\n\n<h3>Platform Results:</h3>\n<ul>\n{{ $json.results.map(r => `<li>${r.platform}: ${r.success ? '✅ Success' : '❌ Failed'}${r.url ? ` - <a href=\"${r.url}\">View Post</a>` : ''}</li>`).join('\\n') }}\n</ul>\n\n<p><em>Automated by BrightGift Social Media Workflow</em></p>",
+        "options": {}
+      },
+      "id": "f7d93000-a332-450b-9e52-900da026193f",
+      "name": "Send Notification",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2,
+      "position": [
+        1980,
+        100
+      ],
+      "webhookId": "55b6a398-49c1-4381-a6ca-2930252e6cce"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.facebookGraphApi",
+      "typeVersion": 1,
+      "position": [
+        1740,
+        300
+      ],
+      "id": "dda16c32-8203-42ae-b42f-61ce6dfa7b13",
+      "name": "Facebook Graph API"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Blog Content": {
+      "main": [
+        [
+          {
+            "node": "Content Analysis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Content Analysis": {
+      "main": [
+        [
+          {
+            "node": "Image Selection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Selection": {
+      "main": [
+        [
+          {
+            "node": "Needs Image Generation?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Needs Image Generation?": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Merge Image Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge Image Results": {
+      "main": [
+        [
+          {
+            "node": "Image Optimization",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Social Content": {
+      "main": [
+        [
+          {
+            "node": "Posting Schedule Manager",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Posting Schedule Manager": {
+      "main": [
+        [
+          {
+            "node": "Twitter Post",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "LinkedIn Post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twitter Post": {
+      "main": [
+        [
+          {
+            "node": "Collect Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LinkedIn Post": {
+      "main": [
+        [
+          {
+            "node": "Collect Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Collect Results": {
+      "main": [
+        [
+          {
+            "node": "Send Notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Respond to Webhook": {
+      "main": [
+        [
+          {
+            "node": "Fetch Blog Content",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "aebbf1e1-6e4b-4cf0-8d70-c3f6b8c1ed16",
+  "meta": {
+    "instanceId": "010748b7a1466c46dced3f8b2bdbc3bc174722f0672e5a4c9529354f5ff306f8"
+  },
+  "id": "zMlNPgBJvMmIC5Xr",
+  "tags": [
+    {
+      "name": "Social Media",
+      "id": "HwKlYz1pUpkQSM6v",
+      "createdAt": "2025-07-16T03:32:47.007Z",
+      "updatedAt": "2025-07-16T03:32:47.007Z"
+    }
+  ]
+}
