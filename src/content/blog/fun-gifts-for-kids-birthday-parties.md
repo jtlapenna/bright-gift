@@ -41,8 +41,6 @@ Looking for thoughtful gift ideas? Check out this comprehensive guide for inspir
     hashtags: "giftideas,gifts,brightgift,giftguide"
 ---
 
-*As an Amazon Associate and Bookshop.org affiliate, we earn from qualifying purchases. This post contains affiliate links, which means we may earn a commission if you click through and make a purchase, at no additional cost to you.*
-
 ### Introduction
 
 Birthday parties are magical moments for kids—and finding the perfect gift can make the celebration even more memorable! Whether you're shopping for your own child or a friend's, the right present can spark creativity, encourage learning, and bring endless joy. This guide features handpicked, parent-approved gifts that stand out at any party and are sure to delight both kids and their families.

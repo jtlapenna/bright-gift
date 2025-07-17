@@ -13,31 +13,7 @@ category: "gift-guide"
 readTime: 12
 featured: true
 draft: false
-affiliateLinks:
-  - text: "The Very Hungry Caterpillar by Eric Carle"
-    url: "https://bookshop.org/a/brightgift/9780399226908"
-    platform: "bookshop"
-  - text: "Where the Wild Things Are by Maurice Sendak"
-    url: "https://bookshop.org/a/brightgift/9780060254926"
-    platform: "bookshop"
-  - text: "The Midnight Library by Matt Haig"
-    url: "https://bookshop.org/a/brightgift/9780525559474"
-    platform: "bookshop"
-  - text: "Atomic Habits by James Clear"
-    url: "https://bookshop.org/a/brightgift/9780735211292"
-    platform: "bookshop"
-  - text: "Reading Light for Books"
-    url: "https://www.amazon.com/s?k=reading+light+book&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "Book Lover's Candle Set"
-    url: "https://www.amazon.com/s?k=book+lover+candle+set&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "Reading Journal"
-    url: "https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20"
-    platform: "amazon"
 ---
-
-*As an Amazon Associate and Bookshop.org affiliate, we earn from qualifying purchases. This post contains affiliate links, which means we may earn a commission if you click through and make a purchase, at no additional cost to you.*
 
 ## Why Reading Level Matters When Choosing Book Gifts
 

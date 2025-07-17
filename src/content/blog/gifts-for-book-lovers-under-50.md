@@ -31,8 +31,6 @@ affiliateLinks:
     platform: "amazon"
 ---
 
-*As an Amazon Associate and Bookshop.org affiliate, we earn from qualifying purchases. This post contains affiliate links, which means we may earn a commission if you click through and make a purchase, at no additional cost to you.*
-
 ## Why Book Lovers Make the Best Gift Recipients
 
 Book lovers are some of the most thoughtful and appreciative gift recipients you'll ever find. They value experiences, knowledge, and items that enhance their reading journey. Whether they're into fiction, non-fiction, or specific genres, there's always something perfect for the bibliophile in your life.

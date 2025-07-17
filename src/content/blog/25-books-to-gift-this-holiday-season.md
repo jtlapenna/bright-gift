@@ -49,7 +49,7 @@ affiliateLinks:
     platform: "amazon"
 ---
 
-*As an Amazon Associate and Bookshop.org affiliate, we earn from qualifying purchases. This post contains affiliate links, which means we may earn a commission if you click through and make a purchase, at no additional cost to you.*
+
 
 ## Why Books Make the Perfect Holiday Gifts
 
