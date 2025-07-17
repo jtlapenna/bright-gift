@@ -3,12 +3,13 @@ title: "How AI is Revolutionizing Gift Shopping: A Complete Guide to AI Gift Ide
 metaTitle: "AI Gift Idea Generator: How AI is Revolutionizing Gift Shopping | BrightGift"
 metaDescription: "Discover how AI gift idea generators are transforming gift shopping. Learn how artificial intelligence creates personalized gift recommendations and find the best AI gift tools for every occasion."
 description: "Explore the future of gift shopping with AI-powered gift idea generators. Learn how artificial intelligence creates personalized recommendations and discover the best AI gift tools available."
-date: "2025-01-08"
-image: "/images/blog/ai-gift-shopping-banner.webp"
+pubDate: "2025-01-08"
+heroImage: "/images/blog/ai-gift-shopping-banner.webp"
 ogImage: "/images/blog/ai-gift-shopping-banner.webp"
 socialImage: "/images/blog/ai-gift-shopping-banner.webp"
 tags: ["AI gifts", "gift technology", "AI gift generator", "artificial intelligence", "gift shopping", "personalized gifts"]
-keywords: ["AI gift idea generator", "AI gift shopping", "AI gift recommendations", "AI gift finder", "artificial intelligence gifts", "AI gift tools", "AI gift suggestions"]
+priceRange: "Free-$100+"
+amazonLink: "https://www.amazon.com/s?k=AI+gift+ideas+personalized&tag=brightgift-20"
 readTime: 12
 featured: true
 draft: false

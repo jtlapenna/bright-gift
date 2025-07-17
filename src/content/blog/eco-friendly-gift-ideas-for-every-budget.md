@@ -3,12 +3,13 @@ title: "Eco-Friendly Gift Ideas for Every Budget (Sustainable & Thoughtful)"
 metaTitle: "Eco-Friendly Gifts: 15 Sustainable Gift Ideas for Every Budget | BrightGift"
 metaDescription: "Looking for the perfect eco-friendly gift? Discover 15 sustainable gift ideas for every budget, including green gifts under $25. Shop smarter today!"
 description: "Find the perfect present with our curated selection of eco-friendly and sustainable gifts for every budget."
-date: "2025-07-03"
-image: "/images/blog/eco-friendly-gift-ideas-banner.webp"
+pubDate: "2025-07-03"
+heroImage: "/images/blog/eco-friendly-gift-ideas-banner.webp"
 ogImage: "/images/blog/eco-friendly-gift-ideas-og.webp"
 socialImage: "/images/blog/eco-friendly-gift-ideas-social.webp"
 tags: ["gift guide", "eco-friendly", "sustainable", "budget gifts", "green gifts"]
-keywords: ["eco-friendly gifts", "sustainable gifts", "green gift ideas", "gifts under $25"]
+priceRange: "$7-$70"
+amazonLink: "https://www.amazon.com/s?k=eco+friendly+gifts+sustainable&tag=brightgift-20"
 readTime: 7
 featured: true
 draft: false

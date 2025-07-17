@@ -3,16 +3,17 @@ title: "Gifts for Remote Workers Under $50"
 metaTitle: "Gifts for Remote Workers: 15 Affordable Ideas Under $50 | BrightGift"
 metaDescription: "Looking for the best gifts for remote workers? Discover 15 affordable work from home gift ideas under $50 that boost productivity and comfort. Shop smarter today!"
 description: "Find the perfect present for remote employees, coworkers, or friends working from home with our curated list of budget-friendly gifts under $50."
-date: "2024-07-04"
-image: "/images/blog/gifts-for-remote-workers-under-50/wfh-under-50-banner.webp"
-ogImage: "/images/blog/gifts-for-remote-workers-under-50/wfh-under-50-banner.webp"
+pubDate: "2024-07-04"
+heroImage: "/images/blog/gifts-for-remote-workers-under-50/wfh-under-50-banner.webp"
+ogImage: "/images/blog/gifts-for-remote-workers-under-50/wfh-under-50-OG.png"
+socialImage: "/images/blog/gifts-for-remote-workers-under-50/wfh-under-50-banner.webp"
 tags: ["gift guide", "remote work", "budget gifts", "coworkers", "work from home"]
-keywords: ["gifts for remote workers", "work from home gift ideas", "best gifts for remote employees", "affordable remote work gifts", "gifts for coworkers under $50"]
+priceRange: "$10-$40"
+amazonLink: "https://www.amazon.com/s?k=remote+work+gifts+under+50&tag=brightgift-20"
 readTime: 7
 featured: true
 draft: false
 ---
-
 
 Working from home is here to stay, and finding the right gift for remote workers can make a real difference in their daily routine. Whether you're shopping for a coworker, friend, or family member, the best gifts for remote employees are practical, thoughtful, and budget-friendly. In this guide, you'll discover 15 affordable work from home gift ideas under $50 that boost productivity, comfort, and well-being.
 
