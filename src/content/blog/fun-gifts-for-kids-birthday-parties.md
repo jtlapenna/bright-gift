@@ -12,36 +12,33 @@ draft: false
 status: "published"
 socialPosts:
   instagram:
-  caption: "🎁 Fun Gifts for Kids' Birthday Parties
+    caption: "🎁 Fun Gifts for Kids' Birthday Parties
 
 Explore fun and engaging gifts for kids' birthday parties that kids will love and parents will appreciate.
 
 #giftideas #gifts #brightgift"
-  hashtags: "giftideas,gifts,brightgift,giftguide"
-socialPosts:
+    hashtags: "giftideas,gifts,brightgift,giftguide"
   twitter:
-  text: "Fun Gifts for Kids' Birthday Parties
+    text: "Fun Gifts for Kids' Birthday Parties
 
 Explore fun and engaging gifts for kids' birthday parties that kids will love and parents will appreciate.
 
 #giftideas #gifts #brightgift"
-  hashtags: "giftideas,gifts,brightgift"
-socialPosts:
+    hashtags: "giftideas,gifts,brightgift"
   facebook:
-  text: "Fun Gifts for Kids' Birthday Parties
+    text: "Fun Gifts for Kids' Birthday Parties
 
 Explore fun and engaging gifts for kids' birthday parties that kids will love and parents will appreciate.
 
 What do you think of these gift ideas? Share your thoughts below! 👇"
-  hashtags: "giftideas,gifts,brightgift"
-socialPosts:
+    hashtags: "giftideas,gifts,brightgift"
   linkedin:
-  text: "Fun Gifts for Kids' Birthday Parties
+    text: "Fun Gifts for Kids' Birthday Parties
 
 Explore fun and engaging gifts for kids' birthday parties that kids will love and parents will appreciate.
 
 Looking for thoughtful gift ideas? Check out this comprehensive guide for inspiration."
-  hashtags: "giftideas,gifts,brightgift,giftguide"
+    hashtags: "giftideas,gifts,brightgift,giftguide"
 ---
 
 *As an Amazon Associate and Bookshop.org affiliate, we earn from qualifying purchases. This post contains affiliate links, which means we may earn a commission if you click through and make a purchase, at no additional cost to you.*
