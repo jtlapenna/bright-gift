@@ -13,7 +13,6 @@ featured: false
 draft: false
 ---
 
-*As an Amazon Associate, we earn from qualifying purchases. This post contains affiliate links, which means we may earn a commission if you click through and make a purchase, at no additional cost to you.*
 
 # Special Birthday Gifts for LGBTQ+ Youth: 15 Thoughtful Ideas to Celebrate Identity
 

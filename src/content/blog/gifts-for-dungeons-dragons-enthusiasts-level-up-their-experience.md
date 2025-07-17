@@ -14,7 +14,6 @@ draft: false
 status: "published"
 ---
 
-*As an Amazon Associate, we earn from qualifying purchases. This post contains affiliate links, which means we may earn a commission if you click through and make a purchase, at no additional cost to you.*
 
 # Gifts for Dungeons & Dragons Enthusiasts: 15 Epic Ways to Level Up Their Experience
 

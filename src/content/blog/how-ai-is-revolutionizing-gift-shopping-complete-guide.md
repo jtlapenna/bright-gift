@@ -16,7 +16,6 @@ draft: false
 
 ![Illustration of a modern gift box with AI circuit patterns, surrounded by gift icons like a smartwatch, book, ring, and plant, in BrightGift brand colors.](/images/blog/ai-gift-shopping-banner.webp)
 
-*As an Amazon Associate, we earn from qualifying purchases. This post contains affiliate links, which means we may earn a commission if you click through and make a purchase, at no additional cost to you.*
 
 ## The Rise of AI in Gift Shopping: A Game-Changer for Thoughtful Giving
 

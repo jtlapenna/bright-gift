@@ -14,7 +14,6 @@ featured: true
 draft: false
 ---
 
-*As an Amazon Associate, we earn from qualifying purchases. This post contains affiliate links, which means we may earn a commission if you click through and make a purchase, at no additional cost to you.*
 
 ![Eco-friendly gift ideas banner: reusable straws, beeswax wraps, solar charger, and leaves on a light background](/images/blog/eco-friendly-gift-ideas-banner.webp "Eco-friendly gift ideas banner")
 
