@@ -130,7 +130,7 @@ const readTime = post.data.readTime || 5;
 
     <!-- Affiliate Disclosure -->
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
-      <p class="text-xs text-gray-500 italic text-center">
+      <p class="text-xs text-gray-500 italic">
         As an Amazon Associate and Bookshop.org affiliate, we earn from qualifying purchases. This post contains affiliate links, which means we may earn a commission if you click through and make a purchase, at no additional cost to you.
       </p>
     </div>
@@ -424,5 +424,26 @@ const readTime = post.data.readTime || 5;
   .prose .amazon-link {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+  }
+  
+  /* Ensure price range and Amazon link are on the same line */
+  .prose p:has(strong:contains("Price Range:")) {
+    display: inline;
+    margin-right: 1rem;
+  }
+  
+  .prose p:has(.amazon-link) {
+    display: inline;
+    margin-left: 0;
+  }
+  
+  /* Alternative approach for better browser support */
+  .prose .price-and-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
   }
 </style> 
