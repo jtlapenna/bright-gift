@@ -3,6 +3,50 @@
 ## Overview
 This guide outlines the systematic cleanup process for all blog posts to ensure consistency, proper formatting, and removal of duplicate content.
 
+## Progress Tracking
+
+### ✅ Completed Tasks
+- **Template Fix:** Affiliate disclosure alignment fixed in `src/pages/blog/[...slug].astro`
+- **Old Affiliate Disclosures:** Removed from all 25 blog posts
+- **Fully Fixed Posts (11/25):**
+  - ✅ `affordable-gifts-for-pet-lovers-under-30.md`
+  - ✅ `unique-graduation-gifts-creative-minds.md`
+  - ✅ `chic-wedding-gifts-for-the-stylish-couple.md`
+  - ✅ `best-gifts-for-dads-who-love-outdoor-adventures.md`
+  - ✅ `best-home-gifts-on-amazon-2024.md`
+  - ✅ `gifts-for-new-homeowners-2025.md`
+  - ✅ `last-minute-birthday-gifts-for-busy-professionals.md`
+  - ✅ `gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md`
+  - ✅ `unique-christmas-gifts-for-gamers-who-have-everything-2024.md`
+  - ✅ `special-birthday-gifts-for-lgbtq-youth.md`
+  - ✅ `unique-gifts-for-board-game-enthusiasts.md`
+
+### 🔄 Remaining Posts to Fix (14/25)
+Posts that still need full cleanup (duplicate titles, frontmatter format, price/link layout):
+
+1. `gifts-for-remote-workers-under-50.md` - Needs frontmatter fix
+2. `20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75.md` - Needs frontmatter fix
+3. `25-thoughtful-housewarming-gifts-for-new-homeowners-under-75.md` - Needs frontmatter fix
+4. `25-unique-anniversary-gift-ideas-under-50.md` - Needs frontmatter fix
+5. `30-unique-gift-ideas-for-new-parents-baby-shower-beyond.md` - Needs frontmatter fix
+6. `eco-friendly-gift-ideas-for-every-budget.md` - Needs frontmatter fix
+7. `gifts-for-gamers-under-50.md` - Needs frontmatter fix
+8. `gifts-for-girlfriend-unique-romantic-ideas.md` - Needs frontmatter fix
+9. `gifts-under-25-for-coworkers.md` - Needs frontmatter fix
+10. `how-ai-is-revolutionizing-gift-shopping-complete-guide.md` - Needs frontmatter fix
+11. `gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md` - Needs frontmatter fix
+12. `unique-christmas-gifts-for-gamers-who-have-everything-2024.md` - Needs frontmatter fix
+13. `unique-gifts-for-board-game-enthusiasts.md` - Needs frontmatter fix
+14. `gifts-for-new-homeowners-2025.md` - Needs frontmatter fix
+
+### 📋 Current Task Checklist
+For each remaining post, verify and fix:
+- [ ] Remove duplicate title (if exists)
+- [ ] Fix frontmatter format (date → pubDate, image → heroImage, etc.)
+- [ ] Add missing tags (if needed)
+- [ ] Fix price range and Amazon link layout (same line)
+- [ ] Quality check content structure
+
 ## Issues to Address
 
 ### 1. Affiliate Disclosure Alignment

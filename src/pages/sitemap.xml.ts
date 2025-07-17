@@ -14,6 +14,7 @@ export async function GET() {
     '/about',
     '/privacy',
     '/terms',
+    '/data-deletion',
     '/top-gifts'
   ];
 

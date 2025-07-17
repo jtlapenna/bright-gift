@@ -1,15 +1,9 @@
-# 🌟 BrightGift Brand Style Guide (Modern & Friendly Theme)
+# BrightGift Style Guide
 
-## 1. Brand Voice & Messaging
-- **Tone**: Friendly, clear, helpful with a touch of charm
-- **Tagline**: *"Let's Find Something Fun!"*
-- **Voice Guidelines**:
-  - Keep language inclusive and gender-neutral
-  - Use short, action-oriented phrases for CTAs
-  - Favor warmth and curiosity over exuberance
-  - Examples:
-    - "Need a gift for someone tricky? We've got ideas."
-    - "Smart, surprising gifts picked just for them."
+## Brand Identity
+- **Brand Name**: BrightGift
+- **Tagline**: *"Find the Perfect Gift with AI!"*
+- **Mission**: Help people find thoughtful, personalized gifts using AI technology
 
 ---
 
