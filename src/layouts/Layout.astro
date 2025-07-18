@@ -85,6 +85,14 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 		<link rel="dns-prefetch" href="https://bookshop.org" />
 		<link rel="preconnect" href="https://analytics.ahrefs.com" />
 
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-W7B2JFWV');</script>
+		<!-- End Google Tag Manager -->
+
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9T1R5LN5VG"></script>
 		<script>
@@ -95,7 +103,7 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 		</script>
 
 		<!-- Ahrefs Web Analytics -->
-		<script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="Quv9IM6wKm4wMy6MXyBE4w" async></script>
+		<script src="https://analytics.ahrefs.com/analytics.js" data-key="Quv9IM6wKm4wMy6MXyBE4w" async></script>
 
 		<!-- Amazon Link Processing Script -->
 		<script is:inline>
@@ -114,6 +122,11 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 		</script>
 	</head>
 	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7B2JFWV"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		
 		{ !isHome && (
 			<header class="w-full bg-[#FEF2D3] border-b border-slate-100 py-3 px-4 flex items-center">
 				<a href="/" class="flex items-center gap-2">
