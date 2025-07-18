@@ -1,9 +1,9 @@
 ---
 title: "Eco-Friendly Gifts for Outdoor Lovers: Sustainably Celebrating Nature"
 slug: "eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature"
-image: "/images/blog/eco-friendly-gift-ideas-banner.webp"
-ogImage: "/images/blog/eco-friendly-gift-ideas-og.webp"
-socialImage: "/images/blog/eco-friendly-gift-ideas-social.webp"
+image: "/images/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature-banner.webp"
+ogImage: "/images/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature-og.webp"
+socialImage: "/images/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature-social.webp"
 category: "gift-guides"
 description: "Find eco-friendly gifts for outdoor enthusiasts that promote sustainability while enjoying nature."
 keywords: "eco-friendly gifts, gifts for outdoor lovers, sustainable gifts, nature gifts, outdoor gear"
