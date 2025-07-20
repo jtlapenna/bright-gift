@@ -34,12 +34,24 @@ const organizationData = {
 	"@type": "Organization",
 	"name": "BrightGift",
 	"url": "https://bright-gift.com",
-	"logo": "https://bright-gift.com/bright-gift-logo.png",
+	"logo": {
+		"@type": "ImageObject",
+		"url": "https://bright-gift.com/bright-gift-logo.png",
+		"width": 512,
+		"height": 512
+	},
 	"sameAs": [
-		"https://twitter.com/brightgift",
-		"https://www.facebook.com/brightgift",
-		"https://www.instagram.com/brightgift"
-	]
+		"https://x.com/Bright_Gift_AI",
+		"https://www.facebook.com/profile.php?id=61578326463381",
+		"https://www.instagram.com/bright_gift_ai/",
+		"https://www.pinterest.com/0nd1k1wpo6tpeq69x0kebf7izyhu1i/",
+		"https://bsky.app/profile/brightgift.bsky.social"
+	],
+	"contactPoint": {
+		"@type": "ContactPoint",
+		"contactType": "customer service",
+		"url": "https://bright-gift.com"
+	}
 };
 
 // Breadcrumb schema
@@ -344,7 +356,7 @@ const faqData = {
 	<footer class="bg-[#1C2E4A] text-white text-sm py-6 mt-16 text-center">
 		<div class="flex flex-col items-center gap-2">
 			<span class="flex items-center gap-2">
-				<img src="/bright-gift-logo.png" alt="" class="h-6 inline" />
+				<img src="/bright-gift-logo.png" alt="BrightGift logo" class="h-6 inline" />
 				<span>BrightGift &copy; {new Date().getFullYear()}</span>
 			</span>
 			<span>

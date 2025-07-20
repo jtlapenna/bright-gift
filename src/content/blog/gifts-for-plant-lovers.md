@@ -1,11 +1,11 @@
 ---
 title: "Gifts for Plant Lovers Under $75: 15 Perfect Presents for Green Thumbs"
-metaTitle: "15 Best Gifts for Plant Lovers Under $75 in 2024 - From Rare Plants to Stylish Accessories"
+metaTitle: "15 Best Gifts for Plant Lovers Under $75 - Rare Plants & Accessories"
 metaDescription: "Find the perfect gift for plant enthusiasts under $75! Discover rare houseplants, stylish planters, care tools, and accessories that every green thumb will love."
 description: "Discover thoughtful gifts for plant enthusiasts under $75, from rare houseplants to stylish plant accessories that will make any green thumb happy."
 date: "2024-07-27"
-image: "/images/blog/plant-lovers-under-75/plant-lovers-under-75.png"
-ogImage: "/images/blog/plant-lovers-under-75/plant-lovers-under-75.png"
+image: "/images/blog/plant-lovers-under-75/plant-lovers-under-75.webp"
+ogImage: "/images/blog/plant-lovers-under-75/plant-lovers-under-75.webp"
 tags: ["plant-lovers", "houseplants", "gardening", "under-75", "budget-friendly", "any-occasion"]
 keywords: ["gifts for plant lovers", "plant gifts under 75", "houseplant gifts", "gardening gifts", "plant accessories", "budget plant gifts"]
 readTime: 8
@@ -200,4 +200,4 @@ Remember, the best plant gifts are those that show you understand and appreciate
 
 ---
 
-*Looking for more gift ideas? Check out our other gift guides for different budgets and interests. Have a specific plant lover in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present!* 
+*Looking for more gift ideas? Check out our [Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget) or explore our [Housewarming Gifts for New Homeowners](https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75). Have a specific plant lover in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present!* 

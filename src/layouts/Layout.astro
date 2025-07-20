@@ -22,7 +22,8 @@ const {
 } = Astro.props;
 
 const isHome = Astro.url.pathname === "/";
-const canonicalUrl = canonical || Astro.url.href;
+// Ensure canonical URL uses HTTPS and proper format
+const canonicalUrl = canonical || Astro.url.href.replace('http://', 'https://');
 const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.site || Astro.url.origin).toString();
 ---
 

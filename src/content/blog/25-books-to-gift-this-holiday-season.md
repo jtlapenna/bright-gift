@@ -1,5 +1,5 @@
 ---
-title: "25 Books to Gift This Holiday Season - Perfect for Every Reader"
+title: "25 Books to Gift This Holiday Season: Perfect for Every Reader"
 description: "Discover the perfect books for everyone on your holiday gift list. From fiction lovers to non-fiction enthusiasts, find thoughtful book gifts for every reader in your life."
 image: "/images/blog/holiday-books-banner.webp"
 ogImage: "/images/blog/holiday-books-og.webp"

@@ -1,0 +1,211 @@
+{
+  "name": "Simplified Blog Image Upload Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "code": "// Simplified test data - replace with your actual Code2 output\nconst testData = {\n  slug: \"affordable-gifts-for-pet-lovers-under-30\",\n  filename: \"affordable-gifts-for-pet-lovers-under-30.md\",\n  imageFiles: [\n    \"affordable-gifts-for-pet-lovers-under-30-banner.webp\",\n    \"affordable-gifts-for-pet-lovers-under-30-og.webp\",\n    \"affordable-gifts-for-pet-lovers-under-30-social.webp\"\n  ],\n  imagePaths: {\n    banner: \"/images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-banner.webp\",\n    og: \"/images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-og.webp\",\n    social: \"/images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-social.webp\"\n  },\n  base64: \"UklGRuZmAABXRUJQVlA4INpmAABQPQKdASqwBCADPm02mUkkIyWmIpNY0MANiWVLb8h+T5o8V+/mWt/Kedx5EBZBCpOz0h3A+488b44iO/77/CeIDFvnb85/bv8v/zf8X0Z3PP2j/H/8T/E++LyO7R89/yr9p/8v+H/zv7s/Oz/W/st7mf1p/4fz//+f2B/rb+x/+b+Lf/R/ar3P/vJ+TvwD/a79tPeN/3X7de6n++f8L2AP7D/yf//68HsXf6T/y///3BP5//qf/t7Sf/k/en4V/7L/1v3E9rn/+f9H3AP/j6gH/664/1HzF/Ou3HWYYV/kPBn7hKIuzv+D8Qjxh7B75nyjQD9f/RR/D80P5L/W+wB/h/Dd8SX8F/5vYE/mv9/9Zz/i8vf7T0d/sx9LQRPXvIdLm3ht1Y95DpdIhiHS5t4bfNjbw26se8h0ubeG3Vj3kOlzbw3BERdYHNvDbqx+U3MPSei9TBJgdLm3ht1Y/rmk7yHS5salcoXlpP6+LlDDALJtKaKD/EXtdyse8h0g3OqZt7Tn+fbqx7yFEYKkzZhxGj9QMEJLQGbjyoJbIvfGlPiHcrHwNYps3GCtH3JQ...\",\n  blogPost: \"---\\ntitle: \\\"Affordable Gifts for Pet Lovers Under $30\\\"\\nslug: \\\"affordable-gifts-for-pet-lovers-under-30\\\"\\nimage: \\\"/images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-banner.webp\\\"\\nogImage: \\\"/images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-og.webp\\\"\\nsocialImage: \\\"/images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-social.webp\\\"\\ncategory: \\\"gift-guides\\\"\\ndescription: \\\"Delight the pet lovers in your life with budget-friendly gifts under $30. Discover fun and practical items for furry friends!\\\"\\nkeywords: \\\"gifts for pet lovers under $30, affordable pet gifts, budget pet gifts, pet accessories, cute pet items\\\"\\ndate: \\\"2025-07-19\\\"\\ndraft: false\\nstatus: \\\"published\\\"\\n---\\n\\n* As an Amazon Associate, we earn from qualifying purchases.*\\n\\n# Affordable Gifts for Pet Lovers Under $30\\n\\nFinding the perfect gift for pet lovers doesn't have to break the bank...\",\n  title: \"Affordable Gifts for Pet Lovers Under $30\",\n  description: \"Delight the pet lovers in your life with budget-friendly gifts under $30. Discover fun and practical items for furry friends!\",\n  category: \"gift-guides\",\n  date: \"2025-07-19\"\n};\n\n// Create 3 items for the 3 images\nconst items = [\n  {\n    json: {\n      ...testData,\n      imageType: \"banner\",\n      imageIndex: 0,\n      originalFilename: testData.imageFiles[0],\n      originalPath: testData.imagePaths.banner\n    }\n  },\n  {\n    json: {\n      ...testData,\n      imageType: \"og\",\n      imageIndex: 1,\n      originalFilename: testData.imageFiles[1],\n      originalPath: testData.imagePaths.og\n    }\n  },\n  {\n    json: {\n      ...testData,\n      imageType: \"social\",\n      imageIndex: 2,\n      originalFilename: testData.imageFiles[2],\n      originalPath: testData.imagePaths.social\n    }\n  }\n];\n\nreturn items;"
+      },
+      "id": "simplified-code2",
+      "name": "Simplified Code2",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "loop-over-images",
+      "name": "Loop Over Images",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "code": "// Prepare image data for upload\nconst item = $input.first();\nconst data = item.json;\n\n// Set the correct filename for this image\nconst filename = `${data.slug}-${data.imageType}.webp`;\nconst filePath = `public/images/blog/${data.slug}/${filename}`;\n\nconsole.log('Processing image:', filename);\nconsole.log('Image type:', data.imageType);\nconsole.log('File path:', filePath);\n\nreturn [{\n  json: {\n    slug: data.slug,\n    filename: filename,\n    filePath: filePath,\n    base64: data.base64,\n    imageType: data.imageType,\n    imageIndex: data.imageIndex,\n    originalFilename: data.originalFilename,\n    originalPath: data.originalPath,\n    blogPost: data.blogPost,\n    title: data.title,\n    description: data.description,\n    category: data.category,\n    date: data.date\n  }\n}];"
+      },
+      "id": "prepare-image-data",
+      "name": "Prepare Image Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://api.github.com/repos/jtlapenna/bright-gift/contents/{{ $json.filePath }}?ref=preview",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "nodeCredentialType": "githubApi",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "check-file-exists",
+      "name": "Check File Exists",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "code": "// Merge original image data with file existence check\nconst originalData = $input.all()[0].json;\nconst fileCheckData = $input.all()[1]?.json;\n\nconsole.log('Original data keys:', Object.keys(originalData));\nconsole.log('File check data keys:', Object.keys(fileCheckData || {}));\nconsole.log('File exists:', !!fileCheckData);\n\n// Determine if file exists and get SHA\nconst isExistingFile = !!fileCheckData && fileCheckData.sha;\nconst fileSha = isExistingFile ? fileCheckData.sha : null;\n\nconsole.log('Is existing file:', isExistingFile);\nconsole.log('File SHA:', fileSha);\n\n// Build request body\nlet requestBody = {\n  message: `Add ${originalData.filename}`,\n  content: originalData.base64,\n  branch: \"preview\"\n};\n\n// Only add SHA if file exists\nif (isExistingFile && fileSha) {\n  requestBody.sha = fileSha;\n  console.log('Adding SHA to request body:', fileSha);\n} else {\n  console.log('No SHA - will create new file');\n}\n\nconsole.log('Final request body keys:', Object.keys(requestBody));\n\nreturn [{\n  json: {\n    ...originalData,\n    isExistingFile: isExistingFile,\n    fileSha: fileSha,\n    requestBody: requestBody\n  }\n}];"
+      },
+      "id": "build-request-body",
+      "name": "Build Request Body",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1120, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://api.github.com/repos/jtlapenna/bright-gift/contents/{{ $json.filePath }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "nodeCredentialType": "githubApi",
+        "sendBody": true,
+        "bodyContentType": "json",
+        "jsonBody": "={{ $json.requestBody }}",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "upload-to-github",
+      "name": "Upload to GitHub",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1340, 300]
+    },
+    {
+      "parameters": {
+        "code": "// Log upload result\nconst result = $input.first();\nconst data = result.json;\n\nconsole.log('Upload completed for:', data.filename);\nconsole.log('Upload result keys:', Object.keys(data));\n\n// Check if upload was successful\nconst isSuccess = data.content && data.sha;\n\nif (isSuccess) {\n  console.log('✅ Upload successful!');\n} else {\n  console.log('❌ Upload failed!');\n  console.log('Error details:', data);\n}\n\nreturn [{\n  json: {\n    filename: data.filename || 'unknown',\n    uploadSuccess: isSuccess,\n    result: data\n  }\n}];"
+      },
+      "id": "log-upload-result",
+      "name": "Log Upload Result",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1560, 300]
+    },
+    {
+      "parameters": {
+        "amount": 1000,
+        "unit": "milliseconds"
+      },
+      "id": "wait-between-uploads",
+      "name": "Wait Between Uploads",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [1780, 300]
+    },
+    {
+      "parameters": {
+        "code": "// Collect all upload results\nconst allResults = $input.all();\n\nconsole.log('=== UPLOAD SUMMARY ===');\nconsole.log('Total images processed:', allResults.length);\n\nlet successCount = 0;\nlet failureCount = 0;\n\nallResults.forEach((result, index) => {\n  const data = result.json;\n  if (data.uploadSuccess) {\n    successCount++;\n    console.log(`✅ ${index + 1}. ${data.filename} - SUCCESS`);\n  } else {\n    failureCount++;\n    console.log(`❌ ${index + 1}. ${data.filename} - FAILED`);\n  }\n});\n\nconsole.log('\\n=== FINAL SUMMARY ===');\nconsole.log(`Successful uploads: ${successCount}`);\nconsole.log(`Failed uploads: ${failureCount}`);\nconsole.log(`Total: ${allResults.length}`);\n\nreturn [{\n  json: {\n    summary: {\n      total: allResults.length,\n      successful: successCount,\n      failed: failureCount,\n      results: allResults.map(r => r.json)\n    }\n  }\n}];"
+      },
+      "id": "upload-summary",
+      "name": "Upload Summary",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2000, 300]
+    }
+  ],
+  "connections": {
+    "Simplified Code2": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Images",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Images": {
+      "main": [
+        [
+          {
+            "node": "Prepare Image Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Image Data": {
+      "main": [
+        [
+          {
+            "node": "Check File Exists",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check File Exists": {
+      "main": [
+        [
+          {
+            "node": "Build Request Body",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Request Body": {
+      "main": [
+        [
+          {
+            "node": "Upload to GitHub",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload to GitHub": {
+      "main": [
+        [
+          {
+            "node": "Log Upload Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Log Upload Result": {
+      "main": [
+        [
+          {
+            "node": "Wait Between Uploads",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait Between Uploads": {
+      "main": [
+        [
+          {
+            "node": "Upload Summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-07-19T00:00:00.000Z",
+  "versionId": "1"
+} 

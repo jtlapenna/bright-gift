@@ -11,11 +11,11 @@ export async function GET() {
   const staticPages = [
     '',
     '/blog',
-    '/about',
     '/privacy',
     '/terms',
     '/data-deletion',
-    '/top-gifts'
+    '/top-gifts',
+    '/ai-gift-guide'
   ];
 
   // Generate URLs for static pages

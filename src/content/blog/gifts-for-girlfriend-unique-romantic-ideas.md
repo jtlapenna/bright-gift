@@ -1,7 +1,7 @@
 ---
-title: "15 Thoughtful Gifts for Your Girlfriend That Aren't Cliché (But Still Romantic)"
+title: "15 Thoughtful Gifts for Your Girlfriend: Unique & Romantic Ideas"
 metaTitle: "Gifts for Girlfriend: 15 Unique, Romantic & Thoughtful Ideas | BrightGift"
-metaDescription: "Impress your girlfriend with these 15 unique, romantic, and thoughtful gifts that go beyond clichés. Discover the best gifts for your girlfriend under $50 and make her feel truly special."
+metaDescription: "Impress your girlfriend with 15 unique, romantic gifts that go beyond clichés. Discover thoughtful presents under $50 that will make her feel truly special."cial."
 description: "Find the perfect present with our curated list of 15 thoughtful, non-cliché gifts for your girlfriend—romantic, unique, and sure to impress."
 date: "2024-07-07"
 image: "/images/blog/gifts-for-girlfriend-unique-romantic-ideas/girlfriend-banner.webp"

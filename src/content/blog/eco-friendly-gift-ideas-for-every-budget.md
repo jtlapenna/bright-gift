@@ -1,5 +1,5 @@
 ---
-title: "Eco-Friendly Gift Ideas for Every Budget (Sustainable & Thoughtful)"
+title: "Eco-Friendly Gift Ideas for Every Budget: Sustainable & Thoughtful"
 metaTitle: "Eco-Friendly Gifts: 15 Sustainable Gift Ideas for Every Budget | BrightGift"
 metaDescription: "Looking for the perfect eco-friendly gift? Discover 15 sustainable gift ideas for every budget, including green gifts under $25. Shop smarter today!"
 description: "Find the perfect present with our curated selection of eco-friendly and sustainable gifts for every budget."
@@ -95,4 +95,4 @@ Encourage eco-friendly habits with a stylish countertop compost bin for food scr
 
 ![Eco-friendly gift ideas social: illustrated gift box with green ribbon, surrounded by icons for water bottle, tote, plant, solar charger, and recycling](/images/blog/eco-friendly-gift-ideas-social.webp "Eco-friendly gift ideas social image")
 
-*Looking for more green gift ideas? Check out our other gift guides for different budgets and interests. Or, try our [Gift Idea Generator](https://bright-gift.com) to discover the perfect eco-friendly present!* 
+*Looking for more green gift ideas? Check out our [Eco-Friendly Gifts for Outdoor Lovers](https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature) or explore our [Ethical Gift Ideas Under $75](https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75). Or, try our [Gift Idea Generator](https://bright-gift.com) to discover the perfect eco-friendly present!* 

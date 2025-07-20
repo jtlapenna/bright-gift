@@ -1,3 +1,26 @@
+# Legacy gift-guides redirects
 /gift-guides/gifts-for-gamers-under-50/   /blog/gifts-for-gamers-under-50/   301
 /gift-guides/gifts-under-25-for-coworkers/   /blog/gifts-under-25-for-coworkers/   301
-/gift-guides/gifts-for-plant-lovers/   /blog/gifts-for-plant-lovers/   301 
+/gift-guides/gifts-for-plant-lovers/   /blog/gifts-for-plant-lovers/   301
+
+# Common 404 redirects - redirect to homepage
+/about   /   301
+/contact   /   301
+/shop   /   301
+/store   /   301
+
+# Blog post variations (common 404s)
+/blog/sample-post   /blog   301
+/blog/handmade-gifts   /blog   301
+
+# Remove trailing slashes for consistency
+/*/   /:splat   301
+
+# Handle common redirect chains and variations
+/blog/gift-guides/*   /blog/:splat   301
+/gift-guides/*   /blog/:splat   301
+
+# Redirect old file extensions to clean URLs
+/*.html   /:splat   301
+/*.htm   /:splat   301
+/*.php   /:splat   301 

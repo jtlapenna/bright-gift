@@ -1,5 +1,5 @@
 ---
-title: "Special Birthday Gifts for LGBTQ+ Youth: 15 Thoughtful Ideas to Celebrate Identity"
+title: "Special Birthday Gifts for LGBTQ+ Youth: 15 Thoughtful Ideas"
 description: "Find the perfect birthday gift for LGBTQ+ youth with our curated selection of thoughtful, inclusive presents that celebrate identity and support their journey of self-expression."
 date: "2024-01-15"
 image: "/images/blog/special-birthday-gifts-for-lgbtq-youth/special-birthday-gifts-for-lgbtq-youth-banner.webp"
