@@ -166,7 +166,7 @@ Challenge their problem-solving skills with logic and puzzle games that require 
 
 Looking for other gaming gift ideas? Check out our guides to:
 - [Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50) for video game enthusiasts
-- [Unique Birthday Gifts for Teens](/blog/unique-birthday-gifts-for-teens-break-the-mold) for young gamers
+-  for young gamers
 - [Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget) for sustainable options
 
 ---

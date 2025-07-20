@@ -1,0 +1,731 @@
+{
+  "timestamp": "2025-07-20T05:58:05.064Z",
+  "summary": {
+    "totalLinks": 117,
+    "uniqueUrls": 23,
+    "working": 21,
+    "broken": 2,
+    "successRate": "91.3"
+  },
+  "brokenLinks": [
+    {
+      "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50-under-50-under-50",
+      "status": 404,
+      "files": [
+        "gifts-for-remote-workers-under-50.md"
+      ]
+    },
+    {
+      "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50-under-50",
+      "status": 404,
+      "files": [
+        "unique-christmas-gifts-for-gamers-who-have-everything-2024.md",
+        "unique-gifts-for-board-game-enthusiasts.md"
+      ]
+    }
+  ],
+  "allLinks": [
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75.md"
+    },
+    {
+      "text": "thoughtful housewarming gifts",
+      "url": "https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75",
+      "context": "[thoughtful housewarming gifts](https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75)",
+      "file": "20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "25-books-to-gift-this-holiday-season.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "25-thoughtful-housewarming-gifts-for-new-homeowners-under-75.md"
+    },
+    {
+      "text": "unique anniversary gifts",
+      "url": "https://bright-gift.com/blog/25-unique-anniversary-gift-ideas-under-50",
+      "context": "[unique anniversary gifts](https://bright-gift.com/blog/25-unique-anniversary-gift-ideas-under-50)",
+      "file": "25-thoughtful-housewarming-gifts-for-new-homeowners-under-75.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "25-thoughtful-housewarming-gifts-for-new-homeowners-under-75.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "25-unique-anniversary-gift-ideas-under-50.md"
+    },
+    {
+      "text": "unique gifts for girlfriends",
+      "url": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas",
+      "context": "[unique gifts for girlfriends](https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas)",
+      "file": "25-unique-anniversary-gift-ideas-under-50.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "25-unique-anniversary-gift-ideas-under-50.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "30-unique-gift-ideas-for-new-parents-baby-shower-beyond.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "30-unique-gift-ideas-for-new-parents-baby-shower-beyond.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "affordable-gifts-for-pet-lovers-under-30.md"
+    },
+    {
+      "text": "Gifts for Plant Lovers",
+      "url": "https://bright-gift.com/blog/gifts-for-plant-lovers",
+      "context": "[Gifts for Plant Lovers](/blog/gifts-for-plant-lovers)",
+      "file": "affordable-gifts-for-pet-lovers-under-30.md"
+    },
+    {
+      "text": "Gifts for Remote Workers Under $50",
+      "url": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50",
+      "context": "[Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50)",
+      "file": "affordable-gifts-for-pet-lovers-under-30.md"
+    },
+    {
+      "text": "Eco-Friendly Gift Ideas",
+      "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
+      "context": "[Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget)",
+      "file": "affordable-gifts-for-pet-lovers-under-30.md"
+    },
+    {
+      "text": "Gifts for New Homeowners",
+      "url": "https://bright-gift.com/blog/gifts-for-new-homeowners-2025",
+      "context": "[Gifts for New Homeowners](/blog/gifts-for-new-homeowners-2025)",
+      "file": "affordable-gifts-for-pet-lovers-under-30.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "affordable-gifts-for-pet-lovers-under-30.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "best-books-for-different-reading-levels.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "best-gifts-for-dads-who-love-outdoor-adventures.md"
+    },
+    {
+      "text": "Gifts for New Homeowners",
+      "url": "https://bright-gift.com/blog/gifts-for-new-homeowners-2025",
+      "context": "[Gifts for New Homeowners](/blog/gifts-for-new-homeowners-2025)",
+      "file": "best-gifts-for-dads-who-love-outdoor-adventures.md"
+    },
+    {
+      "text": "Eco-Friendly Gift Ideas",
+      "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
+      "context": "[Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget)",
+      "file": "best-gifts-for-dads-who-love-outdoor-adventures.md"
+    },
+    {
+      "text": "Gifts for Remote Workers Under $50",
+      "url": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50",
+      "context": "[Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50)",
+      "file": "best-gifts-for-dads-who-love-outdoor-adventures.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "best-gifts-for-dads-who-love-outdoor-adventures.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "best-home-gifts-on-amazon-2024.md"
+    },
+    {
+      "text": "Eco-Friendly Gift Ideas for Every Budget",
+      "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
+      "context": "[Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget)",
+      "file": "best-home-gifts-on-amazon-2024.md"
+    },
+    {
+      "text": "Gifts for Plant Lovers",
+      "url": "https://bright-gift.com/blog/gifts-for-plant-lovers",
+      "context": "[Gifts for Plant Lovers](https://bright-gift.com/blog/gifts-for-plant-lovers)",
+      "file": "best-home-gifts-on-amazon-2024.md"
+    },
+    {
+      "text": "Gifts for Remote Workers Under $50",
+      "url": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50",
+      "context": "[Gifts for Remote Workers Under $50](https://bright-gift.com/blog/gifts-for-remote-workers-under-50)",
+      "file": "best-home-gifts-on-amazon-2024.md"
+    },
+    {
+      "text": "Gifts Under $25 for Coworkers",
+      "url": "https://bright-gift.com/blog/gifts-under-25-for-coworkers",
+      "context": "[Gifts Under $25 for Coworkers](https://bright-gift.com/blog/gifts-under-25-for-coworkers)",
+      "file": "best-home-gifts-on-amazon-2024.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "best-home-gifts-on-amazon-2024.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "chic-wedding-gifts-for-the-stylish-couple.md"
+    },
+    {
+      "text": "Gifts for New Homeowners",
+      "url": "https://bright-gift.com/blog/gifts-for-new-homeowners-2025",
+      "context": "[Gifts for New Homeowners](/blog/gifts-for-new-homeowners-2025)",
+      "file": "chic-wedding-gifts-for-the-stylish-couple.md"
+    },
+    {
+      "text": "Eco-Friendly Gift Ideas",
+      "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
+      "context": "[Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget)",
+      "file": "chic-wedding-gifts-for-the-stylish-couple.md"
+    },
+    {
+      "text": "Gifts for Remote Workers Under $50",
+      "url": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50",
+      "context": "[Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50)",
+      "file": "chic-wedding-gifts-for-the-stylish-couple.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "chic-wedding-gifts-for-the-stylish-couple.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "eco-friendly-gift-ideas-for-every-budget.md"
+    },
+    {
+      "text": "Eco-Friendly Gifts for Outdoor Lovers",
+      "url": "https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature",
+      "context": "[Eco-Friendly Gifts for Outdoor Lovers](https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature)",
+      "file": "eco-friendly-gift-ideas-for-every-budget.md"
+    },
+    {
+      "text": "Ethical Gift Ideas Under $75",
+      "url": "https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75",
+      "context": "[Ethical Gift Ideas Under $75](https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75)",
+      "file": "eco-friendly-gift-ideas-for-every-budget.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "eco-friendly-gift-ideas-for-every-budget.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature.md"
+    },
+    {
+      "text": "Eco-Friendly Gift Ideas for Every Budget",
+      "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
+      "context": "[Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget)",
+      "file": "eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature.md"
+    },
+    {
+      "text": "Ethical Gift Ideas Under $75",
+      "url": "https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75",
+      "context": "[Ethical Gift Ideas Under $75](https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75)",
+      "file": "eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "fun-gifts-for-kids-birthday-parties.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "gifts-for-book-lovers-under-50.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md"
+    },
+    {
+      "text": "Gifts for Gamers",
+      "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50",
+      "context": "[Gifts for Gamers](/blog/gifts-for-gamers-under-50)",
+      "file": "gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md"
+    },
+    {
+      "text": "Gifts for Remote Workers Under $50",
+      "url": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50",
+      "context": "[Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50)",
+      "file": "gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md"
+    },
+    {
+      "text": "Gifts for New Homeowners",
+      "url": "https://bright-gift.com/blog/gifts-for-new-homeowners-2025",
+      "context": "[Gifts for New Homeowners](/blog/gifts-for-new-homeowners-2025)",
+      "file": "gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md"
+    },
+    {
+      "text": "Eco-Friendly Gift Ideas",
+      "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
+      "context": "[Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget)",
+      "file": "gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "gifts-for-gamers-under-50.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "gifts-for-gamers-under-50.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "gifts-for-girlfriend-unique-romantic-ideas.md"
+    },
+    {
+      "text": "gift guides",
+      "url": "https://bright-gift.com/blog",
+      "context": "[gift guides](https://bright-gift.com/blog)",
+      "file": "gifts-for-girlfriend-unique-romantic-ideas.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "gifts-for-girlfriend-unique-romantic-ideas.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "gifts-for-new-homeowners-2025.md"
+    },
+    {
+      "text": "Best Home Gifts on Amazon",
+      "url": "https://bright-gift.com/blog/best-home-gifts-on-amazon-2024",
+      "context": "[Best Home Gifts on Amazon](https://bright-gift.com/blog/best-home-gifts-on-amazon-2024)",
+      "file": "gifts-for-new-homeowners-2025.md"
+    },
+    {
+      "text": "Eco-Friendly Gift Ideas for Every Budget",
+      "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
+      "context": "[Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget)",
+      "file": "gifts-for-new-homeowners-2025.md"
+    },
+    {
+      "text": "Gifts for Plant Lovers",
+      "url": "https://bright-gift.com/blog/gifts-for-plant-lovers",
+      "context": "[Gifts for Plant Lovers](https://bright-gift.com/blog/gifts-for-plant-lovers)",
+      "file": "gifts-for-new-homeowners-2025.md"
+    },
+    {
+      "text": "Gifts for Remote Workers Under $50",
+      "url": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50",
+      "context": "[Gifts for Remote Workers Under $50](https://bright-gift.com/blog/gifts-for-remote-workers-under-50)",
+      "file": "gifts-for-new-homeowners-2025.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "gifts-for-new-homeowners-2025.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "gifts-for-plant-lovers.md"
+    },
+    {
+      "text": "Eco-Friendly Gift Ideas for Every Budget",
+      "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
+      "context": "[Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget)",
+      "file": "gifts-for-plant-lovers.md"
+    },
+    {
+      "text": "Housewarming Gifts for New Homeowners",
+      "url": "https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75",
+      "context": "[Housewarming Gifts for New Homeowners](https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75)",
+      "file": "gifts-for-plant-lovers.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "gifts-for-plant-lovers.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "gifts-for-remote-workers-under-50.md"
+    },
+    {
+      "text": "Eco-Friendly Gift Ideas for Every Budget",
+      "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
+      "context": "[Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget)",
+      "file": "gifts-for-remote-workers-under-50.md"
+    },
+    {
+      "text": "Gifts for Plant Lovers",
+      "url": "https://bright-gift.com/blog/gifts-for-plant-lovers",
+      "context": "[Gifts for Plant Lovers](https://bright-gift.com/blog/gifts-for-plant-lovers)",
+      "file": "gifts-for-remote-workers-under-50.md"
+    },
+    {
+      "text": "Gifts for Gamers Under $50",
+      "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50-under-50-under-50",
+      "context": "[Gifts for Gamers Under $50](https://bright-gift.com/blog/gifts-for-gamers-under-50-under-50-under-50)",
+      "file": "gifts-for-remote-workers-under-50.md"
+    },
+    {
+      "text": "Gifts Under $25 for Coworkers",
+      "url": "https://bright-gift.com/blog/gifts-under-25-for-coworkers",
+      "context": "[Gifts Under $25 for Coworkers](https://bright-gift.com/blog/gifts-under-25-for-coworkers)",
+      "file": "gifts-for-remote-workers-under-50.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "gifts-under-25-for-coworkers.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "gifts-under-25-for-coworkers.md"
+    },
+    {
+      "text": "Illustration of a modern gift box with AI circuit patterns, surrounded by gift icons like a smartwatch, book, ring, and plant, in BrightGift brand colors.",
+      "url": "https://bright-gift.com/images/blog/ai-gift-shopping-banner.webp",
+      "context": "[Illustration of a modern gift box with AI circuit patterns, surrounded by gift icons like a smartwatch, book, ring, and plant, in BrightGift brand colors.](/images/blog/ai-gift-shopping-banner.webp)",
+      "file": "how-ai-is-revolutionizing-gift-shopping-complete-guide.md"
+    },
+    {
+      "text": "AI Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[AI Gift Idea Generator](https://bright-gift.com)",
+      "file": "how-ai-is-revolutionizing-gift-shopping-complete-guide.md"
+    },
+    {
+      "text": "AI Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[AI Gift Idea Generator](https://bright-gift.com)",
+      "file": "how-ai-is-revolutionizing-gift-shopping-complete-guide.md"
+    },
+    {
+      "text": "Try our AI Gift Idea Generator now",
+      "url": "https://bright-gift.com",
+      "context": "[Try our AI Gift Idea Generator now](https://bright-gift.com)",
+      "file": "how-ai-is-revolutionizing-gift-shopping-complete-guide.md"
+    },
+    {
+      "text": "eco-friendly gifts",
+      "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
+      "context": "[eco-friendly gifts](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget)",
+      "file": "how-ai-is-revolutionizing-gift-shopping-complete-guide.md"
+    },
+    {
+      "text": "anniversary gifts",
+      "url": "https://bright-gift.com/blog/25-unique-anniversary-gift-ideas-under-50",
+      "context": "[anniversary gifts](https://bright-gift.com/blog/25-unique-anniversary-gift-ideas-under-50)",
+      "file": "how-ai-is-revolutionizing-gift-shopping-complete-guide.md"
+    },
+    {
+      "text": "housewarming gifts",
+      "url": "https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75",
+      "context": "[housewarming gifts](https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75)",
+      "file": "how-ai-is-revolutionizing-gift-shopping-complete-guide.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "last-minute-birthday-gifts-for-busy-professionals.md"
+    },
+    {
+      "text": "Gifts for Remote Workers Under $50",
+      "url": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50",
+      "context": "[Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50)",
+      "file": "last-minute-birthday-gifts-for-busy-professionals.md"
+    },
+    {
+      "text": "Eco-Friendly Gift Ideas",
+      "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
+      "context": "[Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget)",
+      "file": "last-minute-birthday-gifts-for-busy-professionals.md"
+    },
+    {
+      "text": "Gifts for New Homeowners",
+      "url": "https://bright-gift.com/blog/gifts-for-new-homeowners-2025",
+      "context": "[Gifts for New Homeowners](/blog/gifts-for-new-homeowners-2025)",
+      "file": "last-minute-birthday-gifts-for-busy-professionals.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "last-minute-birthday-gifts-for-busy-professionals.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "special-birthday-gifts-for-lgbtq-youth.md"
+    },
+    {
+      "text": "Eco-Friendly Gift Ideas",
+      "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
+      "context": "[Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget)",
+      "file": "special-birthday-gifts-for-lgbtq-youth.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "special-birthday-gifts-for-lgbtq-youth.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "unique-christmas-gifts-for-gamers-who-have-everything-2024.md"
+    },
+    {
+      "text": "Gifts for Gamers Under $50",
+      "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50-under-50",
+      "context": "[Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50-under-50)",
+      "file": "unique-christmas-gifts-for-gamers-who-have-everything-2024.md"
+    },
+    {
+      "text": "Eco-Friendly Gift Ideas",
+      "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
+      "context": "[Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget)",
+      "file": "unique-christmas-gifts-for-gamers-who-have-everything-2024.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "unique-christmas-gifts-for-gamers-who-have-everything-2024.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "unique-gifts-for-board-game-enthusiasts.md"
+    },
+    {
+      "text": "Gifts for Gamers Under $50",
+      "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50-under-50",
+      "context": "[Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50-under-50)",
+      "file": "unique-gifts-for-board-game-enthusiasts.md"
+    },
+    {
+      "text": "Eco-Friendly Gift Ideas",
+      "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
+      "context": "[Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget)",
+      "file": "unique-gifts-for-board-game-enthusiasts.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "unique-gifts-for-board-game-enthusiasts.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "unique-graduation-gifts-creative-minds.md"
+    },
+    {
+      "text": "Gifts for Artists",
+      "url": "https://bright-gift.com/blog/unique-graduation-gifts-creative-minds",
+      "context": "[Gifts for Artists](/blog/unique-graduation-gifts-creative-minds)",
+      "file": "unique-graduation-gifts-creative-minds.md"
+    },
+    {
+      "text": "Gifts for Remote Workers Under $50",
+      "url": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50",
+      "context": "[Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50)",
+      "file": "unique-graduation-gifts-creative-minds.md"
+    },
+    {
+      "text": "Eco-Friendly Gift Ideas",
+      "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
+      "context": "[Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget)",
+      "file": "unique-graduation-gifts-creative-minds.md"
+    },
+    {
+      "text": "Gifts for New Homeowners",
+      "url": "https://bright-gift.com/blog/gifts-for-new-homeowners-2025",
+      "context": "[Gifts for New Homeowners](/blog/gifts-for-new-homeowners-2025)",
+      "file": "unique-graduation-gifts-creative-minds.md"
+    },
+    {
+      "text": "Gift Idea Generator",
+      "url": "https://bright-gift.com",
+      "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "unique-graduation-gifts-creative-minds.md"
+    },
+    {
+      "text": "HTML Link",
+      "url": "https://bright-gift.com/",
+      "context": "<a href=\"/\" class=\"bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors\">",
+      "file": "ai-gift-guide.astro"
+    },
+    {
+      "text": "HTML Link",
+      "url": "https://bright-gift.com/",
+      "context": "<a href=\"/\" class=\"bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors inline-block\">",
+      "file": "ai-gift-guide.astro"
+    },
+    {
+      "text": "HTML Link",
+      "url": "https://bright-gift.com",
+      "context": "<a href=\"https://bright-gift.com\" class=\"cta-button\" target=\"_blank\" rel=\"noopener\">",
+      "file": "[...slug].astro"
+    },
+    {
+      "text": "HTML Link",
+      "url": "https://bright-gift.com/blog",
+      "context": "<a \n                    href=\"/blog\"\n                    class=\"inline-block px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors\"\n                  >",
+      "file": "[...slug].astro"
+    },
+    {
+      "text": "HTML Link",
+      "url": "https://bright-gift.com/",
+      "context": "<a href=\"/\" class=\"hover:underline underline-offset-4 rounded\">",
+      "file": "index.astro"
+    },
+    {
+      "text": "HTML Link",
+      "url": "https://bright-gift.com/blog",
+      "context": "<a href=\"/blog\" class=\"hover:underline underline-offset-4 rounded\">",
+      "file": "index.astro"
+    },
+    {
+      "text": "HTML Link",
+      "url": "https://bright-gift.com/blog",
+      "context": "<a href=\"/blog\" class=\"inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins shadow\" aria-label=\"Browse all gift guides\">",
+      "file": "index.astro"
+    },
+    {
+      "text": "HTML Link",
+      "url": "https://bright-gift.com/blog",
+      "context": "<a href=\"/blog\" class=\"underline hover:no-underline\">",
+      "file": "index.astro"
+    },
+    {
+      "text": "HTML Link",
+      "url": "https://bright-gift.com/privacy",
+      "context": "<a href=\"/privacy\" class=\"underline hover:no-underline\">",
+      "file": "index.astro"
+    },
+    {
+      "text": "HTML Link",
+      "url": "https://bright-gift.com/terms",
+      "context": "<a href=\"/terms\" class=\"underline hover:no-underline\">",
+      "file": "index.astro"
+    },
+    {
+      "text": "HTML Link",
+      "url": "https://bright-gift.com/data-deletion",
+      "context": "<a href=\"/data-deletion\" class=\"underline hover:no-underline\">",
+      "file": "index.astro"
+    },
+    {
+      "text": "HTML Link",
+      "url": "https://bright-gift.com/",
+      "context": "<a href=\"/\" class=\"text-[#FF6B6B] hover:underline\">",
+      "file": "callback.astro"
+    },
+    {
+      "text": "HTML Link",
+      "url": "https://bright-gift.com/",
+      "context": "<a href=\"/\" class=\"text-coral-500 hover:underline\">",
+      "file": "top-gifts.astro"
+    },
+    {
+      "text": "HTML Link",
+      "url": "https://bright-gift.com/#tool",
+      "context": "<a href=\"/#tool\" class=\"font-semibold text-[#FF6B6B] hover:underline\">",
+      "file": "top-gifts.astro"
+    },
+    {
+      "text": "HTML Link",
+      "url": "https://bright-gift.com/#tool",
+      "context": "<a href=\"/#tool\" class=\"text-coral-500 hover:underline\">",
+      "file": "top-gifts.astro"
+    },
+    {
+      "text": "HTML Link",
+      "url": "https://bright-gift.com/#tool",
+      "context": "<a href=\"/#tool\" class=\"inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins text-lg shadow\">",
+      "file": "top-gifts.astro"
+    }
+  ]
+}

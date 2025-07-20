@@ -21,8 +21,6 @@ draft: false
 ---
 
 
-![Eco-friendly gift ideas banner: reusable straws, beeswax wraps, solar charger, and leaves on a light background](/images/blog/eco-friendly-gift-ideas-banner.webp "Eco-friendly gift ideas banner")
-
 ## Why Eco-Friendly Gifts Make a Difference
 
 Choosing sustainable gifts isn't just a trend—it's a meaningful way to show you care about both your loved ones and the planet. Eco-friendly gifts are thoughtful, practical, and help reduce waste, making them perfect for any occasion. Whether you're shopping for a birthday, holiday, or just because, these green gift ideas are sure to delight.
@@ -71,8 +69,6 @@ Perfect for groceries, books, or everyday essentials, organic cotton totes are a
 
 ## Green Gift Ideas Over $50
 
-![Sustainable gift flat-lay: coral tote bag, beeswax wraps, solar charger, bamboo toothbrush, reusable straws, and herb plant in a pot](/images/blog/eco-friendly-gift-ideas-og.webp "Sustainable gift flat-lay")
-
 ### 7. Solar-Powered Phone Charger
 <a href="https://www.amazon.com/s?k=solar+phone+charger&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $30–$70  
@@ -97,7 +93,5 @@ Encourage eco-friendly habits with a stylish countertop compost bin for food scr
 - Consider gifts that encourage sustainable habits (like reusable or refillable items)
 
 ---
-
-![Eco-friendly gift ideas social: illustrated gift box with green ribbon, surrounded by icons for water bottle, tote, plant, solar charger, and recycling](/images/blog/eco-friendly-gift-ideas-social.webp "Eco-friendly gift ideas social image")
 
 *Looking for more green gift ideas? Check out our [Eco-Friendly Gifts for Outdoor Lovers](https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature) or explore our [Ethical Gift Ideas Under $75](https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75). Or, try our [Gift Idea Generator](https://bright-gift.com) to discover the perfect eco-friendly present!* 

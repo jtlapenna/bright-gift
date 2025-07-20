@@ -155,7 +155,7 @@ Commission a custom sign or plaque for their gaming room featuring their gamer t
 
 Looking for other gaming gift ideas? Check out our guides to:
 - [Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50) for budget-friendly options
-- [Unique Birthday Gifts for Teens](/blog/unique-birthday-gifts-for-teens-break-the-mold) for younger gamers
+-  for younger gamers
 - [Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget) for sustainable options
 
 ---

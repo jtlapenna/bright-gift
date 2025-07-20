@@ -164,8 +164,8 @@ Books, guides, or resources that help them connect with LGBTQ+ communities, supp
 ## More Gift Inspiration
 
 Looking for other inclusive gift ideas? Check out our guides to:
-- [Gifts for LGBTQ+ Friends](/blog/gifts-for-lgbtq-plus-friends-celebrate-love-and-diversity) for friends and allies
-- [Unique Birthday Gifts for Teens](/blog/unique-birthday-gifts-for-teens-break-the-mold) for more teen gift ideas
+-  for friends and allies
+-  for more teen gift ideas
 - [Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget) for sustainable options
 
 ---
