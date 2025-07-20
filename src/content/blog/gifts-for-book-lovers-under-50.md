@@ -138,6 +138,14 @@ A monthly book subscription service that delivers curated books based on their p
 
 ## Why Choose Bookshop.org for Books?
 
+
+
+> 💡 **
+
+> 💡 **Looking for more gift ideas?** Check out our guide to [books for different reading levels](/blog/best-books-for-different-reading-levels) for even more thoughtful options!
+
+Looking for more gift ideas?** Check out our guide to [holiday book gifts](/blog/25-books-to-gift-this-holiday-season) for even more thoughtful options!
+
 When shopping for books, consider Bookshop.org as an alternative to Amazon. Bookshop.org supports independent bookstores and provides the same convenience while helping local bookshops thrive. Plus, they offer competitive prices and fast shipping.
 
 Whether you're shopping for a voracious reader or someone just discovering their love for books, these gifts will show how much you care about their passion for reading. Remember, the best gift for a book lover is one that enhances their reading experience and shows you understand their love for literature. 

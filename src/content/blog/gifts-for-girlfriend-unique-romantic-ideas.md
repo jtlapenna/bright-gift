@@ -115,4 +115,12 @@ Blend of tech and sentiment: upload photos from both your phones to keep memorie
 
 ---
 
-*Looking for more inspiration? Explore our other [gift guides](https://bright-gift.com/blog) or try the [Gift Idea Generator](https://bright-gift.com) for personalized suggestions!* 
+*
+
+> 💡 **
+
+> 💡 **Looking for more gift ideas?** Check out our guide to [last minute birthday gifts](/blog/last-minute-birthday-gifts-for-busy-professionals) for even more thoughtful options!
+
+Looking for more gift ideas?** Check out our guide to [birthday gifts for LGBTQ+ youth](/blog/special-birthday-gifts-for-lgbtq-youth) for even more thoughtful options!
+
+Looking for more inspiration? Explore our other [gift guides](https://bright-gift.com/blog) or try the [Gift Idea Generator](https://bright-gift.com) for personalized suggestions!* 

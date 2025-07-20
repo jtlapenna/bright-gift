@@ -13,6 +13,8 @@ tags:
   - animal lovers
 priceRange: $8-$30
 amazonLink: https://www.amazon.com/s?k=pet+gifts+under+30&tag=brightgift-20
+metaTitle: 'Affordable Gifts for Pet Lovers Under $30: Budget-Friendly Pet Gifts | BrightGift'
+metaDescription: 'Find the perfect affordable gifts for pet lovers under $30. From toys to treats, discover budget-friendly pet gifts that will make any animal lover happy.'
 ---
 
 Finding the perfect gift for pet lovers doesn't have to break the bank. Whether they're devoted dog parents, cat enthusiasts, or proud pet parents of any furry friend, there are plenty of thoughtful and affordable options that will show you understand their passion for animals. This guide features 15 carefully selected gifts under $30 that combine practicality, fun, and personalization.

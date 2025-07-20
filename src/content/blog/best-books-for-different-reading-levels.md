@@ -285,7 +285,15 @@ By choosing Bookshop.org, you're not just giving a great book—you're supportin
 
 ---
 
-## Final Thoughts
+## 
+
+> 💡 **Looking for more gift ideas?** Check out our guide to [holiday book gifts](/blog/25-books-to-gift-this-holiday-season) for even more thoughtful options!
+
+
+
+> 💡 **Looking for more gift ideas?** Check out our guide to [gifts for book lovers](/blog/gifts-for-book-lovers-under-50) for even more thoughtful options!
+
+Final Thoughts
 
 The perfect book gift is one that matches the recipient's reading level, interests, and reading journey. Whether you're shopping for a child just learning to read or an adult who devours books, there's a perfect book waiting to be discovered.
 

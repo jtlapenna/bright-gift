@@ -148,4 +148,16 @@ A collection of gaming-themed t-shirts lets gamers show off their passion for th
 
 ---
 
-*Looking for more gift ideas? Check out our other gift guides for different interests and budgets. Have a specific gamer in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their gaming preferences and setup!* 
+*
+
+> 💡 **
+
+> 💡 **
+
+> 💡 **Looking for more gift ideas?** Check out our guide to [D&D gifts](/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience) for even more thoughtful options!
+
+Looking for more gift ideas?** Check out our guide to [board game gifts](/blog/unique-gifts-for-board-game-enthusiasts) for even more thoughtful options!
+
+Looking for more gift ideas?** Check out our guide to [unique Christmas gifts for gamers](/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024) for even more thoughtful options!
+
+Looking for more gift ideas? Check out our other gift guides for different interests and budgets. Have a specific gamer in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their gaming preferences and setup!* 

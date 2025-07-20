@@ -175,4 +175,8 @@ A beautiful vintage-style recipe book for couples to cook together. This gift en
 
 ---
 
-*Looking for more gift ideas? Check out our other gift guides for different occasions and budgets, including our guide to [unique gifts for girlfriends](https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas). Have a specific anniversary milestone coming up? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on your partner's interests and your relationship dynamic!* 
+*
+
+> 💡 **Looking for more gift ideas?** Check out our guide to [chic wedding gifts](/blog/chic-wedding-gifts-for-the-stylish-couple) for even more thoughtful options!
+
+Looking for more gift ideas? Check out our other gift guides for different occasions and budgets, including our guide to [unique gifts for girlfriends](https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas). Have a specific anniversary milestone coming up? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on your partner's interests and your relationship dynamic!* 
