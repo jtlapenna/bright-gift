@@ -1,14 +1,19 @@
 ---
-title: "Gifts for Gamers Under $50: 15 Perfect Gaming Gift Ideas"
-metaTitle: "Gifts for Gamers Under $50: 15 Perfect Gaming Gift Ideas | BrightGift"
-metaDescription: "Looking for affordable gifts for gamers? Discover 15 amazing gaming gifts under $50 that will delight any gamer. From accessories to decor, find the perfect present!"
-description: "Find the perfect present with our curated selection of gifts for gamers under $50, from essential gaming accessories to stylish decor that will level up any gaming setup."
-date: "2024-12-19"
-image: "/images/blog/gamers-under-50/gamers-under-50.jpg"
-ogImage: "/images/blog/gamers-under-50/gamers-under-50.jpg"
-tags: ["gamers", "gaming-gifts", "under-50", "budget-friendly", "tech-gifts"]
-priceRange: "$10-$50"
-amazonLink: "https://www.amazon.com/s?k=gaming+gifts+under+50&tag=brightgift-20"
+title: 'Gifts for Gamers Under $50: 15 Perfect Gaming Gift Ideas'
+metaTitle: 'Gifts for Gamers Under $50: 15 Perfect Gaming Gift Ideas | BrightGift'
+metaDescription: Looking for affordable gifts for gamers? Discover 15 amazing gaming gifts under $50 that will delight any gamer. From accessories to decor, find the perfect present!
+description: Find the perfect present with our curated selection of gifts for gamers under $50, from essential gaming accessories to stylish decor that will level up any...
+date: '2024-12-19'
+image: /images/blog/gamers-under-50/gamers-under-50.jpg
+ogImage: /images/blog/gamers-under-50/gamers-under-50.jpg
+tags:
+  - gamers
+  - gaming-gifts
+  - under-50
+  - budget-friendly
+  - tech-gifts
+priceRange: $10-$50
+amazonLink: https://www.amazon.com/s?k=gaming+gifts+under+50&tag=brightgift-20
 readTime: 8
 featured: true
 draft: false

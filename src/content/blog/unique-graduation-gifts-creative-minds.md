@@ -1,13 +1,18 @@
 ---
-title: "Unique Graduation Gifts for Creative Minds: 15 Inspiring Ideas"
-description: "Find the perfect graduation gifts for creative minds with our curated guide. From art supplies to experiences, discover 15 inspiring ideas for artistic graduates."
-date: "2025-07-15"
-image: "/images/blog/unique-graduation-gifts-creative-minds/unique-graduation-gifts-for-the-creative-minds-banner.webp"
-ogImage: "/images/blog/unique-graduation-gifts-creative-minds/unique-graduation-gifts-for-the-creative-minds-og.webp"
-socialImage: "/images/blog/unique-graduation-gifts-creative-minds/unique-graduation-gifts-for-the-creative-minds-social.webp"
-tags: ["graduation gifts", "creative gifts", "artistic gifts", "gifts for graduates", "art supplies"]
-priceRange: "$25-$500"
-amazonLink: "https://www.amazon.com/s?k=graduation+gifts+creative+minds&tag=brightgift-20"
+title: 'Unique Graduation Gifts for Creative Minds: 15 Inspiring...'
+description: Find the perfect graduation gifts for creative minds with our curated guide. From art supplies to experiences, discover 15 inspiring ideas for artistic...
+date: '2025-07-15'
+image: /images/blog/unique-graduation-gifts-creative-minds/unique-graduation-gifts-for-the-creative-minds-banner.webp
+ogImage: /images/blog/unique-graduation-gifts-creative-minds/unique-graduation-gifts-for-the-creative-minds-og.webp
+socialImage: /images/blog/unique-graduation-gifts-creative-minds/unique-graduation-gifts-for-the-creative-minds-social.webp
+tags:
+  - graduation gifts
+  - creative gifts
+  - artistic gifts
+  - gifts for graduates
+  - art supplies
+priceRange: $25-$500
+amazonLink: https://www.amazon.com/s?k=graduation+gifts+creative+minds&tag=brightgift-20
 ---
 
 Graduation is a pivotal moment in anyone's life, marking the transition from education to the next chapter of opportunities. For creative minds graduating, choosing a fitting gift involves considering what can inspire and support their artistic journey. Whether they're graduating from art school, design programs, or creative writing courses, these graduates deserve gifts that celebrate their unique talents and fuel their passion for creativity.

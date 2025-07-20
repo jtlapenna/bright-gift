@@ -1,63 +1,75 @@
 ---
-title: "Gifts for Plant Lovers Under $75: 15 Perfect Presents for Green Thumbs"
-metaTitle: "15 Best Gifts for Plant Lovers Under $75 - Rare Plants & Accessories"
-metaDescription: "Find the perfect gift for plant enthusiasts under $75! Discover rare houseplants, stylish planters, care tools, and accessories that every green thumb will love."
-description: "Discover thoughtful gifts for plant enthusiasts under $75, from rare houseplants to stylish plant accessories that will make any green thumb happy."
-date: "2024-07-27"
-image: "/images/blog/plant-lovers-under-75/plant-lovers-under-75.webp"
-ogImage: "/images/blog/plant-lovers-under-75/plant-lovers-under-75.webp"
-tags: ["plant-lovers", "houseplants", "gardening", "under-75", "budget-friendly", "any-occasion"]
-keywords: ["gifts for plant lovers", "plant gifts under 75", "houseplant gifts", "gardening gifts", "plant accessories", "budget plant gifts"]
+title: 'Gifts for Plant Lovers Under $75: 15 Perfect Presents for...'
+metaTitle: 15 Best Gifts for Plant Lovers Under $75 - Rare Plants & Accessories
+metaDescription: Find the perfect gift for plant enthusiasts under $75! Discover rare houseplants, stylish planters, care tools, and accessories that every green thumb will love.
+description: Discover thoughtful gifts for plant enthusiasts under $75, from rare houseplants to stylish plant accessories that will make any green thumb happy.
+date: '2024-07-27'
+image: /images/blog/plant-lovers-under-75/plant-lovers-under-75.webp
+ogImage: /images/blog/plant-lovers-under-75/plant-lovers-under-75.webp
+tags:
+  - plant-lovers
+  - houseplants
+  - gardening
+  - under-75
+  - budget-friendly
+  - any-occasion
+keywords:
+  - gifts for plant lovers
+  - plant gifts under 75
+  - houseplant gifts
+  - gardening gifts
+  - plant accessories
+  - budget plant gifts
 readTime: 8
 featured: true
 draft: false
-recipient: "plant-lovers"
-budget: "under-75"
-occasion: "any"
-style: "mixed"
+recipient: plant-lovers
+budget: under-75
+occasion: any
+style: mixed
 affiliateLinks:
-  - text: "Monstera Adansonii (Swiss Cheese Vine)"
-    url: "https://www.amazon.com/s?k=monstera+adansonii&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "Pilea Peperomioides (Chinese Money Plant)"
-    url: "https://www.amazon.com/s?k=pilea+peperomioides&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "String of Pearls Succulent"
-    url: "https://www.amazon.com/s?k=string+of+pearls+succulent&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "ZZ Plant (Zamioculcas zamiifolia)"
-    url: "https://www.amazon.com/s?k=zz+plant&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "Ceramic Plant Pot Set"
-    url: "https://www.amazon.com/s?k=ceramic+plant+pots&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "Plant Stand and Shelf Set"
-    url: "https://www.amazon.com/s?k=plant+stand+shelf&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "Decorative Watering Can"
-    url: "https://www.amazon.com/s?k=watering+can+plants&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "Plant Mister/Sprayer"
-    url: "https://www.amazon.com/s?k=plant+mister+sprayer&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "Professional Pruning Shears Set"
-    url: "https://www.amazon.com/s?k=pruning+shears+plants&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "Soil Moisture Meter"
-    url: "https://www.amazon.com/s?k=soil+moisture+meter&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "Plant Care Tool Kit"
-    url: "https://www.amazon.com/s?k=plant+care+tool+kit&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "Plant Labels and Markers"
-    url: "https://www.amazon.com/s?k=plant+labels+markers&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "Plant Identification and Care Guide"
-    url: "https://www.amazon.com/s?k=plant+care+book&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "Plant Journal or Planner"
-    url: "https://www.amazon.com/s?k=plant+journal+planner&tag=bright-gift-20"
-    platform: "amazon"
+  - text: Monstera Adansonii (Swiss Cheese Vine)
+    url: https://www.amazon.com/s?k=monstera+adansonii&tag=bright-gift-20
+    platform: amazon
+  - text: Pilea Peperomioides (Chinese Money Plant)
+    url: https://www.amazon.com/s?k=pilea+peperomioides&tag=bright-gift-20
+    platform: amazon
+  - text: String of Pearls Succulent
+    url: https://www.amazon.com/s?k=string+of+pearls+succulent&tag=bright-gift-20
+    platform: amazon
+  - text: ZZ Plant (Zamioculcas zamiifolia)
+    url: https://www.amazon.com/s?k=zz+plant&tag=bright-gift-20
+    platform: amazon
+  - text: Ceramic Plant Pot Set
+    url: https://www.amazon.com/s?k=ceramic+plant+pots&tag=bright-gift-20
+    platform: amazon
+  - text: Plant Stand and Shelf Set
+    url: https://www.amazon.com/s?k=plant+stand+shelf&tag=bright-gift-20
+    platform: amazon
+  - text: Decorative Watering Can
+    url: https://www.amazon.com/s?k=watering+can+plants&tag=bright-gift-20
+    platform: amazon
+  - text: Plant Mister/Sprayer
+    url: https://www.amazon.com/s?k=plant+mister+sprayer&tag=bright-gift-20
+    platform: amazon
+  - text: Professional Pruning Shears Set
+    url: https://www.amazon.com/s?k=pruning+shears+plants&tag=bright-gift-20
+    platform: amazon
+  - text: Soil Moisture Meter
+    url: https://www.amazon.com/s?k=soil+moisture+meter&tag=bright-gift-20
+    platform: amazon
+  - text: Plant Care Tool Kit
+    url: https://www.amazon.com/s?k=plant+care+tool+kit&tag=bright-gift-20
+    platform: amazon
+  - text: Plant Labels and Markers
+    url: https://www.amazon.com/s?k=plant+labels+markers&tag=bright-gift-20
+    platform: amazon
+  - text: Plant Identification and Care Guide
+    url: https://www.amazon.com/s?k=plant+care+book&tag=bright-gift-20
+    platform: amazon
+  - text: Plant Journal or Planner
+    url: https://www.amazon.com/s?k=plant+journal+planner&tag=bright-gift-20
+    platform: amazon
 ---
 
 ## Why Plant Lovers Make Great Gift Recipients

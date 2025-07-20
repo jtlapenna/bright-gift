@@ -1,52 +1,63 @@
 ---
-title: "25 Books to Gift This Holiday Season: Perfect for Every Reader"
-description: "Discover the perfect books for everyone on your holiday gift list. From fiction lovers to non-fiction enthusiasts, find thoughtful book gifts for every reader in your life."
-image: "/images/blog/holiday-books-banner.webp"
-ogImage: "/images/blog/holiday-books-og.webp"
-socialImage: "/images/blog/holiday-books-social.webp"
-date: "2024-11-01"
-metaTitle: "25 Best Books to Gift This Holiday Season - Perfect for Every Reader"
-metaDescription: "Find the perfect books for everyone on your holiday gift list. From fiction to non-fiction, discover thoughtful book gifts for every reader in your life."
-keywords: ["holiday book gifts", "christmas books", "gift books 2024", "books for gifts", "holiday reading gifts", "christmas book gifts"]
-tags: ["holiday-gifts", "books", "christmas", "gift-guide", "reading"]
-category: "gift-guide"
+title: '25 Books to Gift This Holiday Season: Perfect for Every...'
+description: Discover the perfect books for everyone on your holiday gift list. From fiction lovers to non-fiction enthusiasts, find thoughtful book gifts for every reader...
+image: /images/blog/holiday-books-banner.webp
+ogImage: /images/blog/holiday-books-og.webp
+socialImage: /images/blog/holiday-books-social.webp
+date: '2024-11-01'
+metaTitle: 25 Best Books to Gift This Holiday Season - Perfect for Every Reader
+metaDescription: Find the perfect books for everyone on your holiday gift list. From fiction to non-fiction, discover thoughtful book gifts for every reader in your life.
+keywords:
+  - holiday book gifts
+  - christmas books
+  - gift books 2024
+  - books for gifts
+  - holiday reading gifts
+  - christmas book gifts
+tags:
+  - holiday-gifts
+  - books
+  - christmas
+  - gift-guide
+  - reading
+category: gift-guide
 readTime: 10
 featured: true
 draft: false
 affiliateLinks:
-  - text: "The Midnight Library by Matt Haig"
-    url: "https://bookshop.org/a/brightgift/9780525559474"
-    platform: "bookshop"
-  - text: "Atomic Habits by James Clear"
-    url: "https://bookshop.org/a/brightgift/9780735211292"
-    platform: "bookshop"
-  - text: "Tomorrow, and Tomorrow, and Tomorrow by Gabrielle Zevin"
-    url: "https://bookshop.org/a/brightgift/9780593321201"
-    platform: "bookshop"
-  - text: "Lessons in Chemistry by Bonnie Garmus"
-    url: "https://bookshop.org/a/brightgift/9780385547345"
-    platform: "bookshop"
-  - text: "The Psychology of Money by Morgan Housel"
-    url: "https://bookshop.org/a/brightgift/9780857197689"
-    platform: "bookshop"
-  - text: "Think Again by Adam Grant"
-    url: "https://bookshop.org/a/brightgift/9781984878106"
-    platform: "bookshop"
-  - text: "The Very Hungry Caterpillar by Eric Carle"
-    url: "https://bookshop.org/a/brightgift/9780399226908"
-    platform: "bookshop"
-  - text: "Where the Wild Things Are by Maurice Sendak"
-    url: "https://bookshop.org/a/brightgift/9780060254926"
-    platform: "bookshop"
-  - text: "Cozy Reading Blanket"
-    url: "https://www.amazon.com/s?k=reading+blanket+cozy&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "Book Lover's Candle Set"
-    url: "https://www.amazon.com/s?k=book+lover+candle+set&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "Reading Journal"
-    url: "https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20"
-    platform: "amazon"
+  - text: The Midnight Library by Matt Haig
+    url: https://bookshop.org/a/brightgift/9780525559474
+    platform: bookshop
+  - text: Atomic Habits by James Clear
+    url: https://bookshop.org/a/brightgift/9780735211292
+    platform: bookshop
+  - text: Tomorrow, and Tomorrow, and Tomorrow by Gabrielle Zevin
+    url: https://bookshop.org/a/brightgift/9780593321201
+    platform: bookshop
+  - text: Lessons in Chemistry by Bonnie Garmus
+    url: https://bookshop.org/a/brightgift/9780385547345
+    platform: bookshop
+  - text: The Psychology of Money by Morgan Housel
+    url: https://bookshop.org/a/brightgift/9780857197689
+    platform: bookshop
+  - text: Think Again by Adam Grant
+    url: https://bookshop.org/a/brightgift/9781984878106
+    platform: bookshop
+  - text: The Very Hungry Caterpillar by Eric Carle
+    url: https://bookshop.org/a/brightgift/9780399226908
+    platform: bookshop
+  - text: Where the Wild Things Are by Maurice Sendak
+    url: https://bookshop.org/a/brightgift/9780060254926
+    platform: bookshop
+  - text: Cozy Reading Blanket
+    url: https://www.amazon.com/s?k=reading+blanket+cozy&tag=bright-gift-20
+    platform: amazon
+  - text: Book Lover's Candle Set
+    url: https://www.amazon.com/s?k=book+lover+candle+set&tag=bright-gift-20
+    platform: amazon
+  - text: Reading Journal
+    url: https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20
+    platform: amazon
 ---
 
 

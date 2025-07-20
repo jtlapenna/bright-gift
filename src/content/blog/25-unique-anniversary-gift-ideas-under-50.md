@@ -1,15 +1,21 @@
 ---
-title: "25 Unique Anniversary Gift Ideas Under $50: Timeless & Thoughtful"
-metaTitle: "25 Unique Anniversary Gift Ideas Under $50: Timeless & Thoughtful | BrightGift"
-metaDescription: "Discover 25 unique anniversary gift ideas under $50 that are thoughtful, memorable, and perfect for any relationship milestone. Shop smarter today"
-description: "Find the perfect anniversary present with our curated selection of unique, thoughtful gifts under $50 that celebrate your relationship milestones."
-date: "2025-01-07"
-image: "/images/blog/anniversary-gifts-under-50/anniversary-banner.webp"
-ogImage: "/images/blog/anniversary-gifts-under-50/anniversary-og.webp"
-socialImage: "/images/blog/anniversary-gifts-under-50/anniversary-social.webp"
-tags: ["anniversary gifts", "romantic gifts", "budget gifts", "under $50", "couples", "relationship"]
-priceRange: "$8-$50"
-amazonLink: "https://www.amazon.com/s?k=anniversary+gifts+under+50&tag=brightgift-20"
+title: '25 Unique Anniversary Gift Ideas Under $50: Timeless &...'
+metaTitle: '25 Unique Anniversary Gift Ideas Under $50: Timeless & Thoughtful | BrightGift'
+metaDescription: Discover 25 unique anniversary gift ideas under $50 that are thoughtful, memorable, and perfect for any relationship milestone. Shop smarter today
+description: Find the perfect anniversary present with our curated selection of unique, thoughtful gifts under $50 that celebrate your relationship milestones.
+date: '2025-01-07'
+image: /images/blog/anniversary-gifts-under-50/anniversary-banner.webp
+ogImage: /images/blog/anniversary-gifts-under-50/anniversary-og.webp
+socialImage: /images/blog/anniversary-gifts-under-50/anniversary-social.webp
+tags:
+  - anniversary gifts
+  - romantic gifts
+  - budget gifts
+  - under $50
+  - couples
+  - relationship
+priceRange: $8-$50
+amazonLink: https://www.amazon.com/s?k=anniversary+gifts+under+50&tag=brightgift-20
 readTime: 8
 featured: true
 draft: false

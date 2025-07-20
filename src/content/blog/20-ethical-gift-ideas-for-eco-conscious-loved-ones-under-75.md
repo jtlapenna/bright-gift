@@ -1,15 +1,21 @@
 ---
-title: "20 Ethical Gift Ideas for Eco-Conscious Loved Ones (Under $75)"
-metaTitle: "20 Ethical Gift Ideas Under $75: Sustainable & Eco-Friendly Gifts | BrightGift"
-metaDescription: "Discover 20 sustainable gift ideas under $75 for eco-conscious loved ones. From Fair Trade to B Corp certified, find thoughtful presents that make a positive impact."
-description: "Find the perfect ethical present with our curated selection of sustainable gifts under $75 that support eco-conscious values and make a positive environmental impact."
-date: "2025-01-07"
-image: "/images/blog/ethical-gifts-under-75/eco-banner-OG.webp"
-ogImage: "/images/blog/ethical-gifts-under-75/eco-banner-OG.webp"
-socialImage: "/images/blog/ethical-gifts-under-75/eco-social.webp"
-tags: ["ethical gifts", "eco-friendly gifts", "sustainable gifts", "under $75", "fair trade", "b corp"]
-priceRange: "$8-$75"
-amazonLink: "https://www.amazon.com/s?k=ethical+gifts+eco+friendly+under+75&tag=brightgift-20"
+title: 20 Ethical Gift Ideas for Eco-Conscious Loved Ones (Under...
+metaTitle: '20 Ethical Gift Ideas Under $75: Sustainable & Eco-Friendly Gifts | BrightGift'
+metaDescription: Discover 20 sustainable gift ideas under $75 for eco-conscious loved ones. From Fair Trade to B Corp certified, find thoughtful presents that make a positive impact.
+description: Find the perfect ethical present with our curated selection of sustainable gifts under $75 that support eco-conscious values and make a positive environmental...
+date: '2025-01-07'
+image: /images/blog/ethical-gifts-under-75/eco-banner-OG.webp
+ogImage: /images/blog/ethical-gifts-under-75/eco-banner-OG.webp
+socialImage: /images/blog/ethical-gifts-under-75/eco-social.webp
+tags:
+  - ethical gifts
+  - eco-friendly gifts
+  - sustainable gifts
+  - under $75
+  - fair trade
+  - b corp
+priceRange: $8-$75
+amazonLink: https://www.amazon.com/s?k=ethical+gifts+eco+friendly+under+75&tag=brightgift-20
 readTime: 8
 featured: true
 draft: false

@@ -1,13 +1,18 @@
 ---
-title: "Gifts for D&D Enthusiasts: 15 Epic Ways to Level Up Their Experience"
-description: "Find the perfect gifts for Dungeons & Dragons enthusiasts with our curated guide. From custom dice to adventure books, discover 15 epic ways to enhance their D&D experience."
-date: "2025-07-15"
-image: "/images/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience-banner.webp"
-ogImage: "/images/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience-og.webp"
-socialImage: "/images/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience-social.webp"
-tags: ["D&D gifts", "tabletop RPG", "gaming gifts", "Dungeons & Dragons", "roleplaying games"]
-priceRange: "$10-$50"
-amazonLink: "https://www.amazon.com/s?k=dungeons+dragons+gifts&tag=brightgift-20"
+title: 'Gifts for D&D Enthusiasts: 15 Epic Ways to Level Up Their...'
+description: Find the perfect gifts for Dungeons & Dragons enthusiasts with our curated guide. From custom dice to adventure books, discover 15 epic ways to enhance their...
+date: '2025-07-15'
+image: /images/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience-banner.webp
+ogImage: /images/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience-og.webp
+socialImage: /images/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience-social.webp
+tags:
+  - D&D gifts
+  - tabletop RPG
+  - gaming gifts
+  - Dungeons & Dragons
+  - roleplaying games
+priceRange: $10-$50
+amazonLink: https://www.amazon.com/s?k=dungeons+dragons+gifts&tag=brightgift-20
 ---
 
 Finding the perfect gift for a Dungeons & Dragons (D&D) lover can be a thrilling quest in itself. Whether they're a seasoned Dungeon Master crafting epic campaigns or a dedicated player who lives for the thrill of adventure, D&D enthusiasts appreciate gifts that enhance their gaming experience and show you understand their passion for storytelling and strategy.

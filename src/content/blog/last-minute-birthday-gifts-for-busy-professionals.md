@@ -1,13 +1,19 @@
 ---
-title: "Last-Minute Birthday Gifts for Busy Professionals: 15 Ideas Under $100"
-description: "Find the perfect last-minute birthday gift for busy professionals with our curated selection of thoughtful, practical presents that show you care without breaking the bank."
-date: "2024-01-15"
-image: "/images/blog/last-minute-birthday-gifts-for-busy-professionals/last-minute-birthday-gifts-for-busy-professionals-banner.webp"
-ogImage: "/images/blog/last-minute-birthday-gifts-for-busy-professionals/last-minute-birthday-gifts-for-busy-professionals-og.webp"
-socialImage: "/images/blog/last-minute-birthday-gifts-for-busy-professionals/last-minute-birthday-gifts-for-busy-professionals-social.webp"
-tags: ["birthday gifts", "last-minute gifts", "professional gifts", "office gifts", "practical gifts", "under $100"]
-priceRange: "$20-$90"
-amazonLink: "https://www.amazon.com/s?k=last+minute+birthday+gifts+professionals&tag=brightgift-20"
+title: 'Last-Minute Birthday Gifts for Busy Professionals: 15 Ideas...'
+description: Find the perfect last-minute birthday gift for busy professionals with our curated selection of thoughtful, practical presents that show you care without...
+date: '2024-01-15'
+image: /images/blog/last-minute-birthday-gifts-for-busy-professionals/last-minute-birthday-gifts-for-busy-professionals-banner.webp
+ogImage: /images/blog/last-minute-birthday-gifts-for-busy-professionals/last-minute-birthday-gifts-for-busy-professionals-og.webp
+socialImage: /images/blog/last-minute-birthday-gifts-for-busy-professionals/last-minute-birthday-gifts-for-busy-professionals-social.webp
+tags:
+  - birthday gifts
+  - last-minute gifts
+  - professional gifts
+  - office gifts
+  - practical gifts
+  - under $100
+priceRange: $20-$90
+amazonLink: https://www.amazon.com/s?k=last+minute+birthday+gifts+professionals&tag=brightgift-20
 ---
 
 Finding the perfect birthday gift for a busy professional can feel overwhelming, especially when you're short on time. Between work deadlines, meetings, and personal commitments, many of us find ourselves scrambling for a thoughtful present at the last minute. But don't worry—being busy doesn't mean you have to settle for generic gifts.

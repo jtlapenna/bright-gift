@@ -1,15 +1,27 @@
 ---
-title: "Best Books for Different Reading Levels: From Beginners to Bookworms"
-description: "Discover the perfect books for every reader in your life, from reluctant readers to avid bookworms. Find thoughtful book gifts that match their reading level and interests."
-image: "/images/blog/reading-levels-banner.webp"
-ogImage: "/images/blog/reading-levels-og.webp"
-socialImage: "/images/blog/reading-levels-social.webp"
-date: "2024-11-15"
-metaTitle: "Best Books for Different Reading Levels: Perfect Gifts for Every Reader"
-metaDescription: "Find the perfect books for every reader in your life! From beginners to bookworms, discover thoughtful book gifts that match their reading level and interests."
-keywords: ["books for different reading levels", "gifts for readers", "books for beginners", "books for bookworms", "reading level gifts", "book recommendations by age"]
-tags: ["books", "reading-levels", "gift-guide", "bookworms", "beginners", "reading"]
-category: "gift-guide"
+title: 'Best Books for Different Reading Levels: From Beginners to...'
+description: Discover the perfect books for every reader in your life, from reluctant readers to avid bookworms. Find thoughtful book gifts that match their reading level...
+image: /images/blog/reading-levels-banner.webp
+ogImage: /images/blog/reading-levels-og.webp
+socialImage: /images/blog/reading-levels-social.webp
+date: '2024-11-15'
+metaTitle: 'Best Books for Different Reading Levels: Perfect Gifts for Every Reader'
+metaDescription: Find the perfect books for every reader in your life! From beginners to bookworms, discover thoughtful book gifts that match their reading level and interests.
+keywords:
+  - books for different reading levels
+  - gifts for readers
+  - books for beginners
+  - books for bookworms
+  - reading level gifts
+  - book recommendations by age
+tags:
+  - books
+  - reading-levels
+  - gift-guide
+  - bookworms
+  - beginners
+  - reading
+category: gift-guide
 readTime: 12
 featured: true
 draft: false

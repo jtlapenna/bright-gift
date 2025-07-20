@@ -1,13 +1,18 @@
 ---
-title: "Affordable Gifts for Pet Lovers Under $30: 15 Perfect Picks"
-description: "Discover 15 affordable and thoughtful gifts for pet lovers under $30. From personalized items to practical accessories, find the perfect present for any animal enthusiast."
-date: "2025-07-15"
-image: "/images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-banner.webp"
-ogImage: "/images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-og.webp"
-socialImage: "/images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-social.webp"
-tags: ["pet gifts", "affordable gifts", "budget gifts", "pet accessories", "animal lovers"]
-priceRange: "$8-$30"
-amazonLink: "https://www.amazon.com/s?k=pet+gifts+under+30&tag=brightgift-20"
+title: 'Affordable Gifts for Pet Lovers Under $30: 15 Perfect Picks'
+description: Discover 15 affordable and thoughtful gifts for pet lovers under $30. From personalized items to practical accessories, find the perfect present for any animal...
+date: '2025-07-15'
+image: /images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-banner.webp
+ogImage: /images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-og.webp
+socialImage: /images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-social.webp
+tags:
+  - pet gifts
+  - affordable gifts
+  - budget gifts
+  - pet accessories
+  - animal lovers
+priceRange: $8-$30
+amazonLink: https://www.amazon.com/s?k=pet+gifts+under+30&tag=brightgift-20
 ---
 
 Finding the perfect gift for pet lovers doesn't have to break the bank. Whether they're devoted dog parents, cat enthusiasts, or proud pet parents of any furry friend, there are plenty of thoughtful and affordable options that will show you understand their passion for animals. This guide features 15 carefully selected gifts under $30 that combine practicality, fun, and personalization.

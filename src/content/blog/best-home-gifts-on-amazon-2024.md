@@ -1,13 +1,18 @@
 ---
-title: "Best Home Gifts on Amazon 2024: Transform Your Space"
-description: "Discover the top home gifts on Amazon for 2024. From smart home devices to cozy essentials, find perfect gifts under $100 to make any home more comfortable and stylish."
-date: "2024-12-19"
-image: "/images/blog/best-home-gifts-on-amazon-2024/amazon-home-banner.webp"
-ogImage: "/images/blog/best-home-gifts-on-amazon-2024/amazon-home-OG.webp"
-socialImage: "/images/blog/best-home-gifts-on-amazon-2024/amazon-home-social.webp"
-tags: ["home gifts", "amazon", "housewarming", "home decor", "smart home"]
-priceRange: "$25-$100"
-amazonLink: "https://www.amazon.com/s?k=home+gifts+2024&tag=brightgift-20"
+title: 'Best Home Gifts on Amazon 2024: Transform Your Space'
+description: Discover the top home gifts on Amazon for 2024. From smart home devices to cozy essentials, find perfect gifts under $100 to make any home more comfortable and...
+date: '2024-12-19'
+image: /images/blog/best-home-gifts-on-amazon-2024/amazon-home-banner.webp
+ogImage: /images/blog/best-home-gifts-on-amazon-2024/amazon-home-OG.webp
+socialImage: /images/blog/best-home-gifts-on-amazon-2024/amazon-home-social.webp
+tags:
+  - home gifts
+  - amazon
+  - housewarming
+  - home decor
+  - smart home
+priceRange: $25-$100
+amazonLink: https://www.amazon.com/s?k=home+gifts+2024&tag=brightgift-20
 ---
 
 Looking for the perfect home gift? Amazon has everything you need to transform any space into a cozy, functional haven. Whether you're shopping for new homeowners, housewarming parties, or just want to upgrade your own space, these top picks combine style, functionality, and value.

@@ -1,44 +1,40 @@
 ---
-title: "Eco-Friendly Gifts for Outdoor Lovers: Sustainable Nature Gifts"
-slug: "eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature"
-image: "/images/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature-banner.webp"
-ogImage: "/images/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature-og.webp"
-socialImage: "/images/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature-social.webp"
-category: "gift-guides"
-description: "Find eco-friendly gifts for outdoor enthusiasts that promote sustainability while enjoying nature."
-keywords: "eco-friendly gifts, gifts for outdoor lovers, sustainable gifts, nature gifts, outdoor gear"
-date: "2025-07-18"
+title: 'Eco-Friendly Gifts for Outdoor Lovers: Sustainable Nature...'
+slug: eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature
+image: /images/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature-banner.webp
+ogImage: /images/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature-og.webp
+socialImage: /images/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature-social.webp
+category: gift-guides
+description: Find eco-friendly gifts for outdoor enthusiasts that promote sustainability while enjoying nature.
+keywords: eco-friendly gifts, gifts for outdoor lovers, sustainable gifts, nature gifts, outdoor gear
+date: '2025-07-18'
 draft: false
-status: "published"
+status: published
 socialPosts:
   instagram:
-    caption: "🎁 Eco-Friendly Gifts for Outdoor Lovers: Sustainably Celebrating Nature
-
-Find eco-friendly gifts for outdoor enthusiasts that promote sustainability while enjoying nature.
-
-#giftideas #gifts #brightgift"
-    hashtags: "giftideas,gifts,brightgift,giftguide"
+    caption: |-
+      🎁 Eco-Friendly Gifts for Outdoor Lovers: Sustainably Celebrating Nature
+      Find eco-friendly gifts for outdoor enthusiasts that promote sustainability while enjoying nature.
+      #giftideas #gifts #brightgift
+    hashtags: giftideas,gifts,brightgift,giftguide
   twitter:
-    text: "Eco-Friendly Gifts for Outdoor Lovers: Sustainably Celebrating Nature
-
-Find eco-friendly gifts for outdoor enthusiasts that promote sustainability while enjoying nature.
-
-#giftideas #gifts #brightgift"
-    hashtags: "giftideas,gifts,brightgift"
+    text: |-
+      Eco-Friendly Gifts for Outdoor Lovers: Sustainably Celebrating Nature
+      Find eco-friendly gifts for outdoor enthusiasts that promote sustainability while enjoying nature.
+      #giftideas #gifts #brightgift
+    hashtags: giftideas,gifts,brightgift
   facebook:
-    text: "Eco-Friendly Gifts for Outdoor Lovers: Sustainably Celebrating Nature
-
-Find eco-friendly gifts for outdoor enthusiasts that promote sustainability while enjoying nature.
-
-What do you think of these gift ideas? Share your thoughts below! 👇"
-    hashtags: "giftideas,gifts,brightgift"
+    text: |-
+      Eco-Friendly Gifts for Outdoor Lovers: Sustainably Celebrating Nature
+      Find eco-friendly gifts for outdoor enthusiasts that promote sustainability while enjoying nature.
+      What do you think of these gift ideas? Share your thoughts below! 👇
+    hashtags: giftideas,gifts,brightgift
   linkedin:
-    text: "Eco-Friendly Gifts for Outdoor Lovers: Sustainably Celebrating Nature
-
-Find eco-friendly gifts for outdoor enthusiasts that promote sustainability while enjoying nature.
-
-Looking for thoughtful gift ideas? Check out this comprehensive guide for inspiration."
-    hashtags: "giftideas,gifts,brightgift,giftguide"
+    text: |-
+      Eco-Friendly Gifts for Outdoor Lovers: Sustainably Celebrating Nature
+      Find eco-friendly gifts for outdoor enthusiasts that promote sustainability while enjoying nature.
+      Looking for thoughtful gift ideas? Check out this comprehensive guide for inspiration.
+    hashtags: giftideas,gifts,brightgift,giftguide
 ---
 
 # Introduction

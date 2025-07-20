@@ -1,13 +1,17 @@
 ---
-title: "25 Thoughtful Housewarming Gifts for New Homeowners Under $75"
-description: "Discover 25 thoughtful housewarming gifts under $75 that new homeowners will love. From practical essentials to stylish decor, find the perfect gift for their new home."
-date: "2024-12-19"
-image: "/images/blog/housewarming-gifts-under-75/housewarming-banner.webp"
-ogImage: "/images/blog/housewarming-gifts-under-75/housewarming-og.webp"
-socialImage: "/images/blog/housewarming-gifts-under-75/housewarming-social.webp"
-tags: ["housewarming", "new homeowners", "home gifts", "under 75"]
-priceRange: "$15-$75"
-amazonLink: "https://www.amazon.com/s?k=housewarming+gifts&tag=brightgift-20"
+title: 25 Thoughtful Housewarming Gifts for New Homeowners Under...
+description: Discover 25 thoughtful housewarming gifts under $75 that new homeowners will love. From practical essentials to stylish decor, find the perfect gift for their...
+date: '2024-12-19'
+image: /images/blog/housewarming-gifts-under-75/housewarming-banner.webp
+ogImage: /images/blog/housewarming-gifts-under-75/housewarming-og.webp
+socialImage: /images/blog/housewarming-gifts-under-75/housewarming-social.webp
+tags:
+  - housewarming
+  - new homeowners
+  - home gifts
+  - under 75
+priceRange: $15-$75
+amazonLink: https://www.amazon.com/s?k=housewarming+gifts&tag=brightgift-20
 ---
 
 Moving into a new home is an exciting milestone that deserves celebration. Whether they're first-time buyers or seasoned homeowners, these thoughtful gifts under $75 will help make their new space feel like home.

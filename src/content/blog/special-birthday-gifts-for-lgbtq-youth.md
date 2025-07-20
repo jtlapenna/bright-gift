@@ -1,13 +1,19 @@
 ---
-title: "Special Birthday Gifts for LGBTQ+ Youth: 15 Thoughtful Ideas"
-description: "Find the perfect birthday gift for LGBTQ+ youth with our curated selection of thoughtful, inclusive presents that celebrate identity and support their journey of self-expression."
-date: "2024-01-15"
-image: "/images/blog/special-birthday-gifts-for-lgbtq-youth/special-birthday-gifts-for-lgbtq-youth-banner.webp"
-ogImage: "/images/blog/special-birthday-gifts-for-lgbtq-youth/special-birthday-gifts-for-lgbtq-youth-og.webp"
-socialImage: "/images/blog/special-birthday-gifts-for-lgbtq-youth/special-birthday-gifts-for-lgbtq-youth-social.webp"
-tags: ["birthday gifts", "LGBTQ+ gifts", "inclusive gifts", "youth gifts", "pride gifts", "identity gifts"]
-priceRange: "$10-$60"
-amazonLink: "https://www.amazon.com/s?k=lgbtq+youth+birthday+gifts&tag=brightgift-20"
+title: 'Special Birthday Gifts for LGBTQ+ Youth: 15 Thoughtful Ideas'
+description: Find the perfect birthday gift for LGBTQ+ youth with our curated selection of thoughtful, inclusive presents that celebrate identity and support their journey...
+date: '2024-01-15'
+image: /images/blog/special-birthday-gifts-for-lgbtq-youth/special-birthday-gifts-for-lgbtq-youth-banner.webp
+ogImage: /images/blog/special-birthday-gifts-for-lgbtq-youth/special-birthday-gifts-for-lgbtq-youth-og.webp
+socialImage: /images/blog/special-birthday-gifts-for-lgbtq-youth/special-birthday-gifts-for-lgbtq-youth-social.webp
+tags:
+  - birthday gifts
+  - LGBTQ+ gifts
+  - inclusive gifts
+  - youth gifts
+  - pride gifts
+  - identity gifts
+priceRange: $10-$60
+amazonLink: https://www.amazon.com/s?k=lgbtq+youth+birthday+gifts&tag=brightgift-20
 ---
 
 Finding the perfect birthday gift for LGBTQ+ youth is a beautiful opportunity to celebrate their unique identity and show unconditional love and support. Birthdays are especially meaningful for young people exploring their identity, as they represent not just another year of life, but another year of becoming their authentic selves.

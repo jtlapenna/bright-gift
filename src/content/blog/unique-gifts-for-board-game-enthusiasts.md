@@ -1,13 +1,19 @@
 ---
-title: "Unique Gifts for Board Game Enthusiasts: 15 Perfect Ideas"
-description: "Level up their game night with our curated selection of unique gifts for board game enthusiasts, from strategy games to quirky accessories that enhance the gaming experience."
-date: "2024-01-15"
-image: "/images/blog/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night-banner.webp"
-ogImage: "/images/blog/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night-og.webp"
-socialImage: "/images/blog/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night-social.webp"
-tags: ["board game gifts", "gaming gifts", "strategy games", "game accessories", "game night", "hobby gifts"]
-priceRange: "$10-$70"
-amazonLink: "https://www.amazon.com/s?k=board+game+gifts+enthusiasts&tag=brightgift-20"
+title: 'Unique Gifts for Board Game Enthusiasts: 15 Perfect Ideas'
+description: Level up their game night with our curated selection of unique gifts for board game enthusiasts, from strategy games to quirky accessories that enhance the...
+date: '2024-01-15'
+image: /images/blog/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night-banner.webp
+ogImage: /images/blog/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night-og.webp
+socialImage: /images/blog/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night-social.webp
+tags:
+  - board game gifts
+  - gaming gifts
+  - strategy games
+  - game accessories
+  - game night
+  - hobby gifts
+priceRange: $10-$70
+amazonLink: https://www.amazon.com/s?k=board+game+gifts+enthusiasts&tag=brightgift-20
 ---
 
 Finding the perfect gift for board game enthusiasts can feel like navigating a complex strategy game—you want to choose something that shows you understand their passion while adding real value to their gaming experience. Whether they're casual players who enjoy family game nights or serious collectors who analyze every mechanic, the right gift can transform their game nights and strengthen their connection to this beloved hobby.
