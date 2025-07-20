@@ -13,6 +13,9 @@
 /blog/sample-post   /blog   301
 /blog/handmade-gifts   /blog   301
 
+# Fix .md extension URLs causing 404 errors
+/blog/*.md   /blog/:splat/   301
+
 # Handle common redirect chains and variations
 /blog/gift-guides/*   /blog/:splat   301
 /gift-guides/*   /blog/:splat   301

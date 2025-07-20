@@ -43,11 +43,13 @@
 - **Priority**: CRITICAL - Site functionality broken
 - **Status**: 🔴 URGENT - Needs immediate attention
 
-### 6. **CRITICAL: Related Posts Links Returning 404 (URGENT)**
+### 6. **CRITICAL: Related Posts Links Returning 404 (RESOLVED ✅)**
 - **Issue**: "Related Posts" section links returning 404 errors when clicked
+- **Root Cause**: Using `relatedPost.id` instead of `relatedPost.slug` in URL generation
+- **Solution**: Changed from `relatedPost.id` to `relatedPost.slug` to generate clean URLs without .md extensions
 - **Impact**: Poor user experience, broken internal linking
 - **Priority**: CRITICAL - Core functionality broken
-- **Status**: 🔴 URGENT - Needs immediate attention
+- **Status**: ✅ RESOLVED - Related posts links now work properly
 
 ### 7. **404/4XX Pages (35 pages affected)**
 - **Issue**: 35 pages returning 404/4XX errors
@@ -173,57 +175,147 @@
 
 ## Implementation Priority Matrix
 
-### **IMMEDIATE (Week 1) - ✅ COMPLETED**
+### **PHASE 1: Immediate Critical Fixes (Week 1) - ✅ COMPLETED**
 1. ✅ Fix 404/4XX pages - Fixed sitemap, added redirects
 2. ✅ Implement social sharing functionality - Added X, Facebook, Pinterest, Instagram, Bluesky
 3. ✅ Fix canonical URL issues - Updated Layout.astro to use HTTPS
 4. ✅ Remove broken URLs from sitemap - Removed /about, added /ai-gift-guide
 5. ✅ Implement related posts functionality - Dynamic related posts based on tags
 
-### **HIGH PRIORITY (Week 2) - ✅ COMPLETED**
-1. ✅ Fix broken internal links - All internal links are working correctly
-2. ✅ Optimize image files - Converted large PNG files to WebP (93% size reduction)
-3. ✅ Implement related posts functionality - Dynamic related posts based on tags
-4. ✅ Fix meta description lengths - Shortened overly long meta descriptions
+### **PHASE 2: URL Structure Fixes (Week 2) - SAFE APPROACH**
 
-### **MEDIUM PRIORITY (Week 3) - ✅ COMPLETED**
-1. ✅ Fix structured data markup - Enhanced schema.org markup with proper ImageObject, offers, and validation
-2. ✅ Add missing alt text - Fixed empty alt attribute and verified all images have proper alt text
-3. ✅ Optimize redirect chains - Added redirects for file extensions and legacy paths
-4. ✅ Fix title lengths - Shortened overly long titles to stay within 60-character limit
+#### **2.1 Blog Post URL Extensions Issue**
+- **Problem**: URLs with `.md` extensions causing 404s
+- **Safe Fix Strategy**:
+  1. **Audit**: Identify all places where `.md` extensions are being added
+  2. **Redirects**: Add redirects from `.md` URLs to clean URLs
+  3. **Code Review**: Ensure all URL generation uses `slug` not `id`
+  4. **Test**: Verify all blog post URLs work without extensions
 
-### **LOW PRIORITY (Week 4) - ✅ COMPLETED**
-1. ✅ Fix duplicate content issues - Added canonical URLs to prevent duplicate content
-2. ✅ Optimize internal linking - Enhanced contextual internal links between related posts
-3. ✅ Improve page speed - Removed unused images (170MB+ saved) and optimized remaining files
-4. ✅ Add schema markup for reviews - Added aggregate rating schema for gift guides
+#### **2.2 Internal Link Audit**
+- **Problem**: Broken internal links throughout site
+- **Safe Fix Strategy**:
+  1. **Scan**: Use automated tool to find all internal links
+  2. **Categorize**: Separate working vs broken links
+  3. **Fix**: Update broken links to correct URLs
+  4. **Redirects**: Add redirects for any legacy URLs
 
-## Technical Requirements
+### **PHASE 3: SEO Optimization (Week 3) - LOW RISK**
 
-### Social Sharing Implementation
-- Add Open Graph meta tags for Facebook/Pinterest
-- Add Twitter Card meta tags for X
-- Implement sharing buttons with proper URL encoding
-- Ensure images are properly sized for each platform
-- Add tracking parameters for analytics
+#### **3.1 Canonical URL Issues**
+- **Problem**: Canonical URLs redirecting from HTTPS to HTTP
+- **Safe Fix Strategy**:
+  1. **Audit**: Check all canonical URLs in Layout.astro
+  2. **Update**: Ensure all canonical URLs use HTTPS
+  3. **Test**: Verify no redirect chains
 
-### Related Posts Implementation
-- Create algorithm to find related posts by category/tags
-- Implement caching for performance
-- Add fallback content when no related posts exist
-- Ensure proper internal linking structure
+#### **3.2 Meta Description & Title Lengths**
+- **Problem**: Meta descriptions and titles too long
+- **Safe Fix Strategy**:
+  1. **Audit**: Check all blog post frontmatter
+  2. **Shorten**: Trim descriptions to 150-160 characters
+  3. **Shorten**: Trim titles to 50-60 characters
+  4. **Validate**: Use YAML validation to prevent future issues
 
-### SEO Fixes
-- Implement proper canonical tags
-- Set up 301 redirects for non-canonical URLs
-- Optimize meta descriptions and titles
-- Fix structured data markup
-- Compress and optimize images
-- Add alt text to all images
+### **PHASE 4: Sitemap & Technical SEO (Week 4) - LOW RISK**
 
-## Monitoring and Validation
-- Set up regular Ahrefs audits (weekly)
-- Monitor Core Web Vitals
-- Track social sharing engagement
-- Monitor internal link structure
-- Validate structured data markup 
+#### **4.1 Sitemap Cleanup**
+- **Problem**: Sitemap contains broken URLs
+- **Safe Fix Strategy**:
+  1. **Audit**: Review current sitemap
+  2. **Remove**: Delete broken URLs
+  3. **Add**: Include missing pages
+  4. **Validate**: Ensure all URLs return 200 status
+
+#### **4.2 Image Optimization**
+- **Problem**: Large image files and missing alt text
+- **Safe Fix Strategy**:
+  1. **Audit**: Identify large images
+  2. **Compress**: Convert to WebP format
+  3. **Alt Text**: Add descriptive alt attributes
+  4. **Validate**: Ensure accessibility compliance
+
+### **PHASE 5: Advanced SEO (Week 5) - LOW RISK**
+
+#### **5.1 Structured Data**
+- **Problem**: Schema.org validation errors
+- **Safe Fix Strategy**:
+  1. **Audit**: Test all structured data
+  2. **Fix**: Correct validation errors
+  3. **Test**: Verify Google Rich Results compatibility
+  4. **Monitor**: Track rich snippet performance
+
+#### **5.2 Orphan Pages**
+- **Problem**: Pages with no internal links
+- **Safe Fix Strategy**:
+  1. **Identify**: Find orphan pages
+  2. **Link**: Add contextual internal links
+  3. **Categorize**: Group related content
+  4. **Test**: Ensure proper internal linking structure
+
+## 🔒 SAFETY PRINCIPLES
+
+1. **One Change at a Time**: Never make multiple changes simultaneously
+2. **Test Before Deploy**: Always test locally before pushing to production
+3. **Backup Strategy**: Keep working versions in git branches
+4. **Rollback Plan**: Be ready to revert any change that breaks the site
+5. **Validation**: Use automated tools to catch issues early
+6. **Monitoring**: Watch site performance after each change
+
+## 📋 IMPLEMENTATION ORDER
+
+1. **Week 1**: ✅ Complete (Critical fixes done)
+2. **Week 2**: URL structure fixes (highest impact, medium risk)
+3. **Week 3**: SEO optimization (medium impact, low risk)
+4. **Week 4**: Technical SEO (low impact, low risk)
+5. **Week 5**: Advanced SEO (low impact, low risk)
+
+## 🚀 QUICKEST HIGH-VALUE FIXES
+
+### **IMMEDIATE (Next 24-48 hours):**
+
+1. **Blog Post URL Extensions** - Add redirects for `.md` URLs
+   - **Impact**: High (fixes user-facing 404 errors)
+   - **Risk**: Low (just adding redirects)
+   - **Time**: 2-3 hours
+
+2. **Canonical URL HTTPS Fix** - Update Layout.astro
+   - **Impact**: High (SEO improvement)
+   - **Risk**: Low (single file change)
+   - **Time**: 30 minutes
+
+3. **Meta Description Lengths** - Trim overly long descriptions
+   - **Impact**: Medium (SEO improvement)
+   - **Risk**: Low (frontmatter only)
+   - **Time**: 1-2 hours
+
+### **HIGH PRIORITY (Next week):**
+
+4. **Internal Link Audit** - Find and fix broken internal links
+   - **Impact**: High (user experience)
+   - **Risk**: Medium (requires careful testing)
+   - **Time**: 4-6 hours
+
+5. **Sitemap Cleanup** - Remove broken URLs from sitemap
+   - **Impact**: Medium (SEO improvement)
+   - **Risk**: Low (sitemap only)
+   - **Time**: 2-3 hours
+
+6. **Image Alt Text** - Add missing alt attributes
+   - **Impact**: Medium (accessibility + SEO)
+   - **Risk**: Low (content only)
+   - **Time**: 1-2 hours
+
+### **MEDIUM PRIORITY (Next 2 weeks):**
+
+7. **Title Length Optimization** - Shorten overly long titles
+   - **Impact**: Medium (SEO improvement)
+   - **Risk**: Low (frontmatter only)
+   - **Time**: 1 hour
+
+8. **Structured Data Validation** - Fix schema.org errors
+   - **Impact**: Medium (rich snippets)
+   - **Risk**: Low (JSON-LD only)
+   - **Time**: 2-3 hours
+
+This plan prioritizes user-facing issues first while maintaining site stability throughout the process. 
