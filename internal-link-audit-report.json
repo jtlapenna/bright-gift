@@ -1,9 +1,9 @@
 {
-  "timestamp": "2025-07-20T06:14:30.367Z",
+  "timestamp": "2025-07-20T06:25:11.996Z",
   "summary": {
-    "totalLinks": 117,
-    "uniqueUrls": 21,
-    "working": 21,
+    "totalLinks": 153,
+    "uniqueUrls": 33,
+    "working": 33,
     "broken": 0,
     "successRate": "100.0"
   },
@@ -34,9 +34,33 @@
       "file": "25-books-to-gift-this-holiday-season.md"
     },
     {
+      "text": "gifts for book lovers",
+      "url": "https://bright-gift.com/blog/gifts-for-book-lovers-under-50",
+      "context": "[gifts for book lovers](/blog/gifts-for-book-lovers-under-50)",
+      "file": "25-books-to-gift-this-holiday-season.md"
+    },
+    {
+      "text": "books for different reading levels",
+      "url": "https://bright-gift.com/blog/best-books-for-different-reading-levels",
+      "context": "[books for different reading levels](/blog/best-books-for-different-reading-levels)",
+      "file": "25-books-to-gift-this-holiday-season.md"
+    },
+    {
       "text": "Gift Idea Generator",
       "url": "https://bright-gift.com",
       "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "25-thoughtful-housewarming-gifts-for-new-homeowners-under-75.md"
+    },
+    {
+      "text": "undefined",
+      "url": "https://bright-gift.com/blog/gifts-for-new-homeowners-2025",
+      "context": "[undefined](/blog/gifts-for-new-homeowners-2025)",
+      "file": "25-thoughtful-housewarming-gifts-for-new-homeowners-under-75.md"
+    },
+    {
+      "text": "gifts for new parents",
+      "url": "https://bright-gift.com/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond",
+      "context": "[gifts for new parents](/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond)",
       "file": "25-thoughtful-housewarming-gifts-for-new-homeowners-under-75.md"
     },
     {
@@ -58,6 +82,12 @@
       "file": "25-unique-anniversary-gift-ideas-under-50.md"
     },
     {
+      "text": "chic wedding gifts",
+      "url": "https://bright-gift.com/blog/chic-wedding-gifts-for-the-stylish-couple",
+      "context": "[chic wedding gifts](/blog/chic-wedding-gifts-for-the-stylish-couple)",
+      "file": "25-unique-anniversary-gift-ideas-under-50.md"
+    },
+    {
       "text": "unique gifts for girlfriends",
       "url": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas",
       "context": "[unique gifts for girlfriends](https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas)",
@@ -73,6 +103,18 @@
       "text": "Gift Idea Generator",
       "url": "https://bright-gift.com",
       "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "30-unique-gift-ideas-for-new-parents-baby-shower-beyond.md"
+    },
+    {
+      "text": "undefined",
+      "url": "https://bright-gift.com/blog/gifts-for-new-homeowners-2025",
+      "context": "[undefined](/blog/gifts-for-new-homeowners-2025)",
+      "file": "30-unique-gift-ideas-for-new-parents-baby-shower-beyond.md"
+    },
+    {
+      "text": "undefined",
+      "url": "https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75",
+      "context": "[undefined](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75)",
       "file": "30-unique-gift-ideas-for-new-parents-baby-shower-beyond.md"
     },
     {
@@ -124,6 +166,18 @@
       "file": "best-books-for-different-reading-levels.md"
     },
     {
+      "text": "holiday book gifts",
+      "url": "https://bright-gift.com/blog/25-books-to-gift-this-holiday-season",
+      "context": "[holiday book gifts](/blog/25-books-to-gift-this-holiday-season)",
+      "file": "best-books-for-different-reading-levels.md"
+    },
+    {
+      "text": "gifts for book lovers",
+      "url": "https://bright-gift.com/blog/gifts-for-book-lovers-under-50",
+      "context": "[gifts for book lovers](/blog/gifts-for-book-lovers-under-50)",
+      "file": "best-books-for-different-reading-levels.md"
+    },
+    {
       "text": "Gift Idea Generator",
       "url": "https://bright-gift.com",
       "context": "[Gift Idea Generator](https://bright-gift.com)",
@@ -145,6 +199,12 @@
       "text": "Gifts for Remote Workers Under $50",
       "url": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50",
       "context": "[Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50)",
+      "file": "best-gifts-for-dads-who-love-outdoor-adventures.md"
+    },
+    {
+      "text": "undefined",
+      "url": "https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature",
+      "context": "[undefined](/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature)",
       "file": "best-gifts-for-dads-who-love-outdoor-adventures.md"
     },
     {
@@ -214,6 +274,12 @@
       "file": "chic-wedding-gifts-for-the-stylish-couple.md"
     },
     {
+      "text": "undefined",
+      "url": "https://bright-gift.com/blog/25-unique-anniversary-gift-ideas-under-50",
+      "context": "[undefined](/blog/25-unique-anniversary-gift-ideas-under-50)",
+      "file": "chic-wedding-gifts-for-the-stylish-couple.md"
+    },
+    {
       "text": "Gift Idea Generator",
       "url": "https://bright-gift.com",
       "context": "[Gift Idea Generator](https://bright-gift.com)",
@@ -244,6 +310,12 @@
       "file": "eco-friendly-gift-ideas-for-every-budget.md"
     },
     {
+      "text": "outdoor adventure gifts for dads",
+      "url": "https://bright-gift.com/blog/best-gifts-for-dads-who-love-outdoor-adventures",
+      "context": "[outdoor adventure gifts for dads](/blog/best-gifts-for-dads-who-love-outdoor-adventures)",
+      "file": "eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature.md"
+    },
+    {
       "text": "Gift Idea Generator",
       "url": "https://bright-gift.com",
       "context": "[Gift Idea Generator](https://bright-gift.com)",
@@ -262,6 +334,18 @@
       "file": "eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature.md"
     },
     {
+      "text": "last minute birthday gifts",
+      "url": "https://bright-gift.com/blog/last-minute-birthday-gifts-for-busy-professionals",
+      "context": "[last minute birthday gifts](/blog/last-minute-birthday-gifts-for-busy-professionals)",
+      "file": "fun-gifts-for-kids-birthday-parties.md"
+    },
+    {
+      "text": "birthday gifts for LGBTQ+ youth",
+      "url": "https://bright-gift.com/blog/special-birthday-gifts-for-lgbtq-youth",
+      "context": "[birthday gifts for LGBTQ+ youth](/blog/special-birthday-gifts-for-lgbtq-youth)",
+      "file": "fun-gifts-for-kids-birthday-parties.md"
+    },
+    {
       "text": "Gift Idea Generator",
       "url": "https://bright-gift.com",
       "context": "[Gift Idea Generator](https://bright-gift.com)",
@@ -271,6 +355,18 @@
       "text": "Gift Idea Generator",
       "url": "https://bright-gift.com",
       "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "gifts-for-book-lovers-under-50.md"
+    },
+    {
+      "text": "books for different reading levels",
+      "url": "https://bright-gift.com/blog/best-books-for-different-reading-levels",
+      "context": "[books for different reading levels](/blog/best-books-for-different-reading-levels)",
+      "file": "gifts-for-book-lovers-under-50.md"
+    },
+    {
+      "text": "holiday book gifts",
+      "url": "https://bright-gift.com/blog/25-books-to-gift-this-holiday-season",
+      "context": "[holiday book gifts](/blog/25-books-to-gift-this-holiday-season)",
       "file": "gifts-for-book-lovers-under-50.md"
     },
     {
@@ -304,6 +400,24 @@
       "file": "gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md"
     },
     {
+      "text": "undefined",
+      "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50",
+      "context": "[undefined](/blog/gifts-for-gamers-under-50)",
+      "file": "gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md"
+    },
+    {
+      "text": "unique Christmas gifts for gamers",
+      "url": "https://bright-gift.com/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024",
+      "context": "[unique Christmas gifts for gamers](/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024)",
+      "file": "gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md"
+    },
+    {
+      "text": "board game gifts",
+      "url": "https://bright-gift.com/blog/unique-gifts-for-board-game-enthusiasts",
+      "context": "[board game gifts](/blog/unique-gifts-for-board-game-enthusiasts)",
+      "file": "gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md"
+    },
+    {
       "text": "Gift Idea Generator",
       "url": "https://bright-gift.com",
       "context": "[Gift Idea Generator](https://bright-gift.com)",
@@ -316,6 +430,24 @@
       "file": "gifts-for-gamers-under-50.md"
     },
     {
+      "text": "D&D gifts",
+      "url": "https://bright-gift.com/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience",
+      "context": "[D&D gifts](/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience)",
+      "file": "gifts-for-gamers-under-50.md"
+    },
+    {
+      "text": "board game gifts",
+      "url": "https://bright-gift.com/blog/unique-gifts-for-board-game-enthusiasts",
+      "context": "[board game gifts](/blog/unique-gifts-for-board-game-enthusiasts)",
+      "file": "gifts-for-gamers-under-50.md"
+    },
+    {
+      "text": "unique Christmas gifts for gamers",
+      "url": "https://bright-gift.com/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024",
+      "context": "[unique Christmas gifts for gamers](/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024)",
+      "file": "gifts-for-gamers-under-50.md"
+    },
+    {
       "text": "Gift Idea Generator",
       "url": "https://bright-gift.com",
       "context": "[Gift Idea Generator](https://bright-gift.com)",
@@ -325,6 +457,18 @@
       "text": "Gift Idea Generator",
       "url": "https://bright-gift.com",
       "context": "[Gift Idea Generator](https://bright-gift.com)",
+      "file": "gifts-for-girlfriend-unique-romantic-ideas.md"
+    },
+    {
+      "text": "last minute birthday gifts",
+      "url": "https://bright-gift.com/blog/last-minute-birthday-gifts-for-busy-professionals",
+      "context": "[last minute birthday gifts](/blog/last-minute-birthday-gifts-for-busy-professionals)",
+      "file": "gifts-for-girlfriend-unique-romantic-ideas.md"
+    },
+    {
+      "text": "birthday gifts for LGBTQ+ youth",
+      "url": "https://bright-gift.com/blog/special-birthday-gifts-for-lgbtq-youth",
+      "context": "[birthday gifts for LGBTQ+ youth](/blog/special-birthday-gifts-for-lgbtq-youth)",
       "file": "gifts-for-girlfriend-unique-romantic-ideas.md"
     },
     {
@@ -367,6 +511,18 @@
       "text": "Gifts for Remote Workers Under $50",
       "url": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50",
       "context": "[Gifts for Remote Workers Under $50](https://bright-gift.com/blog/gifts-for-remote-workers-under-50)",
+      "file": "gifts-for-new-homeowners-2025.md"
+    },
+    {
+      "text": "gifts for new parents",
+      "url": "https://bright-gift.com/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond",
+      "context": "[gifts for new parents](/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond)",
+      "file": "gifts-for-new-homeowners-2025.md"
+    },
+    {
+      "text": "undefined",
+      "url": "https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75",
+      "context": "[undefined](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75)",
       "file": "gifts-for-new-homeowners-2025.md"
     },
     {
@@ -508,6 +664,18 @@
       "file": "last-minute-birthday-gifts-for-busy-professionals.md"
     },
     {
+      "text": "birthday gifts for LGBTQ+ youth",
+      "url": "https://bright-gift.com/blog/special-birthday-gifts-for-lgbtq-youth",
+      "context": "[birthday gifts for LGBTQ+ youth](/blog/special-birthday-gifts-for-lgbtq-youth)",
+      "file": "last-minute-birthday-gifts-for-busy-professionals.md"
+    },
+    {
+      "text": "fun birthday gifts for kids",
+      "url": "https://bright-gift.com/blog/fun-gifts-for-kids-birthday-parties",
+      "context": "[fun birthday gifts for kids](/blog/fun-gifts-for-kids-birthday-parties)",
+      "file": "last-minute-birthday-gifts-for-busy-professionals.md"
+    },
+    {
       "text": "Gift Idea Generator",
       "url": "https://bright-gift.com",
       "context": "[Gift Idea Generator](https://bright-gift.com)",
@@ -526,6 +694,18 @@
       "file": "special-birthday-gifts-for-lgbtq-youth.md"
     },
     {
+      "text": "last minute birthday gifts",
+      "url": "https://bright-gift.com/blog/last-minute-birthday-gifts-for-busy-professionals",
+      "context": "[last minute birthday gifts](/blog/last-minute-birthday-gifts-for-busy-professionals)",
+      "file": "special-birthday-gifts-for-lgbtq-youth.md"
+    },
+    {
+      "text": "fun birthday gifts for kids",
+      "url": "https://bright-gift.com/blog/fun-gifts-for-kids-birthday-parties",
+      "context": "[fun birthday gifts for kids](/blog/fun-gifts-for-kids-birthday-parties)",
+      "file": "special-birthday-gifts-for-lgbtq-youth.md"
+    },
+    {
       "text": "Gift Idea Generator",
       "url": "https://bright-gift.com",
       "context": "[Gift Idea Generator](https://bright-gift.com)",
@@ -550,6 +730,24 @@
       "file": "unique-christmas-gifts-for-gamers-who-have-everything-2024.md"
     },
     {
+      "text": "undefined",
+      "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50",
+      "context": "[undefined](/blog/gifts-for-gamers-under-50)",
+      "file": "unique-christmas-gifts-for-gamers-who-have-everything-2024.md"
+    },
+    {
+      "text": "board game gifts",
+      "url": "https://bright-gift.com/blog/unique-gifts-for-board-game-enthusiasts",
+      "context": "[board game gifts](/blog/unique-gifts-for-board-game-enthusiasts)",
+      "file": "unique-christmas-gifts-for-gamers-who-have-everything-2024.md"
+    },
+    {
+      "text": "D&D gifts",
+      "url": "https://bright-gift.com/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience",
+      "context": "[D&D gifts](/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience)",
+      "file": "unique-christmas-gifts-for-gamers-who-have-everything-2024.md"
+    },
+    {
       "text": "Gift Idea Generator",
       "url": "https://bright-gift.com",
       "context": "[Gift Idea Generator](https://bright-gift.com)",
@@ -571,6 +769,24 @@
       "text": "Eco-Friendly Gift Ideas",
       "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
       "context": "[Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget)",
+      "file": "unique-gifts-for-board-game-enthusiasts.md"
+    },
+    {
+      "text": "undefined",
+      "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50",
+      "context": "[undefined](/blog/gifts-for-gamers-under-50)",
+      "file": "unique-gifts-for-board-game-enthusiasts.md"
+    },
+    {
+      "text": "unique Christmas gifts for gamers",
+      "url": "https://bright-gift.com/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024",
+      "context": "[unique Christmas gifts for gamers](/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024)",
+      "file": "unique-gifts-for-board-game-enthusiasts.md"
+    },
+    {
+      "text": "D&D gifts",
+      "url": "https://bright-gift.com/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience",
+      "context": "[D&D gifts](/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience)",
       "file": "unique-gifts-for-board-game-enthusiasts.md"
     },
     {
