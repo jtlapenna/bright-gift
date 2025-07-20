@@ -2,7 +2,27 @@
 
 ## Critical SEO Issues (From Ahrefs Report)
 
-### 1. **404/4XX Pages (35 pages affected)**
+### 1. **YAML Frontmatter Errors (RESOLVED ✅)**
+- **Issue**: Multiple blog posts had malformed YAML frontmatter with duplicate text fragments
+- **Examples**: `mpact!"` instead of `mpact"`, `cial."` instead of `cial"`
+- **Impact**: Build failures, broken blog pages, site deployment issues
+- **Solution**: 
+  - Fixed all YAML errors by removing duplicate text fragments
+  - Added `scripts/validate-yaml.js` validation script
+  - Integrated YAML validation into build process (`npm run build`)
+  - Added `js-yaml` dependency for proper validation
+- **Prevention**: YAML validation now runs automatically before every build
+- **Status**: ✅ RESOLVED
+
+### 2. **CRITICAL: Redirect Loop on Blog Pages (URGENT)**
+- **Issue**: All blog pages returning ERR_TOO_MANY_REDIRECTS on live site
+- **Error**: "This page isn't working - bright-gift.com redirected you too many times"
+- **Impact**: Complete blog functionality broken, users cannot access any blog posts
+- **Priority**: CRITICAL - Site is unusable
+- **Action**: Debug redirect chain, fix Cloudflare/redirect configuration
+- **Status**: 🔴 URGENT - Needs immediate attention
+
+### 3. **404/4XX Pages (35 pages affected)**
 - **Issue**: 35 pages returning 404/4XX errors
 - **Change**: 26 new issues (increased from previous audit)
 - **Impact**: Broken user experience, lost SEO value

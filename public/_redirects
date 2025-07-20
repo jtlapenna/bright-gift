@@ -13,9 +13,6 @@
 /blog/sample-post   /blog   301
 /blog/handmade-gifts   /blog   301
 
-# Remove trailing slashes for consistency
-/*/   /:splat   301
-
 # Handle common redirect chains and variations
 /blog/gift-guides/*   /blog/:splat   301
 /gift-guides/*   /blog/:splat   301
