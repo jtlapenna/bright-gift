@@ -12,15 +12,16 @@
   - Integrated YAML validation into build process (`npm run build`)
   - Added `js-yaml` dependency for proper validation
 - **Prevention**: YAML validation now runs automatically before every build
+- **Investigation Needed**: Review content creation workflow to identify where duplicate text fragments are being introduced during frontmatter generation
 - **Status**: ✅ RESOLVED
 
-### 2. **CRITICAL: Redirect Loop on Blog Pages (URGENT)**
+### 2. **CRITICAL: Redirect Loop on Blog Pages (RESOLVED ✅)**
 - **Issue**: All blog pages returning ERR_TOO_MANY_REDIRECTS on live site
 - **Error**: "This page isn't working - bright-gift.com redirected you too many times"
 - **Impact**: Complete blog functionality broken, users cannot access any blog posts
-- **Priority**: CRITICAL - Site is unusable
-- **Action**: Debug redirect chain, fix Cloudflare/redirect configuration
-- **Status**: 🔴 URGENT - Needs immediate attention
+- **Root Cause**: Problematic redirect rule `/*/   /:splat   301` causing infinite loops
+- **Solution**: Removed the trailing slash redirect rule that was conflicting with Astro's URL handling
+- **Status**: ✅ RESOLVED - Blog pages should now work properly
 
 ### 3. **404/4XX Pages (35 pages affected)**
 - **Issue**: 35 pages returning 404/4XX errors
