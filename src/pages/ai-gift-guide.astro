@@ -1,19 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
-
-// Get AI-related blog posts
-const allPosts = await getCollection('blog');
-const aiPosts = allPosts.filter(post => 
-  post.data.tags?.some(tag => 
-    tag.toLowerCase().includes('ai') || 
-    tag.toLowerCase().includes('artificial intelligence')
-  ) || 
-  post.data.keywords?.some(keyword => 
-    keyword.toLowerCase().includes('ai') || 
-    keyword.toLowerCase().includes('artificial intelligence')
-  )
-).slice(0, 6); // Show top 6 AI-related posts
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -185,24 +171,20 @@ const structuredData = {
         Latest AI Gift Insights
       </h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {aiPosts.map((post) => (
-          <article class="bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="p-6">
-              <h3 class="text-xl font-semibold mb-3">
-                <a href={`/blog/${post.slug}`} class="text-purple-600 hover:text-purple-800">
-                  {post.data.title}
-                </a>
-              </h3>
-              <p class="text-gray-600 mb-4">{post.data.description}</p>
-              <div class="flex items-center justify-between">
-                <span class="text-sm text-gray-500">{post.data.readTime} min read</span>
-                <a href={`/blog/${post.slug}`} class="text-purple-600 hover:text-purple-800 font-semibold">
-                  Read More →
-                </a>
-              </div>
-            </div>
-          </article>
-        ))}
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-3">
+            <a href="/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide" class="text-purple-600 hover:text-purple-800">
+              How AI is Revolutionizing Gift Shopping
+            </a>
+          </h3>
+          <p class="text-gray-600 mb-4">Discover how artificial intelligence is transforming the way we find and choose gifts for our loved ones.</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">5 min read</span>
+            <a href="/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide" class="text-purple-600 hover:text-purple-800 font-semibold">
+              Read More →
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
