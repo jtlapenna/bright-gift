@@ -18,3 +18,7 @@ pnpm-debug.log*
 
 # System
 .DS_Store
+
+# Workflow files with secrets
+_workflow-documents/_BrightGift_Blog_and_Image_Generator_Workflow.json
+_workflow-documents/_old-before-simplified-loop-BrightGift_Blog_and_Image_Generator_Workflow.json
