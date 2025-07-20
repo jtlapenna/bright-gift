@@ -1,26 +1,15 @@
-# Legacy gift-guides redirects
-/gift-guides/gifts-for-gamers-under-50/   /blog/gifts-for-gamers-under-50/   301
-/gift-guides/gifts-under-25-for-coworkers/   /blog/gifts-under-25-for-coworkers/   301
-/gift-guides/gifts-for-plant-lovers/   /blog/gifts-for-plant-lovers/   301
+# Essential redirects only - remove legacy redirects that are causing sitemap issues
 
-# Common 404 redirects - redirect to homepage
+# Fix .md extension URLs causing 404 errors (essential)
+/blog/*.md   /blog/:splat/   301
+
+# Redirect old file extensions to clean URLs (essential)
+/*.html   /:splat   301
+/*.htm   /:splat   301
+/*.php   /:splat   301
+
+# Common 404 redirects to homepage (essential)
 /about   /   301
 /contact   /   301
 /shop   /   301
-/store   /   301
-
-# Blog post variations (common 404s)
-/blog/sample-post   /blog   301
-/blog/handmade-gifts   /blog   301
-
-# Fix .md extension URLs causing 404 errors
-/blog/*.md   /blog/:splat/   301
-
-# Handle common redirect chains and variations
-/blog/gift-guides/*   /blog/:splat   301
-/gift-guides/*   /blog/:splat   301
-
-# Redirect old file extensions to clean URLs
-/*.html   /:splat   301
-/*.htm   /:splat   301
-/*.php   /:splat   301 
+/store   /   301 
