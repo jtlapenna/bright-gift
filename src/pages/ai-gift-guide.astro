@@ -1,42 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "AI Gift Guide: Complete Guide to AI Gift Idea Generators",
-  "description": "Discover the best AI gift idea generators and learn how artificial intelligence is revolutionizing gift shopping. Find personalized gift recommendations for any occasion.",
-  "url": "https://bright-gift.com/ai-gift-guide",
-  "mainEntity": {
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How does the AI Gift Idea Generator work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our AI Gift Idea Generator uses advanced artificial intelligence to analyze your recipient's interests, style, and budget. It then suggests unique, thoughtful gifts by matching your input to a curated database of products and ideas, ensuring every recommendation is relevant and personalized."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What makes AI gift suggestions better?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI gift suggestions are tailored to your needs in real time. Unlike generic lists, our AI considers your recipient's personality, preferences, and occasion, delivering creative and unexpected ideas you might not find elsewhere. This saves you time and helps you discover truly memorable gifts."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are AI gift generators accurate?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI gift generators become more accurate with detailed input. The more specific information you provide about your recipient's interests, lifestyle, and preferences, the better the recommendations will be. They work best when combined with your personal knowledge of the recipient."
-        }
-      }
-    ]
-  }
-};
 ---
 
 <Layout 
@@ -47,8 +10,6 @@ const structuredData = {
   ogType="website"
   twitterCard="summary_large_image"
 >
-  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
-
   <!-- Hero Section -->
   <section class="bg-gradient-to-br from-purple-600 to-blue-600 text-white py-20">
     <div class="container mx-auto px-4 text-center">
@@ -62,188 +23,24 @@ const structuredData = {
         <a href="/" class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
           Try Our AI Gift Generator
         </a>
-        <a href="#how-it-works" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-          Learn How It Works
-        </a>
       </div>
     </div>
   </section>
 
-  <!-- How AI Gift Generators Work -->
-  <section id="how-it-works" class="py-16 bg-gray-50">
+  <!-- Simple Content -->
+  <section class="py-16">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
         How AI Gift Idea Generators Work
       </h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="text-center">
-          <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold text-purple-600">1</span>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Input Analysis</h3>
-          <p class="text-gray-600">AI analyzes your description of the recipient, including interests, relationship, and budget.</p>
-        </div>
-        <div class="text-center">
-          <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold text-purple-600">2</span>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Pattern Recognition</h3>
-          <p class="text-gray-600">Compares your input against thousands of successful gift-giving scenarios.</p>
-        </div>
-        <div class="text-center">
-          <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold text-purple-600">3</span>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Smart Recommendations</h3>
-          <p class="text-gray-600">Generates personalized gift suggestions with explanations for each recommendation.</p>
-        </div>
-        <div class="text-center">
-          <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold text-purple-600">4</span>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Continuous Learning</h3>
-          <p class="text-gray-600">Improves recommendations based on user feedback and successful outcomes.</p>
-        </div>
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="text-lg text-gray-600 mb-8">
+          Our AI Gift Idea Generator uses advanced artificial intelligence to analyze your recipient's interests, style, and budget. It then suggests unique, thoughtful gifts by matching your input to a curated database of products and ideas.
+        </p>
+        <a href="/" class="bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors inline-block">
+          Try AI Gift Generator Now
+        </a>
       </div>
-    </div>
-  </section>
-
-  <!-- Benefits Section -->
-  <section class="py-16">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-        Why Choose AI-Powered Gift Suggestions?
-      </h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <div class="text-purple-600 text-3xl mb-4">🎯</div>
-          <h3 class="text-xl font-semibold mb-3">Personalization at Scale</h3>
-          <p class="text-gray-600">Get truly personalized recommendations based on specific details about your recipient, not generic suggestions.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <div class="text-purple-600 text-3xl mb-4">⚡</div>
-          <h3 class="text-xl font-semibold mb-3">Time-Saving Efficiency</h3>
-          <p class="text-gray-600">Generate targeted suggestions in seconds instead of spending hours browsing endless product pages.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <div class="text-purple-600 text-3xl mb-4">💡</div>
-          <h3 class="text-xl font-semibold mb-3">Unique Discoveries</h3>
-          <p class="text-gray-600">Uncover unique, niche products that perfectly match your recipient's interests and stand out from typical choices.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <div class="text-purple-600 text-3xl mb-4">💰</div>
-          <h3 class="text-xl font-semibold mb-3">Budget Optimization</h3>
-          <p class="text-gray-600">Work within your specific budget while maximizing the perceived value and appropriateness of your gift choice.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <div class="text-purple-600 text-3xl mb-4">😌</div>
-          <h3 class="text-xl font-semibold mb-3">Reduced Anxiety</h3>
-          <p class="text-gray-600">Get confidence from data-backed suggestions with explanations for why each item might be perfect.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <div class="text-purple-600 text-3xl mb-4">🔄</div>
-          <h3 class="text-xl font-semibold mb-3">Continuous Improvement</h3>
-          <p class="text-gray-600">AI systems learn and improve over time, providing better recommendations as they gather more data.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Try Our AI Tool -->
-  <section class="py-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">
-        Experience the Future of Gift Shopping
-      </h2>
-      <p class="text-xl mb-8 max-w-2xl mx-auto">
-        Try our AI Gift Idea Generator and discover how artificial intelligence can help you find the perfect present for any occasion.
-      </p>
-      <a href="/" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors inline-block">
-        Start Using AI Gift Generator
-      </a>
-    </div>
-  </section>
-
-  <!-- AI Blog Posts -->
-  <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-        Latest AI Gift Insights
-      </h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-3">
-            <a href="/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide" class="text-purple-600 hover:text-purple-800">
-              How AI is Revolutionizing Gift Shopping
-            </a>
-          </h3>
-          <p class="text-gray-600 mb-4">Discover how artificial intelligence is transforming the way we find and choose gifts for our loved ones.</p>
-          <div class="flex items-center justify-between">
-            <span class="text-sm text-gray-500">5 min read</span>
-            <a href="/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide" class="text-purple-600 hover:text-purple-800 font-semibold">
-              Read More →
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="py-16">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-        Frequently Asked Questions
-      </h2>
-      <div class="max-w-3xl mx-auto space-y-6">
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-3 text-purple-600">
-            How does the AI Gift Idea Generator work?
-          </h3>
-          <p class="text-gray-600">
-            Our AI Gift Idea Generator uses advanced artificial intelligence to analyze your recipient's interests, style, and budget. It then suggests unique, thoughtful gifts by matching your input to a curated database of products and ideas, ensuring every recommendation is relevant and personalized.
-          </p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-3 text-purple-600">
-            What makes AI gift suggestions better?
-          </h3>
-          <p class="text-gray-600">
-            AI gift suggestions are tailored to your needs in real time. Unlike generic lists, our AI considers your recipient's personality, preferences, and occasion, delivering creative and unexpected ideas you might not find elsewhere. This saves you time and helps you discover truly memorable gifts.
-          </p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-3 text-purple-600">
-            Are AI gift generators accurate?
-          </h3>
-          <p class="text-gray-600">
-            AI gift generators become more accurate with detailed input. The more specific information you provide about your recipient's interests, lifestyle, and preferences, the better the recommendations will be. They work best when combined with your personal knowledge of the recipient.
-          </p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-3 text-purple-600">
-            How do I get the best results from AI gift generators?
-          </h3>
-          <p class="text-gray-600">
-            Provide detailed information about your recipient including their hobbies, lifestyle, recent life changes, and previous gift preferences. Be specific about the occasion and budget. The more context you give, the more personalized and accurate the recommendations will be.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="py-16 bg-purple-600 text-white">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">
-        Ready to Transform Your Gift Shopping?
-      </h2>
-      <p class="text-xl mb-8 max-w-2xl mx-auto">
-        Join thousands of people who are already using AI to find the perfect gifts. Start your AI-powered gift shopping journey today.
-      </p>
-      <a href="/" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors inline-block">
-        Try AI Gift Generator Now
-      </a>
     </div>
   </section>
 </Layout> 
