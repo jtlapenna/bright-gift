@@ -1,29 +1,13 @@
 {
-  "timestamp": "2025-07-20T05:58:05.064Z",
+  "timestamp": "2025-07-20T06:00:21.658Z",
   "summary": {
     "totalLinks": 117,
-    "uniqueUrls": 23,
+    "uniqueUrls": 21,
     "working": 21,
-    "broken": 2,
-    "successRate": "91.3"
+    "broken": 0,
+    "successRate": "100.0"
   },
-  "brokenLinks": [
-    {
-      "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50-under-50-under-50",
-      "status": 404,
-      "files": [
-        "gifts-for-remote-workers-under-50.md"
-      ]
-    },
-    {
-      "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50-under-50",
-      "status": 404,
-      "files": [
-        "unique-christmas-gifts-for-gamers-who-have-everything-2024.md",
-        "unique-gifts-for-board-game-enthusiasts.md"
-      ]
-    }
-  ],
+  "brokenLinks": [],
   "allLinks": [
     {
       "text": "Gift Idea Generator",
@@ -435,8 +419,8 @@
     },
     {
       "text": "Gifts for Gamers Under $50",
-      "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50-under-50-under-50",
-      "context": "[Gifts for Gamers Under $50](https://bright-gift.com/blog/gifts-for-gamers-under-50-under-50-under-50)",
+      "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50",
+      "context": "[Gifts for Gamers Under $50](https://bright-gift.com/blog/gifts-for-gamers-under-50)",
       "file": "gifts-for-remote-workers-under-50.md"
     },
     {
@@ -555,8 +539,8 @@
     },
     {
       "text": "Gifts for Gamers Under $50",
-      "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50-under-50",
-      "context": "[Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50-under-50)",
+      "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50",
+      "context": "[Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50)",
       "file": "unique-christmas-gifts-for-gamers-who-have-everything-2024.md"
     },
     {
@@ -579,8 +563,8 @@
     },
     {
       "text": "Gifts for Gamers Under $50",
-      "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50-under-50",
-      "context": "[Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50-under-50)",
+      "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50",
+      "context": "[Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50)",
       "file": "unique-gifts-for-board-game-enthusiasts.md"
     },
     {
