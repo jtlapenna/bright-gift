@@ -25,11 +25,31 @@
 
 ### 3. **AI Gift Guide 500 Error (RESOLVED ✅)**
 - **Issue**: `/ai-gift-guide` page returning HTTP 500 error
-- **Root Cause**: Missing image file referenced in page frontmatter
-- **Solution**: Updated image path from `/images/ai-gift-guide-banner.webp` to `/images/blog/ai-gift-shopping-banner.webp`
-- **Status**: ✅ RESOLVED - AI gift guide page should now load properly
+- **Root Cause**: Complex page structure with getCollection calls and structured data
+- **Solution**: Simplified page to minimal version, removed problematic getCollection and structured data
+- **Status**: ✅ RESOLVED - AI gift guide page now loads properly (HTTP 200)
 
-### 4. **404/4XX Pages (35 pages affected)**
+### 4. **Facebook Social Link (INVESTIGATION NEEDED)**
+- **Issue**: User reports Facebook social link on blog pages returning error
+- **Current Status**: Facebook sharing URL appears to work (HTTP 302 redirect is normal)
+- **Action**: Monitor for specific error messages or user reports
+- **Status**: 🔍 INVESTIGATION NEEDED - May be user-specific or browser-related issue
+
+### 5. **CRITICAL: Blog Post URLs with .md Extensions (URGENT)**
+- **Issue**: Blog post URLs showing `.md` extensions causing 404 errors
+- **Example**: `/blog/best-home-gifts-on-amazon-2024.md` returns 404
+- **Expected**: Should be `/blog/best-home-gifts-on-amazon-2024/`
+- **Impact**: Users cannot access blog posts, broken internal links
+- **Priority**: CRITICAL - Site functionality broken
+- **Status**: 🔴 URGENT - Needs immediate attention
+
+### 6. **CRITICAL: Related Posts Links Returning 404 (URGENT)**
+- **Issue**: "Related Posts" section links returning 404 errors when clicked
+- **Impact**: Poor user experience, broken internal linking
+- **Priority**: CRITICAL - Core functionality broken
+- **Status**: 🔴 URGENT - Needs immediate attention
+
+### 7. **404/4XX Pages (35 pages affected)**
 - **Issue**: 35 pages returning 404/4XX errors
 - **Change**: 26 new issues (increased from previous audit)
 - **Impact**: Broken user experience, lost SEO value

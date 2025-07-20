@@ -296,7 +296,7 @@ const relatedPosts = allBlogPosts
                 <div class="space-y-3">
                   {relatedPosts.map(relatedPost => (
                     <a 
-                      href={`/blog/${relatedPost.id}`}
+                      href={`/blog/${relatedPost.slug}`}
                       class="block p-3 bg-white rounded-lg border border-slate-200 hover:border-slate-300 transition-colors"
                     >
                       <h5 class="font-medium text-slate-900 text-sm line-clamp-2 mb-1">
