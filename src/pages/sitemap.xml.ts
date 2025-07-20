@@ -38,9 +38,9 @@ export async function GET() {
 
   // Only include real, published blog posts, excluding problematic slugs
   const blogUrls = blogPosts
-    .filter(post => !excludedBlogSlugs.includes(post.id))
+    .filter(post => !excludedBlogSlugs.includes(post.id.replace('.md', '')))
     .map(post => ({
-      url: `${baseUrl}/blog/${post.id}`,
+      url: `${baseUrl}/blog/${post.id.replace('.md', '')}`,
       lastmod: new Date(post.data.date).toISOString(),
       changefreq: 'monthly',
       priority: 0.7
