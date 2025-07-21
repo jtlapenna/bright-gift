@@ -1,9 +1,8 @@
 import { getCollection } from 'astro:content';
 
 export async function GET() {
-  // Only include published (draft: false) content, unless in preview
-  const isPreview = import.meta.env.IS_PREVIEW === 'true';
-  const blogPosts = await getCollection('blog', ({ data }) => isPreview || !data.draft);
+  // Only include published (draft: false) content
+  const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
 
   const baseUrl = 'https://bright-gift.com';
   
@@ -18,8 +17,6 @@ export async function GET() {
 
   // Generate URLs for static pages
   const staticUrls = staticPages.map(page => {
-    // Set a lower priority for the top-gifts page until it's ready to be linked in navigation
-    // This page is currently hidden from navigation until we have the necessary content
     const priority = page === '' ? 1.0 : 0.8;
     
     return {
