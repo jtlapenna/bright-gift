@@ -78,7 +78,6 @@
 - `gifts-for-plant-lovers`: 68 characters
 - `gifts-for-remote-workers-under-50`: 68 characters
 - `special-birthday-gifts-for-lgbtq-youth`: 74 characters
-- `top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners`: 67 characters
 - `unique-gifts-for-board-game-enthusiasts`: 74 characters
 
 **Descriptions Too Long (9 remaining):**

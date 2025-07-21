@@ -35,7 +35,7 @@ socialPosts:
       Discover thoughtful gifts for yoga lovers at every level, from beginners to advanced practitioners.
       Looking for wellness gift ideas? Check out this comprehensive guide for inspiration.
     hashtags: yogagifts,yoga,giftideas,brightgift,giftguide
-metaTitle: 'Yoga Gifts: 15 Perfect Ideas for Beginners to Advanced | BrightGift'
+metaTitle: 'Yoga Gifts for All Levels | 15 Perfect Ideas'
 metaDescription: 'Looking for the perfect gift for a yoga enthusiast? Discover 15 thoughtful yoga gifts for beginners to advanced practitioners. Shop smarter today!'
 readTime: 8
 featured: true

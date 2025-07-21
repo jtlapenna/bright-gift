@@ -1,6 +1,6 @@
 ---
 title: "Gifts for Remote Workers Under $50"
-metaTitle: "Gifts for Remote Workers: 15 Affordable Ideas Under $50 | BrightGift"
+metaTitle: "Gifts for Remote Workers Under $50 | 15 Affordable Ideas"
 metaDescription: "Looking for the best gifts for remote workers? Discover 15 affordable work from home gift ideas under $50 that boost productivity and comfort. Shop smarter today"
 description: "Find the perfect present for remote employees, coworkers, or friends working from home with our curated list of budget-friendly gifts under $50."
 date: "2024-07-04"
@@ -21,7 +21,7 @@ Working from home is here to stay, and finding the right gift for remote workers
 
 ---
 
-# More Gift Inspiration
+## More Gift Inspiration
 
 - See our full guide to [Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget).
 - Explore [Gifts for Plant Lovers](https://bright-gift.com/blog/gifts-for-plant-lovers).

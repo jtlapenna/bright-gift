@@ -13,17 +13,14 @@ export async function GET() {
     '/blog',
     '/privacy',
     '/terms',
-    '/data-deletion',
-    '/top-gifts',
-    '/ai-gift-guide'
+    '/data-deletion'
   ];
 
   // Generate URLs for static pages
   const staticUrls = staticPages.map(page => {
     // Set a lower priority for the top-gifts page until it's ready to be linked in navigation
     // This page is currently hidden from navigation until we have the necessary content
-    const priority = page === '' ? 1.0 : 
-                    page === '/top-gifts' ? 0.5 : 0.8;
+    const priority = page === '' ? 1.0 : 0.8;
     
     return {
       url: `${baseUrl}${page}`,

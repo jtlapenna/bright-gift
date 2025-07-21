@@ -831,18 +831,7 @@
       "context": "[Gift Idea Generator](https://bright-gift.com)",
       "file": "unique-graduation-gifts-creative-minds.md"
     },
-    {
-      "text": "HTML Link",
-      "url": "https://bright-gift.com/",
-      "context": "<a href=\"/\" class=\"bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors\">",
-      "file": "ai-gift-guide.astro"
-    },
-    {
-      "text": "HTML Link",
-      "url": "https://bright-gift.com/",
-      "context": "<a href=\"/\" class=\"bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors inline-block\">",
-      "file": "ai-gift-guide.astro"
-    },
+
     {
       "text": "HTML Link",
       "url": "https://bright-gift.com",
@@ -902,30 +891,6 @@
       "url": "https://bright-gift.com/",
       "context": "<a href=\"/\" class=\"text-[#FF6B6B] hover:underline\">",
       "file": "callback.astro"
-    },
-    {
-      "text": "HTML Link",
-      "url": "https://bright-gift.com/",
-      "context": "<a href=\"/\" class=\"text-coral-500 hover:underline\">",
-      "file": "top-gifts.astro"
-    },
-    {
-      "text": "HTML Link",
-      "url": "https://bright-gift.com/#tool",
-      "context": "<a href=\"/#tool\" class=\"font-semibold text-[#FF6B6B] hover:underline\">",
-      "file": "top-gifts.astro"
-    },
-    {
-      "text": "HTML Link",
-      "url": "https://bright-gift.com/#tool",
-      "context": "<a href=\"/#tool\" class=\"text-coral-500 hover:underline\">",
-      "file": "top-gifts.astro"
-    },
-    {
-      "text": "HTML Link",
-      "url": "https://bright-gift.com/#tool",
-      "context": "<a href=\"/#tool\" class=\"inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins text-lg shadow\">",
-      "file": "top-gifts.astro"
     }
   ]
 }

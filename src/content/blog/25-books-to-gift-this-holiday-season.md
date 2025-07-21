@@ -5,7 +5,7 @@ image: /images/blog/holiday-books-banner.webp
 ogImage: /images/blog/holiday-books-og.webp
 socialImage: /images/blog/holiday-books-social.webp
 date: '2024-11-01'
-metaTitle: 25 Best Books to Gift This Holiday Season - Perfect for Every Reader
+metaTitle: '25 Best Books to Gift This Holiday Season | Top Picks'
 metaDescription: Find the perfect books for everyone on your holiday gift list. From fiction to non-fiction, discover thoughtful book gifts for every reader in your life.
 keywords:
   - holiday book gifts

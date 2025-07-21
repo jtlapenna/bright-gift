@@ -5,7 +5,7 @@ image: /images/blog/reading-levels-banner.webp
 ogImage: /images/blog/reading-levels-og.webp
 socialImage: /images/blog/reading-levels-social.webp
 date: '2024-11-15'
-metaTitle: 'Best Books for Different Reading Levels: Perfect Gifts for Every Reader'
+metaTitle: 'Best Books for Different Reading Levels | Perfect Gifts'
 metaDescription: Find the perfect books for every reader in your life! From beginners to bookworms, discover thoughtful book gifts that match their reading level and interests.
 keywords:
   - books for different reading levels
