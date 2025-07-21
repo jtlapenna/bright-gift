@@ -280,10 +280,8 @@ Bedtime essentials including sleep sacks, books, and white noise machine. Helps 
 
 *
 
-> 💡 **
+> 💡 **Looking for more gift ideas?** Check out our guide to [Top Housewarming Gifts for New Homeowners](/blog/gifts-for-new-homeowners-2025) for even more thoughtful options!
 
-> 💡 **Looking for more gift ideas?** Check out our guide to [undefined](/blog/gifts-for-new-homeowners-2025) for even more thoughtful options!
-
-Looking for more gift ideas?** Check out our guide to [undefined](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75) for even more thoughtful options!
+Looking for more gift ideas?** Check out our guide to [25 Thoughtful Housewarming Gifts for New Homeowners Under $75](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75) for even more thoughtful options!
 
 Looking for more baby gift ideas? Check out our other gift guides for different budgets and occasions. Have a specific new parent in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their style, values, and needs!* 

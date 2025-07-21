@@ -13,7 +13,7 @@ tags:
   - roleplaying games
 priceRange: $10-$50
 amazonLink: https://www.amazon.com/s?k=dungeons+dragons+gifts&tag=brightgift-20
-metaTitle: 'Gifts for Dungeons & Dragons Enthusiasts: Level Up Their D&D Experience | BrightGift'
+metaTitle: 'D&D Gifts for Enthusiasts | Level Up Their Gaming Experience'
 metaDescription: 'Discover perfect gifts for Dungeons & Dragons enthusiasts. From dice to accessories, find gifts that will level up their D&D gaming experience.'
 ---
 
@@ -143,7 +143,7 @@ Looking for other gift ideas? Check out our guides to:
 
 ## 
 
-> 💡 **Looking for more gift ideas?** Check out our guide to [undefined](/blog/gifts-for-gamers-under-50) for even more thoughtful options!
+> 💡 **Looking for more gift ideas?** Check out our guide to [Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50) for even more thoughtful options!
 
 
 

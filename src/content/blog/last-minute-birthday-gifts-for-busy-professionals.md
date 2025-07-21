@@ -14,8 +14,8 @@ tags:
   - under $100
 priceRange: $20-$90
 amazonLink: https://www.amazon.com/s?k=last+minute+birthday+gifts+professionals&tag=brightgift-20
-metaTitle: 'Last Minute Birthday Gifts for Busy Professionals | BrightGift'
-metaDescription: 'Find perfect last minute birthday gifts for busy professionals. Quick, thoughtful gift ideas that are easy to find and deliver on time.'
+metaTitle: 'Last Minute Birthday Gifts for Professionals | Quick Ideas'
+metaDescription: 'Find perfect last minute birthday gifts for busy professionals. Quick, thoughtful gift ideas that are easy to find and deliver on time for any occasion.'
 ---
 
 Finding the perfect birthday gift for a busy professional can feel overwhelming, especially when you're short on time. Between work deadlines, meetings, and personal commitments, many of us find ourselves scrambling for a thoughtful present at the last minute. But don't worry—being busy doesn't mean you have to settle for generic gifts.

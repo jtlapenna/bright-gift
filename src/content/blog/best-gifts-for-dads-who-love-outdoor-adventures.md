@@ -101,7 +101,7 @@ Looking for other gift ideas? Check out our guides to:
 
 ## 
 
-> 💡 **Looking for more gift ideas?** Check out our guide to [undefined](/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature) for even more thoughtful options!
+> 💡 **Looking for more gift ideas?** Check out our guide to [Eco-Friendly Gifts for Outdoor Lovers](/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature) for even more thoughtful options!
 
 Conclusion
 

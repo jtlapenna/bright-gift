@@ -238,9 +238,7 @@ A stylish key holder with their name, family name, or a special message. This pr
 
 *
 
-> 💡 **
-
-> 💡 **Looking for more gift ideas?** Check out our guide to [undefined](/blog/gifts-for-new-homeowners-2025) for even more thoughtful options!
+> 💡 **Looking for more gift ideas?** Check out our guide to [Top Housewarming Gifts for New Homeowners](/blog/gifts-for-new-homeowners-2025) for even more thoughtful options!
 
 Looking for more gift ideas?** Check out our guide to [gifts for new parents](/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond) for even more thoughtful options!
 

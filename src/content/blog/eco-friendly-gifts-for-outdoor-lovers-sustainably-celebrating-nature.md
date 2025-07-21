@@ -35,7 +35,7 @@ socialPosts:
       Find eco-friendly gifts for outdoor enthusiasts that promote sustainability while enjoying nature.
       Looking for thoughtful gift ideas? Check out this comprehensive guide for inspiration.
     hashtags: giftideas,gifts,brightgift,giftguide
-metaTitle: 'Eco-Friendly Gifts for Outdoor Lovers: Sustainable Nature Gifts | BrightGift'
+metaTitle: 'Eco-Friendly Gifts for Outdoor Lovers | Sustainable Nature Ideas'
 metaDescription: 'Discover eco-friendly gifts for outdoor lovers who want to celebrate nature sustainably. Find green gift ideas for hikers, campers, and nature enthusiasts.'
 ---
 
@@ -134,7 +134,7 @@ Finding the right gift for an outdoor enthusiast can be a bit daunting, especial
 
 ## 
 
-> 💡 **Looking for more gift ideas?** Check out our guide to [outdoor adventure gifts for dads](/blog/best-gifts-for-dads-who-love-outdoor-adventures) for even more thoughtful options!
+> 💡 **Looking for more gift ideas?** Check out our guide to [outdoor adventure gifts for dads](/blog/best-gifts-for-dads-who-love-outdoor-adventures) for even more thoughtful options! For plant enthusiasts, explore our [Gifts for Plant Lovers Under $75](/blog/gifts-for-plant-lovers) guide.
 
 Conclusion
 

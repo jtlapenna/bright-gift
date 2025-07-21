@@ -1,7 +1,7 @@
 ---
 title: 'Gifts Under $25 for Coworkers: Thoughtful Office Gift Ideas'
-metaTitle: 'Gifts Under $25 for Coworkers: 15 Perfect Office Gift Ideas | BrightGift'
-metaDescription: Looking for affordable gifts for coworkers? Discover 15 thoughtful gifts under $25 that will delight any colleague. Perfect for office celebrations and work relationships!
+metaTitle: 'Gifts Under $25 for Coworkers | Perfect Office Gift Ideas'
+metaDescription: 'Looking for affordable gifts for coworkers? Discover 15 thoughtful gifts under $25 that will delight any colleague. Perfect for office celebrations and work relationships!'
 description: Discover thoughtful gift ideas under $25 perfect for coworkers. From desk accessories to wellness items, find affordable gifts that show appreciation without...
 date: '2024-12-19'
 image: /images/blog/blog-gifts-under-25-for-coworkers-banner.webp
@@ -21,6 +21,8 @@ draft: false
 Finding the perfect gift for a coworker doesn't have to be expensive or complicated. These thoughtful gifts under $25 are perfect for office celebrations, birthdays, or just showing appreciation.
 
 > 🎯 **Not sure what type of coworker you're shopping for? Our [Gift Idea Generator](https://bright-gift.com) can help you identify the perfect gift based on their interests, work style, and your relationship!**
+
+For remote workers, check out our [Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50) guide for more work-from-home gift ideas.
 
 ---
 

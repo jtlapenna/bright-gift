@@ -8,7 +8,7 @@ socialImage: "/images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-weddin
 tags: ["wedding gifts", "chic gifts", "elegant gifts", "couple gifts", "home decor"]
 priceRange: "$20-$150"
 amazonLink: "https://www.amazon.com/s?k=chic+wedding+gifts&tag=brightgift-20"
-metaTitle: 'Chic Wedding Gifts for the Stylish Couple: Elegant Wedding Gift Ideas | BrightGift'
+metaTitle: 'Chic Wedding Gifts for Stylish Couples | Elegant Gift Ideas'
 metaDescription: 'Find chic wedding gifts for the stylish couple. Discover elegant wedding gift ideas that combine sophistication with practicality for modern newlyweds.'
 ---
 
@@ -101,7 +101,7 @@ Looking for other gift ideas? Check out our guides to:
 
 ## 
 
-> 💡 **Looking for more gift ideas?** Check out our guide to [undefined](/blog/25-unique-anniversary-gift-ideas-under-50) for even more thoughtful options!
+> 💡 **Looking for more gift ideas?** Check out our guide to [25 Unique Anniversary Gift Ideas Under $50](/blog/25-unique-anniversary-gift-ideas-under-50) for even more thoughtful options!
 
 Conclusion
 

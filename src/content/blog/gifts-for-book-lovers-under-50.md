@@ -5,7 +5,7 @@ image: "/images/blog/gifts-for-book-lovers-banner.webp"
 ogImage: "/images/blog/gifts-for-book-lovers-og.webp"
 socialImage: "/images/blog/gifts-for-book-lovers-social.webp"
 date: "2024-12-19"
-metaTitle: "25 Best Gifts for Book Lovers Under $50 - Perfect for Any Bookworm"
+metaTitle: "25 Best Gifts for Book Lovers Under $50 | Perfect for Bookworms"
 metaDescription: "Find the perfect gift for book lovers with our curated list of 25 thoughtful presents under $50. From cozy reading accessories to must-read books."
 keywords: ["gifts for book lovers", "book lover gifts", "reading gifts", "literary gifts", "book club gifts", "reading accessories"]
 tags: ["book-lovers", "under-50", "reading", "literary", "accessories"]

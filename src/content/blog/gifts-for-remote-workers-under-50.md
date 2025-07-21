@@ -27,6 +27,7 @@ Working from home is here to stay, and finding the right gift for remote workers
 - Explore [Gifts for Plant Lovers](https://bright-gift.com/blog/gifts-for-plant-lovers).
 - Check out [Gifts for Gamers Under $50](https://bright-gift.com/blog/gifts-for-gamers-under-50).
 - Discover [Gifts Under $25 for Coworkers](https://bright-gift.com/blog/gifts-under-25-for-coworkers).
+- Find the [Best Home Gifts on Amazon 2024](https://bright-gift.com/blog/best-home-gifts-on-amazon-2024) for home office upgrades.
 
 
 ---

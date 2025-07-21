@@ -14,7 +14,7 @@ tags:
 priceRange: $20-$70
 amazonLink: https://www.amazon.com/s?k=housewarming+gifts+new+homeowners&tag=brightgift-20
 canonical: /blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75
-metaTitle: 'Gifts for New Homeowners 2025: Best Housewarming Gift Ideas | BrightGift'
+metaTitle: 'Gifts for New Homeowners 2025 | Best Housewarming Ideas'
 metaDescription: 'Find the best gifts for new homeowners in 2025. Discover thoughtful housewarming gift ideas that will help make their new house feel like home.'
 ---
 
@@ -113,10 +113,4 @@ A stylish wine accessory is perfect for housewarming celebrations and dinner par
 
 *
 
-> 💡 **
-
-> 💡 **Looking for more gift ideas?** Check out our guide to [gifts for new parents](/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond) for even more thoughtful options!
-
-Looking for more gift ideas?** Check out our guide to [undefined](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75) for even more thoughtful options!
-
-Looking for more gift ideas? Check out our other gift guides for different budgets and interests. Or, try our [Gift Idea Generator](https://bright-gift.com) to discover the perfect housewarming present!* 
+> 💡 **Looking for more gift ideas?** Check out our guide to [25 Thoughtful Housewarming Gifts for New Homeowners Under $75](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75) for even more thoughtful options! 

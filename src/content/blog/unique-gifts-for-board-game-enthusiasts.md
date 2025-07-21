@@ -175,7 +175,7 @@ Looking for other gaming gift ideas? Check out our guides to:
 
 ## 
 
-> 💡 **Looking for more gift ideas?** Check out our guide to [undefined](/blog/gifts-for-gamers-under-50) for even more thoughtful options!
+> 💡 **Looking for more gift ideas?** Check out our guide to [Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50) for even more thoughtful options!
 
 
 

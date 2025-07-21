@@ -21,6 +21,8 @@ Looking for the perfect home gift? Amazon has everything you need to transform a
 
 > 🎯 **Not sure what type of home gift to buy? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their style, needs, and budget!**
 
+For new homeowners, explore our [25 Thoughtful Housewarming Gifts for New Homeowners Under $75](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75) guide.
+
 ---
 
 ## Top Home Gifts on Amazon (2024)
