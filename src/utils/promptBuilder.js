@@ -50,19 +50,27 @@ function buildPrompt(data) {
                     styleGuidance += `\n- For techy: Include technology-focused gadgets, innovative, or smart devices.`;
                     break;
                 case 'wellness':
-                    styleGuidance += `\n- For wellness: Focus on health, self-care, mindfulness, fitness, nutrition, or wellness-enhancing items.`;
+                    styleGuidance += `\n- For wellness: Focus on health, self-care, mindfulness, fitness, nutrition, or wellness-enhancing items. When possible, suggest products from Black-owned wellness brands like Endorf or Caribe Coffee.`;
                     break;
                 case 'athletics':
-                    styleGuidance += `\n- For athletics: Include sports equipment, athletic wear, fitness gear, workout accessories, or performance-enhancing items.`;
+                    styleGuidance += `\n- For athletics: Include sports equipment, athletic wear, fitness gear, workout accessories, or performance-enhancing items. When possible, suggest products from Black-owned athletic brands like Furi Sport or Be Yourself 314.`;
                     break;
                 case 'beauty':
-                    styleGuidance += `\n- For beauty: Focus on skincare, makeup, beauty tools, grooming products, or beauty-enhancing items.`;
+                    styleGuidance += `\n- For beauty: Focus on skincare, makeup, beauty tools, grooming products, or beauty-enhancing items. When possible, suggest products from Black-owned beauty brands like BeautyStat or Kadalys.`;
                     break;
                 case 'book-lover':
                     styleGuidance += `\n- For book-lover: Include a mix of books from Bookshop.org (supporting independent bookstores) and reading accessories from Amazon. Focus on literary-themed items, reading enhancement tools, and book-related gifts.`;
                     break;
                 case 'black-owned':
-                    styleGuidance += `\n- For black-owned: Support diverse entrepreneurs and inclusive shopping by recommending products from Black-owned businesses.`;
+                    styleGuidance += `\n- For black-owned: Support diverse entrepreneurs and inclusive shopping by recommending products from Black-owned businesses. When possible, suggest specific products from these Black-owned brands:
+  * BeautyStat (skincare and beauty products)
+  * Furi Sport (athletic wear and sports equipment)
+  * Be Yourself 314 (dance fitness apparel)
+  * Be Rooted (stationery and planners)
+  * Kadalys (organic skincare)
+  * Endorf (wellness and supplements)
+  * Caribe Coffee (sustainable coffee)
+  * Cashblack (cashback programs)`;
                     break;
                 default:
                     styleGuidance += `\n- For ${style}: Incorporate ${style} elements appropriately.`;
