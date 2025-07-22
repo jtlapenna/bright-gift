@@ -729,6 +729,10 @@ const faqData = {
 			}
 		});
 		
+		// Debug: Log the grouping to see what's happening
+		console.log('Original ideas:', ideas);
+		console.log('Grouped ideas:', groupedIdeas);
+		
 		return groupedIdeas.map(group => {
 			const idea = group.primary;
 			let iconHtml = '';
@@ -751,7 +755,7 @@ const faqData = {
 				buttonHtml = `
 					<div class="w-full space-y-3">
 						<a href="${afrofiliateIdea.link}" target="_blank" rel="nofollow noopener" 
-						   class="w-full bg-[#A3E4DB] hover:bg-[#8FD3C7] text-[#1C2E4A] font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center border-2 border-[#A3E4DB] hover:border-[#8FD3C7]" 
+						   class="w-full bg-white hover:bg-gray-50 text-[#1C2E4A] font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center border-2 border-[#1C2E4A] hover:border-[#FF6B6B]" 
 						   aria-label="Shop ${idea.title} from Black-owned brand">
 							🌟 Shop Brand
 						</a>
@@ -775,7 +779,7 @@ const faqData = {
 				
 				buttonHtml = `
 					<a href="${idea.link}" target="_blank" rel="nofollow noopener" 
-					   class="w-full bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center" 
+					   class="w-full ${idea.affiliateType === 'afrofiliate' || /arjdj2msd\.com/i.test(idea.link) ? 'bg-white hover:bg-gray-50 text-[#1C2E4A] border-2 border-[#1C2E4A] hover:border-[#FF6B6B]' : 'bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white'} font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center" 
 					   aria-label="View ${idea.title} (affiliate link)">
 						${buttonText}
 					</a>
