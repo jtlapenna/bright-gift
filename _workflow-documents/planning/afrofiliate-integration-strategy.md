@@ -35,19 +35,73 @@ This document outlines the strategy for integrating Afrofiliate Black-owned busi
 ### **Implementation Status: ✅ COMPLETED**
 
 **What's Been Added:**
-1. **New Style Option**: "Black-owned" style preference
-2. **Afrofiliate Routing Logic**: AI can now suggest products from Black-owned businesses
-3. **Smart Brand Matching**: System matches product suggestions to appropriate Afrofiliate brands
+1. **New Style Options**: 
+   - ✅ "Black-owned" style preference (replaces "cultural-gifts")
+   - ✅ "Wellness" style preference
+   - ✅ "Athletics" style preference  
+   - ✅ "Beauty" style preference
+2. **Smart Afrofiliate Routing**: AI prioritizes Afrofiliate brands in ALL relevant searches
+3. **Intelligent Fallback Logic**: Handles cases when no Afrofiliate brands match
 
 **How It Works:**
-- When users select "Black-owned" style, the AI prioritizes products from your Afrofiliate brands
-- The system matches product categories (skincare, athletic wear, etc.) to appropriate brands
-- If no direct match is found, it falls back to Amazon with Black-owned business suggestions
+1. **Always Check Afrofiliate First**: Every search checks for Afrofiliate brand matches, regardless of style selection
+2. **Style-Specific Routing**: 
+   - "Black-owned" style → Prioritizes Afrofiliate brands, with fallback to Amazon + disclaimer
+   - "Beauty" style → Can suggest BeautyStat/Kadalys skincare
+   - "Athletics" style → Can suggest Furi Sport/Be Yourself 314 athletic wear
+   - "Wellness" style → Can suggest Endorf supplements
+3. **Fallback Behavior**: 
+   - If no Afrofiliate brands match → Amazon links with appropriate disclaimers
+   - If "Black-owned" style selected but no matches → Suggests Afrofiliate brand websites
 
 **AI Capabilities:**
 - ✅ **Can suggest specific products** from Afrofiliate brands when the AI knows about them
 - ✅ **Can suggest brand categories** (e.g., "skincare from Black-owned businesses")
+- ✅ **Integrates with all style preferences** - Afrofiliate brands appear in beauty, athletics, wellness searches
 - ⚠️ **Limited to known brands** - AI won't suggest products from brands not in your affiliate program
+
+---
+
+## 🎨 Link Suggestion Card Display
+
+### **Visual Design:**
+- **Icons Only**: Afrofiliate links use the "Sparkle" icon (same as beauty products)
+- **No Product Images**: Consistent with Amazon links which also use icons
+- **Card Layout**: Same responsive design as Amazon/Bookshop cards
+- **Button Text**: "Shop [Brand Name]" instead of "View on Amazon"
+
+### **Icon System:**
+- **Afrofiliate Links**: Sparkle icon (✨)
+- **Amazon Links**: Category-specific icons (Book, TShirt, House, etc.)
+- **Bookshop Links**: Book icon
+- **Fallback**: Gift icon for error states
+
+---
+
+## 🔄 Smart Integration Logic
+
+### **Cross-Style Integration:**
+- **Beauty searches** → Can suggest BeautyStat/Kadalys skincare
+- **Athletics searches** → Can suggest Furi Sport/Be Yourself 314 athletic wear  
+- **Wellness searches** → Can suggest Endorf supplements
+- **Coffee searches** → Can suggest Caribe Coffee
+- **Stationery searches** → Can suggest Be Rooted products
+
+### **Fallback Scenarios:**
+
+#### **Scenario 1: No Afrofiliate Brands Match**
+- **Behavior**: Return Amazon links with disclaimer
+- **Disclaimer**: "Note: This is a general suggestion. For Black-owned business options, we recommend checking out our Afrofiliate partner brands."
+- **Example**: User searches "tech gadgets" → Amazon links + disclaimer about Black-owned alternatives
+
+#### **Scenario 2: Black-Owned Style Selected, No Matches**
+- **Behavior**: Suggest Afrofiliate brand websites directly
+- **Fallback Options**: BeautyStat, Furi Sport, Caribe Coffee, etc.
+- **Message**: "While we couldn't find specific products matching your search, here are some amazing Black-owned brands to explore:"
+
+#### **Scenario 3: Mixed Results**
+- **Behavior**: Prioritize Afrofiliate matches, supplement with Amazon
+- **Example**: "skincare" search → BeautyStat products + Amazon skincare + disclaimer
 
 ---
 
@@ -128,12 +182,14 @@ This document outlines the strategy for integrating Afrofiliate Black-owned busi
 1. **Click-through rates** on Afrofiliate links vs Amazon links
 2. **Conversion rates** for Black-owned business content
 3. **User engagement** with "Black-owned" style selection
-4. **Search rankings** for Black-owned business keywords
+4. **Cross-style usage** - how often Afrofiliate brands appear in beauty/athletics/wellness searches
+5. **Search rankings** for Black-owned business keywords
 
 ### **A/B Testing Opportunities**
 1. **Style preference placement**: Test different positions for "Black-owned" option
 2. **Content positioning**: Test featuring Black-owned brands first vs mixed placement
 3. **Link styling**: Test different visual treatments for Afrofiliate links
+4. **Disclaimer messaging**: Test different fallback messages
 
 ---
 
@@ -143,6 +199,8 @@ This document outlines the strategy for integrating Afrofiliate Black-owned busi
 - ✅ Added "Black-owned" style to AI generator
 - ✅ Implemented Afrofiliate link routing
 - ✅ Created brand category mapping
+- ✅ Added cross-style integration (beauty, athletics, wellness)
+- ✅ Implemented smart fallback logic
 
 ### **Phase 2: Content Creation (Next Priority)**
 - [ ] Create 3-5 dedicated Black-owned business blog posts
@@ -153,11 +211,12 @@ This document outlines the strategy for integrating Afrofiliate Black-owned busi
 - [ ] Add brand logos/icons for Afrofiliate links
 - [ ] Create "Shop Black-Owned" filter option
 - [ ] Develop Black History Month content calendar
+- [ ] Add product-specific Afrofiliate links (if available)
 
 ### **Phase 4: Advanced Integration**
-- [ ] Add product-specific Afrofiliate links (if available)
 - [ ] Create brand spotlight sections
 - [ ] Develop email marketing campaigns for Black-owned business content
+- [ ] Add user preference tracking for Black-owned business selections
 
 ---
 
@@ -205,12 +264,37 @@ This document outlines the strategy for integrating Afrofiliate Black-owned busi
 - 5% of gift generator users select "Black-owned" style
 - 10% click-through rate on Afrofiliate links
 - 3 blog posts ranking in top 10 for Black-owned business keywords
+- 15% of beauty/athletics/wellness searches include Afrofiliate brands
 
 ### **Long-term Goals (12 months)**
 - 15% of gift generator users select "Black-owned" style
 - 15% click-through rate on Afrofiliate links
 - 10+ blog posts ranking for Black-owned business keywords
 - $500+ monthly revenue from Afrofiliate links
+- 25% of relevant searches include Afrofiliate brand suggestions
+
+---
+
+## 🎯 Style Preference Updates
+
+### **Removed:**
+- ❌ "Cultural gifts" (replaced by "Black-owned")
+
+### **Added:**
+- ✅ "Wellness" - health, self-care, mindfulness, fitness, nutrition
+- ✅ "Athletics" - sports equipment, athletic wear, fitness gear, workout accessories
+- ✅ "Beauty" - skincare, makeup, beauty tools, grooming products
+- ✅ "Black-owned" - products from Black-owned businesses
+
+### **Existing Styles:**
+- ✅ "Eco-friendly" - environmentally conscious, sustainable materials
+- ✅ "Handmade" - crafted by artisans, unique, one-of-a-kind
+- ✅ "Funny" - humorous, witty, gag gifts, novelty items
+- ✅ "Pride gifts" - LGBTQ+ themed, rainbow colors, inclusive
+- ✅ "Quirky" - unusual, unexpected, offbeat, creative
+- ✅ "Luxury" - premium quality, high-end, sophisticated
+- ✅ "Techy" - technology-focused, gadgets, innovative
+- ✅ "Book-lover" - books from Bookshop.org, reading accessories
 
 ---
 

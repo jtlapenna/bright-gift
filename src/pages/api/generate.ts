@@ -131,13 +131,16 @@ function determineAffiliateSource(title: string, tag: string, styles: string[]) 
   const lowerTitle = title.toLowerCase();
   const lowerTag = tag.toLowerCase();
   
-  // Check if Black-owned style is selected and we have a matching Afrofiliate link
+  // Always check for Afrofiliate matches first, regardless of style selection
+  const afrofiliateLink = determineAfrofiliateLink(title, tag);
+  if (afrofiliateLink) {
+    return 'afrofiliate';
+  }
+  
+  // If Black-owned style is selected but no Afrofiliate match, prioritize Black-owned suggestions
   const isBlackOwnedStyle = styles && styles.includes('black-owned');
   if (isBlackOwnedStyle) {
-    const afrofiliateLink = determineAfrofiliateLink(title, tag);
-    if (afrofiliateLink) {
-      return 'afrofiliate';
-    }
+    return 'black-owned-amazon'; // Special case for Black-owned style with Amazon fallback
   }
   
   // Check if book-lover style is selected
@@ -229,7 +232,7 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
     const ideas = [];
     while ((match = ideaRegex.exec(ideasText)) !== null) {
       const title = match[1].replace(/^\d+\.\s*/, '');
-      const description = match[2].trim();
+      let description = match[2].trim();
       const tag = match[3].trim();
       let link = null;
       let icon = null;
@@ -252,8 +255,13 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
           link = generateAmazonLink(title, tag);
           icon = getAmazonIcon(tag);
         }
-      }
-      else {
+      } else if (affiliateSource === 'black-owned-amazon') {
+        // Black-owned style selected but no Afrofiliate match - use Amazon with disclaimer
+        link = generateAmazonLink(title, tag);
+        icon = getAmazonIcon(tag);
+        // Add a note that this is a general suggestion, not specifically Black-owned
+        description += ' (Note: This is a general suggestion. For Black-owned business options, we recommend checking out our Afrofiliate partner brands.)';
+      } else {
         // Amazon for everything else
         link = generateAmazonLink(title, tag);
         icon = getAmazonIcon(tag);
@@ -264,13 +272,39 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
 
     // Always return an array; fallback if parsing fails
     if (ideas.length === 0) {
-      ideas.push({
-        title: "Sorry, no gift ideas found.",
-        description: "We couldn't parse the AI's response. Please try again or adjust your search.",
-        tag: "",
-        link: "#",
-        image: "/placeholders/handmade.jpg"
-      });
+      // If Black-owned style was selected, suggest Afrofiliate brands
+      const isBlackOwnedStyle = styles && styles.includes('black-owned');
+      if (isBlackOwnedStyle) {
+        ideas.push({
+          title: "BeautyStat - Science-Backed Skincare",
+          description: "Professional-grade skincare products from a Black-owned cosmetic chemist brand. Perfect for skincare enthusiasts who love science-backed formulations.",
+          tag: "Skincare",
+          link: AFROFILIATE_LINKS['beautystat'],
+          icon: "Sparkle"
+        });
+        ideas.push({
+          title: "Furi Sport - High-Performance Athletic Wear",
+          description: "Stylish, high-performance athletic wear designed for serious athletes. Quality sportswear that combines fashion with function.",
+          tag: "Athletic Wear",
+          link: AFROFILIATE_LINKS['furi-sport'],
+          icon: "Sparkle"
+        });
+        ideas.push({
+          title: "Caribe Coffee - Sustainable Coffee",
+          description: "Ethically sourced, high-quality coffee beans roasted to perfection. Perfect for coffee connoisseurs who appreciate sustainable practices.",
+          tag: "Coffee",
+          link: AFROFILIATE_LINKS['caribe-coffee'],
+          icon: "Sparkle"
+        });
+      } else {
+        ideas.push({
+          title: "Sorry, no gift ideas found.",
+          description: "We couldn't parse the AI's response. Please try again or adjust your search.",
+          tag: "",
+          link: "#",
+          icon: "Gift"
+        });
+      }
     }
 
     return new Response(JSON.stringify({ ideas }), {

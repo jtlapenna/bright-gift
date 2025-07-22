@@ -12,7 +12,9 @@ function buildPrompt(data) {
         'quirky': 'unusual, unexpected, offbeat, creative, or conversation-starting items',
         'luxury': 'premium quality, high-end, sophisticated, elegant, or indulgent items',
         'techy': 'technology-focused, gadgets, innovative, smart devices, or digital items',
-        'cultural-gifts': 'celebrating diverse cultures, traditional items, cultural heritage, or international gifts',
+        'wellness': 'health-focused, self-care, mindfulness, fitness, nutrition, or wellness-enhancing items',
+        'athletics': 'sports equipment, athletic wear, fitness gear, workout accessories, or performance-enhancing items',
+        'beauty': 'skincare, makeup, beauty tools, grooming products, or beauty-enhancing items',
         'book-lover': 'books from Bookshop.org (supporting independent bookstores), reading accessories from Amazon, literary-themed items, bookmarks, reading lights, or book-related gifts',
         'black-owned': 'products from Black-owned businesses, supporting diverse entrepreneurs and inclusive shopping choices'
     };
@@ -47,8 +49,14 @@ function buildPrompt(data) {
                 case 'techy':
                     styleGuidance += `\n- For techy: Include technology-focused gadgets, innovative, or smart devices.`;
                     break;
-                case 'cultural-gifts':
-                    styleGuidance += `\n- For cultural-gifts: Celebrate diverse cultures, traditional items, or cultural heritage.`;
+                case 'wellness':
+                    styleGuidance += `\n- For wellness: Focus on health, self-care, mindfulness, fitness, nutrition, or wellness-enhancing items.`;
+                    break;
+                case 'athletics':
+                    styleGuidance += `\n- For athletics: Include sports equipment, athletic wear, fitness gear, workout accessories, or performance-enhancing items.`;
+                    break;
+                case 'beauty':
+                    styleGuidance += `\n- For beauty: Focus on skincare, makeup, beauty tools, grooming products, or beauty-enhancing items.`;
                     break;
                 case 'book-lover':
                     styleGuidance += `\n- For book-lover: Include a mix of books from Bookshop.org (supporting independent bookstores) and reading accessories from Amazon. Focus on literary-themed items, reading enhancement tools, and book-related gifts.`;
