@@ -81,6 +81,37 @@ function getAmazonIcon(tag: string) {
   return amazonCategoryIconMap.generic;
 }
 
+function getAfrofiliateIcon(title: string, tag: string) {
+  const lowerTitle = title.toLowerCase();
+  const lowerTag = tag.toLowerCase();
+  
+  // Map Afrofiliate brands to appropriate icons
+  if (lowerTitle.includes('beautystat') || lowerTitle.includes('kadalys') || 
+      lowerTag.includes('skincare') || lowerTag.includes('beauty') || lowerTag.includes('makeup')) {
+    return 'Sparkle'; // Beauty/skincare icon
+  }
+  
+  if (lowerTitle.includes('furi-sport') || lowerTitle.includes('be-yourself-314') || 
+      lowerTag.includes('athletic') || lowerTag.includes('sport') || lowerTag.includes('fitness')) {
+    return 'SoccerBall'; // Sports/athletics icon
+  }
+  
+  if (lowerTitle.includes('be-rooted') || lowerTag.includes('stationery') || lowerTag.includes('planner')) {
+    return 'Note'; // Stationery icon
+  }
+  
+  if (lowerTitle.includes('endorf') || lowerTag.includes('wellness') || lowerTag.includes('supplement')) {
+    return 'Heartbeat'; // Health/wellness icon
+  }
+  
+  if (lowerTitle.includes('caribe-coffee') || lowerTag.includes('coffee')) {
+    return 'CookingPot'; // Coffee/food icon
+  }
+  
+  // Default fallback
+  return 'ShoppingBag';
+}
+
 // Afrofiliate Black-owned business affiliate links
 const AFROFILIATE_LINKS = {
   'beautystat': 'https://www.arjdj2msd.com/7LKLK3/QWRG9C/',
@@ -249,7 +280,7 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
         const afrofiliateLink = determineAfrofiliateLink(title, tag);
         if (afrofiliateLink) {
           link = afrofiliateLink;
-          icon = 'Sparkle'; // Generic icon for Afrofiliate
+          icon = getAfrofiliateIcon(title, tag); // Product-specific icon for Afrofiliate
         } else {
           // Fallback to Amazon if no specific Afrofiliate link found
           link = generateAmazonLink(title, tag);
@@ -262,7 +293,7 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
         // Add a note that this is a general suggestion, not specifically Black-owned
         description += ' (Note: This is a general suggestion. For Black-owned business options, we recommend checking out our Afrofiliate partner brands.)';
       } else {
-        // Amazon for everything else
+        // Amazon for everything else (including wellness, athletics, beauty styles)
         link = generateAmazonLink(title, tag);
         icon = getAmazonIcon(tag);
       }
@@ -287,14 +318,14 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
           description: "Stylish, high-performance athletic wear designed for serious athletes. Quality sportswear that combines fashion with function.",
           tag: "Athletic Wear",
           link: AFROFILIATE_LINKS['furi-sport'],
-          icon: "Sparkle"
+          icon: "SoccerBall"
         });
         ideas.push({
           title: "Caribe Coffee - Sustainable Coffee",
           description: "Ethically sourced, high-quality coffee beans roasted to perfection. Perfect for coffee connoisseurs who appreciate sustainable practices.",
           tag: "Coffee",
           link: AFROFILIATE_LINKS['caribe-coffee'],
-          icon: "Sparkle"
+          icon: "CookingPot"
         });
       } else {
         ideas.push({

@@ -47,9 +47,9 @@ This document outlines the strategy for integrating Afrofiliate Black-owned busi
 1. **Always Check Afrofiliate First**: Every search checks for Afrofiliate brand matches, regardless of style selection
 2. **Style-Specific Routing**: 
    - "Black-owned" style → Prioritizes Afrofiliate brands, with fallback to Amazon + disclaimer
-   - "Beauty" style → Can suggest BeautyStat/Kadalys skincare
-   - "Athletics" style → Can suggest Furi Sport/Be Yourself 314 athletic wear
-   - "Wellness" style → Can suggest Endorf supplements
+   - "Beauty" style → Can suggest BeautyStat/Kadalys skincare + Amazon beauty products
+   - "Athletics" style → Can suggest Furi Sport/Be Yourself 314 athletic wear + Amazon sports products
+   - "Wellness" style → Can suggest Endorf supplements + Amazon wellness products
 3. **Fallback Behavior**: 
    - If no Afrofiliate brands match → Amazon links with appropriate disclaimers
    - If "Black-owned" style selected but no matches → Suggests Afrofiliate brand websites
@@ -65,13 +65,18 @@ This document outlines the strategy for integrating Afrofiliate Black-owned busi
 ## 🎨 Link Suggestion Card Display
 
 ### **Visual Design:**
-- **Icons Only**: Afrofiliate links use the "Sparkle" icon (same as beauty products)
+- **Icons Only**: Afrofiliate links use product-specific icons (not generic sparkle)
 - **No Product Images**: Consistent with Amazon links which also use icons
 - **Card Layout**: Same responsive design as Amazon/Bookshop cards
 - **Button Text**: "Shop [Brand Name]" instead of "View on Amazon"
 
 ### **Icon System:**
-- **Afrofiliate Links**: Sparkle icon (✨)
+- **Afrofiliate Links**: Product-specific icons:
+  - BeautyStat/Kadalys → Sparkle icon (✨)
+  - Furi Sport/Be Yourself 314 → SoccerBall icon (⚽)
+  - Be Rooted → Note icon (📝)
+  - Endorf → Heartbeat icon (❤️)
+  - Caribe Coffee → CookingPot icon (🍳)
 - **Amazon Links**: Category-specific icons (Book, TShirt, House, etc.)
 - **Bookshop Links**: Book icon
 - **Fallback**: Gift icon for error states
