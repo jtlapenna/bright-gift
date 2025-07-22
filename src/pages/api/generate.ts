@@ -26,6 +26,116 @@ function generateAmazonLink(title: string, tag: string) {
   return `https://www.amazon.com/s?k=${encodeURIComponent(searchTerms)}&tag=bright-gift-20`;
 }
 
+function generateSimilarAmazonLink(title: string, tag: string) {
+  // For Afrofiliate products, generate more generic search terms
+  // Remove brand names and focus on product type
+  let searchTerms = title.toLowerCase();
+  
+  // Remove known Afrofiliate brand names
+  const brandNames = [
+    'beautystat', 'furi sport', 'be yourself 314', 'be rooted', 
+    'kadalys', 'endorf', 'caribe coffee', 'cashblack'
+  ];
+  
+  brandNames.forEach(brand => {
+    searchTerms = searchTerms.replace(new RegExp(brand, 'gi'), '');
+  });
+  
+  // Clean up and extract meaningful terms
+  searchTerms = searchTerms
+    .replace(/[^\w\s]/g, ' ') // Remove special characters
+    .split(' ')
+    .filter(word => word.length > 2) // Filter out short words
+    .slice(0, 3) // Take first 3 meaningful words
+    .join(' ');
+  
+  // If we don't have enough terms, use the tag
+  if (searchTerms.trim().length < 3) {
+    searchTerms = tag.toLowerCase();
+  }
+  
+  return `https://www.amazon.com/s?k=${encodeURIComponent(searchTerms)}&tag=bright-gift-20`;
+}
+
+function standardizeTag(tag: string): string {
+  const lowerTag = tag.toLowerCase().trim();
+  
+  // Standardize common variations
+  const tagMap: { [key: string]: string } = {
+    // Athletic/Sports variations
+    'athletic': 'Athletic Wear',
+    'athletics': 'Athletic Wear',
+    'athletic wear': 'Athletic Wear',
+    'sport': 'Sports Equipment',
+    'sports': 'Sports Equipment',
+    'sports equipment': 'Sports Equipment',
+    'fitness': 'Fitness Gear',
+    'fitness gear': 'Fitness Gear',
+    'workout': 'Workout Accessories',
+    'workout accessories': 'Workout Accessories',
+    'performance-enhancing items': 'Performance-Enhancing Items',
+    
+    // Beauty/Skincare variations
+    'beauty': 'Beauty Products',
+    'beauty products': 'Beauty Products',
+    'skincare': 'Skincare',
+    'makeup': 'Beauty Products',
+    'cosmetic': 'Beauty Products',
+    
+    // Wellness/Health variations
+    'wellness': 'Wellness Products',
+    'wellness products': 'Wellness Products',
+    'health': 'Health Products',
+    'health products': 'Health Products',
+    'supplement': 'Supplements',
+    'supplements': 'Supplements',
+    'vitamin': 'Supplements',
+    
+    // Coffee/Food variations
+    'coffee': 'Coffee',
+    'food': 'Food & Beverages',
+    'beverage': 'Food & Beverages',
+    'drink': 'Food & Beverages',
+    
+    // Stationery variations
+    'stationery': 'Stationery',
+    'stationary': 'Stationery',
+    'planner': 'Stationery',
+    'journal': 'Stationery',
+    
+    // Book variations
+    'book': 'Book',
+    'books': 'Book',
+    'reading': 'Reading Accessories',
+    'reading accessories': 'Reading Accessories',
+    'literary': 'Literary Gifts',
+    'literary gifts': 'Literary Gifts',
+    
+    // Black-owned business variations
+    'black-owned': 'Products from Black-Owned Businesses',
+    'black owned': 'Products from Black-Owned Businesses',
+    'products from black-owned businesses': 'Products from Black-Owned Businesses',
+    'supporting diverse entrepreneurs': 'Supporting Diverse Entrepreneurs'
+  };
+  
+  // Check for exact matches first
+  if (tagMap[lowerTag]) {
+    return tagMap[lowerTag];
+  }
+  
+  // Check for partial matches
+  for (const [key, value] of Object.entries(tagMap)) {
+    if (lowerTag.includes(key) || key.includes(lowerTag)) {
+      return value;
+    }
+  }
+  
+  // If no match found, capitalize first letter of each word
+  return tag.split(' ').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+  ).join(' ');
+}
+
 // Phosphor icon mapping for Amazon placeholders
 const amazonCategoryIconMap = {
   tech: 'DeviceMobile',
@@ -279,7 +389,7 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
     while ((match = ideaRegex.exec(ideasText)) !== null) {
       const title = match[1].replace(/^\d+\.\s*/, '');
       let description = match[2].trim();
-      const tag = match[3].trim();
+      const tag = standardizeTag(match[3].trim());
       let link = null;
       let icon = null;
       
@@ -310,12 +420,12 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
           affiliateType: 'afrofiliate'
         });
         
-        // Add Amazon option
+        // Add Amazon option with similar products search
         ideas.push({ 
           title: title, 
           description, 
           tag, 
-          link: amazonLink, 
+          link: generateSimilarAmazonLink(title, tag), 
           icon: amazonIcon,
           affiliateType: 'amazon'
         });

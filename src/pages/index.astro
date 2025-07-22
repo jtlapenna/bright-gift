@@ -799,16 +799,16 @@ const faqData = {
 				buttonHtml = `
 					<div class="w-full space-y-3">
 						<a href="${afrofiliateIdea.link}" target="_blank" rel="nofollow noopener" 
-						   class="w-full bg-white hover:bg-gray-50 text-[#1C2E4A] font-bold py-3 px-6 rounded-full transition-colors font-poppins text-base shadow text-center border-2 border-[#1C2E4A] hover:border-[#FF6B6B] flex items-center justify-center gap-2" 
+						   class="w-full bg-white hover:bg-gray-50 text-[#1C2E4A] font-bold py-3 px-6 rounded-full transition-colors font-poppins text-sm shadow text-center border-2 border-[#1C2E4A] hover:border-[#FF6B6B] flex items-center justify-center gap-2 whitespace-nowrap" 
 						   aria-label="Shop ${idea.title} from Black-owned brand">
 							<span>🌟</span>
 							<span>Shop ${getBrandName(afrofiliateIdea.link)}</span>
 						</a>
 						<a href="${amazonIdea.link}" target="_blank" rel="nofollow noopener" 
-						   class="w-full bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-6 rounded-full transition-colors font-poppins text-base shadow text-center flex items-center justify-center gap-2" 
-						   aria-label="Find ${idea.title} on Amazon">
+						   class="w-full bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-6 rounded-full transition-colors font-poppins text-sm shadow text-center flex items-center justify-center gap-2 whitespace-nowrap" 
+						   aria-label="Find similar products on Amazon">
 							<span>🛒</span>
-							<span>Find on Amazon</span>
+							<span>Find Similar on Amazon</span>
 						</a>
 					</div>
 				`;
@@ -837,7 +837,7 @@ const faqData = {
 					${iconHtml || (idea.image ? `<img src="${idea.image}" alt="${idea.title}" class="h-40 w-full object-cover mb-4 rounded-xl shadow" loading="lazy">` : '')}
 					<h3 class="font-bold text-2xl mb-3 font-poppins text-[#1C2E4A] text-center">${idea.title}</h3>
 					<p class="text-[#333] mb-4 font-inter text-base text-center line-clamp-4">${idea.description}</p>
-					${idea.tag ? `<span class="inline-block bg-[#FFDE59] text-[#1C2E4A] text-xs font-semibold px-4 py-1 rounded-full mb-6 mt-auto">${idea.tag}</span>` : ''}
+					${idea.tag ? `<span class="inline-block bg-[#FFDE59] text-[#1C2E4A] text-xs font-semibold px-4 py-1 rounded-full mb-6 mt-auto whitespace-nowrap">${idea.tag}</span>` : ''}
 					${buttonHtml}
 				</div>
 			`;
@@ -881,7 +881,7 @@ const faqData = {
 					${iconHtml || (idea.image ? `<img src="${idea.image}" alt="${idea.title}" class="h-40 w-full object-cover mb-4 rounded-xl shadow" loading="lazy">` : '')}
 					<h3 class="font-bold text-2xl mb-3 font-poppins text-[#1C2E4A] text-center">${idea.title}</h3>
 					<p class="text-[#333] mb-4 font-inter text-base text-center line-clamp-4">${idea.description}</p>
-					${idea.tag ? `<span class="inline-block bg-[#FFDE59] text-[#1C2E4A] text-xs font-semibold px-4 py-1 rounded-full mb-6 mt-auto">${idea.tag}</span>` : ''}
+					${idea.tag ? `<span class="inline-block bg-[#FFDE59] text-[#1C2E4A] text-xs font-semibold px-4 py-1 rounded-full mb-6 mt-auto whitespace-nowrap">${idea.tag}</span>` : ''}
 					${buttonHtml}
 				</div>
 			`;
