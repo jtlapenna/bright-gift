@@ -68,7 +68,13 @@ This document outlines the strategy for integrating Afrofiliate Black-owned busi
 - **Icons Only**: Afrofiliate links use product-specific icons (not generic sparkle)
 - **No Product Images**: Consistent with Amazon links which also use icons
 - **Card Layout**: Same responsive design as Amazon/Bookshop cards
-- **Button Text**: "Shop [Brand Name]" instead of "View on Amazon"
+- **Button Text**: "Shop Brand" for Afrofiliate, "Find on Amazon" for Amazon
+
+### **Hybrid Approach Implementation:**
+- **When Afrofiliate brands match**: Users see TWO separate cards for the same product
+- **First card**: "Shop Brand" button → Afrofiliate link (supports Black-owned businesses)
+- **Second card**: "Find on Amazon" button → Amazon link (finds specific products)
+- **User choice**: Users can choose between supporting Black-owned brands or finding exact products
 
 ### **Icon System:**
 - **Afrofiliate Links**: Product-specific Phosphor icons (same style as Amazon):
@@ -92,21 +98,26 @@ This document outlines the strategy for integrating Afrofiliate Black-owned busi
 - **Coffee searches** → Can suggest Caribe Coffee
 - **Stationery searches** → Can suggest Be Rooted products
 
-### **Fallback Scenarios:**
+### **Hybrid Approach Scenarios:**
 
-#### **Scenario 1: No Afrofiliate Brands Match**
-- **Behavior**: Return Amazon links with disclaimer
-- **Disclaimer**: "Note: This is a general suggestion. For Black-owned business options, we recommend checking out our Afrofiliate partner brands."
-- **Example**: User searches "tech gadgets" → Amazon links + disclaimer about Black-owned alternatives
+#### **Scenario 1: Afrofiliate Brands Match (Any Style)**
+- **Behavior**: Show TWO cards for the same product
+- **First card**: "Shop Brand" → Afrofiliate link (supports Black-owned businesses)
+- **Second card**: "Find on Amazon" → Amazon link (finds specific products)
+- **Example**: "skincare" search → BeautyStat card + Amazon skincare card
 
-#### **Scenario 2: Black-Owned Style Selected, No Matches**
+#### **Scenario 2: No Afrofiliate Brands Match**
+- **Behavior**: Return Amazon links only
+- **Example**: User searches "tech gadgets" → Amazon links only
+
+#### **Scenario 3: Black-Owned Style Selected, No Matches**
 - **Behavior**: Suggest Afrofiliate brand websites directly
 - **Fallback Options**: BeautyStat, Furi Sport, Caribe Coffee, etc.
 - **Message**: "While we couldn't find specific products matching your search, here are some amazing Black-owned brands to explore:"
 
-#### **Scenario 3: Mixed Results**
-- **Behavior**: Prioritize Afrofiliate matches, supplement with Amazon
-- **Example**: "skincare" search → BeautyStat products + Amazon skincare + disclaimer
+#### **Scenario 4: Book-Related Items**
+- **Behavior**: Use existing Bookshop.org logic (unchanged)
+- **Example**: "books" search → Bookshop.org links only
 
 ---
 
@@ -120,6 +131,35 @@ This document outlines the strategy for integrating Afrofiliate Black-owned busi
 - "Athletic Wear & Fitness Gifts from Black-Owned Brands"
 - "Sustainable Coffee Gifts from Black-Owned Roasters"
 - "Health & Wellness Products from Black-Owned Brands"
+
+### **2. Content Creation Guidelines for Afrofiliate Integration**
+
+**When creating gift guides, include Afrofiliate brands naturally:**
+
+#### **Skincare & Beauty Guides:**
+- Include BeautyStat and Kadalys products
+- Example: "15 Best Skincare Gifts Under $50" → Include BeautyStat Universal C Serum
+- Link format: `<a href="https://www.arjdj2msd.com/7LKLK3/QWRG9C/" class="amazon-link" target="_blank" rel="noopener">Shop BeautyStat</a>`
+
+#### **Athletic Wear & Fitness Guides:**
+- Include Furi Sport and Be Yourself 314 products
+- Example: "20 Best Fitness Gifts for Athletes" → Include Furi Sport performance wear
+- Link format: `<a href="https://www.arjdj2msd.com/7LKLK3/R2Z4H6/" class="amazon-link" target="_blank" rel="noopener">Shop Furi Sport</a>`
+
+#### **Stationery & Gift Guides:**
+- Include Be Rooted products
+- Example: "15 Thoughtful Stationery Gifts" → Include Be Rooted planners and journals
+- Link format: `<a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="amazon-link" target="_blank" rel="noopener">Shop Be Rooted</a>`
+
+#### **Wellness & Health Guides:**
+- Include Endorf products
+- Example: "10 Wellness Gifts for Health Enthusiasts" → Include Endorf supplements
+- Link format: `<a href="https://www.arjdj2msd.com/7LKLK3/24D26TB/" class="amazon-link" target="_blank" rel="noopener">Shop Endorf</a>`
+
+#### **Coffee & Beverage Guides:**
+- Include Caribe Coffee products
+- Example: "12 Best Coffee Gifts for Coffee Lovers" → Include Caribe Coffee beans
+- Link format: `<a href="https://www.arjdj2msd.com/7LKLK3/24R58Q6/" class="amazon-link" target="_blank" rel="noopener">Shop Caribe Coffee</a>`
 
 ### **2. Category-Specific Integration**
 
@@ -168,6 +208,20 @@ This document outlines the strategy for integrating Afrofiliate Black-owned busi
    - **Practical tip:** [1 sentence with helpful advice]
    - <a href="[Afrofiliate Link]" class="amazon-link" target="_blank" rel="noopener">Shop [Brand Name]</a>
 ```
+
+### **Afrofiliate Link Format:**
+```html
+<a href="https://www.arjdj2msd.com/7LKLK3/[BRAND_CODE]/" class="amazon-link" target="_blank" rel="noopener">Shop [Brand Name]</a>
+```
+
+**Brand Codes:**
+- BeautyStat: `QWRG9C`
+- Furi Sport: `R2Z4H6`
+- Be Rooted: `R74QP1`
+- Kadalys: `RC9DWS`
+- Be Yourself 314: `24BMB4P`
+- Endorf: `24D26TB`
+- Caribe Coffee: `24R58Q6`
 
 ### **SEO Keywords to Target**
 - "Black-owned business gifts"
@@ -303,4 +357,4 @@ This document outlines the strategy for integrating Afrofiliate Black-owned busi
 
 ---
 
-*Last updated: 2025-01-27* 
+*Last updated: 2025-01-27 - Updated with hybrid approach implementation and content creation guidelines* 

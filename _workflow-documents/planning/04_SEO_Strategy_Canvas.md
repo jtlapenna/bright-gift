@@ -26,7 +26,7 @@ Drive long-term, compounding organic traffic to the AI Gift Idea Generator site 
 | Budget-based      | "gifts under $25 for teens"                   |
 | Occasion-based    | "last-minute Mother's Day gifts"              |
 | Personality-based | "funny gifts for coworkers"                   |
-| Style-based       | "handmade gifts for teachers", "lgbtq owned business gifts", "bipoc owned business gifts" |
+| Style-based       | "handmade gifts for teachers", "lgbtq owned business gifts", "black owned business gifts", "bipoc owned business gifts" |
 
 ---
 
