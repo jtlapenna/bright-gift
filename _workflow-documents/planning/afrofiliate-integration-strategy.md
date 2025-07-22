@@ -71,15 +71,15 @@ This document outlines the strategy for integrating Afrofiliate Black-owned busi
 - **Button Text**: "Shop [Brand Name]" instead of "View on Amazon"
 
 ### **Icon System:**
-- **Afrofiliate Links**: Product-specific icons:
-  - BeautyStat/Kadalys → Sparkle icon (✨)
-  - Furi Sport/Be Yourself 314 → SoccerBall icon (⚽)
-  - Be Rooted → Note icon (📝)
-  - Endorf → Heartbeat icon (❤️)
-  - Caribe Coffee → CookingPot icon (🍳)
-- **Amazon Links**: Category-specific icons (Book, TShirt, House, etc.)
+- **Afrofiliate Links**: Product-specific Phosphor icons (same style as Amazon):
+  - BeautyStat/Kadalys → Sparkle icon (beauty/skincare)
+  - Furi Sport/Be Yourself 314 → SoccerBall icon (athletic wear/sports)
+  - Be Rooted → Note icon (stationery/planners)
+  - Endorf → Heartbeat icon (wellness/supplements)
+  - Caribe Coffee → CookingPot icon (coffee/food)
+- **Amazon Links**: Category-specific Phosphor icons (Book, TShirt, House, etc.)
 - **Bookshop Links**: Book icon
-- **Fallback**: Gift icon for error states
+- **Fallback**: ShoppingBag icon for generic items
 
 ---
 
