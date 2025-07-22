@@ -766,14 +766,14 @@ const faqData = {
 				const amazonIdea = idea.affiliateType === 'amazon' ? idea : group.alternative;
 				
 				buttonHtml = `
-					<div class="w-full space-y-3">
+					<div class="w-full flex gap-3">
 						<a href="${afrofiliateIdea.link}" target="_blank" rel="nofollow noopener" 
-						   class="w-full bg-white hover:bg-gray-50 text-[#1C2E4A] font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center border-2 border-[#1C2E4A] hover:border-[#FF6B6B]" 
+						   class="flex-1 bg-white hover:bg-gray-50 text-[#1C2E4A] font-bold py-2 px-4 rounded-full transition-colors font-poppins text-sm shadow text-center border-2 border-[#1C2E4A] hover:border-[#FF6B6B]" 
 						   aria-label="Shop ${idea.title} from Black-owned brand">
 							🌟 Shop Brand
 						</a>
 						<a href="${amazonIdea.link}" target="_blank" rel="nofollow noopener" 
-						   class="w-full bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center" 
+						   class="flex-1 bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-2 px-4 rounded-full transition-colors font-poppins text-sm shadow text-center" 
 						   aria-label="Find ${idea.title} on Amazon">
 							🛒 Find on Amazon
 						</a>
