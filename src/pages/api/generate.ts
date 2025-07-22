@@ -268,6 +268,10 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
       let link = null;
       let icon = null;
       
+      // Check for Afrofiliate match first (regardless of style selection)
+      const afrofiliateLink = determineAfrofiliateLink(title, tag);
+      const amazonLink = generateAmazonLink(title, tag);
+      
       // Determine affiliate source based on improved logic
       const affiliateSource = determineAffiliateSource(title, tag, styles);
       
@@ -275,30 +279,44 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
         // Bookshop.org for book-related items
         link = generateBookshopLink(title, bookshopAffiliateId);
         icon = 'Book';
-      } else if (affiliateSource === 'afrofiliate') {
-        // Afrofiliate for Black-owned businesses
-        const afrofiliateLink = determineAfrofiliateLink(title, tag);
-        if (afrofiliateLink) {
-          link = afrofiliateLink;
-          icon = getAfrofiliateIcon(title, tag); // Product-specific icon for Afrofiliate
-        } else {
-          // Fallback to Amazon if no specific Afrofiliate link found
-          link = generateAmazonLink(title, tag);
-          icon = getAmazonIcon(tag);
-        }
+        ideas.push({ title, description, tag, link, icon });
+      } else if (afrofiliateLink) {
+        // Afrofiliate match found - show both options
+        const afrofiliateIcon = getAfrofiliateIcon(title, tag);
+        const amazonIcon = getAmazonIcon(tag);
+        
+        // Add Afrofiliate option
+        ideas.push({ 
+          title, 
+          description, 
+          tag, 
+          link: afrofiliateLink, 
+          icon: afrofiliateIcon,
+          affiliateType: 'afrofiliate'
+        });
+        
+        // Add Amazon option
+        ideas.push({ 
+          title: `${title} (Alternative)`, 
+          description, 
+          tag, 
+          link: amazonLink, 
+          icon: amazonIcon,
+          affiliateType: 'amazon'
+        });
       } else if (affiliateSource === 'black-owned-amazon') {
         // Black-owned style selected but no Afrofiliate match - use Amazon with disclaimer
         link = generateAmazonLink(title, tag);
         icon = getAmazonIcon(tag);
         // Add a note that this is a general suggestion, not specifically Black-owned
         description += ' (Note: This is a general suggestion. For Black-owned business options, we recommend checking out our Afrofiliate partner brands.)';
+        ideas.push({ title, description, tag, link, icon });
       } else {
         // Amazon for everything else (including wellness, athletics, beauty styles)
         link = generateAmazonLink(title, tag);
         icon = getAmazonIcon(tag);
+        ideas.push({ title, description, tag, link, icon });
       }
-      
-      ideas.push({ title, description, tag, link, icon });
     }
 
     // Always return an array; fallback if parsing fails

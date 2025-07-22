@@ -633,6 +633,17 @@ const faqData = {
 							// Use SVG's built-in color (#1C2E4A) without CSS filter for better compatibility
 			iconHtml = `<img src="${iconPath}" alt="${idea.icon || 'ShoppingBag'} icon" class="h-20 w-20 mb-6 mt-2" loading="lazy" />`;
 			}
+			
+			// Determine button text based on affiliate type
+			let buttonText = 'Find on Amazon';
+			if (idea.affiliateType === 'afrofiliate') {
+				buttonText = 'Shop Brand';
+			} else if (/bookshop/i.test(idea.link)) {
+				buttonText = 'Find on Bookshop.org';
+			} else if (/arjdj2msd\.com/i.test(idea.link)) {
+				buttonText = 'Shop Brand';
+			}
+			
 			return `
 				<div class="flex flex-col items-center justify-between bg-[#A3E4DB] rounded-2xl shadow-lg p-8 min-h-[480px] transition-transform hover:-translate-y-1 hover:shadow-2xl animate-fade-in" role="listitem">
 					${iconHtml || (idea.image ? `<img src="${idea.image}" alt="${idea.title}" class="h-40 w-full object-cover mb-4 rounded-xl shadow" loading="lazy">` : '')}
@@ -640,7 +651,7 @@ const faqData = {
 					<p class="text-[#333] mb-4 font-inter text-base text-center line-clamp-4">${idea.description}</p>
 					${idea.tag ? `<span class="inline-block bg-[#FFDE59] text-[#1C2E4A] text-xs font-semibold px-4 py-1 rounded-full mb-6 mt-auto">${idea.tag}</span>` : ''}
 					<a href="${idea.link}" target="_blank" rel="nofollow noopener" class="w-full bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center" aria-label="View ${idea.title} (affiliate link)">
-						${/arjdj2msd\.com/i.test(idea.link) ? 'Shop Brand' : /bookshop/i.test(idea.link) ? 'Find on Bookshop.org' : 'Find on Amazon'}
+						${buttonText}
 					</a>
 				</div>
 			`;
