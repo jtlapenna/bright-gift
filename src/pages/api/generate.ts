@@ -139,33 +139,36 @@ function determineAfrofiliateLink(title: string, tag: string): string | null {
   const lowerTitle = title.toLowerCase();
   const lowerTag = tag.toLowerCase();
   
-  // Check if title contains brand names
+  // ONLY match if title contains actual Afrofiliate brand names
   for (const [brand, link] of Object.entries(AFROFILIATE_LINKS)) {
-    if (lowerTitle.includes(brand.replace('-', ' ')) || lowerTitle.includes(brand.replace('-', ''))) {
+    const brandName = brand.replace('-', ' ');
+    const brandNameNoSpace = brand.replace('-', '');
+    
+    // Check for exact brand name matches in title
+    if (lowerTitle.includes(brandName) || lowerTitle.includes(brandNameNoSpace)) {
+      return link;
+    }
+    
+    // Check for brand name variations
+    if (brand === 'beautystat' && lowerTitle.includes('beauty stat')) {
+      return link;
+    }
+    if (brand === 'furi-sport' && lowerTitle.includes('furi sport')) {
+      return link;
+    }
+    if (brand === 'be-yourself-314' && lowerTitle.includes('be yourself 314')) {
+      return link;
+    }
+    if (brand === 'be-rooted' && lowerTitle.includes('be rooted')) {
+      return link;
+    }
+    if (brand === 'caribe-coffee' && lowerTitle.includes('caribe coffee')) {
       return link;
     }
   }
   
-  // Check if tag matches Afrofiliate categories - be more flexible with matching
-  for (const [category, brands] of Object.entries(AFROFILIATE_CATEGORIES)) {
-    const categoryVariations = [
-      category,
-      category.replace('-', ' '),
-      category.replace('-', ''),
-      // Add common variations for sports/athletics
-      ...(category === 'athletic-wear' ? ['athletic', 'athletics', 'sport', 'sports', 'fitness', 'workout', 'athletic wear', 'sports equipment', 'fitness gear', 'workout accessory'] : []),
-      // Add common variations for skincare
-      ...(category === 'skincare' ? ['skincare', 'beauty', 'makeup', 'cosmetic'] : []),
-      // Add common variations for wellness
-      ...(category === 'supplements' ? ['wellness', 'health', 'supplement', 'vitamin'] : [])
-    ];
-    
-    if (categoryVariations.some(variation => lowerTag.includes(variation))) {
-      // Return the first brand in that category
-      const firstBrand = brands[0];
-      return AFROFILIATE_LINKS[firstBrand as keyof typeof AFROFILIATE_LINKS];
-    }
-  }
+  // DO NOT match by category alone - only match actual brand products
+  // This prevents incorrect matches like "Frères Branchiaux" candles getting Furi Sport links
   
   return null;
 }
