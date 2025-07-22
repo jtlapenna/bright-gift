@@ -26,7 +26,7 @@ Drive long-term, compounding organic traffic to the AI Gift Idea Generator site 
 | Budget-based      | "gifts under $25 for teens"                   |
 | Occasion-based    | "last-minute Mother's Day gifts"              |
 | Personality-based | "funny gifts for coworkers"                   |
-| Style-based       | "handmade gifts for teachers", "lgbtq owned business gifts", "black owned business gifts", "bipoc owned business gifts" |
+| Style-based       | "handmade gifts for teachers", "lgbtq owned business gifts", "black owned business gifts", "bipoc owned business gifts", "afrofiliate brands", "black owned skincare brands", "black owned athletic wear" |
 
 ---
 
@@ -57,6 +57,9 @@ Drive long-term, compounding organic traffic to the AI Gift Idea Generator site 
 > - Top 10 Gifts for Coworkers
 > - Top 10 Sustainable Gifts
 > - Top 10 Last-Minute Amazon Gifts
+> - Top 10 Gifts from Black-Owned Businesses
+> - Top 10 Black-Owned Skincare Brands
+> - Top 10 Black-Owned Athletic Wear Brands
 >
 > This hub page will be valuable for internal linking and SEO once the content is available.
 

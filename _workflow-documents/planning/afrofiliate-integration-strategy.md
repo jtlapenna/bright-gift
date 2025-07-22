@@ -28,6 +28,17 @@ This document outlines the strategy for integrating Afrofiliate Black-owned busi
 - **Cashblack UK** | New members earn £5 bonus
 - **Cashblack US** | New members earn $5 bonus
 
+### **Current Brand Codes:**
+- BeautyStat: `QWRG9C`
+- Furi Sport: `R2Z4H6`
+- Be Rooted: `R74QP1`
+- Kadalys: `RC9DWS`
+- Be Yourself 314: `24BMB4P`
+- Endorf: `24D26TB`
+- Caribe Coffee: `24R58Q6`
+- Cashblack UK: `2CTPL1`
+- Cashblack US: `M823SF`
+
 ---
 
 ## 🤖 AI Gift Generator Integration
@@ -58,7 +69,9 @@ This document outlines the strategy for integrating Afrofiliate Black-owned busi
 - ✅ **Can suggest specific products** from Afrofiliate brands when the AI knows about them
 - ✅ **Can suggest brand categories** (e.g., "skincare from Black-owned businesses")
 - ✅ **Integrates with all style preferences** - Afrofiliate brands appear in beauty, athletics, wellness searches
+- ✅ **Smart brand name matching** - AI recognizes brand name variations (e.g., "Beauty Stat" matches BeautyStat)
 - ⚠️ **Limited to known brands** - AI won't suggest products from brands not in your affiliate program
+- ✅ **Precise matching logic** - Only matches products that explicitly mention Afrofiliate brand names, preventing incorrect category-based matches
 
 ---
 
@@ -222,6 +235,8 @@ This document outlines the strategy for integrating Afrofiliate Black-owned busi
 - Be Yourself 314: `24BMB4P`
 - Endorf: `24D26TB`
 - Caribe Coffee: `24R58Q6`
+- Cashblack UK: `2CTPL1`
+- Cashblack US: `M823SF`
 
 ### **SEO Keywords to Target**
 - "Black-owned business gifts"
@@ -260,6 +275,10 @@ This document outlines the strategy for integrating Afrofiliate Black-owned busi
 - ✅ Created brand category mapping
 - ✅ Added cross-style integration (beauty, athletics, wellness)
 - ✅ Implemented smart fallback logic
+- ✅ Added precise brand name matching (prevents incorrect category-based matches)
+- ✅ Implemented "Find Similar on Amazon" for Afrofiliate products
+- ✅ Added brand name display in "Shop Brand" buttons
+- ✅ Standardized tag system for consistent display
 
 ### **Phase 2: Content Creation (Next Priority)**
 - [ ] Create 3-5 dedicated Black-owned business blog posts
