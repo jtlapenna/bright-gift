@@ -730,10 +730,6 @@ const faqData = {
 			}
 		});
 		
-		// Debug: Log the grouping to see what's happening
-		console.log('Original ideas:', ideas);
-		console.log('Grouped ideas:', groupedIdeas);
-		
 		// Filter out groups that don't have both Afrofiliate and Amazon options
 		const hybridGroups = groupedIdeas.filter(group => {
 			const hasAfrofiliate = group.primary.affiliateType === 'afrofiliate' || 
@@ -748,8 +744,6 @@ const faqData = {
 			
 			return hasAfrofiliate && hasAmazon;
 		});
-		
-		console.log('Hybrid groups:', hybridGroups);
 		
 		// Render hybrid groups first, then regular ideas
 		const hybridCards = hybridGroups.map(group => {
