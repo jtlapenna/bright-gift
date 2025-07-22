@@ -146,9 +146,21 @@ function determineAfrofiliateLink(title: string, tag: string): string | null {
     }
   }
   
-  // Check if tag matches Afrofiliate categories
+  // Check if tag matches Afrofiliate categories - be more flexible with matching
   for (const [category, brands] of Object.entries(AFROFILIATE_CATEGORIES)) {
-    if (lowerTag.includes(category) || lowerTag.includes(category.replace('-', ' '))) {
+    const categoryVariations = [
+      category,
+      category.replace('-', ' '),
+      category.replace('-', ''),
+      // Add common variations for sports/athletics
+      ...(category === 'athletic-wear' ? ['athletic', 'athletics', 'sport', 'sports', 'fitness', 'workout', 'athletic wear', 'sports equipment', 'fitness gear', 'workout accessory'] : []),
+      // Add common variations for skincare
+      ...(category === 'skincare' ? ['skincare', 'beauty', 'makeup', 'cosmetic'] : []),
+      // Add common variations for wellness
+      ...(category === 'supplements' ? ['wellness', 'health', 'supplement', 'vitamin'] : [])
+    ];
+    
+    if (categoryVariations.some(variation => lowerTag.includes(variation))) {
       // Return the first brand in that category
       const firstBrand = brands[0];
       return AFROFILIATE_LINKS[firstBrand as keyof typeof AFROFILIATE_LINKS];

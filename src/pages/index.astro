@@ -667,6 +667,29 @@ const faqData = {
 		}
 	});
 
+	// Function to get brand name from Afrofiliate link
+	function getBrandName(link) {
+		if (!link || !link.includes('arjdj2msd.com')) return 'Brand';
+		
+		const brandMap = {
+			'QWRG9C': 'BeautyStat',
+			'R2Z4H6': 'Furi Sport',
+			'R74QP1': 'Be Rooted',
+			'RC9DWS': 'Kadalys',
+			'24BMB4P': 'Be Yourself 314',
+			'24D26TB': 'Endorf',
+			'24R58Q6': 'Caribe Coffee'
+		};
+		
+		for (const [code, name] of Object.entries(brandMap)) {
+			if (link.includes(code)) {
+				return name;
+			}
+		}
+		
+		return 'Brand';
+	}
+
 	function renderIdeaCards(ideas) {
 		const iconSvgMap = {
 			DeviceMobile: '/icons/DeviceMobile.svg',
@@ -771,7 +794,7 @@ const faqData = {
 						   class="w-full bg-white hover:bg-gray-50 text-[#1C2E4A] font-bold py-3 px-6 rounded-full transition-colors font-poppins text-base shadow text-center border-2 border-[#1C2E4A] hover:border-[#FF6B6B] flex items-center justify-center gap-2" 
 						   aria-label="Shop ${idea.title} from Black-owned brand">
 							<span>🌟</span>
-							<span>Shop Brand</span>
+							<span>Shop ${getBrandName(afrofiliateIdea.link)}</span>
 						</a>
 						<a href="${amazonIdea.link}" target="_blank" rel="nofollow noopener" 
 						   class="w-full bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-6 rounded-full transition-colors font-poppins text-base shadow text-center flex items-center justify-center gap-2" 
@@ -782,15 +805,15 @@ const faqData = {
 					</div>
 				`;
 			} else {
-				// Single button for regular cards
-				let buttonText = 'Find on Amazon';
-				if (idea.affiliateType === 'afrofiliate') {
-					buttonText = '🌟 Shop Brand';
-				} else if (/bookshop/i.test(idea.link)) {
-					buttonText = '📖 Find on Bookshop.org';
-				} else if (/arjdj2msd\.com/i.test(idea.link)) {
-					buttonText = '🌟 Shop Brand';
-				}
+							// Single button for regular cards
+			let buttonText = 'Find on Amazon';
+			if (idea.affiliateType === 'afrofiliate') {
+				buttonText = `🌟 Shop ${getBrandName(idea.link)}`;
+			} else if (/bookshop/i.test(idea.link)) {
+				buttonText = '📖 Find on Bookshop.org';
+			} else if (/arjdj2msd\.com/i.test(idea.link)) {
+				buttonText = `🌟 Shop ${getBrandName(idea.link)}`;
+			}
 				
 				buttonHtml = `
 					<a href="${idea.link}" target="_blank" rel="nofollow noopener" 
@@ -830,11 +853,11 @@ const faqData = {
 			// Single button for regular cards
 			let buttonText = 'Find on Amazon';
 			if (idea.affiliateType === 'afrofiliate') {
-				buttonText = '🌟 Shop Brand';
+				buttonText = `🌟 Shop ${getBrandName(idea.link)}`;
 			} else if (/bookshop/i.test(idea.link)) {
 				buttonText = '📖 Find on Bookshop.org';
 			} else if (/arjdj2msd\.com/i.test(idea.link)) {
-				buttonText = '🌟 Shop Brand';
+				buttonText = `🌟 Shop ${getBrandName(idea.link)}`;
 			}
 			
 			const buttonHtml = `
