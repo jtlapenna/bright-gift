@@ -619,7 +619,7 @@ const faqData = {
 					<p class="text-[#333] mb-4 font-inter text-base text-center line-clamp-4">${idea.description}</p>
 					${idea.tag ? `<span class="inline-block bg-[#FFDE59] text-[#1C2E4A] text-xs font-semibold px-4 py-1 rounded-full mb-6 mt-auto">${idea.tag}</span>` : ''}
 					<a href="${idea.link}" target="_blank" rel="nofollow noopener" class="w-full bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center" aria-label="View ${idea.title} (affiliate link)">
-						Find on ${/bookshop/i.test(idea.link) ? 'Bookshop.org' : 'Amazon'}
+						${/arjdj2msd\.com/i.test(idea.link) ? 'Shop Brand' : /bookshop/i.test(idea.link) ? 'Find on Bookshop.org' : 'Find on Amazon'}
 					</a>
 				</div>
 			`;
