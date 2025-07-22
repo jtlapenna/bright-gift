@@ -669,7 +669,11 @@ const faqData = {
 
 	// Function to get brand name from Afrofiliate link
 	function getBrandName(link) {
-		if (!link || !link.includes('arjdj2msd.com')) return 'Brand';
+		console.log('getBrandName called with link:', link);
+		if (!link || !link.includes('arjdj2msd.com')) {
+			console.log('Link is not Afrofiliate, returning Brand');
+			return 'Brand';
+		}
 		
 		const brandMap = {
 			'QWRG9C': 'BeautyStat',
@@ -678,15 +682,19 @@ const faqData = {
 			'RC9DWS': 'Kadalys',
 			'24BMB4P': 'Be Yourself 314',
 			'24D26TB': 'Endorf',
-			'24R58Q6': 'Caribe Coffee'
+			'24R58Q6': 'Caribe Coffee',
+			'2CTPL1': 'Cashblack UK',
+			'M823SF': 'Cashblack US'
 		};
 		
 		for (const [code, name] of Object.entries(brandMap)) {
 			if (link.includes(code)) {
+				console.log('Found brand code:', code, 'returning:', name);
 				return name;
 			}
 		}
 		
+		console.log('No brand code found, returning Brand');
 		return 'Brand';
 	}
 
