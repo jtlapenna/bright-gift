@@ -297,7 +297,7 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
         
         // Add Amazon option
         ideas.push({ 
-          title: `${title} (Alternative)`, 
+          title: title, 
           description, 
           tag, 
           link: amazonLink, 

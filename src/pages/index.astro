@@ -626,22 +626,82 @@ const faqData = {
 			FrameCorners: '/icons/FrameCorners.svg',
 			Gift: '/icons/Gift.svg'
 		};
-		return ideas.map(idea => {
+		
+		// Group ideas by title to handle hybrid cards
+		const groupedIdeas = [];
+		const processedTitles = new Set();
+		
+		ideas.forEach(idea => {
+			const baseTitle = idea.title;
+			
+			if (processedTitles.has(baseTitle)) {
+				// Find the existing group and add this as the alternative
+				const existingGroup = groupedIdeas.find(group => group.baseTitle === baseTitle);
+				if (existingGroup && !existingGroup.alternative) {
+					existingGroup.alternative = idea;
+				}
+			} else {
+				// Create new group
+				processedTitles.add(baseTitle);
+				groupedIdeas.push({
+					baseTitle,
+					primary: idea,
+					alternative: null
+				});
+			}
+		});
+		
+		return groupedIdeas.map(group => {
+			const idea = group.primary;
 			let iconHtml = '';
 			if (idea.icon) {
 				const iconPath = iconSvgMap[idea.icon] || iconSvgMap['ShoppingBag'];
-							// Use SVG's built-in color (#1C2E4A) without CSS filter for better compatibility
-			iconHtml = `<img src="${iconPath}" alt="${idea.icon || 'ShoppingBag'} icon" class="h-20 w-20 mb-6 mt-2" loading="lazy" />`;
+				iconHtml = `<img src="${iconPath}" alt="${idea.icon || 'ShoppingBag'} icon" class="h-20 w-20 mb-6 mt-2" loading="lazy" />`;
 			}
 			
-			// Determine button text based on affiliate type
-			let buttonText = 'Find on Amazon';
-			if (idea.affiliateType === 'afrofiliate') {
-				buttonText = 'Shop Brand';
-			} else if (/bookshop/i.test(idea.link)) {
-				buttonText = 'Find on Bookshop.org';
-			} else if (/arjdj2msd\.com/i.test(idea.link)) {
-				buttonText = 'Shop Brand';
+			// Check if this is a hybrid card (has both Afrofiliate and Amazon options)
+			const isHybrid = group.alternative && 
+				((idea.affiliateType === 'afrofiliate' && group.alternative.affiliateType === 'amazon') ||
+				 (idea.affiliateType === 'amazon' && group.alternative.affiliateType === 'afrofiliate'));
+			
+			let buttonHtml = '';
+			if (isHybrid) {
+				// Hybrid card with two buttons
+				const afrofiliateIdea = idea.affiliateType === 'afrofiliate' ? idea : group.alternative;
+				const amazonIdea = idea.affiliateType === 'amazon' ? idea : group.alternative;
+				
+				buttonHtml = `
+					<div class="w-full space-y-3">
+						<a href="${afrofiliateIdea.link}" target="_blank" rel="nofollow noopener" 
+						   class="w-full bg-[#A3E4DB] hover:bg-[#8FD3C7] text-[#1C2E4A] font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center border-2 border-[#A3E4DB] hover:border-[#8FD3C7]" 
+						   aria-label="Shop ${idea.title} from Black-owned brand">
+							🌟 Shop Brand
+						</a>
+						<a href="${amazonIdea.link}" target="_blank" rel="nofollow noopener" 
+						   class="w-full bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center" 
+						   aria-label="Find ${idea.title} on Amazon">
+							🛒 Find on Amazon
+						</a>
+					</div>
+				`;
+			} else {
+				// Single button for regular cards
+				let buttonText = 'Find on Amazon';
+				if (idea.affiliateType === 'afrofiliate') {
+					buttonText = '🌟 Shop Brand';
+				} else if (/bookshop/i.test(idea.link)) {
+					buttonText = '📖 Find on Bookshop.org';
+				} else if (/arjdj2msd\.com/i.test(idea.link)) {
+					buttonText = '🌟 Shop Brand';
+				}
+				
+				buttonHtml = `
+					<a href="${idea.link}" target="_blank" rel="nofollow noopener" 
+					   class="w-full bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center" 
+					   aria-label="View ${idea.title} (affiliate link)">
+						${buttonText}
+					</a>
+				`;
 			}
 			
 			return `
@@ -650,9 +710,7 @@ const faqData = {
 					<h3 class="font-bold text-2xl mb-3 font-poppins text-[#1C2E4A] text-center">${idea.title}</h3>
 					<p class="text-[#333] mb-4 font-inter text-base text-center line-clamp-4">${idea.description}</p>
 					${idea.tag ? `<span class="inline-block bg-[#FFDE59] text-[#1C2E4A] text-xs font-semibold px-4 py-1 rounded-full mb-6 mt-auto">${idea.tag}</span>` : ''}
-					<a href="${idea.link}" target="_blank" rel="nofollow noopener" class="w-full bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center" aria-label="View ${idea.title} (affiliate link)">
-						${buttonText}
-					</a>
+					${buttonHtml}
 				</div>
 			`;
 		}).join('');
