@@ -271,12 +271,35 @@ const faqData = {
 				<h2 class="text-3xl font-bold text-center mb-12 text-[#1C2E4A]">Your Gift Ideas</h2>
 				<!-- Loading state placeholder -->
 				<div id="loading" class="text-center hidden">
-					<div class="flex flex-col items-center justify-center gap-2">
-						<svg class="animate-spin h-11 w-11" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-							<circle class="opacity-100" cx="12" cy="12" r="10" stroke="#A3E4DB" stroke-width="4"></circle>
-							<path class="opacity-100" fill="#FF6B6B" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
-						</svg>
-						<span class="text-[#1C2E4A] font-semibold">Generating ideas...</span>
+					<div class="flex flex-col items-center justify-center gap-4">
+						<!-- Fun animated gift box -->
+						<div class="relative">
+							<div class="w-16 h-16 bg-[#FF6B6B] rounded-lg animate-bounce shadow-lg flex items-center justify-center">
+								<span class="text-white text-2xl">🎁</span>
+							</div>
+							<!-- Floating sparkles -->
+							<div class="absolute -top-2 -left-2 text-yellow-400 animate-ping">✨</div>
+							<div class="absolute -top-2 -right-2 text-pink-400 animate-ping" style="animation-delay: 0.5s;">💫</div>
+							<div class="absolute -bottom-2 -left-2 text-blue-400 animate-ping" style="animation-delay: 1s;">⭐</div>
+							<div class="absolute -bottom-2 -right-2 text-purple-400 animate-ping" style="animation-delay: 1.5s;">🌟</div>
+						</div>
+						
+						<!-- Fun loading messages -->
+						<div class="space-y-2">
+							<span class="text-[#1C2E4A] font-semibold text-lg" id="loading-message">🎯 Finding the perfect gifts...</span>
+							<div class="flex justify-center space-x-1">
+								<div class="w-2 h-2 bg-[#FF6B6B] rounded-full animate-bounce"></div>
+								<div class="w-2 h-2 bg-[#A3E4DB] rounded-full animate-bounce" style="animation-delay: 0.1s;"></div>
+								<div class="w-2 h-2 bg-[#FFDE59] rounded-full animate-bounce" style="animation-delay: 0.2s;"></div>
+							</div>
+						</div>
+						
+						<!-- Fun fact or tip -->
+						<div class="max-w-md mx-auto">
+							<p class="text-[#1C2E4A] text-sm opacity-75 italic" id="loading-tip">
+								💡 Did you know? The average person spends 15 hours searching for the perfect gift!
+							</p>
+						</div>
 					</div>
 				</div>
 				<!-- Results will be injected here -->
@@ -401,6 +424,31 @@ const faqData = {
 
 		let selectedStyles = [];
 		let lastInputs = {};
+		
+		// Fun loading messages and tips
+		const loadingMessages = [
+			"🎯 Finding the perfect gifts...",
+			"🧠 Analyzing their interests...",
+			"💡 Generating creative ideas...",
+			"🎁 Curating amazing options...",
+			"✨ Adding that special touch...",
+			"🌟 Discovering unique finds...",
+			"🎨 Personalizing suggestions...",
+			"💝 Making gift-giving magical..."
+		];
+		
+		const loadingTips = [
+			"💡 Did you know? The average person spends 15 hours searching for the perfect gift!",
+			"🎯 Pro tip: Consider their hobbies and interests for more meaningful gifts!",
+			"✨ Fun fact: Gift-giving releases oxytocin, the 'love hormone'!",
+			"🌟 Remember: It's the thought that counts, not the price tag!",
+			"🎁 Did you know? Personalized gifts are remembered 3x longer!",
+			"💝 Pro tip: Experiences often make better gifts than things!",
+			"🎨 Fun fact: The color of gift wrap can influence how the gift is perceived!",
+			"✨ Remember: The best gifts solve a problem or fulfill a desire!"
+		];
+		
+		let loadingInterval;
 
 		// Multi-select style chip functionality
 		const styleChips = document.querySelectorAll('.style-chip');
@@ -479,6 +527,33 @@ const faqData = {
 			});
 		}
 
+		// Function to cycle through loading messages
+		function startLoadingAnimation() {
+			const loadingMessage = document.getElementById('loading-message');
+			const loadingTip = document.getElementById('loading-tip');
+			let messageIndex = 0;
+			let tipIndex = 0;
+			
+			loadingInterval = setInterval(() => {
+				// Cycle through messages every 2 seconds
+				loadingMessage.textContent = loadingMessages[messageIndex];
+				messageIndex = (messageIndex + 1) % loadingMessages.length;
+				
+				// Cycle through tips every 4 seconds
+				if (messageIndex % 2 === 0) {
+					loadingTip.textContent = loadingTips[tipIndex];
+					tipIndex = (tipIndex + 1) % loadingTips.length;
+				}
+			}, 2000);
+		}
+		
+		function stopLoadingAnimation() {
+			if (loadingInterval) {
+				clearInterval(loadingInterval);
+				loadingInterval = null;
+			}
+		}
+
 		form.addEventListener('submit', async (event) => {
 			event.preventDefault();
 			// Scroll to results section immediately
@@ -493,6 +568,7 @@ const faqData = {
 			}
 			loadingIndicator.classList.remove('hidden');
 			resultsContainer.innerHTML = '';
+			startLoadingAnimation();
 
 			try {
 				const response = await fetch('/api/generate', {
@@ -539,6 +615,7 @@ const faqData = {
 				regenerateBtn.classList.add('hidden');
 				regenerateBtn.style.display = 'none';
 			} finally {
+				stopLoadingAnimation();
 				loadingIndicator.classList.add('hidden');
 			}
 		});
@@ -549,6 +626,7 @@ const faqData = {
 			document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
 			loadingIndicator.classList.remove('hidden');
 			resultsContainer.innerHTML = '';
+			startLoadingAnimation();
 			try {
 				const response = await fetch('/api/generate', {
 					method: 'POST',
