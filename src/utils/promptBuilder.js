@@ -13,7 +13,8 @@ function buildPrompt(data) {
         'luxury': 'premium quality, high-end, sophisticated, elegant, or indulgent items',
         'techy': 'technology-focused, gadgets, innovative, smart devices, or digital items',
         'cultural-gifts': 'celebrating diverse cultures, traditional items, cultural heritage, or international gifts',
-        'book-lover': 'books from Bookshop.org (supporting independent bookstores), reading accessories from Amazon, literary-themed items, bookmarks, reading lights, or book-related gifts'
+        'book-lover': 'books from Bookshop.org (supporting independent bookstores), reading accessories from Amazon, literary-themed items, bookmarks, reading lights, or book-related gifts',
+        'black-owned': 'products from Black-owned businesses, supporting diverse entrepreneurs and inclusive shopping choices'
     };
     
     // Build style-specific guidance
@@ -51,6 +52,9 @@ function buildPrompt(data) {
                     break;
                 case 'book-lover':
                     styleGuidance += `\n- For book-lover: Include a mix of books from Bookshop.org (supporting independent bookstores) and reading accessories from Amazon. Focus on literary-themed items, reading enhancement tools, and book-related gifts.`;
+                    break;
+                case 'black-owned':
+                    styleGuidance += `\n- For black-owned: Support diverse entrepreneurs and inclusive shopping by recommending products from Black-owned businesses.`;
                     break;
                 default:
                     styleGuidance += `\n- For ${style}: Incorporate ${style} elements appropriately.`;

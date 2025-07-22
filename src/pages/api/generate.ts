@@ -81,10 +81,64 @@ function getAmazonIcon(tag: string) {
   return amazonCategoryIconMap.generic;
 }
 
-// Helper to determine if an item should go to Bookshop.org or Amazon
+// Afrofiliate Black-owned business affiliate links
+const AFROFILIATE_LINKS = {
+  'beautystat': 'https://www.arjdj2msd.com/7LKLK3/QWRG9C/',
+  'furi-sport': 'https://www.arjdj2msd.com/7LKLK3/R2Z4H6/',
+  'be-rooted': 'https://www.arjdj2msd.com/7LKLK3/R74QP1/',
+  'kadalys': 'https://www.arjdj2msd.com/7LKLK3/RC9DWS/',
+  'be-yourself-314': 'https://www.arjdj2msd.com/7LKLK3/24BMB4P/',
+  'endorf': 'https://www.arjdj2msd.com/7LKLK3/24D26TB/',
+  'caribe-coffee': 'https://www.arjdj2msd.com/7LKLK3/24R58Q6/',
+  'cashblack-uk': 'https://www.arjdj2msd.com/7LKLK3/2CTPL1/',
+  'cashblack-us': 'https://www.arjdj2msd.com/7LKLK3/M823SF/'
+};
+
+// Product categories that match Afrofiliate brands
+const AFROFILIATE_CATEGORIES = {
+  'skincare': ['beautystat', 'kadalys'],
+  'athletic-wear': ['furi-sport', 'be-yourself-314'],
+  'stationery': ['be-rooted'],
+  'supplements': ['endorf'],
+  'coffee': ['caribe-coffee'],
+  'cashback': ['cashblack-uk', 'cashblack-us']
+};
+
+function determineAfrofiliateLink(title: string, tag: string): string | null {
+  const lowerTitle = title.toLowerCase();
+  const lowerTag = tag.toLowerCase();
+  
+  // Check if title contains brand names
+  for (const [brand, link] of Object.entries(AFROFILIATE_LINKS)) {
+    if (lowerTitle.includes(brand.replace('-', ' ')) || lowerTitle.includes(brand.replace('-', ''))) {
+      return link;
+    }
+  }
+  
+  // Check if tag matches Afrofiliate categories
+  for (const [category, brands] of Object.entries(AFROFILIATE_CATEGORIES)) {
+    if (lowerTag.includes(category) || lowerTag.includes(category.replace('-', ' '))) {
+      // Return the first brand in that category
+      const firstBrand = brands[0];
+      return AFROFILIATE_LINKS[firstBrand as keyof typeof AFROFILIATE_LINKS];
+    }
+  }
+  
+  return null;
+}
+
 function determineAffiliateSource(title: string, tag: string, styles: string[]) {
   const lowerTitle = title.toLowerCase();
   const lowerTag = tag.toLowerCase();
+  
+  // Check if Black-owned style is selected and we have a matching Afrofiliate link
+  const isBlackOwnedStyle = styles && styles.includes('black-owned');
+  if (isBlackOwnedStyle) {
+    const afrofiliateLink = determineAfrofiliateLink(title, tag);
+    if (afrofiliateLink) {
+      return 'afrofiliate';
+    }
+  }
   
   // Check if book-lover style is selected
   const isBookLoverStyle = styles && styles.includes('book-lover');
@@ -187,7 +241,19 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
         // Bookshop.org for book-related items
         link = generateBookshopLink(title, bookshopAffiliateId);
         icon = 'Book';
-      } else {
+      } else if (affiliateSource === 'afrofiliate') {
+        // Afrofiliate for Black-owned businesses
+        const afrofiliateLink = determineAfrofiliateLink(title, tag);
+        if (afrofiliateLink) {
+          link = afrofiliateLink;
+          icon = 'Sparkle'; // Generic icon for Afrofiliate
+        } else {
+          // Fallback to Amazon if no specific Afrofiliate link found
+          link = generateAmazonLink(title, tag);
+          icon = getAmazonIcon(tag);
+        }
+      }
+      else {
         // Amazon for everything else
         link = generateAmazonLink(title, tag);
         icon = getAmazonIcon(tag);
