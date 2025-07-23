@@ -1,0 +1,14 @@
+{
+  "slug": "how-to-choose-the-perfect-gift-complete-guide",
+  "prompts": [
+    {
+      "label": "banner",
+      "text": "A wide horizontal scene showing a thoughtful gift selection process with multiple colorful gift boxes arranged in a flat-lay composition, some wrapped with ribbons and bows, others open revealing thoughtful items like books, plants, and small treasures. Include floating sparkles and small 2D decorative elements like gift tags and hearts scattered around. The layout should feel organized yet playful, with 16:9 aspect ratio and 1200px wide. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic. Use text only in social images. Background colors can vary within our color palette."
+    },
+    {
+      "label": "social",
+      "text": "A square composition featuring a central cluster of beautifully wrapped gift boxes in various sizes, with the title 'How to Choose the Perfect Gift' displayed prominently in elegant typography. Include floating gift tags, ribbons, and small decorative elements like sparkles and hearts around the gifts. The scene should feel warm and inviting, with 1:1 aspect ratio and 1200x1200 size. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic. Use text only in social images. Background colors can vary within our color palette."
+    }
+  ],
+  "notes": "Banner and social images only - OG image not needed for now. Follow BrightGift style with 3D-style cartoon objects and 2D decorative elements. No text in banner, include title text in social image."
+} 

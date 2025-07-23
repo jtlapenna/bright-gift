@@ -1,0 +1,56 @@
+{
+  "name": "site-name",
+  "domain": "example.com",
+  "contentDir": "src/content/blog",
+  "imagesDir": "public/images/blog",
+  "socialPostsDir": "_workflow-documents/social-posts",
+  "styleGuide": "reference/_workflow-documents/planning/04.2_blog_style_guide.md",
+  "seoGuide": "reference/_workflow-documents/planning/04.3_SEO_Guide.md",
+  "affiliatePrograms": {
+    "amazon": {
+      "enabled": true,
+      "tag": "your-amazon-tag"
+    },
+    "bookshop": {
+      "enabled": true,
+      "tag": "your-bookshop-tag"
+    },
+    "afrofiliate": {
+      "enabled": true,
+      "brands": []
+    }
+  },
+  "socialPlatforms": {
+    "twitter": {
+      "enabled": false,
+      "apiKey": "",
+      "apiSecret": ""
+    },
+    "instagram": {
+      "enabled": false,
+      "accessToken": ""
+    },
+    "pinterest": {
+      "enabled": false,
+      "accessToken": ""
+    },
+    "facebook": {
+      "enabled": false,
+      "accessToken": ""
+    },
+    "bluesky": {
+      "enabled": false,
+      "identifier": "",
+      "password": ""
+    }
+  },
+  "imageGeneration": {
+    "model": "gpt-image-1",
+    "style": "brightgift",
+    "dimensions": {
+      "banner": "1200x630",
+      "social": "1200x1200",
+      "og": "1200x630"
+    }
+  }
+}

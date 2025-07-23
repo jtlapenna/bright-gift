@@ -1,0 +1,50 @@
+{
+  "name": "content-automation-system",
+  "version": "1.0.0",
+  "description": "AI-powered content automation system for blogs and social media",
+  "main": "src/cli/index.js",
+  "scripts": {
+    "start": "node src/cli/index.js",
+    "dev": "nodemon src/cli/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/",
+    "format": "prettier --write src/",
+    "setup": "node setup.js"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "inquirer": "^9.2.0",
+    "openai": "^4.0.0",
+    "express": "^4.18.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "gray-matter": "^4.0.0",
+    "marked": "^5.0.0",
+    "sharp": "^0.32.0",
+    "node-cron": "^3.0.0",
+    "simple-git": "^3.0.0",
+    "dotenv": "^16.0.0",
+    "chalk": "^5.0.0",
+    "ora": "^7.0.0",
+    "figlet": "^1.6.0",
+    "boxen": "^7.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "nodemon": "^3.0.0",
+    "webpack": "^5.0.0",
+    "babel-loader": "^9.0.0"
+  },
+  "keywords": [
+    "content",
+    "automation",
+    "ai",
+    "blog",
+    "social-media"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "gift-giving-statistics-what-people-really-want",
+  "prompts": [
+    {
+      "label": "banner",
+      "text": "A wide horizontal scene featuring colorful gift boxes, charts, and data visualization elements arranged in a clean, editorial layout. Include floating percentage symbols, dollar signs, and small gift icons scattered throughout. Use a mix of 3D-style gift boxes in various sizes and 2D chart elements with bright, engaging colors. The composition should feel data-driven yet warm and gift-focused. 16:9 ratio, 1200px wide. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic. Use text only in social images. Background colors can vary within our color palette."
+    },
+    {
+      "label": "social",
+      "text": "A square composition featuring a central gift box with data visualization elements floating around it. Include colorful charts, percentage symbols, and small gift icons arranged in a balanced, grid-friendly layout. The title 'Gift Giving Statistics: What People Really Want' should be prominently displayed in a bold, rounded font. Use a mix of 3D-style objects and 2D chart elements with the BrightGift color palette. The overall feel should be informative yet approachable and gift-focused. 1:1 ratio, 1200x1200px. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic. Use text only in social images. Background colors can vary within our color palette."
+    },
+    {
+      "label": "og",
+      "text": "A horizontal layout featuring gift boxes and data visualization elements in a clean, editorial arrangement. Include floating percentage symbols, charts, and small gift icons scattered throughout the scene. Use a mix of 3D-style gift boxes and 2D chart elements with bright, engaging colors. The composition should feel data-driven yet warm and gift-focused, perfect for social media previews. 16:9 ratio, 1200px wide. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic. Use text only in social images. Background colors can vary within our color palette."
+    }
+  ]
+} 

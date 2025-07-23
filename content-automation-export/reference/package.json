@@ -1,0 +1,51 @@
+{
+  "name": "bright-gift",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "npm run validate:yaml && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check-links": "node src/pages/broken-links-checker.js",
+    "clean": "rm -rf dist",
+    "compile": "tsc",
+    "validate:yaml": "node scripts/validate-yaml.js",
+    "create-blog": "node scripts/create-blog-automation.js",
+    "create-blog:gift-guide": "node scripts/create-blog-automation.js --type gift-guide",
+    "create-blog:educational": "node scripts/create-blog-automation.js --type educational",
+    "create-blog:data-driven": "node scripts/create-blog-automation.js --type data-driven"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.6.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "@tailwindcss/typography": "^0.5.16",
+    "astro": "^5.10.1",
+    "cheerio": "^1.0.0-rc.12",
+    "express": "^5.1.0",
+    "markdown-it": "^14.1.0",
+    "marked": "^16.0.0",
+    "node-fetch": "^2.6.12",
+    "openai": "^5.8.2",
+    "phosphor-icons": "^1.4.2",
+    "phosphor-react": "^1.4.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.10",
+    "astro": "^5.11.0",
+    "typescript": "^5.0.0",
+    "js-yaml": "^4.1.0"
+  },
+  "keywords": [
+    "gift",
+    "ideas",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "BrightGift main project for gift idea generation"
+}
