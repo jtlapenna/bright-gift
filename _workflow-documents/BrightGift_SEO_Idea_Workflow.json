@@ -1,0 +1,838 @@
+{
+  "name": "BrightGift SEO Idea Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "seo-keyword-discovery",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "9f1afb49-7c3b-4171-9828-16702d2c177d",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -5800,
+        -600
+      ],
+      "webhookId": "seo-keyword-discovery-trigger"
+    },
+    {
+      "parameters": {
+        "url": "https://bright-gift.com/api/blog-posts/latest",
+        "options": {}
+      },
+      "id": "f0f0ebfc-f0c1-4a5a-a734-6f328c881e3f",
+      "name": "Fetch Blog Content",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -5580,
+        -600
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse blog content and extract topics\nconst posts = $input.all();\nconst existingTopics = [];\n\nfor (const post of posts) {\n  if (post.json && post.json.data) {\n    const data = post.json.data;\n    if (data.title) existingTopics.push(data.title);\n    if (data.tags && Array.isArray(data.tags)) {\n      existingTopics.push(...data.tags);\n    }\n    if (data.keywords && Array.isArray(data.keywords)) {\n      existingTopics.push(...data.keywords);\n    }\n  }\n}\n\n// Remove duplicates\nconst uniqueTopics = [...new Set(existingTopics)];\n\nreturn {\n  existingTopics: uniqueTopics,\n  totalPosts: posts.length\n};"
+      },
+      "id": "63a588c6-4000-4566-a2b8-46bb84fd4f92",
+      "name": "Parse Blog Content",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -5360,
+        -600
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "=existingTopics",
+              "stringValue": "={{ $json.existingTopics }}"
+            },
+            {
+              "name": "totalPosts",
+              "stringValue": "={{ $json.totalPosts }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5a81c826-0330-42cf-9430-e8051d42937f",
+      "name": "Store Topics",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        -5180,
+        -600
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse OpenAI response and extract topics\ntry {\n  const response = $input.first().json;\n  const content = response.choices[0].message.content;\n  const topics = JSON.parse(content);\n  \n  return {\n    seedTopics: topics,\n    count: topics.length\n  };\n} catch (error) {\n  throw new Error(`Failed to parse topics: ${error.message}`);\n}"
+      },
+      "id": "60549b70-a3bc-42b8-a4b3-0457f6632b1f",
+      "name": "Parse Seed Topics",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -4420,
+        -600
+      ]
+    },
+    {
+      "parameters": {
+        "batchSize": 2,
+        "options": {}
+      },
+      "id": "a5235bca-f7d9-40b2-8465-d062d99bd1d8",
+      "name": "Split Topics Batch",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -4160,
+        -600
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse keywords from OpenAI response\ntry {\n  const response = $input.first().json;\n  const content = response.choices[0].message.content;\n  const keywords = JSON.parse(content);\n  \n  return keywords.map(keyword => ({\n    keyword: keyword,\n    topic: $('Split Topics Batch').item.json\n  }));\n} catch (error) {\n  throw new Error(`Failed to parse keywords: ${error.message}`);\n}"
+      },
+      "id": "f3adab42-235c-4c63-9ce1-2fbe5dd552f5",
+      "name": "Parse Keywords",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -3520,
+        -580
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Flatten and validate all keywords\nconst allItems = $input.all();\nconst flattenedKeywords = [];\n\nfor (const item of allItems) {\n  if (Array.isArray(item.json)) {\n    flattenedKeywords.push(...item.json);\n  } else {\n    flattenedKeywords.push(item.json);\n  }\n}\n\n// Remove duplicates\nconst uniqueKeywords = [];\nconst seen = new Set();\n\nfor (const kw of flattenedKeywords) {\n  const key = kw.keyword.toLowerCase().trim();\n  if (!seen.has(key)) {\n    seen.add(key);\n    uniqueKeywords.push(kw);\n  }\n}\n\nreturn {\n  keywords: uniqueKeywords,\n  count: uniqueKeywords.length\n};"
+      },
+      "id": "4c0cf5d1-ba9e-4818-9a19-aee309f595c7",
+      "name": "Flatten Keywords",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -3100,
+        -580
+      ]
+    },
+    {
+      "parameters": {
+        "batchSize": 10,
+        "options": {}
+      },
+      "id": "8f9a2d81-d240-4956-bfb7-ffcc56e629e3",
+      "name": "Split Keywords Batch",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -2900,
+        -580
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extract metrics from API response\nconst response = $input.first().json;\nconst keyword = $('Split Keywords Batch').item.json.keyword;\n\nlet metrics = {\n  keyword: keyword,\n  volume: 0,\n  competition: 0,\n  cpc: 0\n};\n\nif (response && response.data && response.data.length > 0) {\n  const data = response.data[0];\n  metrics = {\n    keyword: keyword,\n    volume: data.search_volume || 0,\n    competition: data.competition || 0,\n    cpc: data.cpc || 0\n  };\n}\n\nreturn metrics;"
+      },
+      "id": "f5859de6-6afe-4d02-bce9-4dcd14d594a4",
+      "name": "Parse Metrics",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -2340,
+        -580
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://serpapi.com/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "q",
+              "value": "={{ $json.keyword }}"
+            },
+            {
+              "name": "api_key",
+              "value": "={{ $env.SERPAPI_KEY }}"
+            },
+            {
+              "name": "engine",
+              "value": "google"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 15000
+        }
+      },
+      "id": "dce86658-1b5a-48d4-a9ef-2331bf01dc9b",
+      "name": "Scrape SERP",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -2120,
+        -580
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Analyze SERP competition\nconst serpData = $input.first().json;\nconst keywordData = $('Parse Metrics').item.json;\n\nlet brandPresence = 0;\nlet forumCount = 0;\nlet competitionScore = 0;\n\nif (serpData && serpData.organic_results) {\n  const results = serpData.organic_results.slice(0, 10);\n  \n  for (const result of results) {\n    const domain = result.link ? new URL(result.link).hostname : '';\n    \n    // Check for big brands\n    if (domain.includes('amazon.com') || domain.includes('etsy.com') || \n        domain.includes('target.com') || domain.includes('walmart.com')) {\n      brandPresence++;\n    }\n    \n    // Check for forums/low authority\n    if (domain.includes('reddit.com') || domain.includes('quora.com') || \n        domain.includes('forum') || domain.includes('blogspot.com')) {\n      forumCount++;\n    }\n  }\n  \n  // Calculate competition score\n  competitionScore = brandPresence - forumCount;\n}\n\nreturn {\n  ...keywordData,\n  brandPresence,\n  forumCount,\n  competitionScore\n};"
+      },
+      "id": "b28eeedc-139e-40f7-86e6-72d4fbbd4fc3",
+      "name": "Analyze Competition",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1900,
+        -580
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Calculate final scores for all keywords\nconst allKeywords = $input.all();\nconst scoredKeywords = [];\n\nfor (const item of allKeywords) {\n  const kw = item.json;\n  \n  // Calculate intent weight (buyer intent = 2x, informational = 1x)\n  const buyerIntentWords = ['buy', 'purchase', 'shop', 'gift', 'present', 'order'];\n  const hasBuyerIntent = buyerIntentWords.some(word => \n    kw.keyword.toLowerCase().includes(word)\n  );\n  const intentWeight = hasBuyerIntent ? 2 : 1;\n  \n  // Calculate final score\n  const score = (kw.volume * intentWeight) / (kw.competition + kw.brandPresence + 1);\n  \n  scoredKeywords.push({\n    ...kw,\n    intentWeight,\n    score: Math.round(score * 100) / 100\n  });\n}\n\n// Sort by score (highest first)\nscoredKeywords.sort((a, b) => b.score - a.score);\n\nreturn {\n  keywords: scoredKeywords,\n  topKeywords: scoredKeywords.slice(0, 10)\n};"
+      },
+      "id": "cf7e2563-e22c-4cfb-8818-6a956eaafd67",
+      "name": "Calculate Scores",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1480,
+        -560
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse AI selection and format for email\nconst response = $input.first().json;\nconst content = response.choices[0].message.content;\nconst selectedKeywords = JSON.parse(content);\n\n// Format email content\nlet emailBody = '🚀 **SEO Keyword Discovery Results**\\n\\n';\nemailBody += 'Here are the top 2 keyword opportunities for your next blog post:\\n\\n';\n\nfor (let i = 0; i < selectedKeywords.length; i++) {\n  const kw = selectedKeywords[i];\n  emailBody += `**${i + 1}. ${kw.keyword}**\\n`;\n  emailBody += `   📊 Volume: ${kw.volume || 'N/A'}\\n`;\n  emailBody += `   🎯 Competition: ${kw.competition || 'N/A'}\\n`;\n  emailBody += `   💰 CPC: $${kw.cpc || 'N/A'}\\n`;\n  emailBody += `   📝 Suggested Title: ${kw.suggestedTitle || 'N/A'}\\n\\n`;\n}\n\nemailBody += 'Reply with the number (1-2) of the keyword you want to create content for.\\n\\n';\nemailBody += 'Best regards,\\nYour SEO Assistant';\n\nreturn {\n  selectedKeywords,\n  emailBody,\n  subject: '🎯 SEO Keyword Opportunities - Action Required'\n};"
+      },
+      "id": "4427b099-d94d-4aa0-b712-9dfdaa35f855",
+      "name": "Format Email",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -960,
+        -560
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 24
+      },
+      "id": "85648318-7e2e-4258-ac94-6b117ff4f35a",
+      "name": "Wait for Reply",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        -540,
+        -560
+      ],
+      "webhookId": "7a29d17d-9108-4ccf-8a2c-5304cf85ad9a"
+    },
+    {
+      "parameters": {
+        "jsCode": "// SEO Keyword Discovery Response Parser\n// This code node extracts the choice from your response email\n\nfunction decodeBase64(str) {\n  return Buffer.from(str.replace(/-/g, '+').replace(/_/g, '/'), 'base64').toString('utf-8');\n}\n\n// Extract the plain text part from the Gmail payload\nconst parts = $json.payload?.parts || [];\nconst textPart = parts.find(p => p.mimeType === 'text/plain');\nconst encoded = textPart?.body?.data;\n\nconst decodedBody = encoded ? decodeBase64(encoded) : '';\n\n// Look for keyword choice in the response\n// You can respond with just the keyword number or the full keyword\nconst keywordNumberMatch = decodedBody.match(/(?:choice|select|pick|keyword)\\s*[#:]?\\s*(\\d+)/i);\nconst keywordTextMatch = decodedBody.match(/(?:choice|select|pick|keyword)\\s*[#:]?\\s*([^\\n\\r]+)/i);\n\n// If no structured choice found, look for any number or keyword that might be the choice\nconst anyNumberMatch = decodedBody.match(/\\b(\\d+)\\b/);\nconst anyKeywordMatch = decodedBody.match(/\\b([a-zA-Z][a-zA-Z\\s-]{2,30})\\b/);\n\nlet choice = null;\nlet selectedKeyword = null;\n\nif (keywordNumberMatch) {\n  choice = parseInt(keywordNumberMatch[1], 10);\n} else if (keywordTextMatch) {\n  selectedKeyword = keywordTextMatch[1].trim();\n} else if (anyNumberMatch) {\n  choice = parseInt(anyNumberMatch[1], 10);\n} else if (anyKeywordMatch) {\n  selectedKeyword = anyKeywordMatch[1].trim();\n}\n\n// Get the selected keywords from the 'AI Select Best' node\nconst selectedKeywords = $('AI Select Best').item.json.selectedKeywords;\n\n// Map choice to actual keyword if we have a number\nlet chosenKeyword = null;\nif (choice && selectedKeywords && selectedKeywords[choice - 1]) {\n  chosenKeyword = selectedKeywords[choice - 1];\n} else if (selectedKeyword) {\n  // Try to find a direct match in selectedKeywords\n  if (selectedKeywords) {\n    chosenKeyword = selectedKeywords.find(kw => \n      kw.keyword && kw.keyword.toLowerCase() === selectedKeyword.toLowerCase()\n    );\n  }\n}\n\n// Extract thread ID for tracking\nconst threadMatch = decodedBody.match(/thread_[\\w-]+/i);\nconst thread_id = threadMatch?.[0] || null;\n\n// Extract any notes or feedback\nconst notesMatch = decodedBody.match(/(?:notes?|feedback|suggestions?|comments?)[:：]?\\s*([\\s\\S]*?)(?:\\r?\\nOn\\s|\\r?\\n>|\\r?\\n?$)/i);\nconst notes = notesMatch ? notesMatch[1].trim() : '';\n\n// Check if this looks like a valid response\nconst hasChoice = chosenKeyword !== null;\nconst isResponse = hasChoice && decodedBody.length > 0;\n\nreturn {\n  chosenKeyword,\n  hasReply: hasChoice, // Keep this for compatibility with your IF node\n  choice,\n  selectedKeyword,\n  notes,\n  hasChoice,\n  isResponse,\n  decodedBody, // Keep for debugging, remove when stable\n  internalDate: $json.internalDate || null,\n  emailId: $json.id,\n  threadId: $json.threadId\n};"
+      },
+      "id": "3f2752be-83c7-4ae4-b30e-88c3e7ebd29f",
+      "name": "Parse Reply",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        40,
+        -560
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://your-content-api.com/generate",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "keyword",
+              "value": "={{ $json.chosenKeyword.keyword }}"
+            },
+            {
+              "name": "metrics",
+              "value": "={{ JSON.stringify($json.chosenKeyword) }}"
+            },
+            {
+              "name": "suggestedTitle",
+              "value": "={{ $json.chosenKeyword.suggestedTitle }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e872b63a-a7a1-4e04-a93b-a0b919ea5330",
+      "name": "Trigger Content Generation",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        340,
+        -700
+      ]
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4",
+          "mode": "list",
+          "cachedResultName": "GPT-4"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You are an SEO expert specializing in gift guide content. Generate diverse, high-potential topic ideas that are not already covered.",
+              "role": "system"
+            },
+            {
+              "content": "=Given these existing blog topics: {{ $json.existingTopics.join(', ') }}, suggest 10 new, diverse, high-potential gift guide topics not yet covered. Focus on unique audiences, occasions, or trends. Return as JSON array of strings."
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        -4900,
+        -600
+      ],
+      "id": "47b83865-32e3-41da-9e93-c55d8b45c2f1",
+      "name": "Generate Seed Topics",
+      "credentials": {
+        "openAiApi": {
+          "id": "xhYw6tK9BPVC7BMo",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4",
+          "mode": "list",
+          "cachedResultName": "GPT-4"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You are an SEO expert. Generate long-tail keywords with buyer intent for gift guides.",
+              "role": "system"
+            },
+            {
+              "content": "=For the topic '{{ $json }}', list 15 long-tail, buyer-intent search queries a user might Google. Focus on specific gift types, occasions, and demographics. Return as JSON array of strings."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        -3900,
+        -580
+      ],
+      "id": "f06db517-e740-48b8-8151-ade72273805f",
+      "name": "Generate Keywords",
+      "credentials": {
+        "openAiApi": {
+          "id": "xhYw6tK9BPVC7BMo",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4",
+          "mode": "list",
+          "cachedResultName": "GPT-4"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You are an SEO expert. Select the best keywords for a new blog post based on metrics and potential.",
+              "role": "system"
+            },
+            {
+              "content": "=Given this list of keywords with metrics, pick the 2 most likely to bring early organic traffic to a new blog. Consider search volume, competition, and buyer intent.\n\nKeywords: {{ JSON.stringify($json.topKeywords, null, 2) }}\n\nReturn as JSON array with the selected keywords and their suggested blog titles."
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        -1300,
+        -560
+      ],
+      "id": "d1e1cc7d-8aa6-4b0a-94f5-9963a286687e",
+      "name": "AI Select Best",
+      "credentials": {
+        "openAiApi": {
+          "id": "xhYw6tK9BPVC7BMo",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineAll",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        -3280,
+        -580
+      ],
+      "id": "c44144e6-572c-4595-9ead-f46a33872b55",
+      "name": "Merge Keywords"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineAll",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        -1680,
+        -560
+      ],
+      "id": "b2b4ede3-4ebb-4336-bd37-aad53d00c0df",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "sendTo": "jeff.lapenna@gmail.com",
+        "subject": "={{ $json.subject }}",
+        "message": "={{ $json.emailBody }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -740,
+        -560
+      ],
+      "id": "4eeb3b43-3cb3-4463-80fe-798df4c492a9",
+      "name": "Gmail",
+      "webhookId": "31943146-3a2e-4821-9eac-8deb5a74b381",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "2jsb6Z1IiQiBhEa5",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 5,
+        "filters": {
+          "q": "from:jeff.lapenna@gmail.com subject:\" 🎯 SEO Keyword Opportunities\" newer_than:1d",
+          "readStatus": "unread"
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -120,
+        -560
+      ],
+      "id": "cc1256de-0ad8-4ab3-a3ac-29c3d4298a69",
+      "name": "Gmail1",
+      "webhookId": "bb0aa19c-b8fb-40bb-954b-f439cb289f87",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "2jsb6Z1IiQiBhEa5",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "jeff.lapenna@gmail.com",
+        "subject": "✅ Content Generation Started",
+        "message": "=",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        540,
+        -700
+      ],
+      "id": "535cda94-5ed6-427e-9c29-642fde8013a3",
+      "name": "Gmail2",
+      "webhookId": "97de9fa4-b7f9-4e12-a3a4-dfcb47e886b3",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "2jsb6Z1IiQiBhEa5",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "jeff.lapenna@gmail.com",
+        "subject": "⏰ No Reply Received",
+        "message": "=",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        340,
+        -400
+      ],
+      "id": "7d0489c0-17e7-4c96-87a7-51ff890cb1a8",
+      "name": "Gmail3",
+      "webhookId": "97de9fa4-b7f9-4e12-a3a4-dfcb47e886b3",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "2jsb6Z1IiQiBhEa5",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:4322/api/mock-keyword-metrics",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "q",
+              "value": "={{ $json.keyword }}"
+            },
+            {
+              "name": "country",
+              "value": "us"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "50f73092-8798-483b-9827-b73ec0dd7584",
+      "name": "Fetch Keyword Metrics (Google Ads?)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -2600,
+        -580
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Fetch Blog Content",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Blog Content": {
+      "main": [
+        [
+          {
+            "node": "Parse Blog Content",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Blog Content": {
+      "main": [
+        [
+          {
+            "node": "Store Topics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Seed Topics": {
+      "main": [
+        [
+          {
+            "node": "Split Topics Batch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Flatten Keywords": {
+      "main": [
+        [
+          {
+            "node": "Split Keywords Batch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Keywords Batch": {
+      "main": [
+        [
+          {
+            "node": "Fetch Keyword Metrics (Google Ads?)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Metrics": {
+      "main": [
+        [
+          {
+            "node": "Scrape SERP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Scrape SERP": {
+      "main": [
+        [
+          {
+            "node": "Analyze Competition",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Email": {
+      "main": [
+        [
+          {
+            "node": "Gmail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Reply": {
+      "main": [
+        [
+          {
+            "node": "Trigger Content Generation",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Gmail3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Trigger Content Generation": {
+      "main": [
+        [
+          {
+            "node": "Gmail2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Store Topics": {
+      "main": [
+        [
+          {
+            "node": "Generate Seed Topics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Keywords": {
+      "main": [
+        [
+          {
+            "node": "Parse Keywords",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Keywords": {
+      "main": [
+        [
+          {
+            "node": "Merge Keywords",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Split Topics Batch": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Generate Keywords",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculate Scores": {
+      "main": [
+        [
+          {
+            "node": "AI Select Best",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge Keywords": {
+      "main": [
+        [
+          {
+            "node": "Flatten Keywords",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Select Best": {
+      "main": [
+        [
+          {
+            "node": "Format Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Analyze Competition": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Calculate Scores",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Seed Topics": {
+      "main": [
+        [
+          {
+            "node": "Parse Seed Topics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail": {
+      "main": [
+        [
+          {
+            "node": "Wait for Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail1": {
+      "main": [
+        [
+          {
+            "node": "Parse Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Keyword Metrics (Google Ads?)": {
+      "main": [
+        [
+          {
+            "node": "Parse Metrics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "6b49fcfe-c6d8-438d-84cd-c788bdee3050",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "010748b7a1466c46dced3f8b2bdbc3bc174722f0672e5a4c9529354f5ff306f8"
+  },
+  "id": "2j9jX1RUraDg7wem",
+  "tags": [
+    {
+      "name": "SEO Automation",
+      "id": "RaqvfV9bFOo1lj3k",
+      "createdAt": "2025-07-15T17:29:14.531Z",
+      "updatedAt": "2025-07-15T17:29:14.531Z"
+    }
+  ]
+}
