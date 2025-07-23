@@ -2,6 +2,8 @@
 
 > **Purpose:** This document contains a comprehensive list of non-gift guide content ideas to diversify the blog content mix, boost SEO, and establish authority in the gift-giving space.
 
+> **⚠️ IMPORTANT:** Do NOT publish blog posts until images are generated and user gives approval. Create content and image prompts first, then wait for user to generate images before publishing.
+
 ---
 
 ## 🚀 SEO-Optimized Creation Priority Order
