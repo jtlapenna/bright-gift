@@ -298,7 +298,7 @@ The gift giving statistics reveal a clear pattern: people value thoughtfulness, 
 
 Whether you're spending $25 or $250, the key is to make your gift reflect genuine care and understanding of the person receiving it. Use these statistics as a guide, but remember that the best gifts come from the heart and show that you truly know and care about the recipient.
 
-**Ready to put these insights into practice?** Try our [AI Gift Idea Generator](/ai-gift-guide) to get personalized gift recommendations based on the recipient's interests, budget, and preferences. Our tool incorporates these statistics and trends to help you find the perfect gift every time.
+**Ready to put these insights into practice?** Try our [AI Gift Idea Generator](/) to get personalized gift recommendations based on the recipient's interests, budget, and preferences. Our tool incorporates these statistics and trends to help you find the perfect gift every time.
 
 ---
 
