@@ -1,0 +1,25 @@
+{
+  "blog_post_title": "How to Choose the Perfect Gift: A Complete Guide",
+  "image_style": "BrightGift - Clean, modern, professional with coral (#FF6B6B) accent colors",
+  "mood": "Helpful, inspiring, warm, approachable",
+  "dimensions": "1200×630px (16:9 ratio)",
+  "text_overlay": "None (text will be added separately)",
+  "images": {
+    "banner": {
+      "filename": "how-to-choose-the-perfect-gift-complete-guide-banner.webp",
+      "prompt": "Create a clean, modern blog banner image for an article titled 'How to Choose the Perfect Gift: A Complete Guide'. Style: Minimalist, professional with coral (#FF6B6B) accent colors. Subject: Gift-giving theme with subtle elements like wrapped presents, gift boxes, and thoughtful gift selection process. Mood: Helpful, inspiring, warm, approachable. Text: None (text will be added separately). Dimensions: 1200×630px (16:9 ratio). Include subtle gift-giving elements like ribbons, gift tags, and thoughtful presentation.",
+      "description": "Professional banner showing gift selection process with coral accents"
+    },
+    "social": {
+      "filename": "how-to-choose-the-perfect-gift-complete-guide-social.webp", 
+      "prompt": "Create a clean, modern social media image for an article titled 'How to Choose the Perfect Gift: A Complete Guide'. Style: Minimalist, professional with coral (#FF6B6B) accent colors. Subject: Gift-giving theme with thoughtful gift selection elements. Mood: Helpful, inspiring, warm. Text: None (text will be added separately). Dimensions: 1200×1200px (1:1 square ratio). Include gift boxes, ribbons, and thoughtful presentation elements arranged in an Instagram-friendly composition.",
+      "description": "Square social media image for Instagram/Pinterest sharing"
+    },
+    "og": {
+      "filename": "how-to-choose-the-perfect-gift-complete-guide-og.webp",
+      "prompt": "Create a clean, modern Open Graph image for an article titled 'How to Choose the Perfect Gift: A Complete Guide'. Style: Minimalist, professional with coral (#FF6B6B) accent colors. Subject: Gift-giving theme with thoughtful selection process. Mood: Helpful, inspiring, warm. Text: None (text will be added separately). Dimensions: 1200×630px (16:9 ratio). Include gift elements like wrapped presents and thoughtful presentation for social media sharing.",
+      "description": "Open Graph image optimized for social media sharing"
+    }
+  },
+  "notes": "All images should follow BrightGift brand guidelines with clean, modern aesthetic and coral accent colors. Focus on gift-giving theme with thoughtful, helpful mood. No text overlays - text will be added separately for accessibility."
+} 
