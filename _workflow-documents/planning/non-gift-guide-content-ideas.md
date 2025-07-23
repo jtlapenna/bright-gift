@@ -4,6 +4,13 @@
 
 > **⚠️ IMPORTANT:** Do NOT publish blog posts until images are generated and user gives approval. Create content and image prompts first, then wait for user to generate images before publishing.
 
+> **📝 COMPLETE BLOG CREATION PROCESS:** When generating any blog post, you must also:
+> 1. Move the blog post to the correct location (`src/content/blog/[slug].md`)
+> 2. Ensure it is fully SEO optimized according to the blog style guide and SEO guide
+> 3. Create the images folder in the correct location (`public/images/blog/[slug]/`)
+> 4. Include sample image names for banner, social, and OG images
+> 5. Create image prompts following the BrightGift style guide
+
 ---
 
 ## 🚀 SEO-Optimized Creation Priority Order
