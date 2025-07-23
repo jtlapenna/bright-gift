@@ -18,6 +18,7 @@ amazonLink: https://www.amazon.com/s?k=eco+friendly+gifts+sustainable&tag=bright
 readTime: 7
 featured: true
 draft: false
+contentType: "gift-guide"
 ---
 
 

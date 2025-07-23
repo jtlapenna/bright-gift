@@ -10,6 +10,7 @@ priceRange: "$15-$400"
 amazonLink: "https://www.amazon.com/s?k=unique+christmas+gifts+gamers&tag=brightgift-20"
 metaTitle: 'Unique Christmas Gifts for Gamers | Creative Gaming Ideas 2024'
 metaDescription: 'Find unique Christmas gifts for gamers who have everything. Discover creative gaming gift ideas that will surprise even the most dedicated gamers.'
+contentType: "gift-guide"
 ---
 
 Finding the perfect Christmas gift for a gamer who seems to have every accessory, game, and piece of equipment can feel like an impossible quest. When they already own the latest console, premium gaming headset, and all the popular games, you need to think outside the box to find something truly special.

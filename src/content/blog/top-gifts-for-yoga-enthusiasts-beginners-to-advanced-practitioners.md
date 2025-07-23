@@ -39,6 +39,7 @@ metaTitle: 'Yoga Gifts for All Levels | 15 Perfect Ideas'
 metaDescription: 'Looking for the perfect gift for a yoga enthusiast? Discover 15 thoughtful yoga gifts for beginners to advanced practitioners. Shop smarter today!'
 readTime: 8
 featured: true
+contentType: "gift-guide"
 ---
 
 *As an Amazon Associate, we earn from qualifying purchases. This post contains affiliate links, which means we may earn a commission if you click through and make a purchase, at no additional cost to you.*

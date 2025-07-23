@@ -11,6 +11,7 @@ keywords: ["Black-owned business gifts", "Black-owned brands", "support Black-ow
 readTime: 8
 featured: true
 draft: false
+contentType: "gift-guide"
 ---
 
 Finding the perfect gift can be challenging, but what if you could give something meaningful that also supports diverse entrepreneurs? Black-owned businesses are creating incredible products across every category, from science-backed skincare to wellness supplements. These gifts not only delight recipients but also contribute to economic empowerment and representation in the marketplace.

@@ -15,6 +15,7 @@ priceRange: $10-$50
 amazonLink: https://www.amazon.com/s?k=dungeons+dragons+gifts&tag=brightgift-20
 metaTitle: 'D&D Gifts for Enthusiasts | Level Up Their Gaming Experience'
 metaDescription: 'Discover perfect gifts for Dungeons & Dragons enthusiasts. From dice to accessories, find gifts that will level up their D&D gaming experience.'
+contentType: "gift-guide"
 ---
 
 Finding the perfect gift for a Dungeons & Dragons (D&D) lover can be a thrilling quest in itself. Whether they're a seasoned Dungeon Master crafting epic campaigns or a dedicated player who lives for the thrill of adventure, D&D enthusiasts appreciate gifts that enhance their gaming experience and show you understand their passion for storytelling and strategy.

@@ -41,6 +41,7 @@ Looking for thoughtful gift ideas? Check out this comprehensive guide for inspir
     hashtags: "giftideas,gifts,brightgift,giftguide"
 metaTitle: 'Fun Birthday Gifts for Kids | Best Party Gift Ideas'
 metaDescription: 'Find fun gifts for kids birthday parties that will make any celebration special. Discover the best birthday gifts for children of all ages and interests.'
+contentType: "gift-guide"
 ---
 
 ### Introduction

@@ -17,6 +17,7 @@ amazonLink: https://www.amazon.com/s?k=gifts+for+girlfriend+romantic+unique&tag=
 readTime: 7
 featured: true
 draft: false
+contentType: "gift-guide"
 ---
 
 

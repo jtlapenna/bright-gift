@@ -31,6 +31,7 @@ export async function GET({ request, locals }: { request: any, locals: any }) {
       socialImage: post.data.socialImage,
       ogImage: post.data.ogImage,
       category: post.data.category,
+      contentType: post.data.contentType || 'gift-guide',
       date: post.data.date,
       readTime: post.data.readTime,
       featured: post.data.featured || false,

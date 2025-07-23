@@ -29,6 +29,7 @@ affiliateLinks:
   - text: "Reading Journal"
     url: "https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20"
     platform: "amazon"
+contentType: "gift-guide"
 ---
 
 ## Why Book Lovers Make the Best Gift Recipients

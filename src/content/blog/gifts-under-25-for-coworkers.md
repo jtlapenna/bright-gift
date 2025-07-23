@@ -16,6 +16,7 @@ amazonLink: https://www.amazon.com/s?k=coworker+gifts+under+25&tag=brightgift-20
 readTime: 7
 featured: true
 draft: false
+contentType: "gift-guide"
 ---
 
 Finding the perfect gift for a coworker doesn't have to be expensive or complicated. These thoughtful gifts under $25 are perfect for office celebrations, birthdays, or just showing appreciation.

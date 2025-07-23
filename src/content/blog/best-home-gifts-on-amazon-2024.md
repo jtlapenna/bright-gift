@@ -15,6 +15,7 @@ priceRange: $25-$100
 amazonLink: https://www.amazon.com/s?k=home+gifts+2024&tag=brightgift-20
 metaTitle: 'Best Home Gifts on Amazon 2024: Top-Rated Home & Garden Gifts | BrightGift'
 metaDescription: 'Discover the best home gifts on Amazon for 2024. From kitchen essentials to garden tools, find top-rated home and garden gifts for any occasion.'
+contentType: "gift-guide"
 ---
 
 Looking for the perfect home gift? Amazon has everything you need to transform any space into a cozy, functional haven. Whether you're shopping for new homeowners, housewarming parties, or just want to upgrade your own space, these top picks combine style, functionality, and value.

@@ -19,6 +19,7 @@ amazonLink: https://www.amazon.com/s?k=anniversary+gifts+under+50&tag=brightgift
 readTime: 8
 featured: true
 draft: false
+contentType: "gift-guide"
 ---
 
 

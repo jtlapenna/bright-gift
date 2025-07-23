@@ -11,6 +11,7 @@ keywords: ["how to choose gifts", "gift giving tips", "perfect gift guide", "gif
 readTime: 12
 featured: true
 draft: false
+contentType: "educational"
 ---
 
 Finding the perfect gift can feel like solving an impossible puzzle. You want something meaningful, thoughtful, and within budget—but how do you know what will truly delight the recipient? Whether you're shopping for a close friend, family member, colleague, or someone you barely know, the pressure to choose well can be overwhelming.

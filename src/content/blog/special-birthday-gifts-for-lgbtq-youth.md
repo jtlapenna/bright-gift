@@ -16,6 +16,7 @@ priceRange: $10-$60
 amazonLink: https://www.amazon.com/s?k=lgbtq+youth+birthday+gifts&tag=brightgift-20
 metaTitle: 'Special Birthday Gifts for LGBTQ+ Youth: Inclusive Gift Ideas | BrightGift'
 metaDescription: 'Discover special birthday gifts for LGBTQ+ youth. Find inclusive, supportive gift ideas that celebrate identity and show love and acceptance.'
+contentType: "gift-guide"
 ---
 
 Finding the perfect birthday gift for LGBTQ+ youth is a beautiful opportunity to celebrate their unique identity and show unconditional love and support. Birthdays are especially meaningful for young people exploring their identity, as they represent not just another year of life, but another year of becoming their authentic selves.

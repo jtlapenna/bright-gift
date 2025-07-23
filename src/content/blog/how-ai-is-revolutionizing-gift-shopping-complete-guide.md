@@ -19,6 +19,7 @@ amazonLink: https://www.amazon.com/s?k=AI+gift+ideas+personalized&tag=brightgift
 readTime: 12
 featured: true
 draft: false
+contentType: "educational"
 ---
 
 ![Illustration of a modern gift box with AI circuit patterns, surrounded by gift icons like a smartwatch, book, ring, and plant, in BrightGift brand colors.](/images/blog/ai-gift-shopping-banner.webp)

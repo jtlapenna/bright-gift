@@ -6,19 +6,19 @@
 - **Filename:** `gift-giving-statistics-what-people-really-want-banner.webp`
 - **Location:** `/public/images/blog/gift-giving-statistics-what-people-really-want/`
 - **Purpose:** Main blog banner image
-- **Status:** ⏳ Pending generation
+- **Status:** ✅ Generated
 
 ### Social Image (1:1 ratio, 1200×1200px)
 - **Filename:** `gift-giving-statistics-what-people-really-want-social.webp`
 - **Location:** `/public/images/blog/gift-giving-statistics-what-people-really-want/`
 - **Purpose:** Instagram, Pinterest, and other social media sharing
-- **Status:** ⏳ Pending generation
+- **Status:** ✅ Generated
 
 ### Open Graph Image (16:9 ratio, 1200×630px)
 - **Filename:** `gift-giving-statistics-what-people-really-want-og.webp`
 - **Location:** `/public/images/blog/gift-giving-statistics-what-people-really-want/`
 - **Purpose:** Facebook, Twitter, and other social media previews
-- **Status:** ⏳ Pending generation
+- **Status:** ⏳ Pending generation (using banner image)
 
 ## Image Style Guidelines
 - **BrightGift Style:** Modern flat illustration with soft 3D-style characters and objects

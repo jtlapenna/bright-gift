@@ -13,6 +13,7 @@ amazonLink: "https://www.amazon.com/s?k=baby+gifts+new+parents+under+75&tag=brig
 readTime: 10
 featured: true
 draft: false
+contentType: "gift-guide"
 ---
 
 

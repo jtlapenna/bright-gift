@@ -25,6 +25,7 @@ category: gift-guide
 readTime: 12
 featured: true
 draft: false
+contentType: "gift-guide"
 ---
 
 ## Why Reading Level Matters When Choosing Book Gifts

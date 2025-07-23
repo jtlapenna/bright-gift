@@ -70,6 +70,7 @@ affiliateLinks:
   - text: Plant Journal or Planner
     url: https://www.amazon.com/s?k=plant+journal+planner&tag=bright-gift-20
     platform: amazon
+contentType: "gift-guide"
 ---
 
 ## Why Plant Lovers Make Great Gift Recipients

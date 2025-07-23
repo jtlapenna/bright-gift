@@ -10,6 +10,7 @@ priceRange: "$20-$150"
 amazonLink: "https://www.amazon.com/s?k=chic+wedding+gifts&tag=brightgift-20"
 metaTitle: 'Chic Wedding Gifts for Stylish Couples | Elegant Gift Ideas'
 metaDescription: 'Find chic wedding gifts for the stylish couple. Discover elegant wedding gift ideas that combine sophistication with practicality for modern newlyweds.'
+contentType: "gift-guide"
 ---
 
 Weddings celebrate love, commitment, and the start of a new chapter. Finding the perfect gift for a couple embarking on this journey can be challenging, especially when you want to give something that exudes elegance and sophistication. Stylish couples appreciate gifts that reflect their taste and help them embark on their new life together. In this guide, we've curated a selection of chic wedding gifts that combine style and practicality, ensuring your present is both memorable and appreciated.

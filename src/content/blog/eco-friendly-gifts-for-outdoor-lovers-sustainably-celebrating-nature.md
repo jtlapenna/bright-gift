@@ -37,6 +37,7 @@ socialPosts:
     hashtags: giftideas,gifts,brightgift,giftguide
 metaTitle: 'Eco-Friendly Gifts for Outdoor Lovers | Sustainable Nature Ideas'
 metaDescription: 'Discover eco-friendly gifts for outdoor lovers who want to celebrate nature sustainably. Find green gift ideas for hikers, campers, and nature enthusiasts.'
+contentType: "gift-guide"
 ---
 
 ## Introduction

@@ -7,6 +7,7 @@ ogImage: "/images/blog/gift-giving-statistics-what-people-really-want/gift-givin
 tags: ["gift giving statistics", "gift preferences", "gift giving trends", "gift spending", "gift giving data", "what people want for gifts", "gift giving research"]
 author: "BrightGift Team"
 category: "Data-Driven"
+contentType: "data-driven"
 ---
 
 # Gift Giving Statistics: What People Really Want in 2024
