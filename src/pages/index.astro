@@ -1,7 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
-import heroImage from '../assets/hero-image.png';
+// Hero images for responsive loading
+const heroImageMobile = '/hero-image-mobile.webp';
+const heroImageDesktop = '/hero-image-desktop.webp';
 // Phosphor Icons for Amazon placeholders
 import { DeviceMobile, Book, TShirt, House, Tree, CookingPot, PuzzlePiece, SoccerBall, PawPrint, Baby, Car, Briefcase, MusicNote, Heartbeat, ShoppingBag } from 'phosphor-icons';
 
@@ -139,7 +141,11 @@ const faqData = {
 					<p class="text-sm md:text-lg font-inter text-[#333] mb-1 md:mb-4">AI-powered gift suggestions for any recipient, budget, or occasion. Try our free AI gift finder today!</p>
 				</div>
 				<div class="flex-1 flex items-center justify-center relative mt-30 md:mt-0">
-					<img src="/hero-image.png" alt="AI-powered gift suggestions interface" class="max-h-[154px] md:max-h-[412px] w-auto md:absolute md:left-1/2 md:-translate-x-1/2 z-10" style="bottom:-240px;" />
+					<picture>
+	<source srcset={heroImageMobile} media="(max-width: 768px)" />
+	<source srcset={heroImageDesktop} media="(min-width: 769px)" />
+	<img src={heroImageDesktop} alt="AI-powered gift suggestions interface" class="max-h-[154px] md:max-h-[412px] w-auto md:absolute md:left-1/2 md:-translate-x-1/2 z-10" style="bottom:-240px;" fetchpriority="high" />
+</picture>
 				</div>
 			</div>
 		</section>

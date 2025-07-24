@@ -86,9 +86,21 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 		<link rel="dns-prefetch" href="https://bookshop.org" />
 		<link rel="preconnect" href="https://analytics.ahrefs.com" />
 		
+		<!-- Preconnect to main domain for critical resources -->
+		<link rel="preconnect" href="https://bright-gift.com" />
+		<link rel="dns-prefetch" href="https://bright-gift.com" />
+		
 		<!-- Preload critical resources -->
-		<link rel="preload" href="/bright-gift-logo.png" as="image" />
+		<link rel="preload" href="/bright-gift-logo.webp" as="image" />
 		<link rel="preload" href="/favicon.svg" as="image" />
+		
+		<!-- Preload critical CSS to prevent render blocking -->
+		<link rel="preload" href="/_astro/_slug_.CtkfK4BW.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+		<link rel="preload" href="/_astro/_slug_.vqZ271oa.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+		<noscript>
+			<link rel="stylesheet" href="/_astro/_slug_.CtkfK4BW.css" />
+			<link rel="stylesheet" href="/_astro/_slug_.vqZ271oa.css" />
+		</noscript>
 
 		<!-- Ahrefs Web Analytics - Load asynchronously -->
 		<script src="https://analytics.ahrefs.com/analytics.js" data-key="Quv9IM6wKm4wMy6MXyBE4w" async defer></script>
@@ -113,36 +125,47 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 		{ !isHome && (
 			<header class="w-full bg-[#FEF2D3] border-b border-slate-100 py-3 px-4 flex items-center">
 				<a href="/" class="flex items-center gap-2">
-					<img src="/bright-gift-logo.png" alt="BrightGift logo" class="h-10 w-auto" style="display:inline-block;" />
+					<picture>
+						<source srcset="/bright-gift-logo-mobile.webp" media="(max-width: 768px)" />
+						<source srcset="/bright-gift-logo.webp" media="(min-width: 769px)" />
+						<img src="/bright-gift-logo.webp" alt="BrightGift logo" class="h-10 w-auto" style="display:inline-block;" />
+					</picture>
 					<span class="sr-only">BrightGift Home</span>
 				</a>
 			</header>
 		)}
 		<slot />
 		
-		<!-- Google Tag Manager - Load after page content -->
+		<!-- Google Tag Manager - Load after page content with optimized loading -->
 		<script is:inline>
-		  // Defer GTM loading to improve page load performance
+		  // Optimized GTM loading to reduce unused JavaScript
 		  window.addEventListener('load', function() {
-		    // Google Tag Manager
-		    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		    })(window,document,'script','dataLayer','GTM-W7B2JFWV');
-		    
-		    // Google Analytics
-		    var gaScript = document.createElement('script');
-		    gaScript.async = true;
-		    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-9T1R5LN5VG';
-		    document.head.appendChild(gaScript);
-		    
-		    gaScript.onload = function() {
-		      window.dataLayer = window.dataLayer || [];
-		      function gtag(){dataLayer.push(arguments);}
-		      gtag('js', new Date());
-		      gtag('config', 'G-9T1R5LN5VG');
-		    };
+		    // Delay GTM loading by 2 seconds to prioritize page content
+		    setTimeout(function() {
+		      // Google Tag Manager
+		      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		      })(window,document,'script','dataLayer','GTM-W7B2JFWV');
+		      
+		      // Google Analytics - Load only essential tracking
+		      var gaScript = document.createElement('script');
+		      gaScript.async = true;
+		      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-9T1R5LN5VG';
+		      document.head.appendChild(gaScript);
+		      
+		      gaScript.onload = function() {
+		        window.dataLayer = window.dataLayer || [];
+		        function gtag(){dataLayer.push(arguments);}
+		        gtag('js', new Date());
+		        gtag('config', 'G-9T1R5LN5VG', {
+		          'send_page_view': false, // Disable automatic page view
+		          'anonymize_ip': true, // Anonymize IP for privacy
+		          'cookie_flags': 'SameSite=None;Secure' // Secure cookies
+		        });
+		      };
+		    }, 2000); // 2 second delay
 		  });
 		</script>
 		
