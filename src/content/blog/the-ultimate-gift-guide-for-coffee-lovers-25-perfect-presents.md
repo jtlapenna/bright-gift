@@ -8,23 +8,22 @@ status: "draft"
 ---
 
 ---
-title: "The Ultimate Gift Guide for Coffee Lovers: 25+ Perfect Presents"
-slug: "the-ultimate-gift-guide-for-coffee-lovers-25-perfect-presents"
-description: "Discover the perfect gifts for gifts for coffee lovers. Our comprehensive guide includes top recommendations, expert tips, and the best products for every budget."
-date: "2025-07-24"
-author: "BrightGift Team"
-category: "Gift Guides"
-tags: ["gifts for coffee lovers", "coffee gifts", "coffee lover presents", "coffee accessories"]
-featured: false
-status: "draft"
-seo:
-  title: "The Ultimate Gift Guide for Coffee Lovers: 25+ Perfect Presents - Best gifts for coffee lovers for 2025"
-  description: "Find the perfect gifts for coffee lovers with our expert-curated guide. Discover top-rated products, budget-friendly options, and unique gift ideas."
-  keywords: ["gifts for coffee lovers", "coffee gifts", "coffee lover presents", "coffee accessories"]
-affiliate:
-  amazon: true
-  bookshop: true
-  afrofiliate: true
+title: 'The Ultimate Gift Guide for Coffee Lovers: 25+ Perfect Presents'
+description: 'Discover the perfect gifts for gifts for coffee lovers. Our comprehensive guide includes top recommendations, expert tips, and the best products for every budget.'
+date: '2025-07-24'
+image: /images/blog/the-ultimate-gift-guide-for-coffee-lovers-25-perfect-presents/the-ultimate-gift-guide-for-coffee-lovers-25-perfect-presents-banner.webp
+ogImage: /images/blog/the-ultimate-gift-guide-for-coffee-lovers-25-perfect-presents/the-ultimate-gift-guide-for-coffee-lovers-25-perfect-presents-og.webp
+socialImage: /images/blog/the-ultimate-gift-guide-for-coffee-lovers-25-perfect-presents/the-ultimate-gift-guide-for-coffee-lovers-25-perfect-presents-social.webp
+tags:
+  - gifts for coffee lovers
+  - coffee gifts
+  - coffee lover presents
+  - coffee accessories
+priceRange: '$25-$200'
+amazonLink: https://www.amazon.com/s?k=gifts for coffee lovers&tag=brightgift-20
+metaTitle: 'The Ultimate Gift Guide for Coffee Lovers: 25+ Perfect Presents | BrightGift'
+metaDescription: 'Find the perfect gifts for coffee lovers with our expert-curated guide. Discover top-rated products, budget-friendly options, and unique gift ideas.'
+contentType: "gift-guide"
 ---
 
 # The Ultimate Gift Guide for Coffee Lovers: 25+ Perfect Presents
