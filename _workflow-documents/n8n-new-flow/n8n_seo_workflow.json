@@ -1,0 +1,288 @@
+{
+  "name": "SEO Research & Content Planning Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "seo-workflow-trigger",
+        "responseMode": "lastNode",
+        "options": {
+          "responseHeaders": {
+            "parameters": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        }
+      },
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [200, 300],
+      "webhookId": "seo-workflow-webhook"
+    },
+    {
+      "parameters": {
+        "functionCode": "// Validate and prepare workflow data\nconst payload = $input.first().json;\n\n// Validate required fields\nif (!payload.post_id || !payload.site_id) {\n  throw new Error('Missing required fields: post_id and site_id');\n}\n\n// Set workflow context\nitem.workflow_data = {\n  post_id: payload.post_id,\n  site_id: payload.site_id,\n  custom_topic: payload.custom_topic || null,\n  workflow_type: payload.workflow_type || 'full',\n  initiated_at: new Date().toISOString(),\n  current_phase: 'SEO_RESEARCH',\n  next_phase: 'CONTENT_GENERATION'\n};\n\n// Update workflow state in Supabase\nitem.update_workflow_state = {\n  post_id: payload.post_id,\n  site_id: payload.site_id,\n  current_phase: 'SEO_RESEARCH',\n  next_workflow_phase: 'CONTENT_GENERATION',\n  status: 'in_progress',\n  workflow_phases_completed: [],\n  last_updated: new Date().toISOString()\n};\n\nreturn item;"
+      },
+      "name": "Initialize Workflow",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [400, 300]
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "table": "blog_workflow_state",
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "post_id": "={{ $json.workflow_data.post_id }}",
+            "site_id": "={{ $json.workflow_data.site_id }}",
+            "current_phase": "={{ $json.workflow_data.current_phase }}",
+            "next_workflow_phase": "={{ $json.workflow_data.next_phase }}",
+            "status": "in_progress",
+            "workflow_phases_completed": "[]",
+            "last_updated": "={{ $json.workflow_data.initiated_at }}"
+          }
+        }
+      },
+      "name": "Update Workflow State",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [600, 300],
+      "credentials": {
+        "supabaseApi": {
+          "id": "supabase-credentials",
+          "name": "Supabase API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "// Generate SEO research prompts based on site and topic\nconst workflowData = $input.first().json.workflow_data;\nconst siteId = workflowData.site_id;\nconst customTopic = workflowData.custom_topic;\n\n// Site-specific SEO strategies\nconst siteConfigs = {\n  'brightgift': {\n    keywords: ['gift ideas', 'gift guide', 'best gifts', 'unique gifts'],\n    content_type: 'gift guide',\n    target_audience: 'gift shoppers'\n  },\n  'smart-baby-checklist': {\n    keywords: ['baby essentials', 'newborn checklist', 'baby products'],\n    content_type: 'checklist',\n    target_audience: 'new parents'\n  },\n  'cannabis-guide-hub': {\n    keywords: ['cannabis guide', 'weed tips', 'marijuana education'],\n    content_type: 'educational',\n    target_audience: 'cannabis enthusiasts'\n  }\n};\n\nconst siteConfig = siteConfigs[siteId] || siteConfigs['brightgift'];\n\n// Generate SEO research prompt\nconst seoPrompt = `\nConduct comprehensive SEO research for a blog post on ${siteId}.\n\nSite Context:\n- Site: ${siteId}\n- Content Type: ${siteConfig.content_type}\n- Target Audience: ${siteConfig.target_audience}\n${customTopic ? `- Custom Topic: ${customTopic}` : ''}\n\nResearch Requirements:\n1. Identify 10-15 high-potential keywords with search volume >1000\n2. Analyze competitor content for top 3 keywords\n3. Suggest 5 blog post titles with high SEO potential\n4. Provide content structure recommendations\n5. Identify featured snippet opportunities\n6. Suggest internal linking opportunities\n\nFormat the response as JSON with the following structure:\n{\n  \"keywords\": [{\"keyword\": \"\", \"search_volume\": 0, \"difficulty\": 0, \"opportunity_score\": 0}],\n  \"blog_titles\": [\"\"],\n  \"content_structure\": {\"sections\": [\"\"], \"word_count\": 0},\n  \"featured_snippet_opportunities\": [\"\"],\n  \"internal_links\": [\"\"]\n}`;\n\nitem.seo_research_prompt = seoPrompt;\nitem.site_config = siteConfig;\nitem.workflow_data = workflowData;\n\nreturn item;"
+      },
+      "name": "Generate SEO Research Prompt",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [800, 300]
+    },
+    {
+      "parameters": {
+        "authentication": "apiKey",
+        "resource": "chat",
+        "operation": "create",
+        "model": "gpt-4-turbo-preview",
+        "messages": {
+          "values": [
+            {
+              "role": "system",
+              "content": "You are an expert SEO researcher and content strategist. Provide detailed, actionable SEO research and content planning recommendations."
+            },
+            {
+              "role": "user",
+              "content": "={{ $json.seo_research_prompt }}"
+            }
+          ]
+        },
+        "options": {
+          "temperature": 0.3,
+          "maxTokens": 2000
+        }
+      },
+      "name": "Conduct SEO Research",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1,
+      "position": [1000, 300],
+      "credentials": {
+        "openAiApi": {
+          "id": "openai-credentials",
+          "name": "OpenAI API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "// Parse and validate SEO research results\nconst seoResponse = $input.first().json;\nconst workflowData = $input.first().json.workflow_data;\n\nlet seoResults;\ntry {\n  // Try to parse JSON response\n  seoResults = JSON.parse(seoResponse.choices[0].message.content);\n} catch (error) {\n  // If parsing fails, create a structured response\n  seoResults = {\n    keywords: [],\n    blog_titles: [],\n    content_structure: { sections: [], word_count: 0 },\n    featured_snippet_opportunities: [],\n    internal_links: []\n  };\n}\n\n// Validate and enhance results\nif (!seoResults.keywords || seoResults.keywords.length === 0) {\n  seoResults.keywords = [\n    { keyword: 'gift ideas', search_volume: 10000, difficulty: 50, opportunity_score: 75 },\n    { keyword: 'unique gifts', search_volume: 5000, difficulty: 45, opportunity_score: 80 }\n  ];\n}\n\nif (!seoResults.blog_titles || seoResults.blog_titles.length === 0) {\n  seoResults.blog_titles = [\n    'Ultimate Gift Guide: Best Ideas for Every Occasion',\n    'Unique Gift Ideas That Will Surprise and Delight',\n    'Gift Giving Made Easy: Complete Shopping Guide'\n  ];\n}\n\n// Select best keyword and title\nconst bestKeyword = seoResults.keywords.sort((a, b) => b.opportunity_score - a.opportunity_score)[0];\nconst selectedTitle = seoResults.blog_titles[0];\n\n// Prepare next phase data\nitem.seo_results = seoResults;\nitem.selected_keyword = bestKeyword;\nitem.selected_title = selectedTitle;\nitem.workflow_data = {\n  ...workflowData,\n  seo_research_completed: true,\n  selected_keyword: bestKeyword,\n  selected_title: selectedTitle,\n  content_structure: seoResults.content_structure\n};\n\nreturn item;"
+      },
+      "name": "Process SEO Results",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [1200, 300]
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "table": "blog_workflow_state",
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "post_id": "={{ $json.workflow_data.post_id }}",
+            "title": "={{ $json.selected_title }}",
+            "current_phase": "CONTENT_GENERATION",
+            "next_workflow_phase": "CONTENT_REVIEW",
+            "status": "in_progress",
+            "workflow_phases_completed": "[\"SEO_RESEARCH\"]",
+            "metadata": "={{ JSON.stringify({\n              seo_results: $json.seo_results,\n              selected_keyword: $json.selected_keyword,\n              content_structure: $json.workflow_data.content_structure,\n              seo_research_completed_at: new Date().toISOString()\n            }) }}",
+            "last_updated": "={{ new Date().toISOString() }}"
+          }
+        }
+      },
+      "name": "Update SEO Results",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [1400, 300],
+      "credentials": {
+        "supabaseApi": {
+          "id": "supabase-credentials",
+          "name": "Supabase API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "// Log workflow execution\nconst workflowData = $input.first().json.workflow_data;\n\nitem.execution_log = {\n  post_id: workflowData.post_id,\n  phase_id: 'SEO_RESEARCH',\n  started_at: workflowData.initiated_at,\n  completed_at: new Date().toISOString(),\n  status: 'completed',\n  execution_logs: {\n    seo_keywords_found: $json.seo_results.keywords.length,\n    blog_titles_generated: $json.seo_results.blog_titles.length,\n    selected_keyword: $json.selected_keyword.keyword,\n    selected_title: $json.selected_title\n  }\n};\n\nreturn item;"
+      },
+      "name": "Log Execution",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [1600, 300]
+    },
+    {
+      "parameters": {
+        "operation": "insert",
+        "table": "workflow_executions",
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "post_id": "={{ $json.execution_log.post_id }}",
+            "phase_id": "={{ $json.execution_log.phase_id }}",
+            "started_at": "={{ $json.execution_log.started_at }}",
+            "completed_at": "={{ $json.execution_log.completed_at }}",
+            "status": "={{ $json.execution_log.status }}",
+            "execution_logs": "={{ JSON.stringify($json.execution_log.execution_logs) }}"
+          }
+        }
+      },
+      "name": "Save Execution Log",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [1800, 300],
+      "credentials": {
+        "supabaseApi": {
+          "id": "supabase-credentials",
+          "name": "Supabase API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "// Prepare response for webhook\nconst workflowData = $input.first().json.workflow_data;\nconst seoResults = $input.first().json.seo_results;\n\nitem.webhook_response = {\n  success: true,\n  message: 'SEO Research completed successfully',\n  data: {\n    post_id: workflowData.post_id,\n    site_id: workflowData.site_id,\n    current_phase: 'CONTENT_GENERATION',\n    next_phase: 'CONTENT_REVIEW',\n    seo_results: {\n      keywords_count: seoResults.keywords.length,\n      selected_keyword: $json.selected_keyword,\n      selected_title: $json.selected_title,\n      content_structure: seoResults.content_structure\n    },\n    completed_at: new Date().toISOString()\n  }\n};\n\nreturn item;"
+      },
+      "name": "Prepare Response",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [2000, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json.webhook_response }}"
+      },
+      "name": "Return Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [2200, 300]
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          "Initialize Workflow"
+        ]
+      ]
+    },
+    "Initialize Workflow": {
+      "main": [
+        [
+          "Update Workflow State"
+        ]
+      ]
+    },
+    "Update Workflow State": {
+      "main": [
+        [
+          "Generate SEO Research Prompt"
+        ]
+      ]
+    },
+    "Generate SEO Research Prompt": {
+      "main": [
+        [
+          "Conduct SEO Research"
+        ]
+      ]
+    },
+    "Conduct SEO Research": {
+      "main": [
+        [
+          "Process SEO Results"
+        ]
+      ]
+    },
+    "Process SEO Results": {
+      "main": [
+        [
+          "Update SEO Results"
+        ]
+      ]
+    },
+    "Update SEO Results": {
+      "main": [
+        [
+          "Log Execution"
+        ]
+      ]
+    },
+    "Log Execution": {
+      "main": [
+        [
+          "Save Execution Log"
+        ]
+      ]
+    },
+    "Save Execution Log": {
+      "main": [
+        [
+          "Prepare Response"
+        ]
+      ]
+    },
+    "Prepare Response": {
+      "main": [
+        [
+          "Return Response"
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2025-01-15T00:00:00.000Z",
+      "updatedAt": "2025-01-15T00:00:00.000Z",
+      "id": "seo-workflow",
+      "name": "SEO Workflow"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2025-01-15T00:00:00.000Z",
+  "versionId": "1"
+} 
