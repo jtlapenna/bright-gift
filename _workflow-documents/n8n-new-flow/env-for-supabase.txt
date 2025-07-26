@@ -1,0 +1,186 @@
+# Environment Configuration for n8n Workflow System
+# Copy this to .env.local for local development
+
+# =============================================================================
+# SUPABASE CONFIGURATION
+# =============================================================================
+
+# Supabase Project Configuration
+NEXT_PUBLIC_SUPABASE_URL=https://your-supabase-project-url.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+
+# Supabase Service Role Key (for secure server-side access)
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+
+# =============================================================================
+# N8N WORKFLOW CONFIGURATION
+# =============================================================================
+
+# n8n Instance Configuration
+N8N_BASE_URL=https://your-n8n-instance.com
+N8N_WEBHOOK_BASE_URL=https://your-n8n-instance.com/webhook
+
+# n8n Workflow Webhook URLs
+N8N_SEO_WORKFLOW_WEBHOOK=https://your-n8n-instance.com/webhook/seo-workflow-trigger
+N8N_CONTENT_WORKFLOW_WEBHOOK=https://your-n8n-instance.com/webhook/content-workflow-trigger
+N8N_IMAGE_WORKFLOW_WEBHOOK=https://your-n8n-instance.com/webhook/image-workflow-trigger
+N8N_PUBLISH_WORKFLOW_WEBHOOK=https://your-n8n-instance.com/webhook/publish-workflow-trigger
+
+# n8n Authentication (if required)
+N8N_API_KEY=your-n8n-api-key
+N8N_USERNAME=your-n8n-username
+N8N_PASSWORD=your-n8n-password
+
+# =============================================================================
+# AI/OPENAI CONFIGURATION
+# =============================================================================
+
+# OpenAI Configuration
+OPENAI_API_KEY=your-openai-api-key
+OPENAI_MODEL=gpt-4-turbo-preview
+OPENAI_MAX_TOKENS=2000
+OPENAI_TEMPERATURE=0.3
+
+# =============================================================================
+# MULTI-SITE CONFIGURATION
+# =============================================================================
+
+# Site Configuration
+NEXT_PUBLIC_SITE_NAME=BrightGift
+NEXT_PUBLIC_ENV=development
+
+# Multi-Site Support
+NEXT_PUBLIC_DEFAULT_SITE_ID=brightgift
+NEXT_PUBLIC_AVAILABLE_SITES=brightgift,smart-baby-checklist,cannabis-guide-hub
+
+# Site-Specific Configuration
+BRIGHTGIFT_DOMAIN=https://brightgift.com
+SMART_BABY_CHECKLIST_DOMAIN=https://smartbabychecklist.com
+CANNABIS_GUIDE_HUB_DOMAIN=https://cannabisguidehub.com
+
+# =============================================================================
+# WORKFLOW SYSTEM CONFIGURATION
+# =============================================================================
+
+# Workflow Execution Settings
+WORKFLOW_TIMEOUT_SECONDS=300
+WORKFLOW_MAX_RETRIES=3
+WORKFLOW_RETRY_DELAY_MS=5000
+
+# Workflow Phase Configuration
+WORKFLOW_PHASES=SEO_RESEARCH,CONTENT_GENERATION,CONTENT_REVIEW,IMAGE_GENERATION,PUBLISHING,APPROVAL,LIVE_DEPLOYMENT
+
+# =============================================================================
+# DASHBOARD CONFIGURATION
+# =============================================================================
+
+# Dashboard Settings
+NEXT_PUBLIC_DASHBOARD_REFRESH_INTERVAL=30000
+NEXT_PUBLIC_ENABLE_REALTIME_UPDATES=true
+NEXT_PUBLIC_MAX_POSTS_PER_PAGE=50
+
+# Dashboard Authentication
+NEXT_PUBLIC_ENABLE_AUTH=true
+NEXT_PUBLIC_AUTH_PROVIDER=supabase
+
+# =============================================================================
+# CONTENT MANAGEMENT CONFIGURATION
+# =============================================================================
+
+# Content Generation Settings
+CONTENT_MIN_WORD_COUNT=800
+CONTENT_MAX_WORD_COUNT=2000
+CONTENT_TARGET_WORD_COUNT=1200
+
+# Image Generation Settings
+IMAGE_GENERATION_PROVIDER=openai
+IMAGE_GENERATION_MODEL=dall-e-3
+IMAGE_GENERATION_QUALITY=standard
+IMAGE_GENERATION_SIZE=1024x1024
+
+# =============================================================================
+# DEPLOYMENT CONFIGURATION
+# =============================================================================
+
+# Cloudflare Pages Configuration
+CLOUDFLARE_PAGES_PROJECT_NAME=bright-gift
+CLOUDFLARE_PAGES_BRANCH=main
+CLOUDFLARE_PAGES_PREVIEW_BRANCH=preview
+
+# GitHub Configuration (for deployment)
+GITHUB_TOKEN=your-github-token
+GITHUB_REPO_OWNER=jtlapenna
+GITHUB_REPO_NAME=bright-gift
+
+# =============================================================================
+# ANALYTICS & MONITORING
+# =============================================================================
+
+# Analytics Configuration
+NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your-ga4-id
+NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID=your-gtm-id
+
+# Monitoring Configuration
+NEXT_PUBLIC_ENABLE_ERROR_TRACKING=true
+NEXT_PUBLIC_SENTRY_DSN=your-sentry-dsn
+
+# =============================================================================
+# SECURITY CONFIGURATION
+# =============================================================================
+
+# Security Settings
+NEXT_PUBLIC_ENABLE_CSRF_PROTECTION=true
+NEXT_PUBLIC_ENABLE_RATE_LIMITING=true
+NEXT_PUBLIC_RATE_LIMIT_REQUESTS_PER_MINUTE=100
+
+# Webhook Security
+WEBHOOK_SECRET_KEY=your-webhook-secret-key
+WEBHOOK_VERIFICATION_ENABLED=true
+
+# =============================================================================
+# DEVELOPMENT & DEBUGGING
+# =============================================================================
+
+# Development Settings
+NODE_ENV=development
+NEXT_PUBLIC_DEBUG_MODE=true
+NEXT_PUBLIC_LOG_LEVEL=debug
+
+# API Endpoints (for local development)
+NEXT_PUBLIC_API_BASE_URL=http://localhost:3000/api
+NEXT_PUBLIC_DASHBOARD_URL=http://localhost:3000/dashboard
+
+# =============================================================================
+# DEPLOYMENT SETUP INSTRUCTIONS
+# =============================================================================
+
+# For Cloudflare Pages:
+# 1. Go to your Cloudflare Pages project
+# 2. Navigate to Settings > Environment Variables
+# 3. Add all the above variables (excluding NEXT_PUBLIC_* for production)
+# 4. Set NODE_ENV=production for production environment
+
+# For Vercel:
+# 1. Go to your Vercel project dashboard
+# 2. Navigate to Settings > Environment Variables
+# 3. Add all the above variables
+# 4. Set NODE_ENV=production for production environment
+
+# For n8n:
+# 1. Go to your n8n instance settings
+# 2. Navigate to Credentials
+# 3. Add the following credentials:
+#    - Supabase API (URL, Key, Service Role Key)
+#    - OpenAI API (API Key)
+#    - HTTP Request (for webhook calls)
+
+# =============================================================================
+# IMPORTANT NOTES
+# =============================================================================
+
+# 1. Replace all 'your-*' values with actual credentials
+# 2. Keep sensitive keys secure and never commit them to version control
+# 3. Use different keys for development, staging, and production
+# 4. Regularly rotate API keys and secrets
+# 5. Monitor usage and costs for AI services
+# 6. Test webhook endpoints before deploying to production 
