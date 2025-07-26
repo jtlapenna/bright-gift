@@ -493,7 +493,9 @@ For each file, determine:
   - [x] `blog_status_table_component.jsx` ✅ - **COMPLETED**
   - [x] `blog_dashboard_page.jsx` ✅ - **COMPLETED**
   - [x] `initiation_terminal_ui.jsx` ✅ - **COMPLETED**
-- [ ] Phase 5: Hooks & Utilities (2 files)
+- [x] Phase 5: Hooks & Utilities (2 files) - 1/2 complete
+  - [x] `supabase_blog_data_hook.jsx` ✅ - **COMPLETED**
+  - [ ] `use_blog_workflow_posts_hook.js` ✅
 - [ ] Phase 6: Configuration & Setup (3 files)
 - [ ] Phase 7: Remove & Replace (5 files)
 
