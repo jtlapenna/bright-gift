@@ -1,7 +1,7 @@
 # API Usage Guide for Multi-Site Content Automation
 
 ## Overview
-This guide provides complete documentation for using the multi-site content automation API server. The API manages blog posts, workflows, and real-time updates across multiple sites.
+This guide provides complete documentation for using the multi-site content automation API server. The API manages blog posts, workflows, analytics, activity feeds, and real-time updates across multiple sites.
 
 ## 🚀 Quick Start
 
@@ -116,13 +116,6 @@ GET /sites/{siteId}/posts?status=published&page=1&limit=20&sort=created_at&order
 Authorization: Bearer YOUR_JWT_TOKEN
 ```
 
-**Query Parameters:**
-- `status`: Filter by status (draft, published, review, failed)
-- `page`: Page number for pagination
-- `limit`: Number of posts per page (default: 20)
-- `sort`: Sort by (created_at, updated_at, title, views, seo_score)
-- `order`: Sort order (asc, desc)
-
 **Response:**
 ```json
 {
@@ -131,67 +124,34 @@ Authorization: Bearer YOUR_JWT_TOKEN
       "id": "post_123",
       "title": "10 Best React Practices for 2024",
       "status": "published",
-      "content": "Full blog content...",
-      "excerpt": "Brief excerpt...",
       "wordCount": 2500,
-      "url": "https://brightgift.com/posts/react-practices",
-      "previewUrl": "https://preview.brightgift.com/posts/react-practices",
       "seo": {
         "score": 85,
-        "readabilityScore": 78,
-        "keywords": ["react", "javascript"],
-        "metaTitle": "10 Best React Practices for 2024",
-        "metaDescription": "Learn the top React practices..."
+        "keywords": ["react", "javascript", "frontend"]
       },
       "social": [
         {
           "platform": "twitter",
-          "content": "Check out these amazing React practices!",
-          "image": "https://example.com/social-image.jpg",
-          "scheduledAt": "2024-01-15T10:00:00Z",
-          "publishedAt": "2024-01-15T10:00:00Z",
-          "engagement": {
-            "likes": 45,
-            "shares": 12,
-            "comments": 8
-          }
+          "content": "Check out these React best practices!",
+          "image": "social-image-url"
         }
       ],
       "images": [
         {
           "type": "banner",
-          "url": "https://example.com/banner.jpg",
-          "alt": "React practices banner",
-          "width": 1200,
-          "height": 630,
-          "optimized": true
-        },
-        {
-          "type": "og",
-          "url": "https://example.com/og-image.jpg",
-          "alt": "Open Graph image",
-          "width": 1200,
-          "height": 630,
+          "url": "banner-image-url",
           "optimized": true
         }
       ],
       "metrics": {
         "views": 1250,
-        "uniqueVisitors": 890,
-        "pageViews": 1875,
         "likes": 45,
         "shares": 12,
-        "comments": 8,
-        "bounceRate": 0.35,
-        "avgTimeOnPage": 180,
-        "revenue": 45.50,
-        "conversionRate": 0.025
+        "revenue": 25.50
       },
       "workflow": {
-        "currentPhase": "live_deployment",
-        "nextPhase": null,
-        "phasesCompleted": ["seo_research", "content_generation", "content_review", "image_generation", "publishing", "approval"],
-        "executions": [...]
+        "currentPhase": "published",
+        "phasesCompleted": ["seo_research", "content_generation", "image_generation"]
       }
     }
   ],
@@ -219,9 +179,8 @@ Content-Type: application/json
 {
   "title": "New Blog Post Title",
   "content": "Blog post content...",
-  "excerpt": "Brief excerpt...",
   "tags": ["tag1", "tag2"],
-  "author": "John Doe"
+  "seoKeywords": ["keyword1", "keyword2"]
 }
 ```
 
@@ -233,42 +192,383 @@ Content-Type: application/json
 
 {
   "title": "Updated Title",
-  "content": "Updated content...",
-  "tags": ["updated", "tags"]
+  "content": "Updated content..."
 }
 ```
 
-### 5. Approve Post
-```bash
-POST /sites/{siteId}/posts/{postId}/approve
-Authorization: Bearer YOUR_JWT_TOKEN
-Content-Type: application/json
-
-{
-  "comments": "Great post! Ready for publishing."
-}
-```
-
-### 6. Reject Post
-```bash
-POST /sites/{siteId}/posts/{postId}/reject
-Authorization: Bearer YOUR_JWT_TOKEN
-Content-Type: application/json
-
-{
-  "reason": "Content needs more depth and better examples."
-}
-```
-
-### 7. Publish Post
+### 5. Publish Post
 ```bash
 POST /sites/{siteId}/posts/{postId}/publish
 Authorization: Bearer YOUR_JWT_TOKEN
 ```
 
-### 8. Delete Post
+### 6. Approve Post
 ```bash
-DELETE /sites/{siteId}/posts/{postId}
+POST /sites/{siteId}/posts/{postId}/approve
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+
+---
+
+## 📊 Analytics Endpoints
+
+### 1. Get Site Analytics
+```bash
+GET /sites/{siteId}/analytics?period=30d&startDate=2024-01-01&endDate=2024-01-31
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+
+**Response:**
+```json
+{
+  "traffic": {
+    "totalViews": 12500,
+    "uniqueVisitors": 8900,
+    "pageViews": 18750,
+    "bounceRate": 0.35,
+    "avgSessionDuration": 180,
+    "trends": [
+      {
+        "date": "2024-01-15",
+        "views": 450,
+        "visitors": 320
+      }
+    ]
+  },
+  "revenue": {
+    "totalRevenue": 2400,
+    "affiliateRevenue": 1800,
+    "adRevenue": 600,
+    "conversionRate": 0.025,
+    "trends": [
+      {
+        "date": "2024-01-15",
+        "revenue": 85,
+        "conversions": 2
+      }
+    ]
+  },
+  "content": {
+    "topPosts": [
+      {
+        "id": "post_123",
+        "title": "10 Best React Practices",
+        "views": 1250,
+        "revenue": 45
+      }
+    ],
+    "postPerformance": {
+      "published": 42,
+      "draft": 3,
+      "avgViewsPerPost": 298
+    }
+  },
+  "seo": {
+    "organicTraffic": 8900,
+    "keywords": 156,
+    "avgPosition": 12.5,
+    "clickThroughRate": 0.045
+  },
+  "period": {
+    "start": "2024-01-01T00:00:00Z",
+    "end": "2024-01-31T23:59:59Z",
+    "days": 31
+  }
+}
+```
+
+### 2. Get Post Analytics
+```bash
+GET /sites/{siteId}/analytics/posts/{postId}
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+
+**Response:**
+```json
+{
+  "postId": "post_123",
+  "siteId": "site_123",
+  "views": 1250,
+  "uniqueVisitors": 980,
+  "pageViews": 1350,
+  "likes": 45,
+  "shares": 12,
+  "comments": 8,
+  "bounceRate": 0.25,
+  "avgTimeOnPage": 180,
+  "revenue": 25.50,
+  "conversionRate": 0.02,
+  "social": [
+    {
+      "platform": "twitter",
+      "content": "Check out this post!",
+      "engagement": {
+        "likes": 15,
+        "retweets": 5,
+        "clicks": 23
+      },
+      "publishedAt": "2024-01-15T10:30:00Z"
+    }
+  ],
+  "seo": {
+    "score": 85,
+    "keywords": ["react", "javascript"],
+    "metaTitle": "10 Best React Practices for 2024",
+    "metaDescription": "Learn the top React practices...",
+    "readabilityScore": 78
+  },
+  "lastUpdated": "2024-01-15T16:45:00Z"
+}
+```
+
+### 3. Get Workflow Analytics
+```bash
+GET /sites/{siteId}/analytics/workflows?period=30d&phase=seo_research
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+
+**Response:**
+```json
+{
+  "siteId": "site_123",
+  "period": {
+    "start": "2024-01-01T00:00:00Z",
+    "end": "2024-01-31T23:59:59Z",
+    "days": 31
+  },
+  "totalWorkflows": 25,
+  "successRate": 92.5,
+  "avgDuration": 180,
+  "avgPerformanceScore": 87.3,
+  "phaseBreakdown": {
+    "seo_research": {
+      "total": 10,
+      "successful": 9,
+      "successRate": 90,
+      "avgDuration": 120
+    },
+    "content_generation": {
+      "total": 8,
+      "successful": 8,
+      "successRate": 100,
+      "avgDuration": 300
+    }
+  },
+  "errorAnalysis": {
+    "execution_error": 2,
+    "timeout": 1
+  },
+  "performanceTrends": [
+    {
+      "date": "2024-01-15",
+      "successRate": 95.5,
+      "workflows": 3
+    }
+  ]
+}
+```
+
+---
+
+## 📈 Activity Feed
+
+### 1. Get Site Activity
+```bash
+GET /sites/{siteId}/activity?type=post_published&page=1&limit=20
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+
+**Response:**
+```json
+{
+  "activities": [
+    {
+      "id": "activity_123",
+      "type": "post_published",
+      "message": "Published a blog post: \"10 Best React Practices for 2024\"",
+      "timestamp": "2024-01-15T10:30:00Z",
+      "siteId": "site_123",
+      "userId": "user_456",
+      "user": {
+        "name": "John Doe",
+        "avatar": "https://example.com/avatar.jpg"
+      },
+      "metadata": {
+        "postId": "post_123",
+        "postTitle": "10 Best React Practices for 2024"
+      },
+      "postId": "post_123"
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 20,
+    "total": 150,
+    "totalPages": 8
+  }
+}
+```
+
+### 2. Get Activity Statistics
+```bash
+GET /sites/{siteId}/activity/stats
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+
+**Response:**
+```json
+{
+  "totalActivities": 150,
+  "actionBreakdown": {
+    "post_published": 45,
+    "workflow_completed": 30,
+    "post_approved": 25,
+    "seo_research_completed": 20
+  },
+  "dailyActivity": {
+    "2024-01-15": 5,
+    "2024-01-14": 3,
+    "2024-01-13": 7
+  },
+  "topUsers": [
+    {
+      "userId": "user_456",
+      "name": "John Doe",
+      "count": 45
+    }
+  ],
+  "period": {
+    "start": "2023-12-16T00:00:00Z",
+    "end": "2024-01-15T23:59:59Z",
+    "days": 30
+  }
+}
+```
+
+---
+
+## 🌐 Global Dashboard
+
+### 1. Get Global Overview
+```bash
+GET /dashboard/overview
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+
+**Response:**
+```json
+{
+  "totalSites": 3,
+  "totalPosts": 125,
+  "publishedPosts": 110,
+  "draftPosts": 15,
+  "totalWorkflows": 45,
+  "activeWorkflows": 3,
+  "completedWorkflows": 40,
+  "avgHealthScore": 82.5,
+  "totalRevenue": 1250.75,
+  "totalViews": 45000,
+  "recentActivity": [
+    {
+      "id": "activity_123",
+      "type": "post_published",
+      "message": "Published a blog post: \"React Best Practices\"",
+      "timestamp": "2024-01-15T10:30:00Z",
+      "siteId": "site_123",
+      "siteName": "BrightGift",
+      "metadata": {}
+    }
+  ],
+  "topPerformingSites": [
+    {
+      "id": "site_123",
+      "name": "BrightGift",
+      "url": "https://brightgift.com",
+      "healthScore": 85,
+      "postsCount": 45,
+      "publishedPosts": 42,
+      "activeWorkflows": 2,
+      "totalViews": 25000,
+      "totalRevenue": 750.25
+    }
+  ],
+  "systemHealth": "excellent",
+  "period": {
+    "start": "2023-12-16T00:00:00Z",
+    "end": "2024-01-15T23:59:59Z",
+    "days": 30
+  }
+}
+```
+
+### 2. Get Global Analytics
+```bash
+GET /dashboard/global-analytics?period=30d
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+
+**Response:**
+```json
+{
+  "traffic": {
+    "totalViews": 45000,
+    "uniqueVisitors": 32000,
+    "trends": [
+      {
+        "date": "2024-01-15",
+        "views": 1500,
+        "visitors": 1100
+      }
+    ]
+  },
+  "revenue": {
+    "totalRevenue": 1250.75,
+    "affiliateRevenue": 950.50,
+    "adRevenue": 300.25,
+    "trends": [
+      {
+        "date": "2024-01-15",
+        "revenue": 45.25
+      }
+    ]
+  },
+  "content": {
+    "totalPosts": 125,
+    "publishedPosts": 110,
+    "draftPosts": 15,
+    "trends": [
+      {
+        "date": "2024-01-15",
+        "total": 3,
+        "published": 2,
+        "draft": 1
+      }
+    ]
+  },
+  "workflows": {
+    "totalWorkflows": 45,
+    "successRate": 92.5,
+    "avgDuration": 180,
+    "trends": [
+      {
+        "date": "2024-01-15",
+        "total": 2,
+        "successful": 2,
+        "successRate": 100
+      }
+    ]
+  },
+  "period": {
+    "start": "2023-12-16T00:00:00Z",
+    "end": "2024-01-15T23:59:59Z",
+    "days": 30
+  }
+}
+```
+
+### 3. Get Recent Activity Across All Sites
+```bash
+GET /dashboard/recent-activity?limit=20
 Authorization: Bearer YOUR_JWT_TOKEN
 ```
 
@@ -276,59 +576,10 @@ Authorization: Bearer YOUR_JWT_TOKEN
 
 ## ⚙️ Workflow Management
 
-### 1. List Workflows for a Site
+### 1. List Workflows
 ```bash
 GET /sites/{siteId}/workflows?status=running&type=seo&page=1&limit=20
 Authorization: Bearer YOUR_JWT_TOKEN
-```
-
-**Query Parameters:**
-- `status`: Filter by status (pending, running, completed, failed, cancelled)
-- `type`: Filter by type (seo, content, publish, social)
-- `page`: Page number
-- `limit`: Number of workflows per page
-
-**Response:**
-```json
-{
-  "workflows": [
-    {
-      "id": "wf_123",
-      "name": "SEO Research - BrightGift",
-      "type": "seo",
-      "status": "running",
-      "siteId": "site_123",
-      "postId": "post_456",
-      "startedAt": "2024-01-15T10:00:00Z",
-      "completedAt": null,
-      "progress": 65,
-      "estimatedCompletion": "2024-01-15T11:30:00Z",
-      "config": {
-        "keywords": ["react", "javascript"],
-        "targetAudience": "developers",
-        "contentLength": "2000-3000"
-      },
-      "results": {
-        "keywordsFound": 15,
-        "competitionAnalysis": "medium",
-        "searchVolume": "high"
-      },
-      "logs": [
-        {
-          "timestamp": "2024-01-15T10:05:00Z",
-          "level": "info",
-          "message": "Starting SEO research for keywords..."
-        }
-      ]
-    }
-  ],
-  "pagination": {
-    "page": 1,
-    "limit": 20,
-    "total": 25,
-    "totalPages": 2
-  }
-}
 ```
 
 ### 2. Get Workflow Details
@@ -351,8 +602,7 @@ Content-Type: application/json
     "targetAudience": "developers",
     "contentLength": "2000-3000",
     "language": "en"
-  },
-  "postId": "post_123"
+  }
 }
 ```
 
@@ -392,7 +642,8 @@ ws.onmessage = (event) => {
 1. **workflow_update** - Workflow status changes
 2. **post_update** - Post status changes
 3. **health_update** - Site health score changes
-4. **analytics_update** - New analytics data
+4. **activity_update** - New activity logged
+5. **analytics_update** - Analytics data updated
 
 ### Event Data Structure:
 ```json
@@ -478,132 +729,86 @@ X-Webhook-Signature: sha256=YOUR_SIGNATURE
   "siteId": "site_123",
   "metrics": {
     "views": 1250,
-    "uniqueVisitors": 890,
-    "revenue": 45.50,
-    "conversionRate": 0.025
+    "uniqueVisitors": 980,
+    "likes": 45,
+    "shares": 12,
+    "revenue": 25.50
   }
 }
 ```
 
 ---
 
-## 📊 Data Models
+## 📊 Query Parameters
 
-### Post Status Values:
-- `draft` - Initial draft
-- `in_progress` - Being worked on
-- `review` - Ready for review
-- `approved` - Approved for publishing
-- `rejected` - Rejected, needs revision
-- `published` - Live on the site
-- `failed` - Workflow failed
+### Common Parameters
+- `page` - Page number for pagination (default: 1)
+- `limit` - Number of items per page (default: 20, max: 100)
+- `sort` - Sort field (e.g., `created_at`, `title`, `views`)
+- `order` - Sort order (`asc` or `desc`)
 
-### Workflow Status Values:
-- `pending` - Waiting to start
-- `running` - Currently executing
-- `completed` - Successfully finished
-- `failed` - Execution failed
-- `cancelled` - Manually cancelled
+### Analytics Parameters
+- `period` - Time period (`7d`, `30d`, `90d`, `1y`)
+- `startDate` - Custom start date (ISO 8601)
+- `endDate` - Custom end date (ISO 8601)
 
-### Workflow Types:
-- `seo` - SEO research and optimization
-- `content` - Content generation
-- `publish` - Publishing workflow
-- `social` - Social media automation
-
-### Image Types:
-- `banner` - Main banner image
-- `og` - Open Graph image
-- `social` - Social media image
-- `content` - Content image
+### Filtering Parameters
+- `status` - Filter by status (e.g., `published`, `draft`, `running`)
+- `type` - Filter by type (e.g., `seo`, `content`, `post_published`)
 
 ---
 
-## 🛠️ Error Handling
+## 🔐 Error Handling
 
-### Error Response Format:
+All endpoints return consistent error responses:
+
 ```json
 {
   "error": {
     "code": "VALIDATION_ERROR",
-    "message": "Invalid input data",
-    "details": [
-      {
-        "field": "title",
-        "issue": "Title is required"
-      }
-    ]
+    "message": "Invalid request parameters",
+    "details": {
+      "field": "title",
+      "issue": "Title is required"
+    }
   }
 }
 ```
 
-### Common Error Codes:
+**Common Error Codes:**
 - `UNAUTHORIZED` - Authentication required
 - `FORBIDDEN` - Insufficient permissions
 - `NOT_FOUND` - Resource not found
 - `VALIDATION_ERROR` - Invalid request data
 - `WORKFLOW_ERROR` - Workflow execution failed
 - `RATE_LIMITED` - Too many requests
-- `INTERNAL_ERROR` - Server error
 
 ---
 
-## 🔧 Setup Instructions
+## 🚀 Best Practices
 
-### 1. Install Dependencies
-```bash
-cd api-server
-npm install
-```
-
-### 2. Configure Environment
-```bash
-cp env.example .env
-# Edit .env with your actual values
-```
-
-### 3. Set up Supabase
-- Create Supabase project
-- Run schema from `_workflow-documents/n8n-new-flow/supabase_schema_and_sql.md`
-- Get API keys and update `.env`
-
-### 4. Start Server
-```bash
-npm run dev  # Development
-npm start    # Production
-```
-
-### 5. Test Endpoints
-```bash
-# Health check
-curl http://localhost:3001/health
-
-# Login
-curl -X POST http://localhost:3001/api/v1/auth/login \
-  -H "Content-Type: application/json" \
-  -d '{"email":"user@example.com","password":"password123"}'
-```
+1. **Authentication**: Always include the JWT token in the Authorization header
+2. **Pagination**: Use pagination for large datasets to improve performance
+3. **Real-time Updates**: Use WebSocket connections for live updates
+4. **Error Handling**: Always handle error responses gracefully
+5. **Rate Limiting**: Respect rate limits (1000 requests/hour for standard endpoints)
+6. **Caching**: Cache analytics data for 5-15 minutes to reduce API calls
+7. **Webhooks**: Use webhook signatures for security when integrating with n8n
 
 ---
 
-## 📝 Usage Examples
+## 📝 Example Usage
 
-### Complete Workflow Example:
-1. **Login and get token**
-2. **List sites** to get siteId
-3. **Start SEO workflow** for a new post
-4. **Monitor workflow progress** via WebSocket
-5. **Get workflow results** and create post
-6. **Approve and publish** the post
-7. **Monitor analytics** updates
-
-### Dashboard Integration Example:
+### Complete Workflow Example
 ```javascript
-// 1. Authenticate
+// 1. Login and get token
 const loginResponse = await fetch('/api/v1/auth/login', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ email, password })
+  body: JSON.stringify({
+    email: 'user@example.com',
+    password: 'password123'
+  })
 });
 const { token } = await loginResponse.json();
 
@@ -613,38 +818,26 @@ const sitesResponse = await fetch('/api/v1/sites', {
 });
 const { sites } = await sitesResponse.json();
 
-// 3. Get posts for a site
-const postsResponse = await fetch(`/api/v1/sites/${siteId}/posts`, {
-  headers: { 'Authorization': `Bearer ${token}` }
+// 3. Start a workflow
+const workflowResponse = await fetch(`/api/v1/sites/${sites[0].id}/workflows`, {
+  method: 'POST',
+  headers: {
+    'Authorization': `Bearer ${token}`,
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    type: 'seo',
+    name: 'SEO Research',
+    config: { keywords: ['react', 'javascript'] }
+  })
 });
-const { posts } = await postsResponse.json();
 
-// 4. Set up real-time updates
-const ws = new WebSocket(`ws://localhost:3001?siteId=${siteId}`);
+// 4. Monitor with WebSocket
+const ws = new WebSocket(`ws://localhost:3001?siteId=${sites[0].id}`);
 ws.onmessage = (event) => {
   const update = JSON.parse(event.data);
-  // Update UI based on real-time data
+  console.log('Workflow update:', update);
 };
 ```
 
----
-
-## 🔗 Related Files
-
-- `api-server/README.md` - Detailed API documentation
-- `_workflow-documents/n8n-new-flow/supabase_schema_and_sql.md` - Database schema
-- `_workflow-documents/API_ENDPOINTS_SPECIFICATION.md` - Complete endpoint specification
-- `_workflow-documents/API_IMPLEMENTATION_PRIORITY_GUIDE.md` - Implementation phases
-
----
-
-## 🚀 Next Steps
-
-1. **Set up Supabase database** using the provided schema
-2. **Configure environment variables** in `.env`
-3. **Test authentication** and basic endpoints
-4. **Integrate with n8n workflows** via webhooks
-5. **Build frontend dashboard** using these endpoints
-6. **Set up real-time updates** via WebSocket
-
-The API is now ready to support your multi-site content automation system! 🎉 
+This comprehensive API provides everything needed to build a powerful multi-site content automation dashboard with real-time updates, analytics, and workflow management. 

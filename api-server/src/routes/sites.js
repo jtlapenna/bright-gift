@@ -1,4 +1,5 @@
 const express = require('express');
+const { body, validationResult } = require('express-validator');
 const { supabase, TABLES } = require('../config/supabase');
 const { checkSiteAccess } = require('../middleware/auth');
 
@@ -317,5 +318,339 @@ router.get('/:siteId/health', checkSiteAccess, async (req, res) => {
     });
   }
 });
+
+/**
+ * GET /api/v1/sites/{siteId}/content-types
+ * Get content types configured for this site
+ */
+router.get('/:siteId/content-types', checkSiteAccess, async (req, res) => {
+  try {
+    const { siteId } = req.params;
+
+    // Get site content types from settings
+    const { data: site, error } = await supabase
+      .from(TABLES.SITES)
+      .select('settings')
+      .eq('id', siteId)
+      .single();
+
+    if (error || !site) {
+      return res.status(404).json({
+        error: {
+          code: 'NOT_FOUND',
+          message: 'Site not found'
+        }
+      });
+    }
+
+    const contentTypes = site.settings?.contentTypes || [];
+
+    res.json({
+      contentTypes,
+      total: contentTypes.length
+    });
+  } catch (error) {
+    console.error('Error fetching content types:', error);
+    res.status(500).json({
+      error: {
+        code: 'INTERNAL_ERROR',
+        message: 'Failed to fetch content types'
+      }
+    });
+  }
+});
+
+/**
+ * PUT /api/v1/sites/{siteId}/content-types
+ * Update content types for this site
+ */
+router.put('/:siteId/content-types', checkSiteAccess, [
+  body('contentTypes').isArray().withMessage('Content types must be an array'),
+  body('contentTypes.*.name').isString().withMessage('Content type name must be a string'),
+  body('contentTypes.*.description').optional().isString().withMessage('Description must be a string'),
+  body('contentTypes.*.color').optional().isString().withMessage('Color must be a string')
+], async (req, res) => {
+  try {
+    const { siteId } = req.params;
+    const { contentTypes } = req.body;
+
+    // Check validation errors
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({
+        error: {
+          code: 'VALIDATION_ERROR',
+          message: 'Invalid request data',
+          details: errors.array()
+        }
+      });
+    }
+
+    // Get current site settings
+    const { data: site, error: fetchError } = await supabase
+      .from(TABLES.SITES)
+      .select('settings')
+      .eq('id', siteId)
+      .single();
+
+    if (fetchError || !site) {
+      return res.status(404).json({
+        error: {
+          code: 'NOT_FOUND',
+          message: 'Site not found'
+        }
+      });
+    }
+
+    // Update settings with new content types
+    const updatedSettings = {
+      ...site.settings,
+      contentTypes: contentTypes
+    };
+
+    const { data: updatedSite, error: updateError } = await supabase
+      .from(TABLES.SITES)
+      .update({
+        settings: updatedSettings,
+        last_updated: new Date().toISOString()
+      })
+      .eq('id', siteId)
+      .select('settings')
+      .single();
+
+    if (updateError) {
+      console.error('Error updating content types:', updateError);
+      return res.status(500).json({
+        error: {
+          code: 'INTERNAL_ERROR',
+          message: 'Failed to update content types'
+        }
+      });
+    }
+
+    res.json({
+      message: 'Content types updated successfully',
+      contentTypes: updatedSite.settings.contentTypes,
+      total: updatedSite.settings.contentTypes.length
+    });
+  } catch (error) {
+    console.error('Error updating content types:', error);
+    res.status(500).json({
+      error: {
+        code: 'INTERNAL_ERROR',
+        message: 'Failed to update content types'
+      }
+    });
+  }
+});
+
+/**
+ * GET /api/v1/sites/{siteId}/content-types/usage
+ * Get usage statistics for content types on this site
+ */
+router.get('/:siteId/content-types/usage', checkSiteAccess, async (req, res) => {
+  try {
+    const { siteId } = req.params;
+
+    // Get content type usage from posts
+    const { data: posts, error } = await supabase
+      .from(TABLES.BLOG_WORKFLOW_STATE)
+      .select('content_type, status')
+      .eq('site_id', siteId);
+
+    if (error) {
+      console.error('Error fetching content type usage:', error);
+      return res.status(500).json({
+        error: {
+          code: 'INTERNAL_ERROR',
+          message: 'Failed to fetch content type usage'
+        }
+      });
+    }
+
+    // Calculate usage statistics
+    const usage = posts.reduce((acc, post) => {
+      const contentType = post.content_type || 'unknown';
+      if (!acc[contentType]) {
+        acc[contentType] = {
+          total: 0,
+          published: 0,
+          draft: 0,
+          inProgress: 0
+        };
+      }
+      
+      acc[contentType].total++;
+      if (post.status === 'published') {
+        acc[contentType].published++;
+      } else if (post.status === 'draft') {
+        acc[contentType].draft++;
+      } else {
+        acc[contentType].inProgress++;
+      }
+      
+      return acc;
+    }, {});
+
+    res.json({
+      usage,
+      totalPosts: posts.length,
+      contentTypes: Object.keys(usage)
+    });
+  } catch (error) {
+    console.error('Error fetching content type usage:', error);
+    res.status(500).json({
+      error: {
+        code: 'INTERNAL_ERROR',
+        message: 'Failed to fetch content type usage'
+      }
+    });
+  }
+});
+
+/**
+ * GET /api/v1/sites/{siteId}/content-types/suggestions
+ * Get suggested content types based on site theme and existing content
+ */
+router.get('/:siteId/content-types/suggestions', checkSiteAccess, async (req, res) => {
+  try {
+    const { siteId } = req.params;
+
+    // Get site details to understand theme
+    const { data: site, error: siteError } = await supabase
+      .from(TABLES.SITES)
+      .select('name, description, settings')
+      .eq('id', siteId)
+      .single();
+
+    if (siteError || !site) {
+      return res.status(404).json({
+        error: {
+          code: 'NOT_FOUND',
+          message: 'Site not found'
+        }
+      });
+    }
+
+    // Get existing content types from posts
+    const { data: posts, error: postsError } = await supabase
+      .from(TABLES.BLOG_WORKFLOW_STATE)
+      .select('content_type, title')
+      .eq('site_id', siteId);
+
+    if (postsError) {
+      console.error('Error fetching posts for suggestions:', postsError);
+    }
+
+    // Analyze site name and description for theme
+    const siteName = site.name.toLowerCase();
+    const siteDescription = (site.description || '').toLowerCase();
+    
+    // Generate suggestions based on site theme
+    const suggestions = generateContentTypeSuggestions(siteName, siteDescription, posts || []);
+
+    res.json({
+      suggestions,
+      siteTheme: {
+        name: site.name,
+        description: site.description,
+        detectedThemes: suggestions.themes
+      },
+      existingContentTypes: posts ? [...new Set(posts.map(p => p.content_type).filter(Boolean))] : []
+    });
+  } catch (error) {
+    console.error('Error generating content type suggestions:', error);
+    res.status(500).json({
+      error: {
+        code: 'INTERNAL_ERROR',
+        message: 'Failed to generate suggestions'
+      }
+    });
+  }
+});
+
+/**
+ * Generate content type suggestions based on site theme
+ */
+function generateContentTypeSuggestions(siteName, siteDescription, posts) {
+  const suggestions = [];
+  const themes = [];
+
+  // Detect themes from site name and description
+  if (siteName.includes('gift') || siteDescription.includes('gift')) {
+    themes.push('gift');
+    suggestions.push(
+      { name: 'gift-guide', description: 'Gift recommendation articles', color: '#3B82F6' },
+      { name: 'product-review', description: 'Product reviews and recommendations', color: '#10B981' },
+      { name: 'seasonal', description: 'Holiday and seasonal gift guides', color: '#F59E0B' },
+      { name: 'educational', description: 'Gift-giving tips and guides', color: '#8B5CF6' }
+    );
+  }
+
+  if (siteName.includes('cannabis') || siteDescription.includes('cannabis') || 
+      siteName.includes('weed') || siteDescription.includes('weed')) {
+    themes.push('cannabis');
+    suggestions.push(
+      { name: 'product-review', description: 'Product reviews and recommendations', color: '#10B981' },
+      { name: 'strain-guide', description: 'Cannabis strain information', color: '#3B82F6' },
+      { name: 'educational', description: 'Cannabis education and guides', color: '#8B5CF6' },
+      { name: 'legal-updates', description: 'Legal and regulatory updates', color: '#EF4444' },
+      { name: 'wellness-tips', description: 'Health and wellness tips', color: '#06B6D4' }
+    );
+  }
+
+  if (siteName.includes('baby') || siteDescription.includes('baby') ||
+      siteName.includes('parent') || siteDescription.includes('parent')) {
+    themes.push('parenting');
+    suggestions.push(
+      { name: 'development-guide', description: 'Child development guides', color: '#3B82F6' },
+      { name: 'product-review', description: 'Baby product reviews', color: '#10B981' },
+      { name: 'parenting-tips', description: 'Parenting advice and tips', color: '#8B5CF6' },
+      { name: 'safety-guide', description: 'Safety and health information', color: '#EF4444' },
+      { name: 'feeding-guide', description: 'Feeding and nutrition guides', color: '#F59E0B' }
+    );
+  }
+
+  if (siteName.includes('tech') || siteDescription.includes('tech') ||
+      siteName.includes('software') || siteDescription.includes('software')) {
+    themes.push('technology');
+    suggestions.push(
+      { name: 'tutorial', description: 'Step-by-step tutorials', color: '#3B82F6' },
+      { name: 'product-review', description: 'Tech product reviews', color: '#10B981' },
+      { name: 'news', description: 'Technology news and updates', color: '#F59E0B' },
+      { name: 'how-to', description: 'How-to guides and tips', color: '#8B5CF6' },
+      { name: 'comparison', description: 'Product comparisons', color: '#06B6D4' }
+    );
+  }
+
+  // Generic suggestions if no specific theme detected
+  if (themes.length === 0) {
+    themes.push('general');
+    suggestions.push(
+      { name: 'article', description: 'General articles and content', color: '#3B82F6' },
+      { name: 'product-review', description: 'Product reviews and recommendations', color: '#10B981' },
+      { name: 'educational', description: 'Educational content and guides', color: '#8B5CF6' },
+      { name: 'news', description: 'News and updates', color: '#F59E0B' },
+      { name: 'how-to', description: 'How-to guides and tutorials', color: '#06B6D4' }
+    );
+  }
+
+  // Add suggestions based on existing content types
+  const existingTypes = [...new Set(posts.map(p => p.content_type).filter(Boolean))];
+  existingTypes.forEach(type => {
+    if (!suggestions.find(s => s.name === type)) {
+      suggestions.push({
+        name: type,
+        description: `Existing content type: ${type}`,
+        color: '#6B7280'
+      });
+    }
+  });
+
+  return {
+    suggestions,
+    themes
+  };
+}
 
 module.exports = router; 
