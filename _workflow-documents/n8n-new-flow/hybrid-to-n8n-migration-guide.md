@@ -500,11 +500,11 @@ For each file, determine:
   - [x] `n8n_trigger_seo_agent.json` → `n8n_seo_workflow.json` 🔄 - **COMPLETED**
   - [x] `env-for-supabase.txt` ✅ - **COMPLETED**
   - [x] `files-requiring-updates.md` 🔄 - **COMPLETED**
-- [x] Phase 7: Remove & Replace (5 files) - 3/5 complete
+- [x] Phase 7: Remove & Replace (5 files) - 4/5 complete
   - [x] `agent_task_routing_design.md` → `n8n_workflow_routing_design.md` 🗑️ - **COMPLETED**
   - [x] `generic_agent_runner_flow.md` → `n8n_workflow_trigger_flow.md` 🗑️ - **COMPLETED**
   - [x] `n_8_n_slack_trigger_flow.md` → `n8n_webhook_trigger_flow.md` 🗑️ - **COMPLETED**
-  - [ ] `agent_reference_guide.md` → `workflow_reference_guide.md` 🔄
+  - [x] `agent_reference_guide.md` → `workflow_reference_guide.md` 🔄 - **COMPLETED**
   - [ ] `Cursor_vs_n8n_Responsibilities.csv` 🗑️
 
 **Total Files to Process: 22**
