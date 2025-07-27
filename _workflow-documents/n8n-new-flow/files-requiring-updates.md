@@ -14,10 +14,10 @@ This document lists all the files that need updates to work with the new n8n wor
 
 | **Aspect** | **Old System** | **New System** | **Why Change?** |
 |------------|----------------|----------------|------------------|
-| **Architecture** | Cursor agent-based | n8n workflow-based | Better orchestration, visual workflow design, built-in error handling |
+| **Architecture** | n8n workflow-based | n8n workflow-based | Better orchestration, visual workflow design, built-in error handling |
 | **State Management** | File-based (`workflow/` folders) | Supabase database | Real-time updates, dashboard integration, better reliability |
-| **Content Generation** | Cursor agents (stateless) | n8n workflows with AI nodes | More control, better integration, visual workflow design |
-| **Orchestration** | Slack + n8n webhooks | n8n webhook triggers | Automated workflow, better error handling, visual design |
+| **Content Generation** | n8n workflows with AI nodes | n8n workflows with AI nodes | More control, better integration, visual workflow design |
+| **Orchestration** | n8n webhook triggers | n8n webhook triggers | Automated workflow, better error handling, visual design |
 | **Processing** | Multi-blog concurrent | Multi-site concurrent | Higher throughput, better resource utilization, site-specific workflows |
 | **User Interface** | Web dashboard + CLI | Multi-site control hub | Better oversight, human-in-the-loop approval, site management |
 | **Error Handling** | Basic logging | Structured error tracking | Better debugging, retry mechanisms, workflow monitoring |
@@ -26,7 +26,7 @@ This document lists all the files that need updates to work with the new n8n wor
 ### **Key Architectural Principles**
 
 #### **1. Workflow-Based Processing**
-- **Old**: Cursor agents maintain individual state
+- **Old**: n8n workflows maintain individual state
 - **New**: n8n workflows orchestrate entire process
 - **Why**: Better reliability, visual workflow design, built-in error handling
 
@@ -36,7 +36,7 @@ This document lists all the files that need updates to work with the new n8n wor
 - **Why**: Dashboard integration, better reliability, multi-user support
 
 #### **3. Webhook-Driven Orchestration**
-- **Old**: Slack commands trigger n8n workflows
+- **Old**: Webhook commands trigger n8n workflows
 - **New**: Direct webhook triggers for workflow phases
 - **Why**: Automated handoffs, better error handling, centralized control
 
@@ -69,10 +69,10 @@ await triggerWorkflowPhase(postId, 'CONTENT_GENERATION', { seo_results: data });
 ```
 **Why**: Centralized orchestration, better error handling, workflow flexibility
 
-#### **Agent Functions → Workflow Nodes**
+#### **Workflow Functions → Workflow Nodes**
 ```javascript
-// OLD: Agent-specific functions
-async function runSEOAgent(postId) { /* SEO only */ }
+// OLD: Workflow-specific functions
+async function runSEOWorkflow(postId) { /* SEO only */ }
 
 // NEW: Workflow node functions
 async function processSEOPhase(postId, seoData) { /* SEO workflow node */ }
@@ -83,8 +83,8 @@ async function processSEOPhase(postId, seoData) { /* SEO workflow node */ }
 
 #### **Phase 1: Core Infrastructure**
 - Update state management (file → database)
-- Update orchestration (agent → workflow)
-- Update CLI (agent-specific → workflow-specific)
+- Update orchestration (workflow → workflow)
+- Update CLI (workflow-specific → workflow-specific)
 
 #### **Phase 2: Workflow Integration**
 - Update utility files for workflow usage
@@ -253,8 +253,8 @@ const { data: posts } = await supabase
 
 **Specific Changes**:
 ```javascript
-// OLD: Agent-specific commands
-program.command('seo <postId>').action(runSEOAgent);
+// OLD: Workflow-specific commands
+program.command('seo <postId>').action(runSEOWorkflow);
 
 // NEW: Workflow-specific commands
 program.command('workflow:seo <postId>').action(runSEOWorkflow);
@@ -271,7 +271,7 @@ program.command('workflow:social <postId>').action(runSocialWorkflow);
 - **Split into workflow commands** - Individual workflow phase execution
 - **Add workflow orchestration** - Workflow phase handoff logic
 - **Update state management** - Supabase integration
-- **Remove agent dependency** - Replace with workflow system
+- **Remove workflow dependency** - Replace with workflow system
 - **Add error handling** - Workflow-specific error handling
 
 ### 🟡 **12. All other CLI command files**

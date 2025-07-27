@@ -56,7 +56,7 @@ This enables real-time visibility in your UI for multiple sites and blogs at dif
 
 7. **Trigger Dashboard Update**
    - Send webhook to dashboard for real-time updates
-   - Optionally notify via email/Slack: "🟡 Blog `X` now in phase `Y`"
+   - Optionally notify via email/webhook: "🟡 Blog `X` now in phase `Y`"
    - Trigger dashboard revalidation if needed
 
 ---
