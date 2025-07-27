@@ -2044,7 +2044,7 @@
             },
             {
               "name": "Authorization",
-              "value": "Bearer pina_AMA24SAXAAQPABAAGDABGD5SNW3BTGABQBIQDN5BOMKEJ3BBYQ2WXWR2XKI7FPFWIVPL5PVTPL3V7KKDOL3F5PGGCW3S54QA"
+              "value": "Bearer YOUR_PINTEREST_ACCESS_TOKEN_HERE"
             }
           ]
         },
