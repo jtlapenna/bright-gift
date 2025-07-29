@@ -30,19 +30,121 @@ class BrightGiftService {
       {
         post_id: 'brightgift-002',
         site_id: 'brightgift',
-        title: 'Unique Gift Ideas Under $50',
-        content_type: 'budget-guide',
-        recipient: 'budget-conscious',
-        budget: 'under-50',
-        occasion: 'holiday',
+        title: 'Christmas Gift Guide 2024: Top Picks for Everyone',
+        content_type: 'seasonal',
+        recipient: 'general',
+        budget: '50-150',
+        occasion: 'christmas',
+        status: 'published',
+        views: 2100,
+        revenue: 145.75,
+        seo_score: 92,
+        readability_score: 85,
+        word_count: 1800,
+        created_at: '2024-01-10T09:15:00Z',
+        last_updated: '2024-01-12T11:30:00Z'
+      },
+      {
+        post_id: 'brightgift-003',
+        site_id: 'brightgift',
+        title: 'Why We Remember Gifts We Give More Than Receive',
+        content_type: 'educational',
+        recipient: 'general',
+        budget: 'any',
+        occasion: 'any',
         status: 'published',
         views: 980,
         revenue: 65.25,
         seo_score: 82,
         readability_score: 75,
-        word_count: 950,
-        created_at: '2024-01-10T09:15:00Z',
-        last_updated: '2024-01-12T11:30:00Z'
+        word_count: 1200,
+        created_at: '2024-01-20T08:00:00Z',
+        last_updated: '2024-01-20T08:00:00Z'
+      },
+      {
+        post_id: 'brightgift-004',
+        site_id: 'brightgift',
+        title: 'Best Coffee Makers for Coffee Lovers: 2024 Reviews',
+        content_type: 'product-review',
+        recipient: 'coffee-lovers',
+        budget: '200-500',
+        occasion: 'any',
+        status: 'published',
+        views: 850,
+        revenue: 120.40,
+        seo_score: 88,
+        readability_score: 80,
+        word_count: 1500,
+        created_at: '2024-01-18T14:20:00Z',
+        last_updated: '2024-01-19T16:30:00Z'
+      },
+      {
+        post_id: 'brightgift-005',
+        site_id: 'brightgift',
+        title: 'Gift-Giving Statistics 2024: What People Really Want',
+        content_type: 'data-driven',
+        recipient: 'general',
+        budget: 'any',
+        occasion: 'any',
+        status: 'published',
+        views: 650,
+        revenue: 45.80,
+        seo_score: 78,
+        readability_score: 72,
+        word_count: 900,
+        created_at: '2024-01-22T11:45:00Z',
+        last_updated: '2024-01-22T11:45:00Z'
+      },
+      {
+        post_id: 'brightgift-006',
+        site_id: 'brightgift',
+        title: 'How to Wrap Gifts Like a Pro: Step-by-Step Guide',
+        content_type: 'how-to',
+        recipient: 'general',
+        budget: 'any',
+        occasion: 'any',
+        status: 'published',
+        views: 720,
+        revenue: 38.90,
+        seo_score: 75,
+        readability_score: 70,
+        word_count: 800,
+        created_at: '2024-01-25T10:15:00Z',
+        last_updated: '2024-01-25T10:15:00Z'
+      },
+      {
+        post_id: 'brightgift-007',
+        site_id: 'brightgift',
+        title: 'Gift Cards vs Physical Gifts: Which Should You Choose?',
+        content_type: 'comparison',
+        recipient: 'general',
+        budget: 'any',
+        occasion: 'any',
+        status: 'published',
+        views: 590,
+        revenue: 42.60,
+        seo_score: 80,
+        readability_score: 75,
+        word_count: 1100,
+        created_at: '2024-01-28T09:30:00Z',
+        last_updated: '2024-01-28T09:30:00Z'
+      },
+      {
+        post_id: 'brightgift-008',
+        site_id: 'brightgift',
+        title: 'TikTok Viral Gifts 2024: Trending Products Everyone Wants',
+        content_type: 'trending',
+        recipient: 'trend-conscious',
+        budget: '50-200',
+        occasion: 'any',
+        status: 'published',
+        views: 1800,
+        revenue: 95.20,
+        seo_score: 85,
+        readability_score: 78,
+        word_count: 1300,
+        created_at: '2024-01-30T13:20:00Z',
+        last_updated: '2024-01-30T13:20:00Z'
       }
     ];
 
@@ -115,19 +217,36 @@ class BrightGiftService {
       {
         post_id: 'brightgift-002',
         site_id: 'brightgift',
-        title: 'Unique Gift Ideas Under $50',
-        content_type: 'budget-guide',
-        recipient: 'budget-conscious',
-        budget: 'under-50',
-        occasion: 'holiday',
+        title: 'Christmas Gift Guide 2024: Top Picks for Everyone',
+        content_type: 'seasonal',
+        recipient: 'general',
+        budget: '50-150',
+        occasion: 'christmas',
+        status: 'published',
+        views: 2100,
+        revenue: 145.75,
+        seo_score: 92,
+        readability_score: 85,
+        word_count: 1800,
+        created_at: '2024-01-10T09:15:00Z',
+        last_updated: '2024-01-12T11:30:00Z'
+      },
+      {
+        post_id: 'brightgift-003',
+        site_id: 'brightgift',
+        title: 'Why We Remember Gifts We Give More Than Receive',
+        content_type: 'educational',
+        recipient: 'general',
+        budget: 'any',
+        occasion: 'any',
         status: 'published',
         views: 980,
         revenue: 65.25,
         seo_score: 82,
         readability_score: 75,
-        word_count: 950,
-        created_at: '2024-01-10T09:15:00Z',
-        last_updated: '2024-01-12T11:30:00Z'
+        word_count: 1200,
+        created_at: '2024-01-20T08:00:00Z',
+        last_updated: '2024-01-20T08:00:00Z'
       }
     ];
 
@@ -137,273 +256,6 @@ class BrightGiftService {
     }
 
     return post;
-  }
-
-  /**
-   * Create new post
-   */
-  async createPost(postData) {
-    const post = {
-      ...postData,
-      site_id: 'brightgift',
-      created_at: new Date().toISOString(),
-      last_updated: new Date().toISOString()
-    };
-
-    const { data, error } = await supabase
-      .from(TABLES.BLOG_WORKFLOW_STATE)
-      .insert(post)
-      .select()
-      .single();
-
-    if (error) {
-      throw new Error(`Database error: ${error.message}`);
-    }
-
-    return data;
-  }
-
-  /**
-   * Update post
-   */
-  async updatePost(postId, updateData) {
-    const update = {
-      ...updateData,
-      last_updated: new Date().toISOString()
-    };
-
-    const { data, error } = await supabase
-      .from(TABLES.BLOG_WORKFLOW_STATE)
-      .update(update)
-      .eq('post_id', postId)
-      .eq('site_id', 'brightgift')
-      .select()
-      .single();
-
-    if (error) {
-      throw new Error(`Database error: ${error.message}`);
-    }
-
-    return data;
-  }
-
-  /**
-   * Delete post
-   */
-  async deletePost(postId) {
-    const { error } = await supabase
-      .from(TABLES.BLOG_WORKFLOW_STATE)
-      .delete()
-      .eq('post_id', postId)
-      .eq('site_id', 'brightgift');
-
-    if (error) {
-      throw new Error(`Database error: ${error.message}`);
-    }
-
-    return { success: true };
-  }
-
-  /**
-   * Publish post
-   */
-  async publishPost(postId) {
-    const { data, error } = await supabase
-      .from(TABLES.BLOG_WORKFLOW_STATE)
-      .update({
-        status: 'published',
-        last_updated: new Date().toISOString()
-      })
-      .eq('post_id', postId)
-      .eq('site_id', 'brightgift')
-      .select()
-      .single();
-
-    if (error) {
-      throw new Error(`Database error: ${error.message}`);
-    }
-
-    return data;
-  }
-
-  /**
-   * Approve post
-   */
-  async approvePost(postId, approvedBy) {
-    const { data, error } = await supabase
-      .from(TABLES.BLOG_WORKFLOW_STATE)
-      .update({
-        status: 'approved',
-        approved_by: approvedBy,
-        approved_at: new Date().toISOString(),
-        last_updated: new Date().toISOString()
-      })
-      .eq('post_id', postId)
-      .eq('site_id', 'brightgift')
-      .select()
-      .single();
-
-    if (error) {
-      throw new Error(`Database error: ${error.message}`);
-    }
-
-    return data;
-  }
-
-  /**
-   * Get analytics data
-   */
-  async getAnalytics(filters = {}) {
-    // Mock data for testing - replace with real Supabase query
-    const mockPosts = [
-      {
-        post_id: 'brightgift-001',
-        site_id: 'brightgift',
-        title: 'Best Gifts for Tech Lovers in 2024',
-        content_type: 'gift-guide',
-        recipient: 'tech-enthusiasts',
-        budget: '100-200',
-        occasion: 'birthday',
-        status: 'published',
-        views: 1250,
-        revenue: 89.50,
-        seo_score: 85,
-        created_at: '2024-01-15T10:30:00Z'
-      },
-      {
-        post_id: 'brightgift-002',
-        site_id: 'brightgift',
-        title: 'Unique Gift Ideas Under $50',
-        content_type: 'budget-guide',
-        recipient: 'budget-conscious',
-        budget: 'under-50',
-        occasion: 'holiday',
-        status: 'published',
-        views: 980,
-        revenue: 65.25,
-        seo_score: 82,
-        created_at: '2024-01-10T09:15:00Z'
-      },
-      {
-        post_id: 'brightgift-003',
-        site_id: 'brightgift',
-        title: 'Christmas Gift Guide 2024',
-        content_type: 'seasonal',
-        recipient: 'general',
-        budget: '50-150',
-        occasion: 'christmas',
-        status: 'draft',
-        views: 0,
-        revenue: 0,
-        seo_score: 0,
-        created_at: '2024-01-20T08:00:00Z'
-      }
-    ];
-
-    // Calculate analytics
-    const analytics = {
-      totalPosts: mockPosts.length,
-      publishedPosts: mockPosts.filter(p => p.status === 'published').length,
-      draftPosts: mockPosts.filter(p => p.status === 'draft').length,
-      inProgressPosts: mockPosts.filter(p => p.status === 'in_progress').length,
-      totalViews: mockPosts.reduce((sum, p) => sum + (p.views || 0), 0),
-      totalRevenue: mockPosts.reduce((sum, p) => sum + (p.revenue || 0), 0),
-      avgSeoScore: mockPosts.length > 0 ? 
-        mockPosts.reduce((sum, p) => sum + (p.seo_score || 0), 0) / mockPosts.length : 0,
-      contentTypeBreakdown: this.getContentTypeBreakdown(mockPosts),
-      recipientBreakdown: this.getRecipientBreakdown(mockPosts),
-      budgetBreakdown: this.getBudgetBreakdown(mockPosts),
-      occasionBreakdown: this.getOccasionBreakdown(mockPosts)
-    };
-
-    return analytics;
-  }
-
-  /**
-   * Get content type breakdown
-   */
-  getContentTypeBreakdown(posts) {
-    return posts.reduce((acc, post) => {
-      const contentType = post.content_type || 'unknown';
-      if (!acc[contentType]) {
-        acc[contentType] = {
-          count: 0,
-          published: 0,
-          draft: 0,
-          inProgress: 0,
-          totalViews: 0,
-          totalRevenue: 0
-        };
-      }
-      
-      acc[contentType].count++;
-      acc[contentType].totalViews += post.views || 0;
-      acc[contentType].totalRevenue += post.revenue || 0;
-      
-      if (post.status === 'published') {
-        acc[contentType].published++;
-      } else if (post.status === 'draft') {
-        acc[contentType].draft++;
-      } else {
-        acc[contentType].inProgress++;
-      }
-      
-      return acc;
-    }, {});
-  }
-
-  /**
-   * Get recipient breakdown
-   */
-  getRecipientBreakdown(posts) {
-    return posts.reduce((acc, post) => {
-      const recipient = post.recipient || 'unknown';
-      if (!acc[recipient]) {
-        acc[recipient] = { count: 0, totalViews: 0, totalRevenue: 0 };
-      }
-      
-      acc[recipient].count++;
-      acc[recipient].totalViews += post.views || 0;
-      acc[recipient].totalRevenue += post.revenue || 0;
-      
-      return acc;
-    }, {});
-  }
-
-  /**
-   * Get budget breakdown
-   */
-  getBudgetBreakdown(posts) {
-    return posts.reduce((acc, post) => {
-      const budget = post.budget || 'unknown';
-      if (!acc[budget]) {
-        acc[budget] = { count: 0, totalViews: 0, totalRevenue: 0 };
-      }
-      
-      acc[budget].count++;
-      acc[budget].totalViews += post.views || 0;
-      acc[budget].totalRevenue += post.revenue || 0;
-      
-      return acc;
-    }, {});
-  }
-
-  /**
-   * Get occasion breakdown
-   */
-  getOccasionBreakdown(posts) {
-    return posts.reduce((acc, post) => {
-      const occasion = post.occasion || 'unknown';
-      if (!acc[occasion]) {
-        acc[occasion] = { count: 0, totalViews: 0, totalRevenue: 0 };
-      }
-      
-      acc[occasion].count++;
-      acc[occasion].totalViews += post.views || 0;
-      acc[occasion].totalRevenue += post.revenue || 0;
-      
-      return acc;
-    }, {});
   }
 
   /**
@@ -466,6 +318,243 @@ class BrightGiftService {
       last_updated: new Date().toISOString()
     };
     return post;
+  }
+
+  /**
+   * Get analytics data
+   */
+  async getAnalytics(filters = {}) {
+    // Mock data for testing - replace with real Supabase query
+    const mockPosts = [
+      {
+        post_id: 'brightgift-001',
+        site_id: 'brightgift',
+        title: 'Best Gifts for Tech Lovers in 2024',
+        content_type: 'gift-guide',
+        recipient: 'tech-enthusiasts',
+        budget: '100-200',
+        occasion: 'birthday',
+        status: 'published',
+        views: 1250,
+        revenue: 89.50,
+        seo_score: 85,
+        created_at: '2024-01-15T10:30:00Z'
+      },
+      {
+        post_id: 'brightgift-002',
+        site_id: 'brightgift',
+        title: 'Christmas Gift Guide 2024: Top Picks for Everyone',
+        content_type: 'seasonal',
+        recipient: 'general',
+        budget: '50-150',
+        occasion: 'christmas',
+        status: 'published',
+        views: 2100,
+        revenue: 145.75,
+        seo_score: 92,
+        created_at: '2024-01-10T09:15:00Z'
+      },
+      {
+        post_id: 'brightgift-003',
+        site_id: 'brightgift',
+        title: 'Why We Remember Gifts We Give More Than Receive',
+        content_type: 'educational',
+        recipient: 'general',
+        budget: 'any',
+        occasion: 'any',
+        status: 'published',
+        views: 980,
+        revenue: 65.25,
+        seo_score: 82,
+        created_at: '2024-01-20T08:00:00Z'
+      },
+      {
+        post_id: 'brightgift-004',
+        site_id: 'brightgift',
+        title: 'Best Coffee Makers for Coffee Lovers: 2024 Reviews',
+        content_type: 'product-review',
+        recipient: 'coffee-lovers',
+        budget: '200-500',
+        occasion: 'any',
+        status: 'published',
+        views: 850,
+        revenue: 120.40,
+        seo_score: 88,
+        created_at: '2024-01-18T14:20:00Z'
+      },
+      {
+        post_id: 'brightgift-005',
+        site_id: 'brightgift',
+        title: 'Gift-Giving Statistics 2024: What People Really Want',
+        content_type: 'data-driven',
+        recipient: 'general',
+        budget: 'any',
+        occasion: 'any',
+        status: 'published',
+        views: 650,
+        revenue: 45.80,
+        seo_score: 78,
+        created_at: '2024-01-22T11:45:00Z'
+      },
+      {
+        post_id: 'brightgift-006',
+        site_id: 'brightgift',
+        title: 'How to Wrap Gifts Like a Pro: Step-by-Step Guide',
+        content_type: 'how-to',
+        recipient: 'general',
+        budget: 'any',
+        occasion: 'any',
+        status: 'published',
+        views: 720,
+        revenue: 38.90,
+        seo_score: 75,
+        created_at: '2024-01-25T10:15:00Z'
+      },
+      {
+        post_id: 'brightgift-007',
+        site_id: 'brightgift',
+        title: 'Gift Cards vs Physical Gifts: Which Should You Choose?',
+        content_type: 'comparison',
+        recipient: 'general',
+        budget: 'any',
+        occasion: 'any',
+        status: 'published',
+        views: 590,
+        revenue: 42.60,
+        seo_score: 80,
+        created_at: '2024-01-28T09:30:00Z'
+      },
+      {
+        post_id: 'brightgift-008',
+        site_id: 'brightgift',
+        title: 'TikTok Viral Gifts 2024: Trending Products Everyone Wants',
+        content_type: 'trending',
+        recipient: 'trend-conscious',
+        budget: '50-200',
+        occasion: 'any',
+        status: 'published',
+        views: 1800,
+        revenue: 95.20,
+        seo_score: 85,
+        created_at: '2024-01-30T13:20:00Z'
+      }
+    ];
+
+    // Calculate analytics
+    const analytics = {
+      totalPosts: mockPosts.length,
+      publishedPosts: mockPosts.filter(p => p.status === 'published').length,
+      draftPosts: mockPosts.filter(p => p.status === 'draft').length,
+      inProgressPosts: mockPosts.filter(p => p.status === 'in_progress').length,
+      totalViews: mockPosts.reduce((sum, p) => sum + (p.views || 0), 0),
+      totalRevenue: mockPosts.reduce((sum, p) => sum + (p.revenue || 0), 0),
+      avgSeoScore: mockPosts.length > 0 ? 
+        mockPosts.reduce((sum, p) => sum + (p.seo_score || 0), 0) / mockPosts.length : 0,
+      contentTypeBreakdown: this.getContentTypeBreakdown(mockPosts),
+      recipientBreakdown: this.getRecipientBreakdown(mockPosts),
+      budgetBreakdown: this.getBudgetBreakdown(mockPosts),
+      occasionBreakdown: this.getOccasionBreakdown(mockPosts)
+    };
+
+    return analytics;
+  }
+
+  /**
+   * Get content type breakdown
+   */
+  getContentTypeBreakdown(posts) {
+    return posts.reduce((acc, post) => {
+      const type = post.content_type || 'unknown';
+      if (!acc[type]) {
+        acc[type] = {
+          count: 0,
+          totalViews: 0,
+          totalRevenue: 0,
+          avgViews: 0,
+          avgRevenue: 0,
+          published: 0,
+          draft: 0
+        };
+      }
+
+      acc[type].count++;
+      acc[type].totalViews += post.views || 0;
+      acc[type].totalRevenue += post.revenue || 0;
+
+      if (post.status === 'published') {
+        acc[type].published++;
+      } else if (post.status === 'draft') {
+        acc[type].draft++;
+      }
+
+      return acc;
+    }, {});
+  }
+
+  /**
+   * Get recipient breakdown
+   */
+  getRecipientBreakdown(posts) {
+    return posts.reduce((acc, post) => {
+      const recipient = post.recipient || 'unknown';
+      if (!acc[recipient]) {
+        acc[recipient] = {
+          count: 0,
+          totalViews: 0,
+          totalRevenue: 0
+        };
+      }
+
+      acc[recipient].count++;
+      acc[recipient].totalViews += post.views || 0;
+      acc[recipient].totalRevenue += post.revenue || 0;
+
+      return acc;
+    }, {});
+  }
+
+  /**
+   * Get budget breakdown
+   */
+  getBudgetBreakdown(posts) {
+    return posts.reduce((acc, post) => {
+      const budget = post.budget || 'unknown';
+      if (!acc[budget]) {
+        acc[budget] = {
+          count: 0,
+          totalViews: 0,
+          totalRevenue: 0
+        };
+      }
+
+      acc[budget].count++;
+      acc[budget].totalViews += post.views || 0;
+      acc[budget].totalRevenue += post.revenue || 0;
+
+      return acc;
+    }, {});
+  }
+
+  /**
+   * Get occasion breakdown
+   */
+  getOccasionBreakdown(posts) {
+    return posts.reduce((acc, post) => {
+      const occasion = post.occasion || 'unknown';
+      if (!acc[occasion]) {
+        acc[occasion] = {
+          count: 0,
+          totalViews: 0,
+          totalRevenue: 0
+        };
+      }
+
+      acc[occasion].count++;
+      acc[occasion].totalViews += post.views || 0;
+      acc[occasion].totalRevenue += post.revenue || 0;
+
+      return acc;
+    }, {});
   }
 }
 

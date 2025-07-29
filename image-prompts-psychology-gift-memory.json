@@ -1,0 +1,13 @@
+{
+  "slug": "why-we-remember-gifts-we-give-more-than-receive",
+  "prompts": [
+    {
+      "label": "banner",
+      "text": "A wide horizontal scene showing a split composition: on the left, a person's hands carefully wrapping a gift with colorful ribbon, with small thought bubbles floating above containing memories and brain imagery; on the right, a person receiving a gift but with faded, less prominent memory bubbles. The scene includes scattered gift boxes, ribbons, and small 3D-style brain icons floating around. Dimension ratio 16:9, size 1200px wide. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic. Use text only in social images. Background colors can vary within our color palette."
+    },
+    {
+      "label": "og",
+      "text": "A centered composition featuring a large 3D-style brain in the center with gift boxes and ribbons flowing around it like neural pathways. Small memory bubbles float around the brain, some bright and prominent (representing giving memories) and others faded (representing receiving memories). The scene includes scattered sparkles and decorative elements. Dimension ratio 16:9, size 1200px wide. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic. Use text only in social images. Background colors can vary within our color palette."
+    }
+  ]
+} 

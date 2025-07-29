@@ -1,4 +1,5 @@
 const express = require('express');
+const { body } = require('express-validator'); // Keep for type hints, but remove from middleware
 const { authenticateToken, checkBrightGiftAccess } = require('../middleware/auth');
 
 const router = express.Router();
@@ -9,49 +10,75 @@ const router = express.Router();
  */
 router.get('/', authenticateToken, checkBrightGiftAccess, async (req, res) => {
   try {
-    // Bright-Gift specific content types
+    // Updated Bright-Gift content types optimized for maximum traffic
     const contentTypes = [
       {
         name: 'gift-guide',
-        description: 'Gift recommendation articles',
+        description: 'Core traffic driver - curated gift recommendations by category, recipient, or occasion',
         color: '#3B82F6',
-        examples: ['Best Gifts for Tech Lovers', 'Unique Gift Ideas Under $50']
-      },
-      {
-        name: 'product-review',
-        description: 'Product reviews and recommendations',
-        color: '#10B981',
-        examples: ['Amazon Echo Dot Review', 'Best Coffee Makers 2024']
+        trafficType: 'SEO',
+        examples: ['Best Gifts for Tech Lovers', 'Unique Gifts Under $50']
       },
       {
         name: 'seasonal',
-        description: 'Holiday and seasonal gift guides',
+        description: 'Holiday and time-sensitive content for peak traffic during gift-giving seasons',
         color: '#F59E0B',
-        examples: ['Christmas Gift Guide', 'Valentine\'s Day Gifts']
+        trafficType: 'Seasonal',
+        examples: ['Christmas Gift Guide 2024', 'Valentine\'s Day Gifts for Him']
       },
       {
         name: 'educational',
-        description: 'Gift-giving tips and guides',
+        description: 'Psychology and relationship content for social media sharing and engagement',
         color: '#8B5CF6',
-        examples: ['How to Choose the Perfect Gift', 'Gift Etiquette Guide']
+        trafficType: 'Social',
+        examples: ['Psychology of Gift-Giving', 'How to Choose the Perfect Gift']
       },
       {
-        name: 'budget-guide',
-        description: 'Budget-friendly gift ideas',
-        color: '#06B6D4',
-        examples: ['Gifts Under $25', 'Affordable Luxury Gifts']
+        name: 'product-review',
+        description: 'Product-specific recommendations for affiliate revenue and commercial intent',
+        color: '#10B981',
+        trafficType: 'Affiliate',
+        examples: ['Best Coffee Makers for Coffee Lovers', 'Top Gaming Headsets 2024']
       },
       {
-        name: 'occasion-specific',
-        description: 'Gifts for specific occasions',
+        name: 'data-driven',
+        description: 'Statistics and research content for authority building and backlinks',
         color: '#EF4444',
-        examples: ['Wedding Gift Ideas', 'Graduation Gift Guide']
+        trafficType: 'Authority',
+        examples: ['Gift-Giving Statistics 2024', 'What People Really Want for Christmas']
+      },
+      {
+        name: 'how-to',
+        description: 'Educational content for long-tail keyword traffic and decision-making',
+        color: '#06B6D4',
+        trafficType: 'Long-tail',
+        examples: ['How to Wrap Gifts Like a Pro', 'How to Choose a Wedding Gift']
+      },
+      {
+        name: 'comparison',
+        description: 'Comparison content for decision-making traffic and affiliate revenue',
+        color: '#84CC16',
+        trafficType: 'Decision',
+        examples: ['Gift Cards vs Physical Gifts', 'Amazon vs Etsy for Gifts']
+      },
+      {
+        name: 'trending',
+        description: 'Viral and current events content for social media amplification',
+        color: '#EC4899',
+        trafficType: 'Viral',
+        examples: ['TikTok Viral Gifts 2024', 'Gifts Inspired by Popular TV Shows']
       }
     ];
 
     res.json({
-      data: contentTypes,
-      total: contentTypes.length
+      contentTypes,
+      total: contentTypes.length,
+      trafficStrategy: {
+        seo: ['gift-guide', 'seasonal', 'how-to', 'comparison'],
+        social: ['educational', 'trending', 'data-driven'],
+        affiliate: ['product-review', 'gift-guide', 'comparison'],
+        authority: ['data-driven', 'educational']
+      }
     });
   } catch (error) {
     console.error('Error fetching content types:', error);
@@ -74,10 +101,15 @@ router.put('/', authenticateToken, checkBrightGiftAccess, async (req, res) => {
 
     // In a real implementation, you would save this to the database
     // For now, we'll just return the updated content types
+    const updatedContentTypes = contentTypes || [
+      'gift-guide', 'seasonal', 'educational', 'product-review', 
+      'data-driven', 'how-to', 'comparison', 'trending'
+    ];
+
     res.json({
-      data: contentTypes,
       message: 'Content types updated successfully',
-      total: contentTypes.length
+      contentTypes: updatedContentTypes,
+      total: updatedContentTypes.length
     });
   } catch (error) {
     console.error('Error updating content types:', error);
