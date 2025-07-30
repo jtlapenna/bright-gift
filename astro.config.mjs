@@ -16,5 +16,6 @@ export default defineConfig({
     ssr: {
       noExternal: ['marked']
     }
-  }
+  },
+  publicDir: 'public', // Add this line to ensure public/ folder is copied to build output
 });
