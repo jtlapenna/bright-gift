@@ -28,6 +28,7 @@ category: gift-guide
 readTime: 4
 featured: true
 draft: false
+affiliate_disclosure: true
 affiliateLinks:
   - text: The Midnight Library by Matt Haig
     url: 'https://bookshop.org/a/brightgift/9780525559474'
@@ -47,6 +48,8 @@ affiliateLinks:
 contentType: gift-guide
 status: published
 ---
+
+*This post contains affiliate links. We may earn a commission if you click through and make a purchase, at no additional cost to you.*
 
 ## Why Book Lovers Make the Best Gift Recipients
 
