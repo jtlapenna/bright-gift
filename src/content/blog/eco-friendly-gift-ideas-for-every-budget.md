@@ -43,17 +43,17 @@ Choosing sustainable gifts isn't just a trend—it's a meaningful way to show yo
 ## Eco-Friendly Gift Ideas Under $25
 
 ### 1. Reusable Shopping Bags
-<a href="https://www.amazon.com/s?k=reusable+shopping+bags&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=reusable+shopping+bags&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $10–$20  
 Durable, foldable, and available in fun designs, reusable shopping bags help cut down on single-use plastic. They're a practical gift for anyone who wants to live more sustainably.
 
 ### 2. Bamboo Toothbrush Set
-<a href="https://www.amazon.com/s?k=bamboo+toothbrush&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=bamboo+toothbrush&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $8–$15  
 A simple swap for a greener routine, bamboo toothbrushes are biodegradable and come in recyclable packaging.
 
 ### 3. Stainless Steel Straws
-<a href="https://www.amazon.com/s?k=stainless+steel+straws&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=stainless+steel+straws&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $7–$18  
 Help friends ditch single-use plastic straws with a set of reusable stainless steel straws, often with a handy cleaning brush included.
 
@@ -62,17 +62,17 @@ Help friends ditch single-use plastic straws with a set of reusable stainless st
 ## Sustainable Gifts for $25–$50
 
 ### 4. Beeswax Food Wraps
-<a href="https://www.amazon.com/s?k=beeswax+food+wraps&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=beeswax+food+wraps&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $15–$30  
 A reusable alternative to plastic wrap, beeswax wraps keep food fresh and reduce kitchen waste.
 
 ### 5. Eco-Friendly Water Bottle
-<a href="https://www.amazon.com/s?k=eco+friendly+water+bottle&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=eco+friendly+water+bottle&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $20–$40  
 Stainless steel or glass water bottles are stylish, durable, and help cut down on plastic waste.
 
 ### 6. Organic Cotton Tote Bag
-<a href="https://www.amazon.com/s?k=organic+cotton+tote+bag&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=organic+cotton+tote+bag&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $15–$30  
 Perfect for groceries, books, or everyday essentials, organic cotton totes are a sustainable staple.
 
@@ -81,17 +81,17 @@ Perfect for groceries, books, or everyday essentials, organic cotton totes are a
 ## Green Gift Ideas Over $50
 
 ### 7. Solar-Powered Phone Charger
-<a href="https://www.amazon.com/s?k=solar+phone+charger&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=solar+phone+charger&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $30–$70  
 Harness the power of the sun with a portable solar charger—great for travelers, campers, or anyone on the go.
 
 ### 8. Indoor Herb Garden Kit
-<a href="https://www.amazon.com/s?k=indoor+herb+garden+kit&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=indoor+herb+garden+kit&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $25–$60  
 Grow fresh herbs year-round with a compact, easy-to-use kit. It's a fun and sustainable way to add flavor to any kitchen.
 
 ### 9. Compost Bin for Kitchen
-<a href="https://www.amazon.com/s?k=compost+bin+for+kitchen&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=compost+bin+for+kitchen&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $20–$50  
 Encourage eco-friendly habits with a stylish countertop compost bin for food scraps and coffee grounds.
 

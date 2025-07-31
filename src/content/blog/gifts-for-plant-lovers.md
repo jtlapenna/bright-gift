@@ -94,22 +94,22 @@ Plant people are typically patient, nurturing, and appreciate the beauty of grow
 ## Rare and Unique Plants (Under $75)
 
 ### 1. Monstera Adansonii (Swiss Cheese Vine)
-<a href="https://www.amazon.com/s?k=monstera+adansonii&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=monstera+adansonii&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $25–45  
 A stunning trailing plant with distinctive holey leaves. Perfect for hanging planters or climbing up moss poles, this plant is relatively easy to care for and adds a tropical feel to any space.
 
 ### 2. Pilea Peperomioides (Chinese Money Plant)
-<a href="https://www.amazon.com/s?k=pilea+peperomioides&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=pilea+peperomioides&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $20–35  
 Also known as the "Pancake Plant," this unique specimen has round, coin-like leaves that make it a conversation starter. It's easy to care for, propagates easily, and makes a perfect gift for sharing with friends.
 
 ### 3. String of Pearls
-<a href="https://www.amazon.com/s?k=string+of+pearls+succulent&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=string+of+pearls+succulent&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $15–30  
 This trailing succulent is perfect for hanging planters and adds a unique texture to any plant collection. Its bead-like leaves cascade beautifully and it's surprisingly low-maintenance.
 
 ### 4. ZZ Plant (Zamioculcas zamiifolia)
-<a href="https://www.amazon.com/s?k=zz+plant&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=zz+plant&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $25–50  
 Known for its glossy, dark green leaves and incredible resilience, the ZZ plant is perfect for plant lovers who want something that's nearly impossible to kill. It thrives in low light and requires minimal watering.
 
@@ -118,22 +118,22 @@ Known for its glossy, dark green leaves and incredible resilience, the ZZ plant 
 ## Stylish Plant Accessories (Under $75)
 
 ### 5. Ceramic Plant Pot Set
-<a href="https://www.amazon.com/s?k=ceramic+plant+pots&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=ceramic+plant+pots&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $30–60  
 Beautiful planters can transform even the most common plants into stunning displays. Look for sets with drainage holes and saucers to make plant care easier. Terracotta, ceramic, or modern geometric designs are all popular choices.
 
 ### 6. Plant Stand and Shelf Set
-<a href="https://www.amazon.com/s?k=plant+stand+shelf&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=plant+stand+shelf&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $40–70  
 Help plant lovers display their collection with stylish stands and shelves. Multi-tiered options are perfect for maximizing space and creating visual interest. Look for bamboo, metal, or wooden designs.
 
 ### 7. Decorative Watering Can
-<a href="https://www.amazon.com/s?k=watering+can+plants&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=watering+can+plants&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $25–45  
 A beautiful watering can makes the daily care routine more enjoyable. Look for options with fine mist settings for plants that prefer humidity, or elegant designs that double as home decor.
 
 ### 8. Plant Mister/Sprayer
-<a href="https://www.amazon.com/s?k=plant+mister+sprayer&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=plant+mister+sprayer&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $15–30  
 Many plants love humidity, and a good mister is essential for tropical plants. Look for continuous spray bottles or decorative options that fit the aesthetic.
 
@@ -142,22 +142,22 @@ Many plants love humidity, and a good mister is essential for tropical plants. L
 ## Plant Care Tools (Under $75)
 
 ### 9. Professional Pruning Shears Set
-<a href="https://www.amazon.com/s?k=pruning+shears+plants&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=pruning+shears+plants&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $20–40  
 High-quality pruning shears are essential for maintaining healthy plants. Look for stainless steel options that will last for years and include different sizes for various plant types.
 
 ### 10. Soil Moisture Meter
-<a href="https://www.amazon.com/s?k=soil+moisture+meter&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=soil+moisture+meter&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $15–25  
 These handy tools help prevent over or under-watering by measuring soil moisture levels. They're especially helpful for beginners or for plants with specific watering needs.
 
 ### 11. Plant Care Tool Kit
-<a href="https://www.amazon.com/s?k=plant+care+tool+kit&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=plant+care+tool+kit&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $25–50  
 Complete kits often include pruning shears, watering can, mister, soil scoop, and other essential tools. Perfect for plant lovers who are just starting their collection.
 
 ### 12. Plant Labels and Markers
-<a href="https://www.amazon.com/s?k=plant+labels+markers&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=plant+labels+markers&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $10–25  
 Help plant lovers keep track of their collection with stylish plant labels. These are especially useful for those who grow from seed or have many different varieties.
 
@@ -166,12 +166,12 @@ Help plant lovers keep track of their collection with stylish plant labels. Thes
 ## Books and Educational Resources (Under $75)
 
 ### 13. Plant Identification and Care Guide
-<a href="https://www.amazon.com/s?k=plant+care+book&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=plant+care+book&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $20–35  
 Field guides and comprehensive care books help plant lovers learn more about their collection and discover new species. Look for books with beautiful photography and detailed care instructions.
 
 ### 14. Plant Journal or Planner
-<a href="https://www.amazon.com/s?k=plant+journal+planner&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=plant+journal+planner&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $15–30  
 Beautiful journals for tracking plant growth, care schedules, and observations make thoughtful gifts for detail-oriented plant lovers. Many include care tips and space for photos.
 
