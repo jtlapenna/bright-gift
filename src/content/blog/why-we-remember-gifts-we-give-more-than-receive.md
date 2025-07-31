@@ -28,7 +28,7 @@ draft: false
 status: published
 featured: false
 keywords: 'giving, gift, more, that, than, this, memory, receiving, social, remember'
-category: gift-guides
+category: psychology
 ---
 
 # Why We Remember Gifts We Give More Than Receive

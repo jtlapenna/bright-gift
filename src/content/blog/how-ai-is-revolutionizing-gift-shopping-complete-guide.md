@@ -29,7 +29,7 @@ status: published
 keywords: >-
   gift, your, with, gifts, suggestions, recommendations, tools, that,
   generators, based
-category: gift-guides
+category: technology
 ---
 
 ![Illustration of a modern gift box with AI circuit patterns, surrounded by gift icons like a smartwatch, book, ring, and plant, in BrightGift brand colors.](/images/blog/ai-gift-shopping-banner.webp)

@@ -18,7 +18,7 @@ tags:
   - what people want for gifts
   - gift giving research
 author: BrightGift Team
-category: Data-Driven
+category: data-driven
 contentType: data-driven
 readTime: 8
 metaDescription: 'Gift Giving Statistics: What People Really Want in 2024'
