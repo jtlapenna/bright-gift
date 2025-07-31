@@ -1,35 +1,51 @@
 ---
-title: "25 Thoughtful Gifts for Book Lovers Under $50"
-description: "Discover perfect gifts for the bibliophiles in your life, from cozy reading accessories to must-read books that will delight any bookworm."
-image: "/images/blog/gifts-for-book-lovers-banner.webp"
-ogImage: "/images/blog/gifts-for-book-lovers-og.webp"
-socialImage: "/images/blog/gifts-for-book-lovers-social.webp"
-date: "2024-12-19"
-metaTitle: "25 Best Gifts for Book Lovers Under $50 | Perfect for Bookworms"
-metaDescription: "Find the perfect gift for book lovers with our curated list of 25 thoughtful presents under $50. From cozy reading accessories to must-read books."
-keywords: ["gifts for book lovers", "book lover gifts", "reading gifts", "literary gifts", "book club gifts", "reading accessories"]
-tags: ["book-lovers", "under-50", "reading", "literary", "accessories"]
-category: "gift-guide"
-readTime: 8
+title: 25 Thoughtful Gifts for Book Lovers Under $50
+description: >-
+  Discover perfect gifts for the bibliophiles in your life, from cozy reading
+  accessories to must-read books that will delight any bookworm.
+image: /images/blog/gifts-for-book-lovers-banner.webp
+ogImage: /images/blog/gifts-for-book-lovers-og.webp
+socialImage: /images/blog/gifts-for-book-lovers-social.webp
+date: '2024-12-19'
+metaTitle: 25 Best Gifts for Book Lovers Under $50 | Perfect for Bookworms
+metaDescription: >-
+  Find the perfect gift for book lovers with our curated list of 25 thoughtful
+  presents under $50. From cozy reading accessories to must-read books.
+keywords:
+  - gifts for book lovers
+  - book lover gifts
+  - reading gifts
+  - literary gifts
+  - book club gifts
+  - reading accessories
+tags:
+  - book-lovers
+  - under-50
+  - reading
+  - literary
+  - accessories
+category: gift-guide
+readTime: 4
 featured: true
 draft: false
 affiliateLinks:
-  - text: "The Midnight Library by Matt Haig"
-    url: "https://bookshop.org/a/brightgift/9780525559474"
-    platform: "bookshop"
-  - text: "Cozy Reading Blanket"
-    url: "https://www.amazon.com/s?k=reading+blanket+cozy&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "Book Lover's Candle Set"
-    url: "https://www.amazon.com/s?k=book+lover+candle+set&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "Personalized Bookmark Set"
-    url: "https://www.amazon.com/s?k=personalized+bookmark+set&tag=bright-gift-20"
-    platform: "amazon"
-  - text: "Reading Journal"
-    url: "https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20"
-    platform: "amazon"
-contentType: "gift-guide"
+  - text: The Midnight Library by Matt Haig
+    url: 'https://bookshop.org/a/brightgift/9780525559474'
+    platform: bookshop
+  - text: Cozy Reading Blanket
+    url: 'https://www.amazon.com/s?k=reading+blanket+cozy&tag=bright-gift-20'
+    platform: amazon
+  - text: Book Lover's Candle Set
+    url: 'https://www.amazon.com/s?k=book+lover+candle+set&tag=bright-gift-20'
+    platform: amazon
+  - text: Personalized Bookmark Set
+    url: 'https://www.amazon.com/s?k=personalized+bookmark+set&tag=bright-gift-20'
+    platform: amazon
+  - text: Reading Journal
+    url: 'https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20'
+    platform: amazon
+contentType: gift-guide
+status: published
 ---
 
 ## Why Book Lovers Make the Best Gift Recipients
@@ -43,17 +59,17 @@ Book lovers are some of the most thoughtful and appreciative gift recipients you
 ## Must-Read Books (Under $25)
 
 ### 1. The Midnight Library by Matt Haig
-<a href="https://bookshop.org/a/brightgift/9780525559474" class="amazon-link" target="_blank" rel="noopener">View on Bookshop.org</a>
+<a href="https://bookshop.org/a/brightgift/9780525559474" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Bookshop.org</a>
 **Price Range:** $15-20  
 A beautiful novel about infinite possibilities and the choices that make up a life. Perfect for anyone who loves thought-provoking fiction with heart.
 
 ### 2. Atomic Habits by James Clear
-<a href="https://bookshop.org/a/brightgift/9780735211292" class="amazon-link" target="_blank" rel="noopener">View on Bookshop.org</a>
+<a href="https://bookshop.org/a/brightgift/9780735211292" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Bookshop.org</a>
 **Price Range:** $18-25  
 An essential read for anyone interested in personal development and building better habits. Great for non-fiction lovers.
 
 ### 3. The Seven Husbands of Evelyn Hugo by Taylor Jenkins Reid
-<a href="https://bookshop.org/a/brightgift/9781501161933" class="amazon-link" target="_blank" rel="noopener">View on Bookshop.org</a>
+<a href="https://bookshop.org/a/brightgift/9781501161933" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Bookshop.org</a>
 **Price Range:** $15-20  
 A captivating historical fiction novel that's perfect for fans of strong female characters and Hollywood glamour.
 
@@ -62,17 +78,17 @@ A captivating historical fiction novel that's perfect for fans of strong female 
 ## Cozy Reading Accessories (Under $30)
 
 ### 4. Cozy Reading Blanket
-<a href="https://www.amazon.com/s?k=reading+blanket+cozy&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=reading+blanket+cozy&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $20-30  
 A soft, warm blanket perfect for curling up with a good book. Look for ones with book-themed designs or literary quotes.
 
 ### 5. Book Lover's Candle Set
-<a href="https://www.amazon.com/s?k=book+lover+candle+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=book+lover+candle+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $15-25  
 Candles with book-inspired scents like "Old Books," "Coffee Shop," or "Library." Creates the perfect reading atmosphere.
 
 ### 6. Personalized Bookmark Set
-<a href="https://www.amazon.com/s?k=personalized+bookmark+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=personalized+bookmark+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $10-20  
 Personalized bookmarks with their name, favorite quotes, or literary designs. A thoughtful, personalized touch.
 
@@ -81,17 +97,17 @@ Personalized bookmarks with their name, favorite quotes, or literary designs. A 
 ## Reading Enhancement Tools (Under $40)
 
 ### 7. LED Reading Light
-<a href="https://www.amazon.com/s?k=led+reading+light+clip&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=led+reading+light+clip&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $15-25  
 A clip-on reading light that attaches to books or e-readers. Perfect for reading in bed or low-light situations.
 
 ### 8. Book Stand and Holder
-<a href="https://www.amazon.com/s?k=book+stand+holder&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=book+stand+holder&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $20-35  
 A sturdy book stand that holds books open hands-free. Great for cooking from cookbooks or reading while eating.
 
 ### 9. Reading Journal
-<a href="https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $12-18  
 A beautiful journal for tracking books read, favorite quotes, and reading goals. Perfect for organized book lovers.
 
@@ -100,17 +116,17 @@ A beautiful journal for tracking books read, favorite quotes, and reading goals.
 ## Literary-Themed Gifts (Under $50)
 
 ### 10. Book-Themed Jewelry
-<a href="https://www.amazon.com/s?k=book+themed+jewelry&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=book+themed+jewelry&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $20-40  
 Necklaces, earrings, or bracelets featuring book charms, literary quotes, or favorite book covers.
 
 ### 11. Literary Tote Bag
-<a href="https://www.amazon.com/s?k=literary+tote+bag+book+quotes&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=literary+tote+bag+book+quotes&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $15-25  
 A sturdy tote bag with book quotes or literary designs. Perfect for carrying books, groceries, or everyday items.
 
 ### 12. Book Club Subscription
-<a href="https://bookshop.org/search?keywords=book+club+subscription&affiliate=brightgift" class="amazon-link" target="_blank" rel="noopener">View on Bookshop.org</a>
+<a href="https://bookshop.org/search?keywords=book+club+subscription&affiliate=brightgift" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Bookshop.org</a>
 **Price Range:** $30-50  
 A monthly book subscription service that delivers curated books based on their preferences.
 
