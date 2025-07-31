@@ -237,10 +237,6 @@ BeautyStat's Universal C Serum is a game-changer for brightening skin and reduci
 - [ ] Set `target="_blank" rel="noopener"` for all links
 - [ ] Verify product descriptions are accurate and helpful
 
-### Disclosure Statement
-```markdown
-*As an Amazon Associate and Afrofiliate partner, we earn from qualifying purchases. This post contains affiliate links, which means we may earn a commission if you click through and make a purchase, at no additional cost to you.*
-```
 
 ---
 
