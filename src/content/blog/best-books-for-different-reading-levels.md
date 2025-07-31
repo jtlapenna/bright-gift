@@ -27,7 +27,7 @@ tags:
   - bookworms
   - beginners
   - reading
-category: gift-guide
+category: gift-guides
 readTime: 12
 featured: true
 draft: false

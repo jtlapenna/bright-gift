@@ -34,7 +34,7 @@ status: published
 keywords: >-
   that, relationships, social, your, connection, people, create, with,
   strengthen, this
-category: psychology
+category: educational
 ---
 
 # The Science of Human Connection: Why We Need Each Other

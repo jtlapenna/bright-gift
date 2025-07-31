@@ -5,6 +5,7 @@ description: >-
   want. From spending patterns to preferred gift types, learn what the research
   reveals about modern gift giving trends.
 date: '2024-07-22'
+pubDate: '2025-07-31'
 image: >-
   /images/blog/gift-giving-statistics-what-people-really-want/gift-giving-statistics-what-people-really-want-banner.webp
 ogImage: >-

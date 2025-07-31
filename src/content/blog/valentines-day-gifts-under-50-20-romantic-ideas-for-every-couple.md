@@ -7,7 +7,7 @@ description: >-
   find the perfect way to show your love without breaking the bank.
 author: "Bright Gift Team"
 date: "2025-01-15"
-pubDate: "2025-01-15"
+pubDate: "2025-07-31"
 image: "/images/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/valentines-day-gifts-under-50-banner.webp"
 ogImage: "/images/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/valentines-day-gifts-under-50-og.webp"
 socialImage: "/images/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/valentines-day-gifts-under-50-social.webp"

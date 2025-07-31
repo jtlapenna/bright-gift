@@ -28,6 +28,7 @@ tags:
   - spa-gifts
 readTime: 8
 date: '2025-07-31'
+pubDate: '2025-07-31'
 draft: false
 status: published
 featured: true

@@ -24,7 +24,7 @@ tags:
   - reading
   - literary
   - accessories
-category: gift-guide
+category: gift-guides
 readTime: 4
 featured: true
 draft: false

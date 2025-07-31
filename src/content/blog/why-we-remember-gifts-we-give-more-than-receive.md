@@ -5,7 +5,7 @@ description: >-
   more vividly than the ones we receive, and what this reveals about human
   nature.
 author: Bright Gift Team
-pubDate: '2025-07-29'
+pubDate: '2025-07-31'
 image: /images/blog/psychology-gift-giving-memory-banner.webp
 tags:
   - psychology
@@ -28,7 +28,7 @@ draft: false
 status: published
 featured: false
 keywords: 'giving, gift, more, that, than, this, memory, receiving, social, remember'
-category: psychology
+category: educational
 ---
 
 # Why We Remember Gifts We Give More Than Receive

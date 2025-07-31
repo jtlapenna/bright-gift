@@ -25,7 +25,7 @@ tags:
   - christmas
   - gift-guide
   - reading
-category: gift-guide
+category: gift-guides
 readTime: 10
 featured: true
 draft: false
