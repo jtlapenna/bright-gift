@@ -123,9 +123,8 @@ Endorf's mushroom-based wellness supplements support mental clarity and stress m
 A heating pad provides relief from the muscle tension that can develop during long work sessions. This practical gift supports physical comfort and well-being.
 
 ### 14. Meditation App Subscription
-<a href="https://www.amazon.com/s?k=meditation+app+subscription&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 **Price Range:** $60-$120 annually  
-A meditation app subscription helps remote workers manage stress and maintain mental clarity. This gift supports mental health and work-life balance.
+A meditation app subscription helps remote workers manage stress and maintain mental clarity. Popular options include Headspace, Calm, and Insight Timer. These apps offer guided meditations, sleep stories, and stress management tools that support mental health and work-life balance.
 
 ### 15. Smart Water Bottle
 <a href="https://www.amazon.com/s?k=smart+water+bottle&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
@@ -224,7 +223,7 @@ A gift card for food delivery services gives remote workers the option to treat 
 **Under $50:**
 - Blue light blocking glasses + essential oil diffuser
 - Cable management system + desk organizer
-- Smart water bottle + meditation app subscription
+- Smart water bottle + desk organizer
 
 **Under $100:**
 - Webcam with ring light + wireless charging pad
@@ -255,7 +254,7 @@ A gift card for food delivery services gives remote workers the option to treat 
 ### Subscription Services
 - **Meal delivery service** for healthy workday lunches
 - **Coffee subscription** for quality beverages
-- **Wellness app subscription** for mental health support
+- **Meditation app subscription** (Headspace, Calm, Insight Timer) for mental health support
 - **Professional development platform** for skill building
 
 ---
