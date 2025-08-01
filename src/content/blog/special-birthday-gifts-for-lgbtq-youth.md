@@ -5,6 +5,7 @@ description: >-
   thoughtful, inclusive presents that celebrate identity and support their
   journey...
 date: '2024-01-15'
+pubDate: '2025-07-31'
 image: >-
   /images/blog/special-birthday-gifts-for-lgbtq-youth/special-birthday-gifts-for-lgbtq-youth-banner.webp
 ogImage: >-

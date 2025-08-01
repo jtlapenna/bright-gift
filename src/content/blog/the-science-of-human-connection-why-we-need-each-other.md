@@ -10,6 +10,7 @@ description: >-
   meaningful relationships are fundamental to our happiness, health, and overall
   wellbeing.
 date: '2025-07-29'
+pubDate: '2025-07-31'
 image: >-
   /images/blog/the-science-of-human-connection-why-we-need-each-other/the-science-of-human-connection-why-we-need-each-other-banner.webp
 ogImage: >-

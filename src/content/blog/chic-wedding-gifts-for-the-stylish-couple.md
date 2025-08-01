@@ -4,6 +4,7 @@ description: >-
   Discover chic wedding gifts for stylish couples that set them up for life
   together—browse our elegant picks!
 date: '2025-07-15'
+pubDate: '2025-07-31'
 image: >-
   /images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-banner.webp
 ogImage: >-
