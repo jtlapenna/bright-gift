@@ -47,17 +47,65 @@ function getPageUrl(page: number): string {
   }
   return url.pathname + url.search;
 }
+
+// Structured data for blog index
+const blogIndexStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Gift Ideas Blog - BrightGift",
+  "description": "Discover thoughtful gift ideas, seasonal guides, and expert tips for finding the perfect presents. Browse our curated collection of gift guides for every occasion and recipient.",
+  "url": "https://bright-gift.com/blog",
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": allContent.length,
+    "itemListElement": allContent.slice(0, 10).map((post, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "BlogPosting",
+        "headline": post.data.title,
+        "description": post.data.description,
+        "url": `https://bright-gift.com/blog/${post.slug}`,
+        "datePublished": post.data.date,
+        "author": {
+          "@type": "Organization",
+          "name": "BrightGift"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BrightGift",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://bright-gift.com/bright-gift-logo.png"
+          }
+        }
+      }
+    }))
+  }
+};
 ---
 
 <Layout 
-  title="Gift Ideas Blog - BrightGift" 
-  description="Discover thoughtful gift ideas, seasonal guides, and expert tips for finding the perfect presents for everyone in your life."
+  title="Gift Ideas Blog - Expert Gift Guides & Recommendations | BrightGift" 
+  description="Discover thoughtful gift ideas, seasonal guides, and expert tips for finding the perfect presents. Browse our curated collection of gift guides for every occasion and recipient."
+  keywords={["gift guides", "gift ideas", "birthday gifts", "holiday gifts", "gift recommendations", "gift shopping", "thoughtful gifts", "unique gifts", "gift inspiration", "gift giving", "seasonal gifts", "personalized gifts"]}
+  canonical="https://bright-gift.com/blog"
+  ogType="website"
+  twitterCard="summary_large_image"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(blogIndexStructuredData)} />
+  
   <div class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
     <!-- Hero Section -->
     <div class="w-full bg-[#FEF2D3] py-8 md:py-12 px-4 text-center shadow-lg border-t-8 border-[#FF6B6B] mb-8">
       <h1 class="text-4xl md:text-5xl font-bold font-poppins text-[#1C2E4A] mb-2">Gift Ideas Blog</h1>
-      <p class="text-lg font-inter text-[#333] mb-4 max-w-2xl mx-auto">Expert-curated gift guides, seasonal inspiration, and thoughtful ideas to help you find the perfect presents for every occasion and person.</p>
+      <p class="text-lg font-inter text-[#333] mb-4 max-w-3xl mx-auto">Expert-curated gift guides, seasonal inspiration, and thoughtful ideas to help you find the perfect presents for every occasion and person. Discover unique gift recommendations for birthdays, holidays, and special moments.</p>
+      <div class="flex flex-wrap justify-center gap-4 mt-6">
+        <span class="px-4 py-2 bg-[#FF6B6B] text-white rounded-full text-sm font-semibold">Gift Guides</span>
+        <span class="px-4 py-2 bg-[#A3E4DB] text-[#1C2E4A] rounded-full text-sm font-semibold">Seasonal Ideas</span>
+        <span class="px-4 py-2 bg-[#FFDE59] text-[#1C2E4A] rounded-full text-sm font-semibold">Budget-Friendly</span>
+        <span class="px-4 py-2 bg-[#FF6B6B] text-white rounded-full text-sm font-semibold">Unique Finds</span>
+      </div>
     </div>
 
     <!-- Content Grid -->
@@ -87,34 +135,43 @@ function getPageUrl(page: number): string {
       <!-- Posts Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {paginatedContent.map((post) => (
-          <article class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow">
+          <article class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow duration-300" itemscope itemtype="https://schema.org/BlogPosting">
             <!-- Post Image -->
             <div class="aspect-video bg-slate-200 relative overflow-hidden">
               <img 
                 src={post.data.image} 
-                alt={post.data.title}
+                alt={`${post.data.title} - Gift ideas and recommendations`}
                 class="w-full h-full object-cover"
                 loading="lazy"
+                itemprop="image"
               />
               {post.data.featured && (
                 <div class="absolute top-2 left-2 bg-coral-500 text-white text-xs px-2 py-1 rounded">
                   Featured
                 </div>
               )}
-              {post.type === 'gift-guide' && (
-                <div class="absolute top-2 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">
-                  Gift Guide
+              {post.data.category && (
+                <div class="absolute top-2 right-2 bg-[#FF6B6B] text-white text-xs px-2 py-1 rounded">
+                  {post.data.category}
                 </div>
               )}
             </div>
-
+            
             <!-- Post Content -->
             <div class="p-6">
-              <!-- Category and Date -->
-              <div class="flex items-center gap-2 text-sm text-slate-500 mb-2">
-                <span class="capitalize">{post.type.replace('-', ' ')}</span>
-                <span>•</span>
-                <time datetime={post.data.date}>
+              <h2 class="text-xl font-bold mb-2 text-[#1C2E4A] hover:text-[#FF6B6B] transition-colors" itemprop="headline">
+                <a href={`/blog/${post.slug}`} class="block" aria-label={`Read ${post.data.title} gift guide`}>
+                  {post.data.title}
+                </a>
+              </h2>
+              
+              <p class="text-gray-600 mb-4 line-clamp-3" itemprop="description">
+                {post.data.description}
+              </p>
+              
+              <!-- Post Meta -->
+              <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                <time datetime={post.data.date} itemprop="datePublished">
                   {new Date(post.data.date).toLocaleDateString('en-US', { 
                     year: 'numeric', 
                     month: 'long', 
@@ -122,45 +179,22 @@ function getPageUrl(page: number): string {
                   })}
                 </time>
                 {post.data.readTime && (
-                  <>
-                    <span>•</span>
-                    <span>{post.data.readTime} min read</span>
-                  </>
+                  <span class="flex items-center">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    {post.data.readTime} min read
+                  </span>
                 )}
               </div>
-
-              <!-- Title -->
-              <h2 class="text-xl font-semibold text-slate-900 mb-3 line-clamp-2">
-                <a href={`/blog/${post.slug}`} class="hover:text-coral-600 transition-colors">
-                  {post.data.title}
-                </a>
-              </h2>
-
-              <!-- Description -->
-              <p class="text-slate-600 mb-4 line-clamp-3">
-                {post.data.description}
-              </p>
-
-              <!-- Tags -->
-              {post.data.tags && post.data.tags.length > 0 && (
-                <div class="flex flex-wrap gap-1 mb-4">
-                  {post.data.tags.slice(0, 3).map((tag) => (
-                    <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">
-                      {tag}
-                    </span>
-                  ))}
-                  {post.data.tags.length > 3 && (
-                    <span class="text-xs text-slate-500">+{post.data.tags.length - 3} more</span>
-                  )}
-                </div>
-              )}
-
+              
               <!-- Read More Link -->
               <a 
-                href={`/blog/${post.slug}`}
-                class="inline-flex items-center text-coral-600 hover:text-coral-700 font-medium text-sm transition-colors"
+                href={`/blog/${post.slug}`} 
+                class="inline-flex items-center text-[#FF6B6B] font-semibold hover:text-[#ff4c4c] transition-colors"
+                aria-label={`Read complete ${post.data.title} gift guide`}
               >
-                Read more
+                Read Complete Guide
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
@@ -171,35 +205,45 @@ function getPageUrl(page: number): string {
       </div>
 
       <!-- Pagination -->
-      {allContent.length > postsPerPage && (
+      {totalPages > 1 && (
         <div class="mt-12 flex justify-center">
-          <nav class="flex items-center gap-2">
-            {validPage > 1 ? (
-              <a href={getPageUrl(validPage - 1)}>
-                <button class="px-3 py-2 text-sm bg-white border border-slate-300 rounded-md hover:bg-slate-50 transition-colors">
-                  Previous
-                </button>
-              </a>
-            ) : (
-              <button class="px-3 py-2 text-sm bg-slate-100 border border-slate-300 rounded-md text-slate-400 cursor-not-allowed" disabled>
+          <nav class="flex items-center space-x-2" aria-label="Blog pagination">
+            {validPage > 1 && (
+              <a 
+                href={getPageUrl(validPage - 1)} 
+                class="px-4 py-2 text-sm font-medium text-[#1C2E4A] bg-white border border-slate-300 rounded-lg hover:bg-slate-50 transition-colors"
+                aria-label="Previous page"
+              >
                 Previous
-              </button>
+              </a>
             )}
             
-            <span class="px-3 py-2 text-sm text-slate-700">
-              Page {validPage} of {totalPages}
-            </span>
+            {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+              const page = Math.max(1, Math.min(totalPages - 4, validPage - 2)) + i;
+              return (
+                <a 
+                  href={getPageUrl(page)} 
+                  class={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
+                    page === validPage 
+                      ? 'bg-[#FF6B6B] text-white' 
+                      : 'text-[#1C2E4A] bg-white border border-slate-300 hover:bg-slate-50'
+                  }`}
+                  aria-label={`Page ${page}`}
+                  aria-current={page === validPage ? 'page' : undefined}
+                >
+                  {page}
+                </a>
+              );
+            })}
             
-            {validPage < totalPages ? (
-              <a href={getPageUrl(validPage + 1)}>
-                <button class="px-3 py-2 text-sm bg-white border border-slate-300 rounded-md hover:bg-slate-50 transition-colors">
-                  Next
-                </button>
-              </a>
-            ) : (
-              <button class="px-3 py-2 text-sm bg-slate-100 border border-slate-300 rounded-md text-slate-400 cursor-not-allowed" disabled>
+            {validPage < totalPages && (
+              <a 
+                href={getPageUrl(validPage + 1)} 
+                class="px-4 py-2 text-sm font-medium text-[#1C2E4A] bg-white border border-slate-300 rounded-lg hover:bg-slate-50 transition-colors"
+                aria-label="Next page"
+              >
                 Next
-              </button>
+              </a>
             )}
           </nav>
         </div>
