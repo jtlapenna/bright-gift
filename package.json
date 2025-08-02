@@ -23,7 +23,9 @@
     "create-blog": "node scripts/create-blog-automation.js",
     "create-blog:gift-guide": "node scripts/create-blog-automation.js --type gift-guide",
     "create-blog:educational": "node scripts/create-blog-automation.js --type educational",
-    "create-blog:data-driven": "node scripts/create-blog-automation.js --type data-driven"
+    "create-blog:data-driven": "node scripts/create-blog-automation.js --type data-driven",
+    "monitor:404s": "node scripts/clean-404-posts.js",
+    "remove:md-urls": "node scripts/remove-md-urls-from-gsc.js"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.0",
