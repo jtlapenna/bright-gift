@@ -113,9 +113,9 @@ const faqData = {
 
 <Layout 
 	title="AI Gift Idea Generator | Find the Perfect Gift in Seconds"
-	description="Find the perfect gift in seconds with our AI-powered gift idea generator. Personalized recommendations for any recipient, budget, and occasion. Try our free AI gift finder today!"
+	description="Discover personalized gift ideas instantly with our AI-powered gift finder. Get creative recommendations for any person, budget, or occasion. Try our free AI gift generator today!"
 	image="/images/homepage-banner.webp"
-	keywords={["gift ideas", "AI gifts", "personalized gifts", "gift finder", "gift recommendations", "birthday gifts", "holiday gifts", "AI gift search", "AI gift matching", "AI-powered gift tool"]}
+	keywords={["gift ideas", "AI gifts", "personalized gifts", "gift finder", "gift recommendations", "birthday gifts", "holiday gifts", "AI gift search", "AI gift matching", "AI-powered gift tool", "gift suggestions", "unique gift ideas", "thoughtful gifts", "gift guide", "personalized gift recommendations", "AI gift generator", "gift finder tool", "creative gift ideas", "gift shopping", "gift giving"]}
 	canonical="https://bright-gift.com"
 	ogType="website"
 	twitterCard="summary_large_image"
@@ -322,12 +322,12 @@ const faqData = {
 				<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 					{allContent.length > 0 ? (
 						allContent.slice(0, 6).map(item => (
-							<article class="bg-[#A3E4DB] rounded-2xl shadow-lg overflow-hidden flex flex-col" tabindex="0" aria-label={`Guide: ${item.data.title}`}> 
-								<img src={item.data.image} alt={item.data.title} class="h-40 w-full object-cover rounded-t-xl shadow">
+							<article class="bg-[#A3E4DB] rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300" tabindex="0" aria-label={`Gift Guide: ${item.data.title}`}> 
+								<img src={item.data.image} alt={`${item.data.title} - Gift ideas and recommendations`} class="h-40 w-full object-cover rounded-t-xl shadow">
 								<div class="p-6 flex-1 flex flex-col">
 									<h3 class="font-bold text-lg mb-2 font-poppins text-[#1C2E4A]">{item.data.title}</h3>
 									<p class="text-[#333] mb-4 flex-1 font-inter">{item.data.description}</p>
-									<a href={`/blog/${item.slug}`} class="mt-auto inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-2 px-4 rounded-full transition-colors font-poppins shadow" aria-label={`Read ${item.data.title} guide`}>Read Guide</a>
+									<a href={`/blog/${item.slug}`} class="mt-auto inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-2 px-4 rounded-full transition-colors font-poppins shadow" aria-label={`Read complete ${item.data.title} gift guide with detailed recommendations`}>Read Complete Guide</a>
 								</div>
 							</article>
 						))
@@ -342,20 +342,51 @@ const faqData = {
 					)}
 				</div>
 				<div class="text-center mt-10">
-					<a href="/blog" class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins shadow" aria-label="Browse all gift guides">Browse all gift guides</a>
+					<a href="/blog" class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins shadow" aria-label="Browse all gift guides and blog posts">Browse All Gift Guides & Blog Posts</a>
 				</div>
 			</section>
 		</div>
 
 		<!-- About the Tool / SEO Content Block -->
-		<section id="about-tool" class="py-16 px-4 max-w-3xl mx-auto text-center" itemscope itemtype="https://schema.org/WebPage">
-			<h2 class="text-2xl font-bold mb-4 font-poppins text-[#1C2E4A]" itemprop="headline">About the AI Gift Idea Generator</h2>
-			<p class="text-[#333] mb-6 font-inter" itemprop="description">
-				Bright Gift's AI Gift Idea Generator helps you find the perfect present for anyone, instantly. Our AI-powered gift finder analyzes your input and delivers creative, relevant gift ideas in seconds. Experience the future of gift shopping with AI-driven recommendations.
-			</p>
-			<a href="#tool" class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins text-lg shadow" aria-label="Try the AI Gift Finder now">
-				Try the AI Gift Finder
-			</a>
+		<section id="about-tool" class="py-16 px-4 max-w-4xl mx-auto text-center" itemscope itemtype="https://schema.org/WebPage">
+			<h2 class="text-3xl font-bold mb-6 font-poppins text-[#1C2E4A]" itemprop="headline">About the AI Gift Idea Generator</h2>
+			<div class="grid md:grid-cols-2 gap-8 text-left">
+				<div>
+					<h3 class="text-xl font-semibold mb-3 text-[#1C2E4A]">How Our AI Gift Finder Works</h3>
+					<p class="text-[#333] mb-4 font-inter leading-relaxed">
+						Bright Gift's AI Gift Idea Generator uses advanced machine learning to analyze your recipient's interests, personality, and preferences. Our AI-powered gift finder processes your input in real-time and delivers creative, personalized gift recommendations that match your budget and occasion.
+					</p>
+					<p class="text-[#333] font-inter leading-relaxed">
+						Unlike generic gift lists, our AI considers the unique relationship between you and your recipient, suggesting thoughtful presents that create meaningful connections and lasting memories.
+					</p>
+				</div>
+				<div>
+					<h3 class="text-xl font-semibold mb-3 text-[#1C2E4A]">Why Choose AI-Powered Gift Recommendations?</h3>
+					<ul class="text-[#333] font-inter leading-relaxed space-y-2">
+						<li class="flex items-start">
+							<span class="text-[#FF6B6B] mr-2">✓</span>
+							<span>Personalized suggestions based on real interests</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-[#FF6B6B] mr-2">✓</span>
+							<span>Budget-friendly options for every price range</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-[#FF6B6B] mr-2">✓</span>
+							<span>Creative ideas you might not find elsewhere</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-[#FF6B6B] mr-2">✓</span>
+							<span>Time-saving recommendations in seconds</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="mt-8">
+				<a href="#tool" class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins text-lg shadow" aria-label="Try the AI Gift Finder now">
+					Try the AI Gift Finder
+				</a>
+			</div>
 		</section>
 
 		<!-- FAQ Section -->
