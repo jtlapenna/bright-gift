@@ -28,11 +28,20 @@ export async function GET() {
   });
 
   // Exclude specific slugs/IDs from sitemap (404s in GSC)
-  const excludedBlogSlugs = ['sample-post', 'handmade-gifts'];
+  const excludedBlogSlugs = [
+    'sample-post', 
+    'handmade-gifts',
+    'placeholder',
+    'test',
+    'draft'
+  ];
 
   // Only include real, published blog posts, excluding problematic slugs
   const blogUrls = blogPosts
-    .filter(post => !excludedBlogSlugs.includes(post.id.replace('.md', '')))
+    .filter(post => {
+      const slug = post.id.replace('.md', '');
+      return !excludedBlogSlugs.some(excluded => slug.includes(excluded));
+    })
     .map(post => ({
       url: `${baseUrl}/blog/${post.id.replace('.md', '')}/`,
       lastmod: new Date(post.data.date).toISOString(),
