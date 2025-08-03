@@ -146,122 +146,244 @@ const faqData = {
 
 		<!-- Tool Section -->
 		<section id="tool" class="pt-[4.8rem] py-20 px-4">
-			<div class="max-w-2xl mx-auto bg-[#A3E4DB] p-10 rounded-2xl shadow-lg">
-				<h2 class="text-3xl font-bold text-center mb-8 font-poppins text-[#1C2E4A]">AI Gift Finder</h2>
-				<p class="text-center text-[#1C2E4A] mb-4">Powered by advanced AI, our tool finds gifts for any recipient, budget, or occasion. Try AI gift matching now!</p>
-				<form aria-label="Gift Finder Form">
-					<!-- Recipient Info -->
-					<div class="mb-4">
-						<label for="recipient" class="block font-bold mb-2 text-[#1C2E4A]">Who are you shopping for?</label>
-						<input type="text" id="recipient" name="recipient" aria-required="true" class="w-full px-4 py-3 border-2 border-[#A3E4DB] rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#FFDE59] text-[#1C2E4A]" placeholder="e.g., my 30-year-old brother">
-					</div>
+			<div class="max-w-7xl mx-auto">
+				<!-- Header with better visual hierarchy -->
+				<div class="text-center mb-10">
+					<h2 class="text-3xl md:text-4xl font-bold font-poppins text-[#1C2E4A] mb-3">AI Gift Finder</h2>
+					<p class="text-lg font-inter text-[#1C2E4A] opacity-80 max-w-4xl mx-auto leading-relaxed whitespace-nowrap">Powered by advanced AI, our tool finds gifts for any recipient, budget, or occasion. Try AI gift matching now!</p>
+				</div>
+				
+				<!-- Main form container with better visual design -->
+				<div class="bg-gradient-to-br from-[#A3E4DB] via-[#B8E8E0] to-[#A3E4DB] rounded-3xl shadow-2xl border border-white/20 overflow-hidden">
+					<div class="p-6 md:p-10">
+						<form aria-label="Gift Finder Form" class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
+							<!-- Left Column: Input Fields (5/12 width) -->
+							<div class="lg:col-span-5 space-y-6">
+								<!-- Recipient Info with enhanced styling -->
+								<div class="bg-white/80 backdrop-blur-sm rounded-xl p-5 shadow-lg border border-white/50">
+									<label for="recipient" class="block font-bold mb-2 text-[#1C2E4A] text-base flex items-center">
+										<span class="bg-[#FF6B6B] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2">1</span>
+										Who are you shopping for?
+									</label>
+									<input type="text" id="recipient" name="recipient" aria-required="true" 
+										class="w-full px-3 py-3 border-2 border-[#A3E4DB] rounded-lg bg-white/90 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 focus:border-[#FF6B6B] text-[#1C2E4A] text-base transition-all duration-200" 
+										placeholder="e.g., my 30-year-old brother">
+									<p class="text-xs text-[#1C2E4A] mt-2 opacity-75 flex items-center">
+										💡 Be specific for better recommendations
+									</p>
+								</div>
 
-					<!-- Interests -->
-					<div class="mb-4">
-						<label for="interests" class="block font-bold mb-2 text-[#1C2E4A]">What do they like?</label>
-						<input type="text" id="interests" name="interests" aria-required="true" class="w-full px-4 py-3 border-2 border-[#A3E4DB] rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#FFDE59] text-[#1C2E4A]" placeholder="e.g., hiking, sci-fi movies, craft beer">
-					</div>
+								<!-- Interests with enhanced styling -->
+								<div class="bg-white/80 backdrop-blur-sm rounded-xl p-5 shadow-lg border border-white/50">
+									<label for="interests" class="block font-bold mb-2 text-[#1C2E4A] text-base flex items-center">
+										<span class="bg-[#FF6B6B] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2">2</span>
+										What do they like?
+									</label>
+									<input type="text" id="interests" name="interests" aria-required="true" 
+										class="w-full px-3 py-3 border-2 border-[#A3E4DB] rounded-lg bg-white/90 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 focus:border-[#FF6B6B] text-[#1C2E4A] text-base transition-all duration-200" 
+										placeholder="e.g., hiking, sci-fi movies, craft beer">
+									<p class="text-xs text-[#1C2E4A] mt-2 opacity-75 flex items-center">
+										💡 Hobbies, interests, or recent life changes
+									</p>
+								</div>
 
-					<!-- Budget -->
-					<div class="mb-4">
-						<label for="budget" class="block font-bold mb-2 text-[#1C2E4A]">What's your budget?</label>
-						<select id="budget" name="budget" aria-required="true" class="w-full px-4 py-3 border-2 border-[#A3E4DB] rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#FFDE59] text-[#1C2E4A] text-gray-400">
-							<option value="25">Under $25</option>
-							<option value="50" selected>Under $50</option>
-							<option value="100">Under $100</option>
-							<option value="200">Under $200</option>
-						</select>
-					</div>
+								<!-- Budget with enhanced styling -->
+								<div class="bg-white/80 backdrop-blur-sm rounded-xl p-5 shadow-lg border border-white/50">
+									<label for="budget" class="block font-bold mb-2 text-[#1C2E4A] text-base flex items-center">
+										<span class="bg-[#FF6B6B] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2">3</span>
+										What's your budget?
+									</label>
+									<div class="relative">
+										<select id="budget" name="budget" aria-required="true" 
+											class="w-full px-4 py-3 border-2 border-[#A3E4DB] rounded-xl bg-white/90 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 focus:border-[#FF6B6B] text-[#1C2E4A] text-base transition-all duration-200 appearance-none cursor-pointer shadow-sm hover:shadow-md">
+											<option value="25" class="py-2 text-[#1C2E4A] bg-white">Under $25 - Budget-Friendly</option>
+											<option value="50" selected class="py-2 text-[#1C2E4A] bg-white">Under $50 - Sweet Spot</option>
+											<option value="100" class="py-2 text-[#1C2E4A] bg-white">Under $100 - Premium</option>
+											<option value="200" class="py-2 text-[#1C2E4A] bg-white">Under $200 - Luxury</option>
+										</select>
+										<div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+											<svg class="w-5 h-5 text-[#1C2E4A] opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+											</svg>
+										</div>
+									</div>
+									<p class="text-xs text-[#1C2E4A] mt-2 opacity-75 flex items-center">
+										💡 Higher budgets unlock more premium gift options
+									</p>
+								</div>
 
-					<!-- Style Selector as Chips -->
-					<div class="mb-6">
-						<label class="block font-bold mb-2 text-[#1C2E4A]">What's the style? (Select up to 3)</label>
-						<div class="flex flex-wrap gap-2" role="group" aria-label="Gift Style Selection">
-							<button type="button" 
-								data-style="eco-friendly"
-								class="style-chip bg-[#FFDE59] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#FFDE59] hover:bg-[#FFF9F3] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
-								aria-pressed="false">
-								🌱 Eco-Friendly
-							</button>
-							<button type="button" 
-								data-style="handmade"
-								class="style-chip bg-[#A3E4DB] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#A3E4DB] hover:bg-[#FFF9F3] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
-								aria-pressed="false">
-								🖐️ Handmade
-							</button>
-							<button type="button" 
-								data-style="funny"
-								class="style-chip bg-[#FF6B6B] text-white px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#FF6B6B] hover:bg-[#ff4c4c] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
-								aria-pressed="false">
-								🎉 Funny
-							</button>
-							<button type="button" 
-								data-style="pride-gifts"
-								class="style-chip bg-[#FFDE59] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#FFDE59] hover:bg-[#FFF9F3] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
-								aria-pressed="false">
-								🌈 Pride Gifts
-							</button>
-							<button type="button" 
-								data-style="quirky"
-								class="style-chip bg-[#A3E4DB] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#A3E4DB] hover:bg-[#FFF9F3] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
-								aria-pressed="false">
-								💡 Quirky
-							</button>
-							<button type="button" 
-								data-style="luxury"
-								class="style-chip bg-[#FF6B6B] text-white px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#FF6B6B] hover:bg-[#ff4c4c] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
-								aria-pressed="false">
-								💎 Luxury
-							</button>
-							<button type="button" 
-								data-style="techy"
-								class="style-chip bg-[#FFDE59] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#FFDE59] hover:bg-[#FFF9F3] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
-								aria-pressed="false">
-								📚 Techy
-							</button>
-							<button type="button" 
-								data-style="wellness"
-								class="style-chip bg-[#A3E4DB] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#A3E4DB] hover:bg-[#FFF9F3] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
-								aria-pressed="false">
-								💚 Wellness
-							</button>
-							<button type="button" 
-								data-style="athletics"
-								class="style-chip bg-[#FFDE59] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#FFDE59] hover:bg-[#FFF9F3] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
-								aria-pressed="false">
-								⚽ Athletics
-							</button>
-							<button type="button" 
-								data-style="beauty"
-								class="style-chip bg-[#FF6B6B] text-white px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#FF6B6B] hover:bg-[#ff4c4c] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
-								aria-pressed="false">
-								✨ Beauty
-							</button>
-							<button type="button" 
-								data-style="black-owned"
-								class="style-chip bg-[#A3E4DB] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#A3E4DB] hover:bg-[#FFF9F3] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
-								aria-pressed="false">
-								🌟 Black-Owned
-							</button>
-							<button type="button" 
-								data-style="book-lover"
-								class="style-chip bg-[#FFDE59] text-[#1C2E4A] px-4 py-2 rounded-full text-sm font-semibold border-2 border-[#FFDE59] hover:bg-[#FFF9F3] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#FFDE59] focus:ring-offset-2"
-								aria-pressed="false">
-								📖 Book Lover
-							</button>
-						</div>
-						<div class="mt-2 text-sm text-[#1C2E4A] opacity-75">
-							<span id="selection-count">0</span> of 3 styles selected
-						</div>
-					</div>
+								<!-- Quick Tips with better design -->
+								<div class="bg-gradient-to-r from-[#FFDE59]/90 to-[#FFE066]/90 backdrop-blur-sm rounded-xl p-5 shadow-lg border border-[#FFDE59]/30">
+									<h3 class="font-bold text-[#1C2E4A] mb-3 flex items-center text-base">
+										💡 Quick Tips
+									</h3>
+									<ul class="text-xs text-[#1C2E4A] space-y-1">
+										<li class="flex items-start">
+											<span class="text-[#FF6B6B] mr-2 mt-0.5">•</span>
+											<span>Include their age and relationship to you</span>
+										</li>
+										<li class="flex items-start">
+											<span class="text-[#FF6B6B] mr-2 mt-0.5">•</span>
+											<span>Mention recent life events or changes</span>
+										</li>
+										<li class="flex items-start">
+											<span class="text-[#FF6B6B] mr-2 mt-0.5">•</span>
+											<span>Think about their daily routine and hobbies</span>
+										</li>
+									</ul>
+								</div>
+							</div>
 
-					<!-- Submit Button -->
-					<div class="text-center">
-						<button type="submit" class="w-full bg-[#FF6B6B] text-white font-bold py-3 px-8 rounded-full hover:bg-[#ff4c4c] transition-colors font-poppins text-lg shadow">
-							Generate AI Gift Ideas
-						</button>
+							<!-- Right Column: Style Selector & CTA (7/12 width) -->
+							<div class="lg:col-span-7 space-y-6">
+								<!-- Style Selector with enhanced design -->
+								<div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/50">
+									<label class="block font-bold mb-4 text-[#1C2E4A] text-lg flex items-center">
+										<span class="bg-[#FF6B6B] text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2">4</span>
+										What's the style? (Select up to 3)
+									</label>
+									<div class="grid grid-cols-2 md:grid-cols-3 gap-3" role="group" aria-label="Gift Style Selection">
+										<button type="button" 
+											data-style="eco-friendly"
+											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											aria-pressed="false">
+											<div class="flex flex-col items-center">
+												<span class="text-base mb-1">🌱</span>
+												<span>Eco-Friendly</span>
+											</div>
+										</button>
+										<button type="button" 
+											data-style="handmade"
+											class="style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#A3E4DB]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											aria-pressed="false">
+											<div class="flex flex-col items-center">
+												<span class="text-base mb-1">🖐️</span>
+												<span>Handmade</span>
+											</div>
+										</button>
+										<button type="button" 
+											data-style="funny"
+											class="style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FF6B6B]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											aria-pressed="false">
+											<div class="flex flex-col items-center">
+												<span class="text-base mb-1">🎉</span>
+												<span>Funny</span>
+											</div>
+										</button>
+										<button type="button" 
+											data-style="pride-gifts"
+											class="style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FF6B6B]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											aria-pressed="false">
+											<div class="flex flex-col items-center">
+												<span class="text-base mb-1">🌈</span>
+												<span>Pride Gifts</span>
+											</div>
+										</button>
+										<button type="button" 
+											data-style="quirky"
+											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											aria-pressed="false">
+											<div class="flex flex-col items-center">
+												<span class="text-base mb-1">💡</span>
+												<span>Quirky</span>
+											</div>
+										</button>
+										<button type="button" 
+											data-style="luxury"
+											class="style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#A3E4DB]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											aria-pressed="false">
+											<div class="flex flex-col items-center">
+												<span class="text-base mb-1">💎</span>
+												<span>Luxury</span>
+											</div>
+										</button>
+										<button type="button" 
+											data-style="techy"
+											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											aria-pressed="false">
+											<div class="flex flex-col items-center">
+												<span class="text-base mb-1">📚</span>
+												<span>Techy</span>
+											</div>
+										</button>
+										<button type="button" 
+											data-style="wellness"
+											class="style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#A3E4DB]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											aria-pressed="false">
+											<div class="flex flex-col items-center">
+												<span class="text-base mb-1">💚</span>
+												<span>Wellness</span>
+											</div>
+										</button>
+										<button type="button" 
+											data-style="athletics"
+											class="style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FF6B6B]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											aria-pressed="false">
+											<div class="flex flex-col items-center">
+												<span class="text-base mb-1">⚽</span>
+												<span>Athletics</span>
+											</div>
+										</button>
+										<button type="button" 
+											data-style="beauty"
+											class="style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FF6B6B]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											aria-pressed="false">
+											<div class="flex flex-col items-center">
+												<span class="text-base mb-1">💄</span>
+												<span>Beauty</span>
+											</div>
+										</button>
+										<button type="button" 
+											data-style="black-owned"
+											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											aria-pressed="false">
+											<div class="flex flex-col items-center">
+												<span class="text-base mb-1">🌟</span>
+												<span>Black-Owned</span>
+											</div>
+										</button>
+										<button type="button" 
+											data-style="book-lover"
+											class="style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#A3E4DB]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											aria-pressed="false">
+											<div class="flex flex-col items-center">
+												<span class="text-base mb-1">📖</span>
+												<span>Book Lover</span>
+											</div>
+										</button>
+									</div>
+									<div class="mt-4 text-center">
+										<span class="text-xs text-[#1C2E4A] opacity-75 bg-white/50 px-3 py-1 rounded-full">
+											<span id="selection-count">0</span> of 3 styles selected
+										</span>
+									</div>
+								</div>
+
+								<!-- Visual Preview with enhanced design - Fixed height container -->
+								<div id="style-preview" class="bg-gradient-to-r from-[#FF6B6B]/10 to-[#FF8585]/10 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-[#FF6B6B]/20 h-16 flex items-center">
+									<div class="w-full">
+										<h3 class="font-bold text-[#1C2E4A] mb-2 flex items-center text-sm">
+											🎯 Selected Styles
+										</h3>
+										<div id="selected-styles-display" class="flex flex-wrap gap-2">
+											<span class="text-xs text-[#1C2E4A] opacity-50">No styles selected yet</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Submit Button with enhanced design -->
+								<div class="text-center">
+									<button type="submit" class="w-full bg-gradient-to-r from-[#FF6B6B] to-[#FF8585] text-white font-bold py-4 px-6 rounded-xl hover:from-[#ff4c4c] hover:to-[#ff6666] transition-all duration-300 font-poppins text-lg shadow-xl transform hover:scale-105 hover:shadow-2xl border-2 border-white/20">
+										<div class="flex items-center justify-center">
+											<span class="text-2xl mr-2">🎁</span>
+											Generate AI Gift Ideas
+										</div>
+									</button>
+								</div>
+							</div>
+						</form>
 					</div>
-				</form>
+				</div>
 			</div>
 		</section>
 
@@ -528,34 +650,58 @@ const faqData = {
 				const style = button.dataset.style;
 				const isSelected = button.getAttribute('aria-pressed') === 'true';
 				const isDisabled = !isSelected && selectedStyles.length >= 3;
-				const originalColor = originalColors[style];
 				
-				// Remove all color classes first
-				button.classList.remove(
-					'bg-[#FFDE59]', 'text-[#1C2E4A]', 'border-[#FFDE59]', 'hover:bg-[#FFF9F3]',
-					'bg-[#A3E4DB]', 'text-[#1C2E4A]', 'border-[#A3E4DB]', 'hover:bg-[#FFF9F3]',
-					'bg-[#FF6B6B]', 'text-white', 'border-[#FF6B6B]', 'hover:bg-[#ff4c4c]',
-					'bg-[#FF6B6B]', 'text-white', 'border-[#FF6B6B]', 'shadow-md',
-					'bg-white', 'text-gray-600', 'border-gray-300', 'hover:bg-gray-50', 'hover:border-gray-400',
-					'opacity-50', 'cursor-not-allowed'
-				);
-				
-				if (isSelected) {
-					// Selected state - red background
-					button.classList.add('bg-[#FF6B6B]', 'text-white', 'border-[#FF6B6B]', 'shadow-md');
+				// Reset to base state - all unselected styles become white when any style is selected
+				if (selectedStyles.length > 0 && !isSelected) {
+					// Unselected styles get white background
+					button.className = `style-chip group bg-white text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-gray-200 hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1`;
 				} else if (selectedStyles.length === 0) {
-					// No selections - show original colorful state
-					button.classList.add(originalColor.bg, originalColor.text, originalColor.border, originalColor.hover);
-				} else {
-					// Unselected but some are selected - show transparent/white state
-					button.classList.add('bg-white', 'text-gray-600', 'border-gray-300', 'hover:bg-gray-50', 'hover:border-gray-400');
-					
-					if (isDisabled) {
-						button.classList.add('opacity-50', 'cursor-not-allowed');
-						button.classList.remove('hover:bg-gray-50', 'hover:border-gray-400');
+					// No styles selected - show truly random pattern (no column grouping)
+					if (style === 'eco-friendly' || style === 'quirky' || style === 'techy' || style === 'black-owned') {
+						button.className = `style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1`;
+					} else if (style === 'handmade' || style === 'luxury' || style === 'wellness' || style === 'book-lover') {
+						button.className = `style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#A3E4DB]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1`;
+					} else if (style === 'funny' || style === 'pride-gifts' || style === 'athletics' || style === 'beauty') {
+						button.className = `style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FF6B6B]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1`;
 					}
 				}
+				
+				if (isSelected) {
+					// Selected state - make it more prominent with original color
+					if (style === 'eco-friendly' || style === 'quirky' || style === 'techy' || style === 'black-owned') {
+						button.className = `style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 shadow-xl ring-4 ring-[#FFDE59] ring-opacity-50 scale-105`;
+					} else if (style === 'handmade' || style === 'luxury' || style === 'wellness' || style === 'book-lover') {
+						button.className = `style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#A3E4DB]/50 shadow-xl ring-4 ring-[#FFDE59] ring-opacity-50 scale-105`;
+					} else if (style === 'funny' || style === 'pride-gifts' || style === 'athletics' || style === 'beauty') {
+						button.className = `style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FF6B6B]/50 shadow-xl ring-4 ring-[#FFDE59] ring-opacity-50 scale-105`;
+					}
+				} else if (isDisabled) {
+					// Disabled state
+					button.classList.add('opacity-50', 'cursor-not-allowed', 'grayscale');
+					button.disabled = true;
+					button.classList.remove('hover:shadow-lg', 'hover:-translate-y-1', 'transform');
+				} else {
+					// Enable button if not disabled
+					button.disabled = false;
+					button.classList.remove('opacity-50', 'cursor-not-allowed', 'grayscale');
+				}
 			});
+			
+			// Update visual preview
+			updateStylePreview();
+		}
+		
+		function updateStylePreview() {
+			const displayContainer = document.getElementById('selected-styles-display');
+			
+			if (selectedStyles.length > 0) {
+				displayContainer.innerHTML = selectedStyles.map(style => {
+					const displayName = style.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
+					return `<span class="px-3 py-1 bg-gradient-to-r from-[#FF6B6B] to-[#FF8585] text-white rounded-full text-xs font-medium shadow-md">${displayName}</span>`;
+				}).join('');
+			} else {
+				displayContainer.innerHTML = `<span class="text-xs text-[#1C2E4A] opacity-50">No styles selected yet</span>`;
+			}
 		}
 
 		// Function to cycle through loading messages

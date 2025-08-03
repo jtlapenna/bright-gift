@@ -358,8 +358,17 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
     }
 
     // Get the OpenAI API key from Cloudflare SSR runtime context
-    const apiKey = locals?.runtime?.env?.OPENAI_API_KEY;
+    const apiKey = locals?.runtime?.env?.OPENAI_API_KEY || 
+                   process.env.OPENAI_API_KEY;
     if (!apiKey) {
+      console.error('OpenAI API key not found. Debug info:', {
+        locals: !!locals,
+        runtime: !!locals?.runtime,
+        env: !!locals?.runtime?.env,
+        process: !!process.env.OPENAI_API_KEY,
+        localsKeys: locals?.runtime?.env ? Object.keys(locals.runtime.env) : 'no env',
+        processKeys: process.env ? Object.keys(process.env).filter(k => k.includes('OPENAI')) : 'no process env'
+      });
       return new Response(
         JSON.stringify({ error: 'OpenAI API key not found in SSR runtime context' }),
         { status: 500 }

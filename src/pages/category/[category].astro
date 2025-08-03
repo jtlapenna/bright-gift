@@ -1,0 +1,256 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
+  
+  // Get unique categories
+  const categories = [...new Set(blogPosts.map(post => post.data.category))].filter(Boolean);
+  
+  return categories.map(category => ({
+    params: { category },
+    props: { category }
+  }));
+}
+
+const { category } = Astro.props;
+
+// Get all blog posts for this category
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const categoryPosts = allPosts.filter(post => post.data.category === category);
+
+// Sort by date (newest first)
+const sortedPosts = categoryPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+// Category metadata
+const categoryMetadata = {
+  'gift-guides': {
+    title: 'Gift Guides - Expert Curated Gift Recommendations',
+    description: 'Discover thoughtful gift ideas for every occasion and person. Our expert-curated gift guides help you find the perfect presents for birthdays, holidays, and special moments. Explore comprehensive recommendations tailored to every recipient and celebration.',
+    keywords: ['gift guides', 'gift ideas', 'gift recommendations', 'birthday gifts', 'holiday gifts', 'thoughtful gifts', 'unique gifts'],
+    color: 'bg-[#1C2E4A]'
+  },
+  'educational': {
+    title: 'Gift Giving Education - Expert Tips & Insights',
+    description: 'Learn the art of gift giving with expert tips, psychology insights, and strategies for choosing meaningful presents that strengthen relationships. Master the science behind thoughtful gift selection and create lasting connections.',
+    keywords: ['gift giving tips', 'gift psychology', 'gift giving guide', 'how to choose gifts', 'gift giving advice', 'meaningful gifts'],
+    color: 'bg-[#1C2E4A]'
+  },
+  'data-driven': {
+    title: 'Gift Giving Statistics & Data Insights',
+    description: 'Explore data-driven insights about gift giving trends, consumer preferences, and what people really want to receive as presents. Discover evidence-based strategies backed by comprehensive research and analysis.',
+    keywords: ['gift giving statistics', 'gift trends', 'gift data', 'gift preferences', 'gift research', 'gift giving facts'],
+    color: 'bg-[#1C2E4A]'
+  }
+};
+
+const metadata = categoryMetadata[category] || {
+  title: `${category} - Gift Ideas & Recommendations`,
+  description: `Browse our ${category} content for gift ideas, tips, and recommendations.`,
+  keywords: [category, 'gift ideas', 'gift recommendations'],
+  color: 'bg-[#1C2E4A]'
+};
+
+// Structured data for category page
+const categoryStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": `${metadata.title}`,
+  "description": metadata.description,
+  "url": `https://bright-gift.com/category/${category}`,
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": sortedPosts.length,
+    "itemListElement": sortedPosts.slice(0, 10).map((post, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "BlogPosting",
+        "headline": post.data.title,
+        "description": post.data.description,
+        "url": `https://bright-gift.com/blog/${post.slug}`,
+        "datePublished": post.data.date,
+        "author": {
+          "@type": "Organization",
+          "name": "BrightGift"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "BrightGift",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://bright-gift.com/bright-gift-logo.png"
+          }
+        }
+      }
+    }))
+  }
+};
+
+// Calculate read time (rough estimate: 200 words per minute)
+function calculateReadTime(content: string): number {
+  const wordCount = content.split(/\s+/).length;
+  return Math.ceil(wordCount / 200);
+}
+---
+
+<Layout 
+  title={metadata.title}
+  description={metadata.description}
+  keywords={metadata.keywords}
+  canonical={`https://bright-gift.com/category/${category}`}
+  ogType="website"
+  twitterCard="summary_large_image"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(categoryStructuredData)} />
+  
+  <div class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <!-- Hero Section -->
+    <div class="w-full bg-[#FEF2D3] py-8 md:py-12 px-4 text-center shadow-lg border-t-8 border-[#FF6B6B] mb-8">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold font-poppins text-[#1C2E4A] mb-2">
+          {category.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
+        </h1>
+        <p class="text-lg font-inter text-[#333] mb-4 max-w-3xl mx-auto">
+          {metadata.description}
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 mt-6">
+          <a href="/blog" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+            category === 'blog' 
+              ? 'bg-[#FF6B6B] text-white' 
+              : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+          }`}>All Posts</a>
+          <a href="/category/gift-guides" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+            category === 'gift-guides' 
+              ? 'bg-[#FF6B6B] text-white' 
+              : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+          }`}>Gift Guides</a>
+          <a href="/category/educational" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+            category === 'educational' 
+              ? 'bg-[#A3E4DB] text-[#1C2E4A]' 
+              : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+          }`}>Educational</a>
+          <a href="/category/data-driven" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+            category === 'data-driven' 
+              ? 'bg-[#FFDE59] text-[#1C2E4A]' 
+              : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+          }`}>Data-Driven</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <!-- Breadcrumb -->
+      <nav class="mb-8" aria-label="Breadcrumb">
+        <ol class="flex items-center space-x-2 text-sm text-slate-600">
+          <li><a href="/" class="hover:text-[#FF6B6B] transition-colors">Home</a></li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <a href="/blog" class="hover:text-[#FF6B6B] transition-colors">Blog</a>
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="font-medium text-[#1C2E4A]">
+              {category.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
+            </span>
+          </li>
+        </ol>
+      </nav>
+
+      <!-- Posts Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {sortedPosts.map((post) => (
+          <article class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow duration-300" itemscope itemtype="https://schema.org/BlogPosting">
+            <!-- Post Image -->
+            <div class="aspect-video bg-slate-200 relative overflow-hidden">
+              <img 
+                src={post.data.image} 
+                alt={`${post.data.title} - Gift ideas and recommendations`}
+                class="w-full h-full object-cover"
+                loading="lazy"
+                itemprop="image"
+              />
+              {post.data.featured && (
+                <div class="absolute top-2 left-2 bg-coral-500 text-white text-xs px-2 py-1 rounded">
+                  Featured
+                </div>
+              )}
+              <div class="absolute top-2 right-2 bg-[#FF6B6B] text-white text-xs px-2 py-1 rounded">
+                {post.data.category}
+              </div>
+            </div>
+            
+            <!-- Post Content -->
+            <div class="p-6">
+              <h2 class="text-xl font-bold mb-2 text-[#1C2E4A] hover:text-[#FF6B6B] transition-colors" itemprop="headline">
+                <a href={`/blog/${post.slug}`} class="block" aria-label={`Read ${post.data.title} gift guide`}>
+                  {post.data.title}
+                </a>
+              </h2>
+              
+              <p class="text-gray-600 mb-4 line-clamp-3" itemprop="description">
+                {post.data.description}
+              </p>
+              
+              <!-- Post Meta -->
+              <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                <time datetime={post.data.date} itemprop="datePublished">
+                   {new Date(post.data.date).toLocaleDateString('en-US', { 
+                      year: 'numeric', 
+                      month: 'long', 
+                      day: 'numeric' 
+                    })}
+                </time>
+                {post.data.readTime && (
+                  <span class="flex items-center">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    {post.data.readTime} min read
+                  </span>
+                )}
+              </div>
+              
+              <!-- Read More Link -->
+              <a 
+                href={`/blog/${post.slug}`} 
+                class="inline-flex items-center text-[#FF6B6B] font-semibold hover:text-[#ff4c4c] transition-colors"
+                aria-label={`Read complete ${post.data.title} gift guide`}
+              >
+                Read Complete Guide
+                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                 </svg>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- Empty State -->
+      {sortedPosts.length === 0 && (
+        <div class="text-center py-12">
+          <h2 class="text-2xl font-bold text-[#1C2E4A] mb-4">No posts found in this category</h2>
+          <p class="text-slate-600 mb-6">We're working on adding more content to this category. Check back soon!</p>
+          <a 
+            href="/blog" 
+            class="inline-flex items-center px-6 py-3 bg-[#FF6B6B] text-white font-semibold rounded-lg hover:bg-[#ff4c4c] transition-colors"
+          >
+            Browse All Posts
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      )}
+    </div>
+  </div>
+</Layout> 

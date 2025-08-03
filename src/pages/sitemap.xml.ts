@@ -27,6 +27,15 @@ export async function GET() {
     };
   });
 
+  // Category pages
+  const categories = [...new Set(blogPosts.map(post => post.data.category))].filter(Boolean);
+  const categoryUrls = categories.map(category => ({
+    url: `${baseUrl}/category/${category}/`,
+    lastmod: new Date().toISOString(),
+    changefreq: 'weekly',
+    priority: 0.8
+  }));
+
   // Exclude specific slugs/IDs from sitemap (404s in GSC)
   const excludedBlogSlugs = [
     'sample-post', 
@@ -49,7 +58,7 @@ export async function GET() {
       priority: 0.7
     }));
 
-  const allUrls = [...staticUrls, ...blogUrls];
+  const allUrls = [...staticUrls, ...categoryUrls, ...blogUrls];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
