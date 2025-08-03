@@ -184,7 +184,7 @@ const relatedPosts = allBlogPosts
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <!-- Article Content -->
-        <div class="lg:col-span-9">
+        <div class="lg:col-span-8">
 
           <!-- Title, Sub-heading, Date/Read Time -->
           <h1 class="text-4xl md:text-5xl font-bold mb-2 drop-shadow-lg" style="font-family: 'Poppins', 'Raleway', Arial, sans-serif; color: #1C2E4A;">{title}</h1>
@@ -231,7 +231,7 @@ const relatedPosts = allBlogPosts
         </div>
 
         <!-- Sidebar -->
-        <div class="lg:col-span-3 lg:pl-4">
+        <div class="lg:col-span-4 lg:pl-6">
           <div class="sticky top-8">
             <!-- Share Buttons -->
             <div class="bg-slate-50 p-6 rounded-lg mb-6 shadow-md">
@@ -301,7 +301,7 @@ const relatedPosts = allBlogPosts
             </div>
 
             <!-- Related Posts -->
-            <div class="bg-slate-50 p-6 rounded-lg shadow-md">
+            <div class="mb-6">
               <h4 class="font-semibold text-slate-900 mb-4">Related Posts</h4>
               {relatedPosts.length > 0 ? (
                 <div class="space-y-4">
