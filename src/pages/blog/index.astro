@@ -95,6 +95,19 @@ const blogIndexStructuredData = {
 >
   <script type="application/ld+json" set:html={JSON.stringify(blogIndexStructuredData)} />
   
+  <!-- Hidden data element for search functionality -->
+  <script id="all-posts-data" type="application/json" set:html={JSON.stringify(allContent.map(post => ({
+    title: post.data.title,
+    description: post.data.description,
+    category: post.data.category || '',
+    date: post.data.date,
+    slug: post.slug,
+    image: post.data.image,
+    readTime: calculateReadTime(post.body),
+    tags: post.data.tags || [],
+    type: post.type || 'blog'
+  })))} />
+  
   <div class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
     <!-- Hero Section -->
     <div class="w-full bg-[#FEF2D3] py-8 md:py-12 px-4 text-center shadow-lg border-t-8 border-[#FF6B6B] mb-8">
@@ -284,6 +297,9 @@ const blogIndexStructuredData = {
 </Layout>
 
 <script>
+  // Server-side data injection for search functionality
+  const allPostsData = JSON.parse(document.getElementById('all-posts-data').textContent);
+
   // Search functionality
   document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('search-input');
@@ -292,29 +308,6 @@ const blogIndexStructuredData = {
     const noResults = document.getElementById('no-results');
     const clearSearchBtn = document.getElementById('clear-search');
     
-    // Store all posts data for search - get from the rendered DOM
-    const allPosts = Array.from(document.querySelectorAll('article')).map(article => {
-      const title = article.querySelector('h2 a').textContent.trim();
-      const description = article.querySelector('p').textContent.trim();
-      const category = article.querySelector('.absolute.top-2.right-2')?.textContent.trim() || '';
-      const date = article.querySelector('time').getAttribute('datetime');
-      const slug = article.querySelector('h2 a').getAttribute('href').replace('/blog/', '');
-      const image = article.querySelector('img').getAttribute('src');
-      const readTime = article.querySelector('.flex.items-center span')?.textContent.trim() || '';
-      
-      return {
-        title,
-        description,
-        category,
-        date,
-        slug,
-        image,
-        readTime,
-        tags: [],
-        type: 'blog'
-      };
-    });
-
     function performSearch(query) {
       const searchTerm = query.toLowerCase().trim();
       
@@ -326,13 +319,13 @@ const blogIndexStructuredData = {
         return;
       }
 
-      // Filter posts based on search term
-      const filteredPosts = allPosts.filter(post => {
+      // Filter posts based on search term using all posts data
+      const filteredPosts = allPostsData.filter(post => {
         const searchableText = [
           post.title,
           post.description,
           post.category,
-          ...post.tags
+          ...(post.tags || [])
         ].join(' ').toLowerCase();
         
         return searchableText.includes(searchTerm);
