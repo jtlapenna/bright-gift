@@ -274,9 +274,10 @@ function determineAfrofiliateLink(title: string, tag: string): string | null {
   return null;
 }
 
-function determineAffiliateSource(title: string, tag: string, styles: string[]) {
+function determineAffiliateSource(title: string, tag: string, styles: string[], interests?: string) {
   const lowerTitle = title.toLowerCase();
   const lowerTag = tag.toLowerCase();
+  const lowerInterests = interests ? interests.toLowerCase() : '';
   
   // Always check for Afrofiliate matches first, regardless of style selection
   const afrofiliateLink = determineAfrofiliateLink(title, tag);
@@ -292,9 +293,10 @@ function determineAffiliateSource(title: string, tag: string, styles: string[]) 
   
   // Check if book-lover style is selected OR if interests include reading
   const isBookLoverStyle = styles && styles.includes('book-lover');
+  const hasReadingInterest = lowerInterests.includes('reading') || lowerInterests.includes('read') || lowerInterests.includes('book');
   
   // For book-lover style or reading interests, use specific categorization
-  if (isBookLoverStyle) {
+  if (isBookLoverStyle || hasReadingInterest) {
     // Books go to Bookshop.org - must be tagged exactly as "Book" or contain "book" but not "journal" or "accessory"
     if (lowerTag === 'book' || 
         (lowerTag.includes('book') && !lowerTag.includes('journal') && !lowerTag.includes('accessory') && !lowerTag.includes('gift'))) {
@@ -397,7 +399,7 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
       const amazonLink = generateAmazonLink(title, tag);
       
       // Determine affiliate source based on improved logic
-      const affiliateSource = determineAffiliateSource(title, tag, styles);
+      const affiliateSource = determineAffiliateSource(title, tag, styles, interests);
       
       if (affiliateSource === 'bookshop') {
         // Bookshop.org for book-related items
