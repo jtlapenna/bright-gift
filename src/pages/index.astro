@@ -913,6 +913,47 @@ const faqData = {
 			Gift: '/icons/Gift.svg'
 		};
 		
+		// Function to get descriptive alt text for icons
+		function getIconDescription(iconName) {
+			const descriptions = {
+				DeviceMobile: 'Mobile device icon for tech gifts',
+				Book: 'Book icon for reading and literature gifts',
+				TShirt: 'Clothing icon for fashion and apparel gifts',
+				House: 'Home icon for housewarming and home decor gifts',
+				Tree: 'Nature icon for eco-friendly and outdoor gifts',
+				CookingPot: 'Kitchen icon for cooking and culinary gifts',
+				PuzzlePiece: 'Puzzle icon for games and entertainment gifts',
+				Flower: 'Flower icon for gardening and nature gifts',
+				SoccerBall: 'Sports icon for athletic and fitness gifts',
+				PawPrint: 'Pet icon for animal lover gifts',
+				Baby: 'Baby icon for baby shower and parenting gifts',
+				Car: 'Vehicle icon for automotive and travel gifts',
+				Briefcase: 'Business icon for professional and work gifts',
+				MusicNote: 'Music icon for audio and entertainment gifts',
+				Heartbeat: 'Health icon for wellness and self-care gifts',
+				ShoppingBag: 'Shopping icon for retail and lifestyle gifts',
+				BeerBottle: 'Beverage icon for food and drink gifts',
+				Pencil: 'Writing icon for stationery and creative gifts',
+				Package: 'Package icon for delivery and surprise gifts',
+				Wrench: 'Tool icon for DIY and hobby gifts',
+				Smiley: 'Emoji icon for fun and entertainment gifts',
+				Diamond: 'Luxury icon for premium and high-end gifts',
+				PaintBrush: 'Art icon for creative and artistic gifts',
+				Sparkle: 'Sparkle icon for special and unique gifts',
+				Backpack: 'Travel icon for adventure and outdoor gifts',
+				Shield: 'Security icon for protective and safety gifts',
+				Scissors: 'Craft icon for handmade and DIY gifts',
+				Palette: 'Art icon for creative and design gifts',
+				FilmSlate: 'Entertainment icon for movie and media gifts',
+				Lamp: 'Lighting icon for home decor and ambiance gifts',
+				Note: 'Writing icon for journal and stationery gifts',
+				Ticket: 'Event icon for experience and entertainment gifts',
+				FrameCorners: 'Photo icon for photography and memory gifts',
+				Gift: 'Gift box icon for general gift recommendations'
+			};
+			return descriptions[iconName] || 'Gift recommendation icon';
+		}
+		
 		// Group ideas by title to handle hybrid cards
 		const groupedIdeas = [];
 		const processedTitles = new Set();
@@ -959,7 +1000,8 @@ const faqData = {
 			let iconHtml = '';
 			if (idea.icon) {
 				const iconPath = iconSvgMap[idea.icon] || iconSvgMap['ShoppingBag'];
-				iconHtml = `<img src="${iconPath}" alt="${idea.icon || 'ShoppingBag'} icon" class="h-20 w-20 mb-6 mt-2" loading="lazy" />`;
+				const iconDescription = getIconDescription(idea.icon);
+				iconHtml = `<img src="${iconPath}" alt="${iconDescription}" class="h-20 w-20 mb-6 mt-2" loading="lazy" />`;
 			}
 			
 			// Check if this is a hybrid card (has both Afrofiliate and Amazon options)
@@ -1011,7 +1053,7 @@ const faqData = {
 			
 			return `
 				<div class="flex flex-col items-center justify-between bg-[#A3E4DB] rounded-2xl shadow-lg p-8 min-h-[480px] transition-transform hover:-translate-y-1 hover:shadow-2xl animate-fade-in" role="listitem">
-					${iconHtml || (idea.image ? `<img src="${idea.image}" alt="${idea.title}" class="h-40 w-full object-cover mb-4 rounded-xl shadow" loading="lazy">` : '')}
+					${iconHtml || (idea.image ? `<img src="${idea.image}" alt="${idea.title} - Gift recommendation" class="h-40 w-full object-cover mb-4 rounded-xl shadow" loading="lazy">` : '')}
 					<h3 class="font-bold text-2xl mb-2 font-poppins text-[#1C2E4A] text-center">${idea.title}</h3>
 					<p class="text-[#333] mb-3 font-inter text-base text-center line-clamp-8 flex-grow">${idea.description}</p>
 					${idea.tag ? `<span class="inline-block bg-[#FFDE59] text-[#1C2E4A] text-xs font-semibold px-4 py-1 rounded-full mb-4 whitespace-nowrap">${idea.tag}</span>` : ''}
@@ -1032,7 +1074,8 @@ const faqData = {
 			let iconHtml = '';
 			if (idea.icon) {
 				const iconPath = iconSvgMap[idea.icon] || iconSvgMap['ShoppingBag'];
-				iconHtml = `<img src="${iconPath}" alt="${idea.icon || 'ShoppingBag'} icon" class="h-20 w-20 mb-6 mt-2" loading="lazy" />`;
+				const iconDescription = getIconDescription(idea.icon);
+				iconHtml = `<img src="${iconPath}" alt="${iconDescription}" class="h-20 w-20 mb-6 mt-2" loading="lazy" />`;
 			}
 			
 			// Single button for regular cards
@@ -1055,7 +1098,7 @@ const faqData = {
 			
 			return `
 				<div class="flex flex-col items-center justify-between bg-[#A3E4DB] rounded-2xl shadow-lg p-8 min-h-[480px] transition-transform hover:-translate-y-1 hover:shadow-2xl animate-fade-in" role="listitem">
-					${iconHtml || (idea.image ? `<img src="${idea.image}" alt="${idea.title}" class="h-40 w-full object-cover mb-4 rounded-xl shadow" loading="lazy">` : '')}
+					${iconHtml || (idea.image ? `<img src="${idea.image}" alt="${idea.title} - Gift recommendation" class="h-40 w-full object-cover mb-4 rounded-xl shadow" loading="lazy">` : '')}
 					<h3 class="font-bold text-2xl mb-2 font-poppins text-[#1C2E4A] text-center">${idea.title}</h3>
 					<p class="text-[#333] mb-3 font-inter text-base text-center line-clamp-8 flex-grow">${idea.description}</p>
 					${idea.tag ? `<span class="inline-block bg-[#FFDE59] text-[#1C2E4A] text-xs font-semibold px-4 py-1 rounded-full mb-4 whitespace-nowrap">${idea.tag}</span>` : ''}
