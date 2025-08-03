@@ -447,36 +447,93 @@ const faqData = {
 			</div>
 		</section>
 
-		<!-- Featured Gift Guides Grid -->
+		<!-- Content Section with Colored Background -->
 		<div class="w-full bg-[#FEF2D3] py-16 px-8">
-			<section id="featured-guides" class="max-w-5xl mx-auto">
-				<h2 class="text-3xl font-bold text-center mb-12 font-poppins text-[#1C2E4A]">Featured Gift Guides</h2>
-				<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-					{allContent.length > 0 ? (
-						allContent.slice(0, 6).map(item => (
-							<article class="bg-[#A3E4DB] rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300" tabindex="0" aria-label={`Gift Guide: ${item.data.title}`}> 
-								<img src={item.data.image} alt={`${item.data.title} - Gift ideas and recommendations`} class="h-40 w-full object-cover rounded-t-xl shadow">
-								<div class="p-6 flex-1 flex flex-col">
-									<h3 class="font-bold text-lg mb-2 font-poppins text-[#1C2E4A]">{item.data.title}</h3>
-									<p class="text-[#333] mb-4 flex-1 font-inter">{item.data.description}</p>
-									<a href={`/blog/${item.slug}`} class="mt-auto inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-2 px-4 rounded-full transition-colors font-poppins shadow" aria-label={`Read complete ${item.data.title} gift guide with detailed recommendations`}>Read Complete Guide</a>
+			<div class="max-w-5xl mx-auto">
+				{/* Hero Blog Post Section */}
+				{allContent.length > 0 && (
+					<section class="mb-16">
+						<article class="bg-[#A3E4DB] rounded-2xl shadow-lg overflow-hidden">
+							{/* Full-width banner image */}
+							<div class="relative">
+								<img 
+									src={allContent[0].data.image} 
+									alt={`${allContent[0].data.title} - Latest gift guide`} 
+									class="w-full h-64 md:h-80 object-cover"
+								/>
+								<div class="absolute top-4 left-4">
+									<span class="bg-[#FF6B6B] text-white text-xs font-semibold px-3 py-1 rounded-full">
+										Latest Post
+									</span>
 								</div>
-							</article>
-						))
-					) : (
-						<article class="bg-[#A3E4DB] rounded-2xl shadow-lg overflow-hidden flex flex-col" tabindex="0" aria-label="Guide: Coming Soon">
-							<div class="h-40 w-full bg-[#A3E4DB] flex items-center justify-center text-[#1C2E4A] opacity-60">No guides yet</div>
-							<div class="p-6 flex-1 flex flex-col">
-								<h3 class="font-bold text-lg mb-2 font-poppins text-[#1C2E4A]">More Gift Guides Coming Soon</h3>
-								<p class="text-[#333] mb-4 flex-1 font-inter">Check back soon for curated gift ideas and inspiration!</p>
+							</div>
+							
+							{/* Content below banner */}
+							<div class="p-8">
+								<div class="flex items-center gap-2 mb-4">
+									<span class="text-sm text-[#1C2E4A]/70 font-inter">
+										{new Date(allContent[0].data.date).toLocaleDateString('en-US', { 
+											year: 'numeric', 
+											month: 'long', 
+											day: 'numeric' 
+										})}
+									</span>
+									<span class="text-[#1C2E4A]/50">•</span>
+									<span class="text-sm text-[#1C2E4A]/70 font-inter capitalize">
+										{allContent[0].data.category}
+									</span>
+								</div>
+								
+								<h2 class="text-2xl md:text-3xl font-bold mb-4 font-poppins text-[#1C2E4A]">
+									{allContent[0].data.title}
+								</h2>
+								
+								<p class="text-[#1C2E4A]/80 mb-6 font-inter leading-relaxed text-lg">
+									{allContent[0].data.description}
+								</p>
+								
+								<a 
+									href={`/blog/${allContent[0].slug}`} 
+									class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins shadow"
+									aria-label={`Read the complete ${allContent[0].data.title} guide`}
+								>
+									Read Full Guide
+								</a>
 							</div>
 						</article>
-					)}
-				</div>
-				<div class="text-center mt-10">
-					<a href="/blog" class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins shadow" aria-label="Browse all gift guides and blog posts">Browse All Gift Guides & Blog Posts</a>
-				</div>
-			</section>
+					</section>
+				)}
+
+				{/* Gift Guides & Tips Grid */}
+				<section id="featured-guides" class="max-w-5xl mx-auto">
+					<h2 class="text-3xl font-bold text-center mb-12 font-poppins text-[#1C2E4A]">Gift Guides & Tips</h2>
+					<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+						{allContent.length > 0 ? (
+							allContent.slice(0, 3).map(item => (
+								<article class="bg-[#A3E4DB] rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300" tabindex="0" aria-label={`Gift Guide: ${item.data.title}`}> 
+									<img src={item.data.image} alt={`${item.data.title} - Gift ideas and recommendations`} class="h-40 w-full object-cover rounded-t-xl shadow">
+									<div class="p-6 flex-1 flex flex-col">
+										<h3 class="font-bold text-lg mb-2 font-poppins text-[#1C2E4A]">{item.data.title}</h3>
+										<p class="text-[#333] mb-4 flex-1 font-inter">{item.data.description}</p>
+										<a href={`/blog/${item.slug}`} class="mt-auto inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-2 px-4 rounded-full transition-colors font-poppins shadow" aria-label={`Read complete ${item.data.title} gift guide with detailed recommendations`}>Read Complete Guide</a>
+									</div>
+								</article>
+							))
+						) : (
+							<article class="bg-[#A3E4DB] rounded-2xl shadow-lg overflow-hidden flex flex-col" tabindex="0" aria-label="Guide: Coming Soon">
+								<div class="h-40 w-full bg-[#A3E4DB] flex items-center justify-center text-[#1C2E4A] opacity-60">No guides yet</div>
+								<div class="p-6 flex-1 flex flex-col">
+									<h3 class="font-bold text-lg mb-2 font-poppins text-[#1C2E4A]">More Gift Guides Coming Soon</h3>
+									<p class="text-[#333] mb-4 flex-1 font-inter">Check back soon for curated gift ideas and inspiration!</p>
+								</div>
+							</article>
+						)}
+					</div>
+					<div class="text-center mt-10">
+						<a href="/blog" class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins shadow" aria-label="Browse all gift guides and blog posts">Browse All Gift Guides & Blog Posts</a>
+					</div>
+				</section>
+			</div>
 		</div>
 
 		<!-- About the Tool / SEO Content Block -->
@@ -1064,10 +1121,10 @@ const faqData = {
 			}
 			
 			return `
-				<div class="flex flex-col items-center justify-between bg-[#A3E4DB] rounded-2xl shadow-lg p-6 min-h-[420px] transition-transform hover:-translate-y-1 hover:shadow-2xl animate-fade-in" role="listitem">
+				<div class="flex flex-col items-center justify-between bg-[#A3E4DB] rounded-2xl shadow-lg p-6 min-h-[480px] transition-transform hover:-translate-y-1 hover:shadow-2xl animate-fade-in" role="listitem">
 					${iconHtml || (idea.image ? `<img src="${idea.image}" alt="${idea.title} - Gift recommendation" class="h-40 w-full object-cover mb-4 rounded-xl shadow" loading="lazy">` : '')}
 					<h3 class="font-bold text-xl mb-2 font-poppins text-[#1C2E4A] text-center">${idea.title}</h3>
-					<p class="text-[#333] mb-3 font-inter text-sm text-center line-clamp-6 flex-grow">${idea.description}</p>
+					<p class="text-[#333] mb-3 font-inter text-sm text-center line-clamp-8 flex-grow">${idea.description}</p>
 					${idea.tag ? `<span class="inline-block bg-[#FFDE59] text-[#1C2E4A] text-xs font-semibold px-3 py-1 rounded-full mb-4 whitespace-nowrap">${idea.tag}</span>` : ''}
 					${buttonHtml}
 				</div>
@@ -1109,10 +1166,10 @@ const faqData = {
 			`;
 			
 			return `
-				<div class="flex flex-col items-center justify-between bg-[#A3E4DB] rounded-2xl shadow-lg p-6 min-h-[420px] transition-transform hover:-translate-y-1 hover:shadow-2xl animate-fade-in" role="listitem">
+				<div class="flex flex-col items-center justify-between bg-[#A3E4DB] rounded-2xl shadow-lg p-6 min-h-[480px] transition-transform hover:-translate-y-1 hover:shadow-2xl animate-fade-in" role="listitem">
 					${iconHtml || (idea.image ? `<img src="${idea.image}" alt="${idea.title} - Gift recommendation" class="h-40 w-full object-cover mb-4 rounded-xl shadow" loading="lazy">` : '')}
 					<h3 class="font-bold text-xl mb-2 font-poppins text-[#1C2E4A] text-center">${idea.title}</h3>
-					<p class="text-[#333] mb-3 font-inter text-sm text-center line-clamp-6 flex-grow">${idea.description}</p>
+					<p class="text-[#333] mb-3 font-inter text-sm text-center line-clamp-8 flex-grow">${idea.description}</p>
 					${idea.tag ? `<span class="inline-block bg-[#FFDE59] text-[#1C2E4A] text-xs font-semibold px-3 py-1 rounded-full mb-4 whitespace-nowrap">${idea.tag}</span>` : ''}
 					${buttonHtml}
 				</div>

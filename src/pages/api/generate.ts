@@ -425,6 +425,7 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
     const ideaRegex = /\*\*(\d+\.\s+.+?)\*\*\s+([^_]+)_Tag: ([^_]+)_/g;
     let match;
     const ideas = [];
+    
     while ((match = ideaRegex.exec(ideasText)) !== null) {
       const title = match[1].replace(/^\d+\.\s*/, '');
       let description = match[2].trim();
