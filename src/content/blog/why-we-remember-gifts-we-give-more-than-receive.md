@@ -31,8 +31,6 @@ keywords: 'giving, gift, more, that, than, this, memory, receiving, social, reme
 category: educational
 ---
 
-# Why We Remember Gifts We Give More Than Receive
-
 It's a curious phenomenon that most of us have experienced: we can vividly recall the perfect birthday present we gave our best friend three years ago, but struggle to remember what we received for Christmas last year. This isn't just anecdotal—there's fascinating psychology behind why our brains prioritize the gifts we give over the ones we receive.
 
 ## The Memory Paradox of Gift-Giving
