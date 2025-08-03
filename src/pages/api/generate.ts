@@ -245,31 +245,78 @@ const AFROFILIATE_CATEGORIES = {
   'cashback': ['cashblack-uk', 'cashblack-us']
 };
 
-function determineAfrofiliateLink(title: string, tag: string): string | null {
+function determineAfrofiliateLink(title: string, tag: string, interests?: string): string | null {
   const lowerTitle = title.toLowerCase();
   const lowerTag = tag.toLowerCase();
+  const lowerInterests = interests ? interests.toLowerCase() : '';
   
-  // Only match specific Afrofiliate brands, not generic terms
+  // Afrofiliate brand mappings with category relevance
   const afrofiliateBrands = {
-    'beautystat': AFROFILIATE_LINKS['beautystat'],
-    'furi sport': AFROFILIATE_LINKS['furi-sport'],
-    'be yourself 314': AFROFILIATE_LINKS['be-yourself-314'],
-    'be rooted': AFROFILIATE_LINKS['be-rooted'],
-    'kadalys': AFROFILIATE_LINKS['kadalys'],
-    'endorf': AFROFILIATE_LINKS['endorf'],
-    'caribe coffee': AFROFILIATE_LINKS['caribe-coffee'],
-    'cashblack': AFROFILIATE_LINKS['cashblack-uk']
+    'beautystat': {
+      link: AFROFILIATE_LINKS['beautystat'],
+      categories: ['beauty', 'skincare', 'cosmetics', 'wellness', 'self-care'],
+      keywords: ['beauty', 'skincare', 'cosmetic', 'beauty products', 'wellness']
+    },
+    'furi sport': {
+      link: AFROFILIATE_LINKS['furi-sport'],
+      categories: ['athletic wear', 'sports equipment', 'fitness gear', 'workout accessories'],
+      keywords: ['athletic', 'sport', 'fitness', 'workout', 'exercise', 'gym', 'training']
+    },
+    'be yourself 314': {
+      link: AFROFILIATE_LINKS['be-yourself-314'],
+      categories: ['dance fitness', 'athletic wear', 'fitness apparel'],
+      keywords: ['dance', 'fitness', 'athletic', 'workout', 'exercise']
+    },
+    'be rooted': {
+      link: AFROFILIATE_LINKS['be-rooted'],
+      categories: ['stationery', 'planners', 'journals', 'organization'],
+      keywords: ['planner', 'journal', 'stationery', 'organization', 'planning']
+    },
+    'kadalys': {
+      link: AFROFILIATE_LINKS['kadalys'],
+      categories: ['skincare', 'beauty', 'organic', 'wellness'],
+      keywords: ['skincare', 'beauty', 'organic', 'wellness', 'natural']
+    },
+    'endorf': {
+      link: AFROFILIATE_LINKS['endorf'],
+      categories: ['wellness', 'supplements', 'health', 'nutrition'],
+      keywords: ['wellness', 'supplement', 'health', 'nutrition', 'vitamin']
+    },
+    'caribe coffee': {
+      link: AFROFILIATE_LINKS['caribe-coffee'],
+      categories: ['coffee', 'beverages', 'food', 'sustainable'],
+      keywords: ['coffee', 'beverage', 'drink', 'sustainable', 'organic']
+    },
+    'cashblack': {
+      link: AFROFILIATE_LINKS['cashblack-uk'],
+      categories: ['financial', 'cashback', 'savings'],
+      keywords: ['cashback', 'financial', 'savings', 'money']
+    }
   };
   
-  // Check for exact brand name matches
-  for (const [brandName, link] of Object.entries(afrofiliateBrands)) {
+  // Check for exact brand name matches first
+  for (const [brandName, brandData] of Object.entries(afrofiliateBrands)) {
     if (lowerTitle.includes(brandName) || lowerTag.includes(brandName)) {
-      return link;
+      return brandData.link;
     }
   }
   
-  // DO NOT match by category alone - only match actual brand products
-  // This prevents incorrect matches like "Frères Branchiaux" candles getting Furi Sport links
+  // Check for category and keyword relevance
+  for (const [brandName, brandData] of Object.entries(afrofiliateBrands)) {
+    // Check if interests match brand categories
+    const interestsMatch = brandData.keywords.some(keyword => 
+      lowerInterests.includes(keyword) || lowerTag.includes(keyword)
+    );
+    
+    // Check if tag matches brand categories
+    const tagMatch = brandData.categories.some(category => 
+      lowerTag.includes(category) || lowerTitle.includes(category)
+    );
+    
+    if (interestsMatch || tagMatch) {
+      return brandData.link;
+    }
+  }
   
   return null;
 }
@@ -279,8 +326,8 @@ function determineAffiliateSource(title: string, tag: string, styles: string[], 
   const lowerTag = tag.toLowerCase();
   const lowerInterests = interests ? interests.toLowerCase() : '';
   
-  // Always check for Afrofiliate matches first, regardless of style selection
-  const afrofiliateLink = determineAfrofiliateLink(title, tag);
+  // Check for Afrofiliate matches with intelligent relevance
+  const afrofiliateLink = determineAfrofiliateLink(title, tag, interests);
   if (afrofiliateLink) {
     return 'afrofiliate';
   }
@@ -288,40 +335,31 @@ function determineAffiliateSource(title: string, tag: string, styles: string[], 
   // If Black-owned style is selected but no Afrofiliate match, prioritize Black-owned suggestions
   const isBlackOwnedStyle = styles && styles.includes('black-owned');
   if (isBlackOwnedStyle) {
-    return 'black-owned-amazon'; // Special case for Black-owned style with Amazon fallback
+    return 'black-owned-amazon';
   }
   
-  // Check if book-lover style is selected OR if interests include reading
-  const isBookLoverStyle = styles && styles.includes('book-lover');
-  const hasReadingInterest = lowerInterests.includes('reading') || lowerInterests.includes('read') || lowerInterests.includes('book');
+  // Intelligent book suggestions for any topic
+  const isBook = lowerTag === 'book' || 
+    (lowerTag.includes('book') && !lowerTag.includes('journal') && !lowerTag.includes('accessory') && !lowerTag.includes('gift')) ||
+    (lowerTag.includes('fiction') || lowerTag.includes('nonfiction') || lowerTag.includes('novel') || lowerTag.includes('poetry')) &&
+    !lowerTag.includes('journal') && !lowerTag.includes('accessory');
   
-  // For book-lover style or reading interests, use specific categorization
-  if (isBookLoverStyle || hasReadingInterest) {
-    // Books go to Bookshop.org - must be tagged exactly as "Book" or contain "book" but not "journal" or "accessory"
-    if (lowerTag === 'book' || 
-        (lowerTag.includes('book') && !lowerTag.includes('journal') && !lowerTag.includes('accessory') && !lowerTag.includes('gift'))) {
-      return 'bookshop';
-    }
-    
-    // Reading accessories and literary gifts go to Amazon
-    if (lowerTag === 'reading accessories' || 
-        lowerTag === 'literary gifts' || 
-        lowerTag.includes('bookmark') ||
-        lowerTag.includes('reading light') ||
-        lowerTag.includes('book stand') ||
-        lowerTag.includes('reading journal') ||
-        lowerTag.includes('journal') ||
-        lowerTag.includes('accessory')) {
-      return 'amazon';
-    }
-  }
-  
-  // Fallback logic for non-book-lover styles - be more specific about books
-  if (lowerTag === 'book' || 
-      (lowerTag.includes('book') && !lowerTag.includes('journal') && !lowerTag.includes('accessory')) ||
-      (lowerTag.includes('fiction') || lowerTag.includes('nonfiction') || lowerTag.includes('novel') || lowerTag.includes('poetry')) &&
-      !lowerTag.includes('journal') && !lowerTag.includes('accessory')) {
+  if (isBook) {
     return 'bookshop';
+  }
+  
+  // Reading accessories and literary gifts go to Amazon
+  const isReadingAccessory = lowerTag === 'reading accessories' || 
+    lowerTag === 'literary gifts' || 
+    lowerTag.includes('bookmark') ||
+    lowerTag.includes('reading light') ||
+    lowerTag.includes('book stand') ||
+    lowerTag.includes('reading journal') ||
+    lowerTag.includes('journal') ||
+    lowerTag.includes('accessory');
+  
+  if (isReadingAccessory) {
+    return 'amazon';
   }
   
   // Everything else goes to Amazon
@@ -395,7 +433,7 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
       let icon = null;
       
       // Check for Afrofiliate match first (regardless of style selection)
-      const afrofiliateLink = determineAfrofiliateLink(title, tag);
+      const afrofiliateLink = determineAfrofiliateLink(title, tag, interests);
       const amazonLink = generateAmazonLink(title, tag);
       
       // Determine affiliate source based on improved logic
