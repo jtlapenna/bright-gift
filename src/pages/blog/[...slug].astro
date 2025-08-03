@@ -47,7 +47,10 @@ const ogImage = post.data.ogImage || image;
 const socialImage = post.data.socialImage || ogImage;
 const keywords = post.data.keywords || fallbackKeywords;
 const date = post.data.date || fallbackDate;
-const readTime = post.data.readTime || 5;
+
+// Calculate read time based on word count (average reading speed: 200-250 words per minute)
+const wordCount = post.body.split(/\s+/).length;
+const readTime = post.data.readTime || Math.max(1, Math.ceil(wordCount / 200));
 
 // Structured data for SEO
 const structuredData = {
@@ -185,11 +188,26 @@ const relatedPosts = allBlogPosts
 
           <!-- Title, Sub-heading, Date/Read Time -->
           <h1 class="text-4xl md:text-5xl font-bold mb-2 drop-shadow-lg" style="font-family: 'Poppins', 'Raleway', Arial, sans-serif; color: #1C2E4A;">{title}</h1>
-          <div class="flex items-center gap-3 mb-2">
-            <span class="inline-block bg-coral-500 text-white text-sm px-3 py-1 rounded-full font-semibold tracking-wide">{type === 'gift-guide' ? 'Gift Guide' : type === 'faq' ? 'FAQ' : 'Blog Post'}</span>
-            <span class="text-sm text-gray-500">{new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-            <span class="text-sm text-gray-400">• {readTime} min read</span>
+          
+          <!-- Meta information with better layout -->
+          <div class="flex flex-wrap items-center gap-4 mb-6">
+            <span class="inline-block bg-coral-500 text-white text-sm px-3 py-1 rounded-full font-semibold tracking-wide">
+              {type === 'gift-guide' ? 'Gift Guide' : type === 'faq' ? 'FAQ' : 'Blog Post'}
+            </span>
+            <div class="flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+              <span>{new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span>{readTime} min read</span>
+            </div>
           </div>
+          
           <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mb-6" style="font-family: 'Inter', 'Open Sans', Arial, sans-serif;">{description}</p>
 
           <!-- Tags -->
