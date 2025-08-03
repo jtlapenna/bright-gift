@@ -425,7 +425,7 @@ const faqData = {
 					</div>
 				</div>
 				<!-- Results will be injected here -->
-				<div id="results-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" role="list" aria-live="polite">
+				<div id="results-container" class="grid md:grid-cols-2 gap-8" role="list" aria-live="polite">
 					<p id="empty-state" class="text-center text-gray-400 col-span-full">Enter details above and click Generate to see gift ideas!</p>
 				</div>
 				<!-- Regenerate Suggestions Button -->
@@ -1010,7 +1010,7 @@ const faqData = {
 			}
 			
 			return `
-				<div class="flex flex-col items-center justify-between bg-[#A3E4DB] rounded-2xl shadow-lg p-8 min-h-[560px] transition-transform hover:-translate-y-1 hover:shadow-2xl animate-fade-in" role="listitem">
+				<div class="flex flex-col items-center justify-between bg-[#A3E4DB] rounded-2xl shadow-lg p-8 min-h-[480px] transition-transform hover:-translate-y-1 hover:shadow-2xl animate-fade-in" role="listitem">
 					${iconHtml || (idea.image ? `<img src="${idea.image}" alt="${idea.title}" class="h-40 w-full object-cover mb-4 rounded-xl shadow" loading="lazy">` : '')}
 					<h3 class="font-bold text-2xl mb-2 font-poppins text-[#1C2E4A] text-center">${idea.title}</h3>
 					<p class="text-[#333] mb-3 font-inter text-base text-center line-clamp-8 flex-grow">${idea.description}</p>
@@ -1054,7 +1054,7 @@ const faqData = {
 			`;
 			
 			return `
-				<div class="flex flex-col items-center justify-between bg-[#A3E4DB] rounded-2xl shadow-lg p-8 min-h-[560px] transition-transform hover:-translate-y-1 hover:shadow-2xl animate-fade-in" role="listitem">
+				<div class="flex flex-col items-center justify-between bg-[#A3E4DB] rounded-2xl shadow-lg p-8 min-h-[480px] transition-transform hover:-translate-y-1 hover:shadow-2xl animate-fade-in" role="listitem">
 					${iconHtml || (idea.image ? `<img src="${idea.image}" alt="${idea.title}" class="h-40 w-full object-cover mb-4 rounded-xl shadow" loading="lazy">` : '')}
 					<h3 class="font-bold text-2xl mb-2 font-poppins text-[#1C2E4A] text-center">${idea.title}</h3>
 					<p class="text-[#333] mb-3 font-inter text-base text-center line-clamp-8 flex-grow">${idea.description}</p>
