@@ -217,19 +217,21 @@ function calculateReadTime(content: string): number {
               
               <!-- Post Meta -->
               <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
-                <time datetime={post.data.date} itemprop="datePublished">
-                   {new Date(post.data.date).toLocaleDateString('en-US', { 
-                      year: 'numeric', 
-                      month: 'long', 
-                      day: 'numeric' 
-                    })}
-                </time>
-                <span class="flex items-center">
-                  <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                  {post.data.readTime || Math.max(1, Math.ceil(post.body.split(/\s+/).length / 200))} min read
-                </span>
+                <div class="flex items-center gap-4">
+                  <time datetime={post.data.date} itemprop="datePublished">
+                     {new Date(post.data.date).toLocaleDateString('en-US', { 
+                        year: 'numeric', 
+                        month: 'long', 
+                        day: 'numeric' 
+                      })}
+                  </time>
+                  <span class="flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    {post.data.readTime || Math.max(1, Math.ceil(post.body.split(/\s+/).length / 200))} min read
+                  </span>
+                </div>
               </div>
               
               <!-- Read More Link -->
