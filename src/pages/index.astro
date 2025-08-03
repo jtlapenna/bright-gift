@@ -245,19 +245,18 @@ const faqData = {
 							</div>
 
 							<!-- Right Column: Style Selector & CTA (7/12 width) -->
-							<div class="lg:col-span-7 space-y-6">
+							<div class="lg:col-span-7 flex flex-col">
 								<!-- Style Selector with enhanced design -->
 								<div class="bg-white/80 rounded-xl p-6 shadow-lg border border-white/50">
 									<label class="block font-bold mb-4 text-[#1C2E4A] text-lg flex items-center">
 										<span class="bg-[#FF6B6B] text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2">4</span>
 										What's the style? (Select up to 3)
 									</label>
-									<div class="grid grid-cols-2 md:grid-cols-3 gap-3" role="group" aria-label="Gift Style Selection">
+									<div class="grid grid-cols-2 md:grid-cols-3 gap-3 pb-4" role="group" aria-label="Gift Style Selection">
 										<button type="button" 
 											data-style="eco-friendly"
 											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
-											aria-pressed="false"
-											onclick="console.log('Direct click test')">
+											aria-pressed="false">
 											<div class="flex flex-col items-center">
 												<span class="text-base mb-1">🌱</span>
 												<span>Eco-Friendly</span>
@@ -371,7 +370,7 @@ const faqData = {
 								</div>
 
 								<!-- Visual Preview with enhanced design - Fixed height container -->
-								<div id="style-preview" class="bg-gradient-to-r from-[#FF6B6B]/10 to-[#FF8585]/10 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-[#FF6B6B]/20 h-16 flex items-center">
+								<div id="style-preview" class="bg-gradient-to-r from-[#FF6B6B]/10 to-[#FF8585]/10 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-[#FF6B6B]/20 h-16 flex items-center mb-6">
 									<div class="w-full">
 										<h3 class="font-bold text-[#1C2E4A] mb-2 flex items-center text-sm">
 											🎯 Selected Styles
@@ -383,7 +382,7 @@ const faqData = {
 								</div>
 
 								<!-- Submit Button with enhanced design -->
-								<div class="text-center">
+								<div class="text-center mt-auto">
 									<button type="submit" class="w-full bg-gradient-to-r from-[#FF6B6B] to-[#FF8585] text-white font-bold py-4 px-6 rounded-xl hover:from-[#ff4c4c] hover:to-[#ff6666] font-poppins text-lg shadow-xl transform hover:scale-105 hover:shadow-2xl border-2 border-white/20">
 										<div class="flex items-center justify-center">
 											<span class="text-2xl mr-2">🎁</span>
@@ -636,9 +635,7 @@ const faqData = {
 </Layout>
 
 <script>
-	console.log('Script starting...');
 	document.addEventListener('DOMContentLoaded', () => {
-		console.log('DOM loaded, script running...');
 		const form = document.querySelector('form');
 		const resultsContainer = document.getElementById('results-container');
 		const loadingIndicator = document.getElementById('loading');
