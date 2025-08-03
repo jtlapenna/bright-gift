@@ -249,30 +249,21 @@ function determineAfrofiliateLink(title: string, tag: string): string | null {
   const lowerTitle = title.toLowerCase();
   const lowerTag = tag.toLowerCase();
   
-  // ONLY match if title contains actual Afrofiliate brand names
-  for (const [brand, link] of Object.entries(AFROFILIATE_LINKS)) {
-    const brandName = brand.replace('-', ' ');
-    const brandNameNoSpace = brand.replace('-', '');
-    
-    // Check for exact brand name matches in title
-    if (lowerTitle.includes(brandName) || lowerTitle.includes(brandNameNoSpace)) {
-      return link;
-    }
-    
-    // Check for brand name variations
-    if (brand === 'beautystat' && lowerTitle.includes('beauty stat')) {
-      return link;
-    }
-    if (brand === 'furi-sport' && lowerTitle.includes('furi sport')) {
-      return link;
-    }
-    if (brand === 'be-yourself-314' && lowerTitle.includes('be yourself 314')) {
-      return link;
-    }
-    if (brand === 'be-rooted' && lowerTitle.includes('be rooted')) {
-      return link;
-    }
-    if (brand === 'caribe-coffee' && lowerTitle.includes('caribe coffee')) {
+  // Only match specific Afrofiliate brands, not generic terms
+  const afrofiliateBrands = {
+    'beautystat': AFROFILIATE_LINKS['beautystat'],
+    'furi sport': AFROFILIATE_LINKS['furi-sport'],
+    'be yourself 314': AFROFILIATE_LINKS['be-yourself-314'],
+    'be rooted': AFROFILIATE_LINKS['be-rooted'],
+    'kadalys': AFROFILIATE_LINKS['kadalys'],
+    'endorf': AFROFILIATE_LINKS['endorf'],
+    'caribe coffee': AFROFILIATE_LINKS['caribe-coffee'],
+    'cashblack': AFROFILIATE_LINKS['cashblack-uk']
+  };
+  
+  // Check for exact brand name matches
+  for (const [brandName, link] of Object.entries(afrofiliateBrands)) {
+    if (lowerTitle.includes(brandName) || lowerTag.includes(brandName)) {
       return link;
     }
   }
@@ -299,10 +290,10 @@ function determineAffiliateSource(title: string, tag: string, styles: string[]) 
     return 'black-owned-amazon'; // Special case for Black-owned style with Amazon fallback
   }
   
-  // Check if book-lover style is selected
+  // Check if book-lover style is selected OR if interests include reading
   const isBookLoverStyle = styles && styles.includes('book-lover');
   
-  // For book-lover style, use specific categorization
+  // For book-lover style or reading interests, use specific categorization
   if (isBookLoverStyle) {
     // Books go to Bookshop.org - must be tagged exactly as "Book" or contain "book" but not "journal" or "accessory"
     if (lowerTag === 'book' || 
@@ -313,7 +304,6 @@ function determineAffiliateSource(title: string, tag: string, styles: string[]) 
     // Reading accessories and literary gifts go to Amazon
     if (lowerTag === 'reading accessories' || 
         lowerTag === 'literary gifts' || 
-        lowerTag === 'book journal' ||
         lowerTag.includes('bookmark') ||
         lowerTag.includes('reading light') ||
         lowerTag.includes('book stand') ||

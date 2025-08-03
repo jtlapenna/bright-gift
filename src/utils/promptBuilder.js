@@ -86,6 +86,10 @@ function buildPrompt(data) {
     }
     prompt += ` The budget is under $${budget}.`;
     prompt += styleGuidance;
+    
+    // CRITICAL: Add specific instructions to avoid nonsensical suggestions
+    prompt += `\n\nCRITICAL INSTRUCTIONS:\n- Focus on the recipient's specific interests (${interests}) and age/life stage\n- Suggest only tangible, physical products that can be purchased online\n- DO NOT suggest vague concepts like "eco-friendly apps" or "mindfulness subscriptions"\n- DO NOT suggest digital services, apps, or subscriptions unless they are clearly defined physical products\n- Each suggestion must be a specific, purchasable item\n- Ensure suggestions are age-appropriate and relevant to the recipient's interests\n- If suggesting books, recommend specific titles, not generic categories\n- If suggesting reading accessories, be specific about the product type\n- Avoid generic wellness suggestions - be specific about the actual product`;
+    
     prompt += `\n\nReturn the response as a markdown-formatted list. Each item should have a title, a short (1-2 sentence) description that clearly shows the style elements, and a product category tag. For example:\n\n**1. Handmade Wooden Gaming Dice Set**  \nArtisan-crafted wooden dice with quirky gaming references carved into each side - perfect for tabletop gamers who appreciate unique, conversation-starting accessories.  \n_Tag: Games_\n`;
     
     // Add specific guidance for book-lover style to ensure mix of books and accessories
