@@ -7,8 +7,15 @@ export const prerender = true;
 export async function getStaticPaths() {
   const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
   
-  // Get unique categories
-  const categories = [...new Set(blogPosts.map(post => post.data.category))].filter(Boolean);
+  // Get unique categories and map old categories to new ones
+  const categories = [...new Set(blogPosts.map(post => {
+    const category = post.data.category;
+    // Map old categories to new gift-tips category
+    if (category === 'educational' || category === 'data-driven') {
+      return 'gift-tips';
+    }
+    return category;
+  }))].filter(Boolean);
   
   return categories.map(category => ({
     params: { category },
@@ -20,7 +27,14 @@ const { category } = Astro.props;
 
 // Get all blog posts for this category
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
-const categoryPosts = allPosts.filter(post => post.data.category === category);
+const categoryPosts = allPosts.filter(post => {
+  const postCategory = post.data.category;
+  // Map old categories to new gift-tips category
+  if (category === 'gift-tips' && (postCategory === 'educational' || postCategory === 'data-driven')) {
+    return true;
+  }
+  return postCategory === category;
+});
 
 // Sort by date (newest first)
 const sortedPosts = categoryPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
@@ -33,16 +47,22 @@ const categoryMetadata = {
     keywords: ['gift guides', 'gift ideas', 'gift recommendations', 'birthday gifts', 'holiday gifts', 'thoughtful gifts', 'unique gifts'],
     color: 'bg-[#1C2E4A]'
   },
+  'gift-tips': {
+    title: 'Gift Tips & Insights - Expert Gift Giving Advice',
+    description: 'Learn the art of gift giving with expert tips, psychology insights, and strategies for choosing meaningful presents that strengthen relationships. Discover evidence-based advice backed by research and real-world experience.',
+    keywords: ['gift giving tips', 'gift psychology', 'gift giving guide', 'how to choose gifts', 'gift giving advice', 'meaningful gifts', 'gift insights'],
+    color: 'bg-[#1C2E4A]'
+  },
   'educational': {
-    title: 'Gift Giving Education - Expert Tips & Insights',
-    description: 'Learn the art of gift giving with expert tips, psychology insights, and strategies for choosing meaningful presents that strengthen relationships. Master the science behind thoughtful gift selection and create lasting connections.',
-    keywords: ['gift giving tips', 'gift psychology', 'gift giving guide', 'how to choose gifts', 'gift giving advice', 'meaningful gifts'],
+    title: 'Gift Tips & Insights - Expert Gift Giving Advice',
+    description: 'Learn the art of gift giving with expert tips, psychology insights, and strategies for choosing meaningful presents that strengthen relationships. Discover evidence-based advice backed by research and real-world experience.',
+    keywords: ['gift giving tips', 'gift psychology', 'gift giving guide', 'how to choose gifts', 'gift giving advice', 'meaningful gifts', 'gift insights'],
     color: 'bg-[#1C2E4A]'
   },
   'data-driven': {
-    title: 'Gift Giving Statistics & Data Insights',
-    description: 'Explore data-driven insights about gift giving trends, consumer preferences, and what people really want to receive as presents. Discover evidence-based strategies backed by comprehensive research and analysis.',
-    keywords: ['gift giving statistics', 'gift trends', 'gift data', 'gift preferences', 'gift research', 'gift giving facts'],
+    title: 'Gift Tips & Insights - Expert Gift Giving Advice',
+    description: 'Learn the art of gift giving with expert tips, psychology insights, and strategies for choosing meaningful presents that strengthen relationships. Discover evidence-based advice backed by research and real-world experience.',
+    keywords: ['gift giving tips', 'gift psychology', 'gift giving guide', 'how to choose gifts', 'gift giving advice', 'meaningful gifts', 'gift insights'],
     color: 'bg-[#1C2E4A]'
   }
 };
@@ -125,19 +145,14 @@ function calculateReadTime(content: string): number {
           }`}>All Posts</a>
           <a href="/category/gift-guides" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
             category === 'gift-guides' 
-              ? 'bg-[#FF6B6B] text-white' 
-              : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-          }`}>Gift Guides</a>
-          <a href="/category/educational" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
-            category === 'educational' 
               ? 'bg-[#A3E4DB] text-[#1C2E4A]' 
               : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-          }`}>Educational</a>
-          <a href="/category/data-driven" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
-            category === 'data-driven' 
+          }`}>Gift Guides</a>
+          <a href="/category/gift-tips" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+            category === 'gift-tips' 
               ? 'bg-[#FFDE59] text-[#1C2E4A]' 
               : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-          }`}>Data-Driven</a>
+          }`}>Gift Tips & Insights</a>
         </div>
       </div>
     </div>

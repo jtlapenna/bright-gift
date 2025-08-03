@@ -98,30 +98,53 @@ const blogIndexStructuredData = {
   <div class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
     <!-- Hero Section -->
     <div class="w-full bg-[#FEF2D3] py-8 md:py-12 px-4 text-center shadow-lg border-t-8 border-[#FF6B6B] mb-8">
-      <h1 class="text-4xl md:text-5xl font-bold font-poppins text-[#1C2E4A] mb-2">Gift Ideas Blog</h1>
-      <p class="text-lg font-inter text-[#333] mb-4 max-w-3xl mx-auto">Expert-curated gift guides, seasonal inspiration, and thoughtful ideas to help you find the perfect presents for every occasion and person. Discover unique gift recommendations for birthdays, holidays, and special moments.</p>
-      <div class="flex flex-wrap justify-center gap-4 mt-6">
-        <a href="/category/gift-guides" class="px-4 py-2 bg-[#FF6B6B] text-white rounded-full text-sm font-semibold hover:bg-[#ff4c4c] transition-colors">Gift Guides</a>
-        <a href="/category/educational" class="px-4 py-2 bg-[#A3E4DB] text-[#1C2E4A] rounded-full text-sm font-semibold hover:bg-[#8FD8CC] transition-colors">Educational</a>
-        <a href="/category/data-driven" class="px-4 py-2 bg-[#FFDE59] text-[#1C2E4A] rounded-full text-sm font-semibold hover:bg-[#FFD633] transition-colors">Data-Driven</a>
-        <a href="/blog" class="px-4 py-2 bg-[#FF6B6B] text-white rounded-full text-sm font-semibold hover:bg-[#ff4c4c] transition-colors">All Posts</a>
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold font-poppins text-[#1C2E4A] mb-2">Gift Ideas Blog</h1>
+        <p class="text-lg font-inter text-[#333] mb-4 max-w-3xl mx-auto">Expert-curated gift guides, seasonal inspiration, and thoughtful ideas to help you find the perfect presents for every occasion and person. Discover unique gift recommendations for birthdays, holidays, and special moments.</p>
+        
+        <div class="flex flex-wrap justify-center gap-4 mt-6">
+          <a href="/blog" class="px-4 py-2 bg-[#FF6B6B] text-white rounded-full text-sm font-semibold hover:bg-[#ff4c4c] transition-colors">All Posts</a>
+          <a href="/category/gift-guides" class="px-4 py-2 bg-[#A3E4DB] text-[#1C2E4A] rounded-full text-sm font-semibold hover:bg-[#8FD8CC] transition-colors">Gift Guides</a>
+          <a href="/category/gift-tips" class="px-4 py-2 bg-[#FFDE59] text-[#1C2E4A] rounded-full text-sm font-semibold hover:bg-[#FFD633] transition-colors">Gift Tips & Insights</a>
+        </div>
       </div>
     </div>
 
     <!-- Content Grid -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <!-- Breadcrumb -->
-      <nav class="mb-8" aria-label="Breadcrumb">
-        <ol class="flex items-center space-x-2 text-sm text-slate-600">
-          <li><a href="/" class="hover:text-[#FF6B6B] transition-colors">Home</a></li>
-          <li class="flex items-center">
-            <svg class="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-            </svg>
-            <span class="font-medium text-[#1C2E4A]">Blog</span>
-          </li>
-        </ol>
-      </nav>
+      <!-- Breadcrumb and Search Row -->
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb">
+          <ol class="flex items-center space-x-2 text-sm text-slate-600">
+            <li><a href="/" class="hover:text-[#FF6B6B] transition-colors">Home</a></li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="font-medium text-[#1C2E4A]">Blog</span>
+            </li>
+          </ol>
+        </nav>
+
+        <!-- Search Bar -->
+        <div class="w-full sm:w-auto">
+          <div class="relative">
+            <input 
+              type="text" 
+              id="search-input"
+              placeholder="Search posts..."
+              class="w-full sm:w-64 px-4 py-2 text-sm border border-[#A3E4DB] rounded-lg bg-white/90 focus:outline-none focus:border-[#FF6B6B] text-[#1C2E4A] shadow-sm"
+              aria-label="Search blog posts"
+            />
+            <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+              <svg class="w-4 h-4 text-[#1C2E4A] opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- Posts Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -195,6 +218,25 @@ const blogIndexStructuredData = {
         ))}
       </div>
 
+      <!-- Search Results Container -->
+      <div id="search-results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 hidden">
+        <!-- Search results will be populated here -->
+      </div>
+
+      <!-- No Results Message -->
+      <div id="no-results" class="text-center py-12 hidden">
+        <div class="max-w-md mx-auto">
+          <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          <h3 class="text-xl font-semibold text-[#1C2E4A] mb-2">No results found</h3>
+          <p class="text-gray-600 mb-4">Try adjusting your search terms or browse our categories below.</p>
+          <button id="clear-search" class="px-4 py-2 bg-[#FF6B6B] text-white rounded-lg hover:bg-[#ff4c4c] transition-colors">
+            Clear Search
+          </button>
+        </div>
+      </div>
+
       <!-- Pagination -->
       {totalPages > 1 && (
         <div class="mt-12 flex justify-center">
@@ -243,6 +285,164 @@ const blogIndexStructuredData = {
   </div>
 </Layout>
 
+<script>
+  // Search functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-input');
+    const postsGrid = document.querySelector('.grid');
+    const searchResults = document.getElementById('search-results');
+    const noResults = document.getElementById('no-results');
+    const clearSearchBtn = document.getElementById('clear-search');
+    
+    // Store all posts data for search - get from the rendered DOM
+    const allPosts = Array.from(document.querySelectorAll('article')).map(article => {
+      const title = article.querySelector('h2 a').textContent.trim();
+      const description = article.querySelector('p').textContent.trim();
+      const category = article.querySelector('.absolute.top-2.right-2')?.textContent.trim() || '';
+      const date = article.querySelector('time').getAttribute('datetime');
+      const slug = article.querySelector('h2 a').getAttribute('href').replace('/blog/', '');
+      const image = article.querySelector('img').getAttribute('src');
+      const readTime = article.querySelector('.flex.items-center span')?.textContent.trim() || '';
+      
+      return {
+        title,
+        description,
+        category,
+        date,
+        slug,
+        image,
+        readTime,
+        tags: [],
+        type: 'blog'
+      };
+    });
+
+    function performSearch(query) {
+      const searchTerm = query.toLowerCase().trim();
+      
+      if (!searchTerm) {
+        // Show original content
+        postsGrid.classList.remove('hidden');
+        searchResults.classList.add('hidden');
+        noResults.classList.add('hidden');
+        return;
+      }
+
+      // Filter posts based on search term
+      const filteredPosts = allPosts.filter(post => {
+        const searchableText = [
+          post.title,
+          post.description,
+          post.category,
+          ...post.tags
+        ].join(' ').toLowerCase();
+        
+        return searchableText.includes(searchTerm);
+      });
+
+      // Hide original grid and show search results
+      postsGrid.classList.add('hidden');
+      searchResults.classList.remove('hidden');
+      
+      if (filteredPosts.length === 0) {
+        noResults.classList.remove('hidden');
+        searchResults.innerHTML = '';
+      } else {
+        noResults.classList.add('hidden');
+        displaySearchResults(filteredPosts);
+      }
+    }
+
+    function displaySearchResults(posts) {
+      searchResults.innerHTML = posts.map(post => `
+        <article class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow duration-300" itemscope itemtype="https://schema.org/BlogPosting">
+          <!-- Post Image -->
+          <div class="aspect-video bg-slate-200 relative overflow-hidden">
+            <img 
+              src="${post.image}" 
+              alt="${post.title} - Gift ideas and recommendations"
+              class="w-full h-full object-cover"
+              loading="lazy"
+              itemprop="image"
+            />
+            ${post.category ? `
+              <div class="absolute top-2 right-2 bg-[#FF6B6B] text-white text-xs px-2 py-1 rounded">
+                ${post.category}
+              </div>
+            ` : ''}
+          </div>
+          
+          <!-- Post Content -->
+          <div class="p-6">
+            <h2 class="text-xl font-bold mb-2 text-[#1C2E4A] hover:text-[#FF6B6B] transition-colors" itemprop="headline">
+              <a href="/blog/${post.slug}" class="block" aria-label="Read ${post.title} gift guide">
+                ${post.title}
+              </a>
+            </h2>
+            
+            <p class="text-gray-600 mb-4 line-clamp-3" itemprop="description">
+              ${post.description}
+            </p>
+            
+            <!-- Post Meta -->
+            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+              <time datetime="${post.date}" itemprop="datePublished">
+                ${new Date(post.date).toLocaleDateString('en-US', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </time>
+              ${post.readTime ? `
+                <span class="flex items-center">
+                  <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  ${post.readTime}
+                </span>
+              ` : ''}
+            </div>
+            
+            <!-- Read More Link -->
+            <a 
+              href="/blog/${post.slug}" 
+              class="inline-flex items-center text-[#FF6B6B] font-semibold hover:text-[#ff4c4c] transition-colors"
+              aria-label="Read complete ${post.title} gift guide"
+            >
+              Read Complete Guide
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function clearSearch() {
+      searchInput.value = '';
+      postsGrid.classList.remove('hidden');
+      searchResults.classList.add('hidden');
+      noResults.classList.add('hidden');
+    }
+
+    // Search input event listener
+    searchInput.addEventListener('input', function() {
+      performSearch(this.value);
+    });
+
+    // Clear search button
+    clearSearchBtn.addEventListener('click', clearSearch);
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        clearSearch();
+      }
+    });
+  });
+</script>
+
 <style>
   .line-clamp-2 {
     display: -webkit-box;
@@ -256,4 +456,4 @@ const blogIndexStructuredData = {
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-</style> 
+</style>

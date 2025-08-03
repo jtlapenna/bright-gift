@@ -165,9 +165,14 @@ const faqData = {
 										<span class="bg-[#FF6B6B] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2">1</span>
 										Who are you shopping for?
 									</label>
-									<input type="text" id="recipient" name="recipient" aria-required="true" 
-										class="w-full px-3 py-3 border-2 border-[#A3E4DB] rounded-lg bg-white/90 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 focus:border-[#FF6B6B] text-[#1C2E4A] text-base transition-all duration-200" 
-										placeholder="e.g., my 30-year-old brother">
+									<input 
+										type="text" 
+										id="recipient" 
+										name="recipient" 
+										placeholder="Who are you shopping for?" 
+										required 
+										class="w-full px-3 py-3 border-2 border-[#A3E4DB] rounded-lg bg-white/90 focus:outline-none focus:border-[#FF6B6B] text-[#1C2E4A] text-base"
+									/>
 									<p class="text-xs text-[#1C2E4A] mt-2 opacity-75 flex items-center">
 										💡 Be specific for better recommendations
 									</p>
@@ -179,9 +184,14 @@ const faqData = {
 										<span class="bg-[#FF6B6B] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2">2</span>
 										What do they like?
 									</label>
-									<input type="text" id="interests" name="interests" aria-required="true" 
-										class="w-full px-3 py-3 border-2 border-[#A3E4DB] rounded-lg bg-white/90 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 focus:border-[#FF6B6B] text-[#1C2E4A] text-base transition-all duration-200" 
-										placeholder="e.g., hiking, sci-fi movies, craft beer">
+									<input 
+										type="text" 
+										id="interests" 
+										name="interests" 
+										placeholder="e.g., reading, cooking, gaming, fitness" 
+										required 
+										class="w-full px-3 py-3 border-2 border-[#A3E4DB] rounded-lg bg-white/90 focus:outline-none focus:border-[#FF6B6B] text-[#1C2E4A] text-base"
+									/>
 									<p class="text-xs text-[#1C2E4A] mt-2 opacity-75 flex items-center">
 										💡 Hobbies, interests, or recent life changes
 									</p>
@@ -195,7 +205,7 @@ const faqData = {
 									</label>
 									<div class="relative">
 										<select id="budget" name="budget" aria-required="true" 
-											class="w-full px-4 py-3 border-2 border-[#A3E4DB] rounded-xl bg-white/90 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 focus:border-[#FF6B6B] text-[#1C2E4A] text-base transition-all duration-200 appearance-none cursor-pointer shadow-sm hover:shadow-md">
+											class="w-full px-4 py-3 border-2 border-[#A3E4DB] rounded-xl bg-white/90 focus:outline-none focus:border-[#FF6B6B] text-[#1C2E4A] text-base appearance-none cursor-pointer shadow-sm hover:shadow-md">
 											<option value="25" class="py-2 text-[#1C2E4A] bg-white">Under $25 - Budget-Friendly</option>
 											<option value="50" selected class="py-2 text-[#1C2E4A] bg-white">Under $50 - Sweet Spot</option>
 											<option value="100" class="py-2 text-[#1C2E4A] bg-white">Under $100 - Premium</option>
@@ -245,7 +255,7 @@ const faqData = {
 									<div class="grid grid-cols-2 md:grid-cols-3 gap-3" role="group" aria-label="Gift Style Selection">
 										<button type="button" 
 											data-style="eco-friendly"
-											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
 											<div class="flex flex-col items-center">
 												<span class="text-base mb-1">🌱</span>
@@ -254,7 +264,7 @@ const faqData = {
 										</button>
 										<button type="button" 
 											data-style="handmade"
-											class="style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#A3E4DB]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											class="style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
 											<div class="flex flex-col items-center">
 												<span class="text-base mb-1">🖐️</span>
@@ -263,7 +273,7 @@ const faqData = {
 										</button>
 										<button type="button" 
 											data-style="funny"
-											class="style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FF6B6B]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											class="style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
 											<div class="flex flex-col items-center">
 												<span class="text-base mb-1">🎉</span>
@@ -272,7 +282,7 @@ const faqData = {
 										</button>
 										<button type="button" 
 											data-style="pride-gifts"
-											class="style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FF6B6B]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											class="style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
 											<div class="flex flex-col items-center">
 												<span class="text-base mb-1">🌈</span>
@@ -281,7 +291,7 @@ const faqData = {
 										</button>
 										<button type="button" 
 											data-style="quirky"
-											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
 											<div class="flex flex-col items-center">
 												<span class="text-base mb-1">💡</span>
@@ -290,7 +300,7 @@ const faqData = {
 										</button>
 										<button type="button" 
 											data-style="luxury"
-											class="style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#A3E4DB]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											class="style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
 											<div class="flex flex-col items-center">
 												<span class="text-base mb-1">💎</span>
@@ -299,7 +309,7 @@ const faqData = {
 										</button>
 										<button type="button" 
 											data-style="techy"
-											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
 											<div class="flex flex-col items-center">
 												<span class="text-base mb-1">📚</span>
@@ -308,7 +318,7 @@ const faqData = {
 										</button>
 										<button type="button" 
 											data-style="wellness"
-											class="style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#A3E4DB]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											class="style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
 											<div class="flex flex-col items-center">
 												<span class="text-base mb-1">💚</span>
@@ -317,7 +327,7 @@ const faqData = {
 										</button>
 										<button type="button" 
 											data-style="athletics"
-											class="style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FF6B6B]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											class="style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
 											<div class="flex flex-col items-center">
 												<span class="text-base mb-1">⚽</span>
@@ -326,7 +336,7 @@ const faqData = {
 										</button>
 										<button type="button" 
 											data-style="beauty"
-											class="style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FF6B6B]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											class="style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
 											<div class="flex flex-col items-center">
 												<span class="text-base mb-1">💄</span>
@@ -335,7 +345,7 @@ const faqData = {
 										</button>
 										<button type="button" 
 											data-style="black-owned"
-											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
 											<div class="flex flex-col items-center">
 												<span class="text-base mb-1">🌟</span>
@@ -344,7 +354,7 @@ const faqData = {
 										</button>
 										<button type="button" 
 											data-style="book-lover"
-											class="style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#A3E4DB]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											class="style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
 											<div class="flex flex-col items-center">
 												<span class="text-base mb-1">📖</span>
@@ -373,7 +383,7 @@ const faqData = {
 
 								<!-- Submit Button with enhanced design -->
 								<div class="text-center">
-									<button type="submit" class="w-full bg-gradient-to-r from-[#FF6B6B] to-[#FF8585] text-white font-bold py-4 px-6 rounded-xl hover:from-[#ff4c4c] hover:to-[#ff6666] transition-all duration-300 font-poppins text-lg shadow-xl transform hover:scale-105 hover:shadow-2xl border-2 border-white/20">
+									<button type="submit" class="w-full bg-gradient-to-r from-[#FF6B6B] to-[#FF8585] text-white font-bold py-4 px-6 rounded-xl hover:from-[#ff4c4c] hover:to-[#ff6666] font-poppins text-lg shadow-xl transform hover:scale-105 hover:shadow-2xl border-2 border-white/20">
 										<div class="flex items-center justify-center">
 											<span class="text-2xl mr-2">🎁</span>
 											Generate AI Gift Ideas
@@ -470,44 +480,46 @@ const faqData = {
 		</div>
 
 		<!-- About the Tool / SEO Content Block -->
-		<section id="about-tool" class="py-16 px-4 max-w-4xl mx-auto text-center" itemscope itemtype="https://schema.org/WebPage">
-			<h2 class="text-3xl font-bold mb-6 font-poppins text-[#1C2E4A]" itemprop="headline">About the AI Gift Idea Generator</h2>
-			<div class="grid md:grid-cols-2 gap-8 text-left">
-				<div>
-					<h3 class="text-xl font-semibold mb-3 text-[#1C2E4A]">How Our AI Gift Finder Works</h3>
-					<p class="text-[#333] mb-4 font-inter leading-relaxed">
-						Bright Gift's AI Gift Idea Generator uses advanced machine learning to analyze your recipient's interests, personality, and preferences. Our AI-powered gift finder processes your input in real-time and delivers creative, personalized gift recommendations that match your budget and occasion.
-					</p>
-					<p class="text-[#333] font-inter leading-relaxed">
-						Unlike generic gift lists, our AI considers the unique relationship between you and your recipient, suggesting thoughtful presents that create meaningful connections and lasting memories.
-					</p>
+		<section id="about-tool" class="py-16 px-4 bg-[#A3E4DB] text-center" itemscope itemtype="https://schema.org/WebPage">
+			<div class="max-w-4xl mx-auto">
+				<h2 class="text-3xl font-bold mb-6 font-poppins text-[#1C2E4A]" itemprop="headline">About the AI Gift Idea Generator</h2>
+				<div class="grid md:grid-cols-2 gap-8 text-left">
+					<div>
+						<h3 class="text-xl font-semibold mb-3 text-[#1C2E4A]">How Our AI Gift Finder Works</h3>
+						<p class="text-[#1C2E4A]/90 mb-4 font-inter leading-relaxed">
+							Bright Gift's AI Gift Idea Generator uses advanced machine learning to analyze your recipient's interests, personality, and preferences. Our AI-powered gift finder processes your input in real-time and delivers creative, personalized gift recommendations that match your budget and occasion.
+						</p>
+						<p class="text-[#1C2E4A]/90 font-inter leading-relaxed">
+							Unlike generic gift lists, our AI considers the unique relationship between you and your recipient, suggesting thoughtful presents that create meaningful connections and lasting memories.
+						</p>
+					</div>
+					<div>
+						<h3 class="text-xl font-semibold mb-3 text-[#1C2E4A]">Why Choose AI-Powered Gift Recommendations?</h3>
+						<ul class="text-[#1C2E4A]/90 font-inter leading-relaxed space-y-2">
+							<li class="flex items-start">
+								<span class="text-[#1C2E4A] mr-2">✓</span>
+								<span>Personalized suggestions based on real interests</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-[#1C2E4A] mr-2">✓</span>
+								<span>Budget-friendly options for every price range</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-[#1C2E4A] mr-2">✓</span>
+								<span>Creative ideas you might not find elsewhere</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-[#1C2E4A] mr-2">✓</span>
+								<span>Time-saving recommendations in seconds</span>
+							</li>
+						</ul>
+					</div>
 				</div>
-				<div>
-					<h3 class="text-xl font-semibold mb-3 text-[#1C2E4A]">Why Choose AI-Powered Gift Recommendations?</h3>
-					<ul class="text-[#333] font-inter leading-relaxed space-y-2">
-						<li class="flex items-start">
-							<span class="text-[#FF6B6B] mr-2">✓</span>
-							<span>Personalized suggestions based on real interests</span>
-						</li>
-						<li class="flex items-start">
-							<span class="text-[#FF6B6B] mr-2">✓</span>
-							<span>Budget-friendly options for every price range</span>
-						</li>
-						<li class="flex items-start">
-							<span class="text-[#FF6B6B] mr-2">✓</span>
-							<span>Creative ideas you might not find elsewhere</span>
-						</li>
-						<li class="flex items-start">
-							<span class="text-[#FF6B6B] mr-2">✓</span>
-							<span>Time-saving recommendations in seconds</span>
-						</li>
-					</ul>
+				<div class="mt-8">
+					<a href="#tool" class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins text-lg shadow" aria-label="Try the AI Gift Finder now">
+						Try the AI Gift Finder
+					</a>
 				</div>
-			</div>
-			<div class="mt-8">
-				<a href="#tool" class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins text-lg shadow" aria-label="Try the AI Gift Finder now">
-					Try the AI Gift Finder
-				</a>
 			</div>
 		</section>
 
@@ -654,26 +666,26 @@ const faqData = {
 				// Reset to base state - all unselected styles become white when any style is selected
 				if (selectedStyles.length > 0 && !isSelected) {
 					// Unselected styles get white background
-					button.className = `style-chip group bg-white text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-gray-200 hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1`;
+					button.className = `style-chip group bg-white text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-gray-200 hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1`;
 				} else if (selectedStyles.length === 0) {
 					// No styles selected - show truly random pattern (no column grouping)
 					if (style === 'eco-friendly' || style === 'quirky' || style === 'techy' || style === 'black-owned') {
-						button.className = `style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1`;
+						button.className = `style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1`;
 					} else if (style === 'handmade' || style === 'luxury' || style === 'wellness' || style === 'book-lover') {
-						button.className = `style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#A3E4DB]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1`;
+						button.className = `style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1`;
 					} else if (style === 'funny' || style === 'pride-gifts' || style === 'athletics' || style === 'beauty') {
-						button.className = `style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FF6B6B]/50 shadow-md hover:shadow-lg transform hover:-translate-y-1`;
+						button.className = `style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1`;
 					}
 				}
 				
 				if (isSelected) {
 					// Selected state - make it more prominent with original color
 					if (style === 'eco-friendly' || style === 'quirky' || style === 'techy' || style === 'black-owned') {
-						button.className = `style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FFDE59]/50 shadow-xl ring-4 ring-[#FFDE59] ring-opacity-50 scale-105`;
+						button.className = `style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] focus:outline-none focus:border-[#FF6B6B] shadow-xl scale-105`;
 					} else if (style === 'handmade' || style === 'luxury' || style === 'wellness' || style === 'book-lover') {
-						button.className = `style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#A3E4DB]/50 shadow-xl ring-4 ring-[#FFDE59] ring-opacity-50 scale-105`;
+						button.className = `style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] focus:outline-none focus:border-[#FF6B6B] shadow-xl scale-105`;
 					} else if (style === 'funny' || style === 'pride-gifts' || style === 'athletics' || style === 'beauty') {
-						button.className = `style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#FF6B6B]/50 shadow-xl ring-4 ring-[#FFDE59] ring-opacity-50 scale-105`;
+						button.className = `style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-xl scale-105`;
 					}
 				} else if (isDisabled) {
 					// Disabled state
