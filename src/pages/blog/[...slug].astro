@@ -232,7 +232,7 @@ const relatedPosts = allBlogPosts
 
         <!-- Sidebar -->
         <div class="lg:col-span-4 lg:pl-6">
-          <div class="sticky top-8" style="max-height: calc(100vh - 4rem); overflow-y: auto;">
+          <div class="sticky top-8">
             <!-- Share Buttons -->
             <div class="bg-slate-50 p-6 rounded-lg mb-6 shadow-md">
               <h4 class="font-semibold text-slate-900 mb-3">Share this post</h4>
@@ -514,32 +514,10 @@ const relatedPosts = allBlogPosts
     outline: none;
   }
 
-  /* Sticky sidebar with bottom limit */
+  /* Sticky sidebar without own scrollbar */
   .sticky {
     position: sticky;
     top: 2rem;
-    max-height: calc(100vh - 4rem);
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #cbd5e1 #f1f5f9;
-  }
-  
-  .sticky::-webkit-scrollbar {
-    width: 6px;
-  }
-  
-  .sticky::-webkit-scrollbar-track {
-    background: #f1f5f9;
-    border-radius: 3px;
-  }
-  
-  .sticky::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
-    border-radius: 3px;
-  }
-  
-  .sticky::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
   }
   
   /* Ensure sidebar doesn't overlap with footer */
