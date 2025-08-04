@@ -232,7 +232,7 @@ const relatedPosts = allBlogPosts
 
         <!-- Sidebar -->
         <div class="lg:col-span-4 lg:pl-6">
-          <div class="sticky top-8">
+          <div id="sidebar" class="sticky top-8">
             <!-- Share Buttons -->
             <div class="bg-slate-50 p-6 rounded-lg mb-6 shadow-md">
               <h4 class="font-semibold text-slate-900 mb-3">Share this post</h4>
@@ -520,6 +520,12 @@ const relatedPosts = allBlogPosts
     top: 2rem;
   }
   
+  /* When sidebar should scroll with page */
+  .sticky.scroll-with-page {
+    position: relative;
+    top: auto;
+  }
+  
   /* Product layout styles - ensure price and link are on same line */
   .prose h3 + p {
     margin-bottom: 0.75rem;
@@ -582,4 +588,36 @@ const relatedPosts = allBlogPosts
     margin-bottom: 1.5rem;
     flex-wrap: wrap;
   }
-</style> 
+</style>
+
+<script>
+  // Handle sticky sidebar behavior
+  document.addEventListener('DOMContentLoaded', function() {
+    const sidebar = document.getElementById('sidebar');
+    const mainContent = document.querySelector('main');
+    
+    if (!sidebar || !mainContent) return;
+    
+    function updateSidebarSticky() {
+      const sidebarRect = sidebar.getBoundingClientRect();
+      const mainRect = mainContent.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      
+      // If sidebar bottom would go below viewport, make it scroll with page
+      if (sidebarRect.bottom > viewportHeight - 20) {
+        sidebar.classList.add('scroll-with-page');
+      } else {
+        sidebar.classList.remove('scroll-with-page');
+      }
+    }
+    
+    // Update on scroll
+    window.addEventListener('scroll', updateSidebarSticky);
+    
+    // Update on resize
+    window.addEventListener('resize', updateSidebarSticky);
+    
+    // Initial update
+    updateSidebarSticky();
+  });
+</script> 
