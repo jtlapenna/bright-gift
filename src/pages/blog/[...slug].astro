@@ -140,7 +140,7 @@ const relatedPosts = allBlogPosts
     const bOverlap = bTags.filter(tag => currentTags.includes(tag)).length;
     return bOverlap - aOverlap;
   })
-  .slice(0, 3);
+  .slice(0, 2); // Limit to 2 posts to prevent cutoff
 ---
 
 <Layout 
@@ -304,7 +304,7 @@ const relatedPosts = allBlogPosts
             <div class="mb-6">
               <h4 class="font-semibold text-slate-900 mb-4">Related Posts</h4>
               {relatedPosts.length > 0 ? (
-                <div class="space-y-4">
+                <div class="space-y-3">
                   {relatedPosts.map(relatedPost => (
                     <a 
                       href={`/blog/${relatedPost.slug}`}
@@ -320,11 +320,11 @@ const relatedPosts = allBlogPosts
                         />
                       </div>
                       <!-- Content -->
-                      <div class="p-4">
-                        <h5 class="font-semibold text-slate-900 text-sm mb-2 line-clamp-2">
+                      <div class="p-3">
+                        <h5 class="font-semibold text-slate-900 text-sm mb-1 line-clamp-2">
                           {relatedPost.data.title}
                         </h5>
-                        <p class="text-slate-600 text-xs line-clamp-3 mb-3">
+                        <p class="text-slate-600 text-xs line-clamp-2 mb-2">
                           {relatedPost.data.description}
                         </p>
                         <div class="flex items-center justify-between text-xs text-slate-500">
