@@ -21,7 +21,7 @@ Professional content writer for SEO-optimized affiliate blog posts. Write engagi
 - **10-15 specific gift ideas** with price ranges
 - **Each gift:** H3 heading, detailed description with benefits, practical tips, specific price range, affiliate link
 - **7th-8th grade reading level**
-- **Note:** Do NOT include affiliate disclosure in the content - it's handled by the template
+- **Note:** Do NOT include affiliate disclosure in the content - it's handled by the template (appears automatically)
 
 ## Enhanced Gift Description Structure
 For each gift idea, include these elements:
@@ -46,7 +46,7 @@ For each gift idea, include these elements:
 - Place price range and affiliate link on the same line after the description
 - Use this format: `**Price Range:** $30-$40 <a href="..." class="amazon-link">View on Amazon</a>`
 - Ensure the price range and link are in the same paragraph, separated by a space
-- Do NOT include affiliate disclosure in the content - it's handled by the template
+- Do NOT include affiliate disclosure in the content - it's handled by the template (appears automatically)
 
 ## Affiliate Link Guidelines
 
@@ -54,7 +54,7 @@ For each gift idea, include these elements:
 
 - **Amazon:** Use `tag=bright-gift-20` for all Amazon links
 - **Bookshop.org:** Use `brightgift` affiliate ID for all Bookshop.org links
-- **Disclosure:** Include affiliate disclosure at the beginning of posts
+- **Disclosure:** Affiliate disclosure is handled by the template - do NOT include in content
 - **Format:** Use `class="amazon-link" target="_blank" rel="noopener"` for all affiliate links
 
 ## Required Sections

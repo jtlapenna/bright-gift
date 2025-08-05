@@ -58,40 +58,29 @@ class BlogFixer {
   }
 
   fixAffiliateDisclosure(content) {
-    const affiliateLinks = this.findAffiliateLinks(content);
+    // Remove any hardcoded affiliate disclaimers from content
+    // since they're now handled by the template
+    let fixed = content;
     
-    if (affiliateLinks.length > 0) {
-      const disclosurePatterns = [
-        /affiliate.*link/i,
-        /commission.*purchase/i,
-        /earn.*commission/i
-      ];
-      
-      const hasDisclosure = disclosurePatterns.some(pattern => 
-        pattern.test(content)
-      );
-      
-      if (!hasDisclosure) {
-        // Add disclosure after frontmatter
-        const lines = content.split('\n');
-        const disclosureLine = 'This post contains affiliate links. We may earn a commission if you click through and make a purchase, at no additional cost to you.';
-        
-        // Find the first non-empty line after frontmatter
-        let insertIndex = 0;
-        for (let i = 0; i < lines.length; i++) {
-          if (lines[i].trim() && !lines[i].startsWith('---')) {
-            insertIndex = i;
-            break;
-          }
-        }
-        
-        lines.splice(insertIndex, 0, '', disclosureLine, '');
-        this.fixesApplied.push('Added missing affiliate disclosure');
-        return lines.join('\n');
+    const disclosurePatterns = [
+      /\*As an Amazon Associate.*\*/g,
+      /\*This post contains affiliate links.*\*/g,
+      /This post contains affiliate links\. We may earn a commission if you click through and make a purchase, at no additional cost to you\./g
+    ];
+    
+    let removed = false;
+    disclosurePatterns.forEach(pattern => {
+      if (pattern.test(fixed)) {
+        fixed = fixed.replace(pattern, '');
+        removed = true;
       }
+    });
+    
+    if (removed) {
+      this.fixesApplied.push('Removed hardcoded affiliate disclosure (now handled by template)');
     }
     
-    return content;
+    return fixed;
   }
 
   fixFormatting(content) {

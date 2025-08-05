@@ -30,7 +30,7 @@ category: gift-guides
 ---
 
 
-This post contains affiliate links. We may earn a commission if you click through and make a purchase, at no additional cost to you.
+
 
 Looking for the perfect home gift? Amazon has everything you need to transform any space into a cozy, functional haven. Whether you're shopping for new homeowners, housewarming parties, or just want to upgrade your own space, these top picks combine style, functionality, and value.
 

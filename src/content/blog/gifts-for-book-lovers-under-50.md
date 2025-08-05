@@ -49,7 +49,7 @@ contentType: gift-guide
 status: published
 ---
 
-*This post contains affiliate links. We may earn a commission if you click through and make a purchase, at no additional cost to you.*
+
 
 ## Why Book Lovers Make the Best Gift Recipients
 

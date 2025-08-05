@@ -31,7 +31,7 @@ category: gift-guides
 ---
 
 
-This post contains affiliate links. We may earn a commission if you click through and make a purchase, at no additional cost to you.
+
 
 Moving into a new home is an exciting milestone that deserves celebration. Whether they're first-time buyers or seasoned homeowners, these thoughtful gifts under $75 will help make their new space feel like home.
 

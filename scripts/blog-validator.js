@@ -125,28 +125,13 @@ class BlogValidator {
   }
 
   validateAffiliateDisclosure(content) {
+    // Affiliate disclosure is now handled by the template
+    // No need to check for disclosure in content
     const affiliateLinks = this.findAffiliateLinks(content);
     
     if (affiliateLinks.length > 0) {
-      const disclosurePatterns = [
-        /affiliate.*link/i,
-        /commission.*purchase/i,
-        /earn.*commission/i
-      ];
-      
-      const hasDisclosure = disclosurePatterns.some(pattern => 
-        pattern.test(content)
-      );
-      
-      if (!hasDisclosure) {
-        this.errors.push('Missing affiliate disclosure for posts with affiliate links');
-      }
-      
-      // Check disclosure positioning
-      const disclosurePosition = this.checkDisclosurePosition(content);
-      if (disclosurePosition !== 'correct') {
-        this.warnings.push(`Affiliate disclosure positioning: ${disclosurePosition}`);
-      }
+      // Just log that affiliate links are present
+      console.log(`✅ Post contains ${affiliateLinks.length} affiliate links`);
     }
   }
 
