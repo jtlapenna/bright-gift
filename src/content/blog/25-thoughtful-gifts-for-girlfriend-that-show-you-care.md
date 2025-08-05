@@ -1,10 +1,10 @@
 ---
-title: "25 Thoughtful Gifts for Girlfriend That Show You Care"
-metaTitle: "Thoughtful Gifts for Girlfriend: 25 Meaningful Ideas She'll Love | BrightGift"
-metaDescription: "Looking for thoughtful gifts for girlfriend? Discover 25 meaningful gift ideas that show you care, from personalized jewelry to romantic experiences. Find the perfect present today!"
+title: "25 Thoughtful Gifts for Your Girlfriend That Show You Care"
+metaTitle: "Thoughtful Gifts for Your Girlfriend: 25 Meaningful Ideas She'll Love | BrightGift"
+metaDescription: "Looking for thoughtful gifts for your girlfriend? Discover 25 meaningful gift ideas that show you care, from personalized jewelry to romantic experiences. Find the perfect present today!"
 description: "Find the perfect thoughtful gift for your girlfriend with our curated selection of meaningful presents that show you care. From personalized items to romantic experiences, discover 25 ideas she'll love."
 date: "2025-08-05"
-status: "draft"
+status: "published"
 contentType: "gift-guide"
 image: "/images/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/25-thoughtful-gifts-for-girlfriend-that-show-you-care-banner.webp"
 ogImage: "/images/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/25-thoughtful-gifts-for-girlfriend-that-show-you-care-og.webp"
@@ -24,7 +24,7 @@ socialPosts:
     hashtags: ["giftideas", "girlfriend", "thoughtfulgifts", "romantic"]
     scheduledAt: "2025-08-05T10:00:00Z"
   instagram:
-    caption: "🎁 Thoughtful gifts for girlfriend that show you care! From personalized jewelry to romantic experiences, discover 25 meaningful ideas she'll love. Perfect for birthdays, anniversaries, or just because! 💕 #thoughtfulgifts #girlfriend #giftideas #romantic #relationshipgoals"
+    caption: "🎁 Thoughtful gifts for your girlfriend that show you care! From personalized jewelry to romantic experiences, discover 25 meaningful ideas she'll love. Perfect for birthdays, anniversaries, or just because! 💕 #thoughtfulgifts #girlfriend #giftideas #romantic #relationshipgoals"
     hashtags: ["thoughtfulgifts", "girlfriend", "giftideas", "romantic", "relationshipgoals", "love"]
     scheduledAt: "2025-08-05T11:00:00Z"
   facebook:
@@ -32,7 +32,7 @@ socialPosts:
     hashtags: ["giftideas", "girlfriend", "thoughtfulgifts", "romantic"]
     scheduledAt: "2025-08-05T12:00:00Z"
   pinterest:
-    description: "25 Thoughtful Gifts for Girlfriend That Show You Care - Discover meaningful ideas from personalized jewelry to romantic experiences. Perfect for any occasion!"
+    description: "25 Thoughtful Gifts for Your Girlfriend That Show You Care - Discover meaningful ideas from personalized jewelry to romantic experiences. Perfect for any occasion!"
     hashtags: ["thoughtfulgifts", "girlfriend", "giftideas", "romantic", "relationship"]
     scheduledAt: "2025-08-05T13:00:00Z"
 affiliateLinks:
