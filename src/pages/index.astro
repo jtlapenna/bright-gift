@@ -508,8 +508,8 @@ const faqData = {
 				<section id="featured-guides" class="max-w-5xl mx-auto">
 					<h2 class="text-3xl font-bold text-center mb-12 font-poppins text-[#1C2E4A]">Gift Guides & Tips</h2>
 					<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-						{allContent.length > 0 ? (
-							allContent.slice(0, 3).map(item => (
+						{allContent.length > 1 ? (
+							allContent.slice(1, 4).map(item => (
 								<article class="bg-[#A3E4DB] rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300" tabindex="0" aria-label={`Gift Guide: ${item.data.title}`}> 
 									<img src={item.data.image} alt={`${item.data.title} - Gift ideas and recommendations`} class="h-40 w-full object-cover rounded-t-xl shadow">
 									<div class="p-6 flex-1 flex flex-col">
@@ -521,10 +521,10 @@ const faqData = {
 							))
 						) : (
 							<article class="bg-[#A3E4DB] rounded-2xl shadow-lg overflow-hidden flex flex-col" tabindex="0" aria-label="Guide: Coming Soon">
-								<div class="h-40 w-full bg-[#A3E4DB] flex items-center justify-center text-[#1C2E4A] opacity-60">No guides yet</div>
+								<div class="h-40 w-full bg-[#A3E4DB] flex items-center justify-center text-[#1C2E4A] opacity-60">No additional guides yet</div>
 								<div class="p-6 flex-1 flex flex-col">
 									<h3 class="font-bold text-lg mb-2 font-poppins text-[#1C2E4A]">More Gift Guides Coming Soon</h3>
-									<p class="text-[#333] mb-4 flex-1 font-inter">Check back soon for curated gift ideas and inspiration!</p>
+									<p class="text-[#333] mb-4 flex-1 font-inter">Check back soon for more curated gift ideas and inspiration!</p>
 								</div>
 							</article>
 						)}
