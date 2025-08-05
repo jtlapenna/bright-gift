@@ -1,8 +1,7 @@
 # Essential redirects only - remove legacy redirects that are causing sitemap issues
 
 # Handle trailing slash redirects for blog posts (fixes GSC validation)
-# Only redirect URLs that end with trailing slash to clean URLs
-# Temporarily disabled to fix redirect loop
+# Only redirect specific old URLs that need cleanup
 # /blog/*/   /blog/:splat   301
 
 # Fix .md extension URLs causing 404 errors (essential)
