@@ -174,11 +174,11 @@
 ## 🚨 **Issues & Blockers**
 
 ### **Current Blockers**
-- **Blocker 1:** [Description]
-- **Impact:** [Impact description]
-- **Resolution:** [Resolution plan]
-- **Owner:** [Owner]
-- **Due Date:** [Due date]
+- **Blocker 1:** Duplicate affiliate disclaimers on live blog posts
+- **Impact:** Template adds disclaimer but posts still have hardcoded ones (e.g., http://localhost:4321/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature)
+- **Resolution:** Remove all hardcoded disclaimers from blog post content
+- **Owner:** Audit team
+- **Due Date:** Immediate (P0)
 
 ### **Resolved Issues**
 - **Issue 1:** [Description]

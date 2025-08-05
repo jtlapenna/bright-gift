@@ -64,7 +64,7 @@ socialPosts:
     hashtags: 'giftideas,gifts,brightgift,giftguide'
 ---
 
-This post contains affiliate links. We may earn a commission if you click through and make a purchase, at no additional cost to you.
+
 
 Moms deserve the best, especially when it comes to self-care. Whether it's Mother's Day, a birthday, or just because, treating the special mom in your life to luxurious self-care gifts is a perfect way to express your love and appreciation. These indulgent gifts are more than just products; they are experiences that offer relaxation, rejuvenation, and a much-needed reminder that she is cherished. In this guide, we've curated a selection of luxurious self-care gifts that moms are sure to adore, helping you find that perfect present that aligns with her unique tastes and lifestyle.
 

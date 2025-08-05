@@ -35,7 +35,7 @@ category: gift-guides
 ---
 
 
-This post contains affiliate links. We may earn a commission if you click through and make a purchase, at no additional cost to you.
+
 
 Finding the perfect birthday gift for LGBTQ+ youth is a beautiful opportunity to celebrate their unique identity and show unconditional love and support. Birthdays are especially meaningful for young people exploring their identity, as they represent not just another year of life, but another year of becoming their authentic selves.
 

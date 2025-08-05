@@ -60,7 +60,7 @@ tags:
 ---
 
 
-This post contains affiliate links. We may earn a commission if you click through and make a purchase, at no additional cost to you.
+
 
 ## Introduction
 
