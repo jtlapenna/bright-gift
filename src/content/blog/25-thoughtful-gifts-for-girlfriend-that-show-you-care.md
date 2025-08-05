@@ -123,26 +123,26 @@ A bracelet engraved with the coordinates of where you first met, had your first 
 
 ## Romantic Experiences (Under $150)
 
-### 4. Couples Massage
-Book a couples massage for a relaxing and intimate experience you can enjoy together. Many spas offer packages specifically for couples.
+### 4. Couples Massage Chair Pad
+A heated massage chair pad with multiple settings that you can both enjoy together at home. Features include heat therapy, vibration, and adjustable intensity.
 
-**Why it's thoughtful:** It's an experience you can share, creating memories while helping her relax and feel pampered.
+**Why it's thoughtful:** It's a practical way to create a spa-like experience together, and you can use it anytime for relaxation.
 
-**Price Range:** $80-$150 // <a href="https://www.amazon.com/s?k=couples+massage+gift+card&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $80-$150 // <a href="https://www.amazon.com/s?k=couples+massage+chair+pad+heated&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
-### 5. Cooking Class for Two
-Sign up for a cooking class where you can learn to make something delicious together. Many classes focus on specific cuisines or techniques.
+### 5. Premium Cooking Set for Two
+A beautiful cooking set designed for couples, including matching aprons, recipe cards, and high-quality utensils. Perfect for creating romantic meals together.
 
-**Why it's thoughtful:** It's both educational and romantic, giving you a new skill to practice together at home.
+**Why it's thoughtful:** It encourages quality time together while building a shared hobby and creating delicious memories.
 
-**Price Range:** $60-$120 // <a href="https://www.amazon.com/s?k=cooking+class+gift+card&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $60-$120 // <a href="https://www.amazon.com/s?k=couples+cooking+set+aprons+utensils&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
-### 6. Weekend Getaway
-Plan a surprise weekend trip to a nearby city or cozy bed and breakfast. Include activities you know she'll enjoy.
+### 6. Luxury Picnic Basket Set
+A complete picnic basket with wine glasses, plates, utensils, and a cozy blanket. Perfect for romantic outdoor dates and creating special moments together.
 
-**Why it's thoughtful:** It shows you're willing to invest time and effort into creating special memories together.
+**Why it's thoughtful:** It shows you want to create beautiful experiences and memories together, whether at a park or in your backyard.
 
-**Price Range:** $100-$300 // <a href="https://www.amazon.com/s?k=travel+gift+card&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $100-$150 // <a href="https://www.amazon.com/s?k=luxury+picnic+basket+set+wine+glasses&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ---
 
@@ -280,12 +280,12 @@ Natural wellness supplements made with high-quality mushrooms to support her ove
 
 **Price Range:** $25-$45 // <a href="https://www.arjdj2msd.com/7LKLK3/24D26TB/" class="amazon-link" target="_blank" rel="noopener">Shop Endorf</a>
 
-### 23. Meditation App Subscription
-A premium subscription to a meditation app like Headspace or Calm helps her manage stress and practice mindfulness.
+### 23. Premium Meditation Cushion Set
+A beautiful meditation cushion set with a comfortable seat, matching mat, and storage bag. Perfect for creating a peaceful meditation space at home.
 
-**Why it's thoughtful:** It shows you care about her mental health and want to support her self-care practices.
+**Why it's thoughtful:** It shows you care about her mental health and want to support her mindfulness practice with quality equipment.
 
-**Price Range:** $50-$80 // <a href="https://www.amazon.com/s?k=meditation+app+gift+card&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $50-$80 // <a href="https://www.amazon.com/s?k=meditation+cushion+set+zen+pillow&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### 24. Essential Oil Diffuser
 A beautiful diffuser with her favorite essential oils creates a calming atmosphere in her home.
@@ -330,8 +330,8 @@ A beautiful planner designed for intentional living with inclusive design and th
 - Cooking class + personalized tote bag
 
 **Under $150:**
-- Couples massage + luxury bath set
-- Weekend getaway + personalized jewelry
+- Couples massage chair pad + luxury bath set
+- Luxury picnic basket + personalized jewelry
 - Tech gadgets + wellness supplements
 
 ---
