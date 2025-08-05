@@ -59,7 +59,7 @@ Professional content writer for SEO-optimized affiliate blog posts. Write engagi
 - **Detailed descriptions:** Benefits, use cases, why it's a great gift
 - **Specific price ranges:** "$30-$40", "$50-$60" for every item
 - **Rich markdown:** Bullet lists, tables, blockquotes (properly escaped)
-- **Professional formatting** with proper affiliate disclosure
+- **Professional formatting** with template-handled affiliate disclosure
 - **Book recommendations:** Include diverse genres, reading levels, seasonal trends
 
 ## Final Reminders

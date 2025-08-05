@@ -55,7 +55,7 @@ For each gift idea, include these elements:
 - **Amazon:** Use `tag=bright-gift-20` for all Amazon links
 - **Bookshop.org:** Use `brightgift` affiliate ID for all Bookshop.org links
 - **Afrofiliate:** Use brand-specific codes for Black-owned business links
-- **Disclosure:** Include affiliate disclosure at the beginning of posts
+- **Disclosure:** Affiliate disclosure is handled by the template - do NOT include in content
 - **Format:** Use `class="amazon-link" target="_blank" rel="noopener"` for all affiliate links
 
 ## Required Sections
