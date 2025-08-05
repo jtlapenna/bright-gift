@@ -30,7 +30,7 @@ category: gift-guides
 ---
 
 
-This post contains affiliate links. We may earn a commission if you click through and make a purchase, at no additional cost to you.
+
 
 Moving into a new home is a major milestone—and the perfect opportunity to give a thoughtful, memorable gift. Whether you're shopping for friends, family, or coworkers, this guide features the best housewarming gifts for 2025, from practical essentials to unique statement pieces. Every pick is designed to help new homeowners settle in, celebrate, and make their space their own.
 

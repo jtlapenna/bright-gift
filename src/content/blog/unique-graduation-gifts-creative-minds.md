@@ -32,7 +32,7 @@ category: gift-guides
 ---
 
 
-This post contains affiliate links. We may earn a commission if you click through and make a purchase, at no additional cost to you.
+
 
 Graduation is a pivotal moment in anyone's life, marking the transition from education to the next chapter of opportunities. For creative minds graduating, choosing a fitting gift involves considering what can inspire and support their artistic journey. Whether they're graduating from art school, design programs, or creative writing courses, these graduates deserve gifts that celebrate their unique talents and fuel their passion for creativity.
 

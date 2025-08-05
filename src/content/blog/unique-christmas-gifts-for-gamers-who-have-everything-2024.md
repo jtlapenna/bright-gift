@@ -33,7 +33,7 @@ category: gift-guides
 ---
 
 
-This post contains affiliate links. We may earn a commission if you click through and make a purchase, at no additional cost to you.
+
 
 Finding the perfect Christmas gift for a gamer who seems to have every accessory, game, and piece of equipment can feel like an impossible quest. When they already own the latest console, premium gaming headset, and all the popular games, you need to think outside the box to find something truly special.
 

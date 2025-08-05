@@ -39,7 +39,7 @@ category: gift-guides
 ---
 
 
-This post contains affiliate links. We may earn a commission if you click through and make a purchase, at no additional cost to you.
+
 
 Finding the perfect gift can be challenging, but what if you could give something meaningful that also supports diverse entrepreneurs? Black-owned businesses are creating incredible products across every category, from science-backed skincare to wellness supplements. These gifts not only delight recipients but also contribute to economic empowerment and representation in the marketplace.
 
