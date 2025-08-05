@@ -30,7 +30,7 @@ export async function GET() {
   // Category pages
   const categories = [...new Set(blogPosts.map(post => post.data.category))].filter(Boolean);
   const categoryUrls = categories.map(category => ({
-    url: `${baseUrl}/category/${category}/`,
+    url: `${baseUrl}/category/${category}`,
     lastmod: new Date().toISOString(),
     changefreq: 'weekly',
     priority: 0.8
@@ -52,7 +52,7 @@ export async function GET() {
       return !excludedBlogSlugs.some(excluded => slug.includes(excluded));
     })
     .map(post => ({
-      url: `${baseUrl}/blog/${post.id.replace('.md', '')}/`,
+      url: `${baseUrl}/blog/${post.id.replace('.md', '')}`,
       lastmod: new Date(post.data.date).toISOString(),
       changefreq: 'monthly',
       priority: 0.7
