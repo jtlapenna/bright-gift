@@ -1,11 +1,11 @@
 const fetch = require('node-fetch');
 
-// Configuration - Update this with your Railway URL
-const RAILWAY_URL = process.env.RAILWAY_URL || 'https://your-app-name.railway.app';
+// Configuration - Update this with your deployment URL
+const DEPLOYMENT_URL = process.env.DEPLOYMENT_URL || 'https://your-app-name.railway.app';
 
 async function monitorDeployment() {
-  console.log('🚂 Monitoring Railway Deployment');
-  console.log('URL:', RAILWAY_URL);
+  console.log('🚀 Monitoring Deployment');
+  console.log('URL:', DEPLOYMENT_URL);
   console.log('Timestamp:', new Date().toISOString());
   console.log('─'.repeat(50));
 
@@ -13,7 +13,7 @@ async function monitorDeployment() {
     // Test 1: Health Check
     console.log('\n1️⃣ Testing Health Endpoint...');
     const healthStart = Date.now();
-    const healthResponse = await fetch(`${RAILWAY_URL}/health`, {
+    const healthResponse = await fetch(`${DEPLOYMENT_URL}/health`, {
       timeout: 10000
     });
     const healthTime = Date.now() - healthStart;
@@ -33,7 +33,7 @@ async function monitorDeployment() {
     // Test 2: Generate Endpoint
     console.log('\n2️⃣ Testing Generate Endpoint...');
     const generateStart = Date.now();
-    const generateResponse = await fetch(`${RAILWAY_URL}/generate`, {
+    const generateResponse = await fetch(`${DEPLOYMENT_URL}/generate`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
