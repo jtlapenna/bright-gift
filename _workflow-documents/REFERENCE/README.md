@@ -52,6 +52,13 @@ This directory contains all reference documentation, organized by category for e
 **Files:**
 - `mobile-performance-optimization-report.md` - Mobile performance report
 - `check-deployment.md` - Deployment checking guide
+- `comprehensive-site-audit-report.md` - Complete site audit findings
+- `ahrefs-issues-resolution-report.md` - Ahrefs issues and resolutions
+- `orphan-posts-audit.md` - Orphaned content audit
+- `blog-cleanup-guide.md` - Blog maintenance guide
+- `fix-progress-report.md` - Progress tracking for fixes
+- `11_blog-restoration-and-redirects-checklist.md` - Blog restoration checklist
+- `cloudflare-pages-preview-troubleshooting.md` - Cloudflare troubleshooting
 
 ### **`affiliate-programs/`**
 **Purpose:** Affiliate program documentation and guides
@@ -59,6 +66,8 @@ This directory contains all reference documentation, organized by category for e
 **Files:**
 - `best_fitness_affiliate_programs.md` - Fitness affiliate programs
 - `best_wellness_affiliate_programs.md` - Wellness affiliate programs
+- `afrofiliate-integration-strategy.md` - Detailed Afrofiliate technical implementation
+- `bookshop-integration-guide.md` - Bookshop.org technical integration guide
 
 ### **`configuration/`**
 **Purpose:** Configuration files, schemas, and setup documentation
@@ -69,6 +78,42 @@ This directory contains all reference documentation, organized by category for e
 - `agent-integration-package.zip` - Agent integration package
 - `old-wiring.png` - Legacy wiring diagram
 - `tracking_links.csv` - Tracking links data
+- `remote-workers-image-prompts.json` - Image prompts for remote worker content
+- `meta-tag-todo.md` - Meta tag improvement tasks
+- `style-selector-improvements.md` - Style selector enhancement plans
+- `04.4_image_prompt_instructions.md` - Image generation prompt guidelines
+- `08_amazon-placeholder-images.md` - Amazon placeholder image system
+- `blog-instructions.zip` - Legacy blog instruction archive
+
+### **`seo/`**
+**Purpose:** SEO strategy, keyword research, and optimization documentation
+
+**Files:**
+- `04.3_SEO_Guide.md` - Comprehensive SEO implementation guide
+- `04_SEO_Strategy_Canvas.md` - SEO strategy planning document
+- `comprehensive-keyword-research-summary.md` - Keyword research findings
+- `keyword-research-template.md` - Template for keyword research
+- `11_automated-seo-keyword-discovery-plan.md` - Automated SEO discovery plan
+- `seo-and-design-improvement-suggestions.md` - SEO and design improvements
+- `12_ai_seo_term_enhancements.md` - AI-powered SEO term enhancements
+
+### **`planning-archives/`**
+**Purpose:** Historical planning documents and strategy canvases
+
+**Files:**
+- `01_Project_Overview_Canvas.md` - Original project overview
+- `02_Tech_Stack_Architecture_Canvas.md` - Technical architecture planning
+- `03_Homepage_Tool_Layout_Canvas.md` - Homepage layout planning
+- `04.1_blog-system.md` - Blog system architecture
+- `05_Affiliate_Strategy_Canvas.md` - Affiliate strategy planning
+- `06_AI_Prompting_Framework_Canvas.md` - AI prompting framework
+- `06_Blog_Validation_System.md` - Blog validation system design
+- `00_brightgift-idea-agent-reference.md` - Agent reference guide
+- `brightgift_prompting_guide.md` - Prompting guide
+- `sample-afrofiliate-blog-post.md` - Sample blog post
+- `non-gift-guide-content-ideas.md` - Content strategy ideas
+- `broader-content-strategy-expansion.md` - Content strategy expansion
+- `13_enhancement_ideas.md` - Feature enhancement ideas
 
 ---
 
@@ -91,8 +136,8 @@ This directory contains all reference documentation, organized by category for e
 
 ## 📊 **File Statistics**
 
-- **Total Files:** 25+ reference files
-- **Categories:** 6 organized directories
+- **Total Files:** 50+ reference files
+- **Categories:** 8 organized directories
 - **File Types:** Markdown, JSON, JavaScript, XML, PNG, CSV, ZIP
 - **Organization Status:** ✅ Complete
 
