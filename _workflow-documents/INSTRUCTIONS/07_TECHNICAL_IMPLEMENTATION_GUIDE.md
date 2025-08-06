@@ -234,24 +234,24 @@ const { Content } = await post.render();
 
 #### **Custom Colors (`tailwind.config.mjs`):**
 ```javascript
-// ⚠️ CONFLICT: Multiple color specifications exist - needs resolution
+// ✅ VERIFIED: Colors match live website implementation
 export default {
   theme: {
     extend: {
       colors: {
-        // Image/Visual Colors (from image prompts)
-        'bright-teal': '#00A99D',
-        'bright-coral': '#FF6B35', 
-        'bright-yellow': '#FFD700',
-        
-        // UI Colors (from style guide) - CONFLICTS with above
-        'bright-coral-ui': '#FF6B6B',
-        'bright-yellow-ui': '#FFDE59',
-        
-        // Shared Colors
+        // Official BrightGift Brand Colors
         'bright-blue': '#1C2E4A',
+        'bright-coral': '#FF6B6B',
+        'bright-yellow': '#FFDE59',
         'bright-light-teal': '#A3E4DB',
-        'bright-gray': '#333333'
+        'bright-white': '#FFFFFF',
+        'bright-gray': '#333333',
+        
+        // Supporting Colors
+        'bright-cream': '#FEF2D3',
+        'bright-coral-hover': '#ff4c4c',
+        'bright-yellow-gradient': '#FFE066',
+        'bright-teal-gradient': '#B8E8E0'
       },
       fontFamily: {
         'pacifico': ['Pacifico', 'cursive'],

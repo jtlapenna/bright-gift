@@ -47,33 +47,29 @@ This is the single source of truth for all visual branding, image creation, and 
 
 ## 🌈 **Color Palette**
 
-### **⚠️ CONFLICT RESOLUTION NEEDED**
+### **✅ VERIFIED AGAINST LIVE CODEBASE**
 
-**Note:** There are conflicting color specifications between different source documents. This needs to be resolved:
+**Note:** These colors have been verified against the actual website implementation (`src/pages/*.astro`).
 
-### **Image/Visual Colors (from image prompts):**
-
-| Color Name        | HEX        | Usage                              |
-|-------------------|------------|-------------------------------------|
-| **Teal**          | `#00A99D`  | Primary brand color for visuals     |
-| **Coral-Orange**  | `#FF6B35`  | Accent color for images            |
-| **Sunshine Yellow** | `#FFD700`  | Accent color for visuals           |
-
-### **UI/Website Colors (from style guide):**
+### **Official BrightGift Brand Colors:**
 
 | Color Name        | HEX        | Usage                              |
 |-------------------|------------|-------------------------------------|
-| **Deep Blue**     | `#1C2E4A`  | Header background, footers         |
-| **Coral Accent**  | `#FF6B6B`  | CTA buttons, highlights            |
-| **Lemon Yellow**  | `#FFDE59`  | Icons, chips, style filter hovers |
-| **Light Teal**    | `#A3E4DB`  | Backgrounds, cards                 |
-| **White**         | `#FFFFFF`  | Text background                    |
-| **Charcoal Gray** | `#333333`  | Body text                          |
+| **Deep Blue**     | `#1C2E4A`  | Header background, footers, headings |
+| **Coral Accent**  | `#FF6B6B`  | CTA buttons, highlights, accents    |
+| **Lemon Yellow**  | `#FFDE59`  | Icons, chips, style filter hovers  |
+| **Light Teal**    | `#A3E4DB`  | Backgrounds, cards, form borders    |
+| **White**         | `#FFFFFF`  | Text background, clean space        |
+| **Charcoal Gray** | `#333333`  | Body text, secondary text           |
 
-### **🚨 CONFLICTS TO RESOLVE:**
-1. **Coral:** `#FF6B35` (images) vs `#FF6B6B` (UI)
-2. **Yellow:** `#FFD700` (images) vs `#FFDE59` (UI)  
-3. **Teal:** `#00A99D` (images) vs `#A3E4DB` (UI - different teal)
+### **Supporting Colors:**
+
+| Color Name        | HEX        | Usage                              |
+|-------------------|------------|-------------------------------------|
+| **Cream Background** | `#FEF2D3`  | Hero section, header backgrounds   |
+| **Coral Hover**   | `#ff4c4c`  | Button hover states               |
+| **Yellow Gradient** | `#FFE066`  | Gradient variations               |
+| **Teal Gradient** | `#B8E8E0`  | Light teal variations             |
 
 ### **Color Usage Guidelines**
 - **Use generous white space** with bursts of color for hierarchy
@@ -108,34 +104,42 @@ This is the single source of truth for all visual branding, image creation, and 
 ### **Image Types and Specifications**
 
 #### **Blog Banner Images**
-- **Size:** 1536×1024px (3:2 aspect ratio)
-- **Format:** WebP for optimization
+- **Size:** 1536×1024px (3:2 aspect ratio) ✅ **VERIFIED**
+- **Format:** WebP for optimization (with JPG fallback)
 - **Text:** NO text or logos allowed
-- **Purpose:** Main blog post hero image
+- **Purpose:** Main blog post hero image (displays at 384px height)
 - **Style:** Horizontal layout with gift-themed objects
+- **Schema:** Used in structured data with 1200×630 reference
 
 #### **Open Graph (OG) Images**
-- **Size:** 1200×630px (16:9 aspect ratio)
-- **Format:** WebP for optimization
+- **Size:** 1200×630px (16:9 aspect ratio) ✅ **VERIFIED**
+- **Format:** WebP for optimization (with JPG fallback)
 - **Text:** NO text or logos allowed
-- **Purpose:** Social media link previews
+- **Purpose:** Social media link previews, Twitter cards
 - **Style:** Horizontal layout optimized for social sharing
+- **Usage:** Falls back to banner image if not provided
 
 #### **Social Media Images**
-- **Size:** 1200×1200px (1:1 square ratio)
+- **Size:** 1200×1200px (1:1 square ratio) ✅ **VERIFIED**
 - **Format:** WebP for optimization
 - **Text:** Text allowed and encouraged (include blog title)
 - **Purpose:** Instagram, Pinterest, Facebook posts
 - **Style:** Square layout with prominent title text
+- **Usage:** Falls back to OG image if not provided
+
+#### **Blog Index Thumbnails**
+- **Size:** Uses banner image, displayed with `aspect-video` (16:9)
+- **Display:** Responsive grid layout with `object-cover`
+- **Loading:** Lazy loading for performance
 
 ### **Image Style Requirements**
 
 #### **BrightGift Style Signature**
 Every image must include this exact style specification:
 
-*"Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic."*
+*"Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (light teal #A3E4DB, coral #FF6B6B, lemon yellow #FFDE59). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic."*
 
-**⚠️ Note:** These image colors conflict with UI colors - needs resolution.
+**✅ Note:** Colors verified against live website implementation.
 
 #### **Visual Elements to Include**
 - **3D Objects:** Soft, cartoon-style gifts, products, accessories
