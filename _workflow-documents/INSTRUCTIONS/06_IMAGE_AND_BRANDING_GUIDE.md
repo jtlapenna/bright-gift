@@ -47,22 +47,33 @@ This is the single source of truth for all visual branding, image creation, and 
 
 ## 🌈 **Color Palette**
 
-### **Primary Colors**
+### **⚠️ CONFLICT RESOLUTION NEEDED**
+
+**Note:** There are conflicting color specifications between different source documents. This needs to be resolved:
+
+### **Image/Visual Colors (from image prompts):**
 
 | Color Name        | HEX        | Usage                              |
 |-------------------|------------|-------------------------------------|
-| **Teal**          | `#00A99D`  | Primary brand color, backgrounds    |
-| **Coral-Orange**  | `#FF6B35`  | CTA buttons, highlights, accents    |
-| **Sunshine Yellow** | `#FFD700`  | Icons, chips, style filter hovers  |
+| **Teal**          | `#00A99D`  | Primary brand color for visuals     |
+| **Coral-Orange**  | `#FF6B35`  | Accent color for images            |
+| **Sunshine Yellow** | `#FFD700`  | Accent color for visuals           |
 
-### **Supporting Colors**
+### **UI/Website Colors (from style guide):**
 
 | Color Name        | HEX        | Usage                              |
 |-------------------|------------|-------------------------------------|
-| **Deep Blue**     | `#1C2E4A`  | Header background, footers, text    |
-| **Light Teal**    | `#A3E4DB`  | Card backgrounds, subtle accents    |
-| **White**         | `#FFFFFF`  | Text background, clean space        |
-| **Charcoal Gray** | `#333333`  | Body text, secondary text           |
+| **Deep Blue**     | `#1C2E4A`  | Header background, footers         |
+| **Coral Accent**  | `#FF6B6B`  | CTA buttons, highlights            |
+| **Lemon Yellow**  | `#FFDE59`  | Icons, chips, style filter hovers |
+| **Light Teal**    | `#A3E4DB`  | Backgrounds, cards                 |
+| **White**         | `#FFFFFF`  | Text background                    |
+| **Charcoal Gray** | `#333333`  | Body text                          |
+
+### **🚨 CONFLICTS TO RESOLVE:**
+1. **Coral:** `#FF6B35` (images) vs `#FF6B6B` (UI)
+2. **Yellow:** `#FFD700` (images) vs `#FFDE59` (UI)  
+3. **Teal:** `#00A99D` (images) vs `#A3E4DB` (UI - different teal)
 
 ### **Color Usage Guidelines**
 - **Use generous white space** with bursts of color for hierarchy
@@ -123,6 +134,8 @@ This is the single source of truth for all visual branding, image creation, and 
 Every image must include this exact style specification:
 
 *"Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic."*
+
+**⚠️ Note:** These image colors conflict with UI colors - needs resolution.
 
 #### **Visual Elements to Include**
 - **3D Objects:** Soft, cartoon-style gifts, products, accessories

@@ -234,13 +234,21 @@ const { Content } = await post.render();
 
 #### **Custom Colors (`tailwind.config.mjs`):**
 ```javascript
+// ⚠️ CONFLICT: Multiple color specifications exist - needs resolution
 export default {
   theme: {
     extend: {
       colors: {
+        // Image/Visual Colors (from image prompts)
         'bright-teal': '#00A99D',
-        'bright-coral': '#FF6B35',
+        'bright-coral': '#FF6B35', 
         'bright-yellow': '#FFD700',
+        
+        // UI Colors (from style guide) - CONFLICTS with above
+        'bright-coral-ui': '#FF6B6B',
+        'bright-yellow-ui': '#FFDE59',
+        
+        // Shared Colors
         'bright-blue': '#1C2E4A',
         'bright-light-teal': '#A3E4DB',
         'bright-gray': '#333333'
