@@ -61,6 +61,23 @@ This directory contains all archived components, documentation, and files that a
 
 ---
 
+## 🎯 **Old Instructions**
+
+### **`old-instructions/` Directory**
+- **Status:** Archived
+- **Original Location:** Various `_workflow-documents/` locations
+- **Archive Reason:** Superseded by consolidated source of truth
+- **Archive Date:** 2025-01-27
+- **Files:**
+  - `FINAL_gpt_assistant_instructions.md` → Consolidated into `01_MAIN_ASSISTANT_INSTRUCTIONS.md`
+  - `brightgift_assistant_instructions.md` → Consolidated into `01_MAIN_ASSISTANT_INSTRUCTIONS.md`
+  - `blogbot-instructions.md` → Consolidated into `02_BLOG_STYLE_GUIDE.md`
+  - `04.2_blog_style_guide.md` → Consolidated into `02_BLOG_STYLE_GUIDE.md`
+  - `afrofiliate-blog-linking-guide.md` → Consolidated into `03_AFFILIATE_LINKING_GUIDE.md`
+  - `bookshop-blog-linking-guide.md` → Consolidated into `03_AFFILIATE_LINKING_GUIDE.md`
+
+---
+
 ## 📋 **Recovery Procedures**
 
 ### **If You Need to Restore a Component:**
@@ -82,8 +99,8 @@ cp -r _workflow-documents/archive/development-components/api-server/ ./
 ## 📊 **Archive Statistics**
 
 - **Total Components Archived:** 4 major components
-- **Total Files Archived:** 90+ files
-- **Archive Categories:** 3 (development-components, automation-systems, deployment)
+- **Total Files Archived:** 100+ files
+- **Archive Categories:** 4 (development-components, automation-systems, deployment, old-instructions)
 - **Archive Date:** 2025-01-27
 - **Archive Status:** Complete
 
