@@ -158,20 +158,21 @@ Every image must include this exact style specification:
 
 ## 🎨 **Image Prompt Templates**
 
-### **Blog Banner Image Prompt**
-```
-A flat-lay scene showcasing [theme-based items] in a warm, editorial style. Each item should be rendered in a 3D cartoonish style with clean outlines, soft shadows, and no text. Include illustrated sparkles or abstract shapes as accents. Maintain a 16:9 layout with ample negative space and no logos or watermarks. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic.
-```
+**📋 Note:** For detailed image prompt instructions and templates, see the dedicated **[Image Agent Instructions](../IMAGE_AGENT_INSTRUCTIONS.md)** file.
 
-### **Social Media Image Prompt**
-```
-A visually delightful composition of [theme-based items] in a 3D cartoonish style with bright pastel colors and 2D illustration accents. Include playful title text that reads "[Blog Title]" in a bold, rounded font. Use warm, soft lighting, and a clean background with sparkles or swirls. Maintain a square 1200×1200 layout that is grid-aware and clutter-free. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic.
-```
+This file contains:
+- Complete prompt templates for banner and OG images
+- BrightGift style signature requirements
+- Creativity and variety guidelines
+- JSON output format specifications
+- Example prompts for different content types
 
-### **OG Image Prompt**
-```
-A clean, horizontal composition featuring [theme-based items] arranged in a flat-lay style. Objects should be 3D cartoonish with soft edges and pastel colors, accompanied by 2D decorative elements like sparkles or illustrated shapes. No text or logos. Maintain a 16:9 aspect ratio with balanced composition and generous negative space. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic.
-```
+**Key Requirements:**
+- **Banner images:** 16:9 ratio, no text or logos
+- **OG images:** 16:9 ratio, no text or logos  
+- **Style:** Modern flat illustration with 3D cartoon objects and 2D decorative elements
+- **Colors:** Warm pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700)
+- **Tone:** Cheerful, light, editorial, creative — never realistic or photorealistic
 
 ---
 
