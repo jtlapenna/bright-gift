@@ -292,26 +292,64 @@ analytics:
 
 ### **Affiliate Tracking Fields**
 
-#### **affiliateCount** (Required) 🔄 **PLACEHOLDER - WILL BE UPDATED LATER**
-- **Purpose:** Total number of affiliate links
+#### **affiliateCount** (Required) ✅ **CURRENTLY AVAILABLE**
+- **Purpose:** Total number of affiliate links detected by AI assistant
 - **Format:** Integer
-- **Current:** `0` (placeholder)
-- **Future:** Calculated from affiliate link parsing
+- **Source:** AI assistant counts affiliate links in content
 - **Example:** `5`
 
-#### **affiliateDisclosure** (Required) 🔄 **PLACEHOLDER - WILL BE UPDATED LATER**
-- **Purpose:** Whether affiliate disclosure is present
+#### **affiliateDisclosure** (Required) ✅ **CURRENTLY AVAILABLE**
+- **Purpose:** Whether affiliate disclosure is present (detected by AI assistant)
 - **Format:** Boolean
-- **Current:** `false` (placeholder)
-- **Future:** Detected by content analysis
-- **Example:** `false`
+- **Source:** AI assistant analyzes content for disclosure statements
+- **Example:** `true`
 
-#### **affiliatePlatforms** (Required) 🔄 **PLACEHOLDER - WILL BE UPDATED LATER**
-- **Purpose:** Breakdown of affiliate links by platform
-- **Format:** Object
-- **Current:** `{}` (placeholder)
-- **Future:** Parsed from affiliate link analysis
-- **Example:** `{"amazon": 3, "bookshop": 2}`
+#### **affiliatePlatforms** (Required) ✅ **CURRENTLY AVAILABLE**
+- **Purpose:** Breakdown of affiliate links by platform (categorized by AI assistant)
+- **Format:** Object with platform counts
+- **Source:** AI assistant categorizes each affiliate link by platform
+- **Example:** `{"amazon": 3, "bookshop": 2, "etsy": 1}`
+
+### **Affiliate Link Detection Strategy**
+
+The system uses AI assistant analysis to detect and categorize affiliate links:
+
+#### **AI Assistant Detection Process:**
+1. **Content Analysis:** AI scans the entire blog post content
+2. **Link Identification:** Identifies all links that appear to be affiliate links
+3. **Platform Categorization:** Categorizes each link by platform (Amazon, Bookshop, Etsy, etc.)
+4. **Disclosure Detection:** Analyzes content for disclosure statements
+5. **Structured Output:** Returns affiliate data in standardized JSON format
+
+#### **Supported Platforms:**
+- **Amazon:** Links containing Amazon affiliate tags
+- **Bookshop:** Links to Bookshop.org with affiliate parameters
+- **Etsy:** Links to Etsy with affiliate tracking
+- **Other:** Any other affiliate platforms detected
+
+#### **AI Assistant Response Format:**
+```json
+{
+  "affiliateLinks": [
+    {
+      "text": "Monstera Plant Care Kit",
+      "url": "https://www.amazon.com/s?k=monstera+care+kit&tag=bright-gift-20",
+      "platform": "amazon",
+      "price": "$29.99",
+      "description": "Complete care kit for monstera plants"
+    }
+  ],
+  "affiliateDisclosure": true,
+  "disclosureText": "This post contains affiliate links. We earn a commission from qualifying purchases."
+}
+```
+
+#### **Benefits of AI Assistant Approach:**
+- **Site-Agnostic:** Works across all sites without hardcoded patterns
+- **Flexible Detection:** Can identify any affiliate link format
+- **Accurate Categorization:** Properly categorizes links by platform
+- **Disclosure Detection:** Automatically detects disclosure statements
+- **Future-Proof:** Adapts to new affiliate platforms automatically
 
 ### **Original Input Tracking**
 
@@ -466,17 +504,17 @@ public/images/blog/
 
 ### **Social Posts Configuration**
 
-#### **Twitter/X Posts:**
+#### **Bluesky Posts:**
 ```yaml
-twitter:
+bluesky:
   text: "Check out these amazing gift ideas! 🎁"
   hashtags: ["giftideas", "gifts", "brightgift"]
 ```
 
-#### **Instagram Posts:**
+#### **Pinterest Posts:**
 ```yaml
-instagram:
-  caption: "🎁 Perfect gifts for plant lovers! Swipe for more ideas..."
+pinterest:
+  description: "🎁 Perfect gifts for plant lovers! Discover more ideas..."
   hashtags: ["giftideas", "gifts", "brightgift", "plantgifts"]
 ```
 
@@ -487,11 +525,18 @@ facebook:
   hashtags: ["giftideas", "gifts", "brightgift"]
 ```
 
-#### **LinkedIn Posts:**
+#### **Instagram Posts:**
 ```yaml
-linkedin:
-  text: "Looking for thoughtful gift ideas? Check out this guide."
-  hashtags: ["giftideas", "gifts", "brightgift", "giftguide"]
+instagram:
+  caption: "🎁 Perfect gifts for plant lovers! Swipe for more ideas..."
+  hashtags: ["giftideas", "gifts", "brightgift", "plantgifts"]
+```
+
+#### **X (Twitter) Posts:**
+```yaml
+x:
+  text: "Check out these amazing gift ideas! 🎁"
+  hashtags: ["giftideas", "gifts", "brightgift"]
 ```
 
 ### **Social Media Best Practices**
@@ -603,17 +648,17 @@ const blogCollection = defineCollection({
 - Content metrics (wordCount, readTime)
 - Original input tracking (originalInput object)
 - Categorization fields (tags, category)
+- **Affiliate Tracking (affiliateCount, affiliateDisclosure, affiliatePlatforms)** - Now available via AI assistant detection
+- Social media content (socialPosts for Bluesky, Pinterest, Facebook, Instagram, X)
 
 ### **🔄 Placeholder Fields (Will Be Updated Later):**
 - **Quality Metrics:** seoScore, readabilityScore, contentQuality
-- **Affiliate Tracking:** affiliateCount, affiliateDisclosure, affiliatePlatforms
 - **Analytics Fields:** viewCount, revenue, affiliateClicks, socialEngagement, keywordRankings, competitionLevel
 
 ### **📅 Future Implementation Timeline:**
-1. **Phase 1 (Current):** Content generation with placeholder quality metrics
+1. **Phase 1 (Current):** Content generation with AI assistant affiliate detection ✅
 2. **Phase 2 (Next):** SEO analysis tools to update seoScore and readabilityScore
-3. **Phase 3 (Later):** Affiliate link parsing to update affiliate tracking fields
-4. **Phase 4 (Future):** Analytics integration to update viewCount, revenue, etc.
+3. **Phase 3 (Later):** Analytics integration to update viewCount, revenue, etc.
 
 ---
 
