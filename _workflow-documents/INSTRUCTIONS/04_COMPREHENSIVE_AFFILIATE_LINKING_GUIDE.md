@@ -31,10 +31,24 @@ This is the single source of truth for all affiliate linking strategies, impleme
 ### **Amazon Affiliate Links**
 
 #### **When to Use Amazon:**
-- General products, electronics, home goods
+- **Physical products only:** Electronics, home goods, toys, books, beauty items
 - Items with wide selection and competitive pricing
 - Products where variety and reviews are important
 - Default choice for most physical products
+
+#### **⚠️ CRITICAL: Never Link to These on Amazon:**
+❌ **App subscriptions or digital services** (Netflix, Spotify, meditation apps, etc.)
+❌ **Experiences that can't be purchased online** (spa visits, couples massages, restaurant meals)
+❌ **Location-specific services** (local classes, workshops, personal training sessions)
+❌ **Professional services** (therapy, coaching, consulting)
+❌ **Memberships** (gym memberships, club memberships)
+❌ **Event tickets** (concerts, shows, sporting events)
+❌ **Travel bookings** (hotels, flights, vacation packages)
+
+#### **✅ Amazon Affiliate Links - What Actually Works:**
+✅ **Physical Products:** Electronics, home goods, books, beauty products, toys, kitchen items
+✅ **Gift Cards:** Amazon gift cards only (not third-party service gift cards)
+✅ **Digital Products:** Kindle books, Amazon Music downloads (not subscriptions)
 
 #### **Link Structure:**
 ```
@@ -52,10 +66,24 @@ https://www.amazon.com/s?k=KEYWORD&tag=bright-gift-20
 <a href="https://www.amazon.com/s?k=plant+stand&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 ```
 
+#### **Safe Keyword Strategy:**
+✅ **Good Keywords:**
+- "wireless bluetooth headphones" (specific product type)
+- "ceramic plant pot 6 inch" (specific item with size)
+- "stainless steel water bottle" (specific material and product)
+
+❌ **Bad Keywords:**
+- "spotify premium subscription" (not sold on Amazon)
+- "couples massage experience" (not purchasable online)
+- "yoga class membership" (location-specific service)
+
 #### **Best Practices:**
+- **ONLY use keywords that return relevant, purchasable products**
 - Use specific, relevant keywords for better search results
-- Test links periodically to ensure they work
+- **Verify keywords will show shippable items** before linking
+- Test links periodically to ensure they work and lead to appropriate results
 - Consider seasonal availability and pricing changes
+- **When in doubt, don't link** - suggest the item without an affiliate link
 
 ---
 
@@ -66,6 +94,10 @@ https://www.amazon.com/s?k=KEYWORD&tag=bright-gift-20
 - Literary gifts and book-related accessories
 - Supporting independent bookstores aligns with brand values
 - Higher conversion rates for book-specific searches
+
+#### **✅ Bookshop.org - What Works:**
+✅ **Books Only:** Fiction, non-fiction, children's books, audiobooks, graphic novels
+❌ **Never Link:** Non-book items, digital subscriptions, experiences
 
 #### **Direct Book Linking (Preferred Method):**
 
@@ -116,6 +148,10 @@ https://bookshop.org/search?keywords=BOOK+KEYWORDS&affiliate=brightgift
 - Supporting diverse entrepreneurship aligns with brand values
 - High-quality products that genuinely fit the gift guide
 - Natural integration opportunities in beauty, fitness, wellness, coffee, stationery
+
+#### **✅ Afrofiliate - What Works:**
+✅ **Physical Products:** Items sold by Black-owned businesses that can be shipped
+❌ **Never Link:** Services, experiences, or digital subscriptions
 
 #### **Link Structure:**
 ```
@@ -326,10 +362,29 @@ affiliateLinks:
 - **Platform Appropriateness:** Use the platform that makes most sense for each product
 - **Regular Testing:** Ensure all affiliate links work and lead to relevant products
 
+### **Alternative Recommendations for Non-Affiliate Items**
+When you want to suggest experiences or services that can't be affiliate linked:
+
+**Instead of:** "A couples massage at a local spa"
+**Recommend:** "A massage gift card holder with essential oils and a soft throw blanket"
+
+**Instead of:** "A meditation app subscription"  
+**Recommend:** "A meditation cushion with a guided meditation book"
+
+**Instead of:** "Concert tickets"
+**Recommend:** "A portable Bluetooth speaker for music lovers"
+
+**Instead of:** "Gym membership"
+**Recommend:** "Home workout equipment set with resistance bands"
+
+**Instead of:** "Cooking classes"
+**Recommend:** "Professional cookbook with specialty cooking utensils"
+
 ### **Common Mistakes to Avoid**
+- **Linking to Unachievable Items:** Never link to apps, experiences, or services
 - **Forced Platform Diversity:** Don't artificially balance across platforms
 - **Irrelevant Links:** Only include products that genuinely fit the content
-- **Broken Links:** Regularly test and update affiliate links
+- **Broken or Misleading Links:** Ensure keywords return relevant, purchasable results
 - **Over-Optimization:** Don't sacrifice user experience for affiliate revenue
 - **Generic Descriptions:** Be specific about why each product is recommended
 
@@ -343,6 +398,9 @@ affiliateLinks:
 ## 📋 **Quality Checklist**
 
 ### **Before Publishing Content with Affiliate Links**
+- [ ] **SAFEGUARD CHECK:** All affiliate links lead to physical, purchasable products
+- [ ] **NO unachievable links:** No apps, experiences, services, or memberships
+- [ ] **Keyword verification:** Search terms will return relevant, shippable items
 - [ ] All affiliate links properly formatted with correct CSS classes
 - [ ] Correct affiliate IDs used for each platform (bright-gift-20, brightgift, brand codes)
 - [ ] Links open in new tab with proper attributes (`target="_blank" rel="noopener"`)

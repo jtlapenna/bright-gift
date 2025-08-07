@@ -18,12 +18,14 @@ This is the single source of truth for all frontmatter schemas, publishing workf
 3. **Consistency:** Standardized schema across all content
 4. **Portability:** Content is self-contained and version-controlled
 5. **Automation-Friendly:** Fields designed for AI and tool integration
+6. **Dashboard-Ready:** All fields support dashboard analytics and workflow tracking
 
 ### **Benefits**
 - **No Database Dependencies:** Content is fully portable
 - **Version Control:** All changes tracked in Git
 - **Agent-Friendly:** Standardized format for AI content generation
 - **API Ready:** Frontmatter can be parsed and served programmatically
+- **Analytics-Ready:** Comprehensive tracking for dashboard metrics
 
 ---
 
@@ -47,7 +49,38 @@ keywords: ["primary keyword", "secondary keyword", "related terms"]
 # Images (All Required)
 image: "/images/blog/slug/slug-banner.webp"
 ogImage: "/images/blog/slug/slug-og.webp"
-socialImage: "/images/blog/slug/slug-social.webp"
+imageJpg: "/images/blog/slug/slug-banner.jpg"
+ogImageJpg: "/images/blog/slug/slug-og.jpg"
+
+# Site-Agnostic API Fields
+siteId: "brightgift"
+workflowId: "workflow_1234567890_abc123"
+postId: "workflow_1234567890_abc123"
+generatedAt: "2024-01-15T10:30:00.000Z"
+version: "1.0"
+currentSection: "content-generation"
+workflowStatus: "processing"
+
+# Content Quality Metrics
+wordCount: 1250
+readTime: 8
+seoScore: 85
+readabilityScore: 78
+contentQuality: "pending"
+
+# Affiliate Tracking
+affiliateCount: 0
+affiliateDisclosure: false
+affiliatePlatforms: {}
+
+# Original Input Tracking
+originalInput:
+  prompt: "Create a gift guide for plant lovers"
+  inputType: "prompt" # prompt, topic, brief
+  selectedTopic: null
+  selectedContent: null
+  additionalNotes: "Focus on budget-friendly options"
+  timestamp: "2024-01-15T10:30:00.000Z"
 ---
 ```
 
@@ -75,9 +108,6 @@ style: "eco-friendly" # Gift style/theme
 # Content Quality & Performance
 author: "BrightGift Team"
 featured: true # Featured on homepage
-wordCount: 1250 # Actual word count
-seoScore: 85 # SEO optimization score (0-100)
-readabilityScore: 78 # Reading level score
 
 # Social Media Integration
 socialPosts:
@@ -87,9 +117,12 @@ socialPosts:
   instagram:
     caption: "🎁 Perfect gifts for plant lovers! Swipe for more..."
     hashtags: ["giftideas", "gifts", "brightgift", "plantgifts"]
-  pinterest:
-    description: "Amazing gift ideas for plant lovers - perfect for any occasion!"
-    hashtags: ["giftideas", "gifts", "brightgift", "plantgifts"]
+  facebook:
+    text: "🎁 Perfect gifts for plant lovers! What do you think?"
+    hashtags: ["giftideas", "gifts", "brightgift"]
+  linkedin:
+    text: "Looking for thoughtful gift ideas? Check out this guide."
+    hashtags: ["giftideas", "gifts", "brightgift", "giftguide"]
 
 # Affiliate Link Tracking
 affiliateLinks:
@@ -101,6 +134,15 @@ affiliateLinks:
     url: "https://bookshop.org/a/brightgift/9780881926484"
     platform: "bookshop"
     price: "$24.95"
+
+# Analytics Fields (Updated by dashboard)
+analytics:
+  viewCount: 0
+  revenue: 0.00
+  affiliateClicks: 0
+  socialEngagement: {}
+  keywordRankings: {}
+  competitionLevel: "medium"
 ---
 ```
 
@@ -110,43 +152,43 @@ affiliateLinks:
 
 ### **Basic Content Fields**
 
-#### **title** (Required)
+#### **title** (Required) ✅ **CURRENTLY AVAILABLE**
 - **Purpose:** Main H1 heading and page title
 - **Format:** Clear, descriptive, includes primary keyword
 - **Length:** 50-70 characters for optimal display
 - **Example:** `"25 Thoughtful Gifts for Plant Lovers Under $50"`
 
-#### **description** (Required)
+#### **description** (Required) ✅ **CURRENTLY AVAILABLE**
 - **Purpose:** Internal description for blog cards and previews
 - **Format:** Compelling summary that encourages clicks
 - **Length:** 120-160 characters
 - **Example:** `"Discover perfect gifts for the plant enthusiasts in your life, from care essentials to decorative accessories."`
 
-#### **date** (Required)
+#### **date** (Required) ✅ **CURRENTLY AVAILABLE**
 - **Purpose:** Publication date for chronological ordering
 - **Format:** YYYY-MM-DD
 - **Example:** `"2024-01-15"`
 
-#### **status** (Required)
+#### **status** (Required) ✅ **CURRENTLY AVAILABLE**
 - **Purpose:** Content publication state
 - **Options:** `"draft"`, `"published"`, `"archived"`
 - **Default:** `"draft"` until ready to publish
 
 ### **SEO & Meta Fields**
 
-#### **metaTitle** (Required)
+#### **metaTitle** (Required) ✅ **CURRENTLY AVAILABLE**
 - **Purpose:** SEO-optimized title for search results
 - **Format:** Primary keyword first, compelling and clickable
 - **Length:** 50-60 characters (strict limit)
 - **Example:** `"Plant Lover Gifts Under $50 | 25 Perfect Ideas"`
 
-#### **metaDescription** (Required)
+#### **metaDescription** (Required) ✅ **CURRENTLY AVAILABLE**
 - **Purpose:** SEO description shown in search results
 - **Format:** Problem + solution + call-to-action
 - **Length:** 140-160 characters (strict limit)
 - **Example:** `"Find the perfect gifts for plant lovers! 25 thoughtful ideas under $50, from care essentials to unique accessories. Shop now!"`
 
-#### **keywords** (Required)
+#### **keywords** (Required) ✅ **CURRENTLY AVAILABLE**
 - **Purpose:** Target keywords for SEO optimization
 - **Format:** Array of relevant keywords and phrases
 - **Limit:** 5-10 keywords maximum
@@ -154,42 +196,151 @@ affiliateLinks:
 
 ### **Image Fields**
 
-#### **image** (Required - Banner Image)
+#### **image** (Required - Banner Image) ✅ **CURRENTLY AVAILABLE**
 - **Purpose:** Main blog post banner (1536×1024px)
 - **Format:** `/images/blog/[slug]/[slug]-banner.webp`
 - **Requirements:** No text, brand-consistent style
 - **Example:** `"/images/blog/plant-lover-gifts/plant-lover-gifts-banner.webp"`
 
-#### **ogImage** (Required - Open Graph)
+#### **ogImage** (Required - Open Graph) ✅ **CURRENTLY AVAILABLE**
 - **Purpose:** Social media link previews (1200×630px)
 - **Format:** `/images/blog/[slug]/[slug]-og.webp`
 - **Requirements:** No text, optimized for social sharing
 - **Example:** `"/images/blog/plant-lover-gifts/plant-lover-gifts-og.webp"`
 
-#### **socialImage** (Required - Social Media)
-- **Purpose:** Instagram/Pinterest posts (1200×1200px)
-- **Format:** `/images/blog/[slug]/[slug]-social.webp`
-- **Requirements:** Can include text, square format
-- **Example:** `"/images/blog/plant-lover-gifts/plant-lover-gifts-social.webp"`
+#### **imageJpg** (Required - Banner JPG) ✅ **CURRENTLY AVAILABLE**
+- **Purpose:** Banner image in JPG format for compatibility
+- **Format:** `/images/blog/[slug]/[slug]-banner.jpg`
+- **Requirements:** Same as banner.webp but JPG format
+
+#### **ogImageJpg** (Required - OG JPG) ✅ **CURRENTLY AVAILABLE**
+- **Purpose:** Open Graph image in JPG format for compatibility
+- **Format:** `/images/blog/[slug]/[slug]-og.jpg`
+- **Requirements:** Same as og.webp but JPG format
+
+### **Site-Agnostic API Fields**
+
+#### **siteId** (Required) ✅ **CURRENTLY AVAILABLE**
+- **Purpose:** Site identifier for multi-site platform
+- **Format:** String identifier
+- **Example:** `"brightgift"`
+
+#### **workflowId** (Required) ✅ **CURRENTLY AVAILABLE**
+- **Purpose:** Unique workflow execution identifier
+- **Format:** Generated workflow ID
+- **Example:** `"workflow_1234567890_abc123"`
+
+#### **postId** (Required) ✅ **CURRENTLY AVAILABLE**
+- **Purpose:** Unique post identifier
+- **Format:** Generated post ID
+- **Example:** `"workflow_1234567890_abc123"`
+
+#### **generatedAt** (Required) ✅ **CURRENTLY AVAILABLE**
+- **Purpose:** Timestamp when content was generated
+- **Format:** ISO 8601 timestamp
+- **Example:** `"2024-01-15T10:30:00.000Z"`
+
+#### **version** (Required) ✅ **CURRENTLY AVAILABLE**
+- **Purpose:** Content generation version
+- **Format:** Semantic version
+- **Example:** `"1.0"`
+
+#### **currentSection** (Required) ✅ **CURRENTLY AVAILABLE**
+- **Purpose:** Current workflow section
+- **Format:** Section identifier
+- **Example:** `"content-generation"`
+
+#### **workflowStatus** (Required) ✅ **CURRENTLY AVAILABLE**
+- **Purpose:** Current workflow status
+- **Format:** Status string
+- **Example:** `"processing"`
+
+### **Content Quality Metrics**
+
+#### **wordCount** (Required) ✅ **CURRENTLY AVAILABLE**
+- **Purpose:** Actual word count for analytics
+- **Format:** Integer
+- **Example:** `1250`
+
+#### **readTime** (Required) ✅ **CURRENTLY AVAILABLE**
+- **Purpose:** Estimated reading time for user experience
+- **Format:** Number of minutes
+- **Calculation:** ~200 words per minute
+- **Example:** `8`
+
+#### **seoScore** (Required) 🔄 **PLACEHOLDER - WILL BE UPDATED LATER**
+- **Purpose:** SEO optimization score
+- **Format:** Integer (0-100)
+- **Current:** `0` (placeholder)
+- **Future:** Calculated by SEO analysis tools
+- **Example:** `85`
+
+#### **readabilityScore** (Required) 🔄 **PLACEHOLDER - WILL BE UPDATED LATER**
+- **Purpose:** Content readability score
+- **Format:** Integer (0-100)
+- **Current:** `0` (placeholder)
+- **Future:** Calculated by readability analysis
+- **Example:** `78`
+
+#### **contentQuality** (Required) 🔄 **PLACEHOLDER - WILL BE UPDATED LATER**
+- **Purpose:** Content quality status
+- **Format:** String
+- **Options:** `"pending"`, `"approved"`, `"needs_review"`
+- **Current:** `"pending"` (placeholder)
+- **Future:** Updated by review workflow
+- **Example:** `"pending"`
+
+### **Affiliate Tracking Fields**
+
+#### **affiliateCount** (Required) 🔄 **PLACEHOLDER - WILL BE UPDATED LATER**
+- **Purpose:** Total number of affiliate links
+- **Format:** Integer
+- **Current:** `0` (placeholder)
+- **Future:** Calculated from affiliate link parsing
+- **Example:** `5`
+
+#### **affiliateDisclosure** (Required) 🔄 **PLACEHOLDER - WILL BE UPDATED LATER**
+- **Purpose:** Whether affiliate disclosure is present
+- **Format:** Boolean
+- **Current:** `false` (placeholder)
+- **Future:** Detected by content analysis
+- **Example:** `false`
+
+#### **affiliatePlatforms** (Required) 🔄 **PLACEHOLDER - WILL BE UPDATED LATER**
+- **Purpose:** Breakdown of affiliate links by platform
+- **Format:** Object
+- **Current:** `{}` (placeholder)
+- **Future:** Parsed from affiliate link analysis
+- **Example:** `{"amazon": 3, "bookshop": 2}`
+
+### **Original Input Tracking**
+
+#### **originalInput** (Required) ✅ **CURRENTLY AVAILABLE**
+- **Purpose:** Track the original user input that generated the content
+- **Format:** Object with input details
+- **Example:**
+```yaml
+originalInput:
+  prompt: "Create a gift guide for plant lovers"
+  inputType: "prompt" # prompt, topic, brief
+  selectedTopic: null
+  selectedContent: null
+  additionalNotes: "Focus on budget-friendly options"
+  timestamp: "2024-01-15T10:30:00.000Z"
+```
 
 ### **Categorization Fields**
 
-#### **tags** (Required for Gift Guides)
+#### **tags** (Required for Gift Guides) ✅ **CURRENTLY AVAILABLE**
 - **Purpose:** Content categorization and filtering
 - **Format:** Array of descriptive tags
 - **Categories:** recipient, budget, occasion, style
 - **Example:** `["plant-lovers", "under-50", "birthday", "eco-friendly"]`
 
-#### **category** (Required)
+#### **category** (Required) ✅ **CURRENTLY AVAILABLE**
 - **Purpose:** Primary content type classification
 - **Options:** `"gift-guide"`, `"how-to"`, `"educational"`, `"trending"`
 - **Example:** `"gift-guide"`
-
-#### **readTime** (Required)
-- **Purpose:** Estimated reading time for user experience
-- **Format:** Number of minutes
-- **Calculation:** ~200 words per minute
-- **Example:** `8`
 
 ---
 
@@ -212,13 +363,14 @@ affiliateLinks:
 #### **3. Image Creation**
 - [ ] Generate banner image (1536×1024px, no text)
 - [ ] Create OG image (1200×630px, no text)
-- [ ] Design social image (1200×1200px, text allowed)
+- [ ] Convert to both WebP and JPG formats
 - [ ] Upload all images to correct directory
 
 #### **4. Frontmatter Completion**
 - [ ] Fill all required fields
 - [ ] Add relevant tags and categorization
 - [ ] Include affiliate link tracking
+- [ ] Add original input tracking
 - [ ] Set status to "published"
 
 #### **5. Pre-Publishing Review**
@@ -246,9 +398,8 @@ affiliateLinks:
 - **Example:** `25-thoughtful-gifts-for-plant-lovers-under-50.md`
 
 #### **Image Files:**
-- **Banner:** `[slug]-banner.webp`
-- **OG Image:** `[slug]-og.webp`
-- **Social:** `[slug]-social.webp`
+- **Banner:** `[slug]-banner.webp` and `[slug]-banner.jpg`
+- **OG Image:** `[slug]-og.webp` and `[slug]-og.jpg`
 - **Location:** `public/images/blog/[slug]/`
 
 ### **Directory Structure**
@@ -261,8 +412,9 @@ src/content/blog/
 public/images/blog/
 ├── 25-thoughtful-gifts-for-plant-lovers-under-50/
 │   ├── plant-lovers-banner.webp
+│   ├── plant-lovers-banner.jpg
 │   ├── plant-lovers-og.webp
-│   └── plant-lovers-social.webp
+│   └── plant-lovers-og.jpg
 └── ...
 ```
 
@@ -328,11 +480,18 @@ instagram:
   hashtags: ["giftideas", "gifts", "brightgift", "plantgifts"]
 ```
 
-#### **Pinterest Pins:**
+#### **Facebook Posts:**
 ```yaml
-pinterest:
-  description: "Amazing gift ideas for plant lovers - perfect for any occasion!"
-  hashtags: ["giftideas", "gifts", "brightgift", "plantgifts"]
+facebook:
+  text: "🎁 Perfect gifts for plant lovers! What do you think?"
+  hashtags: ["giftideas", "gifts", "brightgift"]
+```
+
+#### **LinkedIn Posts:**
+```yaml
+linkedin:
+  text: "Looking for thoughtful gift ideas? Check out this guide."
+  hashtags: ["giftideas", "gifts", "brightgift", "giftguide"]
 ```
 
 ### **Social Media Best Practices**
@@ -364,10 +523,36 @@ const blogCollection = defineCollection({
     keywords: z.array(z.string()),
     image: z.string(),
     ogImage: z.string(),
-    socialImage: z.string(),
+    imageJpg: z.string(),
+    ogImageJpg: z.string(),
+    siteId: z.string(),
+    workflowId: z.string(),
+    postId: z.string(),
+    generatedAt: z.string(),
+    version: z.string(),
+    currentSection: z.string(),
+    workflowStatus: z.string(),
+    wordCount: z.number(),
+    readTime: z.number(),
+    seoScore: z.number(),
+    readabilityScore: z.number(),
+    contentQuality: z.string(),
+    affiliateCount: z.number(),
+    affiliateDisclosure: z.boolean(),
+    affiliatePlatforms: z.record(z.number()),
+    originalInput: z.object({
+      prompt: z.string(),
+      inputType: z.string(),
+      selectedTopic: z.string().nullable(),
+      selectedContent: z.string().nullable(),
+      additionalNotes: z.string().nullable(),
+      timestamp: z.string()
+    }),
     tags: z.array(z.string()).optional(),
     category: z.string().optional(),
-    readTime: z.number().optional(),
+    socialPosts: z.record(z.any()).optional(),
+    affiliateLinks: z.array(z.any()).optional(),
+    analytics: z.record(z.any()).optional()
   })
 });
 ```
@@ -393,6 +578,9 @@ const blogCollection = defineCollection({
 - [ ] Status set to "published"
 - [ ] Affiliate links properly tracked
 - [ ] Social media content appropriate for each platform
+- [ ] Original input tracking complete
+- [ ] Site-agnostic fields populated
+- [ ] Quality metrics included
 
 ### **SEO Optimization Check**
 - [ ] Primary keyword in title, meta title, first paragraph
@@ -402,6 +590,30 @@ const blogCollection = defineCollection({
 - [ ] Content length meets minimum requirements
 - [ ] Internal linking included
 - [ ] Images optimized with proper alt text
+
+---
+
+## 🔄 **Implementation Status Summary**
+
+### **✅ Currently Available Fields:**
+- Basic content fields (title, description, date, status)
+- SEO & meta fields (metaTitle, metaDescription, keywords)
+- Image fields (image, ogImage, imageJpg, ogImageJpg)
+- Site-agnostic API fields (siteId, workflowId, postId, generatedAt, version, currentSection, workflowStatus)
+- Content metrics (wordCount, readTime)
+- Original input tracking (originalInput object)
+- Categorization fields (tags, category)
+
+### **🔄 Placeholder Fields (Will Be Updated Later):**
+- **Quality Metrics:** seoScore, readabilityScore, contentQuality
+- **Affiliate Tracking:** affiliateCount, affiliateDisclosure, affiliatePlatforms
+- **Analytics Fields:** viewCount, revenue, affiliateClicks, socialEngagement, keywordRankings, competitionLevel
+
+### **📅 Future Implementation Timeline:**
+1. **Phase 1 (Current):** Content generation with placeholder quality metrics
+2. **Phase 2 (Next):** SEO analysis tools to update seoScore and readabilityScore
+3. **Phase 3 (Later):** Affiliate link parsing to update affiliate tracking fields
+4. **Phase 4 (Future):** Analytics integration to update viewCount, revenue, etc.
 
 ---
 
