@@ -1,0 +1,15 @@
+# Cloudflare Pages Headers Configuration
+# Prevent direct access to markdown files
+/*.md
+  X-Robots-Tag: noindex, nofollow
+  Status: 404
+
+# Ensure proper content type for HTML files
+/*.html
+  Content-Type: text/html; charset=utf-8
+
+# Security headers
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin 

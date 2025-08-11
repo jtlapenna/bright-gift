@@ -5,7 +5,10 @@
 # /blog/*/   /blog/:splat   301
 
 # Fix .md extension URLs causing 404 errors (essential)
-/blog/*.md   /blog/:splat/   301
+/blog/*.md   /blog/:splat/   301!
+
+# Additional .md redirects for any remaining cases
+/*.md   /:splat   301!
 
 # Redirect old file extensions to clean URLs (essential)
 /*.html   /:splat   301
