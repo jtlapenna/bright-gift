@@ -50,6 +50,7 @@ export async function GET() {
   const blogUrls = blogPosts
     .filter(post => {
       try {
+        // Remove .md extension and filter out excluded slugs
         const slug = post.id.replace('.md', '');
         return !excludedBlogSlugs.some(excluded => slug.includes(excluded));
       } catch (error) {
@@ -59,8 +60,10 @@ export async function GET() {
     })
     .map(post => {
       try {
+        // Ensure clean URLs without .md extensions
+        const cleanSlug = post.id.replace('.md', '');
         return {
-          url: `${baseUrl}/blog/${post.id.replace('.md', '')}`,
+          url: `${baseUrl}/blog/${cleanSlug}`,
           lastmod: new Date(post.data.date || new Date()).toISOString(),
           changefreq: 'monthly',
           priority: 0.7

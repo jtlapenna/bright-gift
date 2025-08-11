@@ -1,8 +1,9 @@
 # Cloudflare Pages Headers Configuration
-# Prevent direct access to markdown files
+# Block all markdown file access completely
 /*.md
   X-Robots-Tag: noindex, nofollow
   Status: 404
+  Cache-Control: no-cache, no-store, must-revalidate
 
 # Ensure proper content type for HTML files
 /*.html

@@ -31,7 +31,11 @@ Allow: /
 # Block access to admin areas (if any exist in future)
 Disallow: /admin/
 Disallow: /private/
-Disallow: /temp/`;
+Disallow: /temp/
+
+# Block all markdown files completely
+Disallow: /*.md
+Disallow: /blog/*.md`;
 
 // Set content type to text/plain
 Astro.response.headers.set('Content-Type', 'text/plain');

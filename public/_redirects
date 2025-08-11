@@ -4,11 +4,8 @@
 # Only redirect specific old URLs that need cleanup
 # /blog/*/   /blog/:splat   301
 
-# Fix .md extension URLs causing 404 errors (essential)
-/blog/*.md   /blog/:splat/   301!
-
-# Additional .md redirects for any remaining cases
-/*.md   /:splat   301!
+# Block all .md file access completely (return 404)
+/*.md   404
 
 # Redirect old file extensions to clean URLs (essential)
 /*.html   /:splat   301

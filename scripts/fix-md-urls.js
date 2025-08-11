@@ -100,10 +100,11 @@ try {
   
   console.log('\n✨ Scan complete!');
   console.log('\n📋 Next steps:');
-  console.log('1. Ensure all .md redirects are working in Cloudflare Pages');
+  console.log('1. All .md files are now blocked with 404 responses');
   console.log('2. Check if any external sites are linking to .md URLs');
-  console.log('3. Verify that the _headers file is preventing direct .md access');
+  console.log('3. Verify that robots.txt blocks .md file crawling');
   console.log('4. Submit a new validation in Google Search Console');
+  console.log('5. Monitor for any remaining .md URL access attempts');
   
 } catch (error) {
   console.error('❌ Error during scan:', error);
