@@ -107,15 +107,16 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 
 		<!-- Amazon Link Processing Script - Defer to after page load -->
 		<script is:inline>
-		  // Post-process the rendered content to add amazon-link class to "View on Amazon" links
+        // Post-process affiliate links to ensure correct classes
 		  document.addEventListener('DOMContentLoaded', function() {
 		    const articleContent = document.getElementById('article-content');
 		    if (articleContent) {
 		      const links = articleContent.querySelectorAll('a');
 		      links.forEach(link => {
-		        if (link.textContent.includes('View on Amazon')) {
-		          link.classList.add('amazon-link');
-		        }
+                const href = (link.getAttribute('href') || '').toLowerCase();
+                if (href.includes('amazon.com')) link.classList.add('amazon-link');
+                if (href.includes('bookshop.org')) link.classList.add('bookshop-link');
+                if (href.includes('arjdj2msd.com')) link.classList.add('afrofiliate-link');
 		      });
 		    }
 		  });
