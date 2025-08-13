@@ -50,29 +50,32 @@ What we love for 2025:
 
 ## Top Picks: Planners and Journals
 
-### 1) Undated Weekly Planner (Most Flexible)
+### 1) Undated Planners (Most Flexible)
 - Best for: New routines, project cycles, academic schedules
 - Why it’s great: Start anytime. Weekly overview keeps goals visible while leaving room for notes and habit tracking.
 - Practical tip: Pair with a matching journal to capture reflections separate from tasks.
-- Where to shop: [Shop Be Rooted planner (Afrofiliate)](https://www.arjdj2msd.com/7LKLK3/R74QP1/)
+- Example: “Unapologetically Me” undated planner
+- Where to shop: <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="noopener">Shop Be Rooted</a>
 
-### 2) Daily Planner (Maximum Structure)
+### 2) Dated/Daily Planners (Maximum Structure)
 - Best for: Busy professionals, students with full schedules
 - Why it’s great: Day-per-page space for appointments, priority lists, and notes; helps reduce overwhelm.
 - Practical tip: Batch similar tasks and use time blocks to protect focus.
-- Where to shop: [Shop Be Rooted daily planner (Afrofiliate)](https://www.arjdj2msd.com/7LKLK3/R74QP1/)
+- Where to shop: <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="noopener">Shop Be Rooted</a>
 
-### 3) Guided Wellness or Gratitude Journal (Self-Care Favorite)
+### 3) Lined & Spiraled Journals (Self-Care Favorite)
 - Best for: Building a reflective habit, stress reduction
 - Why it’s great: Prompted pages for gratitude, intention setting, and mindful check-ins.
 - Practical tip: Keep it bedside and write for 3 minutes nightly to cement the habit.
-- Where to shop: [Shop Be Rooted journals (Afrofiliate)](https://www.arjdj2msd.com/7LKLK3/R74QP1/)
+- Example: “Stand in Power” lined & spiraled journal
+- Where to shop: <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="noopener">Shop Be Rooted</a>
 
-### 4) Productivity Journal (Work/Study System)
+### 4) Padfolios & Notepads (Work/Study System)
 - Best for: Sprints, exam prep, launches, goal tracking
 - Why it’s great: Task prioritization with weekly review helps you iterate and improve.
 - Practical tip: End each week with a quick “start/stop/continue” reflection.
-- Where to shop: [Shop Be Rooted productivity (Afrofiliate)](https://www.arjdj2msd.com/7LKLK3/R74QP1/)
+- Example: “Daily Focus” padfolio
+- Where to shop: <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="noopener">Shop Be Rooted</a>
 
 ## Desk Accessories to Complete the Setup
 
@@ -81,7 +84,7 @@ What we love for 2025:
 - Pens/pen case: Keep a dedicated writing kit with 2–3 colors (tasks, notes, highlights)
 - Journals stack: Separate work, personal, and wellness in their own notebooks
 
-Shop accessories: [Be Rooted desk accessories (Afrofiliate)](https://www.arjdj2msd.com/7LKLK3/R74QP1/)
+Shop accessories: <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="noopener">Be Rooted desk accessories</a>
 
 ## How to Choose the Right Be Rooted Planner
 - Format: Daily for structure; weekly for overview; undated for flexibility
