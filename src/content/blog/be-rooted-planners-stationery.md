@@ -6,10 +6,10 @@ status: "published"
 metaTitle: "Be Rooted Planners & Journals 2025: Best Picks + How to Choose"
 metaDescription: "A curated guide to the best Be Rooted planners, journals, and accessories for 2025. Compare formats, sizes, paper quality, and get tips to choose the right planner."
 keywords: ["Be Rooted", "Be Rooted planner", "Black-owned stationery", "best planners 2025", "journals for women", "desk accessories", "planner setup"]
-image: "/images/blog/be-rooted-planners-stationery/be-rooted-banner.webp"
-ogImage: "/images/blog/be-rooted-planners-stationery/be-rooted-og.webp"
-imageJpg: "/images/blog/be-rooted-planners-stationery/be-rooted-banner.jpg"
-ogImageJpg: "/images/blog/be-rooted-planners-stationery/be-rooted-og.jpg"
+image: "/images/blog/be-rooted-planners-stationery/be-rooted-og.webp"
+ogImage: "/images/blog/be-rooted-planners-stationery/be-rooted-banner.webp"
+imageJpg: "/images/blog/be-rooted-planners-stationery/be-rooted-og.jpg"
+ogImageJpg: "/images/blog/be-rooted-planners-stationery/be-rooted-banner.jpg"
 siteId: "brightgift"
 workflowId: "workflow_20250813_be_rooted_planners"
 postId: "workflow_20250813_be_rooted_planners"
@@ -40,15 +40,15 @@ occasion: "back-to-school, holidays, new-year-setup"
 style: "aesthetic-desk, motivational, functional"
 ---
 
-## Why Be Rooted Belongs on Your Desk in 2025
-Be Rooted is a Black-owned stationery brand known for inclusive, beautifully designed planners, journals, and desk accessories. The collections blend uplifting affirmations with functional layouts—ideal for students, professionals, and anyone building a calming, creative desk setup.
+## Be Rooted: Brand Profile
+Be Rooted is a Black-owned stationery brand founded by Jasmin Foster to center representation and affirmation in everyday tools. The brand’s artwork celebrates women of color and blends uplifting messages with practical formats across planners, journals, and desk accessories. Collections span undated planners for flexible starts, dated/daily structures for routine lovers, lined and spiraled journals, and work-ready padfolios and techfolios—making it easy to build a cohesive, inspiring desk setup.
 
-What we love for 2025:
-- Inclusive, affirming designs that make planning feel personal
-- Layouts that work for real life (daily, weekly, undated)
-- Giftable price points across planners, journals, and accessories
+What stands out:
+- Inclusive artwork and affirmations woven into functional layouts
+- Category depth: undated and dated planners, journals, padfolios, notepads, pens
+- Giftable pricing with bundles and back-to-school sets
 
-## Top Picks: Planners and Journals
+## Standout Product Examples
 
 ### 1) Undated Planners (Most Flexible)
 - Best for: New routines, project cycles, academic schedules
@@ -97,10 +97,10 @@ Shop accessories: <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afro
 - Student Kit: Daily planner + productivity journal + pen set
 - Wellness Kit: Gratitude journal + bedtime notepad + soft-tip pens
 
-## Internal Links You May Like
-- Gifts for Remote Workers Under $100
-- Best Gifts for New Homeowners 2025
-- How to Build a Calming Desk Setup
+## You Might Also Like
+- <a href="/blog/gifts-for-remote-workers-under-50/">Gifts for Remote Workers Under $50</a>
+- <a href="/blog/gifts-for-new-homeowners-2025/">Best Gifts for New Homeowners 2025</a>
+- <a href="/blog/how-to-choose-the-perfect-gift-complete-guide/">How to Choose the Perfect Gift</a>
 
 ## Final Thoughts
 Be Rooted’s blend of function and affirming design makes planning feel more intentional—and more fun. Whether you’re refreshing your workspace or gifting a student or new grad, these planners and journals are practical, motivating picks for 2025.
