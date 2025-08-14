@@ -94,18 +94,18 @@ What stands out:
 
 ## Desk Accessories to Complete the Setup
 
-- Desk pad or notepad set: Capture quick tasks and prevent desk clutter
-- Sticky notes and tabs: Color-code projects and make your planner scannable
-- Pens/pen case: Keep a dedicated writing kit with 2–3 colors (tasks, notes, highlights)
-- Journals stack: Separate work, personal, and wellness in their own notebooks
+- **Desk pad or notepad set:** Capture quick tasks and prevent desk clutter
+- **Sticky notes and tabs:** Color-code projects and make your planner scannable
+- **Pens/pen case:** Keep a dedicated writing kit with 2–3 colors (tasks, notes, highlights)
+- **Journals stack:** Separate work, personal, and wellness in their own notebooks
 
 Shop accessories: <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="noopener">Be Rooted desk accessories</a>
 
 ## How to Choose the Right Be Rooted Planner
-- Format: Daily for structure; weekly for overview; undated for flexibility
-- Size: A5 or similar for portability; larger for desk-based planning
-- Paper: Choose thicker paper if you use gel/highlighters to avoid bleed-through
-- Aesthetic: Pick a cover that motivates you—you’ll use it more
+- **Format:** Daily for structure; weekly for overview; undated for flexibility
+- **Size:** A5 or similar for portability; larger for desk-based planning
+- **Paper:** Choose thicker paper if you use gel/highlighters to avoid bleed-through
+- **Aesthetic:** Pick a cover that motivates you—you’ll use it more
 
 ## Suggested Setups (Quick Wins)
 - **Remote Work Kit:** Undated weekly planner + desk pad + sticky tabs
