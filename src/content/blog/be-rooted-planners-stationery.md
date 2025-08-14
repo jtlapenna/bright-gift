@@ -51,31 +51,46 @@ What stands out:
 ## Standout Product Examples
 
 ### 1) Undated Planners (Most Flexible)
-- Best for: New routines, project cycles, academic schedules
-- Why it’s great: Start anytime. Weekly overview keeps goals visible while leaving room for notes and habit tracking.
-- Practical tip: Pair with a matching journal to capture reflections separate from tasks.
-- Example: “Unapologetically Me” undated planner
-- Where to shop: <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="noopener">Shop Be Rooted</a>
+- **Best for:** New routines, project cycles, academic schedules
+- **Why it’s great:** Start anytime. Weekly overview keeps goals visible while leaving room for notes and habit tracking.
+- **Practical tip:** Pair with a matching journal to capture reflections separate from tasks.
+- **Example:** “Unapologetically Me” undated planner
+- **Where to shop:** <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="noopener">Shop Be Rooted</a>
+
+<figure>
+  <img src="/images/blog/be-rooted-planners-stationery/be-rooted-planner-daily.webp" alt="Be Rooted undated planner with uplifting design" style="width:100%; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06);" />
+  <figcaption style="text-align:center; color:#6b7280; font-size:0.95rem; margin-top:0.5rem;">Undated planner layout with affirming cover art</figcaption>
+</figure>
 
 ### 2) Dated/Daily Planners (Maximum Structure)
-- Best for: Busy professionals, students with full schedules
-- Why it’s great: Day-per-page space for appointments, priority lists, and notes; helps reduce overwhelm.
-- Practical tip: Batch similar tasks and use time blocks to protect focus.
-- Where to shop: <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="noopener">Shop Be Rooted</a>
+- **Best for:** Busy professionals, students with full schedules
+- **Why it’s great:** Day-per-page space for appointments, priority lists, and notes; helps reduce overwhelm.
+- **Practical tip:** Batch similar tasks and use time blocks to protect focus.
+- **Where to shop:** <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="noopener">Shop Be Rooted</a>
 
 ### 3) Lined & Spiraled Journals (Self-Care Favorite)
-- Best for: Building a reflective habit, stress reduction
-- Why it’s great: Prompted pages for gratitude, intention setting, and mindful check-ins.
-- Practical tip: Keep it bedside and write for 3 minutes nightly to cement the habit.
-- Example: “Stand in Power” lined & spiraled journal
-- Where to shop: <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="noopener">Shop Be Rooted</a>
+- **Best for:** Building a reflective habit, stress reduction
+- **Why it’s great:** Prompted pages for gratitude, intention setting, and mindful check-ins.
+- **Practical tip:** Keep it bedside and write for 3 minutes nightly to cement the habit.
+- **Example:** “Stand in Power” lined & spiraled journal
+- **Where to shop:** <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="noopener">Shop Be Rooted</a>
+
+<figure>
+  <img src="/images/blog/be-rooted-planners-stationery/be-rooted-notebook.webp" alt="Be Rooted notebook – Reset, Reflect, Refocus with coloring pages" style="width:100%; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06);" />
+  <figcaption style="text-align:center; color:#6b7280; font-size:0.95rem; margin-top:0.5rem;">Notebook with reflective prompts and creative pages</figcaption>
+</figure>
 
 ### 4) Padfolios & Notepads (Work/Study System)
-- Best for: Sprints, exam prep, launches, goal tracking
-- Why it’s great: Task prioritization with weekly review helps you iterate and improve.
-- Practical tip: End each week with a quick “start/stop/continue” reflection.
-- Example: “Daily Focus” padfolio
-- Where to shop: <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="noopener">Shop Be Rooted</a>
+- **Best for:** Sprints, exam prep, launches, goal tracking
+- **Why it’s great:** Task prioritization with weekly review helps you iterate and improve.
+- **Practical tip:** End each week with a quick “start/stop/continue” reflection.
+- **Example:** “Daily Focus” padfolio
+- **Where to shop:** <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="noopener">Shop Be Rooted</a>
+
+<figure>
+  <img src="/images/blog/be-rooted-planners-stationery/be-rooted-padfolio.jpg" alt="Be Rooted Daily Focus padfolio" style="width:100%; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06);" />
+  <figcaption style="text-align:center; color:#6b7280; font-size:0.95rem; margin-top:0.5rem;">Daily Focus padfolio for meetings and projects</figcaption>
+</figure>
 
 ## Desk Accessories to Complete the Setup
 
@@ -98,9 +113,9 @@ Shop accessories: <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afro
 - Wellness Kit: Gratitude journal + bedtime notepad + soft-tip pens
 
 ## You Might Also Like
-- <a href="/blog/gifts-for-remote-workers-under-50/">Gifts for Remote Workers Under $50</a>
-- <a href="/blog/gifts-for-new-homeowners-2025/">Best Gifts for New Homeowners 2025</a>
-- <a href="/blog/how-to-choose-the-perfect-gift-complete-guide/">How to Choose the Perfect Gift</a>
+- <a href="/blog/gifts-for-remote-workers-under-50/" class="related-link">Gifts for Remote Workers Under $50</a>
+- <a href="/blog/gifts-for-new-homeowners-2025/" class="related-link">Best Gifts for New Homeowners 2025</a>
+- <a href="/blog/how-to-choose-the-perfect-gift-complete-guide/" class="related-link">How to Choose the Perfect Gift</a>
 
 ## Final Thoughts
 Be Rooted’s blend of function and affirming design makes planning feel more intentional—and more fun. Whether you’re refreshing your workspace or gifting a student or new grad, these planners and journals are practical, motivating picks for 2025.

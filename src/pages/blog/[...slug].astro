@@ -524,6 +524,22 @@ const relatedPosts = allBlogPosts
     padding: 0.05em 0.2em;
     transition: color 0.2s;
   }
+
+  /* Style internal related links like affiliate CTAs */
+  :global(a.related-link) {
+    color: #FF6B6B !important;
+    font-weight: 700;
+    text-decoration: underline;
+    background: none;
+    border-radius: 0.2em;
+    padding: 0.05em 0.2em;
+    transition: color 0.2s;
+  }
+  :global(a.related-link:hover), :global(a.related-link:focus) {
+    color: #1C2E4A !important;
+    background: none;
+    outline: none;
+  }
   :global(a.amazon-link:hover), :global(a.amazon-link:focus),
   :global(a.bookshop-link:hover), :global(a.bookshop-link:focus),
   :global(a.afrofiliate-link:hover), :global(a.afrofiliate-link:focus) {
