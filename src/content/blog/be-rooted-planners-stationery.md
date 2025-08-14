@@ -108,9 +108,9 @@ Shop accessories: <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afro
 - Aesthetic: Pick a cover that motivates you—you’ll use it more
 
 ## Suggested Setups (Quick Wins)
-- Remote Work Kit: Undated weekly planner + desk pad + sticky tabs
-- Student Kit: Daily planner + productivity journal + pen set
-- Wellness Kit: Gratitude journal + bedtime notepad + soft-tip pens
+- **Remote Work Kit:** Undated weekly planner + desk pad + sticky tabs
+- **Student Kit:** Daily planner + productivity journal + pen set
+- **Wellness Kit:** Gratitude journal + bedtime notepad + soft-tip pens
 
 ## You Might Also Like
 - <a href="/blog/gifts-for-remote-workers-under-50/" class="related-link">Gifts for Remote Workers Under $50</a>
