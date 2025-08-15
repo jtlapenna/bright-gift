@@ -3,7 +3,9 @@ import OpenAI from 'openai';
 export async function GET({ locals }: { locals: any }) {
   try {
     const env = locals?.runtime?.env || {};
-    const hasOpenAIKey = Boolean(env.OPENAI_API_KEY || process.env.OPENAI_API_KEY);
+    const rawKey = env.OPENAI_API_KEY || process.env.OPENAI_API_KEY;
+    const normalizedKey = typeof rawKey === 'string' ? rawKey.trim().replace(/^"|"$/g, '') : rawKey;
+    const hasOpenAIKey = Boolean(normalizedKey);
     const keySource = env.OPENAI_API_KEY ? 'locals.runtime.env' : (process.env.OPENAI_API_KEY ? 'process.env' : 'none');
 
     const redacted = (val?: string) => (val ? `${val.slice(0, 3)}***${val.slice(-2)}` : undefined);
@@ -21,7 +23,7 @@ export async function GET({ locals }: { locals: any }) {
 
     // Try a lightweight authenticated call to verify the key works
     if (hasOpenAIKey) {
-      const apiKey = env.OPENAI_API_KEY || process.env.OPENAI_API_KEY;
+      const apiKey = normalizedKey as string;
       const openai = new OpenAI({ apiKey });
       try {
         // List models; this should be cheap and confirms auth

@@ -388,8 +388,8 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
     }
 
     // Get the OpenAI API key from Cloudflare SSR runtime context
-    const apiKey = locals?.runtime?.env?.OPENAI_API_KEY || 
-                   process.env.OPENAI_API_KEY;
+    const apiKeyRaw = locals?.runtime?.env?.OPENAI_API_KEY || process.env.OPENAI_API_KEY;
+    const apiKey = typeof apiKeyRaw === 'string' ? apiKeyRaw.trim().replace(/^"|"$/g, '') : apiKeyRaw;
     if (!apiKey) {
       console.error('OpenAI API key not found. Debug info:', {
         locals: !!locals,
