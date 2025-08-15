@@ -2,23 +2,27 @@ import { getCollection } from 'astro:content';
 
 export async function GET() {
   try {
-    // Only include published (draft: false) content
-    const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
+    // Include only published content; ignore archived/draft
+    const blogPosts = await getCollection('blog', ({ data }) => {
+      const status = (data as any).status || 'published';
+      const isDraft = Boolean((data as any).draft);
+      return status === 'published' && !isDraft;
+    });
 
     const baseUrl = 'https://bright-gift.com';
   
-  // Static pages
+  // Static pages (canonical with trailing slashes)
   const staticPages = [
-    '',
-    '/blog',
-    '/privacy',
-    '/terms',
-    '/data-deletion'
+    '/',
+    '/blog/',
+    '/privacy/',
+    '/terms/',
+    '/data-deletion/'
   ];
 
   // Generate URLs for static pages
   const staticUrls = staticPages.map(page => {
-    const priority = page === '' ? 1.0 : 0.8;
+    const priority = page === '/' ? 1.0 : 0.8;
     
     return {
       url: `${baseUrl}${page}`,
@@ -31,49 +35,36 @@ export async function GET() {
   // Category pages
   const categories = [...new Set(blogPosts.map(post => post.data.category))].filter(Boolean);
   const categoryUrls = categories.map(category => ({
-    url: `${baseUrl}/category/${category}`,
+    url: `${baseUrl}/category/${category}/`,
     lastmod: new Date().toISOString(),
     changefreq: 'weekly',
     priority: 0.8
   }));
 
-  // Exclude specific slugs/IDs from sitemap (404s in GSC)
-  const excludedBlogSlugs = [
-    'sample-post', 
-    'handmade-gifts',
-    'placeholder',
-    'test',
-    'draft'
-  ];
+  // Ensure uniqueness and canonical trailing slashes
+  const seen = new Set<string>();
 
-  // Only include real, published blog posts, excluding problematic slugs
+  // Only include real, published blog posts, ensuring canonical slashes and modern lastmod fallback
   const blogUrls = blogPosts
-    .filter(post => {
-      try {
-        // Remove .md extension and filter out excluded slugs
-        const slug = post.id.replace('.md', '');
-        return !excludedBlogSlugs.some(excluded => slug.includes(excluded));
-      } catch (error) {
-        console.error('Error filtering blog post:', post.id, error);
-        return false;
-      }
-    })
     .map(post => {
       try {
-        // Ensure clean URLs without .md extensions
-        const cleanSlug = post.id.replace('.md', '');
+        const cleanSlug = post.slug; // Astro provides a clean slug
+        const url = `${baseUrl}/blog/${cleanSlug}/`;
+        if (seen.has(url)) return null;
+        seen.add(url);
+        const dateValue = (post.data as any).date || (post.data as any).pubDate || new Date().toISOString();
         return {
-          url: `${baseUrl}/blog/${cleanSlug}`,
-          lastmod: new Date(post.data.date || new Date()).toISOString(),
+          url,
+          lastmod: new Date(dateValue).toISOString(),
           changefreq: 'monthly',
           priority: 0.7
         };
       } catch (error) {
-        console.error('Error processing blog post:', post.id, error);
+        console.error('Error processing blog post:', post.slug, error);
         return null;
       }
     })
-    .filter(Boolean); // Remove any null entries
+    .filter(Boolean as any);
 
     const allUrls = [...staticUrls, ...categoryUrls, ...blogUrls];
 
@@ -92,11 +83,11 @@ ${allUrls.map(url => `  <url>\n    <loc>${url.url}</loc>\n    <lastmod>${url.las
     
     // Return a basic sitemap with just static pages if there's an error
     const basicUrls = [
-      { url: 'https://bright-gift.com', lastmod: new Date().toISOString(), changefreq: 'daily', priority: 1.0 },
-      { url: 'https://bright-gift.com/blog', lastmod: new Date().toISOString(), changefreq: 'weekly', priority: 0.8 },
-      { url: 'https://bright-gift.com/privacy', lastmod: new Date().toISOString(), changefreq: 'monthly', priority: 0.3 },
-      { url: 'https://bright-gift.com/terms', lastmod: new Date().toISOString(), changefreq: 'monthly', priority: 0.3 },
-      { url: 'https://bright-gift.com/data-deletion', lastmod: new Date().toISOString(), changefreq: 'monthly', priority: 0.3 }
+      { url: 'https://bright-gift.com/', lastmod: new Date().toISOString(), changefreq: 'daily', priority: 1.0 },
+      { url: 'https://bright-gift.com/blog/', lastmod: new Date().toISOString(), changefreq: 'weekly', priority: 0.8 },
+      { url: 'https://bright-gift.com/privacy/', lastmod: new Date().toISOString(), changefreq: 'monthly', priority: 0.3 },
+      { url: 'https://bright-gift.com/terms/', lastmod: new Date().toISOString(), changefreq: 'monthly', priority: 0.3 },
+      { url: 'https://bright-gift.com/data-deletion/', lastmod: new Date().toISOString(), changefreq: 'monthly', priority: 0.3 }
     ];
 
     const fallbackSitemap = `<?xml version="1.0" encoding="UTF-8"?>

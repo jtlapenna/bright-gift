@@ -5,6 +5,7 @@ description: >-
   more vividly than the ones we receive, and what this reveals about human
   nature.
 author: Bright Gift Team
+date: '2025-07-31'
 pubDate: '2025-07-31'
 image: /images/blog/psychology-gift-giving-memory-banner.webp
 tags:

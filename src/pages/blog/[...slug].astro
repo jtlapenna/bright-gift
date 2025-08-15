@@ -24,7 +24,8 @@ const { Content } = await post.render();
 const fallbackImage = '/images/homepage-banner.webp';
 const fallbackTitle = 'Untitled Post';
 const fallbackDescription = 'No description available.';
-const fallbackDate = '1970-01-01';
+// Modern, robust date fallback: prefer frontmatter date, then pubDate, then today
+const fallbackDate = new Date().toISOString().split('T')[0];
 const fallbackKeywords = ['gift ideas'];
 
 // Helper to log warnings in dev
@@ -46,7 +47,7 @@ const image = post.data.image || fallbackImage;
 const ogImage = post.data.ogImage || image;
 const socialImage = post.data.socialImage || ogImage;
 const keywords = post.data.keywords || fallbackKeywords;
-const date = post.data.date || fallbackDate;
+const date = post.data.date || post.data.pubDate || fallbackDate;
 
 // Calculate read time based on word count (average reading speed: 200-250 words per minute)
 const wordCount = post.body.split(/\s+/).length;

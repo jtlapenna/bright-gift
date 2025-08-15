@@ -11,15 +11,19 @@ const isPreview = import.meta.env.IS_PREVIEW === 'true';
 const allPosts = await getCollection('blog', ({ data }) => isPreview || !data.draft);
 const allFaqs = await getCollection('faqs', ({ data }) => isPreview || !data.draft);
 
-// Sort by date (newest first)
-const sortedPosts = allPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
-const sortedFaqs = allFaqs.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+// Normalize dates (prefer date, then pubDate, then today) and sort by newest first
+function normalizeDate(d: any) {
+  const value = d?.date || d?.pubDate || new Date().toISOString();
+  return new Date(value);
+}
+const sortedPosts = allPosts.sort((a, b) => normalizeDate(b.data).getTime() - normalizeDate(a.data).getTime());
+const sortedFaqs = allFaqs.sort((a, b) => normalizeDate(b.data).getTime() - normalizeDate(a.data).getTime());
 
 // Combine all content for the blog index
 const allContent = [
   ...sortedPosts.map(post => ({ ...post, type: post.data.category || 'blog' })),
   ...sortedFaqs.map(faq => ({ ...faq, type: 'faq' }))
-].sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+].sort((a, b) => normalizeDate(b.data).getTime() - normalizeDate(a.data).getTime());
 
 // Pagination (9 posts per page for better grid layout)
 const postsPerPage = 9;
