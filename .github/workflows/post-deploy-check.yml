@@ -56,22 +56,6 @@ jobs:
           echo "status=$(jq -r '.status? // empty' /tmp/resp.json 2>/dev/null || true)" >> $GITHUB_ENV
           echo "body=$(cat /tmp/resp.json 2>/dev/null | head -c 4000 | sed 's/\n/ /g')" >> $GITHUB_ENV
 
-      - name: Slack notify on failure
-        if: failure()
-        uses: slackapi/slack-github-action@v1.27.0
-        with:
-          payload: |
-            {
-              "text": "❌ Post-deploy check failed for bright-gift.com",
-              "blocks": [
-                {"type":"section","text":{"type":"mrkdwn","text":"*Post-deploy check failed* for <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|run ${{ github.run_number }}>"}},
-                {"type":"section","text":{"type":"mrkdwn","text":"Status: ${{ env.status }}\nResponse: ${{ env.body }}"}}
-              ]
-            }
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
-
       - name: Email notify on failure
         if: failure()
         uses: dawidd6/action-send-mail@v3
