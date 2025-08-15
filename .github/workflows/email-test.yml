@@ -1,0 +1,32 @@
+name: Send Test Email
+
+on:
+  workflow_dispatch:
+    inputs:
+      note:
+        description: Optional note appended to the message
+        required: false
+        default: ""
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send test email via Gmail SMTP
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "[BrightGift] CI email test"
+          to: ${{ secrets.TO_EMAIL }}
+          from: ${{ secrets.FROM_EMAIL }}
+          content_type: text/plain
+          body: |
+            This is a test email sent from GitHub Actions for the BrightGift repository.
+
+            Timestamp (UTC): ${{ github.event.repository.updated_at }}
+            Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            Note: ${{ github.event.inputs.note }}
+
