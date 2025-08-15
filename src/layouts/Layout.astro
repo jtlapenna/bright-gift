@@ -94,13 +94,7 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 		<link rel="preload" href="/bright-gift-logo.webp" as="image" />
 		<link rel="preload" href="/favicon.svg" as="image" />
 		
-		<!-- Preload critical CSS to prevent render blocking -->
-		<link rel="preload" href="/_astro/_slug_.CtkfK4BW.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-		<link rel="preload" href="/_astro/_slug_.vqZ271oa.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-		<noscript>
-			<link rel="stylesheet" href="/_astro/_slug_.CtkfK4BW.css" />
-			<link rel="stylesheet" href="/_astro/_slug_.vqZ271oa.css" />
-		</noscript>
+		<!-- Remove brittle preloads of hashed CSS files. Astro will inject the correct CSS automatically. -->
 
 		<!-- Ahrefs Web Analytics - Load asynchronously -->
 		<script src="https://analytics.ahrefs.com/analytics.js" data-key="Quv9IM6wKm4wMy6MXyBE4w" async defer></script>
