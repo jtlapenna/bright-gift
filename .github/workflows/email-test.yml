@@ -21,8 +21,7 @@ jobs:
           password: ${{ secrets.SMTP_PASSWORD }}
           subject: "[BrightGift] CI email test"
           to: ${{ secrets.TO_EMAIL }}
-          from: ${{ secrets.FROM_EMAIL }}
-          content_type: text/plain
+          from: ${{ secrets.FROM_EMAIL || secrets.SMTP_USERNAME }}
           body: |
             This is a test email sent from GitHub Actions for the BrightGift repository.
 
