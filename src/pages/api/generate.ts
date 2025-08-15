@@ -407,6 +407,15 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
       );
     }
 
+    // Guard: project-scoped key requires project id
+    if (typeof apiKey === 'string' && apiKey.startsWith('sk-proj-') && !project) {
+      console.error('Project-scoped OpenAI key detected but OPENAI_PROJECT_ID/OPENAI_PROJECT not set.');
+      return new Response(
+        JSON.stringify({ error: 'Server misconfiguration: project-scoped OpenAI key without OPENAI_PROJECT_ID. Please redeploy with correct env.' }),
+        { status: 500 }
+      );
+    }
+
     // Get Bookshop.org affiliate ID from env
     const bookshopAffiliateId = locals?.runtime?.env?.BOOKSHOP_AFFILIATE_ID || 'brightgift';
     console.log('Bookshop.org affiliate ID:', bookshopAffiliateId);

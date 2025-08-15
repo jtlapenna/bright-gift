@@ -1,0 +1,32 @@
+name: Post-Deploy Health Check
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Cloudflare Pages deploy
+        uses: jakejarvis/wait-action@v0.1.1
+        with:
+          time: '45s'
+
+      - name: Hit generator endpoint
+        run: |
+          set -euo pipefail
+          BASE_URL="https://bright-gift.com"
+          STATUS=$(curl -s -o /tmp/resp.json -w "%{http_code}" -X POST "$BASE_URL/api/generate" \
+            -H 'content-type: application/json' \
+            --data '{"recipient":"friend","interests":"books","budget":"25","styles":["book-lover"]}')
+          echo "Status: $STATUS"
+          cat /tmp/resp.json || true
+          test "$STATUS" -eq 200
+
+      - name: Validate response shape
+        run: |
+          jq -e '.ideas and (.ideas | type=="array")' /tmp/resp.json >/dev/null
+
+
