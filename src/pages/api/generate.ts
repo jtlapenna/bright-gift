@@ -390,6 +390,8 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
     // Get the OpenAI API key from Cloudflare SSR runtime context
     const apiKeyRaw = locals?.runtime?.env?.OPENAI_API_KEY || process.env.OPENAI_API_KEY;
     const apiKey = typeof apiKeyRaw === 'string' ? apiKeyRaw.trim().replace(/^"|"$/g, '') : apiKeyRaw;
+    const projectIdRaw = locals?.runtime?.env?.OPENAI_PROJECT || locals?.runtime?.env?.OPENAI_PROJECT_ID || process.env.OPENAI_PROJECT || process.env.OPENAI_PROJECT_ID;
+    const project = typeof projectIdRaw === 'string' ? projectIdRaw.trim().replace(/^"|"$/g, '') : undefined;
     if (!apiKey) {
       console.error('OpenAI API key not found. Debug info:', {
         locals: !!locals,
@@ -409,7 +411,7 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
     const bookshopAffiliateId = locals?.runtime?.env?.BOOKSHOP_AFFILIATE_ID || 'brightgift';
     console.log('Bookshop.org affiliate ID:', bookshopAffiliateId);
 
-    const openai = new OpenAI({ apiKey });
+    const openai = new OpenAI(project ? { apiKey, project } : { apiKey });
     const prompt = buildPrompt({ recipient, interests, budget, styles });
 
     // Try multiple models to improve reliability across accounts/quotas

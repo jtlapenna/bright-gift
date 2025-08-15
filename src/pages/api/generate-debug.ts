@@ -5,6 +5,8 @@ export async function GET({ locals }: { locals: any }) {
     const env = locals?.runtime?.env || {};
     const rawKey = env.OPENAI_API_KEY || process.env.OPENAI_API_KEY;
     const normalizedKey = typeof rawKey === 'string' ? rawKey.trim().replace(/^"|"$/g, '') : rawKey;
+    const rawProject = env.OPENAI_PROJECT || env.OPENAI_PROJECT_ID || process.env.OPENAI_PROJECT || process.env.OPENAI_PROJECT_ID;
+    const project = typeof rawProject === 'string' ? rawProject.trim().replace(/^"|"$/g, '') : undefined;
     const hasOpenAIKey = Boolean(normalizedKey);
     const keySource = env.OPENAI_API_KEY ? 'locals.runtime.env' : (process.env.OPENAI_API_KEY ? 'process.env' : 'none');
 
@@ -24,7 +26,7 @@ export async function GET({ locals }: { locals: any }) {
     // Try a lightweight authenticated call to verify the key works
     if (hasOpenAIKey) {
       const apiKey = normalizedKey as string;
-      const openai = new OpenAI({ apiKey });
+      const openai = new OpenAI(project ? { apiKey, project } : { apiKey });
       try {
         // List models; this should be cheap and confirms auth
         const res = await openai.models.list();
