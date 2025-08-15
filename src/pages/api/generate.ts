@@ -412,14 +412,33 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
     const openai = new OpenAI({ apiKey });
     const prompt = buildPrompt({ recipient, interests, budget, styles });
 
-    const completion = await openai.chat.completions.create({
-      model: 'gpt-4-turbo',
-      messages: [
-        { role: 'system', content: 'You are a helpful assistant that suggests thoughtful and creative gift ideas.' },
-        { role: 'user', content: prompt },
-      ],
-    });
-    const ideasText = completion.choices[0]?.message?.content?.trim() || '';
+    // Try multiple models to improve reliability across accounts/quotas
+    const candidateModels = ['gpt-4o-mini', 'gpt-4o', 'gpt-4-turbo'];
+    let ideasText = '';
+    let lastModelError: any = null;
+    for (const model of candidateModels) {
+      try {
+        const completion = await openai.chat.completions.create({
+          model,
+          messages: [
+            { role: 'system', content: 'You are a helpful assistant that suggests thoughtful and creative gift ideas.' },
+            { role: 'user', content: prompt },
+          ],
+        });
+        ideasText = completion.choices[0]?.message?.content?.trim() || '';
+        if (ideasText) break;
+      } catch (err: any) {
+        lastModelError = err;
+        const msg = (err?.message || '').toLowerCase();
+        // Try next model on model errors or 4xx specific to model availability
+        if (msg.includes('model') || msg.includes('not found') || msg.includes('unsupported')) {
+          continue;
+        }
+        // Otherwise rethrow (auth/network/etc.)
+        throw err;
+      }
+    }
+    if (!ideasText && lastModelError) throw lastModelError;
 
     // Parse markdown output into ideas (simple regex for demo)
     const ideaRegex = /\*\*(\d+\.\s+.+?)\*\*\s+([^_]+)_Tag: ([^_]+)_/g;
