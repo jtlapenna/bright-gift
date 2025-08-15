@@ -12,6 +12,7 @@ export async function GET({ locals }: { locals: any }) {
 
     const redacted = (val?: string) => (val ? `${val.slice(0, 3)}***${val.slice(-2)}` : undefined);
 
+    const envKeys = Object.keys(env).sort();
     const details: Record<string, any> = {
       runtime: {
         adapter: 'cloudflare',
@@ -19,8 +20,15 @@ export async function GET({ locals }: { locals: any }) {
         hasRuntime: Boolean(locals?.runtime),
         hasEnv: Boolean(locals?.runtime?.env),
       },
-      envBindings: Object.keys(env).filter((k) => /(OPENAI|BOOKSHOP)/i.test(k)),
-      openai: { hasKey: hasOpenAIKey, keySource },
+      envBindings: envKeys,
+      openai: {
+        hasKey: hasOpenAIKey,
+        keySource,
+        keyPrefix: typeof normalizedKey === 'string' ? normalizedKey.slice(0, 6) : undefined,
+        keyLength: typeof normalizedKey === 'string' ? normalizedKey.length : undefined,
+        projectPresent: Boolean(project),
+        projectPreview: typeof project === 'string' ? `${(project as string).slice(0, 4)}***` : undefined,
+      },
     };
 
     // Try a lightweight authenticated call to verify the key works
