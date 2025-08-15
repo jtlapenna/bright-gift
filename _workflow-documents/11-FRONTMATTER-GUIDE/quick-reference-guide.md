@@ -31,6 +31,24 @@ keywords:
   - secondary keyword
 image: /images/blog/post-banner.webp
 ogImage: /images/blog/post-og.webp
+ 
+# Dashboard analytics (recommended)
+wordCount: 0
+readTime: 0
+seoScore: 0
+readabilityScore: 0
+
+# Multi-site/workflow (recommended)
+siteId: {site-id}
+postId: {post-or-workflow-id}
+workflowId: {workflow-id}
+generatedAt: '2025-01-01T00:00:00.000Z'
+lastUpdated: '2025-01-01T00:00:00.000Z'
+
+# Affiliates (flexible per site)
+affiliateDisclosure: false
+affiliatePlatforms: { }
+affiliateLinks: [ ]
 ---
 ```
 
@@ -78,12 +96,11 @@ hashtags:
   - [occasion]
   - affordable
 
-# Affiliate (if applicable)
-affiliate_disclosure: true
-affiliate_platforms:
-  - amazon
-  - bookshop
-  - {site-specific-platform}
+# Affiliates (counts + links)
+affiliateDisclosure: false
+affiliatePlatforms: { amazon: 0, bookshop: 0, afrofiliate: 0 }
+affiliateLinks:
+  - { text: "Example Product", url: "https://...", platform: "amazon", price: "$25-$40", description: "Short description." }
 
 # Analytics
 priority: high
@@ -95,6 +112,19 @@ difficulty: beginner
 site_id: {site-name}
 language: en-US
 region: US
+
+# Dashboard analytics (recommended)
+wordCount: 0
+readTime: 0
+seoScore: 0
+readabilityScore: 0
+
+# Multi-site/workflow (recommended)
+siteId: {site-id}
+postId: {post-or-workflow-id}
+workflowId: {workflow-id}
+generatedAt: '2025-01-01T00:00:00.000Z'
+lastUpdated: '2025-01-01T00:00:00.000Z'
 ---
 ```
 
@@ -125,7 +155,7 @@ This post contains affiliate links. We may earn a commission if you click throug
 [View on Bookshop.org](https://bookshop.org/search?keywords=keyword&affiliate={site-id})
 ```
 ```html
-<a href="https://bookshop.org/a/{site-id}/ISBN" class="amazon-link" target="_blank" rel="noopener">View on Bookshop.org</a>
+<a href="https://bookshop.org/a/{site-id}/ISBN" class="bookshop-link" target="_blank" rel="noopener">View on Bookshop.org</a>
 ```
 
 #### Afrofiliate
@@ -133,7 +163,22 @@ This post contains affiliate links. We may earn a commission if you click throug
 [View on Afrofiliate](https://afrofiliate.com/search?q=keyword&ref={site-id})
 ```
 ```html
-<a href="https://afrofiliate.com/search?q=keyword&ref={site-id}">View on Afrofiliate</a>
+<a href="https://afrofiliate.com/search?q=keyword&ref={site-id}" class="afrofiliate-link" target="_blank" rel="noopener">View on Afrofiliate</a>
+```
+
+### Affiliates Data Model (for dashboard)
+
+```yaml
+# Counts per platform (flexible keys per site)
+affiliatePlatforms: { amazon: 12, bookshop: 2, afrofiliate: 1 }
+
+# Full link list for auditing and analytics
+affiliateLinks:
+  - text: "Product Name"
+    url: "https://..."
+    platform: "amazon" # or bookshop, afrofiliate, etc.
+    price: "$30-$50"
+    description: "Short description"
 ```
 
 #### Custom Platforms
@@ -234,6 +279,8 @@ curl -H "Authorization: Bearer {token}" \
 - **Check format**: Use proper URL patterns
 - **Verify tags**: Ensure affiliate tags/IDs are correct
 - **Check platform**: Ensure platform is configured for site
+- **Populate counts**: Ensure `affiliatePlatforms` counts match extracted links
+- **List links**: Ensure `affiliateLinks` contains all affiliate URLs
 
 #### Images Not Loading
 - **Check path**: Verify image paths are correct
@@ -281,6 +328,9 @@ curl -H "Authorization: Bearer {token}" \
 - [ ] Date is in correct format (YYYY-MM-DD)
 - [ ] Site-specific requirements are met
 - [ ] Affiliate platforms are site-specific
+- [ ] wordCount, readTime, seoScore, readabilityScore present
+- [ ] affiliatePlatforms counts and affiliateLinks list populated
+- [ ] siteId/postId/workflowId present (if workflow-managed)
 
 ## Quick Tips
 

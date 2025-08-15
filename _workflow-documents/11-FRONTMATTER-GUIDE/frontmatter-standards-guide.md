@@ -122,6 +122,24 @@ keywords:
 # Image Required
 image: /images/blog/post-banner.webp
 ogImage: /images/blog/post-og.webp
+
+# Dashboard analytics (recommended)
+wordCount: 0
+readTime: 0
+seoScore: 0
+readabilityScore: 0
+
+# Multi-site/workflow (recommended)
+siteId: {site-id}
+postId: {post-or-workflow-id}
+workflowId: {workflow-id}
+generatedAt: '2025-01-01T00:00:00.000Z'
+lastUpdated: '2025-01-01T00:00:00.000Z'
+
+# Affiliates (flexible per site)
+affiliateDisclosure: false
+affiliatePlatforms: { }
+affiliateLinks: [ ]
 ---
 ```
 
@@ -140,6 +158,18 @@ ogImage: /images/blog/post-og.webp
 | `keywords` | array | Yes | SEO keywords |
 | `image` | string | Yes | Main post image |
 | `ogImage` | string | Yes | Open Graph image |
+| `wordCount` | integer | Rec. | Total words in post body |
+| `readTime` | integer | Rec. | Estimated minutes to read |
+| `seoScore` | integer | Rec. | 0–100 SEO quality score |
+| `readabilityScore` | integer | Rec. | 0–100 readability score |
+| `siteId` | string | Rec. | Site identifier for dashboard |
+| `postId` | string | Rec. | Unique post/workflow ID |
+| `workflowId` | string | Rec. | Workflow/run identifier |
+| `generatedAt` | datetime | Rec. | ISO timestamp of generation |
+| `lastUpdated` | datetime | Rec. | ISO timestamp of last update |
+| `affiliateDisclosure` | boolean | Rec. | Affiliate disclosure toggle |
+| `affiliatePlatforms` | object | Rec. | Per-platform counts (e.g., `{ amazon: 12 }`) |
+| `affiliateLinks` | array | Rec. | Array of affiliate link objects |
 
 ## Content Categorization
 
@@ -341,11 +371,7 @@ affiliate_disclosure: true
 
 ```yaml
 # Platform Configuration
-affiliate_platforms:
-  - amazon
-  - bookshop
-  - afrofiliate
-  - {custom-platform}
+affiliatePlatforms: { amazon: 0, bookshop: 0, afrofiliate: 0 }
 
 # Revenue Tracking
 expected_revenue_per_click: 2.50
@@ -354,6 +380,14 @@ target_conversion_rate: 0.02
 # Performance Metrics
 affiliate_links_count: 15
 revenue_potential: 37.50
+
+# Full link list (dashboard)
+affiliateLinks:
+  - text: "Product Name"
+    url: "https://..."
+    platform: "amazon"
+    price: "$30-$50"
+    description: "Short description"
 ```
 
 ### Affiliate Best Practices
@@ -451,9 +485,10 @@ translation:
 
 ```yaml
 # Content Quality
-word_count: 1500
+wordCount: 1500
 reading_level: intermediate
-seo_score: 85  # 1-100 scale
+seoScore: 85  # 1-100 scale
+readabilityScore: 80
 
 # Technical Validation
 has_images: true
@@ -478,6 +513,11 @@ spell_checked: true
 - [ ] Content is properly categorized
 - [ ] Meta data is complete and accurate
 - [ ] Site-specific requirements are met
+- [ ] wordCount/readTime present and accurate
+- [ ] seoScore/readabilityScore present (0–100)
+- [ ] affiliatePlatforms counts match actual links
+- [ ] affiliateLinks array populated for auditing
+- [ ] siteId/postId/workflowId present (if workflow-managed)
 
 ### Automated Validation
 
@@ -581,11 +621,14 @@ hashtags:
   - literary
 
 # Affiliate
-affiliate_disclosure: true
-affiliate_platforms:
-  - amazon
-  - bookshop
-  - {site-specific-platform}
+affiliateDisclosure: true
+affiliatePlatforms: { amazon: 10, bookshop: 2 }
+affiliateLinks:
+  - text: "Example Book"
+    url: "https://bookshop.org/a/{site-id}/123456"
+    platform: "bookshop"
+    price: "$15-$25"
+    description: "Great read."
 expected_revenue_per_click: 2.50
 target_conversion_rate: 0.02
 
@@ -600,6 +643,17 @@ engagement_score: 9.2
 site_id: {site-name}
 language: en-US
 region: US
+
+# Dashboard analytics & workflow
+wordCount: 1500
+readTime: 8
+seoScore: 85
+readabilityScore: 80
+siteId: "brightgift"
+postId: "workflow_123"
+workflowId: "thread_abc"
+generatedAt: '2025-01-01T00:00:00.000Z'
+lastUpdated: '2025-01-02T00:00:00.000Z'
 ---
 ```
 

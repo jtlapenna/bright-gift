@@ -18,6 +18,9 @@ This folder contains comprehensive documentation for frontmatter standards acros
 - Multi-site configuration
 - Validation and quality control
 - Best practices and examples
+ - Dashboard fields: wordCount, readTime, seoScore, readabilityScore
+ - Workflow fields: siteId, postId, workflowId, generatedAt, lastUpdated
+ - Affiliates data model: affiliatePlatforms (counts), affiliateLinks (list)
 
 ### `quick-reference-guide.md`
 **Essential reference for agents covering:**
@@ -29,6 +32,7 @@ This folder contains comprehensive documentation for frontmatter standards acros
 - Troubleshooting and debug commands
 - Validation checklists
 - Multi-site considerations
+ - Dashboard readiness checklist (analytics, workflow, affiliates)
 
 ## Key Features
 
