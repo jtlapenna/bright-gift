@@ -126,8 +126,8 @@ ogImage: /images/blog/post-og.webp
 # Dashboard analytics (recommended)
 wordCount: 0
 readTime: 0
-seoScore: 0
-readabilityScore: 0
+seoScore: "--"  # use "--" when unknown
+readabilityScore: "--"  # use "--" when unknown
 
 # Multi-site/workflow (recommended)
 siteId: {site-id}
@@ -160,8 +160,8 @@ affiliateLinks: [ ]
 | `ogImage` | string | Yes | Open Graph image |
 | `wordCount` | integer | Rec. | Total words in post body |
 | `readTime` | integer | Rec. | Estimated minutes to read |
-| `seoScore` | integer | Rec. | 0–100 SEO quality score |
-| `readabilityScore` | integer | Rec. | 0–100 readability score |
+| `seoScore` | number/string | Rec. | 0–100 or "--" when unknown |
+| `readabilityScore` | number/string | Rec. | 0–100 or "--" when unknown |
 | `siteId` | string | Rec. | Site identifier for dashboard |
 | `postId` | string | Rec. | Unique post/workflow ID |
 | `workflowId` | string | Rec. | Workflow/run identifier |
@@ -487,8 +487,8 @@ translation:
 # Content Quality
 wordCount: 1500
 reading_level: intermediate
-seoScore: 85  # 1-100 scale
-readabilityScore: 80
+seoScore: 85  # 0–100 or "--"
+readabilityScore: 80  # 0–100 or "--"
 
 # Technical Validation
 has_images: true

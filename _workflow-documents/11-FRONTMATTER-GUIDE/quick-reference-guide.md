@@ -35,8 +35,8 @@ ogImage: /images/blog/post-og.webp
 # Dashboard analytics (recommended)
 wordCount: 0
 readTime: 0
-seoScore: 0
-readabilityScore: 0
+seoScore: "--"   # use "--" when unknown
+readabilityScore: "--"   # use "--" when unknown
 
 # Multi-site/workflow (recommended)
 siteId: {site-id}
@@ -116,8 +116,8 @@ region: US
 # Dashboard analytics (recommended)
 wordCount: 0
 readTime: 0
-seoScore: 0
-readabilityScore: 0
+seoScore: "--"   # use "--" when unknown
+readabilityScore: "--"   # use "--" when unknown
 
 # Multi-site/workflow (recommended)
 siteId: {site-id}
