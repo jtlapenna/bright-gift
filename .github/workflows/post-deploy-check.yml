@@ -8,25 +8,87 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    env:
+      BASE_URL: https://bright-gift.com
+      CHECK_PATH: /api/generate
+      TIMEOUT_SECONDS: '480' # give CF Pages ~8 minutes to be safe (builds ~4m)
+      INTERVAL_SECONDS: '15'
     steps:
-      - name: Wait for Cloudflare Pages deploy
-        uses: jakejarvis/wait-action@v0.1.1
-        with:
-          time: '45s'
-
-      - name: Hit generator endpoint
+      - name: Poll generator until healthy or timeout
+        shell: bash
         run: |
           set -euo pipefail
-          BASE_URL="https://bright-gift.com"
-          STATUS=$(curl -s -o /tmp/resp.json -w "%{http_code}" -X POST "$BASE_URL/api/generate" \
-            -H 'content-type: application/json' \
-            --data '{"recipient":"friend","interests":"books","budget":"25","styles":["book-lover"]}')
-          echo "Status: $STATUS"
-          cat /tmp/resp.json || true
-          test "$STATUS" -eq 200
+          start=$(date +%s)
+          status=""
+          reason=""
+          while true; do
+            status=$(curl -s -o /tmp/resp.json -w "%{http_code}" -X POST "${BASE_URL}${CHECK_PATH}" \
+              -H 'content-type: application/json' \
+              --data '{"recipient":"friend","interests":"books","budget":"25","styles":["book-lover"]}') || true
+            if [[ "$status" == "200" ]]; then
+              echo "Generator healthy (200)."
+              cat /tmp/resp.json | jq -e '.ideas and (.ideas | type=="array")' >/dev/null
+              break
+            fi
+            # If body includes our quota signal, fail immediately (tool unusable)
+            if grep -q "OPENAI_QUOTA_REACHED" /tmp/resp.json 2>/dev/null; then
+              echo "Detected quota exhaustion in response body. Failing early."
+              exit 1
+            fi
+            now=$(date +%s)
+            elapsed=$((now-start))
+            echo "Status=$status after ${elapsed}s. Retrying in ${INTERVAL_SECONDS}s..."
+            if [[ $elapsed -ge ${TIMEOUT_SECONDS} ]]; then
+              echo "Timed out after ${TIMEOUT_SECONDS}s waiting for healthy status."
+              cat /tmp/resp.json || true
+              exit 1
+            fi
+            sleep ${INTERVAL_SECONDS}
+          done
 
       - name: Validate response shape
         run: |
           jq -e '.ideas and (.ideas | type=="array")' /tmp/resp.json >/dev/null
+
+      - name: Prepare failure context
+        if: failure()
+        run: |
+          echo "status=$(jq -r '.status? // empty' /tmp/resp.json 2>/dev/null || true)" >> $GITHUB_ENV
+          echo "body=$(cat /tmp/resp.json 2>/dev/null | head -c 4000 | sed 's/\n/ /g')" >> $GITHUB_ENV
+
+      - name: Slack notify on failure
+        if: failure()
+        uses: slackapi/slack-github-action@v1.27.0
+        with:
+          payload: |
+            {
+              "text": "❌ Post-deploy check failed for bright-gift.com",
+              "blocks": [
+                {"type":"section","text":{"type":"mrkdwn","text":"*Post-deploy check failed* for <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|run ${{ github.run_number }}>"}},
+                {"type":"section","text":{"type":"mrkdwn","text":"Status: ${{ env.status }}\nResponse: ${{ env.body }}"}}
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+
+      - name: Email notify on failure
+        if: failure()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "[BrightGift] Post-deploy health check FAILED"
+          to: ${{ secrets.TO_EMAIL }}
+          from: ${{ secrets.FROM_EMAIL }}
+          content_type: text/plain
+          body: |
+            Post-deploy health check failed for bright-gift.com
+
+            Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            Status: ${{ env.status }}
+            Response (truncated): ${{ env.body }}
 
 

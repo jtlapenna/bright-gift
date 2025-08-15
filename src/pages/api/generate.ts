@@ -569,6 +569,8 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
       if (errorMessage.includes('quota') || errorMessage.includes('billing') || errorMessage.includes('429')) {
         userMessage = "We're experiencing high demand right now. Please try again in a few minutes.";
         statusCode = 429;
+        // Emit recognizable signal for monitoring
+        console.error('OPENAI_QUOTA_REACHED');
       }
       // Handle rate limiting
       else if (errorMessage.includes('rate limit') || errorMessage.includes('too many requests')) {
