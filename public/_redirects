@@ -5,7 +5,7 @@
 # /blog/*/   /blog/:splat   301
 
 # Redirect legacy markdown blog URLs to clean canonical URLs
-/blog/*.md   /blog/:splat/   301!
+/blog/*.md   /blog/:splat/   301
 
 # Block all other .md file access completely (return 404)
 /*.md   404
@@ -21,7 +21,7 @@
 /shop   /   301
 /store   /   301
 /top-gifts   /category/gift-guides/   301
-/blog/${e.slug}   /blog/   301
+
 
 # Missing gift guide pages - redirect to relevant blog posts
 /gift-guides/gifts-for-plant-lovers   /blog/gifts-for-plant-lovers/   301
