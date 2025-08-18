@@ -1,16 +1,7 @@
 # Cloudflare Pages Headers Configuration
-# Block all markdown file access completely
-/*.md
-  X-Robots-Tag: noindex, nofollow
-  Status: 404
-  Cache-Control: no-cache, no-store, must-revalidate
 
-# Ensure proper content type for HTML files
-/*.html
-  Content-Type: text/html; charset=utf-8
-
-# Security headers
+# Security headers (global)
 /*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin 
+  Referrer-Policy: strict-origin-when-cross-origin
