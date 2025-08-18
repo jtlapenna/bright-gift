@@ -315,7 +315,7 @@ const relatedPosts = allBlogPosts
                 <div class="space-y-3">
                   {relatedPosts.map(relatedPost => (
                     <a 
-                      href={`/blog/${relatedPost.slug}`}
+                      href={`/blog/${relatedPost.slug}/`}
                       class="block bg-white rounded-lg border border-slate-200 hover:border-slate-300 transition-all hover:shadow-md overflow-hidden"
                     >
                       <!-- Banner Image -->
@@ -349,7 +349,7 @@ const relatedPosts = allBlogPosts
                     Check out our latest gift guides and ideas!
                   </p>
                   <a 
-                    href="/blog"
+                    href="/blog/"
                     class="inline-block px-4 py-2 bg-[#FF6B6B] text-white text-sm rounded-lg hover:bg-[#ff4c4c] transition-colors"
                   >
                     Browse All Posts

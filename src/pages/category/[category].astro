@@ -80,7 +80,7 @@ const categoryStructuredData = {
   "@type": "CollectionPage",
   "name": `${metadata.title}`,
   "description": metadata.description,
-  "url": `https://bright-gift.com/category/${category}`,
+  "url": `https://bright-gift.com/category/${category}/`,
   "mainEntity": {
     "@type": "ItemList",
     "numberOfItems": sortedPosts.length,
@@ -121,7 +121,7 @@ function calculateReadTime(content: string): number {
   title={metadata.title}
   description={metadata.description}
   keywords={metadata.keywords}
-  canonical={`https://bright-gift.com/category/${category}`}
+  canonical={`https://bright-gift.com/category/${category}/`}
   ogType="website"
   twitterCard="summary_large_image"
 >
@@ -138,17 +138,17 @@ function calculateReadTime(content: string): number {
           {metadata.description}
         </p>
         <div class="flex flex-wrap justify-center gap-4 mt-6">
-          <a href="/blog" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+          <a href="/blog/" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
             category === 'blog' 
               ? 'bg-[#FF6B6B] text-white' 
               : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
           }`}>All Posts</a>
-          <a href="/category/gift-guides" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+          <a href="/category/gift-guides/" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
             category === 'gift-guides' 
               ? 'bg-[#A3E4DB] text-[#1C2E4A]' 
               : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
           }`}>Gift Guides</a>
-          <a href="/category/gift-tips" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+          <a href="/category/gift-tips/" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
             category === 'gift-tips' 
               ? 'bg-[#FFDE59] text-[#1C2E4A]' 
               : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
@@ -167,7 +167,7 @@ function calculateReadTime(content: string): number {
             <svg class="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
             </svg>
-            <a href="/blog" class="hover:text-[#FF6B6B] transition-colors">Blog</a>
+            <a href="/blog/" class="hover:text-[#FF6B6B] transition-colors">Blog</a>
           </li>
           <li class="flex items-center">
             <svg class="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 20 20">
@@ -206,7 +206,7 @@ function calculateReadTime(content: string): number {
             <!-- Post Content -->
             <div class="p-6">
               <h2 class="text-xl font-bold mb-2 text-[#1C2E4A] hover:text-[#FF6B6B] transition-colors" itemprop="headline">
-                <a href={`/blog/${post.slug}`} class="block" aria-label={`Read ${post.data.title} gift guide`}>
+                <a href={`/blog/${post.slug}/`} class="block" aria-label={`Read ${post.data.title} gift guide`}>
                   {post.data.title}
                 </a>
               </h2>
@@ -234,7 +234,7 @@ function calculateReadTime(content: string): number {
               
               <!-- Read More Link -->
               <a 
-                href={`/blog/${post.slug}`} 
+                href={`/blog/${post.slug}/`} 
                 class="inline-flex items-center text-[#FF6B6B] font-semibold hover:text-[#ff4c4c] transition-colors"
                 aria-label={`Read complete ${post.data.title} gift guide`}
               >
