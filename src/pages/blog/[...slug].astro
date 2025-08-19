@@ -161,9 +161,10 @@ const relatedPosts = allBlogPosts
       <!-- Hero Image -->
       <div class="h-96 bg-slate-200 relative overflow-hidden">
         <img 
-          src={image} 
+          src={image || '/images/homepage-banner.webp'} 
           alt={`${title} - Gift guide hero image`}
           class="w-full h-full object-cover"
+          loading="eager"
         />
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
       </div>

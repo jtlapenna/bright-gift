@@ -7,8 +7,8 @@
 # Redirect legacy markdown blog URLs to clean canonical URLs
 /blog/*.md   /blog/:splat/   301
 
-# Block all other .md file access completely (return 404)
-/*.md   404
+# NOTE: Cloudflare Pages rejects extension-only 404 rules like "/*.md 404".
+# We rely on the targeted blog rule above and robots.txt to discourage crawling.
 
 # Redirect old file extensions to clean URLs (essential)
 /*.html   /:splat   301
