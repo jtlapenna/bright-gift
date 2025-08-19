@@ -6,6 +6,10 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   site: 'https://bright-gift.com',
   output: 'server',
+  // Use cookie-based sessions to avoid requiring a Cloudflare KV binding
+  session: {
+    driver: 'cookie'
+  },
   adapter: cloudflare({
     platformProxy: {
       enabled: false
