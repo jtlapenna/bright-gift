@@ -457,9 +457,10 @@ const faqData = {
 							{/* Full-width banner image */}
 							<div class="relative">
 								<img 
-									src={allContent[0].data.image} 
+									src={allContent[0].data.image || '/images/homepage-banner.webp'} 
 									alt={`${allContent[0].data.title} - Latest gift guide`} 
 									class="w-full h-64 md:h-80 object-cover"
+									loading="eager"
 								/>
 								<div class="absolute top-4 left-4">
 									<span class="bg-[#FF6B6B] text-white text-xs font-semibold px-3 py-1 rounded-full">

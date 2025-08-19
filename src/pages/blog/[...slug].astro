@@ -402,6 +402,10 @@ const relatedPosts = allBlogPosts
     color: #fff;
     background: #FF6B6B;
   }
+  /* Prevent duplicate H1 when content includes its own title */
+  .prose h1:first-of-type {
+    display: none;
+  }
   .prose .amazon-link,
   .prose .bookshop-link,
   .prose .afrofiliate-link {
