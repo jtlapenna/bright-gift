@@ -44,6 +44,7 @@ for (const field of requiredFields) {
 const title = post.data.title || fallbackTitle;
 const description = post.data.description || fallbackDescription;
 const image = post.data.image || fallbackImage;
+const imageJpg = post.data.imageJpg || (typeof image === 'string' && image.endsWith('.webp') ? image.replace(/\.webp$/i, '.jpg') : undefined);
 const ogImage = post.data.ogImage || image;
 const socialImage = post.data.socialImage || ogImage;
 const keywords = post.data.keywords || fallbackKeywords;
@@ -165,6 +166,7 @@ const relatedPosts = allBlogPosts
           alt={`${title} - Gift guide hero image`}
           class="w-full h-full object-cover"
           loading="eager"
+          onerror={`this.onerror=null; this.src='${imageJpg || '/images/homepage-banner.webp'}';`}
         />
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
       </div>
@@ -403,10 +405,8 @@ const relatedPosts = allBlogPosts
     color: #fff;
     background: #FF6B6B;
   }
-  /* Prevent duplicate H1 when content includes its own title */
-  .prose h1:first-of-type {
-    display: none;
-  }
+  /* Remove any H1s inside content to avoid duplicate page titles */
+  .prose h1 { display: none; }
   .prose .amazon-link,
   .prose .bookshop-link,
   .prose .afrofiliate-link {
