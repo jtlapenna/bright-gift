@@ -446,23 +446,29 @@ const relatedPosts = allBlogPosts
   }
   .prose h3 {
     font-size: 1.35rem;
-    margin-top: 2.25rem; /* more separation between items */
-    margin-bottom: 0.4rem;
+    margin-top: 2.75rem; /* more separation between items */
+    margin-bottom: 0.35rem;
+    line-height: 1.25;
   }
   :global(.prose h3) { /* ensure style is not scoped away */
     font-size: 1.35rem;
-    margin-top: 2.25rem;
-    margin-bottom: 0.4rem;
+    margin-top: 2.75rem !important; /* enforce item separation */
+    margin-bottom: 0.35rem !important;
+    line-height: 1.25 !important;
   }
   .prose h3 .qualifier {
-    font-size: 0.9em;
+    font-size: 0.82em;
     font-style: italic;
     color: #475569; /* slate-600 */
+    margin-left: .3em;
+    opacity: .85;
   }
   :global(.prose h3 .qualifier) {
-    font-size: 0.9em;
-    font-style: italic;
-    color: #475569;
+    font-size: 0.82em !important;
+    font-style: italic !important;
+    color: #475569 !important;
+    margin-left: .3em !important;
+    opacity: .85 !important;
   }
   .prose a {
     color: #ea580c;
@@ -503,10 +509,10 @@ const relatedPosts = allBlogPosts
     outline: none;
   }
   .prose p {
-    margin-bottom: 0.85rem; /* slightly tighter within an item */
+    margin-bottom: 0.7rem; /* slightly tighter within an item */
     line-height: 1.75;
   }
-  :global(.prose p) { margin-bottom: 0.85rem; }
+  :global(.prose p) { margin-bottom: 0.7rem !important; }
   .prose ul {
     margin-bottom: 1.25rem;
     padding-left: 1.5rem;
@@ -533,11 +539,11 @@ const relatedPosts = allBlogPosts
     top: 1rem;
   }
   .prose ul, .prose ol {
-    margin-bottom: 1.25rem;
-    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
     padding-left: 2rem;
   }
-  :global(.prose ul), :global(.prose ol) { margin-bottom: 1.25rem; margin-top: 0.75rem; }
+  :global(.prose ul), :global(.prose ol) { margin-bottom: 1rem !important; margin-top: 0.5rem !important; }
   .prose li {
     margin-bottom: 0.75rem;
   }
