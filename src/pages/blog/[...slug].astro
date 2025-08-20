@@ -245,46 +245,54 @@ const relatedPosts = allBlogPosts
           </article>
 
           <script is:inline>
-            document.addEventListener('DOMContentLoaded', () => {
-              const root = document.getElementById('article-content');
-              if (!root) return;
+            (function run() {
+              const transform = () => {
+                const root = document.getElementById('article-content');
+                if (!root) return;
 
-              // 1) Tidy H3 titles: move trailing parenthetical into a styled span, and strip affiliate network names
-              const AFFILIATE_WORDS = /(afrofiliate|amazon|bookshop)/gi;
-              root.querySelectorAll('h3').forEach(h3 => {
-                const text = (h3.textContent || '').trim();
-                const match = text.match(/^(.*?)(\s*\(([^)]*)\))$/); // main + (qualifiers)
-                if (!match) return;
-                const main = match[1].trim();
-                const rawQual = (match[3] || '').trim();
-                const cleanedQual = rawQual
-                  .replace(AFFILIATE_WORDS, '')           // remove affiliate network names
-                  .replace(/[;,:]\s*/g, ' ')             // normalize separators
-                  .replace(/\s{2,}/g, ' ')               // collapse spaces
-                  .trim();
+                // 1) Tidy H3 titles: move trailing parenthetical into a styled span, and strip affiliate network names
+                const AFFILIATE_WORDS = /(afrofiliate|amazon|bookshop)/gi;
+                root.querySelectorAll('h3').forEach(h3 => {
+                  const text = (h3.textContent || '').trim();
+                  const match = text.match(/^(.*?)(\s*\(([^)]*)\))$/); // main + (qualifiers)
+                  if (!match) return;
+                  const main = match[1].trim();
+                  const rawQual = (match[3] || '').trim();
+                  const cleanedQual = rawQual
+                    .replace(AFFILIATE_WORDS, '')           // remove affiliate network names
+                    .replace(/[;,:]\s*/g, ' ')             // normalize separators
+                    .replace(/\s{2,}/g, ' ')               // collapse spaces
+                    .trim();
 
-                h3.textContent = '';
-                h3.append(document.createTextNode(main + (cleanedQual ? ' ' : '')));
-                if (cleanedQual) {
-                  const span = document.createElement('span');
-                  span.className = 'qualifier';
-                  span.textContent = `(${cleanedQual})`;
-                  h3.append(span);
-                }
-              });
+                  h3.textContent = '';
+                  h3.append(document.createTextNode(main + (cleanedQual ? ' ' : '')));
+                  if (cleanedQual) {
+                    const span = document.createElement('span');
+                    span.className = 'qualifier';
+                    span.textContent = `(${cleanedQual})`;
+                    h3.append(span);
+                  }
+                });
 
-              // 2) Remove the "Why it's great:" label but keep the text content
-              root.querySelectorAll('p').forEach(p => {
-                const firstStrong = p.querySelector('strong:first-child');
-                if (!firstStrong) return;
-                const label = (firstStrong.textContent || '').toLowerCase().trim();
-                if (label.startsWith("why it's great:") || label.startsWith('why it\u2019s great:')) {
-                  firstStrong.remove();
-                  // remove any leading colon/spaces left behind
-                  p.innerHTML = p.innerHTML.replace(/^\s*:?\s*/, '');
-                }
-              });
-            });
+                // 2) Remove the "Why it's great:" label but keep the text content
+                root.querySelectorAll('p').forEach(p => {
+                  const firstStrong = p.querySelector('strong:first-child');
+                  if (!firstStrong) return;
+                  const label = (firstStrong.textContent || '').toLowerCase().trim();
+                  if (label.startsWith("why it's great:") || label.startsWith('why it\u2019s great:')) {
+                    firstStrong.remove();
+                    // remove any leading colon/spaces left behind
+                    p.innerHTML = p.innerHTML.replace(/^\s*:?\s*/, '');
+                  }
+                });
+              };
+
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', transform, { once: true });
+              } else {
+                transform();
+              }
+            })();
           </script>
         </div>
 
@@ -441,10 +449,20 @@ const relatedPosts = allBlogPosts
     margin-top: 2.25rem; /* more separation between items */
     margin-bottom: 0.4rem;
   }
+  :global(.prose h3) { /* ensure style is not scoped away */
+    font-size: 1.35rem;
+    margin-top: 2.25rem;
+    margin-bottom: 0.4rem;
+  }
   .prose h3 .qualifier {
     font-size: 0.9em;
     font-style: italic;
     color: #475569; /* slate-600 */
+  }
+  :global(.prose h3 .qualifier) {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #475569;
   }
   .prose a {
     color: #ea580c;
@@ -488,6 +506,7 @@ const relatedPosts = allBlogPosts
     margin-bottom: 0.85rem; /* slightly tighter within an item */
     line-height: 1.75;
   }
+  :global(.prose p) { margin-bottom: 0.85rem; }
   .prose ul {
     margin-bottom: 1.25rem;
     padding-left: 1.5rem;
@@ -518,6 +537,7 @@ const relatedPosts = allBlogPosts
     margin-top: 0.75rem;
     padding-left: 2rem;
   }
+  :global(.prose ul), :global(.prose ol) { margin-bottom: 1.25rem; margin-top: 0.75rem; }
   .prose li {
     margin-bottom: 0.75rem;
   }
