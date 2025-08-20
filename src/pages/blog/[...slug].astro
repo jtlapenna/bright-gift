@@ -169,6 +169,7 @@ const relatedPosts = allBlogPosts
             alt={`${title} - Gift guide hero image`}
             class="w-full h-full object-cover"
             loading="eager"
+            width="1536" height="1024"
           />
         </picture>
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -409,7 +410,7 @@ const relatedPosts = allBlogPosts
     background: #FF6B6B;
   }
   /* Remove any H1s inside content to avoid duplicate page titles */
-  .prose h1 { display: none; }
+  :global(.prose h1) { display: none; }
   .prose .amazon-link,
   .prose .bookshop-link,
   .prose .afrofiliate-link {
