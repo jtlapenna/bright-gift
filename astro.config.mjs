@@ -13,7 +13,9 @@ export default defineConfig({
   adapter: cloudflare({
     platformProxy: {
       enabled: false
-    }
+    },
+    // Ensure no implicit KV binding attempts
+    sessionKVBindingName: 'DISABLED'
   }),
   integrations: [tailwind()],
   vite: {

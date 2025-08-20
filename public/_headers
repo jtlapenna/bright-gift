@@ -1,7 +1,2 @@
-# Cloudflare Pages Headers Configuration
-
-# Security headers (global)
 /*
-  X-Frame-Options: DENY
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
+  # Temporarily disabled custom headers to test Pages Functions publish issue
