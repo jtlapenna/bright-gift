@@ -544,6 +544,21 @@ const relatedPosts = allBlogPosts
     padding-left: 2rem;
   }
   :global(.prose ul), :global(.prose ol) { margin-bottom: 1rem !important; margin-top: 0.5rem !important; }
+
+  /* Tailwind Typography uses :where(...) selectors; override them directly */
+  :global(.prose :where(h3):not(:where(.not-prose *))) {
+    margin-top: 2.75rem !important;  /* more space between items */
+    margin-bottom: 0.35rem !important;
+    line-height: 1.25 !important;
+  }
+  :global(.prose :where(p):not(:where(.not-prose *))) {
+    margin-top: 0.2rem !important;
+    margin-bottom: 0.6rem !important; /* tighter within an item */
+  }
+  :global(.prose :where(ul,ol):not(:where(.not-prose *))) {
+    margin-top: 0.35rem !important;
+    margin-bottom: 0.8rem !important;
+  }
   .prose li {
     margin-bottom: 0.75rem;
   }
