@@ -161,13 +161,16 @@ const relatedPosts = allBlogPosts
     <div class="relative">
       <!-- Hero Image -->
       <div class="h-96 bg-slate-200 relative overflow-hidden">
-        <img 
-          src={image || '/images/homepage-banner.webp'} 
-          alt={`${title} - Gift guide hero image`}
-          class="w-full h-full object-cover"
-          loading="eager"
-          onerror={`this.onerror=null; this.src='${imageJpg || '/images/homepage-banner.webp'}';`}
-        />
+        <picture>
+          {image && image.endsWith('.webp') && <source srcset={image} type="image/webp" />}
+          {imageJpg && <source srcset={imageJpg} type="image/jpeg" />}
+          <img 
+            src={imageJpg || image || '/images/homepage-banner.webp'} 
+            alt={`${title} - Gift guide hero image`}
+            class="w-full h-full object-cover"
+            loading="eager"
+          />
+        </picture>
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
       </div>
 
