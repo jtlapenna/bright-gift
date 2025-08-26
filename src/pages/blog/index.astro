@@ -72,7 +72,7 @@ const blogIndexStructuredData = {
         "@type": "BlogPosting",
         "headline": post.data.title,
         "description": post.data.description,
-        "url": `https://bright-gift.com/blog/${post.slug}`,
+        "url": `https://bright-gift.com/blog/${post.slug}/`,
         "datePublished": post.data.date,
         "author": {
           "@type": "Organization",
@@ -197,7 +197,7 @@ const blogIndexStructuredData = {
             <!-- Post Content -->
             <div class="p-6">
               <h2 class="text-xl font-bold mb-2 text-[#1C2E4A] hover:text-[#FF6B6B] transition-colors" itemprop="headline">
-                <a href={`/blog/${post.slug}`} class="block" aria-label={`Read ${post.data.title} gift guide`}>
+                <a href={`/blog/${post.slug}/`} class="block" aria-label={`Read ${post.data.title} gift guide`}>
                   {post.data.title}
                 </a>
               </h2>
@@ -225,7 +225,7 @@ const blogIndexStructuredData = {
               
               <!-- Read More Link -->
               <a 
-                href={`/blog/${post.slug}`} 
+                href={`/blog/${post.slug}/`} 
                 class="inline-flex items-center text-[#FF6B6B] font-semibold hover:text-[#ff4c4c] transition-colors"
                 aria-label={`Read complete ${post.data.title} gift guide`}
               >
@@ -355,20 +355,55 @@ const blogIndexStructuredData = {
     }
 
     function displaySearchResults(posts) {
-      searchResults.innerHTML = posts.map(post => `
+      searchResults.innerHTML = posts.map(post => {
+        // Escape HTML to prevent XSS and ensure proper rendering
+        const escapedTitle = post.title.replace(/[&<>"']/g, function(match) {
+          const escape = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+          };
+          return escape[match];
+        });
+        
+        const escapedDescription = post.description.replace(/[&<>"']/g, function(match) {
+          const escape = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+          };
+          return escape[match];
+        });
+        
+        const escapedCategory = post.category ? post.category.replace(/[&<>"']/g, function(match) {
+          const escape = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+          };
+          return escape[match];
+        }) : '';
+        
+        return `
         <article class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow duration-300" itemscope itemtype="https://schema.org/BlogPosting">
           <!-- Post Image -->
           <div class="aspect-video bg-slate-200 relative overflow-hidden">
             <img 
               src="${post.image}" 
-              alt="${post.title} - Gift ideas and recommendations"
+              alt="${escapedTitle} - Gift ideas and recommendations"
               class="w-full h-full object-cover"
               loading="lazy"
               itemprop="image"
             />
-            ${post.category ? `
+            ${escapedCategory ? `
               <div class="absolute top-2 right-2 bg-[#FF6B6B] text-white text-xs px-2 py-1 rounded">
-                ${post.category}
+                ${escapedCategory}
               </div>
             ` : ''}
           </div>
@@ -376,13 +411,13 @@ const blogIndexStructuredData = {
           <!-- Post Content -->
           <div class="p-6">
             <h2 class="text-xl font-bold mb-2 text-[#1C2E4A] hover:text-[#FF6B6B] transition-colors" itemprop="headline">
-              <a href="/blog/${post.slug}" class="block" aria-label="Read ${post.title} gift guide">
-                ${post.title}
+              <a href="/blog/${post.slug}/" class="block" aria-label="Read ${escapedTitle} gift guide">
+                ${escapedTitle}
               </a>
             </h2>
             
             <p class="text-gray-600 mb-4 line-clamp-3" itemprop="description">
-              ${post.description}
+              ${escapedDescription}
             </p>
             
             <!-- Post Meta -->
@@ -406,9 +441,9 @@ const blogIndexStructuredData = {
             
             <!-- Read More Link -->
             <a 
-              href="/blog/${post.slug}" 
+              href="/blog/${post.slug}/" 
               class="inline-flex items-center text-[#FF6B6B] font-semibold hover:text-[#ff4c4c] transition-colors"
-              aria-label="Read complete ${post.title} gift guide"
+              aria-label="Read complete ${escapedTitle} gift guide"
             >
               Read Complete Guide
               <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -417,7 +452,8 @@ const blogIndexStructuredData = {
             </a>
           </div>
         </article>
-      `).join('');
+      `;
+      }).join('');
     }
 
     function clearSearch() {
