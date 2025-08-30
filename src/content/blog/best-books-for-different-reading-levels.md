@@ -5,7 +5,7 @@ description: >-
   readers to avid bookworms. Find thoughtful book gifts that match their reading
   level...
 image: /images/blog/reading-levels-banner.webp
-ogImage: /images/blog/reading-levels-og.webp
+ogImage: /images/blog/reading-levels-banner.webp
 socialImage: /images/blog/reading-levels-social.webp
 date: '2024-11-15'
 metaTitle: Best Books for Different Reading Levels | Perfect Gifts

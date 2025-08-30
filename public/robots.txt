@@ -1,6 +1,4 @@
----
-// Robots.txt route - serve as plain text
-const robotsContent = `User-agent: *
+User-agent: *
 Allow: /
 
 # Sitemap location
@@ -31,14 +29,4 @@ Allow: /
 # Block access to admin areas (if any exist in future)
 Disallow: /admin/
 Disallow: /private/
-Disallow: /temp/
-
-# Block all markdown files completely
-Disallow: /*.md
-Disallow: /blog/*.md`;
-
-// Set content type to text/plain
-Astro.response.headers.set('Content-Type', 'text/plain');
----
-
-{robotsContent} 
+Disallow: /temp/ 

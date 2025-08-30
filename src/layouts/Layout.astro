@@ -9,6 +9,9 @@ export interface Props {
 	canonical?: string;
 	ogType?: string;
 	twitterCard?: string;
+	noindex?: boolean;
+	prevPage?: string;
+	nextPage?: string;
 }
 
 const { 
@@ -18,7 +21,10 @@ const {
 	keywords = ["gift ideas", "AI gifts", "personalized gifts", "gift finder", "gift recommendations", "birthday gifts", "holiday gifts"],
 	canonical,
 	ogType = "website",
-	twitterCard = "summary_large_image"
+	twitterCard = "summary_large_image",
+	noindex = false,
+	prevPage,
+	nextPage
 } = Astro.props;
 
 const isHome = Astro.url.pathname === "/";
@@ -43,10 +49,14 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 		<meta name="description" content={description} />
 		<meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : (typeof keywords === 'string' ? keywords : keywords?.toString() || '')} />
 		<meta name="author" content="BrightGift" />
-		<meta name="robots" content="index, follow" />
+		<meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
 		
 		<!-- Canonical URL -->
 		<link rel="canonical" href={canonicalUrl} />
+		
+		<!-- Pagination Meta Tags -->
+		{prevPage && <link rel="prev" href={prevPage} />}
+		{nextPage && <link rel="next" href={nextPage} />}
 		
 		<!-- Favicon -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />

@@ -7,8 +7,7 @@ date: '2025-07-15'
 pubDate: '2025-07-31'
 image: >-
   /images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-banner.webp
-ogImage: >-
-  /images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-og.webp
+ogImage: "/images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-og.webp"
 socialImage: >-
   /images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-social.webp
 tags:

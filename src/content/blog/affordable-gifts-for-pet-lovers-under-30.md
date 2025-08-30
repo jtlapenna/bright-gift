@@ -8,8 +8,7 @@ date: '2025-07-15'
 pubDate: '2025-07-31'
 image: >-
   /images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-banner.webp
-ogImage: >-
-  /images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-og.webp
+ogImage: "/images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-banner.webp"
 socialImage: >-
   /images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-social.webp
 tags:
