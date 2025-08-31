@@ -16,10 +16,10 @@ export default defineConfig({
     },
     // Ensure no implicit KV binding attempts
     sessionKVBindingName: 'DISABLED',
-    // Exclude robots.txt from Workers processing
-    // This allows it to be served as a static file
+    // Exclude robots.txt and sitemap.xml from Workers processing
+    // This allows them to be served as static files
     routes: {
-      exclude: ['/robots.txt']
+      exclude: ['/robots.txt', '/sitemap.xml']
     }
   }),
   integrations: [tailwind()],

@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "npm run validate:yaml && astro build",
+    "build": "npm run validate:yaml && npm run generate:sitemap && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "check-links": "node src/pages/broken-links-checker.js",
@@ -25,7 +25,8 @@
     "create-blog:educational": "node scripts/create-blog-automation.js --type educational",
     "create-blog:data-driven": "node scripts/create-blog-automation.js --type data-driven",
     "monitor:404s": "node scripts/clean-404-posts.js",
-    "remove:md-urls": "node scripts/remove-md-urls-from-gsc.js"
+    "remove:md-urls": "node scripts/remove-md-urls-from-gsc.js",
+    "generate:sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.0",
