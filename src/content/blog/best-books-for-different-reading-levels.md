@@ -276,15 +276,15 @@ A soft, warm blanket perfect for curling up with a good book. Look for ones with
 ## Budget-Friendly Gift Combinations
 
 **Under $25:**
-- [The Very Hungry Caterpillar](https://bookshop.org/a/brightgift/9780399226908) + [Personalized Bookmark](https://www.amazon.com/s?k=personalized+bookmark&tag=bright-gift-20)
-- [Charlotte's Web](https://bookshop.org/a/brightgift/9780061124952) + [Reading Light](https://www.amazon.com/s?k=reading+light&tag=bright-gift-20)
+- [The Very Hungry Caterpillar](https://bookshop.org/a/brightgift/9780399226908) + <a href="https://www.amazon.com/s?k=personalized+bookmark&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Personalized Bookmark</a>
+- [Charlotte's Web](https://bookshop.org/a/brightgift/9780061124952) + <a href="https://www.amazon.com/s?k=reading+light&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Reading Light</a>
 
 **Under $40:**
-- [The Midnight Library](https://bookshop.org/a/brightgift/9780525559474) + [Book Lover's Candle](https://www.amazon.com/s?k=book+lover+candle&tag=bright-gift-20) + [Bookmark](https://www.amazon.com/s?k=bookmark+set&tag=bright-gift-20)
-- [Atomic Habits](https://bookshop.org/a/brightgift/9780735211292) + [Reading Journal](https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20) + [Candle Set](https://www.amazon.com/s?k=book+lover+candle&tag=bright-gift-20)
+- [The Midnight Library](https://bookshop.org/a/brightgift/9780525559474) + <a href="https://www.amazon.com/s?k=book+lover+candle&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Book Lover's Candle</a> + <a href="https://www.amazon.com/s?k=bookmark+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Bookmark</a>
+- [Atomic Habits](https://bookshop.org/a/brightgift/9780735211292) + <a href="https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Reading Journal</a> + <a href="https://www.amazon.com/s?k=book+lover+candle&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Candle Set</a>
 
 **Under $60:**
-- [Tomorrow, and Tomorrow, and Tomorrow](https://bookshop.org/a/brightgift/9780593321201) + [Cozy Blanket](https://www.amazon.com/s?k=reading+blanket&tag=bright-gift-20) + [Reading Accessories Bundle](https://www.amazon.com/s?k=reading+accessories+set&tag=bright-gift-20)
+- [Tomorrow, and Tomorrow, and Tomorrow](https://bookshop.org/a/brightgift/9780593321201) + <a href="https://www.amazon.com/s?k=reading+blanket&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Cozy Blanket</a> + <a href="https://www.amazon.com/s?k=reading+accessories+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Reading Accessories Bundle</a>
 
 ---
 

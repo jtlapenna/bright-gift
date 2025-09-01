@@ -208,14 +208,14 @@ Gift cards to local plant shops or online retailers allow plant lovers to choose
 ## Budget-Friendly Gift Combinations
 
 **Under $50:**
-- [Pilea Peperomioides](https://www.amazon.com/s?k=pilea+peperomioides&tag=bright-gift-20) + [Ceramic Pot](https://www.amazon.com/s?k=ceramic+plant+pots&tag=bright-gift-20) + [Care Guide](https://www.amazon.com/s?k=plant+care+book&tag=bright-gift-20)
-- [String of Pearls](https://www.amazon.com/s?k=string+of+pearls+succulent&tag=bright-gift-20) + Hanging Planter + [Mister](https://www.amazon.com/s?k=plant+mister+sprayer&tag=bright-gift-20)
-- [ZZ Plant](https://www.amazon.com/s?k=zz+plant&tag=bright-gift-20) + [Plant Stand](https://www.amazon.com/s?k=plant+stand+shelf&tag=bright-gift-20) + [Moisture Meter](https://www.amazon.com/s?k=soil+moisture+meter&tag=bright-gift-20)
+- <a href="https://www.amazon.com/s?k=pilea+peperomioides&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Pilea Peperomioides</a> + <a href="https://www.amazon.com/s?k=ceramic+plant+pots&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Ceramic Pot</a> + <a href="https://www.amazon.com/s?k=plant+care+book&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Care Guide</a>
+- <a href="https://www.amazon.com/s?k=string+of+pearls+succulent&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">String of Pearls</a> + Hanging Planter + <a href="https://www.amazon.com/s?k=plant+mister+sprayer&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Mister</a>
+- <a href="https://www.amazon.com/s?k=zz+plant&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">ZZ Plant</a> + <a href="https://www.amazon.com/s?k=plant+stand+shelf&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Plant Stand</a> + <a href="https://www.amazon.com/s?k=soil+moisture+meter&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Moisture Meter</a>
 
 **Under $75:**
-- [Monstera Adansonii](https://www.amazon.com/s?k=monstera+adansonii&tag=bright-gift-20) + Moss Pole + [Pruning Shears](https://www.amazon.com/s?k=pruning+shears+plants&tag=bright-gift-20)
-- [Plant Care Tool Kit](https://www.amazon.com/s?k=plant+care+tool+kit&tag=bright-gift-20) + [Plant Journal](https://www.amazon.com/s?k=plant+journal+planner&tag=bright-gift-20) + Gift Card
-- Multiple Small Plants + [Decorative Shelf](https://www.amazon.com/s?k=plant+stand+shelf&tag=bright-gift-20) + [Watering Can](https://www.amazon.com/s?k=watering+can+plants&tag=bright-gift-20)
+- <a href="https://www.amazon.com/s?k=monstera+adansonii&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Monstera Adansonii</a> + Moss Pole + <a href="https://www.amazon.com/s?k=pruning+shears+plants&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Pruning Shears</a>
+- <a href="https://www.amazon.com/s?k=plant+care+tool+kit&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Plant Care Tool Kit</a> + <a href="https://www.amazon.com/s?k=plant+journal+planner&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Plant Journal</a> + Gift Card
+- Multiple Small Plants + <a href="https://www.amazon.com/s?k=plant+stand+shelf&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Decorative Shelf</a> + <a href="https://www.amazon.com/s?k=watering+can+plants&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Watering Can</a>
 
 ---
 

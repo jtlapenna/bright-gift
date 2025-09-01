@@ -146,12 +146,12 @@ Wireless earbuds are essential for modern office communication and productivity.
 ## Budget-Friendly Gift Combinations
 
 **Under $25:**
-- [Desk Organizer](https://www.amazon.com/s?k=desk+organizer+set&tag=bright-gift-20) + [Hand Cream](https://www.amazon.com/s?k=hand+cream+gift+set+luxury&tag=bright-gift-20)
-- [Coffee Sampler](https://www.amazon.com/s?k=premium+coffee+sampler&tag=bright-gift-20) + [Travel Mug](https://www.amazon.com/s?k=insulated+travel+mug+stainless+steel&tag=bright-gift-20)
+- <a href="https://www.amazon.com/s?k=desk+organizer+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Desk Organizer</a> + <a href="https://www.amazon.com/s?k=hand+cream+gift+set+luxury&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Hand Cream</a>
+- <a href="https://www.amazon.com/s?k=premium+coffee+sampler&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Coffee Sampler</a> + <a href="https://www.amazon.com/s?k=insulated+travel+mug+stainless+steel&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Travel Mug</a>
 
 **Under $20:**
-- [Desk Plant](https://www.amazon.com/s?k=desk+plant+succulent+set&tag=bright-gift-20) + [Funny Mug](https://www.amazon.com/s?k=funny+coffee+mug+office+humor&tag=bright-gift-20)
-- [Snack Box](https://www.amazon.com/s?k=healthy+snack+box+variety&tag=bright-gift-20) + [Puzzle](https://www.amazon.com/s?k=desk+puzzle+brain+teaser&tag=bright-gift-20)
+- <a href="https://www.amazon.com/s?k=desk+plant+succulent+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Desk Plant</a> + <a href="https://www.amazon.com/s?k=funny+coffee+mug+office+humor&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Funny Mug</a>
+- <a href="https://www.amazon.com/s?k=healthy+snack+box+variety&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Snack Box</a> + <a href="https://www.amazon.com/s?k=desk+puzzle+brain+teaser&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Puzzle</a>
 
 ---
 

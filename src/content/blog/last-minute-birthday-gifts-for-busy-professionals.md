@@ -169,12 +169,12 @@ Keep their loved ones close during long work hours with a digital photo frame th
 ## Budget-Friendly Gift Combinations
 
 **Under $50:**
-- [Wireless Charging Station](https://www.amazon.com/s?k=wireless+charging+station&tag=bright-gift-20) + [Smart Water Bottle](https://www.amazon.com/s?k=smart+water+bottle&tag=bright-gift-20)
-- [Leather Planner](https://www.amazon.com/s?k=leather+planner&tag=bright-gift-20) + [Essential Oils Set](https://www.amazon.com/s?k=essential+oils+set&tag=bright-gift-20)
+- <a href="https://www.amazon.com/s?k=wireless+charging+station&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Wireless Charging Station</a> + <a href="https://www.amazon.com/s?k=smart+water+bottle&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Smart Water Bottle</a>
+- <a href="https://www.amazon.com/s?k=leather+planner&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Leather Planner</a> + <a href="https://www.amazon.com/s?k=essential+oils+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Essential Oils Set</a>
 
 **Under $75:**
-- [Noise-Cancelling Headphones](https://www.amazon.com/s?k=noise+cancelling+headphones&tag=bright-gift-20) + [Meal Prep Cookbook](https://www.amazon.com/s?k=meal+prep+cookbook&tag=bright-gift-20)
-- [Coffee Subscription](https://www.amazon.com/s?k=coffee+subscription&tag=bright-gift-20) + [Portable Speaker](https://www.amazon.com/s?k=portable+bluetooth+speaker&tag=bright-gift-20)
+- <a href="https://www.amazon.com/s?k=noise+cancelling+headphones&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Noise-Cancelling Headphones</a> + <a href="https://www.amazon.com/s?k=meal+prep+cookbook&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Meal Prep Cookbook</a>
+- <a href="https://www.amazon.com/s?k=coffee+subscription&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Coffee Subscription</a> + <a href="https://www.amazon.com/s?k=portable+bluetooth+speaker&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Portable Speaker</a>
 
 ---
 

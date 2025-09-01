@@ -73,7 +73,7 @@ Finding the right gift for an outdoor enthusiast can be a bit daunting, especial
 
 **Practical tip:** Look for chargers with high energy efficiency ratings for best performance.
 
-**Price Range:** $40-$70 // [View on Amazon](https://www.amazon.com/s?k=solar+powered+charger&tag=bright-gift-20)
+**Price Range:** $40-$70 // <a href="https://www.amazon.com/s?k=solar+powered+charger&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 
 ### 2. Reusable Water Bottle
 
@@ -81,7 +81,7 @@ Finding the right gift for an outdoor enthusiast can be a bit daunting, especial
 
 **Practical tip:** Choose insulated bottles to keep water cool or hot during long outdoor activities.
 
-**Price Range:** $20-$35 // [View on Amazon](https://www.amazon.com/s?k=reusable+water+bottle&tag=bright-gift-20)
+**Price Range:** $20-$35 // <a href="https://www.amazon.com/s?k=reusable+water+bottle&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 
 ### 3. Biodegradable Hiking Socks
 
@@ -89,7 +89,7 @@ Finding the right gift for an outdoor enthusiast can be a bit daunting, especial
 
 **Practical tip:** Ensure to check the size and insulation levels suitable for the recipient's usual hiking conditions.
 
-**Price Range:** $15-$25 // [View on Amazon](https://www.amazon.com/s?k=biodegradable+hiking+socks&tag=bright-gift-20)
+**Price Range:** $15-$25 // <a href="https://www.amazon.com/s?k=biodegradable+hiking+socks&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 
 ### 4. Eco-Friendly Camping Gear
 
@@ -97,7 +97,7 @@ Finding the right gift for an outdoor enthusiast can be a bit daunting, especial
 
 **Practical tip:** Verify the weather resistance of the gear, especially if it's made from recycled materials, to ensure comfort on any trip.
 
-**Price Range:** $100-$300 // [View on Amazon](https://www.amazon.com/s?k=eco-friendly+camping+gear&tag=bright-gift-20)
+**Price Range:** $100-$300 // <a href="https://www.amazon.com/s?k=eco-friendly+camping+gear&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 
 ### 5. Eco Dye Hammock
 
@@ -105,7 +105,7 @@ Finding the right gift for an outdoor enthusiast can be a bit daunting, especial
 
 **Practical tip:** Ensure the hammock's weight limit accommodates multiple people if needed.
 
-**Price Range:** $50-$90 // [View on Amazon](https://www.amazon.com/s?k=eco+dye+hammock&tag=bright-gift-20)
+**Price Range:** $50-$90 // <a href="https://www.amazon.com/s?k=eco+dye+hammock&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 
 ### 6. Recyclable Hiking Backpack
 
@@ -113,7 +113,7 @@ Finding the right gift for an outdoor enthusiast can be a bit daunting, especial
 
 **Practical tip:** Consider the number of compartments the backpack has to maximize organization.
 
-**Price Range:** $50-$120 // [View on Amazon](https://www.amazon.com/s?k=recyclable+hiking+backpack&tag=bright-gift-20)
+**Price Range:** $50-$120 // <a href="https://www.amazon.com/s?k=recyclable+hiking+backpack&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 
 ### 7. Sustainable Outerwear
 
@@ -121,7 +121,7 @@ Finding the right gift for an outdoor enthusiast can be a bit daunting, especial
 
 **Practical tip:** Opt for layers or jackets with superior ratings for both breathability and insulation to suit varied climates.
 
-**Price Range:** $100-$250 // [View on Amazon](https://www.amazon.com/s?k=sustainable+outerwear&tag=bright-gift-20)
+**Price Range:** $100-$250 // <a href="https://www.amazon.com/s?k=sustainable+outerwear&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 
 ### 8. Organic Cotton Apparel
 
@@ -129,7 +129,7 @@ Finding the right gift for an outdoor enthusiast can be a bit daunting, especial
 
 **Practical tip:** Look for clothing with additional certifications like Fair Trade for added ethical assurance.
 
-**Price Range:** $30-$70 // [View on Amazon](https://www.amazon.com/s?k=organic+cotton+apparel&tag=bright-gift-20)
+**Price Range:** $30-$70 // <a href="https://www.amazon.com/s?k=organic+cotton+apparel&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 
 ### 9. Eco-Conscious Adventure Notebook
 
@@ -137,7 +137,7 @@ Finding the right gift for an outdoor enthusiast can be a bit daunting, especial
 
 **Practical tip:** Pair it with a set of plant-based inks for a complete eco-friendly stationery gift.
 
-**Price Range:** $10-$20 // [View on Amazon](https://www.amazon.com/s?k=eco+adventure+notebook&tag=bright-gift-20)
+**Price Range:** $10-$20 // <a href="https://www.amazon.com/s?k=eco+adventure+notebook&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 
 ### 10. Wooden Sunglasses
 
@@ -145,7 +145,7 @@ Finding the right gift for an outdoor enthusiast can be a bit daunting, especial
 
 **Practical tip:** Ensure they come with a protective case for longevity.
 
-**Price Range:** $25-$60 // [View on Amazon](https://www.amazon.com/s?k=wooden+sunglasses&tag=bright-gift-20)
+**Price Range:** $25-$60 // <a href="https://www.amazon.com/s?k=wooden+sunglasses&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 
 ## How to Choose the Right Gift
 

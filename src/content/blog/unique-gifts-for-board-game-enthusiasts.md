@@ -174,12 +174,12 @@ Challenge their problem-solving skills with logic and puzzle games that require 
 ## Budget-Friendly Gift Combinations
 
 **Under $40:**
-- [Dice Tower](https://www.amazon.com/s?k=dice+tower&tag=bright-gift-20) + [Card Sleeves](https://www.amazon.com/s?k=card+sleeves&tag=bright-gift-20)
-- [Party Game](https://www.amazon.com/s?k=party+board+games&tag=bright-gift-20) + [Themed Snacks](https://www.amazon.com/s?k=game+night+snacks&tag=bright-gift-20)
+- <a href="https://www.amazon.com/s?k=dice+tower&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Dice Tower</a> + <a href="https://www.amazon.com/s?k=card+sleeves&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Card Sleeves</a>
+- <a href="https://www.amazon.com/s?k=party+board+games&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Party Game</a> + <a href="https://www.amazon.com/s?k=game+night+snacks&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Themed Snacks</a>
 
 **Under $60:**
-- [Strategy Game](https://www.amazon.com/s?k=strategy+board+games&tag=bright-gift-20) + [Game Organizer](https://www.amazon.com/s?k=game+organizer&tag=bright-gift-20)
-- [Cooperative Game](https://www.amazon.com/s?k=cooperative+board+games&tag=bright-gift-20) + [Premium Dice](https://www.amazon.com/s?k=premium+dice+set&tag=bright-gift-20)
+- <a href="https://www.amazon.com/s?k=strategy+board+games&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Strategy Game</a> + <a href="https://www.amazon.com/s?k=game+organizer&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Game Organizer</a>
+- <a href="https://www.amazon.com/s?k=cooperative+board+games&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Cooperative Game</a> + <a href="https://www.amazon.com/s?k=premium+dice+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Premium Dice</a>
 
 ---
 

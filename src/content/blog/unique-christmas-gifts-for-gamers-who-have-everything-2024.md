@@ -167,12 +167,12 @@ Commission a custom sign or plaque for their gaming room featuring their gamer t
 ## Budget-Friendly Gift Combinations
 
 **Under $100:**
-- [Custom Gaming Mouse Pad](https://www.amazon.com/s?k=custom+gaming+mouse+pad+personalized+design&tag=bright-gift-20) + [Gaming-Themed Coffee Subscription](https://www.amazon.com/s?k=gaming+themed+coffee+subscription+box&tag=bright-gift-20)
-- [Limited Edition Gaming Art Print](https://www.amazon.com/s?k=limited+edition+gaming+art+print+poster&tag=bright-gift-20) + [Gaming-Themed Jewelry](https://www.amazon.com/s?k=gaming+themed+jewelry+accessories+necklace&tag=bright-gift-20)
+- <a href="https://www.amazon.com/s?k=custom+gaming+mouse+pad+personalized+design&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Custom Gaming Mouse Pad</a> + <a href="https://www.amazon.com/s?k=gaming+themed+coffee+subscription+box&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Gaming-Themed Coffee Subscription</a>
+- <a href="https://www.amazon.com/s?k=limited+edition+gaming+art+print+poster&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Limited Edition Gaming Art Print</a> + <a href="https://www.amazon.com/s?k=gaming+themed+jewelry+accessories+necklace&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Gaming-Themed Jewelry</a>
 
 **Under $200:**
-- [RGB Gaming Wall Panels](https://www.amazon.com/s?k=rgb+gaming+wall+panels+led&tag=bright-gift-20) + [Gaming Soundtrack Vinyl](https://www.amazon.com/s?k=gaming+soundtrack+vinyl+records&tag=bright-gift-20)
-- [VR Gaming Experience](https://www.amazon.com/s?k=virtual+reality+gaming+experience+package&tag=bright-gift-20) + [Custom Gaming Room Sign](https://www.amazon.com/s?k=custom+gaming+room+sign+plaque+personalized&tag=bright-gift-20)
+- <a href="https://www.amazon.com/s?k=rgb+gaming+wall+panels+led&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">RGB Gaming Wall Panels</a> + <a href="https://www.amazon.com/s?k=gaming+soundtrack+vinyl+records&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Gaming Soundtrack Vinyl</a>
+- <a href="https://www.amazon.com/s?k=virtual+reality+gaming+experience+package&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">VR Gaming Experience</a> + <a href="https://www.amazon.com/s?k=custom+gaming+room+sign+plaque+personalized&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Custom Gaming Room Sign</a>
 
 ---
 

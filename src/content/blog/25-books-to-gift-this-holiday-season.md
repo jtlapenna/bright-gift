@@ -220,15 +220,15 @@ A beautiful journal for tracking books read, favorite quotes, and reading goals.
 ## Budget-Friendly Gift Combinations
 
 **Under $30:**
-- [The Midnight Library](https://bookshop.org/a/brightgift/9780525559474) + [Personalized Bookmark](https://www.amazon.com/s?k=personalized+bookmark&tag=bright-gift-20)
-- [Atomic Habits](https://bookshop.org/a/brightgift/9780735211292) + [Reading Light](https://www.amazon.com/s?k=reading+light&tag=bright-gift-20)
+- [The Midnight Library](https://bookshop.org/a/brightgift/9780525559474) + <a href="https://www.amazon.com/s?k=personalized+bookmark&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Personalized Bookmark</a>
+- [Atomic Habits](https://bookshop.org/a/brightgift/9780735211292) + <a href="https://www.amazon.com/s?k=reading+light&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Reading Light</a>
 
 **Under $50:**
-- [Tomorrow, and Tomorrow, and Tomorrow](https://bookshop.org/a/brightgift/9780593321201) + [Cozy Blanket](https://www.amazon.com/s?k=reading+blanket&tag=bright-gift-20) + [Bookmark](https://www.amazon.com/s?k=bookmark+set&tag=bright-gift-20)
-- [The Psychology of Money](https://bookshop.org/a/brightgift/9780857197689) + [Reading Journal](https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20) + [Candle Set](https://www.amazon.com/s?k=book+lover+candle&tag=bright-gift-20)
+- [Tomorrow, and Tomorrow, and Tomorrow](https://bookshop.org/a/brightgift/9780593321201) + <a href="https://www.amazon.com/s?k=reading+blanket&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Cozy Blanket</a> + <a href="https://www.amazon.com/s?k=bookmark+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Bookmark</a>
+- [The Psychology of Money](https://bookshop.org/a/brightgift/9780857197689) + <a href="https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Reading Journal</a> + <a href="https://www.amazon.com/s?k=book+lover+candle&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Candle Set</a>
 
 **Under $75:**
-- [Lessons in Chemistry](https://bookshop.org/a/brightgift/9780385547345) + [The House in the Cerulean Sea](https://bookshop.org/a/brightgift/9781250217288) + [Reading Accessories Bundle](https://www.amazon.com/s?k=reading+accessories+set&tag=bright-gift-20)
+- [Lessons in Chemistry](https://bookshop.org/a/brightgift/9780385547345) + [The House in the Cerulean Sea](https://bookshop.org/a/brightgift/9781250217288) + <a href="https://www.amazon.com/s?k=reading+accessories+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Reading Accessories Bundle</a>
 
 ---
 

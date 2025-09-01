@@ -173,12 +173,12 @@ Books, guides, or resources that help them connect with LGBTQ+ communities, supp
 ## Budget-Friendly Gift Combinations
 
 **Under $30:**
-- [LGBTQ+ Novel](https://www.amazon.com/s?k=LGBTQ+novels+young+adult&tag=bright-gift-20) + [Creative Journal](https://www.amazon.com/s?k=creative+writing+journal&tag=bright-gift-20)
-- [Pride Flag Pin](https://www.amazon.com/s?k=pride+flag+pin&tag=bright-gift-20) + [Self-Care Book](https://www.amazon.com/s?k=self+care+book+LGBTQ&tag=bright-gift-20)
+- <a href="https://www.amazon.com/s?k=LGBTQ+novels+young+adult&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">LGBTQ+ Novel</a> + <a href="https://www.amazon.com/s?k=creative+writing+journal&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Creative Journal</a>
+- <a href="https://www.amazon.com/s?k=pride+flag+pin&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Pride Flag Pin</a> + <a href="https://www.amazon.com/s?k=self+care+book+LGBTQ&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Self-Care Book</a>
 
 **Under $50:**
-- [Pride Flag Apparel](https://www.amazon.com/s?k=pride+flag+apparel&tag=bright-gift-20) + [Coloring Book](https://www.amazon.com/s?k=LGBTQ+coloring+book&tag=bright-gift-20)
-- [Phone Case](https://www.amazon.com/s?k=pride+flag+phone+case&tag=bright-gift-20) + [History Book](https://www.amazon.com/s?k=LGBTQ+history+book&tag=bright-gift-20)
+- <a href="https://www.amazon.com/s?k=pride+flag+apparel&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Pride Flag Apparel</a> + <a href="https://www.amazon.com/s?k=LGBTQ+coloring+book&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Coloring Book</a>
+- <a href="https://www.amazon.com/s?k=pride+flag+phone+case&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Phone Case</a> + <a href="https://www.amazon.com/s?k=LGBTQ+history+book&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">History Book</a>
 
 ---
 

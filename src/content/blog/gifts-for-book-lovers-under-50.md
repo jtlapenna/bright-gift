@@ -147,12 +147,12 @@ A monthly book subscription service that delivers curated books based on their p
 ## Budget-Friendly Gift Combinations
 
 **Under $30:**
-- [Reading Journal](https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20) + [Personalized Bookmark](https://www.amazon.com/s?k=personalized+bookmark&tag=bright-gift-20)
-- [Book Lover's Candle](https://www.amazon.com/s?k=book+lover+candle&tag=bright-gift-20) + [Reading Light](https://www.amazon.com/s?k=reading+light&tag=bright-gift-20)
+- <a href="https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Reading Journal</a> + <a href="https://www.amazon.com/s?k=personalized+bookmark&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Personalized Bookmark</a>
+- <a href="https://www.amazon.com/s?k=book+lover+candle&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Book Lover's Candle</a> + <a href="https://www.amazon.com/s?k=reading+light&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Reading Light</a>
 
 **Under $50:**
-- [Must-Read Book](https://bookshop.org/a/brightgift/9780525559474) + [Cozy Blanket](https://www.amazon.com/s?k=reading+blanket&tag=bright-gift-20) + [Bookmark](https://www.amazon.com/s?k=bookmark+set&tag=bright-gift-20)
-- [Book Stand](https://www.amazon.com/s?k=book+stand&tag=bright-gift-20) + [Literary Tote](https://www.amazon.com/s?k=literary+tote+bag&tag=bright-gift-20) + [Reading Journal](https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20)
+- [Must-Read Book](https://bookshop.org/a/brightgift/9780525559474) + <a href="https://www.amazon.com/s?k=reading+blanket&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Cozy Blanket</a> + <a href="https://www.amazon.com/s?k=bookmark+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Bookmark</a>
+- <a href="https://www.amazon.com/s?k=book+stand&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Book Stand</a> + <a href="https://www.amazon.com/s?k=literary+tote+bag&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Literary Tote</a> + <a href="https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Reading Journal</a>
 
 ---
 

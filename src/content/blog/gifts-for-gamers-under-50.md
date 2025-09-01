@@ -151,12 +151,12 @@ A collection of gaming-themed t-shirts lets gamers show off their passion for th
 ## Budget-Friendly Gaming Gift Combinations
 
 **Under $40:**
-- [Gaming Mouse Pad](https://www.amazon.com/s?k=gaming+mouse+pad+rgb+led&tag=bright-gift-20) + [LED Strip Lights](https://www.amazon.com/s?k=led+strip+lights+gaming+room&tag=bright-gift-20)
-- [Controller Charging Station](https://www.amazon.com/s?k=controller+charging+station+ps5+xbox&tag=bright-gift-20) + [Gaming Mug](https://www.amazon.com/s?k=insulated+gaming+mug+thermos&tag=bright-gift-20)
+- <a href="https://www.amazon.com/s?k=gaming+mouse+pad+rgb+led&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Gaming Mouse Pad</a> + <a href="https://www.amazon.com/s?k=led+strip+lights+gaming+room&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">LED Strip Lights</a>
+- <a href="https://www.amazon.com/s?k=controller+charging+station+ps5+xbox&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Controller Charging Station</a> + <a href="https://www.amazon.com/s?k=insulated+gaming+mug+thermos&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Gaming Mug</a>
 
 **Under $50:**
-- [Gaming Headset Stand](https://www.amazon.com/s?k=gaming+headset+stand+with+usb&tag=bright-gift-20) + [Cable Management Kit](https://www.amazon.com/s?k=cable+management+kit+gaming+desk&tag=bright-gift-20) + [Gaming Journal](https://www.amazon.com/s?k=gaming+journal+planner&tag=bright-gift-20)
-- [Gaming Chair Cushion](https://www.amazon.com/s?k=gaming+chair+cushion+memory+foam&tag=bright-gift-20) + [Gaming Wall Art](https://www.amazon.com/s?k=gaming+wall+art+posters&tag=bright-gift-20) + [Energy Drinks](https://www.amazon.com/s?k=gaming+energy+drink+variety+pack&tag=bright-gift-20)
+- <a href="https://www.amazon.com/s?k=gaming+headset+stand+with+usb&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Gaming Headset Stand</a> + <a href="https://www.amazon.com/s?k=cable+management+kit+gaming+desk&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Cable Management Kit</a> + <a href="https://www.amazon.com/s?k=gaming+journal+planner&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Gaming Journal</a>
+- <a href="https://www.amazon.com/s?k=gaming+chair+cushion+memory+foam&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Gaming Chair Cushion</a> + <a href="https://www.amazon.com/s?k=gaming+wall+art+posters&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Gaming Wall Art</a> + <a href="https://www.amazon.com/s?k=gaming+energy+drink+variety+pack&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Energy Drinks</a>
 
 ---
 
