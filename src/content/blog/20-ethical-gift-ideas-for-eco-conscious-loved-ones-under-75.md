@@ -20,8 +20,6 @@ tags:
   - fair trade
   - b corp
 priceRange: $8-$75
-amazonLink: >-
-  https://www.amazon.com/s?k=ethical+gifts+eco+friendly+under+75&tag=brightgift-20
 readTime: 8
 featured: true
 draft: false

@@ -17,7 +17,6 @@ tags:
   - gifts for graduates
   - art supplies
 priceRange: $25-$500
-amazonLink: 'https://www.amazon.com/s?k=graduation+gifts+creative+minds&tag=brightgift-20'
 metaTitle: Unique Graduation Gifts for Creative Minds | Artistic Ideas
 metaDescription: >-
   Find unique graduation gifts for creative minds. Discover artistic graduation

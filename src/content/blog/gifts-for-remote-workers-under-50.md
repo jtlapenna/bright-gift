@@ -18,7 +18,6 @@ tags:
   - coworkers
   - work from home
 priceRange: $10-$40
-amazonLink: 'https://www.amazon.com/s?k=remote+work+gifts+under+50&tag=brightgift-20'
 readTime: 3
 featured: true
 draft: false

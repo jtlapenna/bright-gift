@@ -18,7 +18,6 @@ tags:
   - holiday gifts
   - '2024'
 priceRange: $15-$400
-amazonLink: 'https://www.amazon.com/s?k=unique+christmas+gifts+gamers&tag=brightgift-20'
 metaTitle: Unique Christmas Gifts for Gamers | Creative Gaming Ideas 2024
 metaDescription: >-
   Find unique Christmas gifts for gamers who have everything. Discover creative

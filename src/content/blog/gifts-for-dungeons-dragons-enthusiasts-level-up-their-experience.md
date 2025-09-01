@@ -18,7 +18,6 @@ tags:
   - Dungeons & Dragons
   - roleplaying games
 priceRange: $10-$50
-amazonLink: 'https://www.amazon.com/s?k=dungeons+dragons+gifts&tag=brightgift-20'
 metaTitle: D&D Gifts for Enthusiasts | Level Up Their Gaming Experience
 metaDescription: >-
   Discover perfect gifts for Dungeons & Dragons enthusiasts. From dice to

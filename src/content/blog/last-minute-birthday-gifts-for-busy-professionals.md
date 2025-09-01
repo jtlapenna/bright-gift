@@ -19,8 +19,6 @@ tags:
   - practical gifts
   - under $100
 priceRange: $20-$90
-amazonLink: >-
-  https://www.amazon.com/s?k=last+minute+birthday+gifts+professionals&tag=brightgift-20
 metaTitle: Last Minute Birthday Gifts for Professionals | Quick Ideas
 metaDescription: >-
   Find perfect last minute birthday gifts for busy professionals. Quick,

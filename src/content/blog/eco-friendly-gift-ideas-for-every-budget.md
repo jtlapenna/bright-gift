@@ -18,7 +18,6 @@ tags:
   - budget gifts
   - green gifts
 priceRange: $7-$70
-amazonLink: 'https://www.amazon.com/s?k=eco+friendly+gifts+sustainable&tag=brightgift-20'
 readTime: 3
 featured: true
 draft: false

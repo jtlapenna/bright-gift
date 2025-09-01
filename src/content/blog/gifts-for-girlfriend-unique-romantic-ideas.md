@@ -17,8 +17,6 @@ tags:
   - unique gifts
   - under $50
 priceRange: $15-$120
-amazonLink: >-
-  https://www.amazon.com/s?k=gifts+for+girlfriend+romantic+unique&tag=brightgift-20
 readTime: 4
 featured: true
 draft: false

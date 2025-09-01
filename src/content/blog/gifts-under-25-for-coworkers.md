@@ -17,7 +17,6 @@ tags:
   - under 25
   - workplace
 priceRange: $12-$25
-amazonLink: 'https://www.amazon.com/s?k=coworker+gifts+under+25&tag=brightgift-20'
 readTime: 7
 featured: true
 draft: false

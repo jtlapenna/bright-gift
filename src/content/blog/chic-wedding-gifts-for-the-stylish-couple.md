@@ -7,7 +7,8 @@ date: '2025-07-15'
 pubDate: '2025-07-31'
 image: >-
   /images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-banner.webp
-ogImage: "/images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-og.webp"
+ogImage: >-
+  /images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-og.webp
 socialImage: >-
   /images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-social.webp
 tags:
@@ -17,7 +18,6 @@ tags:
   - couple gifts
   - home decor
 priceRange: $20-$150
-amazonLink: 'https://www.amazon.com/s?k=chic+wedding+gifts&tag=brightgift-20'
 metaTitle: Chic Wedding Gifts for Stylish Couples | Elegant Gift Ideas
 metaDescription: >-
   Find chic wedding gifts for the stylish couple. Discover elegant wedding gift

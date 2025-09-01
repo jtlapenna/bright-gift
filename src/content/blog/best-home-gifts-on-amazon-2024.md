@@ -15,7 +15,6 @@ tags:
   - home decor
   - smart home
 priceRange: $25-$100
-amazonLink: 'https://www.amazon.com/s?k=home+gifts+2024&tag=brightgift-20'
 metaTitle: 'Best Home Gifts on Amazon 2024: Top-Rated Home & Garden Gifts | BrightGift'
 metaDescription: >-
   Discover the best home gifts on Amazon for 2024. From kitchen essentials to

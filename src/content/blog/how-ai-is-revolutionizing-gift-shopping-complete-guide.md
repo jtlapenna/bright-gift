@@ -20,7 +20,6 @@ tags:
   - gift shopping
   - personalized gifts
 priceRange: Free-$100+
-amazonLink: 'https://www.amazon.com/s?k=AI+gift+ideas+personalized&tag=brightgift-20'
 readTime: 12
 featured: true
 draft: false

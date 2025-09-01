@@ -17,7 +17,6 @@ tags:
   - hiking gear
   - adventure gifts
 priceRange: $20-$200
-amazonLink: 'https://www.amazon.com/s?k=outdoor+gifts+for+dads&tag=brightgift-20'
 metaTitle: Best Gifts for Dads Who Love Outdoor Adventures | BrightGift
 metaDescription: >-
   Discover the best gifts for adventurous dads who love the outdoors. From

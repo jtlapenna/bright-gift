@@ -8,7 +8,8 @@ date: '2025-07-15'
 pubDate: '2025-07-31'
 image: >-
   /images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-banner.webp
-ogImage: "/images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-banner.webp"
+ogImage: >-
+  /images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-banner.webp
 socialImage: >-
   /images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-social.webp
 tags:
@@ -18,7 +19,6 @@ tags:
   - pet accessories
   - animal lovers
 priceRange: $8-$30
-amazonLink: 'https://www.amazon.com/s?k=pet+gifts+under+30&tag=brightgift-20'
 metaTitle: Affordable Gifts for Pet Lovers Under $30 | BrightGift
 metaDescription: >-
   Find the perfect affordable gifts for pet lovers under $30. From toys to

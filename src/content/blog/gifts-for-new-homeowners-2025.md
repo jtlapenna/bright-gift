@@ -14,7 +14,6 @@ tags:
   - home gifts
   - '2025'
 priceRange: $20-$70
-amazonLink: 'https://www.amazon.com/s?k=housewarming+gifts+new+homeowners&tag=brightgift-20'
 canonical: /blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75
 metaTitle: Gifts for New Homeowners 2025 | Best Housewarming Ideas
 metaDescription: >-

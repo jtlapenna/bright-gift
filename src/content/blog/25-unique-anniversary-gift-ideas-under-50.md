@@ -19,7 +19,6 @@ tags:
   - couples
   - relationship
 priceRange: $8-$50
-amazonLink: 'https://www.amazon.com/s?k=anniversary+gifts+under+50&tag=brightgift-20'
 readTime: 8
 featured: true
 draft: false

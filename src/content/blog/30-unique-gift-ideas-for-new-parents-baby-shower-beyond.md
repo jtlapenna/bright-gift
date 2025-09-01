@@ -19,7 +19,6 @@ tags:
   - unique baby gifts
   - eco-friendly baby gifts
 priceRange: $8-$75
-amazonLink: 'https://www.amazon.com/s?k=baby+gifts+new+parents+under+75&tag=brightgift-20'
 readTime: 10
 featured: true
 draft: false
