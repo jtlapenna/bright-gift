@@ -172,27 +172,27 @@ A beloved story about friendship, loyalty, and the power of words. Perfect for e
 ## Reading Accessories to Complete the Gift (Under $40)
 
 ### 16. Cozy Reading Blanket
-<a href="https://www.amazon.com/s?k=reading+blanket+cozy&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=reading+blanket+cozy&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 **Price Range:** $20-35  
 A soft, warm blanket perfect for curling up with a good book. Look for ones with book-themed designs or literary quotes to enhance the reading experience.
 
 ### 17. Book Lover's Candle Set
-<a href="https://www.amazon.com/s?k=book+lover+candle+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=book+lover+candle+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 **Price Range:** $15-25  
 Candles with book-inspired scents like "Old Books," "Coffee Shop," or "Library." Creates the perfect reading atmosphere and makes any book gift more special.
 
 ### 18. LED Reading Light
-<a href="https://www.amazon.com/s?k=led+reading+light+clip&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=led+reading+light+clip&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 **Price Range:** $15-25  
 A clip-on reading light that attaches to books or e-readers. Perfect for reading in bed or low-light situations, making it an ideal companion to any book gift.
 
 ### 19. Personalized Bookmark Set
-<a href="https://www.amazon.com/s?k=personalized+bookmark+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=personalized+bookmark+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 **Price Range:** $10-20  
 Personalized bookmarks with their name, favorite quotes, or literary designs. A thoughtful, personalized touch that shows you care about their reading experience.
 
 ### 20. Reading Journal
-<a href="https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 **Price Range:** $12-18  
 A beautiful journal for tracking books read, favorite quotes, and reading goals. Perfect for organized book lovers who want to remember their reading journey.
 
@@ -220,15 +220,15 @@ A beautiful journal for tracking books read, favorite quotes, and reading goals.
 ## Budget-Friendly Gift Combinations
 
 **Under $30:**
-- [The Midnight Library](https://bookshop.org/a/brightgift/9780525559474) + <a href="https://www.amazon.com/s?k=personalized+bookmark&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Personalized Bookmark</a>
-- [Atomic Habits](https://bookshop.org/a/brightgift/9780735211292) + <a href="https://www.amazon.com/s?k=reading+light&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Reading Light</a>
+- [The Midnight Library](https://bookshop.org/a/brightgift/9780525559474) + <a href="https://www.amazon.com/s?k=personalized+bookmark&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">Personalized Bookmark</a>
+- [Atomic Habits](https://bookshop.org/a/brightgift/9780735211292) + <a href="https://www.amazon.com/s?k=reading+light&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">Reading Light</a>
 
 **Under $50:**
-- [Tomorrow, and Tomorrow, and Tomorrow](https://bookshop.org/a/brightgift/9780593321201) + <a href="https://www.amazon.com/s?k=reading+blanket&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Cozy Blanket</a> + <a href="https://www.amazon.com/s?k=bookmark+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Bookmark</a>
-- [The Psychology of Money](https://bookshop.org/a/brightgift/9780857197689) + <a href="https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Reading Journal</a> + <a href="https://www.amazon.com/s?k=book+lover+candle&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Candle Set</a>
+- [Tomorrow, and Tomorrow, and Tomorrow](https://bookshop.org/a/brightgift/9780593321201) + <a href="https://www.amazon.com/s?k=reading+blanket&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">Cozy Blanket</a> + <a href="https://www.amazon.com/s?k=bookmark+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">Bookmark</a>
+- [The Psychology of Money](https://bookshop.org/a/brightgift/9780857197689) + <a href="https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">Reading Journal</a> + <a href="https://www.amazon.com/s?k=book+lover+candle&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">Candle Set</a>
 
 **Under $75:**
-- [Lessons in Chemistry](https://bookshop.org/a/brightgift/9780385547345) + [The House in the Cerulean Sea](https://bookshop.org/a/brightgift/9781250217288) + <a href="https://www.amazon.com/s?k=reading+accessories+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">Reading Accessories Bundle</a>
+- [Lessons in Chemistry](https://bookshop.org/a/brightgift/9780385547345) + [The House in the Cerulean Sea](https://bookshop.org/a/brightgift/9781250217288) + <a href="https://www.amazon.com/s?k=reading+accessories+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">Reading Accessories Bundle</a>
 
 ---
 

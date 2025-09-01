@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Care Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Notification Container -->
+    <div id="notificationContainer"></div>
+    
+    <h1 class="app-title">Baby Care Calculator</h1>
+    
+    <div class="planner">
+        <!-- Settings Bar -->
+        <div class="widget" id="settings-bar">
+            <h3>Settings</h3>
+            <div class="widget-content settings-content">
+                <div class="settings-row">
+                    <button id="autoFillBtn" class="autofill-btn" title="Auto-create shifts to balance today">Auto‑fill</button>
+                    <div class="setting-group">
+                        <label for="jeffExtra">Jeff's Extra Minutes:</label>
+                        <input type="number" id="jeffExtra" value="-25" min="-180" max="120" class="setting-input">
+                    </div>
+                    <div class="setting-group">
+                        <label for="johnExtra">John's Extra Minutes:</label>
+                        <input type="number" id="johnExtra" value="25" min="-180" max="120" class="setting-input">
+                    </div>
+                    <div class="setting-group">
+                        <label for="dayMode">Day Mode:</label>
+                        <div class="toggle-container">
+                            <button class="toggle-btn active" data-mode="full">
+                                <span class="toggle-label">Full</span>
+                            </button>
+                            <button class="toggle-btn" data-mode="partial">
+                                <span class="toggle-label">Partial</span>
+                            </button>
+                        </div>
+                    </div>
+                    <button onclick="resetAllData()" class="reset-btn">Reset All Data</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-layout">
+            <div class="widget" id="daily-module">
+                <h3>Daily Segments</h3>
+                <div class="widget-content v1-daily"></div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="widget">
+                    <h3>Progress Tracking</h3>
+                    <div class="widget-content progress-content">
+                        <div class="projected-time-display">
+                            <span class="label">Total Projected Wake Time:</span>
+                            <span class="value" id="totalProjectedWakeTime">0 min</span>
+                        </div>
+                        <div class="projected-time-display">
+                            <span class="label">Remaining Projected Wake Time:</span>
+                            <span class="value" id="remainingProjectedWakeTime">0 min</span>
+                        </div>
+                        <div class="progress-cards">
+                            <div class="progress-card">
+                                <h4>Jeff</h4>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill jeff-progress" id="jeffProgress"></div>
+                                    </div>
+                                    <div class="progress-text" id="jeffProgressText">0%</div>
+                                </div>
+                                <div class="time-stats">
+                                    <div class="stat">
+                                        <span class="label">Logged:</span>
+                                        <span class="value" id="jeffLogged">0 min</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="label">Remaining:</span>
+                                        <span class="value" id="jeffRemaining">0 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="progress-card">
+                                <h4>John</h4>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill john-progress" id="johnProgress"></div>
+                                    </div>
+                                    <div class="progress-text" id="johnProgressText">0%</div>
+                                </div>
+                                <div class="time-stats">
+                                    <div class="stat">
+                                        <span class="label">Logged:</span>
+                                        <span class="value" id="johnLogged">0 min</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="label">Remaining:</span>
+                                        <span class="value" id="johnRemaining">25 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="widget">
+                    <h3>Add Shift Log</h3>
+                    <div class="widget-content shift-log">
+                        <div class="shift-sections">
+                            <!-- Headers -->
+<!-- Jeff's Row -->
+                            <div class="person-row">
+                                <div class="who">Jeff</div>
+                                <select id="jeffCustomStart" class="time-select"></select>
+                                <select id="jeffCustomEnd" class="time-select"></select>
+                                <button onclick="addCustom('Jeff')" class="add-btn">Add</button>
+                                <div class="spacer"></div>
+                                <div class="quick-add-buttons">
+                                    <button onclick="addPreset('Jeff','07:15','09:50')" class="quick-btn">7:15AM - 9:50AM</button>
+                                    <button onclick="addPreset('Jeff','13:00','14:50')" class="quick-btn">1:00PM - 2:50PM</button>
+                                </div>
+                            </div>
+                            
+                            <!-- John's Row -->
+                            <div class="person-row">
+                                <div class="who">John</div>
+                                <select id="johnCustomStart" class="time-select"></select>
+                                <select id="johnCustomEnd" class="time-select"></select>
+                                <button onclick="addCustom('John')" class="add-btn">Add</button>
+                                <div class="spacer"></div>
+                                <div class="quick-add-buttons">
+                                    <button onclick="addPreset('John','11:00','13:00')" class="quick-btn">11:00AM - 1:00PM</button>
+                                    <button onclick="addPreset('John','16:20','19:50')" class="quick-btn">4:20PM - 7:50PM</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Free Row -->
+                            <div class="person-row">
+                                <div class="who">Free</div>
+                                <select id="freeCustomStart" class="time-select"></select>
+                                <select id="freeCustomEnd" class="time-select"></select>
+                                <button onclick="addCustom('Free')" class="add-btn">Add</button>
+                                <div class="spacer"></div>
+                                <div class="quick-add-buttons single-button">
+                                    <button onclick="addPreset('Free','11:00','14:50')" class="quick-btn">11:00 AM - 2:50 PM</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

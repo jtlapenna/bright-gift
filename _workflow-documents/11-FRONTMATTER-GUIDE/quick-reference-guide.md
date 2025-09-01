@@ -144,7 +144,7 @@ This post contains affiliate links. We may earn a commission if you click throug
 
 #### Amazon
 ```markdown
-[View on Amazon](https://www.amazon.com/s?k=keyword&tag={site-tag})
+<a href="https://www.amazon.com/s?k=keyword&tag={site-tag}" class="amazon-link" target="_blank" rel="sponsored">View on Amazon</a>
 ```
 ```html
 <a href="https://www.amazon.com/s?k=keyword&tag={site-tag}" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
