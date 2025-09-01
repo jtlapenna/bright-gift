@@ -3,10 +3,6 @@ title: Fun Gifts for Kids' Birthday Parties
 slug: fun-gifts-for-kids-birthday-parties
 image: >-
   /images/blog/fun-gifts-for-kids-birthday-parties/fun-gifts-for-kids-birthday-parties-banner.webp
-ogImage: >-
-  /images/blog/fun-gifts-for-kids-birthday-parties/fun-gifts-for-kids-birthday-parties-og.webp
-socialImage: >-
-  /images/blog/fun-gifts-for-kids-birthday-parties/fun-gifts-for-kids-birthday-parties-social.webp
 category: gift-guides
 description: >-
   Explore fun and engaging gifts for kids' birthday parties that kids will love

@@ -6,7 +6,7 @@ image: >-
 ogImage: >-
   /images/blog/top-gifts-for-yoga-enthusiasts/top-gifts-for-yoga-enthusiasts-og.webp
 socialImage: >-
-  /images/blog/top-gifts-for-yoga-enthusiasts/top-gifts-for-yoga-enthusiasts-social.jpg
+  /images/blog/top-gifts-for-yoga-enthusiasts/top-gifts-for-yoga-enthusiasts-social.webp
 category: gift-guides
 description: >-
   Discover thoughtful gifts for yoga enthusiasts at every level, from beginners

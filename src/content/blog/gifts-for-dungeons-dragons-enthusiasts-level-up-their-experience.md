@@ -7,10 +7,6 @@ description: >-
 date: '2025-07-15'
 image: >-
   /images/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience-banner.webp
-ogImage: >-
-  /images/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience-og.webp
-socialImage: >-
-  /images/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience-social.webp
 tags:
   - D&D gifts
   - tabletop RPG

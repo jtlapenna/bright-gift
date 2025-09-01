@@ -18,8 +18,6 @@ image: >-
   /images/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/25-thoughtful-gifts-for-girlfriend-that-show-you-care-banner.webp
 ogImage: >-
   /images/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/25-thoughtful-gifts-for-girlfriend-that-show-you-care-og.webp
-socialImage: >-
-  /images/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/25-thoughtful-gifts-for-girlfriend-that-show-you-care-social.webp
 tags:
   - gift guide
   - girlfriend

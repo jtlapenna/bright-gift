@@ -15,8 +15,6 @@ image: >-
   /images/blog/the-science-of-human-connection-why-we-need-each-other/the-science-of-human-connection-why-we-need-each-other-banner.webp
 ogImage: >-
   /images/blog/the-science-of-human-connection-why-we-need-each-other/the-science-of-human-connection-why-we-need-each-other-og.webp
-socialImage: >-
-  /images/blog/the-science-of-human-connection-why-we-need-each-other/the-science-of-human-connection-why-we-need-each-other-social.webp
 tags:
   - human connection
   - relationships
