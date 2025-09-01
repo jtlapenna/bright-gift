@@ -153,7 +153,7 @@ This science-backed serum brightens skin and reduces dark spots with a stable 20
 
 **Why it's thoughtful:** It shows you care about her self-care routine and want her to feel confident and beautiful.
 
-**Price Range:** $45-$55 // <a href="https://www.arjdj2msd.com/7LKLK3/QWRG9C/" class="amazon-link" target="_blank" rel="noopener">Shop BeautyStat</a>
+**Price Range:** $45-$55 // <a href="https://www.arjdj2msd.com/7LKLK3/QWRG9C/" class="amazon-link" target="_blank" rel="nofollow noopener">Shop BeautyStat</a>
 
 ### 8. Luxury Bath Set
 A complete bath set with bath salts, candles, and a plush robe creates a spa-like experience at home.
@@ -253,7 +253,7 @@ High-quality athletic wear designed for serious athletes, with moisture-wicking 
 
 **Why it's thoughtful:** It shows you support her fitness goals and want her to have quality gear for her workouts.
 
-**Price Range:** $35-$85 // <a href="https://www.arjdj2msd.com/7LKLK3/R2Z4H6/" class="amazon-link" target="_blank" rel="noopener">Shop Furi Sport</a>
+**Price Range:** $35-$85 // <a href="https://www.arjdj2msd.com/7LKLK3/R2Z4H6/" class="amazon-link" target="_blank" rel="nofollow noopener">Shop Furi Sport</a>
 
 ### 20. Personalized Tote Bag
 A stylish tote bag with her name or initials is perfect for shopping, work, or everyday use.
@@ -278,7 +278,7 @@ Natural wellness supplements made with high-quality mushrooms to support her ove
 
 **Why it's thoughtful:** It shows you care about her health and want to support her wellness journey.
 
-**Price Range:** $25-$45 // <a href="https://www.arjdj2msd.com/7LKLK3/24D26TB/" class="amazon-link" target="_blank" rel="noopener">Shop Endorf</a>
+**Price Range:** $25-$45 // <a href="https://www.arjdj2msd.com/7LKLK3/24D26TB/" class="amazon-link" target="_blank" rel="nofollow noopener">Shop Endorf</a>
 
 ### 23. Premium Meditation Cushion Set
 A beautiful meditation cushion set with a comfortable seat, matching mat, and storage bag. Perfect for creating a peaceful meditation space at home.
@@ -303,7 +303,7 @@ A beautiful planner designed for intentional living with inclusive design and th
 
 **Why it's thoughtful:** It helps her stay organized while celebrating her authentic self and personal growth.
 
-**Price Range:** $25-$35 // <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="amazon-link" target="_blank" rel="noopener">Shop Be Rooted</a>
+**Price Range:** $25-$35 // <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="amazon-link" target="_blank" rel="nofollow noopener">Shop Be Rooted</a>
 
 ---
 
