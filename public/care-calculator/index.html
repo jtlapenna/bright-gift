@@ -38,6 +38,8 @@
                             </button>
                         </div>
                     </div>
+                    <button id="syncNowBtn" class="sync-btn" title="Fetch latest from cloud">Sync now</button>
+                    
                     <button onclick="resetAllData()" class="reset-btn">Reset All Data</button>
                 </div>
             </div>
@@ -155,5 +157,54 @@
     </div>
     
     <script src="script.js"></script>
+
+<!-- Manual "Sync now" button handler (Supabase) -->
+<script type="module">
+  import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+
+  const SUPABASE_URL = "https://laqfvhpsacurgyulucwx.supabase.co";
+  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxhcWZ2aHBzYWN1cmd5dWx1Y3d4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY3NDgzOTIsImV4cCI6MjA3MjMyNDM5Mn0.o2kMw3K-GYB2UlzSMb5C82-4a-rt3HmM0NLiP_eaa9M";
+
+  // Reuse existing globals if present (from index.html), or create light fallbacks
+  window.supabase = window.supabase || createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  window.room = window.room || (new URLSearchParams(location.search).get("room") || "default");
+
+  // Fallback importState if the page doesn't already define it
+  window.importState = window.importState || ((data) => {
+    if (!data) return;
+    if (Array.isArray(data.items)) window.v1Items = data.items;
+    const je = document.getElementById("jeffExtra");
+    const jo = document.getElementById("johnExtra");
+    if (je && data.extras && typeof data.extras.jeff === "number") je.value = data.extras.jeff;
+    if (jo && data.extras && typeof data.extras.john === "number") jo.value = data.extras.john;
+    if (typeof window.renderTimeline === "function") window.renderTimeline();
+    if (typeof window.updateProgressDisplay === "function") window.updateProgressDisplay();
+  });
+
+  const btn = document.getElementById("syncNowBtn");
+  if (btn) {
+    btn.addEventListener("click", async () => {
+      const original = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = "Syncing…";
+      try {
+        const { data, error } = await window.supabase
+          .from("rooms")
+          .select("data")
+          .eq("room_id", window.room)
+          .single();
+        if (error) {
+          console.warn("Sync failed:", error);
+        } else if (data?.data) {
+          window.importState(data.data);
+        }
+      } finally {
+        btn.disabled = false;
+        btn.textContent = original;
+      }
+    });
+  }
+</script>
+
 </body>
 </html>
