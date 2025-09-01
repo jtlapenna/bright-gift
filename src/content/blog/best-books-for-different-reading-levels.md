@@ -225,27 +225,27 @@ A refreshing take on personal development that encourages readers to focus on wh
 ## Reading Accessories for Every Level
 
 ### 31. Reading Light for Books
-<a href="https://www.amazon.com/s?k=reading+light+book&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=reading+light+book&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 **Price Range:** $15-25  
 A portable reading light that clips onto books or e-readers. Perfect for reading in bed, on planes, or anywhere with limited lighting. Look for ones with adjustable brightness and long battery life.
 
 ### 32. Book Lover's Candle Set
-<a href="https://www.amazon.com/s?k=book+lover+candle+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=book+lover+candle+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 **Price Range:** $15-25  
 Candles with book-inspired scents like "Old Books," "Coffee Shop," or "Library." Creates the perfect reading atmosphere and makes any reading session feel special.
 
 ### 33. Personalized Bookmark Set
-<a href="https://www.amazon.com/s?k=personalized+bookmark+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=personalized+bookmark+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 **Price Range:** $10-20  
 Personalized bookmarks with their name, favorite quotes, or literary designs. A thoughtful, personalized touch that shows you care about their reading experience.
 
 ### 34. Reading Journal
-<a href="https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=reading+journal+book+tracker&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 **Price Range:** $12-18  
 A beautiful journal for tracking books read, favorite quotes, and reading goals. Perfect for organized book lovers who want to remember their reading journey.
 
 ### 35. Cozy Reading Blanket
-<a href="https://www.amazon.com/s?k=reading+blanket+cozy&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=reading+blanket+cozy&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 **Price Range:** $20-30  
 A soft, warm blanket perfect for curling up with a good book. Look for ones with book-themed designs or literary quotes to make the reading experience even more special.
 

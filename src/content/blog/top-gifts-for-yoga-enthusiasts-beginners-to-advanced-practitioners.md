@@ -70,17 +70,17 @@ Yoga practitioners are passionate about their practice and always appreciate tho
 ## Essential Yoga Equipment (All Levels)
 
 ### 1. Premium Yoga Mat
-<a href="https://www.amazon.com/s?k=premium+yoga+mat+non+slip&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=premium+yoga+mat+non+slip&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 **Price Range:** $40-$120  
 A high-quality yoga mat is the foundation of any practice. Look for mats with excellent grip, cushioning, and durability. Premium mats often feature eco-friendly materials and come in various thicknesses to suit different practice styles and comfort preferences.
 
 ### 2. Yoga Blocks
-<a href="https://www.amazon.com/s?k=yoga+blocks+foam&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=yoga+blocks+foam&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 **Price Range:** $15-$30  
 Yoga blocks are essential props that help with alignment, support, and deepening poses. They're perfect for beginners learning proper form and advanced practitioners exploring new variations. Lightweight foam blocks are ideal for most practices.
 
 ### 3. Yoga Strap
-<a href="https://www.amazon.com/s?k=yoga+strap+adjustable&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=yoga+strap+adjustable&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 **Price Range:** $10-$25  
 A yoga strap helps with flexibility, alignment, and reaching poses that might otherwise be challenging. Adjustable straps with secure buckles are perfect for all levels and can be used for stretching, binding poses, and improving flexibility over time.
 
@@ -94,12 +94,12 @@ A yoga strap helps with flexibility, alignment, and reaching poses that might ot
 A comprehensive guide to yoga fundamentals helps beginners understand poses, breathing techniques, and practice philosophy. Look for books with clear illustrations, step-by-step instructions, and modifications for different body types.
 
 ### 5. Yoga Towel
-<a href="https://www.amazon.com/s?k=yoga+towel+non+slip&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=yoga+towel+non+slip&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 **Price Range:** $20-$40  
 A yoga towel provides extra grip during sweaty practices and can be used as a mat topper. Non-slip towels with quick-dry technology are perfect for hot yoga or intense practices where extra traction is needed.
 
 ### 6. Meditation Cushion
-<a href="https://www.amazon.com/s?k=meditation+cushion+zafu&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=meditation+cushion+zafu&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 **Price Range:** $25-$60  
 A comfortable meditation cushion supports proper posture during seated meditation and pranayama practices. Look for cushions filled with buckwheat hulls or kapok for optimal comfort and support.
 
@@ -108,17 +108,17 @@ A comfortable meditation cushion supports proper posture during seated meditatio
 ## Intermediate Practitioner Gifts
 
 ### 7. Yoga Wheel
-<a href="https://www.amazon.com/s?k=yoga+wheel+back+bend&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=yoga+wheel+back+bend&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 **Price Range:** $25-$50  
 A yoga wheel helps with backbends, shoulder opening, and core strengthening. It's perfect for intermediate practitioners looking to deepen their backbends and improve spinal flexibility safely.
 
 ### 8. Yoga Bolster
-<a href="https://www.amazon.com/s?k=yoga+bolster+restorative&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=yoga+bolster+restorative&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 **Price Range:** $30-$70  
 A yoga bolster is essential for restorative yoga and supported poses. It provides comfort during longer holds and helps practitioners relax deeply into poses for maximum benefit.
 
 ### 9. Yoga Journal Subscription
-<a href="https://www.amazon.com/s?k=yoga+journal+magazine+subscription&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=yoga+journal+magazine+subscription&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 **Price Range:** $20-$40/year  
 A subscription to a yoga magazine provides ongoing inspiration, new poses to try, and insights into yoga philosophy and lifestyle. It's a gift that keeps giving throughout the year.
 
@@ -127,12 +127,12 @@ A subscription to a yoga magazine provides ongoing inspiration, new poses to try
 ## Advanced Practitioner Gifts
 
 ### 10. Yoga Trapeze
-<a href="https://www.amazon.com/s?k=yoga+trapeze+aerial&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=yoga+trapeze+aerial&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 **Price Range:** $80-$150  
 A yoga trapeze allows for aerial yoga practice at home, providing unique perspectives on traditional poses and new challenges for advanced practitioners. It's perfect for those looking to explore inversions and aerial work.
 
 ### 11. Premium Yoga Props Set
-<a href="https://www.amazon.com/s?k=premium+yoga+props+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=premium+yoga+props+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 **Price Range:** $100-$200  
 A comprehensive set of high-quality yoga props includes blocks, straps, bolsters, and blankets. Premium sets often feature eco-friendly materials and come in coordinated colors for a professional look.
 
@@ -146,17 +146,17 @@ Advanced practitioners often appreciate books on yoga anatomy, philosophy, and t
 ## Wellness and Lifestyle Gifts
 
 ### 13. Essential Oils for Yoga
-<a href="https://www.amazon.com/s?k=essential+oils+yoga+meditation&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=essential+oils+yoga+meditation&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 **Price Range:** $20-$50  
 Essential oils like lavender, eucalyptus, and frankincense enhance the yoga experience by promoting relaxation and focus. Look for pure, therapeutic-grade oils in convenient roll-on or diffuser formats.
 
 ### 14. Yoga Retreat Gift Certificate
-<a href="https://www.amazon.com/s?k=yoga+retreat+gift+certificate&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=yoga+retreat+gift+certificate&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 **Price Range:** $200-$1000  
 A gift certificate for a yoga retreat provides an immersive experience that combines travel, practice, and community. It's perfect for serious practitioners looking to deepen their practice in a supportive environment.
 
 ### 15. Smart Water Bottle
-<a href="https://www.amazon.com/s?k=smart+water+bottle+hydration&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=smart+water+bottle+hydration&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener nofollow">View on Amazon</a>
 **Price Range:** $30-$80  
 A smart water bottle helps yoga practitioners stay hydrated by tracking water intake and sending reminders. Many feature temperature control and are made from sustainable materials.
 
