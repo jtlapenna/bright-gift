@@ -48,7 +48,6 @@ Disallow: /blog/`;
       'X-Content-Type-Options': 'nosniff',
       'Cache-Control': 'public, max-age=3600',
       'Content-Disposition': 'inline',
-      'X-Robots-Tag': 'noindex, nofollow',
     },
   });
 };
