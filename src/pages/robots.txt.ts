@@ -39,7 +39,7 @@ Disallow: /*.md
 Disallow: /blog/*.md
 
 # Allow blog index page to be crawled (it's now indexable)
-# Disallow: /blog/`;
+# Disallow: /blog/ (commented out to fix indexability issues)`;
 
   return new Response(robotsContent, {
     status: 200,
