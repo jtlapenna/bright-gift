@@ -10,7 +10,7 @@ metaTitle: 'Clean Girl 2.0 Gifts: Minimalist, Polished, Personal'
 metaDescription: >-
   Updated 2025 Clean Girl aesthetic: sleek hair, dewy skin, and subtle vintage
   details. Discover minimalist gift ideas—hair kits, satin pillowcases, dewy
-  skin sets, and tiny hoops.
+  skin ...
 keywords:
   - clean girl gifts
   - minimalist beauty gifts
@@ -24,9 +24,9 @@ image: >-
 ogImage: >-
   /images/blog/clean-girl-2-0-minimalist-gifts-with-personality/clean-girl-2-0-og.webp
 imageJpg: >-
-  /images/blog/clean-girl-2-0-minimalist-gifts-with-personality/clean-girl-2-0-banner.jpg
+  /images/blog/clean-girl-2-0-minimalist-gifts-with-personality/clean-girl-2-0-banner.webp
 ogImageJpg: >-
-  /images/blog/clean-girl-2-0-minimalist-gifts-with-personality/clean-girl-2-0-og.jpg
+  /images/blog/clean-girl-2-0-minimalist-gifts-with-personality/clean-girl-2-0-og.webp
 siteId: brightgift
 workflowId: workflow_20250818_clean_girl_2_0
 postId: workflow_20250818_clean_girl_2_0

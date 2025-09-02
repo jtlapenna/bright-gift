@@ -1,43 +1,62 @@
 ---
-title: "Best Be Rooted Planners, Journals, and Desk Accessories for 2025"
-description: "Discover the top Be Rooted planners, journals, and desk accessories for 2025. A stylish, Black-owned stationery brand with beautiful, functional tools for planning and self-care."
-date: "2025-08-13"
-status: "published"
-metaTitle: "Be Rooted Planners & Journals 2025: Best Picks + How to Choose"
-metaDescription: "A curated guide to the best Be Rooted planners, journals, and accessories for 2025. Compare formats, sizes, paper quality, and get tips to choose the right planner."
-keywords: ["Be Rooted", "Be Rooted planner", "Black-owned stationery", "best planners 2025", "journals for women", "desk accessories", "planner setup"]
-image: "/images/blog/be-rooted-planners-stationery/be-rooted-og.webp"
-ogImage: "/images/blog/be-rooted-planners-stationery/be-rooted-banner.webp"
-imageJpg: "/images/blog/be-rooted-planners-stationery/be-rooted-og.jpg"
-ogImageJpg: "/images/blog/be-rooted-planners-stationery/be-rooted-banner.jpg"
-siteId: "brightgift"
-workflowId: "workflow_20250813_be_rooted_planners"
-postId: "workflow_20250813_be_rooted_planners"
-generatedAt: "2025-08-13T20:45:00.000Z"
-version: "1.0"
-currentSection: "content-generation"
-workflowStatus: "completed"
+title: 'Best Be Rooted Planners, Journals, and Desk Accessories for 2025'
+description: >-
+  Discover the top Be Rooted planners, journals, and desk accessories for 2025.
+  A stylish, Black-owned stationery brand with beautiful, functional tools for
+  planning and self-care.
+date: '2025-08-13'
+status: published
+metaTitle: 'Be Rooted Planners & Journals 2025: Best Picks + How to C...'
+metaDescription: >-
+  A curated guide to the best Be Rooted planners, journals, and accessories for
+  2025. Compare formats, sizes, paper quality, and get tips to choose the right
+  p...
+keywords:
+  - Be Rooted
+  - Be Rooted planner
+  - Black-owned stationery
+  - best planners 2025
+  - journals for women
+  - desk accessories
+  - planner setup
+image: /images/blog/be-rooted-planners-stationery/be-rooted-og.webp
+ogImage: /images/blog/be-rooted-planners-stationery/be-rooted-banner.webp
+imageJpg: /images/blog/be-rooted-planners-stationery/be-rooted-og.webp
+ogImageJpg: /images/blog/be-rooted-planners-stationery/be-rooted-banner.webp
+siteId: brightgift
+workflowId: workflow_20250813_be_rooted_planners
+postId: workflow_20250813_be_rooted_planners
+generatedAt: '2025-08-13T20:45:00.000Z'
+version: '1.0'
+currentSection: content-generation
+workflowStatus: completed
 wordCount: 753
 readTime: 4
 seoScore: 0
 readabilityScore: 0
-contentQuality: "pending"
+contentQuality: pending
 affiliateCount: 5
 affiliateDisclosure: true
-affiliatePlatforms: {"afrofiliate": 5}
+affiliatePlatforms:
+  afrofiliate: 5
 originalInput:
-  prompt: "Write a researched post about Be Rooted planners and stationery"
-  inputType: "prompt"
-  selectedTopic: "Be Rooted planners & journals"
+  prompt: Write a researched post about Be Rooted planners and stationery
+  inputType: prompt
+  selectedTopic: Be Rooted planners & journals
   selectedContent: null
-  additionalNotes: "Focus on formats, sizing, paper, use-cases; include Afrofiliate links"
-  timestamp: "2025-08-13T20:45:00.000Z"
-tags: ["gift-guide", "black-owned", "stationery", "planners", "journaling"]
-category: "gift-guide"
-recipient: "planners-and-stationery-lovers"
-budget: "various"
-occasion: "back-to-school, holidays, new-year-setup"
-style: "aesthetic-desk, motivational, functional"
+  additionalNotes: 'Focus on formats, sizing, paper, use-cases; include Afrofiliate links'
+  timestamp: '2025-08-13T20:45:00.000Z'
+tags:
+  - gift-guide
+  - black-owned
+  - stationery
+  - planners
+  - journaling
+category: gift-guide
+recipient: planners-and-stationery-lovers
+budget: various
+occasion: 'back-to-school, holidays, new-year-setup'
+style: 'aesthetic-desk, motivational, functional'
 ---
 
 ## Be Rooted: Brand Profile

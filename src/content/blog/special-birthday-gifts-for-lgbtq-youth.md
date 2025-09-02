@@ -20,7 +20,7 @@ tags:
   - pride gifts
   - identity gifts
 priceRange: $10-$60
-metaTitle: 'Special Birthday Gifts for LGBTQ+ Youth: Inclusive Gift Ideas | BrightGift'
+metaTitle: 'Special Birthday Gifts for LGBTQ+ Youth: Inclusive Gift I...'
 metaDescription: >-
   Discover special birthday gifts for LGBTQ+ youth. Find inclusive, supportive
   gift ideas that celebrate identity and show love and acceptance.

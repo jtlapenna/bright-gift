@@ -18,7 +18,7 @@ tags:
   - holiday gifts
   - '2024'
 priceRange: $15-$400
-metaTitle: Unique Christmas Gifts for Gamers | Creative Gaming Ideas 2024
+metaTitle: Unique Christmas Gifts for Gamers | Creative Gaming Ideas...
 metaDescription: >-
   Find unique Christmas gifts for gamers who have everything. Discover creative
   gaming gift ideas that will surprise even the most dedicated gamers.

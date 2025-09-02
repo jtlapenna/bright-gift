@@ -15,7 +15,7 @@ ogImage: >-
 socialImage: >-
   /images/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/valentines-day-gifts-under-50-social.webp
 category: gift-guides
-metaTitle: 'Valentine''s Day Gifts Under $50: 20 Romantic Ideas for Every Couple'
+metaTitle: 'Valentine''s Day Gifts Under $50: 20 Romantic Ideas for Ev...'
 metaDescription: >-
   Discover 20 thoughtful Valentine's Day gifts under $50 that will make your
   partner feel truly special. From romantic experiences to meaningful keepsakes.

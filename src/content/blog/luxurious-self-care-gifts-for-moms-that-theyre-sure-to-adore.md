@@ -14,7 +14,7 @@ description: >-
 keywords: >-
   self-care gifts, mom gifts, luxurious gifts, pampering gifts, Mother's Day
   gifts, spa gifts, relaxation gifts
-metaTitle: 'Luxurious Self-Care Gifts for Moms: 20 Perfect Pampering Ideas'
+metaTitle: 'Luxurious Self-Care Gifts for Moms: 20 Perfect Pampering ...'
 metaDescription: >-
   Discover 20 luxurious self-care gifts for moms that will make them feel
   cherished. From spa essentials to wellness items, find the perfect pampering

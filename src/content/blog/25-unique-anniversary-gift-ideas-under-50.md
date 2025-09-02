@@ -1,6 +1,6 @@
 ---
 title: '25 Unique Anniversary Gift Ideas Under $50: Timeless &...'
-metaTitle: '25 Unique Anniversary Gift Ideas Under $50: Timeless & Thoughtful | BrightGift'
+metaTitle: '25 Unique Anniversary Gift Ideas Under $50: Timeless & Th...'
 metaDescription: >-
   Discover 25 unique anniversary gift ideas under $50 that are thoughtful,
   memorable, and perfect for any relationship milestone. Shop smarter today

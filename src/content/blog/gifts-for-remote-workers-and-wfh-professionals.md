@@ -16,7 +16,7 @@ ogImage: >-
 socialImage: >-
   /images/blog/gifts-for-remote-workers-and-wfh-professionals/gifts-for-remote-workers-social.webp
 category: gift-guides
-metaTitle: 'Gifts for Remote Workers: 27 Essential WFH Items for Productivity & Comfort'
+metaTitle: 'Gifts for Remote Workers: 27 Essential WFH Items for Prod...'
 metaDescription: >-
   Find the perfect gifts for remote workers! Discover 27 essential WFH items
   that boost productivity, comfort, and work-from-home experience. Shop smarter

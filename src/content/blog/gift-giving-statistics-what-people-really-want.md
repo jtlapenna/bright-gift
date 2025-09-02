@@ -22,7 +22,9 @@ author: BrightGift Team
 category: data-driven
 contentType: data-driven
 readTime: 8
-metaDescription: 'Gift Giving Statistics: What People Really Want in 2024'
+metaDescription: >-
+  Gift Giving Statistics: What People Really Want in 2024 Discover the best gift
+  ideas, tips, and recommendations for every occasion.
 metaTitle: 'Gift Giving Statistics: What People Really Want in 2024'
 draft: false
 status: published

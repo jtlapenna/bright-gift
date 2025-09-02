@@ -14,7 +14,7 @@ tags:
   - home gifts
   - under 75
 priceRange: $15-$75
-metaTitle: 25 Thoughtful Housewarming Gifts for New Homeowners Under $75 | BrightGift
+metaTitle: 25 Thoughtful Housewarming Gifts for New Homeowners Under...
 metaDescription: >-
   Discover 25 thoughtful housewarming gifts under $75 that new homeowners will
   love. From practical essentials to stylish decor.

@@ -20,7 +20,7 @@ tags:
   - game night
   - hobby gifts
 priceRange: $10-$70
-metaTitle: 'Unique Gifts for Board Game Enthusiasts: Perfect Gaming Gifts | BrightGift'
+metaTitle: 'Unique Gifts for Board Game Enthusiasts: Perfect Gaming G...'
 metaDescription: >-
   Discover unique gifts for board game enthusiasts. Find perfect gaming gifts
   that will enhance their board game collection and gaming experience.

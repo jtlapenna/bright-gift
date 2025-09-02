@@ -1,6 +1,6 @@
 ---
 title: 20 Ethical Gift Ideas for Eco-Conscious Loved Ones (Under...
-metaTitle: '20 Ethical Gift Ideas Under $75: Sustainable & Eco-Friendly Gifts | BrightGift'
+metaTitle: '20 Ethical Gift Ideas Under $75: Sustainable & Eco-Friend...'
 metaDescription: >-
   Discover 20 sustainable gift ideas under $75 for eco-conscious loved ones.
   From Fair Trade to B Corp certified, find thoughtful presents.

@@ -1,10 +1,10 @@
 ---
 title: 'How to Choose the Perfect Gift: A Complete Guide'
-metaTitle: 'How to Choose the Perfect Gift: Complete Guide for Any Occasion | BrightGift'
+metaTitle: 'How to Choose the Perfect Gift: Complete Guide for Any Oc...'
 metaDescription: >-
   Struggling to find the perfect gift? Learn proven strategies for choosing
   thoughtful presents for any recipient, budget, and occasion. Get personalized
-  gift ideas!
+  gift ...
 description: >-
   Master the art of gift-giving with our comprehensive guide. Learn proven
   strategies for choosing thoughtful, meaningful gifts for any recipient,

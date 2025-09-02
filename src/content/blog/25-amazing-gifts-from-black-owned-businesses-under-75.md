@@ -1,10 +1,10 @@
 ---
 title: 25 Amazing Gifts from Black-Owned Businesses Under $75
-metaTitle: 'Black-Owned Business Gifts: 25 Amazing Ideas Under $75 | BrightGift'
+metaTitle: 'Black-Owned Business Gifts: 25 Amazing Ideas Under $75 | ...'
 metaDescription: >-
   Discover thoughtful gifts that support diverse entrepreneurs! Find 25 amazing
   Black-owned business gifts under $75. From skincare to athletic wear, support
-  meaningful brands.
+  m...
 description: >-
   Discover thoughtful gifts that support diverse entrepreneurs while finding the
   perfect present for your loved ones. From skincare to athletic wear and

@@ -44,7 +44,7 @@ socialPosts:
       Looking for thoughtful gift ideas? Check out this comprehensive guide for
       inspiration.
     hashtags: 'giftideas,gifts,brightgift,giftguide'
-metaTitle: Eco-Friendly Gifts for Outdoor Lovers | Sustainable Nature Ideas
+metaTitle: Eco-Friendly Gifts for Outdoor Lovers | Sustainable Natur...
 metaDescription: >-
   Discover eco-friendly gifts for outdoor lovers who want to celebrate nature
   sustainably. Find green gift ideas for hikers, campers, and nature

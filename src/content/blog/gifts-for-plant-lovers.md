@@ -1,6 +1,6 @@
 ---
 title: 'Gifts for Plant Lovers Under $75: 15 Perfect Presents for...'
-metaTitle: 15 Best Gifts for Plant Lovers Under $75 | Rare Plants & Accessories
+metaTitle: 15 Best Gifts for Plant Lovers Under $75 | Rare Plants & ...
 metaDescription: >-
   Find the perfect gift for plant enthusiasts under $75! Discover rare
   houseplants, stylish planters, and care tools that every green thumb will
