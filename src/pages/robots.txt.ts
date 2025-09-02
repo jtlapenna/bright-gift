@@ -38,8 +38,8 @@ Disallow: /temp/
 Disallow: /*.md
 Disallow: /blog/*.md
 
-# Block blog index page (search results) to prevent crawling of JavaScript templates
-Disallow: /blog/`;
+# Allow blog index page to be crawled (it's now indexable)
+# Disallow: /blog/`;
 
   return new Response(robotsContent, {
     status: 200,
