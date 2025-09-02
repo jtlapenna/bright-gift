@@ -41,9 +41,10 @@ function generateSitemap() {
   const blogPosts = getBlogPosts();
   const currentDate = new Date().toISOString().split('T')[0];
   
-  // Static pages (excluding /blog/ since it's marked as noindex)
+  // Static pages
   const staticPages = [
     { url: '/', priority: '1.0', changefreq: 'daily' },
+    { url: '/blog/', priority: '0.8', changefreq: 'weekly' },
     { url: '/category/gift-guides/', priority: '0.8', changefreq: 'weekly' },
     { url: '/category/gift-tips/', priority: '0.8', changefreq: 'weekly' },
     { url: '/privacy/', priority: '0.3', changefreq: 'monthly' },

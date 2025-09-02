@@ -13,10 +13,16 @@ export async function GET({ request, locals }: { request: any, locals: any }) {
       .sort((a: any, b: any) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
     
     if (publishedPosts.length === 0) {
-      return new Response(
-        JSON.stringify({ error: 'No published blog posts found' }),
-        { status: 404, headers: { 'Content-Type': 'application/json' } }
-      );
+          return new Response(
+      JSON.stringify({ error: 'No published blog posts found' }),
+      { 
+        status: 404, 
+        headers: { 
+          'Content-Type': 'application/json',
+          'X-Robots-Tag': 'noindex, nofollow'
+        } 
+      }
+    );
     }
     
     // Format all posts for the idea generation workflow
@@ -43,14 +49,27 @@ export async function GET({ request, locals }: { request: any, locals: any }) {
     
     return new Response(
       JSON.stringify(postsData),
-      { status: 200, headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' } }
+      { 
+        status: 200, 
+        headers: { 
+          'Content-Type': 'application/json', 
+          'Cache-Control': 'no-cache',
+          'X-Robots-Tag': 'noindex, nofollow'
+        } 
+      }
     );
     
   } catch (error) {
     console.error('Error fetching blog posts:', error);
     return new Response(
       JSON.stringify({ error: 'Failed to fetch blog posts' }),
-      { status: 500, headers: { 'Content-Type': 'application/json' } }
+      { 
+        status: 500, 
+        headers: { 
+          'Content-Type': 'application/json',
+          'X-Robots-Tag': 'noindex, nofollow'
+        } 
+      }
     );
   }
 }
