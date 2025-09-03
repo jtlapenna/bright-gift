@@ -1,0 +1,28 @@
+﻿2025-09-03T23:36:43.6334604Z ##[debug]Evaluating condition for step: 'Prepare failure context'
+2025-09-03T23:36:43.6336383Z ##[debug]Evaluating: failure()
+2025-09-03T23:36:43.6336730Z ##[debug]Evaluating failure:
+2025-09-03T23:36:43.6338471Z ##[debug]=> true
+2025-09-03T23:36:43.6338867Z ##[debug]Result: true
+2025-09-03T23:36:43.6339409Z ##[debug]Starting: Prepare failure context
+2025-09-03T23:36:43.6349563Z ##[debug]Loading inputs
+2025-09-03T23:36:43.6350709Z ##[debug]Loading env
+2025-09-03T23:36:43.6355758Z ##[group]Run echo "status=$(jq -r '.status? // empty' /tmp/resp.json 2>/dev/null || true)" >> $GITHUB_ENV
+2025-09-03T23:36:43.6356347Z [36;1mecho "status=$(jq -r '.status? // empty' /tmp/resp.json 2>/dev/null || true)" >> $GITHUB_ENV[0m
+2025-09-03T23:36:43.6356873Z [36;1mecho "body=$(cat /tmp/resp.json 2>/dev/null | head -c 4000 | sed 's/\n/ /g')" >> $GITHUB_ENV[0m
+2025-09-03T23:36:43.6388282Z shell: /usr/bin/bash -e {0}
+2025-09-03T23:36:43.6388506Z env:
+2025-09-03T23:36:43.6388703Z   BASE_URL: https://bright-gift.com
+2025-09-03T23:36:43.6388987Z   CHECK_PATH: /api/generate
+2025-09-03T23:36:43.6389192Z   TIMEOUT_SECONDS: 480
+2025-09-03T23:36:43.6389373Z   INTERVAL_SECONDS: 15
+2025-09-03T23:36:43.6389547Z ##[endgroup]
+2025-09-03T23:36:43.6420157Z ##[debug]/usr/bin/bash -e /home/runner/work/_temp/6f1a6b35-6707-4a63-8959-6de21ee9ebeb.sh
+2025-09-03T23:36:43.6521728Z ##[debug]status=''
+2025-09-03T23:36:43.6522058Z ##[debug]body='<!doctype html>'
+2025-09-03T23:36:43.6523381Z ##[error]Unable to process file command 'env' successfully.
+2025-09-03T23:36:43.6525159Z ##[error]Invalid format '<title>Redirecting to: /api/generate</title>'
+2025-09-03T23:36:43.6597811Z ##[debug]System.Exception: Invalid format '<title>Redirecting to: /api/generate</title>'
+2025-09-03T23:36:43.6598388Z ##[debug]   at GitHub.Runner.Worker.EnvFileKeyValuePairs.GetEnumerator()+MoveNext()
+2025-09-03T23:36:43.6599093Z ##[debug]   at GitHub.Runner.Worker.SetEnvFileCommand.ProcessCommand(IExecutionContext context, String filePath, ContainerInfo container)
+2025-09-03T23:36:43.6599939Z ##[debug]   at GitHub.Runner.Worker.FileCommandManager.ProcessFiles(IExecutionContext context, ContainerInfo container)
+2025-09-03T23:36:43.6603064Z ##[debug]Finishing: Prepare failure context

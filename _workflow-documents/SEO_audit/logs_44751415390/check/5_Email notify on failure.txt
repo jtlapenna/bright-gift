@@ -1,0 +1,141 @@
+﻿2025-09-03T23:36:43.6610277Z ##[debug]Evaluating condition for step: 'Email notify on failure'
+2025-09-03T23:36:43.6612112Z ##[debug]Evaluating: failure()
+2025-09-03T23:36:43.6612464Z ##[debug]Evaluating failure:
+2025-09-03T23:36:43.6612830Z ##[debug]=> true
+2025-09-03T23:36:43.6613124Z ##[debug]Result: true
+2025-09-03T23:36:43.6613679Z ##[debug]Starting: Email notify on failure
+2025-09-03T23:36:43.6648300Z ##[debug]Loading inputs
+2025-09-03T23:36:43.6663187Z ##[debug]Evaluating: secrets.SMTP_SERVER
+2025-09-03T23:36:43.6664007Z ##[debug]Evaluating Index:
+2025-09-03T23:36:43.6665921Z ##[debug]..Evaluating secrets:
+2025-09-03T23:36:43.6666871Z ##[debug]..=> Object
+2025-09-03T23:36:43.6672473Z ##[debug]..Evaluating String:
+2025-09-03T23:36:43.6673103Z ##[debug]..=> 'SMTP_SERVER'
+2025-09-03T23:36:43.6676631Z ##[debug]=> null
+2025-09-03T23:36:43.6677796Z ##[debug]Result: null
+2025-09-03T23:36:43.6680699Z ##[debug]Evaluating: secrets.SMTP_PORT
+2025-09-03T23:36:43.6680995Z ##[debug]Evaluating Index:
+2025-09-03T23:36:43.6681229Z ##[debug]..Evaluating secrets:
+2025-09-03T23:36:43.6681753Z ##[debug]..=> Object
+2025-09-03T23:36:43.6681980Z ##[debug]..Evaluating String:
+2025-09-03T23:36:43.6682232Z ##[debug]..=> 'SMTP_PORT'
+2025-09-03T23:36:43.6682554Z ##[debug]=> null
+2025-09-03T23:36:43.6682767Z ##[debug]Result: null
+2025-09-03T23:36:43.6683366Z ##[debug]Evaluating: secrets.SMTP_USERNAME
+2025-09-03T23:36:43.6683657Z ##[debug]Evaluating Index:
+2025-09-03T23:36:43.6683873Z ##[debug]..Evaluating secrets:
+2025-09-03T23:36:43.6684101Z ##[debug]..=> Object
+2025-09-03T23:36:43.6684294Z ##[debug]..Evaluating String:
+2025-09-03T23:36:43.6684561Z ##[debug]..=> 'SMTP_USERNAME'
+2025-09-03T23:36:43.6684781Z ##[debug]=> null
+2025-09-03T23:36:43.6684962Z ##[debug]Result: null
+2025-09-03T23:36:43.6685486Z ##[debug]Evaluating: secrets.SMTP_PASSWORD
+2025-09-03T23:36:43.6685747Z ##[debug]Evaluating Index:
+2025-09-03T23:36:43.6685964Z ##[debug]..Evaluating secrets:
+2025-09-03T23:36:43.6686220Z ##[debug]..=> Object
+2025-09-03T23:36:43.6686440Z ##[debug]..Evaluating String:
+2025-09-03T23:36:43.6686684Z ##[debug]..=> 'SMTP_PASSWORD'
+2025-09-03T23:36:43.6686903Z ##[debug]=> null
+2025-09-03T23:36:43.6687084Z ##[debug]Result: null
+2025-09-03T23:36:43.6687604Z ##[debug]Evaluating: secrets.TO_EMAIL
+2025-09-03T23:36:43.6687857Z ##[debug]Evaluating Index:
+2025-09-03T23:36:43.6688067Z ##[debug]..Evaluating secrets:
+2025-09-03T23:36:43.6688290Z ##[debug]..=> Object
+2025-09-03T23:36:43.6688501Z ##[debug]..Evaluating String:
+2025-09-03T23:36:43.6688710Z ##[debug]..=> 'TO_EMAIL'
+2025-09-03T23:36:43.6688920Z ##[debug]=> null
+2025-09-03T23:36:43.6689095Z ##[debug]Result: null
+2025-09-03T23:36:43.6694951Z ##[debug]Evaluating: (secrets.FROM_EMAIL || secrets.SMTP_USERNAME)
+2025-09-03T23:36:43.6695427Z ##[debug]Evaluating Or:
+2025-09-03T23:36:43.6697185Z ##[debug]..Evaluating Index:
+2025-09-03T23:36:43.6697483Z ##[debug]....Evaluating secrets:
+2025-09-03T23:36:43.6697783Z ##[debug]....=> Object
+2025-09-03T23:36:43.6698043Z ##[debug]....Evaluating String:
+2025-09-03T23:36:43.6698319Z ##[debug]....=> 'FROM_EMAIL'
+2025-09-03T23:36:43.6698595Z ##[debug]..=> null
+2025-09-03T23:36:43.6698833Z ##[debug]..Evaluating Index:
+2025-09-03T23:36:43.6699087Z ##[debug]....Evaluating secrets:
+2025-09-03T23:36:43.6699346Z ##[debug]....=> Object
+2025-09-03T23:36:43.6699591Z ##[debug]....Evaluating String:
+2025-09-03T23:36:43.6699850Z ##[debug]....=> 'SMTP_USERNAME'
+2025-09-03T23:36:43.6700398Z ##[debug]..=> null
+2025-09-03T23:36:43.6700660Z ##[debug]=> null
+2025-09-03T23:36:43.6703110Z ##[debug]Expanded: (null || null)
+2025-09-03T23:36:43.6703411Z ##[debug]Result: null
+2025-09-03T23:36:43.6708424Z ##[debug]Evaluating: format('Post-deploy health check failed for bright-gift.com
+2025-09-03T23:36:43.6708811Z ##[debug]
+2025-09-03T23:36:43.6708990Z ##[debug]Run: {0}/{1}/actions/runs/{2}
+2025-09-03T23:36:43.6709230Z ##[debug]Status: {3}
+2025-09-03T23:36:43.6709427Z ##[debug]Response (truncated): {4}
+2025-09-03T23:36:43.6709795Z ##[debug]', github.server_url, github.repository, github.run_id, env.status, env.body)
+2025-09-03T23:36:43.6710441Z ##[debug]Evaluating format:
+2025-09-03T23:36:43.6713911Z ##[debug]..Evaluating String:
+2025-09-03T23:36:43.6714289Z ##[debug]..=> 'Post-deploy health check failed for bright-gift.com
+2025-09-03T23:36:43.6714593Z ##[debug]
+2025-09-03T23:36:43.6714758Z ##[debug]Run: {0}/{1}/actions/runs/{2}
+2025-09-03T23:36:43.6714983Z ##[debug]Status: {3}
+2025-09-03T23:36:43.6715183Z ##[debug]Response (truncated): {4}
+2025-09-03T23:36:43.6715397Z ##[debug]'
+2025-09-03T23:36:43.6727252Z ##[debug]..Evaluating Index:
+2025-09-03T23:36:43.6727515Z ##[debug]....Evaluating github:
+2025-09-03T23:36:43.6727796Z ##[debug]....=> Object
+2025-09-03T23:36:43.6728026Z ##[debug]....Evaluating String:
+2025-09-03T23:36:43.6728254Z ##[debug]....=> 'server_url'
+2025-09-03T23:36:43.6728937Z ##[debug]..=> 'https://github.com'
+2025-09-03T23:36:43.6729721Z ##[debug]..Evaluating Index:
+2025-09-03T23:36:43.6729968Z ##[debug]....Evaluating github:
+2025-09-03T23:36:43.6730214Z ##[debug]....=> Object
+2025-09-03T23:36:43.6730428Z ##[debug]....Evaluating String:
+2025-09-03T23:36:43.6730674Z ##[debug]....=> 'repository'
+2025-09-03T23:36:43.6731254Z ##[debug]..=> 'jtlapenna/bright-gift'
+2025-09-03T23:36:43.6731734Z ##[debug]..Evaluating Index:
+2025-09-03T23:36:43.6731959Z ##[debug]....Evaluating github:
+2025-09-03T23:36:43.6732175Z ##[debug]....=> Object
+2025-09-03T23:36:43.6732383Z ##[debug]....Evaluating String:
+2025-09-03T23:36:43.6732599Z ##[debug]....=> 'run_id'
+2025-09-03T23:36:43.6732817Z ##[debug]..=> '17448182418'
+2025-09-03T23:36:43.6733036Z ##[debug]..Evaluating Index:
+2025-09-03T23:36:43.6733240Z ##[debug]....Evaluating env:
+2025-09-03T23:36:43.6733451Z ##[debug]....=> Object
+2025-09-03T23:36:43.6733650Z ##[debug]....Evaluating String:
+2025-09-03T23:36:43.6733866Z ##[debug]....=> 'status'
+2025-09-03T23:36:43.6735419Z ##[debug]..=> ''
+2025-09-03T23:36:43.6735686Z ##[debug]..Evaluating Index:
+2025-09-03T23:36:43.6735920Z ##[debug]....Evaluating env:
+2025-09-03T23:36:43.6736136Z ##[debug]....=> Object
+2025-09-03T23:36:43.6736345Z ##[debug]....Evaluating String:
+2025-09-03T23:36:43.6736627Z ##[debug]....=> 'body'
+2025-09-03T23:36:43.6736881Z ##[debug]..=> '<!doctype html>'
+2025-09-03T23:36:43.6737261Z ##[debug]=> 'Post-deploy health check failed for bright-gift.com
+2025-09-03T23:36:43.6737562Z ##[debug]
+2025-09-03T23:36:43.6737853Z ##[debug]Run: https://github.com/jtlapenna/bright-gift/actions/runs/17448182418
+2025-09-03T23:36:43.6738219Z ##[debug]Status: 
+2025-09-03T23:36:43.6738420Z ##[debug]Response (truncated): <!doctype html>
+2025-09-03T23:36:43.6738661Z ##[debug]'
+2025-09-03T23:36:43.6738935Z ##[debug]Result: 'Post-deploy health check failed for bright-gift.com
+2025-09-03T23:36:43.6739232Z ##[debug]
+2025-09-03T23:36:43.6739504Z ##[debug]Run: https://github.com/jtlapenna/bright-gift/actions/runs/17448182418
+2025-09-03T23:36:43.6739834Z ##[debug]Status: 
+2025-09-03T23:36:43.6740027Z ##[debug]Response (truncated): <!doctype html>
+2025-09-03T23:36:43.6740262Z ##[debug]'
+2025-09-03T23:36:43.6747708Z ##[debug]Loading env
+2025-09-03T23:36:43.6765380Z ##[group]Run dawidd6/action-send-mail@v3
+2025-09-03T23:36:43.6765658Z with:
+2025-09-03T23:36:43.6765887Z   subject: [BrightGift] Post-deploy health check FAILED
+2025-09-03T23:36:43.6766642Z   body: Post-deploy health check failed for bright-gift.com
+
+Run: https://github.com/jtlapenna/bright-gift/actions/runs/17448182418
+Status: 
+Response (truncated): <!doctype html>
+
+2025-09-03T23:36:43.6767507Z env:
+2025-09-03T23:36:43.6767685Z   BASE_URL: https://bright-gift.com
+2025-09-03T23:36:43.6767929Z   CHECK_PATH: /api/generate
+2025-09-03T23:36:43.6768133Z   TIMEOUT_SECONDS: 480
+2025-09-03T23:36:43.6768318Z   INTERVAL_SECONDS: 15
+2025-09-03T23:36:43.6768486Z   status: 
+2025-09-03T23:36:43.6768648Z   body: <!doctype html>
+2025-09-03T23:36:43.6768823Z ##[endgroup]
+2025-09-03T23:36:43.7552351Z ##[error]Input required and not supplied: from
+2025-09-03T23:36:43.7570017Z ##[debug]Node Action run completed with exit code 1
+2025-09-03T23:36:43.7631505Z ##[debug]Finishing: Email notify on failure

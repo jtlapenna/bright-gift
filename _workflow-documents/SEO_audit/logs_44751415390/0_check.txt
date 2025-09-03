@@ -1,0 +1,327 @@
+﻿2025-09-03T23:28:37.3650209Z ##[debug]Starting: check
+2025-09-03T23:28:37.3672214Z ##[debug]Cleaning runner temp folder: /home/runner/work/_temp
+2025-09-03T23:28:37.3769180Z ##[debug]Starting: Set up job
+2025-09-03T23:28:37.3770261Z Current runner version: '2.328.0'
+2025-09-03T23:28:37.3791085Z ##[group]Runner Image Provisioner
+2025-09-03T23:28:37.3792051Z Hosted Compute Agent
+2025-09-03T23:28:37.3792590Z Version: 20250829.383
+2025-09-03T23:28:37.3793299Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+2025-09-03T23:28:37.3794013Z Build Date: 2025-08-29T13:48:48Z
+2025-09-03T23:28:37.3794621Z ##[endgroup]
+2025-09-03T23:28:37.3795155Z ##[group]Operating System
+2025-09-03T23:28:37.3795743Z Ubuntu
+2025-09-03T23:28:37.3796207Z 24.04.3
+2025-09-03T23:28:37.3796661Z LTS
+2025-09-03T23:28:37.3797174Z ##[endgroup]
+2025-09-03T23:28:37.3797637Z ##[group]Runner Image
+2025-09-03T23:28:37.3798225Z Image: ubuntu-24.04
+2025-09-03T23:28:37.3798733Z Version: 20250831.1.0
+2025-09-03T23:28:37.3799756Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250831.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-03T23:28:37.3801600Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250831.1
+2025-09-03T23:28:37.3802502Z ##[endgroup]
+2025-09-03T23:28:37.3803643Z ##[group]GITHUB_TOKEN Permissions
+2025-09-03T23:28:37.3805422Z Contents: read
+2025-09-03T23:28:37.3805977Z Metadata: read
+2025-09-03T23:28:37.3806611Z Packages: read
+2025-09-03T23:28:37.3807130Z ##[endgroup]
+2025-09-03T23:28:37.3809970Z Secret source: Actions
+2025-09-03T23:28:37.3810836Z ##[debug]Primary repository: jtlapenna/bright-gift
+2025-09-03T23:28:37.3811773Z Prepare workflow directory
+2025-09-03T23:28:37.3882962Z ##[debug]Creating pipeline directory: '/home/runner/work/bright-gift'
+2025-09-03T23:28:37.3886385Z ##[debug]Creating workspace directory: '/home/runner/work/bright-gift/bright-gift'
+2025-09-03T23:28:37.3887976Z ##[debug]Update context data
+2025-09-03T23:28:37.3891230Z ##[debug]Evaluating job-level environment variables
+2025-09-03T23:28:37.4188785Z ##[debug]Evaluating job container
+2025-09-03T23:28:37.4192144Z ##[debug]Evaluating job service containers
+2025-09-03T23:28:37.4194675Z ##[debug]Evaluating job defaults
+2025-09-03T23:28:37.4219855Z Prepare all required actions
+2025-09-03T23:28:37.4257232Z Getting action download info
+2025-09-03T23:28:37.7922793Z Download action repository 'dawidd6/action-send-mail@v3' (SHA:4226df7daafa6fc901a43789c49bf7ab309066e7)
+2025-09-03T23:28:38.4846862Z ##[debug]Download 'https://api.github.com/repos/dawidd6/action-send-mail/tarball/4226df7daafa6fc901a43789c49bf7ab309066e7' to '/home/runner/work/_actions/_temp_7cead01f-fedb-4d76-a0ad-742c4e908671/9da3fc00-df41-44e1-a0cd-8cd90c457802.tar.gz'
+2025-09-03T23:28:38.6351130Z ##[debug]Unwrap 'dawidd6-action-send-mail-4226df7' to '/home/runner/work/_actions/dawidd6/action-send-mail/v3'
+2025-09-03T23:28:38.6890834Z ##[debug]Archive '/home/runner/work/_actions/_temp_7cead01f-fedb-4d76-a0ad-742c4e908671/9da3fc00-df41-44e1-a0cd-8cd90c457802.tar.gz' has been unzipped into '/home/runner/work/_actions/dawidd6/action-send-mail/v3'.
+2025-09-03T23:28:38.7064553Z ##[debug]action.yml for action: '/home/runner/work/_actions/dawidd6/action-send-mail/v3/action.yml'.
+2025-09-03T23:28:38.7428535Z ##[debug]Set step '__run' display name to: 'Poll generator until healthy or timeout'
+2025-09-03T23:28:38.7432201Z ##[debug]Set step '__run_2' display name to: 'Validate response shape'
+2025-09-03T23:28:38.7434809Z ##[debug]Set step '__run_3' display name to: 'Prepare failure context'
+2025-09-03T23:28:38.7437065Z ##[debug]Set step '__dawidd6_action-send-mail' display name to: 'Email notify on failure'
+2025-09-03T23:28:38.7438065Z Complete job name: check
+2025-09-03T23:28:38.7534388Z ##[debug]Collect running processes for tracking orphan processes.
+2025-09-03T23:28:38.7747578Z ##[debug]Finishing: Set up job
+2025-09-03T23:28:38.7865168Z ##[debug]Evaluating condition for step: 'Poll generator until healthy or timeout'
+2025-09-03T23:28:38.7950337Z ##[debug]Evaluating: success()
+2025-09-03T23:28:38.7955845Z ##[debug]Evaluating success:
+2025-09-03T23:28:38.7974862Z ##[debug]=> true
+2025-09-03T23:28:38.7980942Z ##[debug]Result: true
+2025-09-03T23:28:38.8004791Z ##[debug]Starting: Poll generator until healthy or timeout
+2025-09-03T23:28:38.8099568Z ##[debug]Loading inputs
+2025-09-03T23:28:38.8105659Z ##[debug]Loading env
+2025-09-03T23:28:38.8175132Z ##[group]Run set -euo pipefail
+2025-09-03T23:28:38.8175788Z [36;1mset -euo pipefail[0m
+2025-09-03T23:28:38.8176305Z [36;1mstart=$(date +%s)[0m
+2025-09-03T23:28:38.8176810Z [36;1mstatus=""[0m
+2025-09-03T23:28:38.8177251Z [36;1mreason=""[0m
+2025-09-03T23:28:38.8177698Z [36;1mwhile true; do[0m
+2025-09-03T23:28:38.8178455Z [36;1m  status=$(curl -s -o /tmp/resp.json -w "%{http_code}" -X POST "${BASE_URL}${CHECK_PATH}" \[0m
+2025-09-03T23:28:38.8179397Z [36;1m    -H 'content-type: application/json' \[0m
+2025-09-03T23:28:38.8180323Z [36;1m    --data '{"recipient":"friend","interests":"books","budget":"25","styles":["book-lover"]}') || true[0m
+2025-09-03T23:28:38.8181242Z [36;1m  if [[ "$status" == "200" ]]; then[0m
+2025-09-03T23:28:38.8182010Z [36;1m    echo "Generator healthy (200)."[0m
+2025-09-03T23:28:38.8182813Z [36;1m    cat /tmp/resp.json | jq -e '.ideas and (.ideas | type=="array")' >/dev/null[0m
+2025-09-03T23:28:38.8183562Z [36;1m    break[0m
+2025-09-03T23:28:38.8183982Z [36;1m  fi[0m
+2025-09-03T23:28:38.8184591Z [36;1m  # If body includes our quota signal, fail immediately (tool unusable)[0m
+2025-09-03T23:28:38.8185499Z [36;1m  if grep -q "OPENAI_QUOTA_REACHED" /tmp/resp.json 2>/dev/null; then[0m
+2025-09-03T23:28:38.8186414Z [36;1m    echo "Detected quota exhaustion in response body. Failing early."[0m
+2025-09-03T23:28:38.8187145Z [36;1m    exit 1[0m
+2025-09-03T23:28:38.8187568Z [36;1m  fi[0m
+2025-09-03T23:28:38.8187990Z [36;1m  now=$(date +%s)[0m
+2025-09-03T23:28:38.8188482Z [36;1m  elapsed=$((now-start))[0m
+2025-09-03T23:28:38.8189227Z [36;1m  echo "Status=$status after ${elapsed}s. Retrying in ${INTERVAL_SECONDS}s..."[0m
+2025-09-03T23:28:38.8190061Z [36;1m  if [[ $elapsed -ge ${TIMEOUT_SECONDS} ]]; then[0m
+2025-09-03T23:28:38.8190856Z [36;1m    echo "Timed out after ${TIMEOUT_SECONDS}s waiting for healthy status."[0m
+2025-09-03T23:28:38.8191722Z [36;1m    cat /tmp/resp.json || true[0m
+2025-09-03T23:28:38.8192252Z [36;1m    exit 1[0m
+2025-09-03T23:28:38.8192676Z [36;1m  fi[0m
+2025-09-03T23:28:38.8193103Z [36;1m  sleep ${INTERVAL_SECONDS}[0m
+2025-09-03T23:28:38.8193627Z [36;1mdone[0m
+2025-09-03T23:28:38.8257812Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-03T23:28:38.8258881Z env:
+2025-09-03T23:28:38.8259339Z   BASE_URL: https://bright-gift.com
+2025-09-03T23:28:38.8259899Z   CHECK_PATH: /api/generate
+2025-09-03T23:28:38.8260384Z   TIMEOUT_SECONDS: 480
+2025-09-03T23:28:38.8260856Z   INTERVAL_SECONDS: 15
+2025-09-03T23:28:38.8261296Z ##[endgroup]
+2025-09-03T23:28:38.8333459Z ##[debug]/usr/bin/bash --noprofile --norc -e -o pipefail /home/runner/work/_temp/98a653e1-ce86-4eb2-b1e9-01556d63fe5b.sh
+2025-09-03T23:28:39.0562528Z Status=308 after 1s. Retrying in 15s...
+2025-09-03T23:28:54.4184691Z Status=308 after 16s. Retrying in 15s...
+2025-09-03T23:29:09.5459205Z Status=308 after 31s. Retrying in 15s...
+2025-09-03T23:29:24.6499299Z Status=308 after 46s. Retrying in 15s...
+2025-09-03T23:29:39.7528138Z Status=308 after 61s. Retrying in 15s...
+2025-09-03T23:29:54.8949952Z Status=308 after 76s. Retrying in 15s...
+2025-09-03T23:30:10.0968352Z Status=308 after 92s. Retrying in 15s...
+2025-09-03T23:30:25.2405331Z Status=308 after 107s. Retrying in 15s...
+2025-09-03T23:30:40.3338974Z Status=308 after 122s. Retrying in 15s...
+2025-09-03T23:30:55.4591280Z Status=308 after 137s. Retrying in 15s...
+2025-09-03T23:31:10.7873397Z Status=308 after 152s. Retrying in 15s...
+2025-09-03T23:31:25.8952396Z Status=308 after 167s. Retrying in 15s...
+2025-09-03T23:31:41.0268495Z Status=308 after 183s. Retrying in 15s...
+2025-09-03T23:31:56.1195742Z Status=308 after 198s. Retrying in 15s...
+2025-09-03T23:32:11.2396532Z Status=308 after 213s. Retrying in 15s...
+2025-09-03T23:32:26.3775446Z Status=308 after 228s. Retrying in 15s...
+2025-09-03T23:32:41.5906452Z Status=308 after 243s. Retrying in 15s...
+2025-09-03T23:32:56.7099744Z Status=308 after 258s. Retrying in 15s...
+2025-09-03T23:33:11.7937161Z Status=308 after 273s. Retrying in 15s...
+2025-09-03T23:33:26.9005253Z Status=308 after 288s. Retrying in 15s...
+2025-09-03T23:33:41.9980395Z Status=308 after 303s. Retrying in 15s...
+2025-09-03T23:33:57.0973233Z Status=308 after 319s. Retrying in 15s...
+2025-09-03T23:34:12.1898368Z Status=308 after 334s. Retrying in 15s...
+2025-09-03T23:34:27.3100946Z Status=308 after 349s. Retrying in 15s...
+2025-09-03T23:34:42.4420161Z Status=308 after 364s. Retrying in 15s...
+2025-09-03T23:34:57.5457046Z Status=308 after 379s. Retrying in 15s...
+2025-09-03T23:35:12.6312528Z Status=308 after 394s. Retrying in 15s...
+2025-09-03T23:35:27.7338710Z Status=308 after 409s. Retrying in 15s...
+2025-09-03T23:35:42.8449095Z Status=308 after 424s. Retrying in 15s...
+2025-09-03T23:35:57.9759860Z Status=308 after 439s. Retrying in 15s...
+2025-09-03T23:36:13.2729610Z Status=308 after 455s. Retrying in 15s...
+2025-09-03T23:36:28.4393150Z Status=308 after 470s. Retrying in 15s...
+2025-09-03T23:36:43.6224290Z Status=308 after 485s. Retrying in 15s...
+2025-09-03T23:36:43.6224992Z Timed out after 480s waiting for healthy status.
+2025-09-03T23:36:43.6232948Z <!doctype html>
+2025-09-03T23:36:43.6233391Z <title>Redirecting to: /api/generate</title>
+2025-09-03T23:36:43.6233984Z <meta http-equiv="refresh" content="0;url=/api/generate">
+2025-09-03T23:36:43.6234542Z <meta name="robots" content="noindex">
+2025-09-03T23:36:43.6235000Z <link rel="canonical" href="/api/generate/">
+2025-09-03T23:36:43.6235435Z <body>
+2025-09-03T23:36:43.6236528Z 	<a href="/api/generate">Redirecting from <code>https://bright-gift.com/api/generate</code> to <code>/api/generate</code></a>
+2025-09-03T23:36:43.6237791Z </body>
+2025-09-03T23:36:43.6254820Z ##[error]Process completed with exit code 1.
+2025-09-03T23:36:43.6302414Z ##[debug]Finishing: Poll generator until healthy or timeout
+2025-09-03T23:36:43.6324330Z ##[debug]Evaluating condition for step: 'Validate response shape'
+2025-09-03T23:36:43.6327731Z ##[debug]Evaluating: success()
+2025-09-03T23:36:43.6328096Z ##[debug]Evaluating success:
+2025-09-03T23:36:43.6328519Z ##[debug]=> false
+2025-09-03T23:36:43.6328933Z ##[debug]Result: false
+2025-09-03T23:36:43.6334612Z ##[debug]Evaluating condition for step: 'Prepare failure context'
+2025-09-03T23:36:43.6336389Z ##[debug]Evaluating: failure()
+2025-09-03T23:36:43.6336732Z ##[debug]Evaluating failure:
+2025-09-03T23:36:43.6338478Z ##[debug]=> true
+2025-09-03T23:36:43.6338870Z ##[debug]Result: true
+2025-09-03T23:36:43.6339412Z ##[debug]Starting: Prepare failure context
+2025-09-03T23:36:43.6349572Z ##[debug]Loading inputs
+2025-09-03T23:36:43.6350715Z ##[debug]Loading env
+2025-09-03T23:36:43.6355766Z ##[group]Run echo "status=$(jq -r '.status? // empty' /tmp/resp.json 2>/dev/null || true)" >> $GITHUB_ENV
+2025-09-03T23:36:43.6356349Z [36;1mecho "status=$(jq -r '.status? // empty' /tmp/resp.json 2>/dev/null || true)" >> $GITHUB_ENV[0m
+2025-09-03T23:36:43.6356875Z [36;1mecho "body=$(cat /tmp/resp.json 2>/dev/null | head -c 4000 | sed 's/\n/ /g')" >> $GITHUB_ENV[0m
+2025-09-03T23:36:43.6388289Z shell: /usr/bin/bash -e {0}
+2025-09-03T23:36:43.6388509Z env:
+2025-09-03T23:36:43.6388739Z   BASE_URL: https://bright-gift.com
+2025-09-03T23:36:43.6388989Z   CHECK_PATH: /api/generate
+2025-09-03T23:36:43.6389195Z   TIMEOUT_SECONDS: 480
+2025-09-03T23:36:43.6389375Z   INTERVAL_SECONDS: 15
+2025-09-03T23:36:43.6389549Z ##[endgroup]
+2025-09-03T23:36:43.6420167Z ##[debug]/usr/bin/bash -e /home/runner/work/_temp/6f1a6b35-6707-4a63-8959-6de21ee9ebeb.sh
+2025-09-03T23:36:43.6521744Z ##[debug]status=''
+2025-09-03T23:36:43.6522061Z ##[debug]body='<!doctype html>'
+2025-09-03T23:36:43.6523391Z ##[error]Unable to process file command 'env' successfully.
+2025-09-03T23:36:43.6525166Z ##[error]Invalid format '<title>Redirecting to: /api/generate</title>'
+2025-09-03T23:36:43.6597823Z ##[debug]System.Exception: Invalid format '<title>Redirecting to: /api/generate</title>'
+2025-09-03T23:36:43.6598391Z ##[debug]   at GitHub.Runner.Worker.EnvFileKeyValuePairs.GetEnumerator()+MoveNext()
+2025-09-03T23:36:43.6599114Z ##[debug]   at GitHub.Runner.Worker.SetEnvFileCommand.ProcessCommand(IExecutionContext context, String filePath, ContainerInfo container)
+2025-09-03T23:36:43.6599941Z ##[debug]   at GitHub.Runner.Worker.FileCommandManager.ProcessFiles(IExecutionContext context, ContainerInfo container)
+2025-09-03T23:36:43.6603071Z ##[debug]Finishing: Prepare failure context
+2025-09-03T23:36:43.6610290Z ##[debug]Evaluating condition for step: 'Email notify on failure'
+2025-09-03T23:36:43.6612118Z ##[debug]Evaluating: failure()
+2025-09-03T23:36:43.6612466Z ##[debug]Evaluating failure:
+2025-09-03T23:36:43.6612832Z ##[debug]=> true
+2025-09-03T23:36:43.6613132Z ##[debug]Result: true
+2025-09-03T23:36:43.6613682Z ##[debug]Starting: Email notify on failure
+2025-09-03T23:36:43.6648308Z ##[debug]Loading inputs
+2025-09-03T23:36:43.6663198Z ##[debug]Evaluating: secrets.SMTP_SERVER
+2025-09-03T23:36:43.6664013Z ##[debug]Evaluating Index:
+2025-09-03T23:36:43.6665930Z ##[debug]..Evaluating secrets:
+2025-09-03T23:36:43.6666878Z ##[debug]..=> Object
+2025-09-03T23:36:43.6672488Z ##[debug]..Evaluating String:
+2025-09-03T23:36:43.6673108Z ##[debug]..=> 'SMTP_SERVER'
+2025-09-03T23:36:43.6676639Z ##[debug]=> null
+2025-09-03T23:36:43.6677802Z ##[debug]Result: null
+2025-09-03T23:36:43.6680708Z ##[debug]Evaluating: secrets.SMTP_PORT
+2025-09-03T23:36:43.6680998Z ##[debug]Evaluating Index:
+2025-09-03T23:36:43.6681276Z ##[debug]..Evaluating secrets:
+2025-09-03T23:36:43.6681756Z ##[debug]..=> Object
+2025-09-03T23:36:43.6681982Z ##[debug]..Evaluating String:
+2025-09-03T23:36:43.6682234Z ##[debug]..=> 'SMTP_PORT'
+2025-09-03T23:36:43.6682557Z ##[debug]=> null
+2025-09-03T23:36:43.6682770Z ##[debug]Result: null
+2025-09-03T23:36:43.6683370Z ##[debug]Evaluating: secrets.SMTP_USERNAME
+2025-09-03T23:36:43.6683660Z ##[debug]Evaluating Index:
+2025-09-03T23:36:43.6683875Z ##[debug]..Evaluating secrets:
+2025-09-03T23:36:43.6684103Z ##[debug]..=> Object
+2025-09-03T23:36:43.6684304Z ##[debug]..Evaluating String:
+2025-09-03T23:36:43.6684564Z ##[debug]..=> 'SMTP_USERNAME'
+2025-09-03T23:36:43.6684783Z ##[debug]=> null
+2025-09-03T23:36:43.6684964Z ##[debug]Result: null
+2025-09-03T23:36:43.6685490Z ##[debug]Evaluating: secrets.SMTP_PASSWORD
+2025-09-03T23:36:43.6685750Z ##[debug]Evaluating Index:
+2025-09-03T23:36:43.6685966Z ##[debug]..Evaluating secrets:
+2025-09-03T23:36:43.6686222Z ##[debug]..=> Object
+2025-09-03T23:36:43.6686450Z ##[debug]..Evaluating String:
+2025-09-03T23:36:43.6686686Z ##[debug]..=> 'SMTP_PASSWORD'
+2025-09-03T23:36:43.6686904Z ##[debug]=> null
+2025-09-03T23:36:43.6687086Z ##[debug]Result: null
+2025-09-03T23:36:43.6687607Z ##[debug]Evaluating: secrets.TO_EMAIL
+2025-09-03T23:36:43.6687859Z ##[debug]Evaluating Index:
+2025-09-03T23:36:43.6688069Z ##[debug]..Evaluating secrets:
+2025-09-03T23:36:43.6688292Z ##[debug]..=> Object
+2025-09-03T23:36:43.6688503Z ##[debug]..Evaluating String:
+2025-09-03T23:36:43.6688712Z ##[debug]..=> 'TO_EMAIL'
+2025-09-03T23:36:43.6688922Z ##[debug]=> null
+2025-09-03T23:36:43.6689097Z ##[debug]Result: null
+2025-09-03T23:36:43.6694961Z ##[debug]Evaluating: (secrets.FROM_EMAIL || secrets.SMTP_USERNAME)
+2025-09-03T23:36:43.6695430Z ##[debug]Evaluating Or:
+2025-09-03T23:36:43.6697192Z ##[debug]..Evaluating Index:
+2025-09-03T23:36:43.6697485Z ##[debug]....Evaluating secrets:
+2025-09-03T23:36:43.6697785Z ##[debug]....=> Object
+2025-09-03T23:36:43.6698045Z ##[debug]....Evaluating String:
+2025-09-03T23:36:43.6698333Z ##[debug]....=> 'FROM_EMAIL'
+2025-09-03T23:36:43.6698597Z ##[debug]..=> null
+2025-09-03T23:36:43.6698834Z ##[debug]..Evaluating Index:
+2025-09-03T23:36:43.6699089Z ##[debug]....Evaluating secrets:
+2025-09-03T23:36:43.6699348Z ##[debug]....=> Object
+2025-09-03T23:36:43.6699593Z ##[debug]....Evaluating String:
+2025-09-03T23:36:43.6699851Z ##[debug]....=> 'SMTP_USERNAME'
+2025-09-03T23:36:43.6700400Z ##[debug]..=> null
+2025-09-03T23:36:43.6700663Z ##[debug]=> null
+2025-09-03T23:36:43.6703119Z ##[debug]Expanded: (null || null)
+2025-09-03T23:36:43.6703414Z ##[debug]Result: null
+2025-09-03T23:36:43.6708433Z ##[debug]Evaluating: format('Post-deploy health check failed for bright-gift.com
+2025-09-03T23:36:43.6708814Z ##[debug]
+2025-09-03T23:36:43.6708992Z ##[debug]Run: {0}/{1}/actions/runs/{2}
+2025-09-03T23:36:43.6709232Z ##[debug]Status: {3}
+2025-09-03T23:36:43.6709429Z ##[debug]Response (truncated): {4}
+2025-09-03T23:36:43.6710045Z ##[debug]', github.server_url, github.repository, github.run_id, env.status, env.body)
+2025-09-03T23:36:43.6710444Z ##[debug]Evaluating format:
+2025-09-03T23:36:43.6713920Z ##[debug]..Evaluating String:
+2025-09-03T23:36:43.6714293Z ##[debug]..=> 'Post-deploy health check failed for bright-gift.com
+2025-09-03T23:36:43.6714596Z ##[debug]
+2025-09-03T23:36:43.6714761Z ##[debug]Run: {0}/{1}/actions/runs/{2}
+2025-09-03T23:36:43.6714986Z ##[debug]Status: {3}
+2025-09-03T23:36:43.6715186Z ##[debug]Response (truncated): {4}
+2025-09-03T23:36:43.6715399Z ##[debug]'
+2025-09-03T23:36:43.6727261Z ##[debug]..Evaluating Index:
+2025-09-03T23:36:43.6727518Z ##[debug]....Evaluating github:
+2025-09-03T23:36:43.6727800Z ##[debug]....=> Object
+2025-09-03T23:36:43.6728028Z ##[debug]....Evaluating String:
+2025-09-03T23:36:43.6728256Z ##[debug]....=> 'server_url'
+2025-09-03T23:36:43.6728941Z ##[debug]..=> 'https://github.com'
+2025-09-03T23:36:43.6729726Z ##[debug]..Evaluating Index:
+2025-09-03T23:36:43.6729970Z ##[debug]....Evaluating github:
+2025-09-03T23:36:43.6730216Z ##[debug]....=> Object
+2025-09-03T23:36:43.6730443Z ##[debug]....Evaluating String:
+2025-09-03T23:36:43.6730677Z ##[debug]....=> 'repository'
+2025-09-03T23:36:43.6731258Z ##[debug]..=> 'jtlapenna/bright-gift'
+2025-09-03T23:36:43.6731737Z ##[debug]..Evaluating Index:
+2025-09-03T23:36:43.6731961Z ##[debug]....Evaluating github:
+2025-09-03T23:36:43.6732177Z ##[debug]....=> Object
+2025-09-03T23:36:43.6732385Z ##[debug]....Evaluating String:
+2025-09-03T23:36:43.6732601Z ##[debug]....=> 'run_id'
+2025-09-03T23:36:43.6732819Z ##[debug]..=> '17448182418'
+2025-09-03T23:36:43.6733039Z ##[debug]..Evaluating Index:
+2025-09-03T23:36:43.6733242Z ##[debug]....Evaluating env:
+2025-09-03T23:36:43.6733454Z ##[debug]....=> Object
+2025-09-03T23:36:43.6733651Z ##[debug]....Evaluating String:
+2025-09-03T23:36:43.6733868Z ##[debug]....=> 'status'
+2025-09-03T23:36:43.6735427Z ##[debug]..=> ''
+2025-09-03T23:36:43.6735688Z ##[debug]..Evaluating Index:
+2025-09-03T23:36:43.6735922Z ##[debug]....Evaluating env:
+2025-09-03T23:36:43.6736138Z ##[debug]....=> Object
+2025-09-03T23:36:43.6736357Z ##[debug]....Evaluating String:
+2025-09-03T23:36:43.6736629Z ##[debug]....=> 'body'
+2025-09-03T23:36:43.6736883Z ##[debug]..=> '<!doctype html>'
+2025-09-03T23:36:43.6737264Z ##[debug]=> 'Post-deploy health check failed for bright-gift.com
+2025-09-03T23:36:43.6737565Z ##[debug]
+2025-09-03T23:36:43.6737856Z ##[debug]Run: https://github.com/jtlapenna/bright-gift/actions/runs/17448182418
+2025-09-03T23:36:43.6738222Z ##[debug]Status: 
+2025-09-03T23:36:43.6738422Z ##[debug]Response (truncated): <!doctype html>
+2025-09-03T23:36:43.6738663Z ##[debug]'
+2025-09-03T23:36:43.6738938Z ##[debug]Result: 'Post-deploy health check failed for bright-gift.com
+2025-09-03T23:36:43.6739234Z ##[debug]
+2025-09-03T23:36:43.6739506Z ##[debug]Run: https://github.com/jtlapenna/bright-gift/actions/runs/17448182418
+2025-09-03T23:36:43.6739836Z ##[debug]Status: 
+2025-09-03T23:36:43.6740029Z ##[debug]Response (truncated): <!doctype html>
+2025-09-03T23:36:43.6740264Z ##[debug]'
+2025-09-03T23:36:43.6747722Z ##[debug]Loading env
+2025-09-03T23:36:43.6765392Z ##[group]Run dawidd6/action-send-mail@v3
+2025-09-03T23:36:43.6765661Z with:
+2025-09-03T23:36:43.6765890Z   subject: [BrightGift] Post-deploy health check FAILED
+2025-09-03T23:36:43.6766648Z   body: Post-deploy health check failed for bright-gift.com
+
+Run: https://github.com/jtlapenna/bright-gift/actions/runs/17448182418
+Status: 
+Response (truncated): <!doctype html>
+
+2025-09-03T23:36:43.6767510Z env:
+2025-09-03T23:36:43.6767688Z   BASE_URL: https://bright-gift.com
+2025-09-03T23:36:43.6767932Z   CHECK_PATH: /api/generate
+2025-09-03T23:36:43.6768135Z   TIMEOUT_SECONDS: 480
+2025-09-03T23:36:43.6768320Z   INTERVAL_SECONDS: 15
+2025-09-03T23:36:43.6768488Z   status: 
+2025-09-03T23:36:43.6768650Z   body: <!doctype html>
+2025-09-03T23:36:43.6768825Z ##[endgroup]
+2025-09-03T23:36:43.7552379Z ##[error]Input required and not supplied: from
+2025-09-03T23:36:43.7570033Z ##[debug]Node Action run completed with exit code 1
+2025-09-03T23:36:43.7631727Z ##[debug]Finishing: Email notify on failure
+2025-09-03T23:36:43.7670639Z ##[debug]Starting: Complete job
+2025-09-03T23:36:43.7672454Z Uploading runner diagnostic logs
+2025-09-03T23:36:43.7684051Z ##[debug]Starting diagnostic file upload.
+2025-09-03T23:36:43.7684375Z ##[debug]Setting up diagnostic log folders.
+2025-09-03T23:36:43.7685972Z ##[debug]Creating diagnostic log files folder.
+2025-09-03T23:36:43.7694024Z ##[debug]Copying 1 worker diagnostic logs.
+2025-09-03T23:36:43.7701254Z ##[debug]Copying 1 runner diagnostic logs.
+2025-09-03T23:36:43.7702620Z ##[debug]Zipping diagnostic files.
+2025-09-03T23:36:43.7774862Z ##[debug]Uploading diagnostic metadata file.
+2025-09-03T23:36:43.7805348Z ##[debug]Diagnostic file upload complete.
+2025-09-03T23:36:43.7805857Z Completed runner diagnostic log upload
+2025-09-03T23:36:43.7806121Z Cleaning up orphan processes
+2025-09-03T23:36:43.7978975Z ##[debug]Finishing: Complete job
+2025-09-03T23:36:43.8009232Z ##[debug]Finishing: check

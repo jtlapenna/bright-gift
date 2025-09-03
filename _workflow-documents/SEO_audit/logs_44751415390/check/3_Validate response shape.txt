@@ -1,0 +1,5 @@
+﻿2025-09-03T23:36:43.6324321Z ##[debug]Evaluating condition for step: 'Validate response shape'
+2025-09-03T23:36:43.6327725Z ##[debug]Evaluating: success()
+2025-09-03T23:36:43.6328094Z ##[debug]Evaluating success:
+2025-09-03T23:36:43.6328515Z ##[debug]=> false
+2025-09-03T23:36:43.6328931Z ##[debug]Result: false
