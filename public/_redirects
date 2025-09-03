@@ -1,11 +1,6 @@
 # Cloudflare Pages redirects file
-# Redirect non-trailing slash URLs to trailing slash versions (except static files)
-
-# Blog posts
-/blog/* /blog/:splat/ 301
-
-# Category pages  
-/category/* /category/:splat/ 301
+# Let Astro middleware handle trailing slash redirects
+# Only handle specific static pages that need explicit redirects
 
 # Static pages
 /privacy /privacy/ 301
@@ -15,5 +10,5 @@
 # OAuth callback
 /oauth/callback /oauth/callback/ 301
 
-# Exclude static directories from redirects
+# Care-calculator (static directory)
 /care-calculator /care-calculator/ 301
