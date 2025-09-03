@@ -22,7 +22,7 @@ export const onRequest: MiddlewareHandler = (context, next) => {
     url.pathname.startsWith('/images/') ||
     url.pathname.startsWith('/icons/') ||
     url.pathname.startsWith('/placeholders/') ||
-    url.pathname.startsWith('/care-calculator/') ||
+    url.pathname.startsWith('/care-calculator') ||
     url.pathname === '/robots.txt' ||
     url.pathname === '/sitemap.xml' ||
     url.pathname === '/favicon.svg'
