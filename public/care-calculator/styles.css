@@ -30,6 +30,14 @@
   --text-3xl: 28px;
 }
 
+.sync-group { display:flex; align-items:center; gap:12px; padding:10px 12px; border-radius:12px; background:#f6f7f9; margin-top:12px; }
+.sync-label { font-weight:600; opacity:.7; }
+.sync-buttons { display:flex; gap:8px; }
+.sync-group .sync-btn { padding:10px 14px; }
+.sync-btn.pull { background:#eef3ff; }
+.sync-btn.push { background:#eafaf0; }
+
+
 /* RESET AND BASE STYLES */
 * {
   box-sizing: border-box;
@@ -1298,3 +1306,12 @@ select:focus-visible {
 .block.has-toolbar { z-index: 300; }
 .owner-toolbar { z-index: 500; }
 
+
+/* SYNC CONTROLS */
+.sync-group { display:flex; align-items:center; gap:10px; }
+.sync-label { font-size: var(--text-sm); font-weight:700; color:#374151; letter-spacing:0.02em; }
+.sync-buttons { display:inline-flex; gap:8px; }
+.sync-btn { padding:8px 14px; font-weight:600; border-radius:8px; color:#fff; min-height: var(--touch-min); }
+.sync-btn.pull { background:#3b82f6; }
+.sync-btn.push { background:#22c55e; }
+.sync-btn:hover { filter: brightness(0.95); }

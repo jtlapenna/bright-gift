@@ -193,6 +193,9 @@ const startMin = 5*60, endMin = 22*60, totalMin = endMin - startMin; // 5AM-10PM
         items.push({ id:'nap1', title:'First nap',  kind:'range', owner:'free', isDefault:true, startMin: 9*60 + 50, endMin: 11*60 });
         items.push({ id:'nap2', title:'Second nap', kind:'range', owner:'free', isDefault:true, startMin: 14*60 + 50, endMin: 16*60 + 20 });
         items.push({ id:'bed',  title:'Bed time',   kind:'point', owner:'free', isDefault:true, startMin: 19*60 + 50, endMin: 19*60 + 50 });
+        // Insert Jeff/John default shifts between wake and first nap
+        items.push({ id:'def-jeff-1', title:'Jeff shift', kind:'range', owner:'jeff', isDefault:true, startMin: 7*60+15, endMin: 9*60+25 });
+        items.push({ id:'def-john-1', title:'John shift', kind:'range', owner:'john', isDefault:true, startMin: 9*60+25, endMin: 9*60+50 });
         items._seeded = true;
     }
     
@@ -214,18 +217,6 @@ const startMin = 5*60, endMin = 22*60, totalMin = endMin - startMin; // 5AM-10PM
         const bottom = snap(minutesToY(it.endMin));
         let height = Math.max(12, bottom - top || 12);
         let adjustedTop = top;
-        
-        // If this is a range block and the visual height would be smaller than
-        // our minimum (12px), anchor the block to its bottom so that the end time
-        // stays exact. This prevents a short block from visually overlapping the
-        // next block that starts immediately after it.
-        if (it.kind !== 'point') {
-            const actual = bottom - top;
-            if (actual < 12) {
-                adjustedTop = bottom - 12;
-                height = 12;
-            }
-        }
         
         // For point items, position so the bottom edge represents the time
         if (it.kind === 'point') {
@@ -288,7 +279,7 @@ const startMin = 5*60, endMin = 22*60, totalMin = endMin - startMin; // 5AM-10PM
         el.addEventListener('pointerup', (e)=>{
             if (moved) return;
             if (it.kind!=='range') return; // do not open for wake/bed
-            // e.stopPropagation(); // allow window pointerup to end any drag
+            e.stopPropagation();
             e.preventDefault();
             showOwnerToolbar(el, it);
         });
@@ -833,32 +824,13 @@ function bindResize(ht, hb, el, item, minutesToY, snap, topPad, innerHeight, sta
 
 // WAKE WINDOW BOUNDARY FUNCTION
 function getWakeWindowBoundaries(item) {
-    // Allow wake/bed to move freely within the day bounds,
-    // while all other items are clamped to the current wake→bed window.
-    const items = window.v1Items || [];
-    const wake = items.find(i => i && i.id === 'wake');
-    const bed  = items.find(i => i && i.id === 'bed');
-
-    const DAY_START = 5*60;   // 5:00 AM
-    const DAY_END   = 22*60;  // 10:00 PM
-
-    if (item && item.id === 'wake') {
-        // Wake can move anywhere from the day start up to the current bed time
-        const end = bed ? bed.startMin : DAY_END;
-        return { start: DAY_START, end };
-    }
-    if (item && item.id === 'bed') {
-        // Bed can move anywhere from the current wake time up to the day end
-        const start = wake ? wake.startMin : DAY_START;
-        return { start, end: DAY_END };
-    }
-
-    // For all other blocks, clamp to the current wake→bed window
-    const start = wake ? wake.startMin : DAY_START;
-    const end   = bed  ? bed.startMin  : DAY_END;
+    // Inclusive wake/bed boundaries; prevent crossing bed and pre-wake
+    const wake = (window.v1Items || []).find(i => i.id === 'wake');
+    const bed  = (window.v1Items || []).find(i => i.id === 'bed');
+    const start = wake ? wake.startMin : 5*60;
+    const end   = bed  ? bed.startMin  : 22*60;
     return { start, end };
 }
-
 // OVERLAP DETECTION
 function checkForOverlaps(excludeId, startMin, endMin) {
     const otherBlocks = window.v1Items?.filter(item => item.id !== excludeId) || [];
@@ -945,7 +917,7 @@ function resetAllData() {
     window.johnLoggedMinutes = 0;
     
     // Reset settings to defaults
-    document.getElementById('jeffExtra').value = -25;
+    document.getElementById('jeffExtra').value = 0;
     document.getElementById('johnExtra').value = 25;
     
     // Reset day mode to Full
@@ -978,7 +950,27 @@ function resetAllData() {
             startMin: 7 * 60 + 15, // 7:15 AM
             endMin: 7 * 60 + 15,
             isDefault: true
+        }
+        ,
+        {
+            id: 'def-jeff-1',
+            title: 'Jeff shift',
+            kind: 'range',
+            owner: 'jeff',
+            startMin: 7 * 60 + 15,
+            endMin: 9 * 60 + 25,
+            isDefault: true
         },
+        {
+            id: 'def-john-1',
+            title: 'John shift',
+            kind: 'range',
+            owner: 'john',
+            startMin: 9 * 60 + 25,
+            endMin: 9 * 60 + 50,
+            isDefault: true
+        }
+,
         {
             id: 'nap1',
             title: 'First nap',
@@ -1392,7 +1384,7 @@ window.onload = function() {
     fillSelect('freeCustomEnd', m(6), m(21));
     
     // Set extras minutes
-    if (document.getElementById('jeffExtra')) document.getElementById('jeffExtra').value = -25;
+    if (document.getElementById('jeffExtra')) document.getElementById('jeffExtra').value = 0;
     if (document.getElementById('johnExtra')) document.getElementById('johnExtra').value = 25;
     
     // Initialize day mode toggle
@@ -1432,184 +1424,384 @@ window.onload = function() {
         ro.observe(daily);
     }
 };
-// Compute truly free gaps between WAKE and BED, treating ALL ranges as occupied
-function computeFreeGapsExcludingFreeOwner() {
-    const items = window.v1Items || [];
-    const wakeItem = items.find(i => i && i.id === 'wake');
-    const bedItem  = items.find(i => i && i.id === 'bed');
-    const WAKE = wakeItem ? wakeItem.startMin : 5*60;
-    const BED  = bedItem  ? bedItem.startMin  : 22*60;
-
-    // Collect occupied ranges (any range kind)
-    const occ = items
-        .filter(i => i && i.kind === 'range')
-        .map(i => ({ s: Math.max(WAKE, i.startMin), e: Math.min(BED, i.endMin) }))
-        .filter(iv => iv.e > iv.s)
-        .sort((a,b)=> a.s - b.s);
-
-    // Merge
-    const merged = [];
-    for (const iv of occ) {
-        if (!merged.length || iv.s > merged[merged.length-1].e) {
-            merged.push({ s: iv.s, e: iv.e });
-        } else {
-            merged[merged.length-1].e = Math.max(merged[merged.length-1].e, iv.e);
-        }
-    }
-
-    // Gaps
-    const gaps = [];
-    let cursor = WAKE;
-    for (const iv of merged) {
-        if (iv.s > cursor) gaps.push({ s: cursor, e: iv.s });
-        cursor = Math.max(cursor, iv.e);
-    }
-    if (cursor < BED) gaps.push({ s: cursor, e: BED });
-
-    return gaps;
-}
 
 
+/* ============================
+   PERSISTENCE MODULE (LOCAL)
+   - Keeps timeline, extras, and day-mode across refreshes
+   - Only Reset button clears it and restores defaults
+   - Protects previously saved state from being overwritten on first boot render
+   ============================ */
 
-
-
-// ---------- AUTO-FILL SHIFTS (re-added) ----------
-function floor5(n){ return Math.floor(n/5)*5; }
-
-function getWakeBed() {
-  const items = window.v1Items || [];
-  const w = items.find(i => i && i.id === 'wake');
-  const b = items.find(i => i && i.id === 'bed');
-  return { wake: w ? w.startMin : 5*60, bed: b ? b.startMin : 22*60 };
-}
-
-function getRemainingMinutes() {
-  recalculateLoggedTimeFromTimeline();
-  const { jeffTarget, johnTarget } = calculateTargetTime();
-  const jeffLogged = window.jeffLoggedMinutes || 0;
-  const johnLogged = window.johnLoggedMinutes || 0;
-  return {
-    jeffRemaining: Math.max(0, jeffTarget - jeffLogged),
-    johnRemaining: Math.max(0, johnTarget - johnLogged)
-  };
-}
-
-function allocateIntoGapsFromEnd(gaps, minutes, owner, title) {
-  let minsLeft = floor5(minutes);
-  if (minsLeft <= 0) return 0;
-  const ordered = gaps.slice().sort((a,b)=> b.e - a.e);
-  let placed = 0;
-
-  for (let gi=0; gi<ordered.length && minsLeft>=5; gi++) {
-    let gs = ordered[gi].s, ge = ordered[gi].e;
-    while (ge - gs >= 5 && minsLeft >= 5) {
-      const take = floor5(Math.min(minsLeft, ge - gs));
-      if (take < 5) break;
-      const start = ge - take;
-      const end   = ge;
-      if (!checkForOverlaps(null, start, end)) {
-        const id = `auto-${owner}-${Date.now()}-${Math.floor(Math.random()*1000)}`;
-        window.v1Items.push({ id, title, kind:'range', owner, startMin:start, endMin:end, isDefault:false });
-        placed += take;
-        ge -= take;
-        minsLeft -= take;
-        const idx = gaps.findIndex(x => x.s===ordered[gi].s && x.e===ordered[gi].e);
-        if (idx >= 0) gaps[idx] = { s: gs, e: ge };
-        ordered[gi].e = ge;
-      } else {
-        if (ge - gs >= 10) { ge -= 5; } else { break; }
-      }
-    }
-  }
-  return placed;
-}
-
-function autoFillShifts() {
-  const gaps = computeFreeGapsExcludingFreeOwner();
-  const totalFree = gaps.reduce((sum,g)=> sum + (g.e - g.s), 0);
-  const { jeffRemaining, johnRemaining } = getRemainingMinutes();
-  const totalNeed = jeffRemaining + johnRemaining;
-
-  if (totalNeed <= 0) {
-    showNotification('info', 'Auto-fill', 'Everyone is already complete. Nothing to add.');
-    return;
-  }
-
-  let allocJeff = jeffRemaining;
-  let allocJohn = johnRemaining;
-  let warnMsg = null;
-
-  if (totalFree < totalNeed) {
-    const r = totalFree / totalNeed;
-    allocJeff = floor5(jeffRemaining * r);
-    allocJohn = floor5(johnRemaining * r);
-    let leftover = totalFree - (allocJeff + allocJohn);
-    leftover = floor5(leftover);
-    if (leftover >= 5) allocJohn += leftover;
-    warnMsg = `Not enough free time. Allocated proportionally: Jeff ${allocJeff}/${jeffRemaining} min, John ${allocJohn}/${johnRemaining} min.`;
-  }
-
-  const gapsCopy = gaps.slice();
-  const jnPlaced = allocateIntoGapsFromEnd(gapsCopy, allocJohn, 'john', 'Auto-fill — John');
-  const jfPlaced = allocateIntoGapsFromEnd(gapsCopy, allocJeff, 'jeff', 'Auto-fill — Jeff');
-
-  renderTimeline();
-  updateProgressDisplay();
-
-  if (warnMsg) {
-    showNotification('warning', 'Auto-fill (partial)', warnMsg);
-  } else {
-    showNotification('success', 'Auto-fill complete', `Added ${jnPlaced + jfPlaced} minutes across new shifts.`);
-  }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const btn = document.getElementById('autoFillBtn');
-  if (btn) btn.addEventListener('click', autoFillShifts);
-});
-
-
-// ---- Extra Minutes: live zero‑sum sync + auto update of Remaining ----
 (function(){
-  function setupExtraMinutesLiveSync(){
-    const jeff = document.getElementById('jeffExtra');
-    const john = document.getElementById('johnExtra');
-    if (!jeff || !john) return;
+  const KEY = "bcc_v1_state";
+  let suppressBootSaves = false; // prevents the first render from overwriting saved state
 
-    let syncing = false;
-    const clamp = (val, min, max) => Math.max(min, Math.min(max, val));
+  try {
+    // If we already have saved state, suppress saves until after we restore
+    suppressBootSaves = !!localStorage.getItem(KEY);
+  } catch {}
 
-    function sync(changed, other){
-      if (syncing) return;
-      syncing = true;
-      const min = parseInt(changed.min ?? '-9999', 10) || -9999;
-      const max = parseInt(changed.max ?? '9999', 10) || 9999;
-      let v = parseInt(changed.value, 10);
-      if (Number.isNaN(v)) v = 0;
-      v = clamp(v, min, max);
-      if (String(v) !== changed.value) changed.value = v;
-      // zero‑sum mirror
-      other.value = String(-v);
-      syncing = false;
-      // Recompute progress immediately
-      try { if (typeof updateProgressDisplay === 'function') updateProgressDisplay(); } catch {}
+  function getDayMode(){
+    const active = document.querySelector('.toggle-btn.active');
+    return active?.getAttribute('data-mode') || 'full';
+  }
+
+  function setDayMode(mode){
+    const buttons = document.querySelectorAll('.toggle-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    const target = document.querySelector(`.toggle-btn[data-mode="${mode}"]`);
+    if (target) target.classList.add('active');
+    if (typeof handleDayModeChange === 'function') {
+      handleDayModeChange(mode);
+    }
+  }
+
+  function collectState(){
+    const je = document.getElementById('jeffExtra');
+    const jo = document.getElementById('johnExtra');
+    const extras = {
+      jeff: parseInt(je?.value || '0') || 0,
+      john: parseInt(jo?.value || '0') || 0
+    };
+    const items = Array.isArray(window.v1Items) ? window.v1Items : [];
+    const dayMode = getDayMode();
+    return { items, extras, dayMode };
+  }
+
+  function applyState(s){
+    if (!s) return;
+    // Items
+    if (Array.isArray(s.items)) {
+      window.v1Items = s.items;
+      try { window.v1Items._seeded = true; } catch(e){}
+    }
+    // Extras
+    const je = document.getElementById('jeffExtra');
+    const jo = document.getElementById('johnExtra');
+    if (je && typeof s.extras?.jeff === 'number') je.value = String(s.extras.jeff);
+    if (jo && typeof s.extras?.john === 'number') jo.value = String(s.extras.john);
+
+    // Day mode
+    if (s.dayMode === 'partial' || s.dayMode === 'full') {
+      setDayMode(s.dayMode);
     }
 
-    // Attach listeners (input + change covers arrows, typing, wheel, paste)
-    jeff.addEventListener('input', () => sync(jeff, john));
-    john.addEventListener('input', () => sync(john, jeff));
-    jeff.addEventListener('change', () => sync(jeff, john));
-    john.addEventListener('change', () => sync(john, jeff));
-
-    // Ensure zero‑sum on load without overwriting deliberate starting values
-    // Just trigger a compute once.
-    try { if (typeof updateProgressDisplay === 'function') updateProgressDisplay(); } catch {}
+    // Re-render + recalc
+    if (typeof renderTimeline === 'function') renderTimeline();
+    if (typeof updateProgressDisplay === 'function') updateProgressDisplay();
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupExtraMinutesLiveSync);
-  } else {
-    setupExtraMinutesLiveSync();
+  function saveState(){
+    if (suppressBootSaves) return; // don't clobber existing saved state before restore
+    try{
+      const s = collectState();
+      localStorage.setItem(KEY, JSON.stringify(s));
+    }catch(e){
+      console.warn('[PERSIST] save failed', e);
+    }
   }
+
+  function restoreState(){
+    try{
+      const raw = localStorage.getItem(KEY);
+      if (!raw) return false;
+      const s = JSON.parse(raw);
+      applyState(s);
+      // now that we applied saved state, allow future saves
+      suppressBootSaves = false;
+      return true;
+    }catch(e){
+      console.warn('[PERSIST] restore failed', e);
+      suppressBootSaves = false; // fail open so user changes still save
+      return false;
+    }
+  }
+
+  function clearState(){
+    try{ localStorage.removeItem(KEY); }catch{}
+  }
+
+  // --- Monkey-patch core functions to auto-save on change ---
+  const __rt = window.renderTimeline;
+  if (typeof __rt === 'function'){
+    window.renderTimeline = function(){
+      const out = __rt.apply(this, arguments);
+      saveState();
+      return out;
+    };
+  }
+
+  const __ap = window.addPreset;
+  if (typeof __ap === 'function'){
+    window.addPreset = function(){
+      const out = __ap.apply(this, arguments);
+      saveState();
+      return out;
+    };
+  }
+
+  const __ac = window.addCustom;
+  if (typeof __ac === 'function'){
+    window.addCustom = function(){
+      const out = __ac.apply(this, arguments);
+      saveState();
+      return out;
+    };
+  }
+
+  const __hdm = window.handleDayModeChange;
+  if (typeof __hdm === 'function'){
+    window.handleDayModeChange = function(mode){
+      const out = __hdm.apply(this, arguments);
+      saveState();
+      return out;
+    };
+  }
+
+  const __reset = window.resetAllData;
+  if (typeof __reset === 'function'){
+    window.resetAllData = function(){
+      const out = __reset.apply(this, arguments);
+      clearState(); // ensure local storage matches factory defaults after reset
+      suppressBootSaves = false; // saves are fine after a manual reset
+      saveState();
+      return out;
+    };
+  }
+
+  // Wrap window.onload so restoration always happens AFTER app init
+  const __prevOnload = window.onload;
+  window.onload = function(evt){
+    if (typeof __prevOnload === 'function') {
+      __prevOnload.call(this, evt);
+    }
+    restoreState();
+  };
+
+  // Save on extras input change
+  window.addEventListener('DOMContentLoaded', () => {
+    const je = document.getElementById('jeffExtra');
+    const jo = document.getElementById('johnExtra');
+    if (je) je.addEventListener('input', () => { saveState(); });
+    if (jo) jo.addEventListener('input', () => { saveState(); });
+  });
+
+  // Expose helpers for debugging
+  window.__persist = { saveState, restoreState, clearState };
 })();
-// ---- end Extra Minutes live sync ----
+
+
+
+/* ============================
+   PERSISTENCE MODULE (LOCAL v2)
+   - Saves items, extras, and dayMode to localStorage
+   - Restores AFTER onload to avoid clobbering by first render
+   - Reset clears storage then saves fresh defaults
+   ============================ */
+(function(){
+  const KEY = "bcc_v1_state";
+  let suppressBootSaves = false;
+
+  try { suppressBootSaves = !!localStorage.getItem(KEY); } catch {}
+
+  function getDayMode(){
+    const active = document.querySelector('.toggle-btn.active');
+    return active?.getAttribute('data-mode') || 'full';
+  }
+
+  function setDayMode(mode){
+    const buttons = document.querySelectorAll('.toggle-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    const target = document.querySelector(`.toggle-btn[data-mode="${mode}"]`);
+    if (target) target.classList.add('active');
+    if (typeof handleDayModeChange === 'function') handleDayModeChange(mode);
+  }
+
+  function collectState(){
+    const je = document.getElementById('jeffExtra');
+    const jo = document.getElementById('johnExtra');
+    const extras = {
+      jeff: parseInt(je?.value || '0') || 0,
+      john: parseInt(jo?.value || '0') || 0
+    };
+    const items = Array.isArray(window.v1Items) ? window.v1Items : [];
+    const dayMode = getDayMode();
+    return { items, extras, dayMode };
+  }
+
+  function applyState(s){
+    if (!s) return;
+    if (Array.isArray(s.items)) {
+      window.v1Items = s.items;
+      try { window.v1Items._seeded = true; } catch(e){}
+    }
+    const je = document.getElementById('jeffExtra');
+    const jo = document.getElementById('johnExtra');
+    if (je && typeof s.extras?.jeff === 'number') je.value = String(s.extras.jeff);
+    if (jo && typeof s.extras?.john === 'number') jo.value = String(s.extras.john);
+    if (s.dayMode) setDayMode(s.dayMode);
+    if (typeof renderTimeline === 'function') renderTimeline();
+    if (typeof updateProgressDisplay === 'function') updateProgressDisplay();
+  }
+
+  function saveState(){
+    if (suppressBootSaves) return;
+    try {
+      localStorage.setItem(KEY, JSON.stringify(collectState()));
+    } catch(e){ console.warn('[PERSIST] save failed', e); }
+  }
+
+  function restoreState(){
+    try{
+      const raw = localStorage.getItem(KEY);
+      if (!raw) return false;
+      const s = JSON.parse(raw);
+      applyState(s);
+      suppressBootSaves = false;
+      return true;
+    }catch(e){ console.warn('[PERSIST] restore failed', e); suppressBootSaves = false; return false; }
+  }
+
+  function clearState(){ try{ localStorage.removeItem(KEY); }catch{} }
+
+  // Patch core hooks to save automatically
+  ['renderTimeline','addPreset','addCustom','handleDayModeChange'].forEach(fn=>{
+    const orig = window[fn];
+    if (typeof orig === 'function'){
+      window[fn] = function(){ const out = orig.apply(this, arguments); saveState(); return out; };
+    }
+  });
+
+  // Reset integration
+  const origReset = window.resetAllData;
+  if (typeof origReset === 'function'){
+    window.resetAllData = function(){ const out = origReset.apply(this, arguments); clearState(); saveState(); return out; };
+  }
+
+  // Ensure cloud imports persist locally
+  (function(){
+    const __origImport = window.importState;
+    if (typeof __origImport === 'function') {
+      window.importState = function(data){
+        const out = __origImport.apply(this, arguments);
+        try { saveState(); } catch(e) {}
+        return out;
+      };
+    }
+  })();
+
+  // Save on extras input change
+  window.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('jeffExtra')?.addEventListener('input', saveState);
+    document.getElementById('johnExtra')?.addEventListener('input', saveState);
+  });
+
+  // Restore after the app has initialized
+  const prevOnload = window.onload;
+  window.onload = function(evt){
+    if (typeof prevOnload === 'function') prevOnload.call(this, evt);
+    restoreState();
+  };
+
+  window.__persist = { saveState, restoreState, clearState };
+})();
+
+
+
+/* ============================
+   SYNC UI FALLBACK (DOM migration)
+   If a legacy "Sync now" button exists, replace it with PULL/PUSH
+   and wire handlers here so old HTML still works.
+   ============================ */
+(function(){
+  function q(id){ return document.getElementById(id); }
+  function qs(sel){ return document.querySelector(sel); }
+  function getRoom(){ try { return new URLSearchParams(location.search).get("room") || "default"; } catch { return "default"; } }
+  async function ensureSupabase(){
+    if (window.supabase) return window.supabase;
+    try{
+      const m = await import("https://esm.sh/@supabase/supabase-js@2");
+      const url = "https://laqfvhpsacurgyulucwx.supabase.co";
+      const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxhcWZ2aHBzYWN1cmd5dWx1Y3d4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY3NDgzOTIsImV4cCI6MjA3MjMyNDM5Mn0.o2kMw3K-GYB2UlzSMb5C82-4a-rt3HmM0NLiP_eaa9M";
+      window.supabase = m.createClient(url, key);
+      return window.supabase;
+    }catch(e){
+      console.warn("[SYNC] Could not init Supabase client:", e);
+      return null;
+    }
+  }
+  function importStateLocal(data){
+    if (typeof window.importState === "function") return window.importState(data);
+    if (!data) return;
+    if (Array.isArray(data.items)) window.v1Items = data.items;
+    const je = q("jeffExtra"), jo = q("johnExtra");
+    if (je && data.extras && typeof data.extras.jeff === "number") je.value = data.extras.jeff;
+    if (jo && data.extras && typeof data.extras.john === "number") jo.value = data.extras.john;
+    if (data.dayMode && typeof window.handleDayModeChange === "function") window.handleDayModeChange(data.dayMode);
+    if (typeof window.renderTimeline === "function") window.renderTimeline();
+    if (typeof window.updateProgressDisplay === "function") window.updateProgressDisplay();
+  }
+  async function pull(){
+    const sb = await ensureSupabase(); if (!sb) return;
+    const room = getRoom();
+    const { data, error } = await sb.from("rooms").select("*").eq("room_id", room).single();
+    if (error){ console.warn("[SYNC] pull failed:", error); return; }
+    const payload = data?.data ?? data?.state ?? data?.payload ?? null;
+    if (payload) importStateLocal(payload);
+  }
+  async function push(){
+    const sb = await ensureSupabase(); if (!sb) return;
+    const room = getRoom();
+    const payload = (typeof window.exportState === "function") ? window.exportState() : { items: window.v1Items || [], extras: { jeff: Number(q('jeffExtra')?.value||0)||0, john: Number(q('johnExtra')?.value||0)||0 }, dayMode: qs('.toggle-btn.active')?.getAttribute('data-mode') || 'full', ts: Date.now() };
+    const row = { room_id: room, data: payload, updated_at: new Date().toISOString() };
+    const { error } = await sb.from("rooms").upsert(row, { onConflict: 'room_id' });
+    if (error){ console.warn("[SYNC] push failed:", error); }
+    return payload?.ts;
+  }
+
+  function installRealtime(){
+    if (!window.supabase) return;
+    const room = getRoom();
+    try{
+      window.__sync = window.__sync || {};
+      const ch = window.supabase.channel(`room:${room}`);
+      ch.on('postgres_changes', { event: '*', schema: 'public', table: 'rooms', filter: `room_id=eq.${room}` }, (payload) => {
+        const row = payload?.new;
+        const inbound = row?.data ?? row?.state ?? row?.payload ?? null;
+        if (inbound?.ts && window.__sync.lastPushedTs && inbound.ts === window.__sync.lastPushedTs) return;
+        if (inbound) importStateLocal(inbound);
+      }).subscribe();
+    }catch(e){ console.warn("[SYNC] realtime failed:", e); }
+  }
+
+  window.addEventListener('DOMContentLoaded', async () => {
+    const legacy = q('syncNowBtn');
+    if (!legacy) { installRealtime(); return; }
+
+    // Build group UI in place of old button
+    const wrapper = document.createElement('div');
+    wrapper.className = 'sync-group';
+    wrapper.innerHTML = '<span class="sync-label">SYNC</span><div class="sync-buttons"><button id="pullBtn" class="sync-btn pull" title="Pull latest from cloud">PULL</button><button id="pushBtn" class="sync-btn push" title="Push my changes to cloud">PUSH</button></div>';
+    legacy.replaceWith(wrapper);
+
+    const pullBtn = q('pullBtn');
+    const pushBtn = q('pushBtn');
+
+    pullBtn?.addEventListener('click', async () => {
+      const original = pullBtn.textContent; pullBtn.disabled = true; pullBtn.textContent = 'Syncing…';
+      try{ await pull(); } finally { pullBtn.disabled = false; pullBtn.textContent = original; }
+    });
+
+    pushBtn?.addEventListener('click', async () => {
+      const original = pushBtn.textContent; pushBtn.disabled = true; pushBtn.textContent = 'Pushing…';
+      try{ window.__sync = window.__sync || {}; window.__sync.lastPushedTs = await push() || 0; } finally { pushBtn.disabled = false; pushBtn.textContent = original; }
+    });
+
+    await ensureSupabase();
+    installRealtime();
+  });
+})();
+
+// Build stamp for verification
+window.__careCalcBuild = 'PULLPUSH-2025-09-02T';
