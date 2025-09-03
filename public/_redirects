@@ -1,34 +1,19 @@
-# Essential redirects only - remove legacy redirects that are causing sitemap issues
+# Cloudflare Pages redirects file
+# Redirect trailing slash URLs to non-trailing slash versions
 
-# Handle trailing slash redirects for blog posts (fixes GSC validation)
-# Only redirect specific old URLs that need cleanup
-# /blog/*/   /blog/:splat   301
+# Blog posts
+/blog/*/ /blog/:splat 301
 
-# Redirect legacy markdown blog URLs to clean canonical URLs
-/blog/*.md   /blog/:splat/   301
+# Category pages  
+/category/*/ /category/:splat 301
 
-# NOTE: Cloudflare Pages rejects extension-only 404 rules like "/*.md 404".
-# We rely on the targeted blog rule above and robots.txt to discourage crawling.
+# Static pages
+/privacy/ /privacy 301
+/terms/ /terms 301
+/data-deletion/ /data-deletion 301
 
-# Redirect old file extensions to clean URLs (essential)
-/*.html   /:splat   301
-/*.htm   /:splat   301
-/*.php   /:splat   301
+# OAuth callback
+/oauth/callback/ /oauth/callback 301
 
-# Common 404 redirects to homepage (essential)
-/about   /   301
-/contact   /   301
-/shop   /   301
-/store   /   301
-/top-gifts   /category/gift-guides/   301
-
-
-# Missing gift guide pages - redirect to relevant blog posts
-/gift-guides/gifts-for-plant-lovers   /blog/gifts-for-plant-lovers/   301
-/gift-guides/gifts-for-gamers-under-50/   /blog/gifts-for-gamers-under-50/   301
-/gift-guides/gifts-under-25-for-coworkers/   /blog/gifts-under-25-for-coworkers/   301
-
-# Missing blog posts - redirect to relevant content
-/blog/gifts-for-artists   /blog/gifts-for-book-lovers-under-50/   301
-/blog/unique-birthday-gifts-for-teens-break-the-mold   /blog/fun-gifts-for-kids-birthday-parties/   301
-/blog/eco-friendly-gifts   /blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/   301 
+# Catch-all for any other trailing slash URLs (except root)
+/*/ /:splat 301
