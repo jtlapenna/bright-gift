@@ -2,8 +2,8 @@
 # Let Astro middleware handle trailing slash redirects
 # Only handle specific static pages that need explicit redirects
 
-# API endpoints - redirect trailing slash to no trailing slash
-/api/*/ /api/:splat 301
+# API endpoints - ensure no trailing slashes
+/api/generate/ /api/generate 301
 
 # Static pages
 /privacy /privacy/ 301
