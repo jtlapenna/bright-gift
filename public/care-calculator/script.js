@@ -123,8 +123,68 @@ function formatTime(minutes) {
     return `${displayHours}:${mins.toString().padStart(2, '0')}${ampm}`;
 }
 
+
+// --- State normalization (dedupe + standard titles/ids) ---
+function __sanitizeAndStandardize(items) {
+  if (!Array.isArray(items)) return [];
+  const out = [];
+  const byId = new Map();
+
+  // prefer last occurrence for singleton defaults
+  const singletonIds = new Set(['wake','bed','nap1','nap2','def-jeff-1','def-john-1']);
+  const normalize = (it) => {
+    if (!it || typeof it !== 'object') return null;
+    const copy = { ...it };
+    // normalize point items
+    if (copy.kind === 'point') copy.endMin = copy.startMin;
+    // normalize default titles
+    if (copy.id === 'wake') copy.title = 'Wake time';
+    if (copy.id === 'bed')  copy.title = 'Bed time';
+    if (copy.id === 'nap1') copy.title = 'First nap';
+    if (copy.id === 'nap2') copy.title = 'Second nap';
+    if (copy.id === 'def-jeff-1') { copy.title = 'Jeff shift'; copy.owner = 'jeff'; copy.kind='range'; copy.isDefault = true; }
+    if (copy.id === 'def-john-1') { copy.title = 'John shift'; copy.owner = 'john'; copy.kind='range'; copy.isDefault = true; }
+    return copy;
+  };
+
+  for (const it of items) {
+    const n = normalize(it);
+    if (!n) continue;
+    if (singletonIds.has(n.id)) {
+      byId.set(n.id, n); // keep last
+    } else {
+      // de-dupe non-defaults by stable signature
+      const key = n.id ? `id:${n.id}` : `${n.kind}|${n.startMin}|${n.endMin}|${n.owner||'free'}|${n.title||''}`;
+      if (!byId.has(key)) byId.set(key, n);
+    }
+  }
+
+  // ensure defaults exist once
+  const get = (id, fallback) => byId.has(id) ? byId.get(id) : fallback;
+  const ensured = [];
+
+  ensured.push(get('wake', { id:'wake', title:'Wake time', kind:'point', owner:'free', isDefault:true, startMin:7*60+15, endMin:7*60+15 }));
+  ensured.push(get('def-jeff-1', { id:'def-jeff-1', title:'Jeff shift', kind:'range', owner:'jeff', isDefault:true, startMin:7*60+15, endMin:9*60+25 }));
+  ensured.push(get('def-john-1', { id:'def-john-1', title:'John shift', kind:'range', owner:'john', isDefault:true, startMin:9*60+25, endMin:9*60+50 }));
+  ensured.push(get('nap1', { id:'nap1', title:'First nap', kind:'range', owner:'free', isDefault:true, startMin:9*60+50, endMin:11*60 }));
+  ensured.push(get('nap2', { id:'nap2', title:'Second nap', kind:'range', owner:'free', isDefault:true, startMin:14*60+50, endMin:16*60+20 }));
+  ensured.push(get('bed',  { id:'bed',  title:'Bed time',  kind:'point', owner:'free', isDefault:true, startMin:19*60+50, endMin:19*60+50 }));
+
+  // add non-defaults (those keyed not by default ids)
+  for (const [k,v] of byId.entries()) {
+    if (!['wake','bed','nap1','nap2','def-jeff-1','def-john-1'].includes(k) && !k.startsWith('id:')) {
+      ensured.push(v);
+    }
+    if (k.startsWith('id:')) {
+      ensured.push(v);
+    }
+  }
+  return ensured;
+}
 // MAIN V1 DAILY PLANNER FUNCTIONS
 function renderTimeline() {
+    window.v1Items = __sanitizeAndStandardize(window.v1Items || []);
+
     const container = document.querySelector('#daily-module .widget-content.v1-daily');
     if (!container) return;
 
@@ -187,14 +247,20 @@ const startMin = 5*60, endMin = 22*60, totalMin = endMin - startMin; // 5AM-10PM
     if (!window.v1Items) window.v1Items = [];
     const items = window.v1Items;
     
-    // Seed defaults once
-    if (!items._seeded) {
-        items.push({ id:'wake', title:'Wake time',  kind:'point', owner:'free', isDefault:true, startMin: 7*60 + 15, endMin: 7*60 + 15 });
-        items.push({ id:'nap1', title:'First nap',  kind:'range', owner:'free', isDefault:true, startMin: 9*60 + 50, endMin: 11*60 });
-        items.push({ id:'nap2', title:'Second nap', kind:'range', owner:'free', isDefault:true, startMin: 14*60 + 50, endMin: 16*60 + 20 });
-        items.push({ id:'bed',  title:'Bed time',   kind:'point', owner:'free', isDefault:true, startMin: 19*60 + 50, endMin: 19*60 + 50 });
-        items._seeded = true;
-    }
+    // Seed defaults once (id-checked; never duplicates)
+    const needWake = !items.find(x => x.id === 'wake');
+    const needNap1 = !items.find(x => x.id === 'nap1');
+    const needNap2 = !items.find(x => x.id === 'nap2');
+    const needBed  = !items.find(x => x.id === 'bed');
+    const needJeff = !items.find(x => x.id === 'def-jeff-1');
+    const needJohn = !items.find(x => x.id === 'def-john-1');
+    if (needWake) items.push({ id:'wake', title:'Wake time',  kind:'point', owner:'free', isDefault:true, startMin: 7*60 + 15, endMin: 7*60 + 15 });
+    if (needJeff) items.push({ id:'def-jeff-1', title:'Jeff shift', kind:'range', owner:'jeff', isDefault:true, startMin: 7*60 + 15, endMin: 9*60 + 25 });
+    if (needJohn) items.push({ id:'def-john-1', title:'John shift', kind:'range', owner:'john', isDefault:true, startMin: 9*60 + 25, endMin: 9*60 + 50 });
+    if (needNap1) items.push({ id:'nap1', title:'First nap',  kind:'range', owner:'free', isDefault:true, startMin: 9*60 + 50, endMin: 11*60 });
+    if (needNap2) items.push({ id:'nap2', title:'Second nap', kind:'range', owner:'free', isDefault:true, startMin: 14*60 + 50, endMin: 16*60 + 20 });
+    if (needBed)  items.push({ id:'bed',  title:'Bed time',   kind:'point', owner:'free', isDefault:true, startMin: 19*60 + 50, endMin: 19*60 + 50 });
+    items._seeded = true;
     
     // Clean up any existing blocks that violate wake/bed boundaries
     validateAndFixExistingBlocks();
@@ -287,84 +353,82 @@ const startMin = 5*60, endMin = 22*60, totalMin = endMin - startMin; // 5AM-10PM
 
     // Simple reliable click-to-create on empty surface (pointer, bound once)
     if (!surface._boundCreate) {
-        surface._boundCreate = true;
-        let downY=0, moved=false, lastCreate=0;
-        const TAP_DIST=4;
+    surface._boundCreate = true;
+    let downY=0, moved=false, lastCreate=0;
+    const TAP_DIST=4;
 
-        surface.addEventListener('pointerdown', (e)=>{
-            if (e.target.closest && e.target.closest('.block')) return;
-            downY = e.clientY||0; moved=false;
-        });
-        surface.addEventListener('pointermove', (e)=>{
-            const dy=(e.clientY||0)-downY; if (Math.abs(dy)>TAP_DIST) moved=true;
-        });
-        surface.addEventListener('pointerup', (e)=>{
-            if (moved) return;
-            if (e.target.closest && e.target.closest('.block')) return;
-            const now=Date.now();         surface.addEventListener('pointercancel', (e)=>{
-            moved = true; // cancel creation if the OS turns this into a scroll/gesture
-        });
-if (now-lastCreate<200) return; lastCreate=now;
+    surface.addEventListener('pointerdown', (e)=>{
+        if (e.target.closest && e.target.closest('.block')) return;
+        downY = e.clientY||0; moved=false;
+    });
+    surface.addEventListener('pointermove', (e)=>{
+        const dy=(e.clientY||0)-downY; if (Math.abs(dy)>TAP_DIST) moved=true;
+    });
+    surface.addEventListener('pointercancel', ()=>{ moved = true; });
+    surface.addEventListener('pointerup', (e)=>{
+        if (moved) return;
+        if (e.target.closest && e.target.closest('.block')) return;
+        const now=Date.now(); if (now-lastCreate<200) return; lastCreate=now;
 
-            const rectS = surface.getBoundingClientRect();
-            const cs = getComputedStyle(surface);
-            const padTop = parseFloat(cs.paddingTop)||8;
-            const padBottom = parseFloat(cs.paddingBottom)||12;
-            const usableH = rectS.height - padTop - padBottom;
+        const rectS = surface.getBoundingClientRect();
+        const cs = getComputedStyle(surface);
+        const padTop = parseFloat(cs.paddingTop)||8;
+        const padBottom = parseFloat(cs.paddingBottom)||12;
+        const usableH = rectS.height - padTop - padBottom;
 
-            let yLocal = e.clientY - rectS.top;
-            yLocal = Math.max(padTop, Math.min(padTop+usableH, yLocal));
+        let yLocal = e.clientY - rectS.top;
+        yLocal = Math.max(padTop, Math.min(padTop+usableH, yLocal));
 
-            let minAt = startMin + ((yLocal - padTop)/usableH)*totalMin;
-            minAt = Math.round(minAt/5)*5;
+        let minAt = startMin + ((yLocal - padTop)/usableH)*totalMin;
+        minAt = Math.round(minAt/5)*5;
 
-            // Wake/Bed boundaries
-            const wake = window.v1Items.find(i=>i.id==='wake')?.startMin ?? startMin;
-            const bed  = window.v1Items.find(i=>i.id==='bed')?.startMin  ?? endMin;
-            if (minAt < wake || minAt > bed) return;
+        // Wake/Bed boundaries
+        const wake = window.v1Items.find(i=>i.id==='wake')?.startMin ?? startMin;
+        const bed  = window.v1Items.find(i=>i.id==='bed')?.startMin  ?? endMin;
+        if (minAt < wake || minAt > bed) return;
 
-            // Find free gap around minAt
-            const ranges = window.v1Items
-              .filter(i => i.kind === 'range')
-              .map(i => ({ s: i.startMin, e: i.endMin }))
-              .filter(iv => iv.e > wake && iv.s < bed)
-              .map(iv => ({ s: Math.max(iv.s, wake), e: Math.min(iv.e, bed) }))
-              .sort((a, b) => a.s - b.s);
+        // Find free gap around minAt
+        const ranges = window.v1Items
+          .filter(i => i.kind === 'range')
+          .map(i => ({ s: i.startMin, e: i.endMin }))
+          .filter(iv => iv.e > wake && iv.s < bed)
+          .map(iv => ({ s: Math.max(iv.s, wake), e: Math.min(iv.e, bed) }))
+          .sort((a, b) => a.s - b.s);
 
-            // merge overlaps
-            const merged = [];
-            for (const iv of ranges) {
-                if (!merged.length || iv.s > merged[merged.length - 1].e) {
-                    merged.push({ s: iv.s, e: iv.e });
-                } else {
-                    merged[merged.length - 1].e = Math.max(merged[merged.length - 1].e, iv.e);
-                }
+        // merge overlaps
+        const merged = [];
+        for (const iv of ranges) {
+            if (!merged.length || iv.s > merged[merged.length - 1].e) {
+                merged.push({ s: iv.s, e: iv.e });
+            } else {
+                merged[merged.length - 1].e = Math.max(merged[merged.length - 1].e, iv.e);
             }
+        }
 
-            // compute gaps
-            const gaps = [];
-            let c = wake;
-            for (const iv of merged) {
-                if (iv.s > c) gaps.push({ s: c, e: iv.s });
-                c = Math.max(c, iv.e);
-            }
-            if (c < bed) gaps.push({ s: c, e: bed });
+        // compute gaps
+        const gaps = [];
+        let c = wake;
+        for (const iv of merged) {
+            if (iv.s > c) gaps.push({ s: c, e: iv.s });
+            c = Math.max(c, iv.e);
+        }
+        if (c < bed) gaps.push({ s: c, e: bed });
 
-            const gap = gaps.find(g => g.s <= minAt && minAt <= g.e);
-            const dur=60;
-            if (!gap || gap.e-gap.s<5) return;
+        const gap = gaps.find(g => g.s <= minAt && minAt <= g.e);
+        const dur=60;
+        if (!gap || gap.e-gap.s<5) return;
 
-            const usable = Math.min(dur, gap.e-gap.s);
-            let start = Math.max(gap.s, Math.min(minAt - Math.floor(usable/2), gap.e - usable));
-            start = Math.round(start/5)*5;
+        const usable = Math.min(dur, gap.e-gap.s);
+        let start = Math.max(gap.s, Math.min(minAt - Math.floor(usable/2), gap.e - usable));
+        start = Math.round(start / 5) * 5;
 
-            if (checkForOverlaps(null, start, start+usable)) return;
+        if (checkForOverlaps(null, start, start+usable)) return;
 
-            window.v1Items.push({ id:'item-'+Date.now(), title:'Free', kind:'range', owner:'free', isDefault:false, startMin:start, endMin:start+usable });
-            renderTimeline();
-            showNotification('success','Block Created','Click the block to assign it to Jeff or John.');
-        });
-    }
+        window.v1Items.push({ id:'item-'+Date.now(), title:'Free', kind:'range', owner:'free', isDefault:false, startMin:start, endMin:start+usable });
+        renderTimeline();
+        showNotification('success','Block Created','Click the block to assign it to Jeff or John.');
+    });
+}
 
     // Update progress display after timeline changes
 
@@ -554,7 +618,7 @@ function bindDrag(el, item, minutesToY, snap, topPad, innerHeight, startMin, end
     const toMinDelta = dy => (dy/innerHeight)*totalMin;
     
     const onMouseDown = e => { 
-        if (isTouching) return; // Prevent mouse events if touch is active
+        e.stopPropagation && e.stopPropagation(); if (isTouching) return; // Prevent mouse events if touch is active
         moving = true; 
         startY = e.clientY; 
         startStart = item.startMin; 
@@ -569,7 +633,7 @@ function bindDrag(el, item, minutesToY, snap, topPad, innerHeight, startMin, end
     };
     
     const onTouchStart = e => {
-        e.preventDefault(); // Prevent scrolling while dragging
+        e.stopPropagation && e.stopPropagation(); e.preventDefault(); // Prevent scrolling while dragging
         isTouching = true;
         moving = true;
         
@@ -844,13 +908,19 @@ function bindResize(ht, hb, el, item, minutesToY, snap, topPad, innerHeight, sta
 }
 
 // WAKE WINDOW BOUNDARY FUNCTION
+// WAKE WINDOW BOUNDARY FUNCTION
 function getWakeWindowBoundaries(item) {
-    // Inclusive wake/bed boundaries; prevent crossing bed and pre-wake
+    const dayStart = 5*60, dayEnd = 22*60;
     const wake = (window.v1Items || []).find(i => i.id === 'wake');
     const bed  = (window.v1Items || []).find(i => i.id === 'bed');
-    const start = wake ? wake.startMin : 5*60;
-    const end   = bed  ? bed.startMin  : 22*60;
-    return { start, end }
+    let start = wake ? wake.startMin : dayStart;
+    let end   = bed  ? bed.startMin  : dayEnd;
+    if (item && item.kind === 'point') {
+        if (item.id === 'wake') { start = dayStart; end = (bed ? bed.startMin : dayEnd) - 5; }
+        else if (item.id === 'bed') { start = (wake ? wake.startMin : dayStart) + 5; end = dayEnd; }
+    }
+    return { start, end };
+}
 
 // POINT-ONLY BOUNDARIES (Wake/Bed can move back/forth safely without self-clamping)
 function getPointBoundaries(item, dayStartMin, dayEndMin) {
@@ -867,8 +937,7 @@ function getPointBoundaries(item, dayStartMin, dayEndMin) {
     }
     return { start, end };
 }
-;
-}
+
 // OVERLAP DETECTION
 function checkForOverlaps(excludeId, startMin, endMin) {
     const otherBlocks = window.v1Items?.filter(item => item.id !== excludeId) || [];
@@ -975,70 +1044,19 @@ function resetAllData() {
         }
     }
     
-    // Clear ALL existing items first
-    window.v1Items = [];
     
-    // Add default items
-    window.v1Items.push(
-        {
-            id: 'wake',
-            title: 'Wake',
-            kind: 'point',
-            owner: 'free',
-            startMin: 7 * 60 + 15, // 7:15 AM
-            endMin: 7 * 60 + 15,
-            isDefault: true
-        }
-        ,
-        {
-            id: 'def-jeff-1',
-            title: 'Jeff shift',
-            kind: 'range',
-            owner: 'jeff',
-            startMin: 7 * 60 + 15,
-            endMin: 9 * 60 + 25,
-            isDefault: true
-        },
-        {
-            id: 'def-john-1',
-            title: 'John shift',
-            kind: 'range',
-            owner: 'john',
-            startMin: 9 * 60 + 25,
-            endMin: 9 * 60 + 50,
-            isDefault: true
-        }
-,
-        {
-            id: 'nap1',
-            title: 'First nap',
-            kind: 'range',
-            owner: 'free',
-            startMin: 9 * 60 + 50, // 9:50 AM
-            endMin: 11 * 60,       // 11:00 AM
-            isDefault: true
-        },
-        {
-            id: 'nap2',
-            title: 'Second nap',
-            kind: 'range',
-            owner: 'free',
-            startMin: 14 * 60 + 50, // 2:50 PM
-            endMin: 16 * 60 + 20,   // 4:20 PM
-            isDefault: true
-        },
-        {
-            id: 'bed',
-            title: 'Bed',
-            kind: 'point',
-            owner: 'free',
-            startMin: 19 * 60 + 50, // 7:50 PM
-            endMin: 19 * 60 + 50,
-            isDefault: true
-        }
-    );
-    
-    // Mark as seeded to prevent renderTimeline from adding duplicates
+    // Replace ALL items with canonical defaults
+    window.v1Items = [
+        { id:'wake', title:'Wake time', kind:'point', owner:'free', isDefault:true, startMin:7*60+15, endMin:7*60+15 },
+        { id:'def-jeff-1', title:'Jeff shift', kind:'range', owner:'jeff', isDefault:true, startMin:7*60+15, endMin:9*60+25 },
+        { id:'def-john-1', title:'John shift', kind:'range', owner:'john', isDefault:true, startMin:9*60+25, endMin:9*60+50 },
+        { id:'nap1', title:'First nap', kind:'range', owner:'free', isDefault:true, startMin:9*60+50, endMin:11*60 },
+        { id:'nap2', title:'Second nap', kind:'range', owner:'free', isDefault:true, startMin:14*60+50, endMin:16*60+20 },
+        { id:'bed', title:'Bed time', kind:'point', owner:'free', isDefault:true, startMin:19*60+50, endMin:19*60+50 }
+    ];
+    try { window.v1Items._seeded = true; } catch {}
+    // Version bump so receivers can treat this as a replace
+    window.__resetEpoch = Date.now();
     window.v1Items._seeded = true;
     
     // Reset shift log dropdowns to defaults
@@ -1072,6 +1090,7 @@ function resetAllData() {
     if (joEl) joEl.value = '25';
     updateProgressDisplay();
     showNotification('success', 'Reset Complete', 'All data has been reset to defaults.');
+    __autoPushAfterInteraction();
 }
 
 // PROGRESS TRACKING CALCULATIONS
@@ -1513,7 +1532,9 @@ window.onload = function() {
     if (!s) return;
     if (Array.isArray(s.items)) {
       window.v1Items = s.items;
-      try { window.v1Items._seeded = true; } catch{}
+      
+      window.v1Items = __sanitizeAndStandardize(window.v1Items);
+try { window.v1Items._seeded = true; } catch{}
     }
     const je = document.getElementById('jeffExtra');
     const jo = document.getElementById('johnExtra');
