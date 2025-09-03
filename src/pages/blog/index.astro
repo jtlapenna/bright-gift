@@ -44,12 +44,12 @@ function calculateReadTime(content: string): number {
   return Math.ceil(wordCount / 200);
 }
 
-// Generate pagination URLs
+// Generate pagination URLs (no trailing slashes)
 function getPageUrl(page: number): string {
   if (page === 1) {
-    return "https://bright-gift.com/blog/";
+    return "https://bright-gift.com/blog";
   } else {
-    return `https://bright-gift.com/blog/?page=${page}`;
+    return `https://bright-gift.com/blog?page=${page}`;
   }
 }
 
@@ -59,7 +59,7 @@ const blogIndexStructuredData = {
   "@type": "CollectionPage",
   "name": "Gift Ideas Blog - BrightGift",
   "description": "Discover thoughtful gift ideas, seasonal guides, and expert tips for finding the perfect presents. Browse our curated collection of gift guides for every occasion and recipient.",
-  "url": currentPage === 1 ? "https://bright-gift.com/blog/" : `https://bright-gift.com/blog/?page=${currentPage}`,
+  "url": currentPage === 1 ? "https://bright-gift.com/blog" : `https://bright-gift.com/blog?page=${currentPage}`,
   "mainEntity": {
     "@type": "ItemList",
     "numberOfItems": allContent.length,
@@ -70,7 +70,7 @@ const blogIndexStructuredData = {
         "@type": "BlogPosting",
         "headline": post.data.title,
         "description": post.data.description,
-        "url": `https://bright-gift.com/blog/${post.slug}/`,
+        "url": `https://bright-gift.com/blog/${post.slug}`,
         "datePublished": post.data.date,
         "author": {
           "@type": "Organization",
@@ -93,7 +93,7 @@ const blogIndexStructuredData = {
       "@type": "WebPage",
       "isPartOf": {
         "@type": "CollectionPage",
-        "url": "https://bright-gift.com/blog/"
+        "url": "https://bright-gift.com/blog"
       },
       "pageNumber": currentPage,
       "totalPages": totalPages,
@@ -108,7 +108,7 @@ const blogIndexStructuredData = {
   title="Gift Ideas Blog - Expert Gift Guides & Recommendations | BrightGift" 
   description="Discover thoughtful gift ideas, seasonal guides, and expert tips for finding the perfect presents. Browse our curated collection of gift guides for every occasion and recipient."
   keywords={["gift guides", "gift ideas", "birthday gifts", "holiday gifts", "gift recommendations", "gift shopping", "thoughtful gifts", "unique gifts", "gift inspiration", "gift giving", "seasonal gifts", "personalized gifts"]}
-  canonical={currentPage === 1 ? "https://bright-gift.com/blog/" : `https://bright-gift.com/blog/?page=${currentPage}`}
+  canonical={currentPage === 1 ? "https://bright-gift.com/blog" : `https://bright-gift.com/blog?page=${currentPage}`}
   ogType="website"
   noindex={currentPage > 1}
   twitterCard="summary_large_image"
@@ -212,7 +212,7 @@ const blogIndexStructuredData = {
             <!-- Post Content -->
             <div class="p-6">
               <h2 class="text-xl font-bold mb-2 text-[#1C2E4A] hover:text-[#FF6B6B] transition-colors" itemprop="headline">
-                <a href={`/blog/${post.slug}/`} class="block" aria-label={`Read ${post.data.title} gift guide`}>
+                <a href={`/blog/${post.slug}`} class="block" aria-label={`Read ${post.data.title} gift guide`}>
                   {post.data.title}
                 </a>
               </h2>
@@ -240,7 +240,7 @@ const blogIndexStructuredData = {
               
               <!-- Read More Link -->
               <a 
-                href={`/blog/${post.slug}/`} 
+                href={`/blog/${post.slug}`} 
                 class="inline-flex items-center text-[#FF6B6B] font-semibold hover:text-[#ff4c4c] transition-colors"
                 aria-label={`Read complete ${post.data.title} gift guide`}
               >
@@ -426,7 +426,7 @@ const blogIndexStructuredData = {
           <!-- Post Content -->
           <div class="p-6">
             <h2 class="text-xl font-bold mb-2 text-[#1C2E4A] hover:text-[#FF6B6B] transition-colors" itemprop="headline">
-              <a href="/blog/${post.slug}/" class="block" aria-label="Read ${escapedTitle} gift guide">
+              <a href="/blog/${post.slug}" class="block" aria-label="Read ${escapedTitle} gift guide">
                 ${escapedTitle}
               </a>
             </h2>
@@ -456,7 +456,7 @@ const blogIndexStructuredData = {
             
             <!-- Read More Link -->
             <a 
-              href="/blog/${post.slug}/" 
+              href="/blog/${post.slug}" 
               class="inline-flex items-center text-[#FF6B6B] font-semibold hover:text-[#ff4c4c] transition-colors"
               aria-label="Read complete ${escapedTitle} gift guide"
             >
