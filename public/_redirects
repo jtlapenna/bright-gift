@@ -1,19 +1,19 @@
 # Cloudflare Pages redirects file
-# Redirect trailing slash URLs to non-trailing slash versions
+# Redirect non-trailing slash URLs to trailing slash versions (except static files)
 
 # Blog posts
-/blog/*/ /blog/:splat 301
+/blog/* /blog/:splat/ 301
 
 # Category pages  
-/category/*/ /category/:splat 301
+/category/* /category/:splat/ 301
 
 # Static pages
-/privacy/ /privacy 301
-/terms/ /terms 301
-/data-deletion/ /data-deletion 301
+/privacy /privacy/ 301
+/terms /terms/ 301
+/data-deletion /data-deletion/ 301
 
 # OAuth callback
-/oauth/callback/ /oauth/callback 301
+/oauth/callback /oauth/callback/ 301
 
-# Catch-all for any other trailing slash URLs (except root)
-/*/ /:splat 301
+# Exclude static directories from redirects
+/care-calculator /care-calculator/ 301
