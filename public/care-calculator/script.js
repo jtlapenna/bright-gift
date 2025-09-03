@@ -606,7 +606,15 @@ function bindDrag(el, item, minutesToY, snap, topPad, innerHeight, startMin, end
         // Calculate proposed new position
         let newStartMin = Math.max(startMin, Math.min(startStart + d, endMin));
         let newEndMin = Math.max(startMin, Math.min(startEnd + d, endMin));
-        if (newEndMin - newStartMin < 5) newEndMin = newStartMin + 5;
+        
+        // Special clamp for point items (wake/bed) so they can move earlier/later without one-way lock
+        if (item.kind === 'point') {
+            const pb = getPointBoundaries(item, startMin, endMin);
+            newStartMin = Math.max(pb.start, Math.min(newStartMin, pb.end));
+            newStartMin = Math.round(newStartMin/5)*5;
+            newEndMin = newStartMin; // keep point aligned
+        }
+if (newEndMin - newStartMin < 5) newEndMin = newStartMin + 5;
         
         // Clamp to wake/bed first, then round to 5
         const wakeWindow = getWakeWindowBoundaries(item);
@@ -669,7 +677,10 @@ function bindDrag(el, item, minutesToY, snap, topPad, innerHeight, startMin, end
         
         // Update progress tracker after move operations
         updateProgressDisplay();
-    };
+    
+        // Trigger autosync push after interaction end
+        __autoPushAfterInteraction();
+};
     
     // Bind events based on device capability
     if (isTouchDevice()) {
@@ -806,7 +817,10 @@ function bindResize(ht, hb, el, item, minutesToY, snap, topPad, innerHeight, sta
         }
         
         updateProgressDisplay();
-    };
+    
+        // Trigger autosync push after interaction end
+        __autoPushAfterInteraction();
+};
     
     // Bind events based on device capability
     if (isTouchDevice()) {
@@ -836,7 +850,24 @@ function getWakeWindowBoundaries(item) {
     const bed  = (window.v1Items || []).find(i => i.id === 'bed');
     const start = wake ? wake.startMin : 5*60;
     const end   = bed  ? bed.startMin  : 22*60;
+    return { start, end }
+
+// POINT-ONLY BOUNDARIES (Wake/Bed can move back/forth safely without self-clamping)
+function getPointBoundaries(item, dayStartMin, dayEndMin) {
+    const wake = (window.v1Items || []).find(i => i.id === 'wake');
+    const bed  = (window.v1Items || []).find(i => i.id === 'bed');
+    let start = dayStartMin, end = dayEndMin;
+    if (!item || item.kind !== 'point') return { start, end };
+    if (item.id === 'wake') {
+        // Wake may move anywhere from day start up to just before Bed
+        end = (bed ? bed.startMin : dayEndMin) - 5;
+    } else if (item.id === 'bed') {
+        // Bed may move anywhere from just after Wake up to day end
+        start = (wake ? wake.startMin : dayStartMin) + 5;
+    }
     return { start, end };
+}
+;
 }
 // OVERLAP DETECTION
 function checkForOverlaps(excludeId, startMin, endMin) {
@@ -1645,3 +1676,9 @@ window.onload = function() {
   window.__careCalcBuild = 'PERSIST-v4-2025-09-02';
 })();
 
+
+
+// Debounced-ish push trigger (index.html listens to 'bcc:stateChanged' and debounces cloud push)
+function __autoPushAfterInteraction() {
+    try { window.dispatchEvent(new CustomEvent('bcc:stateChanged')); } catch {}
+}
