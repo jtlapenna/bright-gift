@@ -301,7 +301,10 @@ const startMin = 5*60, endMin = 22*60, totalMin = endMin - startMin; // 5AM-10PM
         surface.addEventListener('pointerup', (e)=>{
             if (moved) return;
             if (e.target.closest && e.target.closest('.block')) return;
-            const now=Date.now(); if (now-lastCreate<200) return; lastCreate=now;
+            const now=Date.now();         surface.addEventListener('pointercancel', (e)=>{
+            moved = true; // cancel creation if the OS turns this into a scroll/gesture
+        });
+if (now-lastCreate<200) return; lastCreate=now;
 
             const rectS = surface.getBoundingClientRect();
             const cs = getComputedStyle(surface);
@@ -1335,7 +1338,13 @@ function createPartialDayFreeBlock() {
         isDefault: false
     };
     
-    window.v1Items.push(freeBlock);
+    
+    // Prevent overlap when toggling to partial
+    if (typeof checkForOverlaps === 'function' && checkForOverlaps(null, freeBlock.startMin, freeBlock.endMin)) {
+        showNotification('error','Overlap','Cannot add Partial Day block: it overlaps an existing block.');
+        return;
+    }
+window.v1Items.push(freeBlock);
     
     renderTimeline();
     updateProgressDisplay();
