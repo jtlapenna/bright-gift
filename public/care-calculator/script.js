@@ -193,9 +193,6 @@ const startMin = 5*60, endMin = 22*60, totalMin = endMin - startMin; // 5AM-10PM
         items.push({ id:'nap1', title:'First nap',  kind:'range', owner:'free', isDefault:true, startMin: 9*60 + 50, endMin: 11*60 });
         items.push({ id:'nap2', title:'Second nap', kind:'range', owner:'free', isDefault:true, startMin: 14*60 + 50, endMin: 16*60 + 20 });
         items.push({ id:'bed',  title:'Bed time',   kind:'point', owner:'free', isDefault:true, startMin: 19*60 + 50, endMin: 19*60 + 50 });
-        // Insert Jeff/John default shifts between wake and first nap
-        items.push({ id:'def-jeff-1', title:'Jeff shift', kind:'range', owner:'jeff', isDefault:true, startMin: 7*60+15, endMin: 9*60+25 });
-        items.push({ id:'def-john-1', title:'John shift', kind:'range', owner:'john', isDefault:true, startMin: 9*60+25, endMin: 9*60+50 });
         items._seeded = true;
     }
     
@@ -411,7 +408,14 @@ function showOwnerToolbar(hostEl, item) {
             const oldOwner = item.owner;
             item.owner = key; 
             
-            // Update progress tracker
+            
+            // keep title/label in sync with owner
+            if (item && item.id !== 'wake' && item.id !== 'bed') {
+                if (key === 'jeff') item.title = 'Jeff shift';
+                else if (key === 'john') item.title = 'John shift';
+                else item.title = 'Free';
+            }
+// Update progress tracker
             updateProgressTracker(item, oldOwner, key);
             
             // Re-render to show color changes
@@ -1425,205 +1429,40 @@ window.onload = function() {
     }
 };
 
-
 /* ============================
-   PERSISTENCE MODULE (LOCAL)
-   - Keeps timeline, extras, and day-mode across refreshes
-   - Only Reset button clears it and restores defaults
-   - Protects previously saved state from being overwritten on first boot render
-   ============================ */
-
-(function(){
-  const KEY = "bcc_v1_state";
-  let suppressBootSaves = false; // prevents the first render from overwriting saved state
-
-  try {
-    // If we already have saved state, suppress saves until after we restore
-    suppressBootSaves = !!localStorage.getItem(KEY);
-  } catch {}
-
-  function getDayMode(){
-    const active = document.querySelector('.toggle-btn.active');
-    return active?.getAttribute('data-mode') || 'full';
-  }
-
-  function setDayMode(mode){
-    const buttons = document.querySelectorAll('.toggle-btn');
-    buttons.forEach(btn => btn.classList.remove('active'));
-    const target = document.querySelector(`.toggle-btn[data-mode="${mode}"]`);
-    if (target) target.classList.add('active');
-    if (typeof handleDayModeChange === 'function') {
-      handleDayModeChange(mode);
-    }
-  }
-
-  function collectState(){
-    const je = document.getElementById('jeffExtra');
-    const jo = document.getElementById('johnExtra');
-    const extras = {
-      jeff: parseInt(je?.value || '0') || 0,
-      john: parseInt(jo?.value || '0') || 0
-    };
-    const items = Array.isArray(window.v1Items) ? window.v1Items : [];
-    const dayMode = getDayMode();
-    return { items, extras, dayMode };
-  }
-
-  function applyState(s){
-    if (!s) return;
-    // Items
-    if (Array.isArray(s.items)) {
-      window.v1Items = s.items;
-      try { window.v1Items._seeded = true; } catch(e){}
-    }
-    // Extras
-    const je = document.getElementById('jeffExtra');
-    const jo = document.getElementById('johnExtra');
-    if (je && typeof s.extras?.jeff === 'number') je.value = String(s.extras.jeff);
-    if (jo && typeof s.extras?.john === 'number') jo.value = String(s.extras.john);
-
-    // Day mode
-    if (s.dayMode === 'partial' || s.dayMode === 'full') {
-      setDayMode(s.dayMode);
-    }
-
-    // Re-render + recalc
-    if (typeof renderTimeline === 'function') renderTimeline();
-    if (typeof updateProgressDisplay === 'function') updateProgressDisplay();
-  }
-
-  function saveState(){
-    if (suppressBootSaves) return; // don't clobber existing saved state before restore
-    try{
-      const s = collectState();
-      localStorage.setItem(KEY, JSON.stringify(s));
-    }catch(e){
-      console.warn('[PERSIST] save failed', e);
-    }
-  }
-
-  function restoreState(){
-    try{
-      const raw = localStorage.getItem(KEY);
-      if (!raw) return false;
-      const s = JSON.parse(raw);
-      applyState(s);
-      // now that we applied saved state, allow future saves
-      suppressBootSaves = false;
-      return true;
-    }catch(e){
-      console.warn('[PERSIST] restore failed', e);
-      suppressBootSaves = false; // fail open so user changes still save
-      return false;
-    }
-  }
-
-  function clearState(){
-    try{ localStorage.removeItem(KEY); }catch{}
-  }
-
-  // --- Monkey-patch core functions to auto-save on change ---
-  const __rt = window.renderTimeline;
-  if (typeof __rt === 'function'){
-    window.renderTimeline = function(){
-      const out = __rt.apply(this, arguments);
-      saveState();
-      return out;
-    };
-  }
-
-  const __ap = window.addPreset;
-  if (typeof __ap === 'function'){
-    window.addPreset = function(){
-      const out = __ap.apply(this, arguments);
-      saveState();
-      return out;
-    };
-  }
-
-  const __ac = window.addCustom;
-  if (typeof __ac === 'function'){
-    window.addCustom = function(){
-      const out = __ac.apply(this, arguments);
-      saveState();
-      return out;
-    };
-  }
-
-  const __hdm = window.handleDayModeChange;
-  if (typeof __hdm === 'function'){
-    window.handleDayModeChange = function(mode){
-      const out = __hdm.apply(this, arguments);
-      saveState();
-      return out;
-    };
-  }
-
-  const __reset = window.resetAllData;
-  if (typeof __reset === 'function'){
-    window.resetAllData = function(){
-      const out = __reset.apply(this, arguments);
-      clearState(); // ensure local storage matches factory defaults after reset
-      suppressBootSaves = false; // saves are fine after a manual reset
-      saveState();
-      return out;
-    };
-  }
-
-  // Wrap window.onload so restoration always happens AFTER app init
-  const __prevOnload = window.onload;
-  window.onload = function(evt){
-    if (typeof __prevOnload === 'function') {
-      __prevOnload.call(this, evt);
-    }
-    restoreState();
-  };
-
-  // Save on extras input change
-  window.addEventListener('DOMContentLoaded', () => {
-    const je = document.getElementById('jeffExtra');
-    const jo = document.getElementById('johnExtra');
-    if (je) je.addEventListener('input', () => { saveState(); });
-    if (jo) jo.addEventListener('input', () => { saveState(); });
-  });
-
-  // Expose helpers for debugging
-  window.__persist = { saveState, restoreState, clearState };
-})();
-
-
-
-/* ============================
-   PERSISTENCE MODULE (LOCAL v2)
-   - Saves items, extras, and dayMode to localStorage
-   - Restores AFTER onload to avoid clobbering by first render
-   - Reset clears storage then saves fresh defaults
+   PERSISTENCE MODULE (LOCAL v4)
+   Goal:
+   - Keep items + extras + dayMode across refresh
+   - Restore AFTER app init, without being clobbered by first render
+   - Only Reset button clears storage and seeds defaults (incl. Jeff/John)
+   - Extras are zero-sum and update remaining times
    ============================ */
 (function(){
   const KEY = "bcc_v1_state";
+  // If a state already exists, prevent initial renders from saving over it
   let suppressBootSaves = false;
-
   try { suppressBootSaves = !!localStorage.getItem(KEY); } catch {}
 
   function getDayMode(){
     const active = document.querySelector('.toggle-btn.active');
     return active?.getAttribute('data-mode') || 'full';
   }
-
   function setDayMode(mode){
     const buttons = document.querySelectorAll('.toggle-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
     const target = document.querySelector(`.toggle-btn[data-mode="${mode}"]`);
     if (target) target.classList.add('active');
-    if (typeof handleDayModeChange === 'function') handleDayModeChange(mode);
+    if (typeof handleDayModeChange === 'function') {
+      try { handleDayModeChange(mode); } catch {}
+    }
   }
 
   function collectState(){
     const je = document.getElementById('jeffExtra');
     const jo = document.getElementById('johnExtra');
     const extras = {
-      jeff: parseInt(je?.value || '0') || 0,
-      john: parseInt(jo?.value || '0') || 0
+      jeff: parseInt(je?.value || '-25') || -25,
+      john: parseInt(jo?.value || '25') || 25
     };
     const items = Array.isArray(window.v1Items) ? window.v1Items : [];
     const dayMode = getDayMode();
@@ -1634,7 +1473,7 @@ window.onload = function() {
     if (!s) return;
     if (Array.isArray(s.items)) {
       window.v1Items = s.items;
-      try { window.v1Items._seeded = true; } catch(e){}
+      try { window.v1Items._seeded = true; } catch{}
     }
     const je = document.getElementById('jeffExtra');
     const jo = document.getElementById('johnExtra');
@@ -1648,8 +1487,13 @@ window.onload = function() {
   function saveState(){
     if (suppressBootSaves) return;
     try {
-      localStorage.setItem(KEY, JSON.stringify(collectState()));
-    } catch(e){ console.warn('[PERSIST] save failed', e); }
+      const s = collectState();
+      localStorage.setItem(KEY, JSON.stringify(s));
+      // Notify autosync if present (avoid while importing)
+      if (!(window.__sync && window.__sync.isImporting)) {
+        window.dispatchEvent(new CustomEvent('bcc:stateChanged'));
+      }
+    } catch(e){ console.warn('[persist] save failed', e); }
   }
 
   function restoreState(){
@@ -1657,151 +1501,138 @@ window.onload = function() {
       const raw = localStorage.getItem(KEY);
       if (!raw) return false;
       const s = JSON.parse(raw);
-      applyState(s);
+      // Mark importing so we don't trigger auto-push
+      window.__sync = window.__sync || {};
+      window.__sync.isImporting = true;
+      try { applyState(s); } finally { window.__sync.isImporting = false; }
       suppressBootSaves = false;
       return true;
-    }catch(e){ console.warn('[PERSIST] restore failed', e); suppressBootSaves = false; return false; }
+    }catch(e){ console.warn('[persist] restore failed', e); suppressBootSaves = false; return false; }
   }
 
   function clearState(){ try{ localStorage.removeItem(KEY); }catch{} }
 
-  // Patch core hooks to save automatically
-  ['renderTimeline','addPreset','addCustom','handleDayModeChange'].forEach(fn=>{
+  // Wire extras: zero-sum + live update
+  function wireExtras(){
+    const je = document.getElementById('jeffExtra');
+    const jo = document.getElementById('johnExtra');
+    if (!je || !jo) return;
+    const clamp = v => Math.max(-180, Math.min(120, (parseInt(v)||0)));
+    je.addEventListener('input', () => {
+      const v = clamp(je.value);
+      jo.value = String(-v);
+      if (typeof updateProgressDisplay === 'function') updateProgressDisplay();
+      saveState();
+    });
+    jo.addEventListener('input', () => {
+      const v = clamp(jo.value);
+      je.value = String(-v);
+      if (typeof updateProgressDisplay === 'function') updateProgressDisplay();
+      saveState();
+    });
+  }
+
+  // Wire day-mode toggles
+  function wireDayMode(){
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        if (typeof updateProgressDisplay === 'function') updateProgressDisplay();
+        saveState();
+      });
+    });
+  }
+
+  // Patch render to save after renders (but not during boot suppression)
+  const __rt = window.renderTimeline;
+  if (typeof __rt === 'function'){
+    window.renderTimeline = function(){
+      const out = __rt.apply(this, arguments);
+      saveState();
+      return out;
+    };
+  }
+  // Patch addPreset/addCustom if present
+  ['addPreset','addCustom'].forEach(fn => {
     const orig = window[fn];
     if (typeof orig === 'function'){
-      window[fn] = function(){ const out = orig.apply(this, arguments); saveState(); return out; };
+      window[fn] = function(){
+        const out = orig.apply(this, arguments);
+        saveState();
+        return out;
+      };
     }
   });
 
-  // Reset integration
-  const origReset = window.resetAllData;
-  if (typeof origReset === 'function'){
-    window.resetAllData = function(){ const out = origReset.apply(this, arguments); clearState(); saveState(); return out; };
+  // Reset integration: clear storage, then save new seeded defaults (incl. Jeff/John)
+  const __reset = window.resetAllData;
+  if (typeof __reset === 'function'){
+    window.resetAllData = function(){
+      const out = __reset.apply(this, arguments);
+      clearState();
+      // After reset, ensure extras default and Jeff/John defaults exist
+      try {
+        const je = document.getElementById('jeffExtra'); if (je) je.value = '-25';
+        const jo = document.getElementById('johnExtra'); if (jo) jo.value = '25';
+        // Seed defaults if missing (IDs must match to avoid dupes)
+        const items = Array.isArray(window.v1Items) ? window.v1Items : (window.v1Items = []);
+        const hasJeff = items.some(it => it.id === 'def-jeff-1');
+        const hasJohn = items.some(it => it.id === 'def-john-1');
+        if (!hasJeff) items.push({ id:'def-jeff-1', title:'Jeff shift', kind:'range', owner:'jeff', isDefault:true, startMin: 7*60+15, endMin: 9*60+25 });
+        if (!hasJohn) items.push({ id:'def-john-1', title:'John shift', kind:'range', owner:'john', isDefault:true, startMin: 9*60+25, endMin: 9*60+50 });
+        if (typeof renderTimeline === 'function') renderTimeline();
+        if (typeof updateProgressDisplay === 'function') updateProgressDisplay();
+      } catch {}
+      saveState();
+      return out;
+    };
   }
 
-  // Ensure cloud imports persist locally
+  // Ensure imports persist locally
   (function(){
     const __origImport = window.importState;
-    if (typeof __origImport === 'function') {
+    if (typeof __origImport === 'function'){
       window.importState = function(data){
         const out = __origImport.apply(this, arguments);
-        try { saveState(); } catch(e) {}
+        saveState();
         return out;
       };
     }
   })();
 
-  // Save on extras input change
   window.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('jeffExtra')?.addEventListener('input', saveState);
-    document.getElementById('johnExtra')?.addEventListener('input', saveState);
+    wireExtras();
+    wireDayMode();
   });
 
-  // Restore after the app has initialized
+  // Run restore AFTER the app's own onload init
   const prevOnload = window.onload;
   window.onload = function(evt){
     if (typeof prevOnload === 'function') prevOnload.call(this, evt);
-    restoreState();
+    const restored = restoreState();
+    if (!restored) {
+      // First visit: ensure defaults are saved so refresh keeps them
+      try {
+        // Ensure Jeff/John defaults exist on first seed (avoid dupes)
+        const items = Array.isArray(window.v1Items) ? window.v1Items : (window.v1Items = []);
+        const hasJeff = items.some(it => it.id === 'def-jeff-1');
+        const hasJohn = items.some(it => it.id === 'def-john-1');
+        if (!hasJeff) items.push({ id:'def-jeff-1', title:'Jeff shift', kind:'range', owner:'jeff', isDefault:true, startMin: 7*60+15, endMin: 9*60+25 });
+        if (!hasJohn) items.push({ id:'def-john-1', title:'John shift', kind:'range', owner:'john', isDefault:true, startMin: 9*60+25, endMin: 9*60+50 });
+        const je = document.getElementById('jeffExtra'); if (je) je.value = '-25';
+        const jo = document.getElementById('johnExtra'); if (jo) jo.value = '25';
+        if (typeof renderTimeline === 'function') renderTimeline();
+        if (typeof updateProgressDisplay === 'function') updateProgressDisplay();
+      } catch {}
+      suppressBootSaves = false;
+      saveState();
+    }
   };
 
+  // Debug helpers
   window.__persist = { saveState, restoreState, clearState };
+  // Build stamp
+  window.__careCalcBuild = 'PERSIST-v4-2025-09-02';
 })();
 
-
-
-/* ============================
-   SYNC UI FALLBACK (DOM migration)
-   If a legacy "Sync now" button exists, replace it with PULL/PUSH
-   and wire handlers here so old HTML still works.
-   ============================ */
-(function(){
-  function q(id){ return document.getElementById(id); }
-  function qs(sel){ return document.querySelector(sel); }
-  function getRoom(){ try { return new URLSearchParams(location.search).get("room") || "default"; } catch { return "default"; } }
-  async function ensureSupabase(){
-    if (window.supabase) return window.supabase;
-    try{
-      const m = await import("https://esm.sh/@supabase/supabase-js@2");
-      const url = "https://laqfvhpsacurgyulucwx.supabase.co";
-      const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxhcWZ2aHBzYWN1cmd5dWx1Y3d4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY3NDgzOTIsImV4cCI6MjA3MjMyNDM5Mn0.o2kMw3K-GYB2UlzSMb5C82-4a-rt3HmM0NLiP_eaa9M";
-      window.supabase = m.createClient(url, key);
-      return window.supabase;
-    }catch(e){
-      console.warn("[SYNC] Could not init Supabase client:", e);
-      return null;
-    }
-  }
-  function importStateLocal(data){
-    if (typeof window.importState === "function") return window.importState(data);
-    if (!data) return;
-    if (Array.isArray(data.items)) window.v1Items = data.items;
-    const je = q("jeffExtra"), jo = q("johnExtra");
-    if (je && data.extras && typeof data.extras.jeff === "number") je.value = data.extras.jeff;
-    if (jo && data.extras && typeof data.extras.john === "number") jo.value = data.extras.john;
-    if (data.dayMode && typeof window.handleDayModeChange === "function") window.handleDayModeChange(data.dayMode);
-    if (typeof window.renderTimeline === "function") window.renderTimeline();
-    if (typeof window.updateProgressDisplay === "function") window.updateProgressDisplay();
-  }
-  async function pull(){
-    const sb = await ensureSupabase(); if (!sb) return;
-    const room = getRoom();
-    const { data, error } = await sb.from("rooms").select("*").eq("room_id", room).single();
-    if (error){ console.warn("[SYNC] pull failed:", error); return; }
-    const payload = data?.data ?? data?.state ?? data?.payload ?? null;
-    if (payload) importStateLocal(payload);
-  }
-  async function push(){
-    const sb = await ensureSupabase(); if (!sb) return;
-    const room = getRoom();
-    const payload = (typeof window.exportState === "function") ? window.exportState() : { items: window.v1Items || [], extras: { jeff: Number(q('jeffExtra')?.value||0)||0, john: Number(q('johnExtra')?.value||0)||0 }, dayMode: qs('.toggle-btn.active')?.getAttribute('data-mode') || 'full', ts: Date.now() };
-    const row = { room_id: room, data: payload, updated_at: new Date().toISOString() };
-    const { error } = await sb.from("rooms").upsert(row, { onConflict: 'room_id' });
-    if (error){ console.warn("[SYNC] push failed:", error); }
-    return payload?.ts;
-  }
-
-  function installRealtime(){
-    if (!window.supabase) return;
-    const room = getRoom();
-    try{
-      window.__sync = window.__sync || {};
-      const ch = window.supabase.channel(`room:${room}`);
-      ch.on('postgres_changes', { event: '*', schema: 'public', table: 'rooms', filter: `room_id=eq.${room}` }, (payload) => {
-        const row = payload?.new;
-        const inbound = row?.data ?? row?.state ?? row?.payload ?? null;
-        if (inbound?.ts && window.__sync.lastPushedTs && inbound.ts === window.__sync.lastPushedTs) return;
-        if (inbound) importStateLocal(inbound);
-      }).subscribe();
-    }catch(e){ console.warn("[SYNC] realtime failed:", e); }
-  }
-
-  window.addEventListener('DOMContentLoaded', async () => {
-    const legacy = q('syncNowBtn');
-    if (!legacy) { installRealtime(); return; }
-
-    // Build group UI in place of old button
-    const wrapper = document.createElement('div');
-    wrapper.className = 'sync-group';
-    wrapper.innerHTML = '<span class="sync-label">SYNC</span><div class="sync-buttons"><button id="pullBtn" class="sync-btn pull" title="Pull latest from cloud">PULL</button><button id="pushBtn" class="sync-btn push" title="Push my changes to cloud">PUSH</button></div>';
-    legacy.replaceWith(wrapper);
-
-    const pullBtn = q('pullBtn');
-    const pushBtn = q('pushBtn');
-
-    pullBtn?.addEventListener('click', async () => {
-      const original = pullBtn.textContent; pullBtn.disabled = true; pullBtn.textContent = 'Syncing…';
-      try{ await pull(); } finally { pullBtn.disabled = false; pullBtn.textContent = original; }
-    });
-
-    pushBtn?.addEventListener('click', async () => {
-      const original = pushBtn.textContent; pushBtn.disabled = true; pushBtn.textContent = 'Pushing…';
-      try{ window.__sync = window.__sync || {}; window.__sync.lastPushedTs = await push() || 0; } finally { pushBtn.disabled = false; pushBtn.textContent = original; }
-    });
-
-    await ensureSupabase();
-    installRealtime();
-  });
-})();
-
-// Build stamp for verification
-window.__careCalcBuild = 'PULLPUSH-2025-09-02T';
