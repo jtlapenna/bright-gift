@@ -138,9 +138,9 @@ const blogIndexStructuredData = {
         <p class="text-lg font-inter text-[#333] mb-4 max-w-3xl mx-auto">Expert-curated gift guides, seasonal inspiration, and thoughtful ideas to help you find the perfect presents for every occasion and person. Discover unique gift recommendations for birthdays, holidays, and special moments.</p>
         
         <div class="flex flex-wrap justify-center gap-4 mt-6">
-          <a href="/blog" class="px-4 py-2 bg-[#FF6B6B] text-white rounded-full text-sm font-semibold hover:bg-[#ff4c4c] transition-colors">All Posts</a>
-          <a href="/category/gift-guides" class="px-4 py-2 bg-[#A3E4DB] text-[#1C2E4A] rounded-full text-sm font-semibold hover:bg-[#8FD8CC] transition-colors">Gift Guides</a>
-          <a href="/category/gift-tips" class="px-4 py-2 bg-[#FFDE59] text-[#1C2E4A] rounded-full text-sm font-semibold hover:bg-[#FFD633] transition-colors">Gift Tips & Insights</a>
+          <a href="/blog/" class="px-4 py-2 bg-[#FF6B6B] text-white rounded-full text-sm font-semibold hover:bg-[#ff4c4c] transition-colors">All Posts</a>
+          <a href="/category/gift-guides/" class="px-4 py-2 bg-[#A3E4DB] text-[#1C2E4A] rounded-full text-sm font-semibold hover:bg-[#8FD8CC] transition-colors">Gift Guides</a>
+          <a href="/category/gift-tips/" class="px-4 py-2 bg-[#FFDE59] text-[#1C2E4A] rounded-full text-sm font-semibold hover:bg-[#FFD633] transition-colors">Gift Tips & Insights</a>
         </div>
       </div>
     </div>
@@ -426,7 +426,7 @@ const blogIndexStructuredData = {
           <!-- Post Content -->
           <div class="p-6">
             <h2 class="text-xl font-bold mb-2 text-[#1C2E4A] hover:text-[#FF6B6B] transition-colors" itemprop="headline">
-              <a href="/blog/${post.slug}" class="block" aria-label="Read ${escapedTitle} gift guide">
+              <a href="/blog/${post.slug}/" class="block" aria-label="Read ${escapedTitle} gift guide">
                 ${escapedTitle}
               </a>
             </h2>
@@ -456,7 +456,7 @@ const blogIndexStructuredData = {
             
             <!-- Read More Link -->
             <a 
-              href="/blog/${post.slug}" 
+              href="/blog/${post.slug}/" 
               class="inline-flex items-center text-[#FF6B6B] font-semibold hover:text-[#ff4c4c] transition-colors"
               aria-label="Read complete ${escapedTitle} gift guide"
             >
