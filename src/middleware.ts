@@ -13,6 +13,7 @@ export const onRequest: MiddlewareHandler = (context, next) => {
   // - Files with extensions (.html, .css, .js, .png, etc.)
   // - API routes
   // - Static assets
+  // - Static directories (like care-calculator)
   if (
     url.pathname === '/' ||
     url.pathname.includes('.') ||
@@ -21,6 +22,7 @@ export const onRequest: MiddlewareHandler = (context, next) => {
     url.pathname.startsWith('/images/') ||
     url.pathname.startsWith('/icons/') ||
     url.pathname.startsWith('/placeholders/') ||
+    url.pathname.startsWith('/care-calculator/') ||
     url.pathname === '/robots.txt' ||
     url.pathname === '/sitemap.xml' ||
     url.pathname === '/favicon.svg'
@@ -28,10 +30,10 @@ export const onRequest: MiddlewareHandler = (context, next) => {
     return next();
   }
   
-  // For all other paths, redirect trailing slash to no trailing slash
-  if (url.pathname.endsWith('/') && url.pathname !== '/') {
+  // For all other paths, redirect no trailing slash to trailing slash
+  if (!url.pathname.endsWith('/') && url.pathname !== '/') {
     const newUrl = new URL(context.request.url);
-    newUrl.pathname = url.pathname.slice(0, -1);
+    newUrl.pathname = url.pathname + '/';
     return context.redirect(newUrl.toString(), 301);
   }
   
