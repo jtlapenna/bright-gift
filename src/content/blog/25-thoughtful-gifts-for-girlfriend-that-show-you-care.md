@@ -5,10 +5,8 @@ metaDescription: >-
   Looking for thoughtful gifts for your girlfriend? Discover 25 meaningful gift
   ideas that show you care, from personalized jewelry to romantic experiences.
   Fi...
-description: >-
-  Find the perfect thoughtful gift for your girlfriend with our curated
-  selection of meaningful presents that show you care. From personalized items
-  to romantic experiences, discover 25 ideas she'll love.
+description: >Find the perfect thoughtful gift for your girlfriend with our curated selection of meaningful presents that show you care. From personalized items to...
+keywords
 date: '2025-08-05'
 status: published
 contentType: gift-guide

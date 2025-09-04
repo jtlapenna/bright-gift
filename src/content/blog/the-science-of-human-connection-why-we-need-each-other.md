@@ -5,10 +5,8 @@ metaDescription: >-
   Discover the fascinating science behind human connection and why meaningful
   relationships are essential for our wellbeing. Learn how to strengthen bonds
   and ...
-description: >-
-  Explore the scientific research behind human connection and discover why
-  meaningful relationships are fundamental to our happiness, health, and overall
-  wellbeing.
+description: >Explore the scientific research behind human connection and discover why meaningful relationships are fundamental to our happiness, health, and overall...
+keywords
 date: '2025-07-29'
 pubDate: '2025-07-31'
 image: >-

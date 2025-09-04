@@ -1,9 +1,7 @@
 ---
 title: 'Clean Girl 2.0: Minimalist Gifts With Personality'
-description: >-
-  The Clean Girl look has evolved—still polished and pared-back, but now with
-  personality, vintage touches, and subtle edge. These gifts elevate the
-  aesthetic without losing the minimal vibe.
+description: >The Clean Girl look has evolved—still polished and pared-back, but now with personality, vintage touches, and subtle edge. These gifts elevate the...
+keywords
 date: '2025-08-18'
 status: published
 metaTitle: 'Clean Girl 2.0 Gifts: Minimalist, Polished, Personal'

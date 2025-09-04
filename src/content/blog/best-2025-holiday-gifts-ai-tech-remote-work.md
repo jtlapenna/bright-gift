@@ -1,9 +1,7 @@
 ---
 title: 'The Best Holiday Gifts for 2025: AI Tech, Remote Work Essentials & More'
-description: >-
-  Discover the most popular holiday gifts for 2025, from AI-powered gadgets to
-  remote work essentials. Find thoughtful presents that combine cutting-edge
-  technology with practical value.
+description: >Discover the most popular holiday gifts for 2025, from AI-powered gadgets to remote work essentials. Find thoughtful presents that combine cutting-edge...
+keywords
 date: '2025-08-11'
 status: published
 metaTitle: 'Best Holiday Gifts 2025: AI Tech & Remote Work Essentials'
