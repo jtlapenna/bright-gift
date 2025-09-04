@@ -1,5 +1,5 @@
 ---
-title: 'Eco-Friendly Gifts for Outdoor Lovers: Sustainable Nature'
+title: 'Eco-Friendly Gifts for Outdoor Lovers: Sustainable & Natural'
 slug: eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature
 image: >-
   /images/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature-banner.webp

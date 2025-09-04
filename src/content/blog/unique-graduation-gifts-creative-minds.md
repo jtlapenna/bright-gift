@@ -1,5 +1,5 @@
 ---
-title: 'Unique Graduation Gifts for Creative Minds: 15 Ideas'
+title: 'Unique Graduation Gifts for Creative Minds: 15 Inspiring Ideas'
 description: >-
   Find the perfect graduation gifts for creative minds with our curated guide.
   From art supplies to experiences, discover 15 inspiring ideas for artistic...

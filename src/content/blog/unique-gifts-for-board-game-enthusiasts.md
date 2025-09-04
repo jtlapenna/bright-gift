@@ -1,5 +1,5 @@
 ---
-title: 'Unique Gifts for Board Game Enthusiasts: 15 Great Ideas'
+title: 'Unique Gifts for Board Game Enthusiasts: 15 Perfect Ideas'
 description: >-
   Level up their game night with our curated selection of 15 unique gifts for
   board game enthusiasts, from strategy games to quirky accessories that

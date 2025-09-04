@@ -1,5 +1,5 @@
 ---
-title: '25 Thoughtful Housewarming Gifts Under $75'
+title: '25 Thoughtful Housewarming Gifts for New Homeowners Under $75'
 description: >-
   Discover 25 thoughtful housewarming gifts under $75 that new homeowners will
   love. From practical essentials to stylish decor, help them turn their

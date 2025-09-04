@@ -1,5 +1,5 @@
 ---
-title: 'How AI is Revolutionizing Gift Shopping: A Complete Guide...'
+title: 'How AI is Revolutionizing Gift Shopping: A Complete Guide'
 metaTitle: AI Gift Idea Generator | How AI Revolutionizes Gift Shopping
 metaDescription: >-
   Discover how AI gift idea generators are transforming gift shopping. Learn how

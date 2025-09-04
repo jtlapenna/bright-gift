@@ -1,5 +1,5 @@
 ---
-title: Gifts for Remote Workers Under $50
+title: 'Gifts for Remote Workers Under $50: 15 Affordable Ideas'
 metaTitle: Gifts for Remote Workers Under $50 | 15 Affordable Ideas
 metaDescription: >-
   Looking for the best gifts for remote workers? Discover 15 affordable work
