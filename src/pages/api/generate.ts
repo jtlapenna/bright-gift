@@ -374,11 +374,17 @@ export async function GET() {
 }
 
 export async function POST({ request, locals }: { request: any, locals: any }) {
-  console.log('POST /api/generate invoked');
+  console.log('🔍 POST /api/generate invoked');
+  console.log('🔍 Request method:', request.method);
+  console.log('🔍 Request URL:', request.url);
+  console.log('🔍 Request headers:', Object.fromEntries(request.headers.entries()));
+  console.log('🔍 Locals available:', !!locals);
+  console.log('🔍 Runtime env available:', !!locals?.runtime?.env);
+  
   let data;
   try {
     data = await request.json();
-    console.log('POST /api/generate received data:', data);
+    console.log('🔍 POST /api/generate received data:', data);
     const { recipient, interests, budget, styles } = data;
     if (!recipient || !interests || !budget) {
       return new Response(
@@ -388,10 +394,18 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
     }
 
     // Get the OpenAI API key from Cloudflare SSR runtime context
+    console.log('🔍 Checking environment variables...');
+    console.log('🔍 locals?.runtime?.env?.OPENAI_API_KEY exists:', !!locals?.runtime?.env?.OPENAI_API_KEY);
+    console.log('🔍 process.env.OPENAI_API_KEY exists:', !!process.env.OPENAI_API_KEY);
+    
     const apiKeyRaw = locals?.runtime?.env?.OPENAI_API_KEY || process.env.OPENAI_API_KEY;
     const apiKey = typeof apiKeyRaw === 'string' ? apiKeyRaw.trim().replace(/^"|"$/g, '') : apiKeyRaw;
+    console.log('🔍 API Key available:', !!apiKey);
+    console.log('🔍 API Key length:', apiKey ? apiKey.length : 0);
+    
     const projectIdRaw = locals?.runtime?.env?.OPENAI_PROJECT || locals?.runtime?.env?.OPENAI_PROJECT_ID || process.env.OPENAI_PROJECT || process.env.OPENAI_PROJECT_ID;
     const project = typeof projectIdRaw === 'string' ? projectIdRaw.trim().replace(/^"|"$/g, '') : undefined;
+    console.log('🔍 Project ID available:', !!project);
     if (!apiKey) {
       console.error('OpenAI API key not found. Debug info:', {
         locals: !!locals,
@@ -420,15 +434,20 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
     const bookshopAffiliateId = locals?.runtime?.env?.BOOKSHOP_AFFILIATE_ID || 'brightgift';
     console.log('Bookshop.org affiliate ID:', bookshopAffiliateId);
 
+    console.log('🔍 Creating OpenAI client...');
     const openai = new OpenAI(project ? { apiKey, project } : { apiKey });
+    console.log('🔍 OpenAI client created successfully');
     const prompt = buildPrompt({ recipient, interests, budget, styles });
 
     // Try multiple models to improve reliability across accounts/quotas
     const candidateModels = ['gpt-4o-mini', 'gpt-4o', 'gpt-4-turbo'];
     let ideasText = '';
     let lastModelError: any = null;
+    console.log('🔍 Starting OpenAI API call with models:', candidateModels);
+    
     for (const model of candidateModels) {
       try {
+        console.log(`🔍 Trying model: ${model}`);
         const completion = await openai.chat.completions.create({
           model,
           messages: [
@@ -437,15 +456,22 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
           ],
         });
         ideasText = completion.choices[0]?.message?.content?.trim() || '';
-        if (ideasText) break;
+        console.log(`🔍 Model ${model} response length:`, ideasText.length);
+        if (ideasText) {
+          console.log(`✅ Success with model: ${model}`);
+          break;
+        }
       } catch (err: any) {
         lastModelError = err;
+        console.log(`❌ Model ${model} failed:`, err.message);
         const msg = (err?.message || '').toLowerCase();
         // Try next model on model errors or 4xx specific to model availability
         if (msg.includes('model') || msg.includes('not found') || msg.includes('unsupported')) {
+          console.log(`🔄 Trying next model due to model-specific error`);
           continue;
         }
         // Otherwise rethrow (auth/network/etc.)
+        console.log(`💥 Fatal error with model ${model}, not retrying:`, err.message);
         throw err;
       }
     }
@@ -551,6 +577,7 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
       }
     }
 
+    console.log('✅ API call successful, returning', ideas.length, 'ideas');
     return new Response(JSON.stringify({ ideas }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
@@ -594,6 +621,7 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
       }
     }
     
+    console.log('❌ API call failed, returning error:', userMessage, 'Status:', statusCode);
     return new Response(
       JSON.stringify({ error: userMessage }),
       { status: statusCode, headers: { 'Content-Type': 'application/json' } }
