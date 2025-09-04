@@ -9,6 +9,7 @@ socialImage: >-
   /images/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore-social.webp
 category: gift-guides
 description: >-
+  -
   Treat the special mom in your life to luxurious self-care gifts. Explore
   pampering items perfect for Mother's Day or any occasion!
 keywords: >-

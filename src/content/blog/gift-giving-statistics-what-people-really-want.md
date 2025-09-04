@@ -1,7 +1,8 @@
 ---
 title: 'Gift Giving Statistics: What People Really Want in 2024'
-description: >Discover the latest gift giving statistics and data on what people actually want. From spending patterns to preferred gift types, learn what the research...
-keywords
+description: >-
+  Discover the latest gift giving statistics and data on what people actually want. From spending patterns to preferred gift types, learn what the research...
+keywords:
 date: '2024-07-22'
 pubDate: '2025-07-31'
 image: >-
@@ -27,7 +28,6 @@ metaTitle: 'Gift Giving Statistics: What People Really Want in 2024'
 draft: false
 status: published
 featured: false
-keywords: >-
   gifts, gift, people, giving, average, want, spending, preferences, statistics,
   what
 ---

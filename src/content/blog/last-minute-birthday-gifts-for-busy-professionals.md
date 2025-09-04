@@ -1,6 +1,7 @@
 ---
 title: 'Last-Minute Birthday Gifts for Busy Professionals: 15 Ideas...'
 description: >-
+  -
   Find the perfect last-minute birthday gift for busy professionals with our
   curated selection of thoughtful, practical presents that show you care
   without...

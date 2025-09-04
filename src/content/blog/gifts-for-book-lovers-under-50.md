@@ -1,6 +1,7 @@
 ---
 title: 25 Thoughtful Gifts for Book Lovers Under $50
 description: >-
+  -
   Discover perfect gifts for the bibliophiles in your life, from cozy reading
   accessories to must-read books that will delight any bookworm.
 image: /images/blog/gifts-for-book-lovers-banner.webp

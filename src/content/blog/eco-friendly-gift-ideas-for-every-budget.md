@@ -5,6 +5,7 @@ metaDescription: >-
   Looking for the perfect eco-friendly gift? Discover 15 sustainable gift ideas
   for every budget, including green gifts under $25. Shop smarter today
 description: >-
+  -
   Find the perfect present with our curated selection of eco-friendly and
   sustainable gifts for every budget.
 date: '2025-07-03'

@@ -1,6 +1,7 @@
 ---
 title: Chic Wedding Gifts for the Stylish Couple
 description: >-
+  -
   Discover chic wedding gifts for stylish couples that set them up for life
   together—browse our elegant picks!
 date: '2025-07-15'

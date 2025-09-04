@@ -1,7 +1,8 @@
 ---
 title: 'Clean Girl 2.0: Minimalist Gifts With Personality'
-description: >The Clean Girl look has evolved—still polished and pared-back, but now with personality, vintage touches, and subtle edge. These gifts elevate the...
-keywords
+description: >-
+  The Clean Girl look has evolved—still polished and pared-back, but now with personality, vintage touches, and subtle edge. These gifts elevate the...
+keywords:
 date: '2025-08-18'
 status: published
 metaTitle: 'Clean Girl 2.0 Gifts: Minimalist, Polished, Personal'
@@ -9,7 +10,6 @@ metaDescription: >-
   Updated 2025 Clean Girl aesthetic: sleek hair, dewy skin, and subtle vintage
   details. Discover minimalist gift ideas—hair kits, satin pillowcases, dewy
   skin ...
-keywords:
   - clean girl gifts
   - minimalist beauty gifts
   - slick back hair kit

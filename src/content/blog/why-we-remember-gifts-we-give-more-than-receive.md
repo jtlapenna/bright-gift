@@ -1,6 +1,7 @@
 ---
 title: Why We Remember Gifts We Give More Than Receive
 description: >-
+  -
   Discover the fascinating psychology behind why we remember the gifts we give
   more vividly than the ones we receive, and what this reveals about human
   nature.
@@ -20,6 +21,7 @@ budget: any
 occasion: any
 seo_title: Why We Remember Gifts We Give More Than Receive - The Psychology Explained
 seo_description: >-
+  -
   Discover why your brain remembers gifts you give more than receive. Learn the
   science behind gift-giving memory and what it reveals about human psychology.
 readTime: 5

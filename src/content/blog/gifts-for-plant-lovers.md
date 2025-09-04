@@ -6,6 +6,7 @@ metaDescription: >-
   houseplants, stylish planters, and care tools that every green thumb will
   love.
 description: >-
+  -
   Discover thoughtful gifts for plant enthusiasts under $75, from rare
   houseplants to stylish plant accessories that will make any green thumb happy.
 date: '2024-07-27'
