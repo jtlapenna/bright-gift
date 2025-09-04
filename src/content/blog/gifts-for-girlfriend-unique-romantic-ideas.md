@@ -1,5 +1,5 @@
 ---
-title: '15 Thoughtful Gifts for Your Girlfriend: Unique & Romantic...'
+title: '15 Thoughtful Gifts for Your Girlfriend'
 metaTitle: Gifts for Girlfriend | 15 Unique Romantic Ideas
 metaDescription: >-
   Impress your girlfriend with 15 unique, romantic gifts that go beyond clichés.

@@ -1,5 +1,5 @@
 ---
-title: 'Gifts for Remote Workers: 27 Essential WFH Items for Productivity & Comfort'
+title: 'Gifts for Remote Workers: 27 WFH Essentials'
 slug: gifts-for-remote-workers-and-wfh-professionals
 description: >-
   Discover 27 thoughtful gifts for remote workers and WFH professionals that

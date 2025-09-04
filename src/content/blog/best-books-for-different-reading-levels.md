@@ -1,5 +1,5 @@
 ---
-title: 'Best Books for Different Reading Levels: From Beginners to...'
+title: Books for Different Reading Levels - From Beginners to...
 description: >-
   Discover the perfect books for every reader in your life, from reluctant
   readers to avid bookworms. Find thoughtful book gifts that match their

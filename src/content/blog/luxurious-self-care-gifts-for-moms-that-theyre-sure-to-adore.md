@@ -1,5 +1,5 @@
 ---
-title: Luxurious Self-Care Gifts for Moms That They're Sure to Adore
+title: 'Luxurious Self-Care Gifts for Moms'
 slug: luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore
 image: >-
   /images/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore-banner.webp

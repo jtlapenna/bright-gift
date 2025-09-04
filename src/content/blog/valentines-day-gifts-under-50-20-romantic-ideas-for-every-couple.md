@@ -1,5 +1,5 @@
 ---
-title: 'Valentine''s Day Gifts Under $50: 20 Romantic Ideas for Every Couple'
+title: 'Valentine's Day Gifts Under $50: 20 Romantic Ideas'
 slug: valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple
 description: >-
   Discover 20 thoughtful Valentine's Day gifts under $50 that will make your
