@@ -1,5 +1,5 @@
 ---
-title: 'Gifts for D&D Enthusiasts: 15 Epic Ways to Level Up Their Game'
+title: 'Gifts for D&D Enthusiasts: 15 Epic Ways to Level Up'
 description: >-
   Find the perfect gifts for Dungeons & Dragons enthusiasts with our curated
   guide. From custom dice to adventure books, discover 15 epic ways to
