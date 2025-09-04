@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "prebuild": "node scripts/validate-images.js",
     "build": "npm run validate:yaml && npm run generate:sitemap && astro build",
     "preview": "astro preview",
     "astro": "astro",

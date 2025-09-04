@@ -1,8 +1,10 @@
 ---
 title: 'Best Home Gifts on Amazon 2024: Transform Your Space'
 description: >-
-  Discover the top home gifts on Amazon for 2024. From smart home devices to cozy essentials, find perfect gifts under $100 to transform any space into a dream home.
-keywords:
+  Discover the top home gifts on Amazon for 2024. From smart home devices to
+  cozy essentials, find perfect gifts under $100 to transform any space into
+  a...
+keywords: null
 date: '2024-12-19'
 image: /images/blog/best-home-gifts-on-amazon-2024/amazon-home-banner.webp
 ogImage: /images/blog/best-home-gifts-on-amazon-2024/amazon-home-OG.webp

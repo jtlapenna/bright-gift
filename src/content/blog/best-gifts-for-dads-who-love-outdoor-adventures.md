@@ -1,7 +1,9 @@
 ---
 title: Best Gifts for Dads Who Love Outdoor Adventures
 description: >-
-  Discover 25+ amazing gifts for outdoor-loving dads that will enhance their adventures. From camping gear to hiking essentials, find thoughtful presents that fuel their passion for the great outdoors.
+  Discover 25+ amazing gifts for outdoor-loving dads that will enhance their
+  adventures. From camping gear to hiking essentials, find thoughtful
+  presents...
 date: '2025-07-16'
 image: >-
   /images/blog/best-gifts-for-dads-who-love-outdoor-adventures/best-gifts-for-dads-who-love-outdoor-adventures-banner.webp

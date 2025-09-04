@@ -6,8 +6,9 @@ metaDescription: >-
   ideas that show you care, from personalized jewelry to romantic experiences.
   Fi...
 description: >-
-  Discover 25 thoughtful gifts for your girlfriend that show you care. From personalized jewelry to romantic experiences, find meaningful presents that celebrate your love and make her feel special.
-keywords:
+  Discover 25 thoughtful gifts for your girlfriend that show you care. From
+  personalized jewelry to romantic experiences, find meaningful presents that...
+keywords: null
 date: '2025-08-05'
 status: published
 contentType: gift-guide

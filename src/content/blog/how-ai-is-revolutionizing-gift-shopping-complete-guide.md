@@ -5,7 +5,8 @@ metaDescription: >-
   Discover how AI gift idea generators are transforming gift shopping. Learn how
   artificial intelligence creates personalized recommendations.
 description: >-
-  Explore the future of gift shopping with AI-powered gift idea generators. Learn how artificial intelligence creates personalized recommendations and revolutionizes the way we find perfect gifts.
+  Explore the future of gift shopping with AI-powered gift idea generators.
+  Learn how artificial intelligence creates personalized recommendations and...
 date: '2025-01-08'
 image: /images/blog/ai-gift-shopping-banner.webp
 ogImage: /images/blog/ai-gift-shopping-banner.webp

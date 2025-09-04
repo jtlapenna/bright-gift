@@ -1,8 +1,10 @@
 ---
 title: 'Affordable Gifts for Pet Lovers Under $30: 15 Perfect Picks'
 description: >-
-  Discover 15 affordable and thoughtful gifts for pet lovers under $30. From personalized items to practical accessories, find the perfect present for any pet parent who loves their furry friend.
-keywords:
+  Discover 15 affordable and thoughtful gifts for pet lovers under $30. From
+  personalized items to practical accessories, find the perfect present for
+  any...
+keywords: null
 date: '2025-07-15'
 pubDate: '2025-07-31'
 image: >-

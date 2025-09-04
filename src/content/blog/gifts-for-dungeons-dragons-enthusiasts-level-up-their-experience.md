@@ -1,7 +1,9 @@
 ---
 title: 'Gifts for D&D Enthusiasts: 15 Epic Ways to Level Up Their...'
 description: >-
-  Find the perfect gifts for Dungeons & Dragons enthusiasts with our curated guide. From custom dice to adventure books, discover 15 epic ways to enhance their gaming experience and level up their campaigns.
+  Find the perfect gifts for Dungeons & Dragons enthusiasts with our curated
+  guide. From custom dice to adventure books, discover 15 epic ways to
+  enhance...
 date: '2025-07-15'
 image: >-
   /images/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience-banner.webp

@@ -9,7 +9,9 @@ socialImage: >-
   /images/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature-social.webp
 category: gift-guides
 description: >-
-  Discover 20+ eco-friendly gifts for outdoor enthusiasts that promote sustainability while enjoying nature. From sustainable gear to earth-friendly accessories, find presents that protect the planet.
+  Discover 20+ eco-friendly gifts for outdoor enthusiasts that promote
+  sustainability while enjoying nature. From sustainable gear to
+  earth-friendly...
 keywords: >-
   eco-friendly gifts, gifts for outdoor lovers, sustainable gifts, nature gifts,
   outdoor gear

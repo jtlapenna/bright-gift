@@ -9,7 +9,9 @@ socialImage: >-
   /images/blog/top-gifts-for-yoga-enthusiasts/top-gifts-for-yoga-enthusiasts-social.webp
 category: gift-guides
 description: >-
-  Discover 20+ thoughtful gifts for yoga enthusiasts at every level, from beginners to advanced practitioners. From premium mats to meditation tools, find presents that enhance their practice and wellbeing.
+  Discover 20+ thoughtful gifts for yoga enthusiasts at every level, from
+  beginners to advanced practitioners. From premium mats to meditation tools,
+  find...
 keywords: >-
   yoga gifts, gifts for yoga lovers, yoga accessories, yoga equipment,
   meditation gifts, wellness gifts

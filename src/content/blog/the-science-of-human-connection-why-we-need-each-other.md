@@ -6,8 +6,10 @@ metaDescription: >-
   relationships are essential for our wellbeing. Learn how to strengthen bonds
   and ...
 description: >-
-  Explore the scientific research behind human connection and discover why meaningful relationships are fundamental to our happiness, health, and overall wellbeing in today's world.
-keywords:
+  Explore the scientific research behind human connection and discover why
+  meaningful relationships are fundamental to our happiness, health, and
+  overall...
+keywords: null
 date: '2025-07-29'
 pubDate: '2025-07-31'
 image: >-
@@ -28,8 +30,8 @@ readTime: 17
 featured: true
 draft: false
 contentType: educational
-status: published
-  that, relationships, social, your, connection, people, create, with,
+status: >-
+  published that, relationships, social, your, connection, people, create, with,
   strengthen, this
 category: educational
 ---

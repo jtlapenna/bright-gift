@@ -5,7 +5,9 @@ metaDescription: >-
   Discover 25 unique anniversary gift ideas under $50 that are thoughtful,
   memorable, and perfect for any relationship milestone. Shop smarter today
 description: >-
-  Discover 25 unique anniversary gift ideas under $50 that celebrate your relationship milestones. From personalized keepsakes to romantic experiences, find thoughtful presents that show your love.
+  Discover 25 unique anniversary gift ideas under $50 that celebrate your
+  relationship milestones. From personalized keepsakes to romantic experiences,
+  find...
 date: '2025-01-07'
 image: /images/blog/anniversary-gifts-under-50/anniversary-banner.webp
 ogImage: /images/blog/anniversary-gifts-under-50/anniversary-og.webp

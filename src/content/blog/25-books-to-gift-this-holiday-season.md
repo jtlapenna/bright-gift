@@ -1,8 +1,9 @@
 ---
 title: '25 Books to Gift This Holiday Season: Perfect for Every...'
 description: >-
-  Discover 25 perfect books for everyone on your holiday gift list. From fiction lovers to non-fiction enthusiasts, find thoughtful book gifts that will be treasured for years to come.
-keywords:
+  Discover 25 perfect books for everyone on your holiday gift list. From fiction
+  lovers to non-fiction enthusiasts, find thoughtful book gifts that will be...
+keywords: null
 image: /images/blog/holiday-books-banner.webp
 ogImage: /images/blog/holiday-books-og.webp
 socialImage: /images/blog/holiday-books-social.webp
@@ -10,13 +11,9 @@ date: '2024-11-01'
 metaTitle: 25 Best Books to Gift This Holiday Season | Top Picks
 metaDescription: >-
   Find the perfect books for everyone on your holiday gift list. From fiction to
-  non-fiction, discover thoughtful book gifts for every reader in your life.
-  - holiday book gifts
-  - christmas books
-  - gift books 2024
-  - books for gifts
-  - holiday reading gifts
-  - christmas book gifts
+  non-fiction, discover thoughtful book gifts for every reader in your life. -
+  holiday book gifts - christmas books - gift books 2024 - books for gifts -
+  holiday reading gifts - christmas book gifts
 tags:
   - holiday-gifts
   - books

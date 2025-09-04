@@ -5,7 +5,8 @@ metaDescription: >-
   Looking for the best gifts for remote workers? Discover 15 affordable work
   from home gift ideas under $50 that boost productivity and comfort.
 description: >-
-  Find the perfect present for remote employees, coworkers, or friends working from home with our curated list of 15 budget-friendly gifts under $50 that boost productivity and comfort.
+  Find the perfect present for remote employees, coworkers, or friends working
+  from home with our curated list of 15 budget-friendly gifts under $50 that...
 date: '2024-07-04'
 image: /images/blog/gifts-for-remote-workers-under-50/wfh-under-50-banner.webp
 ogImage: /images/blog/gifts-for-remote-workers-under-50/wfh-under-50-OG.webp

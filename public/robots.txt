@@ -32,4 +32,5 @@ Disallow: /private/
 Disallow: /temp/
 
 # Block access to placeholder images (social media only, not for SEO)
-Disallow: /placeholders/ 
+Disallow: /placeholders/
+Disallow: /social-assets/ 
