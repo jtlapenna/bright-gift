@@ -1,7 +1,7 @@
 ---
 title: 'Clean Girl 2.0: Minimalist Gifts With Personality'
 description: >-
-  The Clean Girl look has evolved—still polished and pared-back, but now with personality, vintage touches, and subtle edge. These gifts elevate the...
+  Discover 20+ minimalist gifts with personality for the modern woman. From sleek hair kits to dewy skin essentials, elevate the Clean Girl aesthetic with thoughtful presents under $75.
 keywords:
 date: '2025-08-18'
 status: published

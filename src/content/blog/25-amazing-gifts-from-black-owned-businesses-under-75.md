@@ -6,7 +6,7 @@ metaDescription: >-
   Black-owned business gifts under $75. From skincare to athletic wear, support
   m...
 description: >-
-  Discover thoughtful gifts that support diverse entrepreneurs while finding the perfect present for your loved ones. From skincare to athletic wear and...
+  Discover 25 amazing gifts from Black-owned businesses under $75 that support diverse entrepreneurs. From skincare to athletic wear, find meaningful presents that make a difference.
 keywords:
 date: '2024-12-19'
 image: >-
