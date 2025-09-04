@@ -97,10 +97,7 @@ What stands out:
 - **Example:** “Daily Focus” padfolio
 - **Where to shop:** <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="nofollow noopener">Shop Be Rooted</a>
 
-<figure>
-  <img src="/images/blog/be-rooted-planners-stationery/be-rooted-padfolio.webp" alt="Be Rooted Daily Focus padfolio" style="width:100%; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06);" />
-  <figcaption style="text-align:center; color:#6b7280; font-size:0.95rem; margin-top:0.5rem;">Daily Focus padfolio for meetings and projects</figcaption>
-</figure>
+<!-- Image removed: be-rooted-padfolio.webp file not found -->
 
 ## Desk Accessories to Complete the Setup
 

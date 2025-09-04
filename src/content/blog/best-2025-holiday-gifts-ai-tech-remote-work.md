@@ -198,4 +198,4 @@ The 2025 holiday season represents a turning point where AI technology becomes t
 
 Whether you choose an AI-powered productivity tool for the remote worker in your life, smart glasses for the tech enthusiast, or a wellness device for someone focused on self-care, you're giving more than just a gift. You're giving them access to the future and the tools to navigate an increasingly digital world with confidence and ease.
 
-Ready to find the perfect 2025 holiday gift? Our [Gift Idea Generator](/gift-idea-generator) can help you discover personalized recommendations based on your recipient's interests, budget, and lifestyle. Let AI help you choose a gift that will be remembered and appreciated for years to come. 
+Ready to find the perfect 2025 holiday gift? Our [Gift Idea Generator](/#tool) can help you discover personalized recommendations based on your recipient's interests, budget, and lifestyle. Let AI help you choose a gift that will be remembered and appreciated for years to come. 
