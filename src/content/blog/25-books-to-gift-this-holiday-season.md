@@ -1,5 +1,5 @@
 ---
-title: '25 Books to Gift This Holiday Season: Perfect for Every...'
+title: '25 Books to Gift This Holiday Season: Perfect for Everyone'
 description: >-
   Discover 25 perfect books for everyone on your holiday gift list. From fiction
   lovers to non-fiction enthusiasts, find thoughtful book gifts that will be...

@@ -1,5 +1,5 @@
 ---
-title: 'Eco-Friendly Gift Ideas for Every Budget: Sustainable &...'
+title: 'Eco-Friendly Gift Ideas for Every Budget: Sustainable'
 metaTitle: 'Eco-Friendly Gifts: 15 Sustainable Gift Ideas for Every B...'
 metaDescription: >-
   Looking for the perfect eco-friendly gift? Discover 15 sustainable gift ideas

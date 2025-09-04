@@ -1,5 +1,5 @@
 ---
-title: 'Gifts for New Homeowners: Unique Housewarming Gift Ideas...'
+title: 'Gifts for New Homeowners: Unique Housewarming Ideas'
 description: >-
   Discover 20+ unique housewarming gifts for new homeowners in 2025. From
   practical essentials to stylish decor, find thoughtful presents that help

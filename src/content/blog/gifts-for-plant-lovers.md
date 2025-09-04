@@ -1,5 +1,5 @@
 ---
-title: 'Gifts for Plant Lovers Under $75: 15 Perfect Presents for...'
+title: 'Gifts for Plant Lovers Under $75: 15 Perfect Presents'
 metaTitle: 15 Best Gifts for Plant Lovers Under $75 | Rare Plants & ...
 metaDescription: >-
   Find the perfect gift for plant enthusiasts under $75! Discover rare
