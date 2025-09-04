@@ -3,8 +3,7 @@ title: "Valentine's Day Gifts Under $50: 20 Romantic Ideas"
 slug: valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple
 description: >-
   Discover 20 thoughtful Valentine's Day gifts under $50 that will make your
-  partner feel truly special. From romantic experiences to meaningful
-  keepsakes, find the perfect way to show your love this Valentine's Day.
+  partner feel truly special. From romantic experiences to meaningful keepsakes.
 keywords: null
 author: Bright Gift Team
 date: '2025-01-15'
