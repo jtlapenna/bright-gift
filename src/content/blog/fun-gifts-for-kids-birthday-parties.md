@@ -5,9 +5,7 @@ image: >-
   /images/blog/fun-gifts-for-kids-birthday-parties/fun-gifts-for-kids-birthday-parties-banner.webp
 category: gift-guides
 description: >-
-  -
-  Explore fun and engaging gifts for kids' birthday parties that kids will love
-  and parents will appreciate.
+  Discover 25+ fun and engaging gifts for kids' birthday parties that kids will love and parents will appreciate. From educational toys to creative activities, find presents that make every celebration special.
 keywords: >-
   kids birthday gifts, fun gifts for children, unique gifts for kids, birthday
   present ideas, toys for kids
