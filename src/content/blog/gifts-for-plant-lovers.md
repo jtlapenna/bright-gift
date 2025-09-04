@@ -223,4 +223,4 @@ Remember, the best plant gifts are those that show you understand and appreciate
 
 ---
 
-*Looking for more gift ideas? Check out our [Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com//blog/eco-friendly-gift-ideas-for-every-budget) or explore our [Housewarming Gifts for New Homeowners](https://bright-gift.com//blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75). Have a specific plant lover in mind? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present!* 
+*Looking for more gift ideas? Check out our [Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget/)/ or explore our [Housewarming Gifts for New Homeowners](https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/)./ Have a specific plant lover in mind? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present!* 

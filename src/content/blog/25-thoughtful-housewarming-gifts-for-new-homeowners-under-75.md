@@ -258,4 +258,4 @@ A stylish key holder with their name, family name, or a special message. This pr
 
 Looking for more gift ideas?** Check out our guide to [gifts for new parents](/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond) for even more thoughtful options!
 
-Looking for more gift ideas? Check out our other gift guides for different occasions and budgets, including our guide to [unique anniversary gifts](https://bright-gift.com//blog/25-unique-anniversary-gift-ideas-under-50). Have a specific type of new homeowner in mind? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on their lifestyle, home type, and personal style!* 
+Looking for more gift ideas? Check out our other gift guides for different occasions and budgets, including our guide to [unique anniversary gifts](https://bright-gift.com/blog/25-unique-anniversary-gift-ideas-under-50/)./ Have a specific type of new homeowner in mind? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on their lifestyle, home type, and personal style!* 

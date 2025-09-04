@@ -190,4 +190,4 @@ Valentine's Day is about celebrating your love and connection, not about spendin
 
 Whether you choose a romantic experience, a personalized keepsake, or a practical gift that shows you care, the most important thing is that it comes from the heart. After all, the best Valentine's Day gifts are the ones that strengthen your bond and create lasting memories together.
 
-> 💝 **Looking for more gift inspiration? Check out our [Complete Gift Guide](https://bright-gift.com//blog/how-to-choose-the-perfect-gift-complete-guide/) for personalized recommendations based on your partner's interests and personality!** 
+> 💝 **Looking for more gift inspiration? Check out our [Complete Gift Guide](https://bright-gift.com/blog/how-to-choose-the-perfect-gift-complete-guide/) for personalized recommendations based on your partner's interests and personality!** 

@@ -241,4 +241,4 @@ Remember, every interaction is an opportunity to strengthen a connection. Every 
 
 ---
 
-*Looking for more ways to strengthen your relationships? Check out our guides on [How to Choose the Perfect Gift](https://bright-gift.com//blog/how-to-choose-the-perfect-gift-complete-guide) and [Gift Giving Statistics](https://bright-gift.com//blog/gift-giving-statistics-what-people-really-want) to learn more about the science of meaningful connections.* 
+*Looking for more ways to strengthen your relationships? Check out our guides on [How to Choose the Perfect Gift](https://bright-gift.com/blog/how-to-choose-the-perfect-gift-complete-guide/)/ and [Gift Giving Statistics](https://bright-gift.com/blog/gift-giving-statistics-what-people-really-want/)/ to learn more about the science of meaningful connections.* 

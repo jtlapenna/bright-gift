@@ -26,7 +26,8 @@
     "create-blog:data-driven": "node scripts/create-blog-automation.js --type data-driven",
     "monitor:404s": "node scripts/clean-404-posts.js",
     "remove:md-urls": "node scripts/remove-md-urls-from-gsc.js",
-    "generate:sitemap": "node scripts/generate-sitemap.js"
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "fix:trailing-slashes": "node scripts/fix-trailing-slashes.js"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.0",
@@ -51,6 +52,7 @@
   "devDependencies": {
     "@types/node": "^24.0.10",
     "astro": "^5.11.0",
+    "glob": "^11.0.3",
     "js-yaml": "^4.1.0",
     "typescript": "^5.0.0"
   },

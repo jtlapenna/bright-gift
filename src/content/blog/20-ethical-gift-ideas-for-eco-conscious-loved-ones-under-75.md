@@ -249,4 +249,4 @@ Every ethical gift you choose makes a difference:
 
 ---
 
-*Looking for more gift ideas? Check out our other gift guides for different occasions and budgets, including our guide to [thoughtful housewarming gifts](https://bright-gift.com//blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75). Have a specific eco-conscious loved one in mind? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect sustainable present based on their values, lifestyle, and environmental priorities!* 
+*Looking for more gift ideas? Check out our other gift guides for different occasions and budgets, including our guide to [thoughtful housewarming gifts](https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/)./ Have a specific eco-conscious loved one in mind? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect sustainable present based on their values, lifestyle, and environmental priorities!* 

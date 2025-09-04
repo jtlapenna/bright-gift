@@ -104,4 +104,4 @@ Encourage eco-friendly habits with a stylish countertop compost bin for food scr
 
 ---
 
-*Looking for more green gift ideas? Check out our [Eco-Friendly Gifts for Outdoor Lovers](https://bright-gift.com//blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature) or explore our [Ethical Gift Ideas Under $75](https://bright-gift.com//blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75). Or, try our [Gift Idea Generator](https://bright-gift.com/) to discover the perfect eco-friendly present!* 
+*Looking for more green gift ideas? Check out our [Eco-Friendly Gifts for Outdoor Lovers](https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/)/ or explore our [Ethical Gift Ideas Under $75](https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/)./ Or, try our [Gift Idea Generator](https://bright-gift.com/) to discover the perfect eco-friendly present!* 

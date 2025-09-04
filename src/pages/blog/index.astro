@@ -59,48 +59,7 @@ const blogIndexStructuredData = {
   "@type": "CollectionPage",
   "name": "Gift Ideas Blog - BrightGift",
   "description": "Discover thoughtful gift ideas, seasonal guides, and expert tips for finding the perfect presents. Browse our curated collection of gift guides for every occasion and recipient.",
-  "url": currentPage === 1 ? "https://bright-gift.com/blog/" : `https://bright-gift.com/blog/?page=${currentPage}`,
-  "mainEntity": {
-    "@type": "ItemList",
-    "numberOfItems": allContent.length,
-    "itemListElement": allContent.slice(0, 10).map((post, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "item": {
-        "@type": "BlogPosting",
-        "headline": post.data.title,
-        "description": post.data.description,
-        "url": `https://bright-gift.com/blog/${post.slug}/`,
-        "datePublished": post.data.date,
-        "author": {
-          "@type": "Organization",
-          "name": "BrightGift"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "BrightGift",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://bright-gift.com/bright-gift-logo.png"
-          }
-        }
-      }
-    }))
-  },
-  // Add pagination information
-  ...(totalPages > 1 && {
-    "pagination": {
-      "@type": "WebPage",
-      "isPartOf": {
-        "@type": "CollectionPage",
-        "url": "https://bright-gift.com/blog/"
-      },
-      "pageNumber": currentPage,
-      "totalPages": totalPages,
-      ...(validPage > 1 && { "previousPage": getPageUrl(validPage - 1) }),
-      ...(validPage < totalPages && { "nextPage": getPageUrl(validPage + 1) })
-    }
-  })
+  "url": currentPage === 1 ? "https://bright-gift.com/blog/" : "https://bright-gift.com/blog/?page=" + currentPage
 };
 ---
 
@@ -108,7 +67,7 @@ const blogIndexStructuredData = {
   title="Gift Ideas Blog - Expert Gift Guides & Recommendations | BrightGift" 
   description="Discover thoughtful gift ideas, seasonal guides, and expert tips for finding the perfect presents. Browse our curated collection of gift guides for every occasion and recipient."
   keywords={["gift guides", "gift ideas", "birthday gifts", "holiday gifts", "gift recommendations", "gift shopping", "thoughtful gifts", "unique gifts", "gift inspiration", "gift giving", "seasonal gifts", "personalized gifts"]}
-  canonical={currentPage === 1 ? "https://bright-gift.com/blog/" : `https://bright-gift.com/blog/?page=${currentPage}`}
+  canonical={currentPage === 1 ? "https://bright-gift.com/blog/" : `https://bright-gift.com/blog/?page=${currentPage}`/}/
   ogType="website"
   noindex={currentPage > 1}
   twitterCard="summary_large_image"
