@@ -42,7 +42,7 @@ Board game lovers appreciate gifts that enhance their gaming experience, protect
 
 The best gifts for board game enthusiasts go beyond the obvious—they show thoughtfulness about their specific interests, gaming style, and the social aspects of board gaming that make it so special.
 
-> 🎯 **Not sure what type of board game enthusiast you're shopping for? Our [Gift Idea Generator](https://bright-gift.com) can help you discover personalized gift ideas based on their favorite games, playing style, and gaming preferences!**
+> 🎯 **Not sure what type of board game enthusiast you're shopping for? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover personalized gift ideas based on their favorite games, playing style, and gaming preferences!**
 
 ---
 
@@ -211,4 +211,4 @@ The best gifts for board game lovers are those that show you understand their ho
 
 Remember that board gaming is as much about the social experience as it is about the games themselves. Your gift supports not just their individual enjoyment, but their ability to share this wonderful hobby with friends and family.
 
-Ready to discover even more personalized gift ideas? Try our [Gift Idea Generator](https://bright-gift.com) for custom recommendations based on their favorite games, playing style, and gaming preferences!
+Ready to discover even more personalized gift ideas? Try our [Gift Idea Generator](https://bright-gift.com/) for custom recommendations based on their favorite games, playing style, and gaming preferences!

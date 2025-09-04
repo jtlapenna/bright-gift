@@ -55,7 +55,7 @@ status: published
 
 Book lovers are some of the most thoughtful and appreciative gift recipients you'll ever find. They value experiences, knowledge, and items that enhance their reading journey. Whether they're into fiction, non-fiction, or specific genres, there's always something perfect for the bibliophile in your life.
 
-> 🎯 **Not sure what type of book lover you're shopping for? Our [Gift Idea Generator](https://bright-gift.com) can help you identify the perfect gift based on their favorite genres, reading habits, and preferences!**
+> 🎯 **Not sure what type of book lover you're shopping for? Our [Gift Idea Generator](https://bright-gift.com/) can help you identify the perfect gift based on their favorite genres, reading habits, and preferences!**
 
 ---
 

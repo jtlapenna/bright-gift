@@ -63,7 +63,7 @@ tags:
 
 Yoga practitioners are passionate about their practice and always appreciate thoughtful gifts that enhance their journey. Whether they're just starting their yoga adventure or have been practicing for years, yoga enthusiasts value items that support their physical practice, mental wellness, and spiritual growth. From essential equipment to luxurious accessories, there's a perfect gift for every level of practitioner.
 
-> 🎯 **Not sure what type of yoga lover you're shopping for? Our [Gift Idea Generator](https://bright-gift.com) can help you identify the perfect gift based on their experience level, practice style, and preferences!**
+> 🎯 **Not sure what type of yoga lover you're shopping for? Our [Gift Idea Generator](https://bright-gift.com/) can help you identify the perfect gift based on their experience level, practice style, and preferences!**
 
 ---
 
@@ -188,4 +188,4 @@ A smart water bottle helps yoga practitioners stay hydrated by tracking water in
 
 ---
 
-*Looking for more gift ideas? Check out our other gift guides for different interests and budgets. Have a specific yoga lover in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present!* 
+*Looking for more gift ideas? Check out our other gift guides for different interests and budgets. Have a specific yoga lover in mind? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present!* 

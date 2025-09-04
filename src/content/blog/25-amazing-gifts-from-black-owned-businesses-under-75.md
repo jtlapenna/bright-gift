@@ -47,7 +47,7 @@ When you choose gifts from Black-owned businesses, you're supporting entrepreneu
 
 In this guide, we've curated 25 amazing gifts under $75 from Black-owned businesses that span beauty, fitness, wellness, and lifestyle categories. Each recommendation comes from brands we genuinely believe in, offering quality products that make thoughtful, impactful gifts.
 
-> 🎯 **Not sure what type of gift to buy? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their interests and preferences!**
+> 🎯 **Not sure what type of gift to buy? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on their interests and preferences!**
 
 ---
 
@@ -260,4 +260,4 @@ Whether you're shopping for skincare enthusiasts, fitness lovers, wellness seeke
 
 Next time you're looking for the perfect gift, consider how your purchase can support both the recipient and the broader community. These Black-owned brands are proof that quality, innovation, and social impact can go hand in hand.
 
-Looking for more personalized gift suggestions? Our [Gift Idea Generator](https://bright-gift.com) can help you find the perfect present based on your recipient's specific interests and preferences! 
+Looking for more personalized gift suggestions? Our [Gift Idea Generator](https://bright-gift.com/) can help you find the perfect present based on your recipient's specific interests and preferences! 

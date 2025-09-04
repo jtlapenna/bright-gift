@@ -163,6 +163,6 @@ Conclusion
 
 Selecting eco-friendly gifts for outdoor lovers is a wonderful way to honor their passion for nature while supporting sustainability. Whether it's a durable backpack made from recycled materials or stylish wooden sunglasses, these gifts are sure to please any environmentally-conscious adventurer. Remember, the right gift isn't just about what's given, but how it aligns with the recipient's values.
 
-> 🎯 **Not sure what type of gift to buy? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present!**
+> 🎯 **Not sure what type of gift to buy? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present!**
 
-For more inspiration, check out our [Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget) or explore our [Ethical Gift Ideas Under $75](https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75).
+For more inspiration, check out our [Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com//blog/eco-friendly-gift-ideas-for-every-budget) or explore our [Ethical Gift Ideas Under $75](https://bright-gift.com//blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75).

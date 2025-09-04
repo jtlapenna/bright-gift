@@ -34,7 +34,7 @@ category: gift-guides
 
 Let's be honest: your girlfriend is one-of-a-kind, and she deserves a gift that's just as special. Forget the tired teddy bears and last-minute roses—this guide is packed with creative, romantic, and meaningful ideas that show you truly care. Whether you're celebrating an anniversary, birthday, or just want to make her smile, these gifts are designed to impress and create lasting memories.
 
-> 🎯 **Not sure what type of gift will wow your girlfriend? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on her style, interests, and your budget!**
+> 🎯 **Not sure what type of gift will wow your girlfriend? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on her style, interests, and your budget!**
 
 ---
 
@@ -133,4 +133,4 @@ Blend of tech and sentiment: upload photos from both your phones to keep memorie
 
 Looking for more gift ideas?** Check out our guide to [birthday gifts for LGBTQ+ youth](/blog/special-birthday-gifts-for-lgbtq-youth) for even more thoughtful options!
 
-Looking for more inspiration? Explore our other [gift guides](https://bright-gift.com/blog) or try the [Gift Idea Generator](https://bright-gift.com) for personalized suggestions!* 
+Looking for more inspiration? Explore our other [gift guides](https://bright-gift.com//blog) or try the [Gift Idea Generator](https://bright-gift.com/) for personalized suggestions!* 

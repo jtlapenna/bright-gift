@@ -42,7 +42,7 @@ The best birthday gifts for busy professionals combine practicality with persona
 
 From productivity tools that streamline their workday to wellness items that help them recharge, each gift has been carefully selected for its quality, usefulness, and ability to make a busy professional's life a little easier.
 
-> 🎯 **Not sure what type of professional you're shopping for? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their industry, work style, and personal interests!**
+> 🎯 **Not sure what type of professional you're shopping for? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on their industry, work style, and personal interests!**
 
 ---
 
@@ -199,4 +199,4 @@ Finding the perfect last-minute birthday gift for a busy professional doesn't ha
 
 Whether you choose a productivity tool, wellness item, or professional development opportunity, your gift will demonstrate that you understand and value their professional journey. The key is selecting something that aligns with their needs and shows genuine care for their success and happiness.
 
-Ready to discover even more personalized gift ideas? Try our [Gift Idea Generator](https://bright-gift.com) for custom recommendations based on their profession, work style, and personal interests!
+Ready to discover even more personalized gift ideas? Try our [Gift Idea Generator](https://bright-gift.com/) for custom recommendations based on their profession, work style, and personal interests!

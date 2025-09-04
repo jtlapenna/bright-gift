@@ -38,7 +38,7 @@ Welcoming a new baby is one of life's most joyous occasions, and choosing the ri
 
 The best baby gifts combine practicality with personal touches, offering solutions for common new parent challenges while creating lasting memories. From sustainable options that align with eco-conscious values to personalized keepsakes that grow with the child, thoughtful gifts can make a real difference in a new family's life.
 
-> 🎯 **Not sure what type of baby gift would be most appreciated? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on the parents' style, baby's age, and your budget!**
+> 🎯 **Not sure what type of baby gift would be most appreciated? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on the parents' style, baby's age, and your budget!**
 
 ---
 
@@ -300,4 +300,4 @@ Bedtime essentials including sleep sacks, books, and white noise machine. Helps 
 
 Looking for more gift ideas?** Check out our guide to [25 Thoughtful Housewarming Gifts for New Homeowners Under $75](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75) for even more thoughtful options!
 
-Looking for more baby gift ideas? Check out our other gift guides for different budgets and occasions. Have a specific new parent in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their style, values, and needs!* 
+Looking for more baby gift ideas? Check out our other gift guides for different budgets and occasions. Have a specific new parent in mind? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on their style, values, and needs!* 

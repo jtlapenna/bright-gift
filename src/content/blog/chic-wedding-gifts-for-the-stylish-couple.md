@@ -36,7 +36,7 @@ category: gift-guides
 
 Weddings celebrate love, commitment, and the start of a new chapter. Finding the perfect gift for a couple embarking on this journey can be challenging, especially when you want to give something that exudes elegance and sophistication. Stylish couples appreciate gifts that reflect their taste and help them embark on their new life together. In this guide, we've curated a selection of chic wedding gifts that combine style and practicality, ensuring your present is both memorable and appreciated.
 
-> 🎯 **Not sure what to buy? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect wedding gift based on their style, needs, and budget!**
+> 🎯 **Not sure what to buy? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect wedding gift based on their style, needs, and budget!**
 
 ---
 
@@ -127,4 +127,4 @@ Looking for other gift ideas? Check out our guides to:
 
 Conclusion
 
-Choosing a chic wedding gift requires a blend of style, usefulness, and thoughtfulness. It's about giving something that will be remembered and cherished forever. For more unique and personalized gift ideas, try our [Gift Idea Generator](https://bright-gift.com), designed to tailor recommendations based on preferences and needs.
+Choosing a chic wedding gift requires a blend of style, usefulness, and thoughtfulness. It's about giving something that will be remembered and cherished forever. For more unique and personalized gift ideas, try our [Gift Idea Generator](https://bright-gift.com/), designed to tailor recommendations based on preferences and needs.

@@ -38,7 +38,7 @@ Anniversaries are special milestones that deserve celebration, regardless of you
 
 The key to choosing the perfect anniversary gift is understanding what makes your partner feel loved and appreciated. Some people value experiences, others cherish personalized items, and many appreciate practical gifts that show you pay attention to their daily needs.
 
-> 🎯 **Not sure what type of anniversary gift your partner would love? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their interests, style, and your relationship dynamic!**
+> 🎯 **Not sure what type of anniversary gift your partner would love? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on their interests, style, and your relationship dynamic!**
 
 ---
 
@@ -189,4 +189,4 @@ A beautiful vintage-style recipe book for couples to cook together. This gift en
 
 > 💡 **Looking for more gift ideas?** Check out our guide to [chic wedding gifts](/blog/chic-wedding-gifts-for-the-stylish-couple) for even more thoughtful options!
 
-Looking for more gift ideas? Check out our other gift guides for different occasions and budgets, including our guide to [unique gifts for girlfriends](https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas). Have a specific anniversary milestone coming up? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on your partner's interests and your relationship dynamic!* 
+Looking for more gift ideas? Check out our other gift guides for different occasions and budgets, including our guide to [unique gifts for girlfriends](https://bright-gift.com//blog/gifts-for-girlfriend-unique-romantic-ideas). Have a specific anniversary milestone coming up? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on your partner's interests and your relationship dynamic!* 

@@ -40,7 +40,7 @@ Finding the perfect gift for pet lovers doesn't have to break the bank. Whether 
 
 From personalized accessories to practical tools that make pet care easier, each item has been chosen for its quality, usefulness, and ability to enhance the bond between pet and owner. Let's explore budget-friendly options that will delight any animal lover without straining your wallet.
 
-> 🎯 **Not sure what to buy? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect pet gift based on their specific pet type, needs, and budget!**
+> 🎯 **Not sure what to buy? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect pet gift based on their specific pet type, needs, and budget!**
 
 ---
 
@@ -166,4 +166,4 @@ Finding affordable gifts for pet lovers doesn't mean sacrificing quality or thou
 
 Remember that the best pet gifts are those that enhance the bond between pet and owner or make pet care easier and more enjoyable. With these budget-friendly options, you can give a meaningful gift that celebrates their passion for pets without breaking the bank.
 
-Ready to discover even more personalized gift ideas? Try our [Gift Idea Generator](https://bright-gift.com) for custom recommendations based on their specific pet type, interests, and budget!
+Ready to discover even more personalized gift ideas? Try our [Gift Idea Generator](https://bright-gift.com/) for custom recommendations based on their specific pet type, interests, and budget!

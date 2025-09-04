@@ -44,7 +44,7 @@ Finding the perfect book gift isn't just about picking a great story—it's abou
 
 The best book gifts consider not just age, but reading experience, interests, and the recipient's relationship with books. A book that's too challenging can be discouraging, while one that's too simple might feel patronizing. The sweet spot is finding a book that's engaging, accessible, and just challenging enough to be rewarding.
 
-> 🎯 **Not sure what reading level to choose? Our [Gift Idea Generator](https://bright-gift.com) can help you identify the perfect book based on their reading habits, interests, and comfort level!**
+> 🎯 **Not sure what reading level to choose? Our [Gift Idea Generator](https://bright-gift.com/) can help you identify the perfect book based on their reading habits, interests, and comfort level!**
 
 ---
 

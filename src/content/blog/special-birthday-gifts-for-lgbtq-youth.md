@@ -42,7 +42,7 @@ The best birthday gifts for LGBTQ+ youth go beyond the material—they serve as 
 
 From books that validate their experiences to accessories that let them express their pride, each gift idea has been carefully selected to honor their identity while supporting their personal growth and self-expression.
 
-> 🎯 **Not sure what type of gift would be most meaningful? Our [Gift Idea Generator](https://bright-gift.com) can help you discover personalized gift ideas based on their interests, style preferences, and what would make them feel most celebrated!**
+> 🎯 **Not sure what type of gift would be most meaningful? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover personalized gift ideas based on their interests, style preferences, and what would make them feel most celebrated!**
 
 ---
 
@@ -206,4 +206,4 @@ Whether you choose a book that reflects their story, clothing that affirms their
 
 By choosing inclusive, thoughtful gifts, you're not just celebrating their birthday—you're celebrating their courage, their authenticity, and their right to be themselves. This support can make a profound difference in their confidence, self-esteem, and sense of belonging.
 
-Ready to discover even more personalized gift ideas? Try our [Gift Idea Generator](https://bright-gift.com) for custom recommendations based on their interests, style preferences, and what would make them feel most celebrated and supported!
+Ready to discover even more personalized gift ideas? Try our [Gift Idea Generator](https://bright-gift.com/) for custom recommendations based on their interests, style preferences, and what would make them feel most celebrated and supported!

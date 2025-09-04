@@ -31,7 +31,7 @@ This post contains affiliate links. We may earn a commission if you click throug
 
 Finding the perfect gift for a coworker doesn't have to be expensive or complicated. These thoughtful gifts under $25 are perfect for office celebrations, birthdays, or just showing appreciation.
 
-> 🎯 **Not sure what type of coworker you're shopping for? Our [Gift Idea Generator](https://bright-gift.com) can help you identify the perfect gift based on their interests, work style, and your relationship!**
+> 🎯 **Not sure what type of coworker you're shopping for? Our [Gift Idea Generator](https://bright-gift.com/) can help you identify the perfect gift based on their interests, work style, and your relationship!**
 
 For remote workers, check out our [Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50) guide for more work-from-home gift ideas.
 
@@ -154,4 +154,4 @@ Wireless earbuds are essential for modern office communication and productivity.
 
 ---
 
-*Looking for more gift ideas? Check out our other gift guides for different budgets and relationships. Have a specific coworker in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their unique interests and work style!* 
+*Looking for more gift ideas? Check out our other gift guides for different budgets and relationships. Have a specific coworker in mind? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on their unique interests and work style!* 

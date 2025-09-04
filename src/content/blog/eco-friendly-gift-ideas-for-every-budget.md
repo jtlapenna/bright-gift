@@ -35,7 +35,7 @@ category: gift-guides
 
 Choosing sustainable gifts isn't just a trend—it's a meaningful way to show you care about both your loved ones and the planet. Eco-friendly gifts are thoughtful, practical, and help reduce waste, making them perfect for any occasion. Whether you're shopping for a birthday, holiday, or just because, these green gift ideas are sure to delight.
 
-> 🎯 **Not sure what type of eco-friendly gift to buy? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their interests and values!**
+> 🎯 **Not sure what type of eco-friendly gift to buy? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on their interests and values!**
 
 ---
 
@@ -104,4 +104,4 @@ Encourage eco-friendly habits with a stylish countertop compost bin for food scr
 
 ---
 
-*Looking for more green gift ideas? Check out our [Eco-Friendly Gifts for Outdoor Lovers](https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature) or explore our [Ethical Gift Ideas Under $75](https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75). Or, try our [Gift Idea Generator](https://bright-gift.com) to discover the perfect eco-friendly present!* 
+*Looking for more green gift ideas? Check out our [Eco-Friendly Gifts for Outdoor Lovers](https://bright-gift.com//blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature) or explore our [Ethical Gift Ideas Under $75](https://bright-gift.com//blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75). Or, try our [Gift Idea Generator](https://bright-gift.com/) to discover the perfect eco-friendly present!* 

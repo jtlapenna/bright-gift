@@ -37,7 +37,7 @@ Graduation is a pivotal moment in anyone's life, marking the transition from edu
 
 This guide features 15 carefully selected graduation gifts that go beyond the conventional to truly honor the artistic spirit. From practical tools that enhance their craft to experiences that broaden their horizons, each suggestion is designed to support their creative journey and show you understand the importance of their artistic pursuits.
 
-> 🎯 **Not sure what to buy? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect graduation gift based on their creative interests, budget, and future plans!**
+> 🎯 **Not sure what to buy? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect graduation gift based on their creative interests, budget, and future plans!**
 
 ---
 
@@ -165,4 +165,4 @@ Whether you choose practical supplies that enhance their craft, experiences that
 
 Remember that supporting a creative graduate means investing in their passion and potential. These thoughtful gift ideas will help them continue their artistic journey with confidence and inspiration.
 
-Ready to discover even more personalized gift ideas? Try our [Gift Idea Generator](https://bright-gift.com) for custom recommendations based on their specific creative interests, budget, and future plans!
+Ready to discover even more personalized gift ideas? Try our [Gift Idea Generator](https://bright-gift.com/) for custom recommendations based on their specific creative interests, budget, and future plans!

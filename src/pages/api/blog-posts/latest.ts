@@ -33,7 +33,7 @@ export async function GET({ request, locals }: { request: any, locals: any }) {
       title: latestPost.data.title,
       description: latestPost.data.description,
       slug: latestPost.id,
-      url: `https://bright-gift.com/blog/${latestPost.id}`,
+      url: `https://bright-gift.com/blog/${latestPost.id}/`,
       tags: latestPost.data.tags || [],
       keywords: latestPost.data.keywords || [],
       image: latestPost.data.image,

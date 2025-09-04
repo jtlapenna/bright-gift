@@ -38,7 +38,7 @@ Finding the perfect Christmas gift for a gamer who seems to have every accessory
 
 This guide focuses on unique, thoughtful gifts that go beyond the obvious gaming accessories. Whether they're a PC enthusiast, console gamer, or mobile gaming fan, these Christmas gift ideas will surprise and delight even the most experienced gamers.
 
-> 🎯 **Not sure what type of gamer you're shopping for? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect Christmas gift based on their gaming preferences, setup, and experience level!**
+> 🎯 **Not sure what type of gamer you're shopping for? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect Christmas gift based on their gaming preferences, setup, and experience level!**
 
 ---
 
@@ -202,4 +202,4 @@ Finding the perfect Christmas gift for a gamer who has everything doesn't have t
 
 The best gifts for experienced gamers are those that surprise them, enhance their gaming experience, or add a personal touch to their gaming space. Whether you choose a custom collectible, an immersive experience, or a unique accessory, your gift will help them enjoy their favorite hobby even more.
 
-For more personalized Christmas gift ideas, check out our [Gift Idea Generator](https://bright-gift.com), which provides tailored recommendations based on their gaming preferences, setup, and the specific games they love. 
+For more personalized Christmas gift ideas, check out our [Gift Idea Generator](https://bright-gift.com/), which provides tailored recommendations based on their gaming preferences, setup, and the specific games they love. 

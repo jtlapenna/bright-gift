@@ -35,7 +35,7 @@ category: gift-guides
 
 For the dads who relish the thrill of breathing fresh mountain air, the charm of a crackling campfire, and the rush of conquering rugged terrains, finding the perfect gift can mean redefining their adventure experience. This guide dives into thoughtful gift ideas tailored for dads with a penchant for the outdoors. Whether he's an avid camper, hiker, or explorer, there's something here to make every adventure memorable.
 
-> 🎯 **Not sure what to buy? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect outdoor gift based on his specific interests and budget!**
+> 🎯 **Not sure what to buy? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect outdoor gift based on his specific interests and budget!**
 
 ---
 
@@ -126,4 +126,4 @@ Looking for other gift ideas? Check out our guides to:
 
 Conclusion
 
-Enhancing your dad's next outdoor escapade isn't just about providing tools but enriching the entire adventure experience. With these carefully chosen gifts, you can help him enjoy the tranquility and thrill that nature offers, ensuring each trip is memorable. For more personalized ideas, check out our [Gift Idea Generator](https://bright-gift.com), which provides tailored recommendations based on interests and budget.
+Enhancing your dad's next outdoor escapade isn't just about providing tools but enriching the entire adventure experience. With these carefully chosen gifts, you can help him enjoy the tranquility and thrill that nature offers, ensuring each trip is memorable. For more personalized ideas, check out our [Gift Idea Generator](https://bright-gift.com/), which provides tailored recommendations based on interests and budget.

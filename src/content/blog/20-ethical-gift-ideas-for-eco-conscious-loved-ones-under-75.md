@@ -41,7 +41,7 @@ In today's world, more people are choosing to live sustainably and make purchasi
 
 When shopping for ethical gifts, look for certifications like Fair Trade, B Corp, USDA Organic, and other verified sustainability labels. These certifications ensure that products meet strict environmental and social responsibility standards, making your gift choices more meaningful and impactful.
 
-> 🎯 **Not sure what type of ethical gift would be most appreciated? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect sustainable present based on their values, lifestyle, and environmental priorities!**
+> 🎯 **Not sure what type of ethical gift would be most appreciated? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect sustainable present based on their values, lifestyle, and environmental priorities!**
 
 ---
 
@@ -249,4 +249,4 @@ Every ethical gift you choose makes a difference:
 
 ---
 
-*Looking for more gift ideas? Check out our other gift guides for different occasions and budgets, including our guide to [thoughtful housewarming gifts](https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75). Have a specific eco-conscious loved one in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect sustainable present based on their values, lifestyle, and environmental priorities!* 
+*Looking for more gift ideas? Check out our other gift guides for different occasions and budgets, including our guide to [thoughtful housewarming gifts](https://bright-gift.com//blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75). Have a specific eco-conscious loved one in mind? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect sustainable present based on their values, lifestyle, and environmental priorities!* 

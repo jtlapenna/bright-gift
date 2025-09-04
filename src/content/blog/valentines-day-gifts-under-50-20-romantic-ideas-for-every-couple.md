@@ -49,7 +49,7 @@ Valentine's Day is the perfect opportunity to show your partner how much you car
 
 From personalized keepsakes to romantic experiences, each gift on this list has been carefully selected to show your love and appreciation. Remember, the most meaningful Valentine's Day gifts aren't always the most expensive—they're the ones that come from the heart.
 
-> 🎯 **Not sure what type of Valentine's Day gift your partner would love? Our [Gift Idea Generator](https://bright-gift.com) can help you identify the perfect romantic gift based on their interests and personality!**
+> 🎯 **Not sure what type of Valentine's Day gift your partner would love? Our [Gift Idea Generator](https://bright-gift.com/) can help you identify the perfect romantic gift based on their interests and personality!**
 
 ---
 
@@ -190,4 +190,4 @@ Valentine's Day is about celebrating your love and connection, not about spendin
 
 Whether you choose a romantic experience, a personalized keepsake, or a practical gift that shows you care, the most important thing is that it comes from the heart. After all, the best Valentine's Day gifts are the ones that strengthen your bond and create lasting memories together.
 
-> 💝 **Looking for more gift inspiration? Check out our [Complete Gift Guide](https://bright-gift.com/blog/how-to-choose-the-perfect-gift-complete-guide/) for personalized recommendations based on your partner's interests and personality!** 
+> 💝 **Looking for more gift inspiration? Check out our [Complete Gift Guide](https://bright-gift.com//blog/how-to-choose-the-perfect-gift-complete-guide/) for personalized recommendations based on your partner's interests and personality!** 

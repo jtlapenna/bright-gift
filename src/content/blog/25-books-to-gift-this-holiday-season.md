@@ -78,7 +78,7 @@ Books are more than just gifts—they're experiences, knowledge, and adventures 
 
 From heartwarming fiction that captures the holiday spirit to thought-provoking non-fiction that inspires growth, books offer endless possibilities for every person on your gift list. Plus, they're perfect for any budget, from affordable paperbacks to beautiful hardcover editions.
 
-> 🎯 **Not sure what type of reader you're shopping for? Our [Gift Idea Generator](https://bright-gift.com) can help you identify the perfect book based on their interests, reading level, and preferences!**
+> 🎯 **Not sure what type of reader you're shopping for? Our [Gift Idea Generator](https://bright-gift.com/) can help you identify the perfect book based on their interests, reading level, and preferences!**
 
 ---
 

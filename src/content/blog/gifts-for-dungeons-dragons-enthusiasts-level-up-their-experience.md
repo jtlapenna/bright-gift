@@ -34,7 +34,7 @@ Finding the perfect gift for a Dungeons & Dragons (D&D) lover can be a thrilling
 
 From practical accessories that improve gameplay to decorative items that celebrate their love for the game, this guide features 15 carefully selected gifts that will delight any D&D player. Each item has been chosen for its quality, usefulness, and ability to enhance their tabletop adventures.
 
-> 🎯 **Not sure what to buy? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect D&D gift based on their role, experience level, and gaming preferences!**
+> 🎯 **Not sure what to buy? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect D&D gift based on their role, experience level, and gaming preferences!**
 
 ---
 
@@ -174,4 +174,4 @@ Whether you choose a custom dice set, an adventure book, or a piece of gaming de
 
 Remember that D&D is more than just a game—it's a creative outlet, a social experience, and a way to tell stories together. Your gift can help them create more memorable adventures and strengthen the bonds with their gaming group.
 
-Ready to discover even more personalized gift ideas? Try our [Gift Idea Generator](https://bright-gift.com) for custom recommendations based on their gaming preferences, character class, and budget!
+Ready to discover even more personalized gift ideas? Try our [Gift Idea Generator](https://bright-gift.com/) for custom recommendations based on their gaming preferences, character class, and budget!

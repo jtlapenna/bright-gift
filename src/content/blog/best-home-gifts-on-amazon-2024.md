@@ -33,7 +33,7 @@ category: gift-guides
 
 Looking for the perfect home gift? Amazon has everything you need to transform any space into a cozy, functional haven. Whether you're shopping for new homeowners, housewarming parties, or just want to upgrade your own space, these top picks combine style, functionality, and value.
 
-> 🎯 **Not sure what type of home gift to buy? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their style, needs, and budget!**
+> 🎯 **Not sure what type of home gift to buy? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on their style, needs, and budget!**
 
 For new homeowners, explore our [25 Thoughtful Housewarming Gifts for New Homeowners Under $75](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75) guide.
 
@@ -118,11 +118,11 @@ A spa-inspired tray for relaxing with a book, wine, or tablet in the bath.
 ---
 
 ## More Gift Inspiration
-- See our full guide to [Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget).
-- Explore [Gifts for Plant Lovers](https://bright-gift.com/blog/gifts-for-plant-lovers).
-- Check out [Gifts for Remote Workers Under $50](https://bright-gift.com/blog/gifts-for-remote-workers-under-50).
-- Discover [Gifts Under $25 for Coworkers](https://bright-gift.com/blog/gifts-under-25-for-coworkers).
+- See our full guide to [Eco-Friendly Gift Ideas for Every Budget](https://bright-gift.com//blog/eco-friendly-gift-ideas-for-every-budget).
+- Explore [Gifts for Plant Lovers](https://bright-gift.com//blog/gifts-for-plant-lovers).
+- Check out [Gifts for Remote Workers Under $50](https://bright-gift.com//blog/gifts-for-remote-workers-under-50).
+- Discover [Gifts Under $25 for Coworkers](https://bright-gift.com//blog/gifts-under-25-for-coworkers).
 
 ---
 
-*Looking for more gift ideas? Check out our other gift guides for different budgets and interests. Or, try our [Gift Idea Generator](https://bright-gift.com) to discover the perfect home present!* 
+*Looking for more gift ideas? Check out our other gift guides for different budgets and interests. Or, try our [Gift Idea Generator](https://bright-gift.com/) to discover the perfect home present!* 

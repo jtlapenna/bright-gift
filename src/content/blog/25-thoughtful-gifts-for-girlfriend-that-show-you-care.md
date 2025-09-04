@@ -135,7 +135,7 @@ Finding the perfect gift for your girlfriend isn't just about spending money—i
 
 The best gifts for girlfriends often combine personalization with quality, creating something that feels uniquely chosen for her. Whether she's into beauty, books, experiences, or practical items, the key is to select something that reflects your understanding of who she is as a person.
 
-> 🎯 **Not sure what type of gift your girlfriend would love? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on her interests, style, and personality!**
+> 🎯 **Not sure what type of gift your girlfriend would love? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on her interests, style, and personality!**
 
 ---
 
@@ -390,4 +390,4 @@ A beautiful planner designed for intentional living with inclusive design and th
 
 ---
 
-*Looking for more gift ideas? Check out our other gift guides for different budgets and interests. Have a specific girlfriend in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on her unique interests and personality!* 
+*Looking for more gift ideas? Check out our other gift guides for different budgets and interests. Have a specific girlfriend in mind? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on her unique interests and personality!* 

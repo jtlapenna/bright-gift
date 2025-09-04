@@ -143,4 +143,4 @@ Birthday parties are magical moments for kids—and finding the perfect gift can
 
 Conclusion
 
-The right gift can turn a birthday party into an unforgettable experience for any child. These thoughtful, fun, and educational presents are sure to bring smiles and spark creativity. Whether you're shopping for a budding artist, a future scientist, or an adventurous explorer, you'll find something special on this list. For even more inspiration, try our [Gift Idea Generator](https://bright-gift.com) to discover personalized recommendations for every occasion!
+The right gift can turn a birthday party into an unforgettable experience for any child. These thoughtful, fun, and educational presents are sure to bring smiles and spark creativity. Whether you're shopping for a budding artist, a future scientist, or an adventurous explorer, you'll find something special on this list. For even more inspiration, try our [Gift Idea Generator](https://bright-gift.com/) to discover personalized recommendations for every occasion!

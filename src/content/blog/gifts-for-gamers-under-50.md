@@ -37,7 +37,7 @@ Gamers are passionate, dedicated, and always looking for ways to enhance their g
 
 The best gifts for gamers strike a balance between functionality and style. They should enhance the gaming experience while fitting seamlessly into their existing setup. From essential accessories to decorative items, there's something for every type of gamer at this price point.
 
-> 🎯 **Not sure what type of gamer you're shopping for? Our [Gift Idea Generator](https://bright-gift.com) can help you identify the perfect gift based on their gaming platform, style preferences, and experience level!**
+> 🎯 **Not sure what type of gamer you're shopping for? Our [Gift Idea Generator](https://bright-gift.com/) can help you identify the perfect gift based on their gaming platform, style preferences, and experience level!**
 
 ---
 
@@ -171,4 +171,4 @@ Looking for more gift ideas?** Check out our guide to [board game gifts](/blog/u
 
 Looking for more gift ideas?** Check out our guide to [unique Christmas gifts for gamers](/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024) for even more thoughtful options!
 
-Looking for more gift ideas? Check out our other gift guides for different interests and budgets. Have a specific gamer in mind? Our [Gift Idea Generator](https://bright-gift.com) can help you discover the perfect present based on their gaming preferences and setup!* 
+Looking for more gift ideas? Check out our other gift guides for different interests and budgets. Have a specific gamer in mind? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on their gaming preferences and setup!* 
