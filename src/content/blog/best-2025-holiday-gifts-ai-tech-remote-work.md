@@ -19,8 +19,8 @@ keywords:
   - holiday shopping
 image: /images/blog/best-2025-holiday-gifts/best-2025-holiday-gifts-banner.webp
 ogImage: /images/blog/best-2025-holiday-gifts/best-2025-holiday-gifts-og.webp
-imageJpg: /images/blog/best-2025-holiday-gifts/best-2025-holiday-gifts-banner.webp
-ogImageJpg: /images/blog/best-2025-holiday-gifts/best-2025-holiday-gifts-og.webp
+imageJpg: /images/blog/best-2025-holiday-gifts/best-2025-holiday-gifts-banner.jpg
+ogImageJpg: /images/blog/best-2025-holiday-gifts/best-2025-holiday-gifts-og.jpg
 siteId: brightgift
 workflowId: workflow_20250115_holiday_gifts_2025
 postId: workflow_20250115_holiday_gifts_2025

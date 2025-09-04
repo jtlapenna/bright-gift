@@ -21,8 +21,8 @@ keywords:
   - planner setup
 image: /images/blog/be-rooted-planners-stationery/be-rooted-og.webp
 ogImage: /images/blog/be-rooted-planners-stationery/be-rooted-banner.webp
-imageJpg: /images/blog/be-rooted-planners-stationery/be-rooted-og.webp
-ogImageJpg: /images/blog/be-rooted-planners-stationery/be-rooted-banner.webp
+imageJpg: /images/blog/be-rooted-planners-stationery/be-rooted-og.jpg
+ogImageJpg: /images/blog/be-rooted-planners-stationery/be-rooted-banner.jpg
 siteId: brightgift
 workflowId: workflow_20250813_be_rooted_planners
 postId: workflow_20250813_be_rooted_planners

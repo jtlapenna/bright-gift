@@ -29,4 +29,7 @@ Allow: /
 # Block access to admin areas (if any exist in future)
 Disallow: /admin/
 Disallow: /private/
-Disallow: /temp/ 
+Disallow: /temp/
+
+# Block access to placeholder images (social media only, not for SEO)
+Disallow: /placeholders/ 
