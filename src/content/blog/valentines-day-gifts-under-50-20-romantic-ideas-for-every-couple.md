@@ -1,10 +1,10 @@
 ---
-title: 'Valentine's Day Gifts Under $50: 20 Romantic Ideas'
+title: "Valentine's Day Gifts Under $50: 20 Romantic Ideas"
 slug: valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple
 description: >-
   Discover 20 thoughtful Valentine's Day gifts under $50 that will make your
   partner feel truly special. From romantic experiences to meaningful
-  keepsakes,...
+  keepsakes, find the perfect way to show your love this Valentine's Day.
 keywords: null
 author: Bright Gift Team
 date: '2025-01-15'
@@ -16,7 +16,7 @@ ogImage: >-
 socialImage: >-
   /images/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/valentines-day-gifts-under-50-social.webp
 category: gift-guides
-metaTitle: 'Valentine''s Day Gifts Under $50: 20 Romantic Ideas for Ev...'
+metaTitle: "Valentine's Day Gifts Under $50: 20 Romantic Ideas for Ev..."
 metaDescription: >-
   Discover 20 thoughtful Valentine's Day gifts under $50 that will make your
   partner feel truly special. From romantic experiences to meaningful keepsakes.
