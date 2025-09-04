@@ -44,7 +44,8 @@ for (const field of requiredFields) {
 const title = post.data.title || fallbackTitle;
 const description = post.data.description || fallbackDescription;
 const image = post.data.image || fallbackImage;
-const imageJpg = post.data.imageJpg || (typeof image === 'string' && image.endsWith('.webp') ? image.replace(/\.webp$/i, '.jpg') : undefined);
+// Removed automatic .jpg generation to prevent broken image references
+const imageJpg = post.data.imageJpg;
 const ogImage = post.data.ogImage || image;
 const socialImage = post.data.socialImage || ogImage;
 const keywords = post.data.keywords || fallbackKeywords;
@@ -165,7 +166,7 @@ const relatedPosts = allBlogPosts
           {image && image.endsWith('.webp') && <source srcset={image} type="image/webp" />}
           {imageJpg && <source srcset={imageJpg} type="image/jpeg" />}
           <img 
-            src={imageJpg || image || '/images/homepage-banner.webp'} 
+            src={image || '/images/homepage-banner.webp'} 
             alt={`${title} - Gift guide hero image`}
             class="w-full h-full object-cover"
             loading="eager"
