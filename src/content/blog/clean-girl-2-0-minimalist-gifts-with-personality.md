@@ -21,10 +21,6 @@ image: >-
   /images/blog/clean-girl-2-0-minimalist-gifts-with-personality/clean-girl-2-0-banner.webp
 ogImage: >-
   /images/blog/clean-girl-2-0-minimalist-gifts-with-personality/clean-girl-2-0-og.webp
-imageJpg: >-
-  /images/blog/clean-girl-2-0-minimalist-gifts-with-personality/clean-girl-2-0-banner.webp
-ogImageJpg: >-
-  /images/blog/clean-girl-2-0-minimalist-gifts-with-personality/clean-girl-2-0-og.webp
 siteId: brightgift
 workflowId: workflow_20250818_clean_girl_2_0
 postId: workflow_20250818_clean_girl_2_0
