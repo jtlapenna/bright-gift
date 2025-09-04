@@ -1,5 +1,5 @@
 ---
-title: 'Gifts for Yoga Enthusiasts: All Levels'
+title: 'Top Gifts for Yoga Enthusiasts: All Levels'
 slug: top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners
 image: >-
   /images/blog/top-gifts-for-yoga-enthusiasts/top-gifts-for-yoga-enthusiasts-banner.webp
