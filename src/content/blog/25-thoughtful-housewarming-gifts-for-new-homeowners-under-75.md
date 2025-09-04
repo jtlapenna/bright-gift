@@ -1,7 +1,6 @@
 ---
 title: 25 Thoughtful Housewarming Gifts for New Homeowners Under...
 description: >-
-  -
   Discover 25 thoughtful housewarming gifts under $75 that new homeowners will love. From practical essentials to stylish decor, find the perfect gift for...
 keywords:
 date: '2024-12-19'
