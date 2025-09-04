@@ -6,9 +6,7 @@ metaDescription: >-
   houseplants, stylish planters, and care tools that every green thumb will
   love.
 description: >-
-  -
-  Discover thoughtful gifts for plant enthusiasts under $75, from rare
-  houseplants to stylish plant accessories that will make any green thumb happy.
+  Discover 15 thoughtful gifts for plant enthusiasts under $75, from rare houseplants to stylish plant accessories that will make any green thumb happy and enhance their plant collection.
 date: '2024-07-27'
 image: /images/blog/plant-lovers-under-75/plant-lovers-under-75.webp
 ogImage: /images/blog/plant-lovers-under-75/plant-lovers-under-75.webp
