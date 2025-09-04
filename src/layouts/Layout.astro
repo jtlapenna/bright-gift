@@ -97,6 +97,18 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 		<!-- Preconnect to main domain for critical resources -->
 		<link rel="preconnect" href="https://bright-gift.com/" />
 		<link rel="dns-prefetch" href="https://bright-gift.com/" />
+		<!-- Resource hints for better performance -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="dns-prefetch" href="https://www.google-analytics.com" />
+		<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+		
+		<!-- Preload critical resources -->
+		<link rel="preload" href="/bright-gift-logo.webp" as="image" />
+		<link rel="preload" href="/favicon.svg" as="image" />
+		<link rel="preload" href="/hero-image-desktop.webp" as="image" media="(min-width: 769px)" />
+		<link rel="preload" href="/hero-image-mobile.webp" as="image" media="(max-width: 768px)" />
+	
 		
 		<!-- Preload critical resources -->
 		<link rel="preload" href="/bright-gift-logo.webp" as="image" />
@@ -164,11 +176,12 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 		
 		<slot />
 		
+		
 		<!-- Google Tag Manager - Load after page content with optimized loading -->
 		<script is:inline>
 		  // Optimized GTM loading to reduce unused JavaScript
 		  window.addEventListener('load', function() {
-		    // Delay GTM loading by 2 seconds to prioritize page content
+		    // Delay GTM loading by 3 seconds to prioritize page content
 		    setTimeout(function() {
 		      // Google Tag Manager
 		      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -193,7 +206,7 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 		          'cookie_flags': 'SameSite=None;Secure' // Secure cookies
 		        });
 		      };
-		    }, 2000); // 2 second delay
+		    }, 3000); // 3 second delay (increased from 2)
 		  });
 		</script>
 		

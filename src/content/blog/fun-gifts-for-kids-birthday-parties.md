@@ -1,5 +1,5 @@
 ---
-title: Fun Gifts for Kids' Birthday Parties
+title: "Fun Gifts for Kids' Birthday Parties"
 slug: fun-gifts-for-kids-birthday-parties
 image: >-
   /images/blog/fun-gifts-for-kids-birthday-parties/fun-gifts-for-kids-birthday-parties-banner.webp
