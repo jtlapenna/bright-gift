@@ -158,21 +158,21 @@ Whether you're shopping on a tight budget or looking to splurge on something ext
 
 ## AI Shopping Tools and Services
 
-### AI-Powered Photo Frame
+### AI-Powered Smart Thermostat
 
-**Why it's great:** These smart digital photo frames use AI to automatically curate and display your best photos, recognize faces, and even suggest when to share memories. They learn from your photo habits to create a personalized viewing experience.
+**Why it's great:** This intelligent thermostat learns your heating and cooling preferences and automatically adjusts temperatures to optimize comfort and energy savings. It can detect when you're home or away and adapt accordingly.
 
-**Practical tip:** Look for frames with good display quality and cloud storage integration for easy photo management.
+**Practical tip:** Look for models with easy installation and compatibility with your existing HVAC system.
 
-**Price Range:** $20-$50 <a href="https://amazon.com/s?k=smart+digital+photo+frame+ai&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $20-$50 <a href="https://amazon.com/s?k=ai+smart+thermostat+learning&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
-### AI-Powered Smart Home Starter Kit
+### AI-Powered Pet Camera with Treat Dispenser
 
-**Why it's great:** Give the gift of a smart home starter kit that includes AI-powered devices like smart plugs, sensors, and a hub. These kits make it easy to begin automating a home with AI assistance for lighting, temperature, and security.
+**Why it's great:** This smart pet camera uses AI to recognize your pet's behavior, dispense treats at optimal times, and even detect health issues through behavioral analysis. Perfect for pet owners who want to stay connected with their furry friends.
 
-**Practical tip:** Look for kits that include multiple devices and are compatible with popular smart home platforms like Alexa or Google Home.
+**Practical tip:** Look for models with two-way audio, night vision, and treat capacity that matches your pet's size.
 
-**Price Range:** $15-$40 <a href="https://amazon.com/s?k=smart+home+starter+kit+ai&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $15-$40 <a href="https://amazon.com/s?k=ai+pet+camera+treat+dispenser&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ## Tips for Choosing AI-Powered Gifts
 
