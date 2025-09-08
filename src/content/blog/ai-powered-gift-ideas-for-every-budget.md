@@ -88,13 +88,13 @@ Whether you're shopping on a tight budget or looking to splurge on something ext
 
 **Price Range:** $40-$50 <a href="https://amazon.com/s?k=ai+fitness+tracker+smart+watch&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
-### AI-Powered Language Learning App Subscription
+### AI-Powered Smart Speaker
 
-**Why it's great:** Give the gift of language learning with an AI-powered app that adapts to the user's learning style and pace. These apps use machine learning to personalize lessons, making language acquisition more effective and engaging than traditional methods.
+**Why it's great:** Give the gift of a smart speaker with AI voice assistant that can control smart home devices, play music, answer questions, and even help with daily tasks. These devices use advanced AI to understand natural language and provide personalized responses.
 
-**Practical tip:** Choose a subscription that includes multiple languages and offline capabilities for maximum flexibility.
+**Practical tip:** Look for models with good sound quality and compatibility with your recipient's existing smart home devices.
 
-**Price Range:** $30-$45 <a href="https://amazon.com/s?k=language+learning+app+gift+card&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $30-$45 <a href="https://amazon.com/s?k=echo+dot+smart+speaker&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ## Mid-Range AI-Powered Gifts ($50-$150)
 
@@ -158,21 +158,21 @@ Whether you're shopping on a tight budget or looking to splurge on something ext
 
 ## AI Shopping Tools and Services
 
-### Personalized Gift Recommendation Services
+### AI-Powered Photo Frame
 
-**Why it's great:** These AI-powered services analyze your recipient's interests, social media activity, and preferences to suggest highly personalized gift ideas. They take the guesswork out of gift selection and often discover unique items you'd never find on your own.
+**Why it's great:** These smart digital photo frames use AI to automatically curate and display your best photos, recognize faces, and even suggest when to share memories. They learn from your photo habits to create a personalized viewing experience.
 
-**Practical tip:** Look for services that offer multiple price ranges and can handle different relationship types (family, friends, colleagues).
+**Practical tip:** Look for frames with good display quality and cloud storage integration for easy photo management.
 
-**Price Range:** $20-$50 <a href="https://amazon.com/s?k=personalized+gift+recommendation+service&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $20-$50 <a href="https://amazon.com/s?k=smart+digital+photo+frame+ai&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
-### AI-Powered Gift Wrapping Services
+### AI-Powered Smart Home Starter Kit
 
-**Why it's great:** These services use AI to match wrapping styles, colors, and presentation to the gift and recipient's personality. They take care of the entire presentation, ensuring your gift looks professionally wrapped and perfectly tailored.
+**Why it's great:** Give the gift of a smart home starter kit that includes AI-powered devices like smart plugs, sensors, and a hub. These kits make it easy to begin automating a home with AI assistance for lighting, temperature, and security.
 
-**Practical tip:** Choose services that offer eco-friendly wrapping options and can handle various gift sizes and shapes.
+**Practical tip:** Look for kits that include multiple devices and are compatible with popular smart home platforms like Alexa or Google Home.
 
-**Price Range:** $15-$40 <a href="https://amazon.com/s?k=ai+gift+wrapping+service&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $15-$40 <a href="https://amazon.com/s?k=smart+home+starter+kit+ai&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ## Tips for Choosing AI-Powered Gifts
 
