@@ -1,28 +1,21 @@
 ---
-title: "AI-Powered Gift Ideas for Every Budget: Smart Shopping in 2025"
-description: "Discover how artificial intelligence is revolutionizing gift shopping with personalized recommendations, budget optimization, and smart discovery tools for every price range."
-date: "2025-09-08"
-status: "published"
+title: 'AI-Powered Gift Ideas for Every Budget: Smart Shopping in 2025'
 
-# SEO & Meta
-metaTitle: "AI-Powered Gift Ideas for Every Budget: Smart Shopping 2025"
-metaDescription: "Discover AI-powered gift recommendations for every budget. From $25 to $500+, find personalized gifts using smart technology and save time shopping."
-keywords: ["AI gift ideas", "artificial intelligence gifts", "smart gift recommendations", "AI shopping tools", "personalized gifts", "budget gift ideas", "AI gift finder", "smart shopping 2025"]
-
-# Images
-image: "/images/blog/ai-powered-gift-ideas/ai-gift-ideas-banner.webp"
-ogImage: "/images/blog/ai-powered-gift-ideas/ai-gift-ideas-og.webp"
-imageJpg: "/images/blog/ai-powered-gift-ideas/ai-gift-ideas-banner.jpg"
-ogImageJpg: "/images/blog/ai-powered-gift-ideas/ai-gift-ideas-og.jpg"
-
-# Site-Agnostic API Fields
-siteId: "brightgift"
-workflowId: "workflow_ai_gifts_2025_001"
-postId: "workflow_ai_gifts_2025_001"
-generatedAt: "2025-01-15T10:30:00.000Z"
-version: "1.0"
-currentSection: "content-generation"
-workflowStatus: "published"
+slug: ai-powered-gift-ideas-for-every-budget
+image: >-
+  /images/blog/ai-powered-gift-ideas/ai-gift-ideas-banner.webp
+ogImage: >-
+  /images/blog/ai-powered-gift-ideas/ai-gift-ideas-og.webp
+socialImage: >-
+  /images/blog/ai-powered-gift-ideas/ai-gift-ideas-og.webp
+category: gift-guides
+description: >-
+  Discover how artificial intelligence is revolutionizing gift shopping with personalized recommendations, budget optimization, and smart discovery tools for every price range.
+keywords: >-
+  AI gift ideas, artificial intelligence gifts, smart gift recommendations, AI shopping tools, personalized gifts, budget gift ideas, AI gift finder, smart shopping 2025
+date: '2025-09-08'
+metaTitle: 'AI-Powered Gift Ideas for Every Budget: Smart Shopping 2025'
+metaDescription: 'Discover AI-powered gift recommendations for every budget. From $25 to $500+, find personalized gifts using smart technology and save time shopping.'
 
 # Content Quality Metrics
 wordCount: 1450
