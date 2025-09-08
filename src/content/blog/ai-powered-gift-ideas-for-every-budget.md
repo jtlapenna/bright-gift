@@ -34,7 +34,6 @@ affiliatePlatforms:
 
 # Content Categorization
 tags: ["AI technology", "gift recommendations", "budget-friendly", "smart shopping", "personalization", "tech gifts"]
-category: "gift-guide"
 recipient: "tech-enthusiasts"
 budget: "all-ranges"
 occasion: "any"
