@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "prebuild": "node scripts/validate-images.js",
-    "build": "npm run validate:yaml && npm run generate:sitemap && astro build",
+    "prebuild": "node scripts/validate-images.js && npm run validate:yaml && npm run generate:sitemap",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "check-links": "node src/pages/broken-links-checker.js",
@@ -19,7 +19,6 @@
     "validate:preview": "node scripts/preview-validator.js",
     "fix:preview": "node scripts/preview-fixer.js",
     "enhance:preview": "node scripts/preview-enhancer.js",
-    "prebuild": "npm run validate:preview",
     "postbuild": "npm run fix:preview && npm run enhance:preview",
     "create-blog": "node scripts/create-blog-automation.js",
     "create-blog:gift-guide": "node scripts/create-blog-automation.js --type gift-guide",
