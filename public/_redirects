@@ -5,7 +5,10 @@
 # Static pages
 /privacy /privacy/ 301
 /terms /terms/ 301
-/data-deletion /data-deletion/ 301
+
+# Category redirects (old categories to new ones)
+/category/data-driven/ /category/gift-tips/ 301
+/category/educational/ /category/gift-tips/ 301
 
 # OAuth callback
 /oauth/callback /oauth/callback/ 301

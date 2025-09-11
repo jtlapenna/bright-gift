@@ -69,7 +69,7 @@ const blogIndexStructuredData = {
   keywords={["gift guides", "gift ideas", "birthday gifts", "holiday gifts", "gift recommendations", "gift shopping", "thoughtful gifts", "unique gifts", "gift inspiration", "gift giving", "seasonal gifts", "personalized gifts"]}
   canonical={currentPage === 1 ? "https://bright-gift.com/blog/" : `https://bright-gift.com/blog/?page=${currentPage}`}
   ogType="website"
-  noindex={currentPage > 1}
+  noindex={false}
   twitterCard="summary_large_image"
   prevPage={validPage > 1 ? getPageUrl(validPage - 1) : undefined}
   nextPage={validPage < totalPages ? getPageUrl(validPage + 1) : undefined}
