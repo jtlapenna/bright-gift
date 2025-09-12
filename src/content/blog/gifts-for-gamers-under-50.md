@@ -8,7 +8,7 @@ description: >-
   Find the perfect present with our curated selection of 15 gifts for gamers
   under $50, from essential gaming accessories to stylish decor that will
   level...
-date: '2024-12-19'
+date: '2025-09-12'
 image: /images/blog/gamers-under-50/gamers-under-50.webp
 ogImage: /images/blog/gamers-under-50/gamers-under-50.webp
 tags:

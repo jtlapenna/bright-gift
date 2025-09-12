@@ -4,7 +4,7 @@ description: >-
   Discover the fascinating psychology behind why we remember the gifts we give
   more vividly than the ones we receive, and what this reveals about human...
 author: Bright Gift Team
-date: '2025-07-31'
+date: '2025-09-12'
 pubDate: '2025-07-31'
 image: /images/blog/psychology-gift-giving-memory-banner.webp
 tags:

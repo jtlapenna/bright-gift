@@ -6,7 +6,7 @@ description: >-
   partner feel truly special. From romantic experiences to meaningful keepsakes.
 keywords: null
 author: Bright Gift Team
-date: '2025-01-15'
+date: '2025-09-12'
 pubDate: '2025-07-31'
 image: >-
   /images/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/valentines-day-gifts-under-50-banner.webp

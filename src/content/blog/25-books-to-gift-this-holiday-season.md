@@ -7,7 +7,7 @@ keywords: null
 image: /images/blog/holiday-books-banner.webp
 ogImage: /images/blog/holiday-books-og.webp
 socialImage: /images/blog/holiday-books-social.webp
-date: '2024-11-01'
+date: '2025-09-12'
 metaTitle: 25 Best Books to Gift This Holiday Season | Top Picks
 metaDescription: >-
   Find the perfect books for everyone on your holiday gift list. From fiction to

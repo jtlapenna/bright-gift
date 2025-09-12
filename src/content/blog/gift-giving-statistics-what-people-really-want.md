@@ -5,7 +5,7 @@ description: >-
   want. From spending patterns to preferred gift types, learn what the
   research...
 keywords: null
-date: '2024-07-22'
+date: '2025-09-12'
 pubDate: '2025-07-31'
 image: >-
   /images/blog/gift-giving-statistics-what-people-really-want/gift-giving-statistics-what-people-really-want-banner.webp

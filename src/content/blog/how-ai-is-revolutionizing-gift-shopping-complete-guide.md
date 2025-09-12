@@ -7,7 +7,7 @@ metaDescription: >-
 description: >-
   Explore the future of gift shopping with AI-powered gift idea generators.
   Learn how artificial intelligence creates personalized recommendations and...
-date: '2025-01-08'
+date: '2025-09-12'
 image: /images/blog/ai-gift-shopping-banner.webp
 ogImage: /images/blog/ai-gift-shopping-banner.webp
 socialImage: /images/blog/ai-gift-shopping-banner.webp

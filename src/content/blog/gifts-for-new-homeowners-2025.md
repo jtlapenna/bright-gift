@@ -4,7 +4,7 @@ description: >-
   Discover 20+ unique housewarming gifts for new homeowners in 2025. From
   practical essentials to stylish decor, find thoughtful presents that help
   them...
-date: '2025-07-05'
+date: '2025-09-12'
 image: /images/blog/new-homeowners/new-homeowners-banner.webp
 ogImage: /images/blog/new-homeowners/new-homeowners-OG.webp
 socialImage: /images/blog/new-homeowners/new-homeowners-social.webp

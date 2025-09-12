@@ -7,7 +7,7 @@ metaDescription: >-
 description: >-
   Discover 30 unique gift ideas for new parents under $75. From baby showers to
   newborn celebrations, find thoughtful presents that stand out and make...
-date: '2025-01-07'
+date: '2025-09-12'
 image: /images/blog/new-parents-30/baby-banner.webp
 ogImage: /images/blog/new-parents-30/baby-banner.webp
 socialImage: /images/blog/new-parents-30/baby-social.webp

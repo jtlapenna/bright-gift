@@ -10,7 +10,7 @@ description: >-
   strategies for choosing thoughtful, meaningful gifts for any recipient,
   budget,...
 keywords: null
-date: '2024-07-22'
+date: '2025-09-12'
 image: >-
   /images/blog/how-to-choose-the-perfect-gift-complete-guide/how-to-choose-the-perfect-gift-complete-guide-banner.webp
 ogImage: >-

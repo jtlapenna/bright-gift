@@ -7,7 +7,7 @@ description: >-
   From...
 keywords: null
 author: Bright Gift Team
-date: '2025-07-31'
+date: '2025-09-12'
 pubDate: '2025-07-31'
 image: >-
   /images/blog/gifts-for-remote-workers-and-wfh-professionals/gifts-for-remote-workers-banner.webp

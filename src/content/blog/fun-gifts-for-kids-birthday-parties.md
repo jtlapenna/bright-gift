@@ -10,7 +10,7 @@ description: >-
 keywords: >-
   kids birthday gifts, fun gifts for children, unique gifts for kids, birthday
   present ideas, toys for kids
-date: '2025-07-17'
+date: '2025-09-12'
 draft: false
 status: published
 socialPosts:
