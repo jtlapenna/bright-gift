@@ -15,3 +15,7 @@
 
 # Care-calculator (static directory)
 /care-calculator /care-calculator/ 301
+
+# Fix 404 pages - redirect to appropriate alternatives
+/top-gifts /blog/ 301
+/blog/gifts-for-artists /blog/unique-graduation-gifts-creative-minds/ 301
