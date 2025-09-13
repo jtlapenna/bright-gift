@@ -1,0 +1,43 @@
+Google Search Console Revalidation Guide
+========================================
+
+ISSUE: Blog pagination pages showing "Excluded by 'noindex' tag"
+
+ROOT CAUSE:
+Google's last crawl (September 8, 2025) occurred before our fixes were deployed (September 12, 2025).
+The pages now have correct "index, follow" meta tags, but Google hasn't re-crawled them yet.
+
+IMMEDIATE ACTIONS REQUIRED:
+
+1. CANCEL OLD VALIDATIONS:
+   - Go to: https://search.google.com/search-console
+   - Navigate to: Page indexing > Excluded by 'noindex' tag
+   - Click "Cancel validation" for the old validation (started 9/3/25)
+
+2. START NEW VALIDATIONS:
+   - Click "START NEW VALIDATION"
+   - Test these specific URLs:
+     • https://bright-gift.com/blog/?page=4
+     • https://bright-gift.com/blog/?page=2
+     • https://bright-gift.com/blog/?page=3
+   - For each URL, click "Request Indexing"
+
+3. VERIFY FIXES:
+   - Check that pages return "index, follow" in meta robots tag
+   - Confirm no "noindex" tags are present
+   - Monitor GSC for validation success
+
+EXPECTED TIMELINE:
+- Immediate: Validation requests submitted
+- 24-48 hours: Google re-crawls pages
+- 3-7 days: Pages move from "Excluded" to "Indexed"
+
+TECHNICAL VERIFICATION:
+Run these commands to verify the fix:
+curl -s "https://bright-gift.com/blog/?page=4" | grep -i "robots"
+curl -s "https://bright-gift.com/blog/?page=2" | grep -i "robots"
+
+Should return: <meta name="robots" content="index, follow">
+
+If you see "noindex" in the output, the fix hasn't been deployed yet.
+If you see "index, follow", the fix is working and Google needs to re-crawl.

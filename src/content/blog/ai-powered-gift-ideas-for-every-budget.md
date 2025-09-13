@@ -194,4 +194,4 @@ As we move further into 2025, AI-powered gift ideas are becoming increasingly so
 
 The beauty of AI technology in gift-giving lies in its ability to learn and adapt, ensuring that your thoughtful gesture becomes even more meaningful over time. As these technologies continue to evolve, the possibilities for personalized, intelligent gift-giving are virtually limitless.
 
-Ready to discover even more personalized gift ideas? Try our [Gift Idea Generator](/gift-idea-generator) to find the perfect present for everyone on your list, powered by the same AI technology that's revolutionizing how we shop for gifts.
+Ready to discover even more personalized gift ideas? Try our [AI Gift Idea Generator](/#gift-generator) to find the perfect present for everyone on your list, powered by the same AI technology that's revolutionizing how we shop for gifts.
