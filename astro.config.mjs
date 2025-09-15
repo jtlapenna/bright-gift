@@ -5,7 +5,7 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://bright-gift.com',
-  trailingSlash: 'always',
+  trailingSlash: 'ignore',
   output: 'server',
   // Use cookie-based sessions to avoid requiring a Cloudflare KV binding
   session: {
