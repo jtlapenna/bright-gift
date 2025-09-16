@@ -2,7 +2,7 @@
 nixPkgs = ["nodejs", "chromium"]
 
 [phases.install]
-cmds = ["npm ci --only=production"]
+cmds = ["npm ci"]  # Remove --only=production
 
 [phases.build]
 cmds = ["echo 'No build step required'"]
