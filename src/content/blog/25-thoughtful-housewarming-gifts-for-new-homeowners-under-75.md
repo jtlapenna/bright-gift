@@ -5,7 +5,7 @@ description: >-
   love. From practical essentials to stylish decor, help them turn their
   house...
 keywords: null
-date: '2025-09-12'
+date: 2025-09-17
 image: /images/blog/housewarming-gifts-under-75/housewarming-banner.webp
 ogImage: /images/blog/housewarming-gifts-under-75/housewarming-og.webp
 socialImage: /images/blog/housewarming-gifts-under-75/housewarming-social.webp

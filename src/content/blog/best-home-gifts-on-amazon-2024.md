@@ -5,7 +5,7 @@ description: >-
   cozy essentials, find perfect gifts under $100 to transform any space into
   a...
 keywords: null
-date: '2025-09-12'
+date: 2025-09-17
 image: /images/blog/best-home-gifts-on-amazon-2024/amazon-home-banner.webp
 ogImage: /images/blog/best-home-gifts-on-amazon-2024/amazon-home-OG.webp
 socialImage: /images/blog/best-home-gifts-on-amazon-2024/amazon-home-social.webp

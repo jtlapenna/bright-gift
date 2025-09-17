@@ -9,7 +9,7 @@ description: >-
   Discover 15 thoughtful gifts for plant enthusiasts under $75, from rare
   houseplants to stylish plant accessories that will make any green thumb happy
   and...
-date: '2025-09-12'
+date: 2025-09-17
 image: /images/blog/plant-lovers-under-75/plant-lovers-under-75.webp
 ogImage: /images/blog/plant-lovers-under-75/plant-lovers-under-75.webp
 tags:

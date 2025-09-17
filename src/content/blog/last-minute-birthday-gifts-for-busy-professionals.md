@@ -3,7 +3,7 @@ title: 'Last-Minute Birthday Gifts for Busy Professionals'
 description: >-
   Find the perfect last-minute birthday gift for busy professionals with our
   curated selection of 15 thoughtful, practical presents that show you care...
-date: '2025-09-12'
+date: 2025-09-17
 image: >-
   /images/blog/last-minute-birthday-gifts-for-busy-professionals/last-minute-birthday-gifts-for-busy-professionals-banner.webp
 ogImage: >-

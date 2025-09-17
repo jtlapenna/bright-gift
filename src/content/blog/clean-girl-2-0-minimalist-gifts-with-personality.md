@@ -5,7 +5,7 @@ description: >-
   sleek hair kits to dewy skin essentials, elevate the Clean Girl aesthetic
   with...
 keywords: null
-date: '2025-08-18'
+date: 2025-09-17
 status: published
 metaTitle: 'Clean Girl 2.0 Gifts: Minimalist, Polished, Personal'
 metaDescription: >-

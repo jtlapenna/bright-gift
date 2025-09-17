@@ -5,7 +5,7 @@ description: >-
   essentials, and cutting-edge tech. Find 30+ thoughtful presents that
   combine...
 keywords: null
-date: '2025-09-12'
+date: 2025-09-17
 status: published
 metaTitle: 'Best Holiday Gifts 2025: AI Tech & Remote Work Essentials'
 metaDescription: >-

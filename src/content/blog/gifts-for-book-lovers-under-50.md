@@ -6,7 +6,7 @@ description: >-
 image: /images/blog/gifts-for-book-lovers-banner.webp
 ogImage: /images/blog/gifts-for-book-lovers-og.webp
 socialImage: /images/blog/gifts-for-book-lovers-social.webp
-date: '2025-09-12'
+date: 2025-09-17
 metaTitle: 25 Best Gifts for Book Lovers Under $50 | Perfect for Boo...
 metaDescription: >-
   Find the perfect gift for book lovers with our curated list of 25 thoughtful

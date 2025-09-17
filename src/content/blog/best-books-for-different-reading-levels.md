@@ -7,7 +7,7 @@ description: >-
 image: /images/blog/reading-levels-banner.webp
 ogImage: /images/blog/reading-levels-banner.webp
 socialImage: /images/blog/reading-levels-social.webp
-date: '2025-09-12'
+date: 2025-09-17
 metaTitle: Best Books for Different Reading Levels | Perfect Gifts
 metaDescription: >-
   Find the perfect books for every reader in your life! From beginners to

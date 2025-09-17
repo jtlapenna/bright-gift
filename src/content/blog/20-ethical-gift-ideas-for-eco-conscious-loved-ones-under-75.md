@@ -9,7 +9,7 @@ description: >-
   Fair Trade to B Corp certified, find sustainable presents that make a
   positive...
 keywords: null
-date: '2025-09-12'
+date: 2025-09-17
 image: /images/blog/ethical-gifts-under-75/eco-banner-OG.webp
 ogImage: /images/blog/ethical-gifts-under-75/eco-banner-OG.webp
 socialImage: /images/blog/ethical-gifts-under-75/eco-social.webp

@@ -15,7 +15,7 @@ description: >-
 keywords: >-
   yoga gifts, gifts for yoga lovers, yoga accessories, yoga equipment,
   meditation gifts, wellness gifts
-date: '2025-09-12'
+date: 2025-09-17
 draft: false
 status: published
 socialPosts:

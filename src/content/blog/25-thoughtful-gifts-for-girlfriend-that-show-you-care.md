@@ -9,7 +9,7 @@ description: >-
   Discover 25 thoughtful gifts for your girlfriend that show you care. From
   personalized jewelry to romantic experiences, find meaningful presents that...
 keywords: null
-date: '2025-09-12'
+date: 2025-09-17
 status: published
 contentType: gift-guide
 image: >-

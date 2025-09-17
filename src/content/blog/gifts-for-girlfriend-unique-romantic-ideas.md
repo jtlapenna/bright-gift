@@ -8,7 +8,7 @@ description: >-
   Find the perfect present with our curated list of 15 thoughtful, non-cliché
   gifts for your girlfriend—romantic, unique, and sure to impress her with
   your...
-date: '2025-09-12'
+date: 2025-09-17
 image: /images/blog/gifts-for-girlfriend-unique-romantic-ideas/girlfriend-banner.webp
 ogImage: /images/blog/gifts-for-girlfriend-unique-romantic-ideas/girlfriend-og.webp
 tags:
