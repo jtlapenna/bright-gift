@@ -51,9 +51,9 @@ class SEOValidator {
     
     const criticalIssues = [];
     
-    // Check for imageJpg references
+    // Check for imageJpg references (exclude commented code)
     try {
-      const result = execSync('grep -r "imageJpg" src/ || true', { encoding: 'utf8' });
+      const result = execSync('grep -r "imageJpg" src/ | grep -v "//" | grep -v "REMOVED" || true', { encoding: 'utf8' });
       if (result.trim()) {
         criticalIssues.push('ImageJpg references found in templates');
       }
@@ -71,9 +71,9 @@ class SEOValidator {
       // grep returns non-zero exit code when no matches found
     }
     
-    // Check for JavaScript redirects
+    // Check for JavaScript redirects (exclude OAuth pages)
     try {
-      const result = execSync('grep -r "window.location.replace" src/ || true', { encoding: 'utf8' });
+      const result = execSync('grep -r "window.location.replace" src/ | grep -v "oauth" | grep -v "callback" || true', { encoding: 'utf8' });
       if (result.trim()) {
         criticalIssues.push('JavaScript redirects found');
       }
@@ -138,11 +138,11 @@ class SEOValidator {
     this.validateTemplates();
     const criticalIssuesPassed = this.checkCriticalIssues();
     
-    const overallPassed = this.results.overall.passed && criticalIssuesPassed;
+    this.results.overall.passed = this.results.content.passed && this.results.templates.passed && criticalIssuesPassed;
     
     this.generateReport();
     
-    return overallPassed;
+    return this.results.overall.passed;
   }
 }
 

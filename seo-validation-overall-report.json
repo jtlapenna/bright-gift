@@ -1,0 +1,22 @@
+{
+  "timestamp": "2025-09-21T18:51:15.744Z",
+  "results": {
+    "content": {
+      "passed": true,
+      "errors": 0
+    },
+    "templates": {
+      "passed": true,
+      "errors": 0
+    },
+    "overall": {
+      "passed": true,
+      "totalErrors": 0
+    }
+  },
+  "summary": {
+    "overallPassed": true,
+    "contentPassed": true,
+    "templatePassed": true
+  }
+}

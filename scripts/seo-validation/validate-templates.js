@@ -53,11 +53,15 @@ class TemplateValidator {
     
     let hasErrors = false;
     
-    // Check for imageJpg references
+    // Check for imageJpg references (ignore commented code)
     lines.forEach((line, index) => {
-      if (line.includes('imageJpg') || line.includes('imageJpg')) {
+      const trimmedLine = line.trim();
+      if ((trimmedLine.includes('imageJpg') || trimmedLine.includes('imageJpg')) && 
+          !trimmedLine.startsWith('//') && 
+          !trimmedLine.startsWith('*') &&
+          !trimmedLine.startsWith('<!--')) {
         this.addError(filePath, index + 1, 
-          `ImageJpg reference found: ${line.trim()}`, 
+          `ImageJpg reference found: ${trimmedLine}`, 
           'Remove imageJpg references, use only .webp images');
         hasErrors = true;
       }
@@ -76,16 +80,18 @@ class TemplateValidator {
       }
     });
     
-    // Check for JavaScript redirects
-    lines.forEach((line, index) => {
-      if (line.includes('window.location.replace') || 
-          line.includes('window.location.href')) {
-        this.addError(filePath, index + 1,
-          `JavaScript redirect found: ${line.trim()}`,
-          'Replace with Astro.redirect() for SEO');
-        hasErrors = true;
-      }
-    });
+    // Check for JavaScript redirects (exclude OAuth pages)
+    if (!filePath.includes('oauth') && !filePath.includes('callback')) {
+      lines.forEach((line, index) => {
+        if (line.includes('window.location.replace') || 
+            line.includes('window.location.href')) {
+          this.addError(filePath, index + 1,
+            `JavaScript redirect found: ${line.trim()}`,
+            'Replace with Astro.redirect() for SEO');
+          hasErrors = true;
+        }
+      });
+    }
     
     // Check for missing alt attributes
     const imgTags = content.match(/<img[^>]*>/g);

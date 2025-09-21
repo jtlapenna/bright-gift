@@ -1,0 +1,75 @@
+{
+  "timestamp": "2025-09-21T18:51:15.632Z",
+  "summary": {
+    "totalFiles": 10,
+    "filesWithErrors": 0,
+    "totalErrors": 0,
+    "totalWarnings": 9
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "file": "src/pages/index.astro",
+      "line": 0,
+      "message": "Missing meta description tag",
+      "fix": "Add meta description for better SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/pages/index.astro",
+      "line": 0,
+      "message": "Missing Open Graph title tag",
+      "fix": "Add og:title for social media sharing",
+      "severity": "warning"
+    },
+    {
+      "file": "src/pages/gift-idea-generator/index.astro",
+      "line": 0,
+      "message": "Missing meta description tag",
+      "fix": "Add meta description for better SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/pages/gift-idea-generator/index.astro",
+      "line": 0,
+      "message": "Missing Open Graph title tag",
+      "fix": "Add og:title for social media sharing",
+      "severity": "warning"
+    },
+    {
+      "file": "src/pages/blog/index.astro",
+      "line": 0,
+      "message": "Missing meta description tag",
+      "fix": "Add meta description for better SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/pages/blog/index.astro",
+      "line": 0,
+      "message": "Missing Open Graph title tag",
+      "fix": "Add og:title for social media sharing",
+      "severity": "warning"
+    },
+    {
+      "file": "src/pages/blog/[...slug].astro",
+      "line": 0,
+      "message": "Missing meta description tag",
+      "fix": "Add meta description for better SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/pages/blog/[...slug].astro",
+      "line": 0,
+      "message": "Missing Open Graph title tag",
+      "fix": "Add og:title for social media sharing",
+      "severity": "warning"
+    },
+    {
+      "file": "src/layouts/Layout.astro",
+      "line": 0,
+      "message": "Duplicate preload resources found: 2 duplicates",
+      "fix": "Remove duplicate preload declarations",
+      "severity": "warning"
+    }
+  ]
+}
