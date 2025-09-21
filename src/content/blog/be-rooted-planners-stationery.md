@@ -3,7 +3,7 @@ title: 'Best Be Rooted Planners, Journals, and Desk Accessories'
 description: >-
   Discover the top Be Rooted planners, journals, and desk accessories for 2025.
   A stylish, Black-owned stationery brand with beautiful, functional tools...
-keywords: null
+keywords: ['be rooted planners', 'be rooted stationery', 'planners 2025', 'journaling supplies', 'desk accessories', 'be rooted products', 'planner reviews']
 date: 2025-09-17
 status: published
 metaTitle: 'Be Rooted Planners & Journals 2025: Best Picks + How to C...'
