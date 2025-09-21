@@ -14,6 +14,7 @@ export const onRequest: MiddlewareHandler = (context, next) => {
   // - API routes (CRITICAL: Don't redirect API endpoints)
   // - Static assets
   // - Static directories (like care-calculator)
+  // - Blog posts and category pages (to prevent GSC validation failures)
   if (
     url.pathname === '/' ||
     url.pathname.includes('.') ||
@@ -23,6 +24,8 @@ export const onRequest: MiddlewareHandler = (context, next) => {
     url.pathname.startsWith('/icons/') ||
     url.pathname.startsWith('/placeholders/') ||
     url.pathname.startsWith('/care-calculator') ||
+    url.pathname.startsWith('/blog/') ||
+    url.pathname.startsWith('/category/') ||
     url.pathname === '/robots.txt' ||
     url.pathname === '/sitemap.xml' ||
     url.pathname === '/favicon.svg'
@@ -30,10 +33,11 @@ export const onRequest: MiddlewareHandler = (context, next) => {
     return next();
   }
   
-  // For all other paths, redirect no trailing slash to trailing slash
-  if (!url.pathname.endsWith('/') && url.pathname !== '/') {
+  // With trailingSlash: 'always', Astro handles trailing slash logic automatically
+  // Only handle specific redirects that need custom logic
+  if (url.pathname === '/blog') {
     const newUrl = new URL(context.request.url);
-    newUrl.pathname = url.pathname + '/';
+    newUrl.pathname = '/blog/';
     return context.redirect(newUrl.toString(), 301);
   }
   

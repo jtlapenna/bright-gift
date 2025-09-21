@@ -77,14 +77,14 @@ The Clean Girl aesthetic isn’t going anywhere—but in 2025 it’s less unifor
 
 **Practical tip:** Pair with broad‑spectrum SPF in the morning for best results.
 
-**Price Range:** $45–$85 <a href="https://www.arjdj2msd.com/7LKLK3/QWRG9C/" class="afrofiliate-link" target="_blank" rel="nofollow noopener">Shop BeautyStat</a>
+**Price Range:** $45–$85 <a href="https://www.arjdj2msd.com/7LKLK3/QWRG9C/" class="afrofiliate-link" target="_blank" rel="sponsored noopener">Shop BeautyStat</a>
 
 ### Kadalys Banana Glow Oil (Afrofiliate)
 **Why it’s great:** Lightweight botanical oil for a cushy, dewy sheen that layers well under minimal makeup—no heaviness.
 
 **Practical tip:** Warm 1–2 drops in palms and press onto cheekbones for subtle gloss.
 
-**Price Range:** $35–$55 <a href="https://www.arjdj2msd.com/7LKLK3/RC9DWS/" class="afrofiliate-link" target="_blank" rel="nofollow noopener">Shop Kadalys</a>
+**Price Range:** $35–$55 <a href="https://www.arjdj2msd.com/7LKLK3/RC9DWS/" class="afrofiliate-link" target="_blank" rel="sponsored noopener">Shop Kadalys</a>
 
 ### Minimalist Huggie Hoops (Gold Vermeil)
 **Why it’s great:** Tiny hoops are the Clean Girl jewelry staple—elevate tees, blazers, or slip dresses without shouting.
@@ -140,7 +140,7 @@ The Clean Girl aesthetic isn’t going anywhere—but in 2025 it’s less unifor
 
 **Practical tip:** Pair with a fine‑tip pen set for neat habit tracking.
 
-**Price Range:** $15–$30 <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="nofollow noopener">Shop Be Rooted</a>
+**Price Range:** $15–$30 <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="sponsored noopener">Shop Be Rooted</a>
 
 ### Book: Minimal‑ish Beauty & Routine Reset (Bookshop)
 **Why it’s great:** A quick, practical read on paring down routines while keeping glow and personality intact.

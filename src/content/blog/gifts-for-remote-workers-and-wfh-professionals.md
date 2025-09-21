@@ -118,7 +118,7 @@ Blue light blocking glasses help reduce eye strain and improve sleep quality for
 An essential oil diffuser can create a calming or energizing atmosphere in the home office. This gift helps remote workers set the right mood for different types of work.
 
 ### 12.5. Endorf Wellness Supplements
-<a href="https://www.arjdj2msd.com/7LKLK3/24D26TB/" class="amazon-link" target="_blank" rel="nofollow noopener">Shop Endorf</a>
+<a href="https://www.arjdj2msd.com/7LKLK3/24D26TB/" class="amazon-link" target="_blank" rel="sponsored noopener">Shop Endorf</a>
 **Price Range:** $25-$60  
 Endorf's mushroom-based wellness supplements support mental clarity and stress management for remote workers. Their natural formulas help maintain focus and energy during long work sessions.
 
@@ -180,7 +180,7 @@ Comfortable footwear makes a big difference during long workdays at home. This p
 A coffee or tea subscription ensures remote workers always have quality beverages to fuel their workday. This gift adds a touch of luxury and convenience to the daily routine.
 
 ### 22.5. Caribe Coffee Subscription
-<a href="https://www.arjdj2msd.com/7LKLK3/24R58Q6/" class="amazon-link" target="_blank" rel="nofollow noopener">Shop Caribe Coffee</a>
+<a href="https://www.arjdj2msd.com/7LKLK3/24R58Q6/" class="amazon-link" target="_blank" rel="sponsored noopener">Shop Caribe Coffee</a>
 **Price Range:** $35-$80 monthly  
 Caribe Coffee offers sustainable, high-quality coffee beans that support remote workers with premium caffeine fuel. Their ethically sourced beans provide the perfect morning boost for productivity.
 

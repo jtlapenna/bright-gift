@@ -458,9 +458,8 @@ const faqData = {
 							<div class="relative">
 								<picture>
 									{allContent[0].data.image?.endsWith('.webp') && <source srcset={allContent[0].data.image} type="image/webp" />}
-									{allContent[0].data.imageJpg && <source srcset={allContent[0].data.imageJpg} type="image/jpeg" />}
 									<img 
-										src={allContent[0].data.imageJpg || allContent[0].data.image || '/images/homepage-banner.webp'} 
+										src={allContent[0].data.image || '/images/homepage-banner.webp'} 
 										alt={`${allContent[0].data.title} - Latest gift guide`} 
 										class="w-full h-64 md:h-80 object-cover"
 										loading="eager"
@@ -518,8 +517,7 @@ const faqData = {
 								<article class="bg-[#A3E4DB] rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300" tabindex="0" aria-label={`Gift Guide: ${item.data.title}`}> 
 									<picture>
 										{item.data.image?.endsWith('.webp') && <source srcset={item.data.image} type="image/webp" />}
-										{item.data.imageJpg && <source srcset={item.data.imageJpg} type="image/jpeg" />}
-										<img src={item.data.imageJpg || item.data.image || '/images/homepage-banner.webp'} alt={`${item.data.title} - Gift ideas and recommendations`} class="h-40 w-full object-cover rounded-t-xl shadow">
+										<img src={item.data.image || '/images/homepage-banner.webp'} alt={`${item.data.title} - Gift ideas and recommendations`} class="h-40 w-full object-cover rounded-t-xl shadow">
 									</picture>
 									<div class="p-6 flex-1 flex flex-col">
 										<h3 class="font-bold text-lg mb-2 font-poppins text-[#1C2E4A]">{item.data.title}</h3>

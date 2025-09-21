@@ -81,7 +81,7 @@ This serum is a game-changer in skincare, boasting a high concentration of Vitam
 
 **Practical tip:** Apply this serum each morning after cleansing for the best results.
 
-**Price Range:** $45-$55 // <a href="https://www.arjdj2msd.com/7LKLK3/QWRG9C/" class="amazon-link" target="_blank" rel="nofollow noopener">Shop BeautyStat</a>
+**Price Range:** $45-$55 // <a href="https://www.arjdj2msd.com/7LKLK3/QWRG9C/" class="amazon-link" target="_blank" rel="sponsored noopener">Shop BeautyStat</a>
 
 ### 2. Furi Sport Athletic Wear
 
@@ -91,7 +91,7 @@ Optimize her fitness routine with stylish and high-performance athletic wear fro
 
 **Practical tip:** Check their sizing guide to ensure the perfect fit.
 
-**Price Range:** $35-$85 // <a href="https://www.arjdj2msd.com/7LKLK3/R2Z4H6/" class="amazon-link" target="_blank" rel="nofollow noopener">Shop Furi Sport</a>
+**Price Range:** $35-$85 // <a href="https://www.arjdj2msd.com/7LKLK3/R2Z4H6/" class="amazon-link" target="_blank" rel="sponsored noopener">Shop Furi Sport</a>
 
 ### 3. "The Self-Care Solution" Book
 
@@ -111,7 +111,7 @@ Help her stay organized with these inclusive and beautifully designed planners t
 
 **Practical tip:** Begin with the monthly reflection pages to set clear, meaningful intentions.
 
-**Price Range:** $25-$35 // <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="amazon-link" target="_blank" rel="nofollow noopener">Shop Be Rooted</a>
+**Price Range:** $25-$35 // <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="amazon-link" target="_blank" rel="sponsored noopener">Shop Be Rooted</a>
 
 ### 5. Lavender Essential Oil Diffuser
 

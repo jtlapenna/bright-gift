@@ -1,9 +1,0 @@
----
-// This page handles /blog (without trailing slash) to avoid redirect issues
-// It redirects to /blog/ with proper canonical handling
-const url = new URL(Astro.request.url);
-const targetUrl = `https://bright-gift.com/blog/${url.search}`;
-
-// Use Astro's redirect function for proper SEO handling
-return Astro.redirect(targetUrl, 301);
----

@@ -80,7 +80,7 @@ const categoryStructuredData = {
   "@type": "CollectionPage",
   "name": `${metadata.title}`,
   "description": metadata.description,
-  "url": `https://bright-gift.com/category/$/{category/}/`,
+  "url": `https://bright-gift.com/category/${category}/`,
   "mainEntity": {
     "@type": "ItemList",
     "numberOfItems": sortedPosts.length,
@@ -91,7 +91,7 @@ const categoryStructuredData = {
         "@type": "BlogPosting",
         "headline": post.data.title,
         "description": post.data.description,
-        "url": `https://bright-gift.com/blog/$/{post.slug/}/`,
+        "url": `https://bright-gift.com/blog/${post.slug}/`,
         "datePublished": post.data.date,
         "author": {
           "@type": "Organization",

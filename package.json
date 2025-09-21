@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "prebuild": "node scripts/validate-images.js && npm run validate:yaml && npm run generate:sitemap",
+    "prebuild": "npm run seo:validate && node scripts/validate-images.js && npm run validate:yaml && npm run generate:sitemap",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
@@ -27,7 +27,12 @@
     "monitor:404s": "node scripts/clean-404-posts.js",
     "remove:md-urls": "node scripts/remove-md-urls-from-gsc.js",
     "generate:sitemap": "node scripts/generate-sitemap.js",
-    "fix:trailing-slashes": "node scripts/fix-trailing-slashes.js"
+    "fix:trailing-slashes": "node scripts/fix-trailing-slashes.js",
+    "seo:validate": "node scripts/seo-validation/validate-all.js",
+    "seo:validate:content": "node scripts/seo-validation/validate-content.js",
+    "seo:validate:templates": "node scripts/seo-validation/validate-templates.js",
+    "seo:check": "npm run seo:validate && npm run build",
+    "predeploy": "npm run seo:check"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.0",

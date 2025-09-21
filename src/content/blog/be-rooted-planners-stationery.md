@@ -65,7 +65,7 @@ What stands out:
 - **Why it’s great:** Start anytime. Weekly overview keeps goals visible while leaving room for notes and habit tracking.
 - **Practical tip:** Pair with a matching journal to capture reflections separate from tasks.
 - **Example:** “Unapologetically Me” undated planner
-- **Where to shop:** <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="nofollow noopener">Shop Be Rooted</a>
+- **Where to shop:** <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="sponsored noopener">Shop Be Rooted</a>
 
 <figure>
   <img src="/images/blog/be-rooted-planners-stationery/be-rooted-planner-daily.webp" alt="Be Rooted undated planner with uplifting design" style="width:100%; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06);" />
@@ -76,14 +76,14 @@ What stands out:
 - **Best for:** Busy professionals, students with full schedules
 - **Why it’s great:** Day-per-page space for appointments, priority lists, and notes; helps reduce overwhelm.
 - **Practical tip:** Batch similar tasks and use time blocks to protect focus.
-- **Where to shop:** <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="nofollow noopener">Shop Be Rooted</a>
+- **Where to shop:** <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="sponsored noopener">Shop Be Rooted</a>
 
 ### 3) Lined & Spiraled Journals (Self-Care Favorite)
 - **Best for:** Building a reflective habit, stress reduction
 - **Why it’s great:** Prompted pages for gratitude, intention setting, and mindful check-ins.
 - **Practical tip:** Keep it bedside and write for 3 minutes nightly to cement the habit.
 - **Example:** “Stand in Power” lined & spiraled journal
-- **Where to shop:** <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="nofollow noopener">Shop Be Rooted</a>
+- **Where to shop:** <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="sponsored noopener">Shop Be Rooted</a>
 
 <figure>
   <img src="/images/blog/be-rooted-planners-stationery/be-rooted-notebook.webp" alt="Be Rooted notebook – Reset, Reflect, Refocus with coloring pages" style="width:100%; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06);" />
@@ -95,7 +95,7 @@ What stands out:
 - **Why it’s great:** Task prioritization with weekly review helps you iterate and improve.
 - **Practical tip:** End each week with a quick “start/stop/continue” reflection.
 - **Example:** “Daily Focus” padfolio
-- **Where to shop:** <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="nofollow noopener">Shop Be Rooted</a>
+- **Where to shop:** <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="sponsored noopener">Shop Be Rooted</a>
 
 <!-- Image removed: be-rooted-padfolio.webp file not found -->
 
@@ -106,7 +106,7 @@ What stands out:
 - **Pens/pen case:** Keep a dedicated writing kit with 2–3 colors (tasks, notes, highlights)
 - **Journals stack:** Separate work, personal, and wellness in their own notebooks
 
-Shop accessories: <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="nofollow noopener">Be Rooted desk accessories</a>
+Shop accessories: <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afrofiliate-link" target="_blank" rel="sponsored noopener">Be Rooted desk accessories</a>
 
 ## How to Choose the Right Be Rooted Planner
 - **Format:** Daily for structure; weekly for overview; undated for flexibility

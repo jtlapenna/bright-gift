@@ -3,28 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 
 // Redirect to the main AI gift generator on the homepage
 const redirectUrl = '/#gift-generator';
----
 
-<Layout 
-  title="AI Gift Idea Generator | Find the Perfect Gift in Seconds | BrightGift"
-  description="Discover personalized gift ideas instantly with our AI-powered gift finder. Get creative recommendations for any person, budget, or occasion. Try our free AI gift generator today!"
-  keywords={["gift ideas", "AI gifts", "personalized gifts", "gift finder", "gift recommendations", "birthday gifts", "holiday gifts", "AI gift search", "AI gift matching", "AI-powered gift tool", "gift suggestions", "unique gift ideas", "thoughtful gifts", "gift guide", "personalized gift recommendations", "AI gift generator", "gift finder tool", "creative gift ideas", "gift shopping", "gift giving"]}
-  canonical="https://bright-gift.com/gift-idea-generator/"
-  ogType="website"
-  twitterCard="summary_large_image"
->
-  <script>
-    // Redirect to the main gift generator on the homepage
-    window.location.replace('/#gift-generator');
-  </script>
-  
-  <div class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center">
-    <div class="text-center">
-      <h1 class="text-4xl font-bold text-[#1C2E4A] mb-4">Redirecting to Gift Generator...</h1>
-      <p class="text-lg text-gray-600 mb-6">You're being redirected to our AI-powered gift idea generator.</p>
-      <a href="/#gift-generator" class="inline-block bg-[#FF6B6B] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#ff4c4c] transition-colors">
-        Go to Gift Generator
-      </a>
-    </div>
-  </div>
-</Layout>
+// Use Astro's redirect function for proper SEO handling
+return Astro.redirect(redirectUrl, 301);
+---

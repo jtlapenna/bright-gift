@@ -45,7 +45,7 @@ const title = post.data.title || fallbackTitle;
 const description = post.data.description || fallbackDescription;
 const image = post.data.image || fallbackImage;
 // Removed automatic .jpg generation to prevent broken image references
-const imageJpg = post.data.imageJpg;
+// const imageJpg = post.data.imageJpg; // REMOVED - causes 404 errors
 const ogImage = post.data.ogImage || image;
 const socialImage = post.data.socialImage || ogImage;
 const keywords = post.data.keywords || fallbackKeywords;
@@ -114,14 +114,9 @@ if (type === 'gift-guide' && post.data.affiliateLinks && post.data.affiliateLink
     }
   }));
   
-  // Add aggregate rating for gift guides
-  structuredData.aggregateRating = {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "150",
-    "bestRating": "5",
-    "worstRating": "1"
-  };
+  // REMOVED: Fake aggregate rating data that could cause Google penalties
+  // Only add real ratings if you have actual user reviews
+  // structuredData.aggregateRating = { ... };
 }
 
 // Get related posts
@@ -164,7 +159,6 @@ const relatedPosts = allBlogPosts
       <div class="h-96 bg-slate-200 relative overflow-hidden">
         <picture>
           {image && image.endsWith('.webp') && <source srcset={image} type="image/webp" />}
-          {imageJpg && <source srcset={imageJpg} type="image/jpeg" />}
           <img 
             src={image || '/images/homepage-banner.webp'} 
             alt={`${title} - Gift guide hero image`}
