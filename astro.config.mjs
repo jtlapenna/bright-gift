@@ -27,12 +27,8 @@ export default defineConfig({
   markdown: {
     // Allow HTML in markdown content
     html: true,
-    // Configure markdown-it options
-    shikiConfig: {
-      // Use a theme that works well with your site
-      theme: 'github-light',
-      wrap: true
-    }
+    // Disable syntax highlighting to prevent HTML from being treated as code
+    syntaxHighlight: false
   },
   vite: {
     ssr: {
