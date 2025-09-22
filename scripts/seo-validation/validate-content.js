@@ -96,12 +96,14 @@ class ContentValidator {
       hasErrors = true;
     }
     
-    // Check image format
+    // Check image format (handle ImageKit URLs with query parameters)
     const imageMatches = content.match(/image:\s*["']([^"']+)["']/g);
     if (imageMatches) {
       imageMatches.forEach(match => {
         const imagePath = match.match(/["']([^"']+)["']/)[1];
-        if (!imagePath.endsWith('.webp')) {
+        // Check if URL contains .webp before query parameters (handles ImageKit URLs)
+        const urlWithoutQuery = imagePath.split('?')[0];
+        if (!urlWithoutQuery.endsWith('.webp')) {
           this.addError(filePath, content.indexOf(match) + 1,
             `Non-webp image found: ${imagePath}`,
             'Convert to .webp format for better SEO');
