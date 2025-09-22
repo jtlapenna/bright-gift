@@ -24,6 +24,16 @@ export default defineConfig({
     }
   }),
   integrations: [tailwind()],
+  markdown: {
+    // Allow HTML in markdown content
+    html: true,
+    // Configure markdown-it options
+    shikiConfig: {
+      // Use a theme that works well with your site
+      theme: 'github-light',
+      wrap: true
+    }
+  },
   vite: {
     ssr: {
       noExternal: ['marked']
