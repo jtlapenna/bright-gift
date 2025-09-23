@@ -60,7 +60,7 @@ Whether you’re buying for family, friends, or coworkers, you’ll find tech up
 ### Hardcover Feel‑Good Novel (Giftable Fiction)
 **Why it's great:** Books make thoughtful, screen‑free gifts with lasting impact. Feel‑good picks are perfect for holiday downtime.
 **Practical tip:** Choose popular contemporary fiction for broad appeal.
-**Price Range:** $12–$30 <a href="https://bookshop.org/books/the-fault-in-our-stars/9780525478812" class="bookshop-link" target="_blank" rel="noopener">View on Bookshop.org</a>
+**Price Range:** $12–$30 <a href="https://bookshop.org/books/where-the-crawdads-sing/9780735219090" class="bookshop-link" target="_blank" rel="noopener">View on Bookshop.org</a>
 
 ## Gifts $50–$100
 
@@ -127,7 +127,7 @@ Whether you’re buying for family, friends, or coworkers, you’ll find tech up
 **Why it's great:** Page‑turners build reading momentum and confidence. Great for breaks from screens.
 **Practical tip:** Pick the first in a series to spark ongoing interest.
 
-**Price Range:** $9–$20 <a href="https://bookshop.org/books/harry-potter-and-the-sorcerer-s-stone/9780590353427" class="bookshop-link" target="_blank" rel="noopener">View on Bookshop.org</a>
+**Price Range:** $9–$20 <a href="https://bookshop.org/books/the-hate-u-give/9780062498533" class="bookshop-link" target="_blank" rel="noopener">View on Bookshop.org</a>
 
 ## Elevated Home & Tech
 
