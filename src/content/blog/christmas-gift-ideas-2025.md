@@ -139,19 +139,22 @@ Whether you’re buying for family, friends, or coworkers, you’ll find tech up
 ## Elevated Home & Tech
 
 ### Smart Speaker with Voice Assistant
-**Why it’s great:** Handy timers, music, weather, and routines in one device. Small footprint, big daily value.
+**Why it's great:** Handy timers, music, weather, and routines in one device. Small footprint, big daily value.
+
 **Practical tip:** Confirm ecosystem (Apple/Google/Amazon) to match their other devices.
 
 **Price Range:** $35–$80 <a href="https://www.amazon.com/s?k=smart+speaker+voice+assistant+2025+model&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### Cast‑Iron Skillet (Pre‑Seasoned)
-**Why it’s great:** Lasts for years, holds heat beautifully, and works from stovetop to oven.
+**Why it's great:** Lasts for years, holds heat beautifully, and works from stovetop to oven.
+
 **Practical tip:** Include a care card: dry fully and oil lightly after use.
 
 **Price Range:** $25–$60 <a href="https://www.amazon.com/s?k=cast+iron+skillet+pre+seasoned+10+inch&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### Slim Wallet or Crossbody (RFID or Minimalist)
-**Why it’s great:** Lightweight organization with just‑right capacity. Great daily upgrade gift.
+**Why it's great:** Lightweight organization with just‑right capacity. Great daily upgrade gift.
+
 **Practical tip:** Prioritize secure zippers and a strap length that fits their height.
 
 **Price Range:** $20–$70 <a href="https://www.amazon.com/s?k=minimalist+slim+wallet+rfid+crossbody+bag&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
