@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       BASE_URL: https://bright-gift.com
-      CHECK_PATH: /api/generate
+      CHECK_PATH: /api/generate/
       TIMEOUT_SECONDS: '480' # give CF Pages ~8 minutes to be safe (builds ~4m)
       INTERVAL_SECONDS: '15'
     steps:
