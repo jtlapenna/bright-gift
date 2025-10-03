@@ -137,12 +137,19 @@ class SchemaValidator {
       });
     }
     
-    // Check date format
-    if (frontmatter.date && !this.isValidDate(frontmatter.date)) {
-      errors.push({
-        message: `Invalid date format: ${frontmatter.date}`,
-        fix: 'Use YYYY-MM-DD format for date'
-      });
+    // Check date format (accept both YYYY-MM-DD strings and Date objects)
+    if (frontmatter.date) {
+      if (typeof frontmatter.date === 'string' && !this.isValidDate(frontmatter.date)) {
+        errors.push({
+          message: `Invalid date format: ${frontmatter.date}`,
+          fix: 'Use YYYY-MM-DD format for date'
+        });
+      } else if (frontmatter.date instanceof Date && !this.isValidDateObject(frontmatter.date)) {
+        errors.push({
+          message: `Invalid date object: ${frontmatter.date}`,
+          fix: 'Use a valid date format (will be converted by content config)'
+        });
+      }
     }
     
     // Check for image fields (recommended for schema)
@@ -249,11 +256,16 @@ class SchemaValidator {
     const isoRegex = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{3})?Z?$/;
     if (isoRegex.test(dateString)) return true;
     
-    // Check simple date format
+    // Check simple date format (YYYY-MM-DD)
     const simpleRegex = /^\d{4}-\d{2}-\d{2}$/;
     if (simpleRegex.test(dateString)) return true;
     
     return false;
+  }
+
+  // Check if date is a valid Date object (will be converted by content config)
+  isValidDateObject(dateValue) {
+    return dateValue instanceof Date && !isNaN(dateValue.getTime());
   }
 
   addError(filePath, line, message, fix) {
