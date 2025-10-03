@@ -1,26 +1,20 @@
 ---
-// Contact page with accessible form, client-side validation, and spam honeypot
+// Contact page using site Layout for consistent branding
+import Layout from "../layouts/Layout.astro";
 const endpoint = import.meta.env.PUBLIC_CONTACT_ENDPOINT || '/api/contact'
 const isDisabled = endpoint.trim().length === 0
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact Us | Bright Gift</title>
-    <meta name="description" content="Get in touch with Bright Gift via our contact form." />
-  </head>
-  <body>
-    <main class="container">
-      <h1>Contact Bright Gift</h1>
-      {isDisabled && (
-        <p class="notice">
-          The contact form is temporarily unavailable. Please set <code>PUBLIC_CONTACT_ENDPOINT</code> to enable submissions.
-        </p>
-      )}
+<Layout title="Contact Us | BrightGift" description="Get in touch with BrightGift via our contact form.">
+  <main class="mx-auto max-w-3xl px-4 py-10">
+    <h1 class="text-3xl md:text-4xl font-extrabold text-[#1C2E4A] mb-6">Contact BrightGift</h1>
+    {isDisabled && (
+      <p class="notice mb-6">
+        The contact form is temporarily unavailable. Please set <code>PUBLIC_CONTACT_ENDPOINT</code> to enable submissions.
+      </p>
+    )}
 
-      <form id="contact-form" aria-describedby="form-help" data-endpoint={endpoint} novalidate>
+    <form id="contact-form" aria-describedby="form-help" data-endpoint={endpoint} novalidate class="grid gap-4">
         {/* Honeypot field for bots */}
         <div class="hp" aria-hidden="true">
           <label htmlFor="website">Leave this field empty</label>
@@ -49,25 +43,22 @@ const isDisabled = endpoint.trim().length === 0
 
         <p id="form-help" class="help">We typically respond within 1–2 business days.</p>
 
-        <button id="submit-btn" type="submit" disabled={isDisabled}>Send Message</button>
+        <button id="submit-btn" type="submit" disabled={isDisabled} class="px-4 py-3 rounded-lg text-white font-semibold" style="background:#111827">Send Message</button>
 
         <p id="form-status" role="status" aria-live="polite" class="status" hidden></p>
-      </form>
-    </main>
+    </form>
+  </main>
 
-    <style>
-      .container{max-width:720px;margin:2rem auto;padding:0 1rem}
-      form{display:grid;gap:1rem}
-      .field{display:grid;gap:.5rem}
-      input,textarea{padding:.75rem;border:1px solid #d1d5db;border-radius:.5rem;font:inherit}
-      button{padding:.75rem 1rem;border:0;border-radius:.5rem;background:#111827;color:#fff;cursor:pointer}
-      button[disabled]{opacity:.6;cursor:not-allowed}
-      .hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
-      .notice{background:#fff7ed;border:1px solid #fed7aa;padding:1rem;border-radius:.5rem}
-      .status{margin-top:.5rem}
-    </style>
+  <style>
+    .field{display:grid;gap:.5rem}
+    input,textarea{padding:.75rem;border:1px solid #d1d5db;border-radius:.5rem;font:inherit}
+    button[disabled]{opacity:.6;cursor:not-allowed}
+    .hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+    .notice{background:#fff7ed;border:1px solid #fed7aa;padding:1rem;border-radius:.5rem}
+    .status{margin-top:.5rem}
+  </style>
 
-    <script>
+  <script>
       // Minimal client-side validation + submission with graceful errors
       const form = document.getElementById('contact-form');
       const statusEl = document.getElementById('form-status');
@@ -114,9 +105,8 @@ const isDisabled = endpoint.trim().length === 0
           }
         });
       }
-    </script>
-  </body>
-</html>
+  </script>
+</Layout>
 
 
 
