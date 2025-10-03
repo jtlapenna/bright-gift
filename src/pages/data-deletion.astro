@@ -6,6 +6,26 @@ description: "Learn how to request deletion of your personal data from BrightGif
 ---
 
 <Layout title="User Data Deletion - BrightGift">
+	<style>
+		.email-address {
+			cursor: pointer;
+			color: #FF6B6B;
+			text-decoration: underline;
+		}
+		.email-address:hover {
+			color: #ff4c4c;
+		}
+	</style>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const emailElements = document.querySelectorAll('.email-address');
+			emailElements.forEach(function(element) {
+				element.addEventListener('click', function() {
+					window.location.href = 'mailto:info@bright-gift.com';
+				});
+			});
+		});
+	</script>
 	<main class="min-h-screen bg-[#FFF9F3]">
 		<div class="max-w-4xl mx-auto px-4 py-16">
 			<h1 class="text-4xl font-bold text-[#1C2E4A] mb-8 text-center">User Data Deletion</h1>
@@ -38,7 +58,7 @@ description: "Learn how to request deletion of your personal data from BrightGif
 						<div>
 							<h3 class="text-lg font-medium text-[#1C2E4A] mb-2">Email Request</h3>
 							<p class="text-gray-700 leading-relaxed">
-								Send an email to <strong>info@bright-gift.com</strong> with the subject line "Data Deletion Request" and include:
+								Send an email to <strong><span class="email-address">info at bright-gift dot com</span></strong> with the subject line "Data Deletion Request" and include:
 							</p>
 							<ul class="list-disc list-inside text-gray-700 space-y-1 ml-4 mt-2">
 								<li>Your name and email address</li>
@@ -119,7 +139,7 @@ description: "Learn how to request deletion of your personal data from BrightGif
 					</p>
 					<div class="mt-4 p-4 bg-gray-50 rounded-lg">
 						<p class="text-gray-700">
-							<strong>Email:</strong> info@bright-gift.com<br>
+							<strong>Email:</strong> <span class="email-address">info at bright-gift dot com</span><br>
 							<strong>Subject:</strong> Data Deletion Request<br>
 							<strong>Response Time:</strong> Within 30 days
 						</p>
