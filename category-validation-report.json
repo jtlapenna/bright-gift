@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-10-03T18:32:42.988Z",
+  "summary": {
+    "totalFiles": 44,
+    "validCategories": 44,
+    "invalidCategories": 0,
+    "legacyCategories": 0,
+    "missingCategories": 0
+  },
+  "categoryUsage": {
+    "gift-guides": 39,
+    "data-driven": 1,
+    "educational": 4
+  },
+  "errors": [],
+  "warnings": []
+}

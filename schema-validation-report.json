@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-10-03T18:32:43.187Z",
+  "summary": {
+    "totalFiles": 44,
+    "validSchemas": 41,
+    "invalidSchemas": 3,
+    "missingSchemas": 0,
+    "schemaTypes": {
+      "Article": 41
+    }
+  },
+  "errors": [
+    {
+      "file": "ai-powered-gift-ideas-for-every-budget.md",
+      "line": 0,
+      "message": "Title too long: 62 characters (max 60)",
+      "fix": "Shorten title to 60 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "ai-powered-gift-ideas-for-every-budget.md",
+      "line": 0,
+      "message": "Description too long: 174 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "ai-tiktok-made-me-buy-it-gifts-2025.md",
+      "line": 0,
+      "message": "Title too long: 70 characters (max 60)",
+      "fix": "Shorten title to 60 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "christmas-gift-ideas-2025.md",
+      "line": 0,
+      "message": "Title too long: 72 characters (max 60)",
+      "fix": "Shorten title to 60 characters or less",
+      "severity": "error"
+    }
+  ],
+  "warnings": []
+}

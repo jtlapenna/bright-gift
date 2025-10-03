@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-10-03T18:33:25.168Z",
+  "summary": {
+    "totalFiles": 45,
+    "totalLinks": 925,
+    "brokenLinks": 2,
+    "externalLinks": 722,
+    "internalLinks": 203
+  },
+  "errors": [
+    {
+      "file": "test-validation-failure.md",
+      "line": 7,
+      "message": "Internal blog link points to non-existent post: https://bright-gift.com/blog/non-existent-post/",
+      "fix": "Check if blog post non-existent-post.md exists",
+      "severity": "error"
+    },
+    {
+      "file": "test-validation-failure.md",
+      "line": 8,
+      "message": "External link is not accessible: https://this-domain-does-not-exist-12345.com/",
+      "fix": "Check if the URL is correct and the site is online",
+      "severity": "error"
+    }
+  ],
+  "warnings": []
+}
