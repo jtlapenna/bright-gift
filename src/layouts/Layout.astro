@@ -176,16 +176,21 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 		
 		<slot />
 
-		{/* Site Footer */}
-		<footer class="w-full mt-12 border-t border-slate-100 bg-white">
-			<div class="mx-auto max-w-6xl px-4 py-8 text-sm text-[#1C2E4A] grid gap-4 md:flex md:items-center md:justify-between">
-				<p>&copy; {new Date().getFullYear()} BrightGift. All rights reserved.</p>
-				<nav class="flex gap-4">
-					<a href="/privacy/" class="hover:underline">Privacy</a>
-					<a href="/terms/" class="hover:underline">Terms</a>
-					<a href="/data-deletion/" class="hover:underline">Data Deletion</a>
-					<a href="/contact/" class="hover:underline">Contact</a>
-				</nav>
+		{/* Footer - match homepage styling exactly */}
+		<footer class="bg-[#1C2E4A] text-white text-sm py-6 mt-16 text-center">
+			<div class="flex flex-col items-center gap-2">
+				<span class="flex items-center gap-2">
+					<img src="/bright-gift-logo.png" alt="BrightGift logo" class="h-6 inline" />
+					<span>BrightGift &copy; {new Date().getFullYear()}</span>
+				</span>
+				<span>
+					<a href="/#about-tool" class="underline hover:no-underline">About</a> &middot;
+					<a href="/blog/" class="underline hover:no-underline">Blog</a> &middot;
+					<a href="/privacy/" class="underline hover:no-underline">Privacy</a> &middot;
+					<a href="/terms/" class="underline hover:no-underline">Terms</a> &middot;
+					<a href="/data-deletion/" class="underline hover:no-underline">Data Deletion</a>
+				</span>
+				<span class="opacity-70">"Find the Perfect Gift with AI!"</span>
 			</div>
 		</footer>
 		
