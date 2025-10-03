@@ -152,6 +152,7 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 				<a href="/blog/" class="hover:underline underline-offset-4 rounded">Blog</a>
 				<a href="/#about-tool" class="hover:underline underline-offset-4 rounded">About</a>
 				<a href="/#faq" class="hover:underline underline-offset-4 rounded">FAQ</a>
+				<a href="/contact/" class="hover:underline underline-offset-4 rounded">Contact</a>
 			</nav>
 			
 			{/* Mobile Menu Button */}
@@ -169,10 +170,24 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 				<a href="/blog/" class="hover:underline underline-offset-4 rounded">Blog</a>
 				<a href="/#about-tool" class="hover:underline underline-offset-4 rounded">About</a>
 				<a href="/#faq" class="hover:underline underline-offset-4 rounded">FAQ</a>
+				<a href="/contact/" class="hover:underline underline-offset-4 rounded">Contact</a>
 			</nav>
 		</div>
 		
 		<slot />
+
+		{/* Site Footer */}
+		<footer class="w-full mt-12 border-t border-slate-100 bg-white">
+			<div class="mx-auto max-w-6xl px-4 py-8 text-sm text-[#1C2E4A] grid gap-4 md:flex md:items-center md:justify-between">
+				<p>&copy; {new Date().getFullYear()} BrightGift. All rights reserved.</p>
+				<nav class="flex gap-4">
+					<a href="/privacy/" class="hover:underline">Privacy</a>
+					<a href="/terms/" class="hover:underline">Terms</a>
+					<a href="/data-deletion/" class="hover:underline">Data Deletion</a>
+					<a href="/contact/" class="hover:underline">Contact</a>
+				</nav>
+			</div>
+		</footer>
 		
 		
 		<!-- Google Tag Manager - Load after page content with optimized loading -->
