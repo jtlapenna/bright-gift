@@ -1,10 +1,10 @@
 {
-  "timestamp": "2025-10-03T03:06:57.225Z",
+  "timestamp": "2025-10-03T17:22:56.205Z",
   "summary": {
-    "totalFiles": 42,
+    "totalFiles": 43,
     "filesWithErrors": 0,
     "totalErrors": 0,
-    "totalWarnings": 2
+    "totalWarnings": 3
   },
   "errors": [],
   "warnings": [
@@ -12,6 +12,13 @@
       "file": "src/content/blog/christmas-gift-ideas-2025.md",
       "line": 5,
       "message": "Title length 72 characters (should be 10-60)",
+      "fix": "Optimize title length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/ai-tiktok-made-me-buy-it-gifts-2025.md",
+      "line": 5,
+      "message": "Title length 70 characters (should be 10-60)",
       "fix": "Optimize title length for SEO",
       "severity": "warning"
     },
