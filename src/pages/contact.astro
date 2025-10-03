@@ -1,6 +1,6 @@
 ---
 // Contact page with accessible form, client-side validation, and spam honeypot
-const endpoint = import.meta.env.PUBLIC_CONTACT_ENDPOINT || ''
+const endpoint = import.meta.env.PUBLIC_CONTACT_ENDPOINT || '/api/contact'
 const isDisabled = endpoint.trim().length === 0
 ---
 
