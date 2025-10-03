@@ -41,6 +41,9 @@ Disallow: /temp/
 Disallow: /placeholders/
 Disallow: /social-assets/
 
+# Block Cloudflare email protection (not for SEO)
+Disallow: /cdn-cgi/
+
 # Force reindexing hints
 # Last updated: 2025-09-12T16:38:54.081Z
 
