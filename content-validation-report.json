@@ -1,13 +1,20 @@
 {
-  "timestamp": "2025-09-22T05:40:47.325Z",
+  "timestamp": "2025-10-03T03:06:57.225Z",
   "summary": {
-    "totalFiles": 41,
+    "totalFiles": 42,
     "filesWithErrors": 0,
     "totalErrors": 0,
-    "totalWarnings": 1
+    "totalWarnings": 2
   },
   "errors": [],
   "warnings": [
+    {
+      "file": "src/content/blog/christmas-gift-ideas-2025.md",
+      "line": 5,
+      "message": "Title length 72 characters (should be 10-60)",
+      "fix": "Optimize title length for SEO",
+      "severity": "warning"
+    },
     {
       "file": "src/content/blog/ai-powered-gift-ideas-for-every-budget.md",
       "line": 5,

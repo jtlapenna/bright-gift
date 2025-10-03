@@ -3,7 +3,7 @@ title: "Christmas Gift Ideas 2025: 20 Thoughtful Picks for Everyone on Your List
 slug: "christmas-gift-ideas-2025"
 description: "Find 20 carefully curated Christmas gift ideas for 2025—balanced by budget, interests, and usefulness—to make holiday shopping simple and stress-free."
 date: "2025-09-23"
-category: gift-guide
+category: gift-guides
 metaTitle: "Christmas Gift Ideas 2025: 20 Thoughtful Picks for Everyone"
 metaDescription: "Discover 20 Christmas gift ideas for 2025. From budget-friendly to luxury presents, find thoughtful gifts for everyone on your list."
 keywords:

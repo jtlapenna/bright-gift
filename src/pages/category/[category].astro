@@ -17,13 +17,22 @@ export async function getStaticPaths() {
     return category;
   }))].filter(Boolean);
   
-  return categories.map(category => ({
-    params: { category },
-    props: { category }
-  }));
+  // Map singular categories to plural URLs
+  const categoryMapping = {
+    'gift-guide': 'gift-guides',
+    'gift-tip': 'gift-tips'
+  };
+  
+  return categories.map(category => {
+    const urlCategory = categoryMapping[category] || category;
+    return {
+      params: { category: urlCategory },
+      props: { category: urlCategory, originalCategory: category }
+    };
+  });
 }
 
-const { category } = Astro.props;
+const { category, originalCategory } = Astro.props;
 
 // Get all blog posts for this category
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
@@ -33,7 +42,8 @@ const categoryPosts = allPosts.filter(post => {
   if (category === 'gift-tips' && (postCategory === 'educational' || postCategory === 'data-driven')) {
     return true;
   }
-  return postCategory === category;
+  // Handle both original category and mapped category
+  return postCategory === originalCategory || postCategory === category;
 });
 
 // Sort by date (newest first)

@@ -44,7 +44,7 @@ tags:
   - minimalist
   - fashion
   - trending
-category: gift-guide
+category: gift-guides
 recipient: beauty-and-style-lovers
 budget: various
 occasion: 'birthday, just-because, holidays'

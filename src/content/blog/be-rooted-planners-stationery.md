@@ -43,7 +43,7 @@ tags:
   - stationery
   - planners
   - journaling
-category: gift-guide
+category: gift-guides
 recipient: planners-and-stationery-lovers
 budget: various
 occasion: 'back-to-school, holidays, new-year-setup'
