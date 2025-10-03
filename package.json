@@ -14,6 +14,7 @@
     "compile": "tsc",
     "validate:yaml": "node scripts/validate-yaml.js",
     "validate:links": "node scripts/validate-links.js",
+    "validate:categories": "node scripts/validate-categories.js",
     "validate:blog": "node scripts/blog-validator.js",
     "fix:blog": "node scripts/blog-fixer.js",
     "enhance:blog": "node scripts/blog-enhancer.js",

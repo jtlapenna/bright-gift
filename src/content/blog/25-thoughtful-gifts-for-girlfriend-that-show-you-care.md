@@ -12,6 +12,7 @@ keywords: ['gifts for girlfriend', 'romantic gifts', 'thoughtful gifts for her',
 date: 2025-09-17
 status: published
 contentType: gift-guide
+category: gift-guides
 image: >-
   /images/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/25-thoughtful-gifts-for-girlfriend-that-show-you-care-banner.webp
 ogImage: >-
