@@ -158,6 +158,12 @@ class LinkValidator {
         return;
       }
       
+      // Handle blog index page (/blog/ or /blog)
+      if (slug === '' || slug === 'blog') {
+        console.log(`✅ Blog index link: ${url}`);
+        return;
+      }
+      
       const expectedPath = path.join(process.cwd(), BLOG_DIR, `${slug}.md`);
       
       if (!fs.existsSync(expectedPath)) {
