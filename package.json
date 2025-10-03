@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "prebuild": "npm run seo:validate && node scripts/validate-images.js && npm run validate:yaml && npm run generate:sitemap",
+    "prebuild:enhanced": "npm run seo:validate && node scripts/validate-images.js && npm run validate:links && npm run validate:categories && npm run validate:schema && npm run validate:yaml && npm run generate:sitemap",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
