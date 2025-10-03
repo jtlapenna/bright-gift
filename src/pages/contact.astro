@@ -1,0 +1,122 @@
+---
+// Contact page with accessible form, client-side validation, and spam honeypot
+const endpoint = import.meta.env.PUBLIC_CONTACT_ENDPOINT || ''
+const isDisabled = endpoint.trim().length === 0
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us | Bright Gift</title>
+    <meta name="description" content="Get in touch with Bright Gift via our contact form." />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Contact Bright Gift</h1>
+      {isDisabled && (
+        <p class="notice">
+          The contact form is temporarily unavailable. Please set <code>PUBLIC_CONTACT_ENDPOINT</code> to enable submissions.
+        </p>
+      )}
+
+      <form id="contact-form" aria-describedby="form-help" data-endpoint={endpoint} novalidate>
+        {/* Honeypot field for bots */}
+        <div class="hp" aria-hidden="true">
+          <label htmlFor="website">Leave this field empty</label>
+          <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
+        </div>
+
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required />
+        </div>
+
+        <div class="field">
+          <label for="subject">Subject (optional)</label>
+          <input id="subject" name="subject" type="text" />
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <p id="form-help" class="help">We typically respond within 1–2 business days.</p>
+
+        <button id="submit-btn" type="submit" disabled={isDisabled}>Send Message</button>
+
+        <p id="form-status" role="status" aria-live="polite" class="status" hidden></p>
+      </form>
+    </main>
+
+    <style>
+      .container{max-width:720px;margin:2rem auto;padding:0 1rem}
+      form{display:grid;gap:1rem}
+      .field{display:grid;gap:.5rem}
+      input,textarea{padding:.75rem;border:1px solid #d1d5db;border-radius:.5rem;font:inherit}
+      button{padding:.75rem 1rem;border:0;border-radius:.5rem;background:#111827;color:#fff;cursor:pointer}
+      button[disabled]{opacity:.6;cursor:not-allowed}
+      .hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+      .notice{background:#fff7ed;border:1px solid #fed7aa;padding:1rem;border-radius:.5rem}
+      .status{margin-top:.5rem}
+    </style>
+
+    <script>
+      // Minimal client-side validation + submission with graceful errors
+      const form = document.getElementById('contact-form');
+      const statusEl = document.getElementById('form-status');
+      const submitBtn = document.getElementById('submit-btn');
+      const endpoint = form?.dataset?.endpoint || '';
+
+      if (form) {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          // Block if feature disabled
+          if (!endpoint) {
+            statusEl.hidden = false; statusEl.textContent = 'Form disabled. Please try again later.'; return;
+          }
+
+          // Honeypot check
+          const hp = (form.querySelector('#website') || {}).value || '';
+          if (hp.trim() !== '') { return; }
+
+          // Gather + validate inputs
+          const name = (form.querySelector('#name')).value.trim();
+          const email = (form.querySelector('#email')).value.trim();
+          const subject = (form.querySelector('#subject')).value.trim();
+          const message = (form.querySelector('#message')).value.trim();
+          if (!name || !email || !message) {
+            statusEl.hidden = false; statusEl.textContent = 'Please complete all required fields.'; return;
+          }
+          const emailOk = /.+@.+\..+/.test(email);
+          if (!emailOk) { statusEl.hidden = false; statusEl.textContent = 'Please enter a valid email address.'; return; }
+
+          // Submit
+          submitBtn.disabled = true; statusEl.hidden = false; statusEl.textContent = 'Sending…';
+          try {
+            const res = await fetch(endpoint, {
+              method: 'POST', headers: {'content-type':'application/json'},
+              body: JSON.stringify({ name, email, subject, message, source: 'bright-gift-contact' })
+            });
+            if (!res.ok) { throw new Error('Bad response'); }
+            form.reset(); statusEl.textContent = 'Thanks! Your message has been sent.';
+          } catch (err) {
+            statusEl.textContent = 'Sorry, something went wrong. Please try again later.';
+          } finally {
+            submitBtn.disabled = false;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
+
+
+
