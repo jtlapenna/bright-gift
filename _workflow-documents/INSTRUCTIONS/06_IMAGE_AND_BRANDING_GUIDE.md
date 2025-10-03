@@ -109,10 +109,10 @@ This is the single source of truth for all visual branding, image creation, and 
 - **Text:** NO text or logos allowed
 - **Purpose:** Main blog post hero image (displays at 384px height)
 - **Style:** Horizontal layout with gift-themed objects
-- **Schema:** Used in structured data with 1200×630 reference
+- **Schema:** Used in structured data with 1024×1536 reference
 
 #### **Open Graph (OG) Images**
-- **Size:** 1200×630px (16:9 aspect ratio) ✅ **VERIFIED**
+- **Size:** 1536×1024px (3:2 landscape) ✅ **VERIFIED**
 - **Format:** WebP for optimization (with JPG fallback)
 - **Text:** NO text or logos allowed
 - **Purpose:** Social media link previews, Twitter cards
@@ -128,7 +128,7 @@ This is the single source of truth for all visual branding, image creation, and 
 - **Usage:** Falls back to OG image if not provided
 
 #### **Blog Index Thumbnails**
-- **Size:** Uses banner image, displayed with `aspect-video` (16:9)
+- **Size:** Uses banner image, displayed with `aspect-[3/2]`
 - **Display:** Responsive grid layout with `object-cover`
 - **Loading:** Lazy loading for performance
 
@@ -168,8 +168,8 @@ This file contains:
 - Example prompts for different content types
 
 **Key Requirements:**
-- **Banner images:** 16:9 ratio, no text or logos
-- **OG images:** 16:9 ratio, no text or logos  
+- **Banner images:** 3:2 ratio (1536×1024), no text or logos
+- **OG images:** 3:2 ratio (1536×1024), no text or logos  
 - **Style:** Modern flat illustration with 3D cartoon objects and 2D decorative elements
 - **Colors:** Warm pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700)
 - **Tone:** Cheerful, light, editorial, creative — never realistic or photorealistic

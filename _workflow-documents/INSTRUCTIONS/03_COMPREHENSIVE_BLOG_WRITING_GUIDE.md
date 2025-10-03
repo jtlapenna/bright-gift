@@ -210,7 +210,7 @@ A beautifully crafted leather journal with custom engraving makes for a timeless
 - **Purpose:** Instagram, Pinterest, Facebook sharing
 
 #### **OG Preview Images**
-- **Size:** 1200×630px (16:9 aspect ratio)
+- **Size:** 1536×1024px (3:2 aspect ratio)
 - **Text:** NO text allowed
 - **Purpose:** Social media link previews
 - **Style:** Consistent with banner image aesthetic
