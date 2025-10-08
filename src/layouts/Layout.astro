@@ -12,6 +12,10 @@ export interface Props {
 	noindex?: boolean;
 	prevPage?: string;
 	nextPage?: string;
+	breadcrumbs?: Array<{
+		name: string;
+		url: string;
+	}>;
 }
 
 const { 
@@ -24,13 +28,26 @@ const {
 	twitterCard = "summary_large_image",
 	noindex = false,
 	prevPage,
-	nextPage
+	nextPage,
+	breadcrumbs
 } = Astro.props;
 
 const isHome = Astro.url.pathname === "/";
 // Ensure canonical URL uses HTTPS and proper format
 const canonicalUrl = canonical || Astro.url.href.replace('http://', 'https://');
 const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.site || Astro.url.origin).toString();
+
+// Generate breadcrumb structured data
+const breadcrumbStructuredData = breadcrumbs ? {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement": breadcrumbs.map((crumb, index) => ({
+		"@type": "ListItem",
+		"position": index + 1,
+		"name": crumb.name,
+		"item": crumb.url
+	}))
+} : null;
 ---
 
 <!doctype html>
@@ -111,6 +128,11 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 
 		<!-- Ahrefs Web Analytics - Load asynchronously -->
 		<script src="https://analytics.ahrefs.com/analytics.js" data-key="Quv9IM6wKm4wMy6MXyBE4w" async defer></script>
+
+		<!-- Breadcrumb Structured Data -->
+		{breadcrumbStructuredData && (
+			<script type="application/ld+json" set:html={JSON.stringify(breadcrumbStructuredData)} />
+		)}
 
 		<!-- Amazon Link Processing Script - Defer to after page load -->
 		<script is:inline>

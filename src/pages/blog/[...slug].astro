@@ -95,6 +95,9 @@ const structuredData = {
   "timeRequired": `PT${readTime}M`
 };
 
+// Add FAQ schema if available
+const faqSchema = post.data.faqSchema;
+
 // Add gift-specific structured data for gift guides
 if (type === 'gift-guide' && post.data.affiliateLinks && post.data.affiliateLinks.length > 0) {
   structuredData["@type"] = "ItemList";
@@ -149,8 +152,18 @@ const relatedPosts = allBlogPosts
   canonical={Astro.url.href}
   ogType="article"
   twitterCard="summary_large_image"
+  breadcrumbs={[
+    { name: "Home", url: "https://bright-gift.com/" },
+    { name: "Blog", url: "https://bright-gift.com/blog" },
+    { name: title, url: Astro.url.href }
+  ]}
 >
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  
+  <!-- FAQ Schema for gift guides -->
+  {faqSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  )}
 
   <div class="min-h-screen bg-white">
     <!-- Hero Section -->

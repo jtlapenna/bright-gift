@@ -4,8 +4,15 @@ description: >-
   Discover the latest gift giving statistics and data on what people actually
   want. From spending patterns to preferred gift types, learn what the
   research...
-keywords: ['gift giving statistics', 'gift preferences', 'gift giving trends', 'gift spending', 'what people want for gifts', 'gift giving research', 'gift data 2024']
-date: 2025-07-31
+keywords:
+  - gift giving statistics
+  - gift preferences
+  - gift giving trends
+  - gift spending
+  - what people want for gifts
+  - gift giving research
+  - gift data 2024
+date: 2025-07-31T00:00:00.000Z
 image: >-
   /images/blog/gift-giving-statistics-what-people-really-want/gift-giving-statistics-what-people-really-want-banner.webp
 ogImage: >-
@@ -24,13 +31,21 @@ contentType: data-driven
 readTime: 8
 metaDescription: >-
   Discover the latest gift giving statistics and data on what people actually
-  want. From spending patterns to preferred gift types, learn what the research reveals.
+  want. From spending patterns to preferred gift types, learn what the research
+  reveals.
 metaTitle: 'Gift Giving Statistics: What People Really Want in 2024'
 draft: false
 status: published
 featured: >-
   false gifts, gift, people, giving, average, want, spending, preferences,
   statistics, what
+canonical: 'https://bright-gift.com/blog/gift-giving-statistics-what-people-really-want'
+imageAlt: >-
+  gift giving statistics - Gift Giving Statistics: What People Really Want in
+  2024
+ogImageAlt: >-
+  gift giving statistics - Gift Giving Statistics: What People Really Want in
+  2024
 ---
 
 Gift giving is a universal human experience, but what do the numbers actually tell us about what people want? In this comprehensive analysis, we'll explore the latest gift giving statistics, spending patterns, and preferences to help you make more informed decisions when choosing gifts for your loved ones.

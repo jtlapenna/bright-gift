@@ -67,12 +67,18 @@ class ContentValidator {
     const canonicalMatch = content.match(/^canonical:\s*(.+)$/m);
     if (canonicalMatch) {
       const canonical = canonicalMatch[1].trim();
-      if (!canonical.startsWith('https://bright-gift.com/blog/') || 
-          canonical.endsWith('/')) {
-        this.addError(filePath, content.indexOf(canonicalMatch[0]) + 1,
-          `Malformed canonical URL: ${canonical}`,
-          'Format: https://bright-gift.com/blog/post-slug');
-        hasErrors = true;
+      // Handle YAML multi-line syntax (>-) and quotes
+      const cleanCanonical = canonical.replace(/^>-?\s*/, '').replace(/^['"]|['"]$/g, '').trim();
+      
+      // Skip if canonical is empty or just YAML syntax
+      if (cleanCanonical && cleanCanonical !== '>-') {
+        if (!cleanCanonical.startsWith('https://bright-gift.com/blog/') || 
+            cleanCanonical.endsWith('/')) {
+          this.addError(filePath, content.indexOf(canonicalMatch[0]) + 1,
+            `Malformed canonical URL: ${cleanCanonical}`,
+            'Format: https://bright-gift.com/blog/post-slug');
+          hasErrors = true;
+        }
       }
     }
     

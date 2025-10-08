@@ -135,6 +135,11 @@ function calculateReadTime(content: string): number {
   canonical={`https://bright-gift.com/category/${category}`}
   ogType="website"
   twitterCard="summary_large_image"
+  breadcrumbs={[
+    { name: "Home", url: "https://bright-gift.com/" },
+    { name: "Blog", url: "https://bright-gift.com/blog" },
+    { name: metadata.title, url: `https://bright-gift.com/category/${category}` }
+  ]}
 >
   <script type="application/ld+json" set:html={JSON.stringify(categoryStructuredData)} />
   

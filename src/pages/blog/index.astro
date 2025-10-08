@@ -76,6 +76,10 @@ const blogIndexStructuredData = {
   twitterCard="summary_large_image"
   prevPage={validPage > 1 ? getPageUrl(validPage - 1) : undefined}
   nextPage={validPage < totalPages ? getPageUrl(validPage + 1) : undefined}
+  breadcrumbs={[
+    { name: "Home", url: "https://bright-gift.com/" },
+    { name: "Blog", url: "https://bright-gift.com/blog" }
+  ]}
 >
   <script type="application/ld+json" set:html={JSON.stringify(blogIndexStructuredData)} />
   
