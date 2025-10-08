@@ -6,7 +6,7 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   site: 'https://bright-gift.com',
   trailingSlash: 'never',
-  output: 'server',
+  output: 'hybrid',
   // Use cookie-based sessions to avoid requiring a Cloudflare KV binding
   session: {
     driver: 'cookie'
@@ -20,7 +20,7 @@ export default defineConfig({
     // Exclude robots.txt and sitemap.xml from Workers processing
     // This allows them to be served as static files
     routes: {
-      exclude: ['/robots.txt', '/sitemap.xml', '/api/*']
+      exclude: ['/robots.txt', '/sitemap.xml', '/api/*', '/blog', '/blog/*', '/category/*']
     }
   }),
   integrations: [tailwind()],
