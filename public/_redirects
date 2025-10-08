@@ -6,12 +6,9 @@
 /terms/ /terms 301
 /data-deletion/ /data-deletion 301
 
-# Blog index - redirect from trailing slash to non-trailing slash
-/blog/ /blog 301
+# Blog index - handled by Astro trailingSlash: 'never' configuration
 
-# Category pages - redirect from trailing slash to non-trailing slash
-/category/gift-guides/ /category/gift-guides 301
-/category/gift-tips/ /category/gift-tips 301
+# Category pages - handled by Astro trailingSlash: 'never' configuration
 
 # General category redirect (no general category page exists)
 /category/ /category/gift-guides 301
@@ -26,5 +23,4 @@
 # Care-calculator (static directory) - redirect from trailing slash to non-trailing slash
 /care-calculator/ /care-calculator 301
 
-# Blog posts - redirect from trailing slash to non-trailing slash
-/blog/*/ /blog/:splat 301
+# Blog posts - handled by Astro trailingSlash: 'never' configuration
