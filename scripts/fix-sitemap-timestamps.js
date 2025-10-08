@@ -46,10 +46,10 @@ function verifySitemap() {
   // Check for common issues
   const issues = [];
   
-  // Check for URLs without trailing slashes
-  const urlsWithoutSlashes = sitemap.match(/<loc>https:\/\/bright-gift\.com\/[^\/]+<\/loc>/g);
-  if (urlsWithoutSlashes) {
-    issues.push(`❌ Found ${urlsWithoutSlashes.length} URLs without trailing slashes`);
+  // Check for URLs with trailing slashes (should not have them with trailingSlash: 'never')
+  const urlsWithSlashes = sitemap.match(/<loc>https:\/\/bright-gift\.com\/[^\/]+\/<\/loc>/g);
+  if (urlsWithSlashes) {
+    issues.push(`❌ Found ${urlsWithSlashes.length} URLs with trailing slashes (should not have them)`);
   }
   
   // Check for .md URLs

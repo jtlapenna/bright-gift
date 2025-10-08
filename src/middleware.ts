@@ -33,13 +33,8 @@ export const onRequest: MiddlewareHandler = (context, next) => {
     return next();
   }
   
-  // With trailingSlash: 'always', Astro handles trailing slash logic automatically
-  // Only handle specific redirects that need custom logic
-  if (url.pathname === '/blog') {
-    const newUrl = new URL(context.request.url);
-    newUrl.pathname = '/blog/';
-    return context.redirect(newUrl.toString(), 301);
-  }
+  // With trailingSlash: 'never', no redirects needed
+  // All URLs should work without trailing slashes
   
   return next();
 };

@@ -176,7 +176,7 @@ class SEOAuditor {
             !line.startsWith('canonical: https://')) {
           this.addIssue('medium', 'canonical', file, index + 1, 
             `Malformed canonical URL: ${line.trim()}`, 
-            'Add full domain and trailing slash');
+            'Add full domain (no trailing slash needed with trailingSlash: never)');
         }
       });
     });
