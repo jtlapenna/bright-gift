@@ -41,15 +41,15 @@ function generateSitemap() {
   const blogPosts = getBlogPosts();
   const currentDate = new Date().toISOString().split('T')[0];
   
-  // Static pages (with trailing slashes)
+  // Static pages (without trailing slashes)
   const staticPages = [
     { url: '/', priority: '1.0', changefreq: 'daily' },
-    { url: '/blog/', priority: '0.8', changefreq: 'weekly' },
-    { url: '/category/gift-guides/', priority: '0.8', changefreq: 'weekly' },
-    { url: '/category/gift-tips/', priority: '0.8', changefreq: 'weekly' },
-    { url: '/privacy/', priority: '0.3', changefreq: 'monthly' },
-    { url: '/terms/', priority: '0.3', changefreq: 'monthly' },
-    { url: '/data-deletion/', priority: '0.3', changefreq: 'monthly' }
+    { url: '/blog', priority: '0.8', changefreq: 'weekly' },
+    { url: '/category/gift-guides', priority: '0.8', changefreq: 'weekly' },
+    { url: '/category/gift-tips', priority: '0.8', changefreq: 'weekly' },
+    { url: '/privacy', priority: '0.3', changefreq: 'monthly' },
+    { url: '/terms', priority: '0.3', changefreq: 'monthly' },
+    { url: '/data-deletion', priority: '0.3', changefreq: 'monthly' }
   ];
   
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -66,12 +66,12 @@ function generateSitemap() {
   </url>`;
   }
   
-  // Add blog posts (with trailing slashes)
+  // Add blog posts (without trailing slashes)
   for (const post of blogPosts) {
     const pubDate = post.pubDate ? new Date(post.pubDate).toISOString().split('T')[0] : currentDate;
     sitemap += `
   <url>
-    <loc>https://bright-gift.com/blog/${post.slug}/</loc>
+    <loc>https://bright-gift.com/blog/${post.slug}</loc>
     <lastmod>${pubDate}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
