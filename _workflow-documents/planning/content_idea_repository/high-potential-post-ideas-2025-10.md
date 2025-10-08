@@ -2,11 +2,11 @@
 
 Ranked from highest to lowest potential based on Q4 seasonality, search intent, affiliate AOV, and social virality.
 
-1. AI “TikTok‑Made‑Me‑Buy‑It” Gifts 2025
+1. ✅ AI "TikTok‑Made‑Me‑Buy‑It" Gifts 2025 (COMPLETED)
    - Why: Peak Q4 virality + high AOV gadgets
    - Keywords: tiktok gift ideas, viral gifts 2025, ai gadgets gifts
 
-2. Remote Work 2.0: Gifts for Hybrid Offices ($50/$100)
+2. ✅ Remote Work 2.0: Gifts for Hybrid Offices ($50/$100) (COMPLETED)
    - Why: Evergreen B2C/B2B intent; proven SEO
    - Keywords: gifts for remote workers 2025, hybrid office gifts
 
