@@ -1,33 +1,11 @@
 {
-  "timestamp": "2025-10-08T20:48:19.195Z",
+  "timestamp": "2025-10-08T21:11:55.341Z",
   "summary": {
     "totalFiles": 43,
     "filesWithErrors": 0,
     "totalErrors": 0,
-    "totalWarnings": 3
+    "totalWarnings": 0
   },
   "errors": [],
-  "warnings": [
-    {
-      "file": "src/content/blog/christmas-gift-ideas-2025.md",
-      "line": 5,
-      "message": "Title length 72 characters (should be 10-60)",
-      "fix": "Optimize title length for SEO",
-      "severity": "warning"
-    },
-    {
-      "file": "src/content/blog/ai-tiktok-made-me-buy-it-gifts-2025.md",
-      "line": 5,
-      "message": "Title length 70 characters (should be 10-60)",
-      "fix": "Optimize title length for SEO",
-      "severity": "warning"
-    },
-    {
-      "file": "src/content/blog/ai-powered-gift-ideas-for-every-budget.md",
-      "line": 5,
-      "message": "Title length 62 characters (should be 10-60)",
-      "fix": "Optimize title length for SEO",
-      "severity": "warning"
-    }
-  ]
+  "warnings": []
 }

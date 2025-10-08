@@ -106,11 +106,6 @@ const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.sit
 		<link rel="preload" href="/favicon.svg" as="image" />
 		<link rel="preload" href="/hero-image-desktop.webp" as="image" media="(min-width: 769px)" />
 		<link rel="preload" href="/hero-image-mobile.webp" as="image" media="(max-width: 768px)" />
-	
-		
-		<!-- Preload critical resources -->
-		<link rel="preload" href="/bright-gift-logo.webp" as="image" />
-		<link rel="preload" href="/favicon.svg" as="image" />
 		
 		<!-- Remove brittle preloads of hashed CSS files. Astro will inject the correct CSS automatically. -->
 

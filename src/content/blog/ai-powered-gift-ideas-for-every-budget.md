@@ -1,5 +1,5 @@
 ---
-title: 'AI-Powered Gift Ideas for Every Budget: Smart Shopping in 2025'
+title: 'AI-Powered Gift Ideas for Every Budget'
 
 slug: ai-powered-gift-ideas-for-every-budget
 image: >-

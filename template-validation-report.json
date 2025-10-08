@@ -1,10 +1,10 @@
 {
-  "timestamp": "2025-10-08T20:48:19.253Z",
+  "timestamp": "2025-10-08T21:11:55.405Z",
   "summary": {
     "totalFiles": 11,
     "filesWithErrors": 0,
     "totalErrors": 0,
-    "totalWarnings": 9
+    "totalWarnings": 8
   },
   "errors": [],
   "warnings": [
@@ -62,13 +62,6 @@
       "line": 0,
       "message": "Missing Open Graph title tag",
       "fix": "Add og:title for social media sharing",
-      "severity": "warning"
-    },
-    {
-      "file": "src/layouts/Layout.astro",
-      "line": 0,
-      "message": "Duplicate preload resources found: 2 duplicates",
-      "fix": "Remove duplicate preload declarations",
       "severity": "warning"
     }
   ]

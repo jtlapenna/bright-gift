@@ -13,6 +13,9 @@ const blogPosts = await getCollection('blog', ({ data }) => isPreview || !data.d
 // Combine and sort all content by date
 const allContent = blogPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
+// Meta description for homepage
+const metaDescription = "Find the perfect gift in seconds with our AI-powered gift idea generator. Get personalized recommendations for any recipient, budget, and occasion. Discover unique gift ideas for birthdays, holidays, and special moments.";
+
 // Define structured data for the homepage
 const structuredData = {
 	"@context": "https://schema.org",
