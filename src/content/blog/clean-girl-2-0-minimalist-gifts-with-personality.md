@@ -157,8 +157,8 @@ The Clean Girl aesthetic isn’t going anywhere—but in 2025 it’s less unifor
 - Edit aggressively: one in, one out—include a little note that suggests what your gift can replace.
 
 ## You Might Also Like
-- <a href="/blog/be-rooted-planners-stationery/" class="related-link">Best Be Rooted Planners, Journals, and Desk Accessories for 2025</a>
-- <a href="/blog/best-2025-holiday-gifts-ai-tech-remote-work/" class="related-link">The Best Holiday Gifts for 2025</a>
+- <a href="/blog/be-rooted-planners-stationery" class="related-link">Best Be Rooted Planners, Journals, and Desk Accessories for 2025</a>
+- <a href="/blog/best-2025-holiday-gifts-ai-tech-remote-work" class="related-link">The Best Holiday Gifts for 2025</a>
 
 ## Final Thoughts
 Sleek, functional, and calm—but not cookie‑cutter. The best gifts keep routines light while inviting a hint of personality and play.

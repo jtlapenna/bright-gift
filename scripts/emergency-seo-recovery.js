@@ -138,10 +138,10 @@ function createGSCActionPlan() {
 2. **URL Inspection Requests:**
    Submit these URLs individually:
    - https://bright-gift.com/
-   - https://bright-gift.com/blog/
-   - https://bright-gift.com/blog/ai-powered-gift-ideas-for-every-budget/
-   - https://bright-gift.com/blog/best-gifts-for-dads-who-love-outdoor-adventures/
-   - https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget/
+   - https://bright-gift.com/blog
+   - https://bright-gift.com/blog/ai-powered-gift-ideas-for-every-budget
+   - https://bright-gift.com/blog/best-gifts-for-dads-who-love-outdoor-adventures
+   - https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget
 
 3. **Request Indexing for Each URL:**
    - Use URL Inspection tool

@@ -68,10 +68,10 @@ class ContentValidator {
     if (canonicalMatch) {
       const canonical = canonicalMatch[1].trim();
       if (!canonical.startsWith('https://bright-gift.com/blog/') || 
-          !canonical.endsWith('/')) {
+          canonical.endsWith('/')) {
         this.addError(filePath, content.indexOf(canonicalMatch[0]) + 1,
           `Malformed canonical URL: ${canonical}`,
-          'Format: https://bright-gift.com/blog/post-slug/');
+          'Format: https://bright-gift.com/blog/post-slug');
         hasErrors = true;
       }
     }

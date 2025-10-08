@@ -120,9 +120,9 @@ Shop accessories: <a href="https://www.arjdj2msd.com/7LKLK3/R74QP1/" class="afro
 - **Wellness Kit:** Gratitude journal + bedtime notepad + soft-tip pens
 
 ## You Might Also Like
-- <a href="/blog/gifts-for-remote-workers-under-50/" class="related-link">Gifts for Remote Workers Under $50</a>
-- <a href="/blog/gifts-for-new-homeowners-2025/" class="related-link">Best Gifts for New Homeowners 2025</a>
-- <a href="/blog/how-to-choose-the-perfect-gift-complete-guide/" class="related-link">How to Choose the Perfect Gift</a>
+- <a href="/blog/gifts-for-remote-workers-under-50" class="related-link">Gifts for Remote Workers Under $50</a>
+- <a href="/blog/gifts-for-new-homeowners-2025" class="related-link">Best Gifts for New Homeowners 2025</a>
+- <a href="/blog/how-to-choose-the-perfect-gift-complete-guide" class="related-link">How to Choose the Perfect Gift</a>
 
 ## Final Thoughts
 Be Rooted’s blend of function and affirming design makes planning feel more intentional—and more fun. Whether you’re refreshing your workspace or gifting a student or new grad, these planners and journals are practical, motivating picks for 2025.

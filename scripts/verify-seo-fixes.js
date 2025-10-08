@@ -42,7 +42,7 @@ function verifySitemap() {
   }
   
   const sitemap = fs.readFileSync(sitemapPath, 'utf8');
-  const blogPostUrls = (sitemap.match(/<loc>https:\/\/bright-gift\.com\/blog\/[^\/]+\/<\/loc>/g) || []).length;
+  const blogPostUrls = (sitemap.match(/<loc>https:\/\/bright-gift\.com\/blog\/[^\/]+<\/loc>/g) || []).length;
   
   console.log(`📊 Blog posts in sitemap: ${blogPostUrls}`);
   

@@ -149,17 +149,17 @@ function calculateReadTime(content: string): number {
           {metadata.description}
         </p>
         <div class="flex flex-wrap justify-center gap-4 mt-6">
-          <a href="/blog/" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+          <a href="/blog" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
             category === 'blog' 
               ? 'bg-[#FF6B6B] text-white' 
               : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
           }`}>All Posts</a>
-          <a href="/category/gift-guides/" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+          <a href="/category/gift-guides" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
             category === 'gift-guides' 
               ? 'bg-[#A3E4DB] text-[#1C2E4A]' 
               : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
           }`}>Gift Guides</a>
-          <a href="/category/gift-tips/" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+          <a href="/category/gift-tips" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
             category === 'gift-tips' 
               ? 'bg-[#FFDE59] text-[#1C2E4A]' 
               : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
@@ -178,7 +178,7 @@ function calculateReadTime(content: string): number {
             <svg class="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
             </svg>
-            <a href="/blog/" class="hover:text-[#FF6B6B] transition-colors">Blog</a>
+            <a href="/blog" class="hover:text-[#FF6B6B] transition-colors">Blog</a>
           </li>
           <li class="flex items-center">
             <svg class="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 20 20">
@@ -265,7 +265,7 @@ function calculateReadTime(content: string): number {
           <h2 class="text-2xl font-bold text-[#1C2E4A] mb-4">No posts found in this category</h2>
           <p class="text-slate-600 mb-6">We're working on adding more content to this category. Check back soon!</p>
           <a 
-            href="/blog/" 
+            href="/blog" 
             class="inline-flex items-center px-6 py-3 bg-[#FF6B6B] text-white font-semibold rounded-lg hover:bg-[#ff4c4c] transition-colors"
           >
             Browse All Posts

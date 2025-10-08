@@ -190,7 +190,7 @@ Looking for other gift ideas? Check out our guides to:
       "image": frontmatter.image ? `https://bright-gift.com${frontmatter.image}` : undefined,
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": `https://bright-gift.com/blog/${frontmatter.slug}/`
+        "@id": `https://bright-gift.com/blog/${frontmatter.slug}`
       }
     };
   }

@@ -213,7 +213,7 @@ class SEOAuditor {
     
     if (fs.existsSync('public/sitemap.xml')) {
       const sitemap = fs.readFileSync('public/sitemap.xml', 'utf8');
-      const blogPostCount = (sitemap.match(/<loc>https:\/\/bright-gift.com\/blog\/[^\/]+\/<\/loc>/g) || []).length;
+      const blogPostCount = (sitemap.match(/<loc>https:\/\/bright-gift.com\/blog\/[^\/]+<\/loc>/g) || []).length;
       
       if (blogPostCount < 40) {
         this.addIssue('critical', 'sitemap', 'public/sitemap.xml', 0, 

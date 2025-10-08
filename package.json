@@ -31,7 +31,7 @@
     "monitor:404s": "node scripts/clean-404-posts.js",
     "remove:md-urls": "node scripts/remove-md-urls-from-gsc.js",
     "generate:sitemap": "node scripts/generate-sitemap.js",
-    "fix:trailing-slashes": "echo 'Trailing slash fixer disabled - using trailingSlash: never'",
+    "fix:sitemap-timestamps": "node scripts/fix-sitemap-timestamps.js",
     "seo:validate": "node scripts/seo-validation/validate-all.js",
     "seo:validate:content": "node scripts/seo-validation/validate-content.js",
     "seo:validate:templates": "node scripts/seo-validation/validate-templates.js",
