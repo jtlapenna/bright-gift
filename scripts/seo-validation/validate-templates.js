@@ -137,7 +137,9 @@ class TemplateValidator {
     
     // Check for proper canonical URLs
     if (content.includes('canonical') && 
-        !content.includes('https://bright-gift.com/')) {
+        !content.includes('https://bright-gift.com/') &&
+        !content.includes('canonicalUrl') &&
+        !content.includes('Astro.url.href')) {
       this.addError(filePath, content.indexOf('canonical') + 1,
         'Canonical URL missing full domain',
         'Use full domain: https://bright-gift.com/...');

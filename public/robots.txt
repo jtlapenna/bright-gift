@@ -3,6 +3,7 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://bright-gift.com/sitemap.xml
+Sitemap: https://bright-gift.com/sitemap-amp.xml
 
 # Crawl delay (reduced for faster indexing)
 Crawl-delay: 0

@@ -1,0 +1,98 @@
+---
+import AMPLayout from '../../layouts/AMPLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+
+// Extract post data
+const {
+  title,
+  description,
+  image,
+  date,
+  pubDate,
+  author = 'BrightGift',
+  tags = [],
+  category = 'gift-guides'
+} = post.data;
+
+// Use date or pubDate, fallback to today
+const publishedDate = date || pubDate || new Date().toISOString();
+const modifiedDate = date || pubDate || new Date().toISOString();
+
+// Generate canonical URL
+const canonicalUrl = `https://bright-gift.com/blog/${post.slug}`;
+
+// Convert markdown content to HTML (simplified for AMP)
+let content = post.body;
+// Basic markdown to HTML conversion for AMP
+content = content
+  .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+  .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+  .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+  .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+  .replace(/\*(.*?)\*/g, '<em>$1</em>')
+  .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="nofollow noopener">$1</a>')
+  .replace(/^\* (.*$)/gim, '<li>$1</li>')
+  .replace(/^(\d+)\. (.*$)/gim, '<li>$1. $2</li>')
+  .replace(/\n\n/g, '</p><p>')
+  .replace(/^(?!<[h|l])/gm, '<p>')
+  .replace(/(?<!>)$/gm, '</p>')
+  .replace(/<p><\/p>/g, '')
+  .replace(/<p>(<[h|l])/g, '$1')
+  .replace(/(<\/[h|l][^>]*>)<\/p>/g, '$1');
+
+// Wrap list items in proper lists
+content = content.replace(/(<li>.*<\/li>)/gs, (match) => {
+  if (match.includes('.')) {
+    return `<ol>${match}</ol>`;
+  } else {
+    return `<ul>${match}</ul>`;
+  }
+});
+
+// Clean up empty paragraphs
+content = content.replace(/<p>\s*<\/p>/g, '');
+---
+
+<AMPLayout
+  title={title}
+  description={description}
+  image={image}
+  canonical={canonicalUrl}
+  author={author}
+  publishedTime={publishedDate}
+  modifiedTime={modifiedDate}
+>
+  <div set:html={content} />
+  
+  <!-- Related Posts Section -->
+  <div class="related-posts">
+    <h2>More Gift Ideas</h2>
+    <p>Discover more thoughtful gift recommendations:</p>
+    <div class="cta">
+      <a href={`https://bright-gift.com/blog`}>Browse All Gift Guides →</a>
+    </div>
+  </div>
+</AMPLayout>
+
+<style>
+  .related-posts {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+  }
+  
+  .related-posts h2 {
+    color: #1C2E4A;
+    margin-bottom: 15px;
+  }
+</style>

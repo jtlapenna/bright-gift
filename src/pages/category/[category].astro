@@ -50,29 +50,30 @@ const categoryPosts = allPosts.filter(post => {
 // Sort by date (newest first)
 const sortedPosts = categoryPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
-// Category metadata
+// Category metadata with dynamic post counts
+const postCount = categoryPosts.length;
 const categoryMetadata = {
   'gift-guides': {
     title: 'Gift Guides - Expert Curated Gift Recommendations',
-    description: 'Discover thoughtful gift ideas for every occasion and person. Our expert-curated gift guides help you find the perfect presents for birthdays, holidays, and special moments. Explore comprehensive recommendations tailored to every recipient and celebration.',
+    description: `Discover ${postCount}+ thoughtful gift ideas for every occasion and person. Our expert-curated gift guides help you find the perfect presents for birthdays, holidays, and special moments. Explore comprehensive recommendations tailored to every recipient and celebration.`,
     keywords: ['gift guides', 'gift ideas', 'gift recommendations', 'birthday gifts', 'holiday gifts', 'thoughtful gifts', 'unique gifts'],
     color: 'bg-[#1C2E4A]'
   },
   'gift-tips': {
     title: 'Gift Tips & Insights - Expert Gift Giving Advice',
-    description: 'Learn the art of gift giving with expert tips, psychology insights, and strategies for choosing meaningful presents that strengthen relationships. Discover evidence-based advice backed by research and real-world experience.',
+    description: `Learn the art of gift giving with ${postCount}+ expert tips, psychology insights, and strategies for choosing meaningful presents that strengthen relationships. Discover evidence-based advice backed by research and real-world experience.`,
     keywords: ['gift giving tips', 'gift psychology', 'gift giving guide', 'how to choose gifts', 'gift giving advice', 'meaningful gifts', 'gift insights'],
     color: 'bg-[#1C2E4A]'
   },
   'educational': {
     title: 'Gift Tips & Insights - Expert Gift Giving Advice',
-    description: 'Learn the art of gift giving with expert tips, psychology insights, and strategies for choosing meaningful presents that strengthen relationships. Discover evidence-based advice backed by research and real-world experience.',
+    description: `Learn the art of gift giving with ${postCount}+ expert tips, psychology insights, and strategies for choosing meaningful presents that strengthen relationships. Discover evidence-based advice backed by research and real-world experience.`,
     keywords: ['gift giving tips', 'gift psychology', 'gift giving guide', 'how to choose gifts', 'gift giving advice', 'meaningful gifts', 'gift insights'],
     color: 'bg-[#1C2E4A]'
   },
   'data-driven': {
     title: 'Gift Tips & Insights - Expert Gift Giving Advice',
-    description: 'Learn the art of gift giving with expert tips, psychology insights, and strategies for choosing meaningful presents that strengthen relationships. Discover evidence-based advice backed by research and real-world experience.',
+    description: `Learn the art of gift giving with ${postCount}+ expert tips, psychology insights, and strategies for choosing meaningful presents that strengthen relationships. Discover evidence-based advice backed by research and real-world experience.`,
     keywords: ['gift giving tips', 'gift psychology', 'gift giving guide', 'how to choose gifts', 'gift giving advice', 'meaningful gifts', 'gift insights'],
     color: 'bg-[#1C2E4A]'
   }
@@ -80,7 +81,7 @@ const categoryMetadata = {
 
 const metadata = categoryMetadata[category] || {
   title: `${category} - Gift Ideas & Recommendations`,
-  description: `Browse our ${category} content for gift ideas, tips, and recommendations.`,
+  description: `Browse our ${postCount}+ ${category} posts for gift ideas, tips, and recommendations. Discover curated content to help you find the perfect gifts.`,
   keywords: [category, 'gift ideas', 'gift recommendations'],
   color: 'bg-[#1C2E4A]'
 };

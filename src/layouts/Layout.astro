@@ -71,6 +71,12 @@ const breadcrumbStructuredData = breadcrumbs ? {
 		<!-- Canonical URL -->
 		<link rel="canonical" href={canonicalUrl} />
 		
+		<!-- AMP Link -->
+		{isHome && <link rel="amphtml" href="https://bright-gift.com/blog/amp/" />}
+		{Astro.url.pathname.startsWith('/blog/') && !Astro.url.pathname.includes('/amp/') && (
+			<link rel="amphtml" href={`https://bright-gift.com/blog/amp/${Astro.url.pathname.split('/blog/')[1]}`} />
+		)}
+		
 		<!-- Pagination Meta Tags -->
 		{prevPage && <link rel="prev" href={prevPage} />}
 		{nextPage && <link rel="next" href={nextPage} />}
