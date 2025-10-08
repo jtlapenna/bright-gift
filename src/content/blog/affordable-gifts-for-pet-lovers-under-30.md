@@ -5,8 +5,7 @@ description: >-
   personalized items to practical accessories, find the perfect present for
   any...
 keywords: null
-date: 2025-09-17
-pubDate: '2025-07-31'
+date: 2025-07-31
 image: >-
   /images/blog/affordable-gifts-for-pet-lovers-under-30/affordable-gifts-for-pet-lovers-under-30-banner.webp
 ogImage: >-

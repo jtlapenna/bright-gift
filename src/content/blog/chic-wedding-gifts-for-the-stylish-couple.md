@@ -3,8 +3,7 @@ title: Chic Wedding Gifts for the Stylish Couple
 description: >-
   Discover 20+ chic wedding gifts for stylish couples that set them up for life
   together. From elegant home decor to luxury essentials, find sophisticated...
-date: 2025-09-17
-pubDate: '2025-07-31'
+date: 2025-07-31
 image: >-
   /images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-banner.webp
 ogImage: >-

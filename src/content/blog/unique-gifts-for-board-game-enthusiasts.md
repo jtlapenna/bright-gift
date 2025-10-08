@@ -4,8 +4,7 @@ description: >-
   Level up their game night with our curated selection of 15 unique gifts for
   board game enthusiasts, from strategy games to quirky accessories that
   enhance...
-date: 2025-09-17
-pubDate: '2025-07-31'
+date: 2025-07-31
 image: >-
   /images/blog/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night/unique-gifts-for-board-game-enthusiasts-level-up-their-game-night-banner.webp
 ogImage: >-

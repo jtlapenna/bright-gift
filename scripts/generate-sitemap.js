@@ -21,7 +21,7 @@ function getBlogPosts() {
         
         posts.push({
           slug,
-          pubDate: data.pubDate || new Date(),
+          pubDate: data.date || new Date(),
           title: data.title || slug
         });
       }

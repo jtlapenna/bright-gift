@@ -15,8 +15,7 @@ description: >-
 keywords: >-
   eco-friendly gifts, gifts for outdoor lovers, sustainable gifts, nature gifts,
   outdoor gear
-date: 2025-09-17
-pubDate: '2025-07-31'
+date: 2025-07-31
 draft: false
 status: published
 socialPosts:

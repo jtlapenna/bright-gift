@@ -7,8 +7,7 @@ description: >-
   From...
 keywords: ['gifts for remote workers', 'wfh gifts', 'work from home gifts', 'remote work essentials', 'home office gifts', 'wfh professionals', 'remote work accessories']
 author: Bright Gift Team
-date: 2025-09-17
-pubDate: '2025-07-31'
+date: 2025-07-31
 image: >-
   /images/blog/gifts-for-remote-workers-and-wfh-professionals/gifts-for-remote-workers-banner.webp
 ogImage: >-

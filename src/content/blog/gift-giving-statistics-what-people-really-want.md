@@ -5,8 +5,7 @@ description: >-
   want. From spending patterns to preferred gift types, learn what the
   research...
 keywords: ['gift giving statistics', 'gift preferences', 'gift giving trends', 'gift spending', 'what people want for gifts', 'gift giving research', 'gift data 2024']
-date: 2025-09-17
-pubDate: '2025-07-31'
+date: 2025-07-31
 image: >-
   /images/blog/gift-giving-statistics-what-people-really-want/gift-giving-statistics-what-people-really-want-banner.webp
 ogImage: >-

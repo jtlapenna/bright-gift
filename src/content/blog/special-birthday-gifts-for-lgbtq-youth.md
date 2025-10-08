@@ -4,8 +4,7 @@ description: >-
   Find the perfect birthday gift for LGBTQ+ youth with our curated selection of
   15 thoughtful, inclusive presents that celebrate identity and support their...
 keywords: null
-date: 2025-09-17
-pubDate: '2025-07-31'
+date: 2025-07-31
 image: >-
   /images/blog/special-birthday-gifts-for-lgbtq-youth/special-birthday-gifts-for-lgbtq-youth-banner.webp
 ogImage: >-

@@ -1,20 +1,13 @@
 {
-  "timestamp": "2025-10-03T18:33:08.532Z",
+  "timestamp": "2025-10-08T15:48:40.960Z",
   "summary": {
-    "totalFiles": 45,
+    "totalFiles": 43,
     "filesWithErrors": 0,
     "totalErrors": 0,
-    "totalWarnings": 4
+    "totalWarnings": 3
   },
   "errors": [],
   "warnings": [
-    {
-      "file": "src/content/blog/test-validation-failure.md",
-      "line": 5,
-      "message": "Title length 107 characters (should be 10-60)",
-      "fix": "Optimize title length for SEO",
-      "severity": "warning"
-    },
     {
       "file": "src/content/blog/christmas-gift-ideas-2025.md",
       "line": 5,
