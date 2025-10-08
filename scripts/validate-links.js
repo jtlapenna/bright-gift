@@ -177,11 +177,11 @@ class LinkValidator {
     // Check if it's a category link
     else if (url.includes('/category/')) {
       // Category pages are generated dynamically, so we'll just check the format
-      const category = url.split('/category/')[1].replace(/\/$/, '');
+      const category = url.split('/category/')[1];
       if (!category || category.length === 0) {
         this.addError(filePath, link.line,
           `Malformed category link: ${url}`,
-          'Category links should be in format /category/category-name/');
+          'Category links should be in format /category/category-name');
         this.stats.brokenLinks++;
       }
     }
