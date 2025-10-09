@@ -122,21 +122,6 @@ if (type === 'gift-guide' && post.data.affiliateLinks && post.data.affiliateLink
   // structuredData.aggregateRating = { ... };
 }
 
-// Add related posts structured data
-if (relatedPosts.length > 0) {
-  structuredData.mentions = relatedPosts.map(relatedPost => ({
-    "@type": "Article",
-    "headline": relatedPost.data.title,
-    "url": `https://bright-gift.com/blog/${relatedPost.slug}`,
-    "description": relatedPost.data.description,
-    "datePublished": relatedPost.data.date || relatedPost.data.pubDate,
-    "author": {
-      "@type": "Organization",
-      "name": "BrightGift"
-    }
-  }));
-}
-
 // Get related posts
 const isPreview = import.meta.env.IS_PREVIEW === 'true';
 const allBlogPosts = await getCollection('blog', ({ data }) => isPreview || !data.draft);
@@ -175,6 +160,21 @@ const relatedPosts = allBlogPosts
   .filter(p => p.relevanceScore > 0)
   .sort((a, b) => b.relevanceScore - a.relevanceScore)
   .slice(0, 2); // Limit to 2 posts to prevent cutoff
+
+// Add related posts structured data
+if (relatedPosts.length > 0) {
+  structuredData.mentions = relatedPosts.map(relatedPost => ({
+    "@type": "Article",
+    "headline": relatedPost.data.title,
+    "url": `https://bright-gift.com/blog/${relatedPost.slug}`,
+    "description": relatedPost.data.description,
+    "datePublished": relatedPost.data.date || relatedPost.data.pubDate,
+    "author": {
+      "@type": "Organization",
+      "name": "BrightGift"
+    }
+  }));
+}
 ---
 
 <Layout 
