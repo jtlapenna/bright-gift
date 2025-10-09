@@ -36,9 +36,7 @@ readTime: 17
 featured: true
 draft: false
 contentType: educational
-status: >-
-  published that, relationships, social, your, connection, people, create, with,
-  strengthen, this
+status: published
 category: educational
 canonical: >-
   https://bright-gift.com/blog/the-science-of-human-connection-why-we-need-each-other

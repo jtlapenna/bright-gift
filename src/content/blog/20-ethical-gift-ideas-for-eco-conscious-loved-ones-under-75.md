@@ -25,9 +25,7 @@ readTime: 8
 featured: true
 draft: false
 contentType: gift-guide
-status: >-
-  published amazon, target, noopener, gift, ethical, organic, sustainable,
-  https, bright, range
+status: published
 category: gift-guides
 canonical: >-
   https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75

@@ -1,15 +1,10 @@
 ---
 title: Chic Wedding Gifts for the Stylish Couple
-description: >-
-  Discover 20+ chic wedding gifts for stylish couples that set them up for life
-  together. From elegant home decor to luxury essentials, find sophisticated...
+description: Discover 20+ chic wedding gifts for stylish couples that set them up for life together. From elegant home decor to luxury essentials, find sophisticated...
 date: 2025-07-31T00:00:00.000Z
-image: >-
-  /images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-banner.webp
-ogImage: >-
-  /images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-og.webp
-socialImage: >-
-  /images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-social.webp
+image: /images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-banner.webp
+ogImage: /images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-og.webp
+socialImage: /images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-social.webp
 tags:
   - wedding gifts
   - chic gifts
@@ -18,66 +13,49 @@ tags:
   - home decor
 priceRange: $20-$150
 metaTitle: Chic Wedding Gifts for Stylish Couples | Elegant Gift Ideas
-metaDescription: >-
-  Find chic wedding gifts for the stylish couple. Discover elegant wedding gift
-  ideas that combine sophistication with practicality for modern newlyweds.
+metaDescription: Find chic wedding gifts for the stylish couple. Discover elegant wedding gift ideas that combine sophistication with practicality for modern newlyweds.
 contentType: gift-guide
 readTime: 4
 draft: false
 status: published
 featured: false
-keywords: 'amazon, gift, target, noopener, their, https, bright, price, range, href'
+keywords: ""
 category: gift-guides
-canonical: 'https://bright-gift.com/blog/chic-wedding-gifts-for-the-stylish-couple'
+canonical: https://bright-gift.com/blog/chic-wedding-gifts-for-the-stylish-couple
 faqSchema:
-  '@context': 'https://schema.org'
-  '@type': FAQPage
+  "@context": https://schema.org
+  "@type": FAQPage
   mainEntity:
-    - '@type': Question
+    - "@type": Question
       name: What makes a good gift?
       acceptedAnswer:
-        '@type': Answer
-        text: >-
-          A good gift is thoughtful, useful, and shows you understand the
-          recipient's interests and needs. It should be something they'll
-          actually use and appreciate, not just something that looks nice.
-    - '@type': Question
+        "@type": Answer
+        text: A good gift is thoughtful, useful, and shows you understand the recipient's interests and needs. It should be something they'll actually use and appreciate, not just something that looks nice.
+    - "@type": Question
       name: How much should I spend on a gift?
       acceptedAnswer:
-        '@type': Answer
-        text: >-
-          The amount you spend should be based on your relationship with the
-          person and your budget. Focus on thoughtfulness over price - a
-          meaningful gift at any price point is better than an expensive but
-          impersonal one.
-    - '@type': Question
+        "@type": Answer
+        text: The amount you spend should be based on your relationship with the person and your budget. Focus on thoughtfulness over price - a meaningful gift at any price point is better than an expensive but impersonal one.
+    - "@type": Question
       name: When should I give a gift?
       acceptedAnswer:
-        '@type': Answer
-        text: >-
-          Gifts are appropriate for birthdays, holidays, celebrations, and
-          special occasions. You can also give gifts 'just because' to show
-          someone you're thinking of them.
-    - '@type': Question
+        "@type": Answer
+        text: Gifts are appropriate for birthdays, holidays, celebrations, and special occasions. You can also give gifts 'just because' to show someone you're thinking of them.
+    - "@type": Question
       name: How do I choose a gift for someone I don't know well?
       acceptedAnswer:
-        '@type': Answer
-        text: >-
-          Consider their interests, lifestyle, and any hints they've dropped.
-          Look at their social media, ask mutual friends, or choose something
-          universally useful like a gift card or experience.
-    - '@type': Question
+        "@type": Answer
+        text: Consider their interests, lifestyle, and any hints they've dropped. Look at their social media, ask mutual friends, or choose something universally useful like a gift card or experience.
+    - "@type": Question
       name: Should I include a gift receipt?
       acceptedAnswer:
-        '@type': Answer
-        text: >-
-          Yes, including a gift receipt is considerate and allows the recipient
-          to exchange the item if it's not quite right for them. It shows you
-          want them to be happy with their gift.
+        "@type": Answer
+        text: Yes, including a gift receipt is considerate and allows the recipient to exchange the item if it's not quite right for them. It shows you want them to be happy with their gift.
 imageAlt: chic wedding gifts - Chic Wedding Gifts for the Stylish Couple
 ogImageAlt: Chic Wedding Gifts for the Stylish Couple - Gift Ideas and Recommendations
 socialImageAlt: Chic Wedding Gifts for the Stylish Couple - Gift Ideas and Recommendations
 ---
+
 
 
 

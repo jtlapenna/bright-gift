@@ -1,12 +1,8 @@
 ---
-title: 'Gifts Under $25 for Coworkers: Thoughtful Office Gift Ideas'
+title: "Gifts Under $25 for Coworkers: Thoughtful Office Gift Ideas"
 metaTitle: Gifts Under $25 for Coworkers | Perfect Office Gift Ideas
-metaDescription: >-
-  Looking for affordable gifts for coworkers? Discover 15 thoughtful gifts under
-  $25 that will delight any colleague. Perfect for office celebrations!
-description: >-
-  Discover 15 thoughtful gift ideas under $25 perfect for coworkers. From desk
-  accessories to wellness items, find affordable gifts that show appreciation...
+metaDescription: Looking for affordable gifts for coworkers? Discover 15 thoughtful gifts under $25 that will delight any colleague. Perfect for office celebrations!
+description: Discover 15 thoughtful gift ideas under $25 perfect for coworkers. From desk accessories to wellness items, find affordable gifts that show appreciation...
 date: 2025-09-17T00:00:00.000Z
 image: /images/blog/blog-gifts-under-25-for-coworkers-banner.webp
 ogImage: /images/blog/blog-gifts-under-25-for-coworkers-banner.webp
@@ -21,61 +17,42 @@ featured: true
 draft: false
 contentType: gift-guide
 status: published
-keywords: 'gift, amazon, target, noopener, https, bright, this, their, href, class'
+keywords: ""
 category: gift-guides
-canonical: 'https://bright-gift.com/blog/gifts-under-25-for-coworkers'
+canonical: https://bright-gift.com/blog/gifts-under-25-for-coworkers
 faqSchema:
-  '@context': 'https://schema.org'
-  '@type': FAQPage
+  "@context": https://schema.org
+  "@type": FAQPage
   mainEntity:
-    - '@type': Question
+    - "@type": Question
       name: What makes a good gift?
       acceptedAnswer:
-        '@type': Answer
-        text: >-
-          A good gift is thoughtful, useful, and shows you understand the
-          recipient's interests and needs. It should be something they'll
-          actually use and appreciate, not just something that looks nice.
-    - '@type': Question
+        "@type": Answer
+        text: A good gift is thoughtful, useful, and shows you understand the recipient's interests and needs. It should be something they'll actually use and appreciate, not just something that looks nice.
+    - "@type": Question
       name: How much should I spend on a gift?
       acceptedAnswer:
-        '@type': Answer
-        text: >-
-          The amount you spend should be based on your relationship with the
-          person and your budget. Focus on thoughtfulness over price - a
-          meaningful gift at any price point is better than an expensive but
-          impersonal one.
-    - '@type': Question
+        "@type": Answer
+        text: The amount you spend should be based on your relationship with the person and your budget. Focus on thoughtfulness over price - a meaningful gift at any price point is better than an expensive but impersonal one.
+    - "@type": Question
       name: When should I give a gift?
       acceptedAnswer:
-        '@type': Answer
-        text: >-
-          Gifts are appropriate for birthdays, holidays, celebrations, and
-          special occasions. You can also give gifts 'just because' to show
-          someone you're thinking of them.
-    - '@type': Question
+        "@type": Answer
+        text: Gifts are appropriate for birthdays, holidays, celebrations, and special occasions. You can also give gifts 'just because' to show someone you're thinking of them.
+    - "@type": Question
       name: How do I choose a gift for someone I don't know well?
       acceptedAnswer:
-        '@type': Answer
-        text: >-
-          Consider their interests, lifestyle, and any hints they've dropped.
-          Look at their social media, ask mutual friends, or choose something
-          universally useful like a gift card or experience.
-    - '@type': Question
+        "@type": Answer
+        text: Consider their interests, lifestyle, and any hints they've dropped. Look at their social media, ask mutual friends, or choose something universally useful like a gift card or experience.
+    - "@type": Question
       name: Should I include a gift receipt?
       acceptedAnswer:
-        '@type': Answer
-        text: >-
-          Yes, including a gift receipt is considerate and allows the recipient
-          to exchange the item if it's not quite right for them. It shows you
-          want them to be happy with their gift.
-imageAlt: >-
-  gifts under coworkers - Gifts Under $25 for Coworkers: Thoughtful Office Gift
-  Ideas
-ogImageAlt: >-
-  gifts under coworkers - Gifts Under $25 for Coworkers: Thoughtful Office Gift
-  Ideas
+        "@type": Answer
+        text: Yes, including a gift receipt is considerate and allows the recipient to exchange the item if it's not quite right for them. It shows you want them to be happy with their gift.
+imageAlt: "gifts under coworkers - Gifts Under $25 for Coworkers: Thoughtful Office Gift Ideas"
+ogImageAlt: "gifts under coworkers - Gifts Under $25 for Coworkers: Thoughtful Office Gift Ideas"
 ---
+
 
 
 This post contains affiliate links. We may earn a commission if you click through and make a purchase, at no additional cost to you.

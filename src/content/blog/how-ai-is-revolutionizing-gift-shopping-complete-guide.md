@@ -1,12 +1,8 @@
 ---
-title: 'How AI is Revolutionizing Gift Shopping: A Complete Guide'
+title: "How AI is Revolutionizing Gift Shopping: A Complete Guide"
 metaTitle: AI Gift Idea Generator | How AI Revolutionizes Gift Shopping
-metaDescription: >-
-  Discover how AI gift idea generators are transforming gift shopping. Learn how
-  artificial intelligence creates personalized recommendations.
-description: >-
-  Explore the future of gift shopping with AI-powered gift idea generators.
-  Learn how artificial intelligence creates personalized recommendations and...
+metaDescription: Discover how AI gift idea generators are transforming gift shopping. Learn how artificial intelligence creates personalized recommendations.
+description: Explore the future of gift shopping with AI-powered gift idea generators. Learn how artificial intelligence creates personalized recommendations and...
 date: 2025-09-17T00:00:00.000Z
 image: /images/blog/ai-gift-shopping-banner.webp
 ogImage: /images/blog/ai-gift-shopping-banner.webp
@@ -24,22 +20,14 @@ featured: true
 draft: false
 contentType: educational
 status: published
-keywords: >-
-  gift, your, with, gifts, suggestions, recommendations, tools, that,
-  generators, based
+keywords: suggestions, recommendations, tools, generators, based
 category: educational
-canonical: >-
-  https://bright-gift.com/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide
-imageAlt: >-
-  revolutionizing gift shopping - How AI is Revolutionizing Gift Shopping: A
-  Complete Guide
-ogImageAlt: >-
-  revolutionizing gift shopping - How AI is Revolutionizing Gift Shopping: A
-  Complete Guide
-socialImageAlt: >-
-  revolutionizing gift shopping - How AI is Revolutionizing Gift Shopping: A
-  Complete Guide
+canonical: https://bright-gift.com/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide
+imageAlt: "revolutionizing gift shopping - How AI is Revolutionizing Gift Shopping: A Complete Guide"
+ogImageAlt: "revolutionizing gift shopping - How AI is Revolutionizing Gift Shopping: A Complete Guide"
+socialImageAlt: "revolutionizing gift shopping - How AI is Revolutionizing Gift Shopping: A Complete Guide"
 ---
+
 
 ![revolutionizing gift shopping - How AI is Revolutionizing Gift Shopping: A Complete Guide](/images/blog/ai-gift-shopping-banner.webp)
 
