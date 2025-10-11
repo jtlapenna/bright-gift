@@ -20,7 +20,6 @@
 # OAuth callback - redirect from trailing slash to non-trailing slash
 /oauth/callback/ /oauth/callback 301
 
-# Care-calculator (static directory) - redirect from trailing slash to non-trailing slash
-/care-calculator/ /care-calculator 301
+# Care-calculator - handled by Astro page
 
 # Blog posts - handled by Astro trailingSlash: 'never' configuration
