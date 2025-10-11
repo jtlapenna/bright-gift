@@ -8,13 +8,13 @@ export const prerender = true;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baby Care Calculator - BrightGift</title>
-    <meta name="description" content="Calculate baby care costs and plan your budget with our comprehensive baby care calculator. Track feeding, diapers, and other essential baby expenses.">
+    <meta name="description" content="Baby care shift planner and schedule manager. Track and balance care responsibilities with our comprehensive baby care planning tool.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://bright-gift.com/care-calculator">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Baby Care Calculator - BrightGift">
-    <meta property="og:description" content="Calculate baby care costs and plan your budget with our comprehensive baby care calculator.">
+    <meta property="og:description" content="Baby care shift planner and schedule manager. Track and balance care responsibilities.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bright-gift.com/care-calculator">
     
@@ -35,153 +35,68 @@ export const prerender = true;
             <h3>Settings</h3>
             <div class="widget-content settings-content">
                 <div class="settings-row">
-                    <label for="currency">Currency:</label>
-                    <select id="currency">
-                        <option value="USD">USD ($)</option>
-                        <option value="EUR">EUR (€)</option>
-                        <option value="GBP">GBP (£)</option>
-                        <option value="CAD">CAD (C$)</option>
-                        <option value="AUD">AUD (A$)</option>
-                    </select>
-                </div>
-                <div class="settings-row">
-                    <label for="timeframe">Timeframe:</label>
-                    <select id="timeframe">
-                        <option value="monthly">Monthly</option>
-                        <option value="yearly">Yearly</option>
-                    </select>
-                </div>
-                <div class="settings-row">
-                    <label for="baby-age">Baby Age (months):</label>
-                    <input type="number" id="baby-age" min="0" max="36" value="6">
-                </div>
-            </div>
-        </div>
-
-        <!-- Feeding Calculator -->
-        <div class="widget" id="feeding-calculator">
-            <h3>Feeding Calculator</h3>
-            <div class="widget-content">
-                <div class="input-group">
-                    <label for="feeding-method">Feeding Method:</label>
-                    <select id="feeding-method">
-                        <option value="formula">Formula Only</option>
-                        <option value="breastfeeding">Breastfeeding Only</option>
-                        <option value="mixed">Mixed Feeding</option>
-                    </select>
-                </div>
-                
-                <div class="input-group" id="formula-inputs">
-                    <label for="formula-per-day">Formula Servings per Day:</label>
-                    <input type="number" id="formula-per-day" min="0" value="6">
+                    <button id="autoFillBtn" class="autofill-btn" title="Auto-create shifts to balance today">Auto‑fill</button>
+                    <div class="setting-group">
+                        <label for="jeffExtra">Jeff's Extra Minutes:</label>
+                        <input type="number" id="jeffExtra" value="-25" min="-180" max="120" class="setting-input">
+                    </div>
+                    <div class="setting-group">
+                        <label for="johnExtra">John's Extra Minutes:</label>
+                        <input type="number" id="johnExtra" value="25" min="-180" max="120" class="setting-input">
+                    </div>
+                    <div class="setting-group">
+                        <label for="dayMode">Day Mode:</label>
+                        <div class="toggle-container">
+                            <button class="toggle-btn active" data-mode="full">
+                                <span class="toggle-label">Full</span>
+                            </button>
+                            <button class="toggle-btn" data-mode="partial">
+                                <span class="toggle-label">Partial</span>
+                            </button>
+                        </div>
+                    </div>
+                    <button id="pullBtn" class="sync-btn" title="Fetch latest from cloud">Pull</button>
+                    <button id="pushBtn" class="sync-btn" title="Save to cloud">Push</button>
                     
-                    <label for="formula-cost">Cost per Serving:</label>
-                    <input type="number" id="formula-cost" min="0" step="0.01" value="2.50">
-                </div>
-                
-                <div class="input-group" id="breastfeeding-inputs">
-                    <label for="breastfeeding-supplies">Breastfeeding Supplies Cost:</label>
-                    <input type="number" id="breastfeeding-supplies" min="0" step="0.01" value="50">
-                </div>
-                
-                <div class="result">
-                    <strong>Total Feeding Cost: <span id="feeding-total">$0</span></strong>
+                    <button onclick="resetAllData()" class="reset-btn">Reset All Data</button>
                 </div>
             </div>
         </div>
-
-        <!-- Diaper Calculator -->
-        <div class="widget" id="diaper-calculator">
-            <h3>Diaper Calculator</h3>
-            <div class="widget-content">
-                <div class="input-group">
-                    <label for="diapers-per-day">Diapers per Day:</label>
-                    <input type="number" id="diapers-per-day" min="0" value="8">
-                </div>
-                
-                <div class="input-group">
-                    <label for="diaper-cost">Cost per Diaper:</label>
-                    <input type="number" id="diaper-cost" min="0" step="0.01" value="0.25">
-                </div>
-                
-                <div class="result">
-                    <strong>Total Diaper Cost: <span id="diaper-total">$0</span></strong>
+        
+        <div class="main-layout">
+            <div class="widget" id="daily-module">
+                <h3>Daily Schedule</h3>
+                <div class="widget-content">
+                    <div class="schedule-container">
+                        <div class="time-header">
+                            <div class="time-label">Time</div>
+                            <div class="caregiver-label">Jeff</div>
+                            <div class="caregiver-label">John</div>
+                        </div>
+                        <div id="schedule-grid" class="schedule-grid">
+                            <!-- Schedule items will be dynamically generated here -->
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Clothing Calculator -->
-        <div class="widget" id="clothing-calculator">
-            <h3>Clothing Calculator</h3>
-            <div class="widget-content">
-                <div class="input-group">
-                    <label for="clothing-budget">Monthly Clothing Budget:</label>
-                    <input type="number" id="clothing-budget" min="0" step="0.01" value="100">
-                </div>
-                
-                <div class="result">
-                    <strong>Total Clothing Cost: <span id="clothing-total">$0</span></strong>
-                </div>
-            </div>
-        </div>
-
-        <!-- Healthcare Calculator -->
-        <div class="widget" id="healthcare-calculator">
-            <h3>Healthcare Calculator</h3>
-            <div class="widget-content">
-                <div class="input-group">
-                    <label for="healthcare-budget">Monthly Healthcare Budget:</label>
-                    <input type="number" id="healthcare-budget" min="0" step="0.01" value="150">
-                </div>
-                
-                <div class="result">
-                    <strong>Total Healthcare Cost: <span id="healthcare-total">$0</span></strong>
-                </div>
-            </div>
-        </div>
-
-        <!-- Toys & Activities Calculator -->
-        <div class="widget" id="toys-calculator">
-            <h3>Toys & Activities Calculator</h3>
-            <div class="widget-content">
-                <div class="input-group">
-                    <label for="toys-budget">Monthly Toys & Activities Budget:</label>
-                    <input type="number" id="toys-budget" min="0" step="0.01" value="75">
-                </div>
-                
-                <div class="result">
-                    <strong>Total Toys & Activities Cost: <span id="toys-total">$0</span></strong>
-                </div>
-            </div>
-        </div>
-
-        <!-- Summary -->
-        <div class="widget" id="summary">
-            <h3>Total Monthly Cost</h3>
-            <div class="widget-content">
-                <div class="summary-item">
-                    <span>Feeding:</span>
-                    <span id="summary-feeding">$0</span>
-                </div>
-                <div class="summary-item">
-                    <span>Diapers:</span>
-                    <span id="summary-diapers">$0</span>
-                </div>
-                <div class="summary-item">
-                    <span>Clothing:</span>
-                    <span id="summary-clothing">$0</span>
-                </div>
-                <div class="summary-item">
-                    <span>Healthcare:</span>
-                    <span id="summary-healthcare">$0</span>
-                </div>
-                <div class="summary-item">
-                    <span>Toys & Activities:</span>
-                    <span id="summary-toys">$0</span>
-                </div>
-                <div class="summary-item total">
-                    <span><strong>Total:</strong></span>
-                    <span id="summary-total"><strong>$0</strong></span>
+            
+            <div class="widget" id="stats-module">
+                <h3>Today's Stats</h3>
+                <div class="widget-content">
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <span class="stat-label">Jeff's Time:</span>
+                            <span id="jeff-total" class="stat-value">0h 0m</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">John's Time:</span>
+                            <span id="john-total" class="stat-value">0h 0m</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Difference:</span>
+                            <span id="time-difference" class="stat-value">0m</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
