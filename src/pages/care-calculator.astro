@@ -65,43 +65,252 @@ export const prerender = true;
         
         <div class="main-layout">
             <div class="widget" id="daily-module">
-                <h3>Daily Schedule</h3>
-                <div class="widget-content">
-                    <div class="schedule-container">
-                        <div class="time-header">
-                            <div class="time-label">Time</div>
-                            <div class="caregiver-label">Jeff</div>
-                            <div class="caregiver-label">John</div>
+                <h3>Daily Segments</h3>
+                <div class="widget-content v1-daily"></div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="widget">
+                    <h3>Progress Tracking</h3>
+                    <div class="widget-content progress-content">
+                        <div class="projected-time-display">
+                            <span class="label">Total Projected Wake Time:</span>
+                            <span class="value" id="totalProjectedWakeTime">0 min</span>
                         </div>
-                        <div id="schedule-grid" class="schedule-grid">
-                            <!-- Schedule items will be dynamically generated here -->
+                        <div class="projected-time-display">
+                            <span class="label">Remaining Projected Wake Time:</span>
+                            <span class="value" id="remainingProjectedWakeTime">0 min</span>
+                        </div>
+                        <div class="progress-cards">
+                            <div class="progress-card">
+                                <h4>Jeff</h4>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill jeff-progress" id="jeffProgress"></div>
+                                    </div>
+                                    <div class="progress-text" id="jeffProgressText">0%</div>
+                                </div>
+                                <div class="time-stats">
+                                    <div class="stat">
+                                        <span class="label">Logged:</span>
+                                        <span class="value" id="jeffLogged">0 min</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="label">Remaining:</span>
+                                        <span class="value" id="jeffRemaining">0 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="progress-card">
+                                <h4>John</h4>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill john-progress" id="johnProgress"></div>
+                                    </div>
+                                    <div class="progress-text" id="johnProgressText">0%</div>
+                                </div>
+                                <div class="time-stats">
+                                    <div class="stat">
+                                        <span class="label">Logged:</span>
+                                        <span class="value" id="johnLogged">0 min</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="label">Remaining:</span>
+                                        <span class="value" id="johnRemaining">25 min</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="widget" id="stats-module">
-                <h3>Today's Stats</h3>
-                <div class="widget-content">
-                    <div class="stats-container">
-                        <div class="stat-item">
-                            <span class="stat-label">Jeff's Time:</span>
-                            <span id="jeff-total" class="stat-value">0h 0m</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-label">John's Time:</span>
-                            <span id="john-total" class="stat-value">0h 0m</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-label">Difference:</span>
-                            <span id="time-difference" class="stat-value">0m</span>
+                
+                <div class="widget">
+                    <h3>Add Shift Log</h3>
+                    <div class="widget-content shift-log">
+                        <div class="shift-sections">
+                            <!-- Headers -->
+<!-- Jeff's Row -->
+                            <div class="person-row">
+                                <div class="who">Jeff</div>
+                                <select id="jeffCustomStart" class="time-select"></select>
+                                <select id="jeffCustomEnd" class="time-select"></select>
+                                <button onclick="addCustom('Jeff')" class="add-btn">Add</button>
+                                <div class="spacer"></div>
+                                <div class="quick-add-buttons">
+                                    <button onclick="addPreset('Jeff','07:15','09:50')" class="quick-btn">7:15AM - 9:50AM</button>
+                                    <button onclick="addPreset('Jeff','13:00','14:50')" class="quick-btn">1:00PM - 2:50PM</button>
+                                </div>
+                            </div>
+                            
+                            <!-- John's Row -->
+                            <div class="person-row">
+                                <div class="who">John</div>
+                                <select id="johnCustomStart" class="time-select"></select>
+                                <select id="johnCustomEnd" class="time-select"></select>
+                                <button onclick="addCustom('John')" class="add-btn">Add</button>
+                                <div class="spacer"></div>
+                                <div class="quick-add-buttons">
+                                    <button onclick="addPreset('John','11:00','13:00')" class="quick-btn">11:00AM - 1:00PM</button>
+                                    <button onclick="addPreset('John','16:20','19:50')" class="quick-btn">4:20PM - 7:50PM</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Free Row -->
+                            <div class="person-row">
+                                <div class="who">Free</div>
+                                <select id="freeCustomStart" class="time-select"></select>
+                                <select id="freeCustomEnd" class="time-select"></select>
+                                <button onclick="addCustom('Free')" class="add-btn">Add</button>
+                                <div class="spacer"></div>
+                                <div class="quick-add-buttons single-button">
+                                    <button onclick="addPreset('Free','11:00','14:50')" class="quick-btn">11:00 AM - 2:50 PM</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
+    <script src="/care-calculator/script.js?v=pp-2025-09-02-07" is:inline></script>
 
-    <script src="/care-calculator/script.js" is:inline></script>
+<!-- Manual "Sync now" button handler (Supabase) -->
+<script type="module" is:inline>
+
+console.log("%cSYNC UI wired: Auto-push & realtime (index v2025-09-02-05)","color:#22c55e;font-weight:700");
+
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+
+const SUPABASE_URL = "https://laqfvhpsacurgyulucwx.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxhcWZ2aHBzYWN1cmd5dWx1Y3d4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY3NDgzOTIsImV4cCI6MjA3MjMyNDM5Mn0.o2kMw3K-GYB2UlzSMb5C82-4a-rt3HmM0NLiP_eaa9M";
+
+// Client + room
+window.supabase = window.supabase || createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+window.room = window.room || (new URLSearchParams(location.search).get("room") || "default");
+
+// Safe import/export fallbacks (script.js provides the canonical ones)
+window.importState = window.importState || ((data) => {
+  if (!data) return;
+  if (Array.isArray(data.items)) window.v1Items = data.items;
+  const je = document.getElementById("jeffExtra");
+  const jo = document.getElementById("johnExtra");
+  if (je && data.extras && typeof data.extras.jeff === "number") je.value = data.extras.jeff;
+  if (jo && data.extras && typeof data.extras.john === "number") jo.value = data.extras.john;
+  if (data.dayMode && typeof window.handleDayModeChange === "function") window.handleDayModeChange(data.dayMode);
+  if (typeof window.renderTimeline === "function") window.renderTimeline();
+  if (typeof window.updateProgressDisplay === "function") window.updateProgressDisplay();
+});
+
+window.exportState = window.exportState || function(){
+  const je = document.getElementById('jeffExtra');
+  const jo = document.getElementById('johnExtra');
+  const extras = {
+    jeff: parseInt(je?.value || '-25') || -25,
+    john: parseInt(jo?.value || '25') || 25
+  };
+  const items = Array.isArray(window.v1Items) ? window.v1Items : [];
+  const dayModeBtn = document.querySelector('.toggle-btn.active');
+  const dayMode = dayModeBtn?.getAttribute('data-mode') || 'full';
+  return { items, extras, dayMode, ts: Date.now() };
+};
+
+async function pullFromCloud() {
+  const { data, error } = await window.supabase
+    .from("rooms")
+    .select("*")
+    .eq("room_id", window.room)
+    .single();
+  if (error) throw error;
+  const payload = data?.data ?? data?.state ?? data?.payload ?? null;
+  if (payload) { 
+    window.__sync=window.__sync||{}; window.__sync.isImporting=true; 
+    try{ window.importState(payload); } finally { window.__sync.isImporting=false; } 
+  }
+}
+
+async function pushToCloud() {
+  const payload = window.exportState();
+  const row = { room_id: window.room, data: payload, updated_at: new Date().toISOString() };
+  const { error } = await window.supabase
+    .from("rooms")
+    .upsert(row, { onConflict: 'room_id' });
+  if (error) throw error;
+  return payload?.ts;
+}
+
+// --- Auto-sync wiring (debounced auto-push on local saves) ---
+window.__sync = window.__sync || {};
+window.__sync.lastPushedTs = window.__sync.lastPushedTs || 0;
+window.__sync.isImporting = false;
+
+function debounce(fn, ms=1200){
+  let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args), ms); };
+}
+const pushDebounced = debounce(async () => {
+  try {
+    const ts = await pushToCloud();
+    window.__sync.lastPushedTs = ts || Date.now();
+  } catch(e){ console.warn("autoPush failed:", e); }
+}, 1200);
+window.__sync.pushDebounced = pushDebounced;
+window.__sync.pushToCloud = pushToCloud;
+window.__sync.pullFromCloud = pullFromCloud;
+
+// Listen for local persistence saves and auto-push them
+window.addEventListener('bcc:stateChanged', () => {
+  if (window.__sync.isImporting) return;
+  pushDebounced();
+});
+
+// Buttons (bind after DOM is ready to be robust)
+window.addEventListener('DOMContentLoaded', () => {
+  const pullBtn = document.getElementById("pullBtn");
+  const pushBtn = document.getElementById("pushBtn");
+
+  if (pullBtn) {
+    pullBtn.addEventListener("click", async () => {
+      const original = pullBtn.textContent;
+      pullBtn.disabled = true;
+      pullBtn.textContent = "Syncing…";
+      try { await pullFromCloud(); }
+      catch(e) { console.warn("Pull failed:", e); }
+      finally { pullBtn.disabled = false; pullBtn.textContent = original; }
+    });
+  }
+
+  if (pushBtn) {
+    pushBtn.addEventListener("click", async () => {
+      const original = pushBtn.textContent;
+      pushBtn.disabled = true;
+      pushBtn.textContent = "Pushing…";
+      try { window.__sync.lastPushedTs = await pushToCloud() || 0; }
+      catch(e) { console.warn("Push failed:", e); }
+      finally { pushBtn.disabled = false; pushBtn.textContent = original; }
+    });
+  }
+});
+
+// Realtime subscription (ignore our own echoes by ts)
+try {
+  const channel = window.supabase.channel(`room:${window.room}`);
+  channel.on(
+    'postgres_changes',
+    { event: '*', schema: 'public', table: 'rooms', filter: `room_id=eq.${window.room}` },
+    (payload) => {
+      const row = payload?.new;
+      const inbound = row?.data ?? row?.state ?? row?.payload ?? null;
+      if (inbound?.ts && inbound.ts === window.__sync.lastPushedTs) return;
+      if (inbound) { 
+        window.__sync.isImporting = true; 
+        try { window.importState(inbound); } finally { window.__sync.isImporting = false; } 
+      }
+    }
+  ).subscribe();
+} catch(e) { console.warn("Realtime subscribe failed:", e); }
+
+</script>
+
 </body>
 </html>
