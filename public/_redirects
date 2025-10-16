@@ -16,13 +16,34 @@
 # Category redirects (old categories to new ones)
 /category/data-driven /category/gift-tips 301
 /category/educational /category/gift-tips 301
+/category/gift-guide /category/gift-guides/ 301
 
 # OAuth callback - redirect from trailing slash to non-trailing slash
 /oauth/callback/ /oauth/callback 301
 
 # Care-calculator - handled by Astro page
 
-# Blog posts - handled by Astro trailingSlash: 'never' configuration
+# Blog posts - explicit 301 redirects for trailing slashes
+/blog/gifts-for-girlfriend-unique-romantic-ideas /blog/gifts-for-girlfriend-unique-romantic-ideas/ 301
+/blog/gifts-for-remote-workers-under-50 /blog/gifts-for-remote-workers-under-50/ 301
+/blog/eco-friendly-gift-ideas-for-every-budget /blog/eco-friendly-gift-ideas-for-every-budget/ 301
+/blog/gifts-for-plant-lovers /blog/gifts-for-plant-lovers/ 301
+/blog/gifts-for-gamers-under-50 /blog/gifts-for-gamers-under-50/ 301
+/blog/gifts-for-new-homeowners-2025 /blog/gifts-for-new-homeowners-2025/ 301
+/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75 /blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/ 301
+/blog/last-minute-birthday-gifts-for-busy-professionals /blog/last-minute-birthday-gifts-for-busy-professionals/ 301
+/blog/how-to-choose-the-perfect-gift-complete-guide /blog/how-to-choose-the-perfect-gift-complete-guide/ 301
+/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature /blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/ 301
+/blog/best-gifts-for-dads-who-love-outdoor-adventures /blog/best-gifts-for-dads-who-love-outdoor-adventures/ 301
+/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore /blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore/ 301
+/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024 /blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/ 301
+/blog/special-birthday-gifts-for-lgbtq-youth /blog/special-birthday-gifts-for-lgbtq-youth/ 301
+/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide /blog/how-ai-is-revolutionizing-gift-shopping-complete-guide/ 301
+/blog/gifts-under-25-for-coworkers /blog/gifts-under-25-for-coworkers/ 301
+/blog/unique-graduation-gifts-creative-minds /blog/unique-graduation-gifts-creative-minds/ 301
+/blog/the-science-of-human-connection-why-we-need-each-other /blog/the-science-of-human-connection-why-we-need-each-other/ 301
+/blog/why-we-remember-gifts-we-give-more-than-receive /blog/why-we-remember-gifts-we-give-more-than-receive/ 301
+/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners /blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners/ 301
 
 # Fix template literal leaks (CRITICAL) - these are handled by JavaScript fixes
 
