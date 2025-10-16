@@ -62,12 +62,12 @@
 /about /#about-tool 301
 /about/ /#about-tool 301
 
-# Missing blog posts redirects
-/blog/gifts-for-artists /blog/ 301
-/blog/unique-birthday-gifts-for-teens-break-the-mold /blog/ 301
+# Missing blog posts - return 410 Gone (these posts don't exist and never will)
+/blog/gifts-for-artists /410.html 301
+/blog/unique-birthday-gifts-for-teens-break-the-mold /410.html 301
 /blog/eco-friendly-gifts /blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/ 301
-/blog/sample-post /blog/ 301
-/blog/handmade-gifts /blog/ 301
+/blog/sample-post /410.html 301
+/blog/handmade-gifts /410.html 301
 
 # Gift guides structure fixes
 /gift-guides/gifts-for-plant-lovers /category/gift-guides/ 301
