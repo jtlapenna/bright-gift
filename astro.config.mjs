@@ -5,7 +5,7 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://bright-gift.com',
-  trailingSlash: 'never',
+  trailingSlash: 'always',
   output: 'server',
   // Use cookie-based sessions to avoid requiring a Cloudflare KV binding
   session: {
@@ -20,7 +20,7 @@ export default defineConfig({
     // Exclude robots.txt and sitemap.xml from Workers processing
     // This allows them to be served as static files
     routes: {
-      exclude: ['/robots.txt', '/sitemap.xml', '/api/*', '/blog', '/blog/*', '/category/*', '/privacy', '/terms', '/data-deletion', '/oauth/callback']
+      exclude: ['/robots.txt', '/sitemap.xml', '/api/*', '/blog', '/blog/*', '/category/*', '/data-deletion', '/oauth/callback']
     }
   }),
   integrations: [tailwind()],

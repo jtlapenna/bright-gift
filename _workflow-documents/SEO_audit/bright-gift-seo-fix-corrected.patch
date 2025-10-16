@@ -1,0 +1,113 @@
+From 2c1d9fc3bf7c2a1b3abc1234567890abcdef123 Mon Sep 17 00:00:00 2001
+From: ChatGPT <dev@bright-gift.com>
+Date: Wed, 15 Oct 2025 18:22:00 -0700
+Subject: [SEO] Canonicalize trailing slashes, stop /privacy and /terms redirect
+ loop, and align API URLs
+
+---
+ astro.config.mjs                                          |  6 +++---
+ public/_redirects                                         |  6 ++++++
+ public/sitemap.xml                                        |  4 ++--
+ .../src/routes/github-webhook.js                          |  2 +-
+ .../scripts/backfill/scan-repo-frontmatter.js             |  2 +-
+ 5 files changed, 13 insertions(+), 7 deletions(-)
+
+diff --git a/astro.config.mjs b/astro.config.mjs
+index 1111111..2222222 100644
+--- a/astro.config.mjs
++++ b/astro.config.mjs
+@@ -1,12 +1,12 @@
+ import { defineConfig } from 'astro/config';
+ import tailwind from "@astrojs/tailwind";
+ import cloudflare from "@astrojs/cloudflare";
+ 
+ export default defineConfig({
+   site: 'https://bright-gift.com',
+-  trailingSlash: 'never',
++  trailingSlash: 'always',
+   output: 'server',
+   session: {
+     driver: 'cookie'
+   },
+   adapter: cloudflare({
+@@ -22,8 +22,8 @@ export default defineConfig({
+     routes: {
+       exclude: [
+         '/robots.txt',
+         '/sitemap.xml',
+         '/api/*',
+         '/blog',
+         '/blog/*',
+         '/category/*',
+-        '/privacy',
+-        '/terms',
++        // '/privacy', // removed - allow serving page at /privacy/
++        // '/terms',   // removed - allow serving page at /terms/
+         '/data-deletion',
+         '/oauth/callback'
+       ]
+     }
+   }),
+   integrations: [tailwind()],
+   markdown: {
+     html: true,
+     syntaxHighlight: false
+   },
+   vite: {
+     ssr: {
+       noExternal: ['marked']
+     }
+   },
+   publicDir: 'public',
+ });
+diff --git a/public/_redirects b/public/_redirects
+index 3333333..4444444 100644
+--- a/public/_redirects
++++ b/public/_redirects
+@@ -1,3 +1,9 @@
+ # Cloudflare Pages redirects file
++
++# --- Canonicalize problem pages to trailing slash
++/terms   /terms/   301
++/privacy /privacy/ 301
++
+ # General category redirect (no general category page exists)
+ /category/ /category/gift-guides 301
+diff --git a/public/sitemap.xml b/public/sitemap.xml
+index 5555555..6666666 100644
+--- a/public/sitemap.xml
++++ b/public/sitemap.xml
+@@ -1,8 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+-  <url><loc>https://bright-gift.com/privacy</loc></url>
++  <url><loc>https://bright-gift.com/privacy/</loc></url>
+   <url><loc>https://bright-gift.com/</loc></url>
+-  <url><loc>https://bright-gift.com/terms</loc></url>
++  <url><loc>https://bright-gift.com/terms/</loc></url>
+   <!-- other urls -->
+ </urlset>
+diff --git a/brightgift-api-server/src/routes/github-webhook.js b/brightgift-api-server/src/routes/github-webhook.js
+index 7777777..8888888 100644
+--- a/brightgift-api-server/src/routes/github-webhook.js
++++ b/brightgift-api-server/src/routes/github-webhook.js
+@@ -1,10 +1,10 @@
+ // ... existing imports and code ...
+ 
+ // When composing the final_url for a blog post:
+-  final_url: fm.url || `https://bright-gift.com/blog/${slug}`,
++  final_url: fm.url || `https://bright-gift.com/blog/${slug}/`,
+ 
+ // ... rest of the file ...
+diff --git a/brightgift-api-server/scripts/backfill/scan-repo-frontmatter.js b/brightgift-api-server/scripts/backfill/scan-repo-frontmatter.js
+index 9999999..aaaaaaa 100644
+--- a/brightgift-api-server/scripts/backfill/scan-repo-frontmatter.js
++++ b/brightgift-api-server/scripts/backfill/scan-repo-frontmatter.js
+@@ -1,10 +1,10 @@
+ // ... existing imports and code ...
+ 
+ // When composing the final_url for a blog post during backfill:
+-  final_url: fm.url || `https://bright-gift.com/blog/${slug}`,
++  final_url: fm.url || `https://bright-gift.com/blog/${slug}/`,
+ 
+ // ... rest of the file ...
