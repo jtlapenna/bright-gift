@@ -47,12 +47,12 @@ function calculateReadTime(content: string): number {
   return Math.ceil(wordCount / 200);
 }
 
-// Generate pagination URLs (with trailing slashes)
+// Generate pagination URLs (no trailing slashes)
 function getPageUrl(page: number): string {
   if (page === 1) {
-    return "https://bright-gift.com/blog/";
+    return "https://bright-gift.com/blog";
   } else {
-    return `https://bright-gift.com/blog/?page=${page}`;
+    return `https://bright-gift.com/blog?page=${page}`;
   }
 }
 
@@ -62,7 +62,7 @@ const blogIndexStructuredData = {
   "@type": "CollectionPage",
   "name": "Gift Ideas Blog - BrightGift",
   "description": "Discover thoughtful gift ideas, seasonal guides, and expert tips for finding the perfect presents. Browse our curated collection of gift guides for every occasion and recipient.",
-  "url": currentPage === 1 ? "https://bright-gift.com/blog/" : "https://bright-gift.com/blog/?page=" + currentPage
+  "url": currentPage === 1 ? "https://bright-gift.com/blog" : "https://bright-gift.com/blog?page=" + currentPage
 };
 ---
 
@@ -70,7 +70,7 @@ const blogIndexStructuredData = {
   title="Gift Ideas Blog - Expert Gift Guides & Recommendations | BrightGift" 
   description="Discover thoughtful gift ideas, seasonal guides, and expert tips for finding the perfect presents. Browse our curated collection of gift guides for every occasion and recipient."
   keywords={["gift guides", "gift ideas", "birthday gifts", "holiday gifts", "gift recommendations", "gift shopping", "thoughtful gifts", "unique gifts", "gift inspiration", "gift giving", "seasonal gifts", "personalized gifts"]}
-  canonical={currentPage === 1 ? "https://bright-gift.com/blog/" : `https://bright-gift.com/blog/?page=${currentPage}`}
+  canonical={currentPage === 1 ? "https://bright-gift.com/blog" : `https://bright-gift.com/blog?page=${currentPage}`}
   ogType="website"
   noindex={false}
   twitterCard="summary_large_image"
@@ -293,6 +293,15 @@ const blogIndexStructuredData = {
 
   // Search functionality
   document.addEventListener('DOMContentLoaded', function() {
+    // Convert placeholder links to real links to avoid exposing template tokens to crawlers
+    function hydrateDynamicLinks(container) {
+      const anchors = container.querySelectorAll('a[data-slug]');
+      anchors.forEach(a => {
+        const slug = a.getAttribute('data-slug');
+        if (slug) a.setAttribute('href', '/blog/' + slug);
+        a.removeAttribute('data-slug');
+      });
+    }
     const searchInput = document.getElementById('search-input');
     const postsGrid = document.querySelector('.grid');
     const searchResults = document.getElementById('search-results');
@@ -332,6 +341,7 @@ const blogIndexStructuredData = {
       } else {
         noResults.classList.add('hidden');
         displaySearchResults(filteredPosts);
+        hydrateDynamicLinks(searchResults);
       }
     }
 
@@ -392,7 +402,7 @@ const blogIndexStructuredData = {
           <!-- Post Content -->
           <div class="p-6">
             <h2 class="text-xl font-bold mb-2 text-[#1C2E4A] hover:text-[#FF6B6B] transition-colors" itemprop="headline">
-              <a href="/blog/${post.slug}" class="block" aria-label="Read ${escapedTitle} gift guide">
+              <a href="/blog/" data-slug="${post.slug}" class="block" aria-label="Read ${escapedTitle} gift guide">
                 ${escapedTitle}
               </a>
             </h2>
@@ -422,7 +432,7 @@ const blogIndexStructuredData = {
             
             <!-- Read More Link -->
             <a 
-              href="/blog/${post.slug}" 
+              href="/blog/" data-slug="${post.slug}" 
               class="inline-flex items-center text-[#FF6B6B] font-semibold hover:text-[#ff4c4c] transition-colors"
               aria-label="Read complete ${escapedTitle} gift guide"
             >
@@ -435,6 +445,7 @@ const blogIndexStructuredData = {
         </article>
       `;
       }).join('');
+      hydrateDynamicLinks(searchResults);
     }
 
     function clearSearch() {

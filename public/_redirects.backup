@@ -1,7 +1,10 @@
 # Cloudflare Pages redirects file
 # Redirect trailing slash URLs to non-trailing slash URLs for consistency
 
-# Static pages - let Cloudflare handle trailing slashes naturally
+# Static pages - redirect from trailing slash to non-trailing slash
+/privacy/ /privacy 301
+/terms/ /terms 301
+/data-deletion/ /data-deletion 301
 
 # Blog index - handled by Astro trailingSlash: 'never' configuration
 

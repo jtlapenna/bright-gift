@@ -1,10 +1,10 @@
 {
-  "timestamp": "2025-10-08T23:25:18.390Z",
+  "timestamp": "2025-10-16T01:08:14.161Z",
   "summary": {
-    "totalFiles": 14,
+    "totalFiles": 12,
     "filesWithErrors": 0,
     "totalErrors": 0,
-    "totalWarnings": 12
+    "totalWarnings": 8
   },
   "errors": [],
   "warnings": [
@@ -59,34 +59,6 @@
     },
     {
       "file": "src/pages/blog/[...slug].astro",
-      "line": 0,
-      "message": "Missing Open Graph title tag",
-      "fix": "Add og:title for social media sharing",
-      "severity": "warning"
-    },
-    {
-      "file": "src/pages/blog/amp/index.astro",
-      "line": 0,
-      "message": "Missing meta description tag",
-      "fix": "Add meta description for better SEO",
-      "severity": "warning"
-    },
-    {
-      "file": "src/pages/blog/amp/index.astro",
-      "line": 0,
-      "message": "Missing Open Graph title tag",
-      "fix": "Add og:title for social media sharing",
-      "severity": "warning"
-    },
-    {
-      "file": "src/pages/blog/amp/[...slug].astro",
-      "line": 0,
-      "message": "Missing meta description tag",
-      "fix": "Add meta description for better SEO",
-      "severity": "warning"
-    },
-    {
-      "file": "src/pages/blog/amp/[...slug].astro",
       "line": 0,
       "message": "Missing Open Graph title tag",
       "fix": "Add og:title for social media sharing",
