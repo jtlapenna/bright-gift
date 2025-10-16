@@ -23,3 +23,53 @@
 # Care-calculator - handled by Astro page
 
 # Blog posts - handled by Astro trailingSlash: 'never' configuration
+
+# Fix template literal leaks (CRITICAL)
+/blog/${e.slug} /blog/ 301
+/blog/${e.slug}/ /blog/ 301
+/blog/$/{post.slug/}/ /blog/ 301
+
+# Fix .md extension URLs (redirect to clean URLs)
+/blog/best-books-for-different-reading-levels.md /blog/best-books-for-different-reading-levels/ 301
+/blog/25-books-to-gift-this-holiday-season.md /blog/25-books-to-gift-this-holiday-season/ 301
+/blog/best-gifts-for-dads-who-love-outdoor-adventures.md /blog/best-gifts-for-dads-who-love-outdoor-adventures/ 301
+/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024.md /blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/ 301
+/blog/unique-gifts-for-board-game-enthusiasts.md /blog/unique-gifts-for-board-game-enthusiasts/ 301
+/blog/fun-gifts-for-kids-birthday-parties.md /blog/fun-gifts-for-kids-birthday-parties/ 301
+/blog/last-minute-birthday-gifts-for-busy-professionals.md /blog/last-minute-birthday-gifts-for-busy-professionals/ 301
+/blog/gifts-for-book-lovers-under-50.md /blog/gifts-for-book-lovers-under-50/ 301
+/blog/special-birthday-gifts-for-lgbtq-youth.md /blog/special-birthday-gifts-for-lgbtq-youth/ 301
+/blog/affordable-gifts-for-pet-lovers-under-30.md /blog/affordable-gifts-for-pet-lovers-under-30/ 301
+/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide.md /blog/how-ai-is-revolutionizing-gift-shopping-complete-guide/ 301
+/blog/gifts-for-gamers-under-50.md /blog/gifts-for-gamers-under-50/ 301
+/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75.md /blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/ 301
+/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75.md /blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/ 301
+/blog/chic-wedding-gifts-for-the-stylish-couple.md /blog/chic-wedding-gifts-for-the-stylish-couple/ 301
+/blog/gifts-for-new-homeowners-2025.md /blog/gifts-for-new-homeowners-2025/ 301
+/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond.md /blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond/ 301
+/blog/gifts-for-remote-workers-under-50.md /blog/gifts-for-remote-workers-under-50/ 301
+/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md /blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/ 301
+/blog/best-home-gifts-on-amazon-2024.md /blog/best-home-gifts-on-amazon-2024/ 301
+/blog/gifts-for-girlfriend-unique-romantic-ideas.md /blog/gifts-for-girlfriend-unique-romantic-ideas/ 301
+/blog/gifts-under-25-for-coworkers.md /blog/gifts-under-25-for-coworkers/ 301
+/blog/gifts-for-plant-lovers.md /blog/gifts-for-plant-lovers/ 301
+/blog/eco-friendly-gift-ideas-for-every-budget.md /blog/eco-friendly-gift-ideas-for-every-budget/ 301
+/blog/unique-graduation-gifts-creative-minds.md /blog/unique-graduation-gifts-creative-minds/ 301
+/blog/25-unique-anniversary-gift-ideas-under-50.md /blog/25-unique-anniversary-gift-ideas-under-50/ 301
+
+# Missing pages redirects
+/ai-gift-guide /blog/ 301
+/top-gifts /blog/ 301
+/about /#about-tool 301
+
+# Missing blog posts redirects
+/blog/gifts-for-artists /blog/ 301
+/blog/unique-birthday-gifts-for-teens-break-the-mold /blog/ 301
+/blog/eco-friendly-gifts /blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/ 301
+/blog/sample-post /blog/ 301
+/blog/handmade-gifts /blog/ 301
+
+# Gift guides structure fixes
+/gift-guides/gifts-for-plant-lovers /category/gift-guides/ 301
+/gift-guides/gifts-for-gamers-under-50/ /category/gift-guides/ 301
+/gift-guides/gifts-under-25-for-coworkers/ /category/gift-guides/ 301

@@ -298,7 +298,7 @@ const blogIndexStructuredData = {
       const anchors = container.querySelectorAll('a[data-slug]');
       anchors.forEach(a => {
         const slug = a.getAttribute('data-slug');
-        if (slug) a.setAttribute('href', '/blog/' + slug);
+        if (slug) a.setAttribute('href', '/blog/' + slug + '/');
         a.removeAttribute('data-slug');
       });
     }
