@@ -20,7 +20,7 @@ export default defineConfig({
     // Exclude robots.txt and sitemap.xml from Workers processing
     // This allows them to be served as static files
     routes: {
-      exclude: ['/robots.txt', '/sitemap.xml', '/api/*', '/blog', '/blog/*', '/category/*', '/data-deletion', '/oauth/callback']
+      exclude: ['/robots.txt', '/sitemap.xml', '/api/*', '/data-deletion', '/oauth/callback']
     }
   }),
   integrations: [tailwind()],
