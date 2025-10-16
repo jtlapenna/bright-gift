@@ -178,7 +178,7 @@ const blogIndexStructuredData = {
             <!-- Post Content -->
             <div class="p-6">
               <h2 class="text-xl font-bold mb-2 text-[#1C2E4A] hover:text-[#FF6B6B] transition-colors" itemprop="headline">
-                <a href={`/blog/${post.slug}`} class="block" aria-label={`Read ${post.data.title} gift guide`}>
+                <a href={`/blog/${post.slug}/`} class="block" aria-label={`Read ${post.data.title} gift guide`}>
                   {post.data.title}
                 </a>
               </h2>
@@ -206,7 +206,7 @@ const blogIndexStructuredData = {
               
               <!-- Read More Link -->
               <a 
-                href={`/blog/${post.slug}`} 
+                href={`/blog/${post.slug}/`} 
                 class="inline-flex items-center text-[#FF6B6B] font-semibold hover:text-[#ff4c4c] transition-colors"
                 aria-label={`Read complete ${post.data.title} gift guide`}
               >
