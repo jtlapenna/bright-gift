@@ -293,15 +293,7 @@ const blogIndexStructuredData = {
 
   // Search functionality
   document.addEventListener('DOMContentLoaded', function() {
-    // Convert placeholder links to real links to avoid exposing template tokens to crawlers
-    function hydrateDynamicLinks(container) {
-      const anchors = container.querySelectorAll('a[data-slug]');
-      anchors.forEach(a => {
-        const slug = a.getAttribute('data-slug');
-        if (slug) a.setAttribute('href', '/blog/' + slug + '/');
-        a.removeAttribute('data-slug');
-      });
-    }
+    // No longer needed - we generate full URLs directly
     const searchInput = document.getElementById('search-input');
     const postsGrid = document.querySelector('.grid');
     const searchResults = document.getElementById('search-results');
@@ -402,7 +394,7 @@ const blogIndexStructuredData = {
           <!-- Post Content -->
           <div class="p-6">
             <h2 class="text-xl font-bold mb-2 text-[#1C2E4A] hover:text-[#FF6B6B] transition-colors" itemprop="headline">
-              <a href="/blog/" data-slug="${post.slug}" class="block" aria-label="Read ${escapedTitle} gift guide">
+              <a href="/blog/${post.slug}/" class="block" aria-label="Read ${escapedTitle} gift guide">
                 ${escapedTitle}
               </a>
             </h2>
@@ -432,7 +424,7 @@ const blogIndexStructuredData = {
             
             <!-- Read More Link -->
             <a 
-              href="/blog/" data-slug="${post.slug}" 
+              href="/blog/${post.slug}/" 
               class="inline-flex items-center text-[#FF6B6B] font-semibold hover:text-[#ff4c4c] transition-colors"
               aria-label="Read complete ${escapedTitle} gift guide"
             >
@@ -445,7 +437,6 @@ const blogIndexStructuredData = {
         </article>
       `;
       }).join('');
-      hydrateDynamicLinks(searchResults);
     }
 
     function clearSearch() {

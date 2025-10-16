@@ -5,7 +5,11 @@ const endpoint = import.meta.env.PUBLIC_CONTACT_ENDPOINT || '/api/contact'
 const isDisabled = endpoint.trim().length === 0
 ---
 
-<Layout title="Contact Us | BrightGift" description="Get in touch with BrightGift via our contact form.">
+<Layout 
+  title="Contact Us | BrightGift" 
+  description="Get in touch with BrightGift via our contact form."
+  canonical="https://bright-gift.com/contact/"
+>
   <main class="mx-auto max-w-3xl px-4 py-10">
     <h1 class="text-3xl md:text-4xl font-extrabold text-[#1C2E4A] mb-6">Contact BrightGift</h1>
     {isDisabled && (
