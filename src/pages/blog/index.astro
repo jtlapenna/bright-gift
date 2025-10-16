@@ -47,12 +47,12 @@ function calculateReadTime(content: string): number {
   return Math.ceil(wordCount / 200);
 }
 
-// Generate pagination URLs (no trailing slashes)
+// Generate pagination URLs (with trailing slashes)
 function getPageUrl(page: number): string {
   if (page === 1) {
-    return "https://bright-gift.com/blog";
+    return "https://bright-gift.com/blog/";
   } else {
-    return `https://bright-gift.com/blog?page=${page}`;
+    return `https://bright-gift.com/blog/?page=${page}`;
   }
 }
 
@@ -62,7 +62,7 @@ const blogIndexStructuredData = {
   "@type": "CollectionPage",
   "name": "Gift Ideas Blog - BrightGift",
   "description": "Discover thoughtful gift ideas, seasonal guides, and expert tips for finding the perfect presents. Browse our curated collection of gift guides for every occasion and recipient.",
-  "url": currentPage === 1 ? "https://bright-gift.com/blog" : "https://bright-gift.com/blog?page=" + currentPage
+  "url": currentPage === 1 ? "https://bright-gift.com/blog/" : "https://bright-gift.com/blog/?page=" + currentPage
 };
 ---
 
@@ -70,7 +70,7 @@ const blogIndexStructuredData = {
   title="Gift Ideas Blog - Expert Gift Guides & Recommendations | BrightGift" 
   description="Discover thoughtful gift ideas, seasonal guides, and expert tips for finding the perfect presents. Browse our curated collection of gift guides for every occasion and recipient."
   keywords={["gift guides", "gift ideas", "birthday gifts", "holiday gifts", "gift recommendations", "gift shopping", "thoughtful gifts", "unique gifts", "gift inspiration", "gift giving", "seasonal gifts", "personalized gifts"]}
-  canonical={currentPage === 1 ? "https://bright-gift.com/blog" : `https://bright-gift.com/blog?page=${currentPage}`}
+  canonical={currentPage === 1 ? "https://bright-gift.com/blog/" : `https://bright-gift.com/blog/?page=${currentPage}`}
   ogType="website"
   noindex={false}
   twitterCard="summary_large_image"
@@ -78,7 +78,7 @@ const blogIndexStructuredData = {
   nextPage={validPage < totalPages ? getPageUrl(validPage + 1) : undefined}
   breadcrumbs={[
     { name: "Home", url: "https://bright-gift.com/" },
-    { name: "Blog", url: "https://bright-gift.com/blog" }
+    { name: "Blog", url: "https://bright-gift.com/blog/" }
   ]}
 >
   <script type="application/ld+json" set:html={JSON.stringify(blogIndexStructuredData)} />
