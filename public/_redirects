@@ -24,10 +24,7 @@
 
 # Blog posts - handled by Astro trailingSlash: 'never' configuration
 
-# Fix template literal leaks (CRITICAL)
-/blog/${e.slug} /blog/ 301
-/blog/${e.slug}/ /blog/ 301
-/blog/$/{post.slug/}/ /blog/ 301
+# Fix template literal leaks (CRITICAL) - these are handled by JavaScript fixes
 
 # Fix .md extension URLs (redirect to clean URLs)
 /blog/best-books-for-different-reading-levels.md /blog/best-books-for-different-reading-levels/ 301
@@ -59,8 +56,11 @@
 
 # Missing pages redirects
 /ai-gift-guide /blog/ 301
+/ai-gift-guide/ /blog/ 301
 /top-gifts /blog/ 301
+/top-gifts/ /blog/ 301
 /about /#about-tool 301
+/about/ /#about-tool 301
 
 # Missing blog posts redirects
 /blog/gifts-for-artists /blog/ 301
