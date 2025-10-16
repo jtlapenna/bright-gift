@@ -63,7 +63,7 @@ const structuredData = {
   "description": description,
   "image": {
     "@type": "ImageObject",
-    "url": image.startsWith('http') ? image : `https://bright-gift.com/${image}`,
+    "url": image.startsWith('http') ? image : `https://bright-gift.com${image.startsWith('/') ? '' : '/'}${image}`,
     "width": 1200,
     "height": 630
   },
@@ -162,7 +162,7 @@ if (relatedPosts.length > 0) {
   structuredData.mentions = relatedPosts.map(relatedPost => ({
     "@type": "Article",
     "headline": relatedPost.data.title,
-    "url": `https://bright-gift.com/blog/${relatedPost.slug}`,
+    "url": `https://bright-gift.com/blog/${relatedPost.slug}/`,
     "description": relatedPost.data.description,
     "datePublished": relatedPost.data.date || relatedPost.data.pubDate,
     "author": {
@@ -183,7 +183,7 @@ if (relatedPosts.length > 0) {
   twitterCard="summary_large_image"
   breadcrumbs={[
     { name: "Home", url: "https://bright-gift.com/" },
-    { name: "Blog", url: "https://bright-gift.com/blog" },
+    { name: "Blog", url: "https://bright-gift.com/blog/" },
     { name: title, url: Astro.url.href }
   ]}
 >
