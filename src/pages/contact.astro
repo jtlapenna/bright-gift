@@ -3,6 +3,8 @@
 import Layout from "../layouts/Layout.astro";
 const endpoint = import.meta.env.PUBLIC_CONTACT_ENDPOINT || '/api/contact'
 const isDisabled = endpoint.trim().length === 0
+// Prerender this page as static
+export const prerender = true;
 ---
 
 <Layout 
