@@ -1,9 +1,7 @@
 # Cloudflare Pages redirects file
 
-# --- Canonicalize problem pages to trailing slash
-/terms   /terms/   301
-/privacy /privacy/ 301
-/contact /contact/ 301
+# --- Critical pages handled by Cloudflare automatically
+# /terms, /privacy, /contact work at both URLs (with and without trailing slash)
 
 # Static pages - let Cloudflare handle trailing slashes naturally
 
