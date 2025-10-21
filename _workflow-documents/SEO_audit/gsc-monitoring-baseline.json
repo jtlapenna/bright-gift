@@ -1,0 +1,89 @@
+{
+  "created": "2025-10-17T13:06:08.048Z",
+  "lastUpdated": "2025-10-17T13:06:08.049Z",
+  "metrics": {
+    "coverage": {
+      "totalPages": "Total pages submitted",
+      "validPages": "Valid pages",
+      "errorPages": "Pages with errors",
+      "excludedPages": "Excluded pages",
+      "validWithWarnings": "Valid pages with warnings"
+    },
+    "errors": {
+      "notFound": "Not found (404)",
+      "serverError": "Server error (5xx)",
+      "redirectError": "Redirect error",
+      "submittedUrlNotSelected": "Submitted URL not selected (canonical)",
+      "duplicateContent": "Duplicate content",
+      "crawledCurrentlyNotIndexed": "Crawled - currently not indexed",
+      "discoveredCurrentlyNotIndexed": "Discovered - currently not indexed"
+    },
+    "pageExperience": {
+      "goodPages": "Good pages",
+      "needsImprovement": "Needs improvement",
+      "poorPages": "Poor pages"
+    },
+    "sitemaps": {
+      "submitted": "Sitemaps submitted",
+      "processed": "Sitemaps processed",
+      "errors": "Sitemap errors"
+    }
+  },
+  "instructions": {
+    "title": "Google Search Console Monitoring Instructions",
+    "steps": [
+      "1. Go to Google Search Console (https://search.google.com/search-console)",
+      "2. Select your bright-gift.com property",
+      "3. Navigate to each section below and record the current numbers",
+      "4. Update this file with the current values",
+      "5. Run this script weekly to track improvements"
+    ],
+    "sections": {
+      "coverage": {
+        "path": "Coverage > Pages",
+        "description": "Track total pages, valid pages, and error pages",
+        "keyMetrics": [
+          "Total pages",
+          "Valid",
+          "Error",
+          "Valid with warnings"
+        ]
+      },
+      "errors": {
+        "path": "Coverage > Pages > Error",
+        "description": "Track specific error types",
+        "keyMetrics": [
+          "Not found (404)",
+          "Server error (5xx)",
+          "Redirect error",
+          "Submitted URL not selected (canonical)"
+        ]
+      },
+      "pageExperience": {
+        "path": "Page Experience",
+        "description": "Track Core Web Vitals and page experience",
+        "keyMetrics": [
+          "Good",
+          "Needs improvement",
+          "Poor"
+        ]
+      },
+      "sitemaps": {
+        "path": "Sitemaps",
+        "description": "Track sitemap submission and processing",
+        "keyMetrics": [
+          "Submitted",
+          "Processed",
+          "Errors"
+        ]
+      }
+    }
+  },
+  "currentValues": {
+    "coverage": {},
+    "errors": {},
+    "pageExperience": {},
+    "sitemaps": {}
+  },
+  "history": []
+}

@@ -188,6 +188,7 @@ A beautifully crafted leather journal with custom engraving makes for a timeless
 - **Proper Formatting:** Always use correct CSS classes and attributes
 - **New Tab Opening:** All affiliate links open in new tabs
 - **Descriptive Anchor Text:** Use platform-specific text ("View on Amazon", "View on Bookshop.org", "Shop [Brand Name]")
+- **CRITICAL: Only Link to Purchasable Items:** Never link to subscriptions, streaming services, experiences, or services that cannot be purchased through the platform
 
 ---
 
@@ -311,6 +312,7 @@ A flat-lay scene showcasing [theme-based items] in a warm, editorial style. Each
 - **Reader-First Approach:** Serve the reader's needs above revenue optimization
 - **Brand Consistency:** Maintain BrightGift's helpful, optimistic voice
 - **SEO Integration:** Natural keyword use, never forced or awkward
+- **CRITICAL: Only Link to Purchasable Items:** Never link to subscriptions, streaming services, experiences, or services that cannot be purchased through the platform
 
 ### **Common Mistakes to Avoid**
 - **Keyword Stuffing:** Use keywords naturally and contextually
@@ -318,6 +320,7 @@ A flat-lay scene showcasing [theme-based items] in a warm, editorial style. Each
 - **Platform Forcing:** Don't artificially distribute across affiliate platforms
 - **Duplicate CTAs:** One clear call-to-action per post
 - **Inconsistent Tone:** Maintain warm, helpful voice throughout
+- **Linking to Non-Purchasable Items:** Never link to subscriptions, streaming services, experiences, or services that cannot be purchased through the platform
 
 ---
 

@@ -18,6 +18,7 @@ This is the single source of truth for all affiliate linking strategies, impleme
 3. **Quality Over Quantity:** Better to have fewer, more relevant links than many irrelevant ones
 4. **Platform Appropriateness:** Use the platform that makes most sense for each product
 5. **Transparency:** All affiliate relationships are disclosed via template (never in content)
+6. **CRITICAL: Only Link to Purchasable Items:** Never link to subscriptions, streaming services, experiences, or services that cannot be purchased through the platform
 
 ### **Revenue Goals**
 - **Affiliate CTR:** 8-15% from organic traffic
@@ -38,17 +39,22 @@ This is the single source of truth for all affiliate linking strategies, impleme
 
 #### **⚠️ CRITICAL: Never Link to These on Amazon:**
 ❌ **App subscriptions or digital services** (Netflix, Spotify, meditation apps, etc.)
+❌ **Streaming service subscriptions** (Amazon Prime Video, Amazon Music, etc.)
 ❌ **Experiences that can't be purchased online** (spa visits, couples massages, restaurant meals)
 ❌ **Location-specific services** (local classes, workshops, personal training sessions)
 ❌ **Professional services** (therapy, coaching, consulting)
 ❌ **Memberships** (gym memberships, club memberships)
 ❌ **Event tickets** (concerts, shows, sporting events)
 ❌ **Travel bookings** (hotels, flights, vacation packages)
+❌ **Subscription boxes** (unless they are Amazon's own subscription services)
+❌ **Digital gift cards for third-party services** (Netflix, Spotify, etc.)
 
 #### **✅ Amazon Affiliate Links - What Actually Works:**
 ✅ **Physical Products:** Electronics, home goods, books, beauty products, toys, kitchen items
 ✅ **Gift Cards:** Amazon gift cards only (not third-party service gift cards)
 ✅ **Digital Products:** Kindle books, Amazon Music downloads (not subscriptions)
+✅ **Amazon Services:** Amazon Prime membership, Amazon Fresh, Amazon Home Services
+✅ **Amazon Gift Cards:** For Amazon services (Prime Video, Amazon Music, etc.)
 
 #### **Link Structure:**
 ```
@@ -84,6 +90,7 @@ https://www.amazon.com/s?k=KEYWORD&tag=bright-gift-20
 - Test links periodically to ensure they work and lead to appropriate results
 - Consider seasonal availability and pricing changes
 - **When in doubt, don't link** - suggest the item without an affiliate link
+- **CRITICAL: Never link to subscriptions, streaming services, or experiences** - only physical products and Amazon services
 
 ---
 
@@ -361,6 +368,7 @@ affiliateLinks:
 - **Natural Integration:** Links should feel helpful, never forced or salesy
 - **Platform Appropriateness:** Use the platform that makes most sense for each product
 - **Regular Testing:** Ensure all affiliate links work and lead to relevant products
+- **CRITICAL: Only Link to Purchasable Items:** Never link to subscriptions, streaming services, experiences, or services that cannot be purchased through the platform
 
 ### **Alternative Recommendations for Non-Affiliate Items**
 When you want to suggest experiences or services that can't be affiliate linked:
@@ -382,6 +390,7 @@ When you want to suggest experiences or services that can't be affiliate linked:
 
 ### **Common Mistakes to Avoid**
 - **Linking to Unachievable Items:** Never link to apps, experiences, or services
+- **Linking to Subscriptions/Streaming Services:** Never link to Netflix, Spotify, meditation apps, etc.
 - **Forced Platform Diversity:** Don't artificially balance across platforms
 - **Irrelevant Links:** Only include products that genuinely fit the content
 - **Broken or Misleading Links:** Ensure keywords return relevant, purchasable results
@@ -400,6 +409,7 @@ When you want to suggest experiences or services that can't be affiliate linked:
 ### **Before Publishing Content with Affiliate Links**
 - [ ] **SAFEGUARD CHECK:** All affiliate links lead to physical, purchasable products
 - [ ] **NO unachievable links:** No apps, experiences, services, or memberships
+- [ ] **NO subscriptions/streaming services:** No Netflix, Spotify, meditation apps, etc.
 - [ ] **Keyword verification:** Search terms will return relevant, shippable items
 - [ ] All affiliate links properly formatted with correct CSS classes
 - [ ] Correct affiliate IDs used for each platform (bright-gift-20, brightgift, brand codes)

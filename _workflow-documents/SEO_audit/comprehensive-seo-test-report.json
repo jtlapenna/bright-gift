@@ -1,0 +1,1363 @@
+{
+  "timestamp": "2025-10-17T13:35:55.511Z",
+  "totalTests": 71,
+  "totalCorrect": 71,
+  "successRate": 100,
+  "categories": {
+    "md-extension": [
+      {
+        "url": "https://bright-gift.com/blog/best-books-for-different-reading-levels.md",
+        "status": 301,
+        "finalUrl": "/blog/best-books-for-different-reading-levels/",
+        "redirectChain": [
+          "301 → /blog/best-books-for-different-reading-levels/"
+        ],
+        "responseTime": 104,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/best-books-for-different-reading-levels/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/25-books-to-gift-this-holiday-season.md",
+        "status": 301,
+        "finalUrl": "/blog/25-books-to-gift-this-holiday-season/",
+        "redirectChain": [
+          "301 → /blog/25-books-to-gift-this-holiday-season/"
+        ],
+        "responseTime": 113,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/25-books-to-gift-this-holiday-season/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/best-gifts-for-dads-who-love-outdoor-adventures.md",
+        "status": 301,
+        "finalUrl": "/blog/best-gifts-for-dads-who-love-outdoor-adventures/",
+        "redirectChain": [
+          "301 → /blog/best-gifts-for-dads-who-love-outdoor-adventures/"
+        ],
+        "responseTime": 121,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/best-gifts-for-dads-who-love-outdoor-adventures/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024.md",
+        "status": 301,
+        "finalUrl": "/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/",
+        "redirectChain": [
+          "301 → /blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/"
+        ],
+        "responseTime": 121,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/unique-gifts-for-board-game-enthusiasts.md",
+        "status": 301,
+        "finalUrl": "/blog/unique-gifts-for-board-game-enthusiasts/",
+        "redirectChain": [
+          "301 → /blog/unique-gifts-for-board-game-enthusiasts/"
+        ],
+        "responseTime": 129,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/unique-gifts-for-board-game-enthusiasts/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/fun-gifts-for-kids-birthday-parties.md",
+        "status": 301,
+        "finalUrl": "/blog/fun-gifts-for-kids-birthday-parties/",
+        "redirectChain": [
+          "301 → /blog/fun-gifts-for-kids-birthday-parties/"
+        ],
+        "responseTime": 90,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/fun-gifts-for-kids-birthday-parties/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/last-minute-birthday-gifts-for-busy-professionals.md",
+        "status": 301,
+        "finalUrl": "/blog/last-minute-birthday-gifts-for-busy-professionals/",
+        "redirectChain": [
+          "301 → /blog/last-minute-birthday-gifts-for-busy-professionals/"
+        ],
+        "responseTime": 102,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/last-minute-birthday-gifts-for-busy-professionals/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/gifts-for-book-lovers-under-50.md",
+        "status": 301,
+        "finalUrl": "/blog/gifts-for-book-lovers-under-50/",
+        "redirectChain": [
+          "301 → /blog/gifts-for-book-lovers-under-50/"
+        ],
+        "responseTime": 99,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/gifts-for-book-lovers-under-50/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/special-birthday-gifts-for-lgbtq-youth.md",
+        "status": 301,
+        "finalUrl": "/blog/special-birthday-gifts-for-lgbtq-youth/",
+        "redirectChain": [
+          "301 → /blog/special-birthday-gifts-for-lgbtq-youth/"
+        ],
+        "responseTime": 108,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/special-birthday-gifts-for-lgbtq-youth/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/affordable-gifts-for-pet-lovers-under-30.md",
+        "status": 301,
+        "finalUrl": "/blog/affordable-gifts-for-pet-lovers-under-30/",
+        "redirectChain": [
+          "301 → /blog/affordable-gifts-for-pet-lovers-under-30/"
+        ],
+        "responseTime": 103,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/affordable-gifts-for-pet-lovers-under-30/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide.md",
+        "status": 301,
+        "finalUrl": "/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide/",
+        "redirectChain": [
+          "301 → /blog/how-ai-is-revolutionizing-gift-shopping-complete-guide/"
+        ],
+        "responseTime": 97,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50.md",
+        "status": 301,
+        "finalUrl": "/blog/gifts-for-gamers-under-50/",
+        "redirectChain": [
+          "301 → /blog/gifts-for-gamers-under-50/"
+        ],
+        "responseTime": 123,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/gifts-for-gamers-under-50/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75.md",
+        "status": 301,
+        "finalUrl": "/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/",
+        "redirectChain": [
+          "301 → /blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/"
+        ],
+        "responseTime": 117,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75.md",
+        "status": 301,
+        "finalUrl": "/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/",
+        "redirectChain": [
+          "301 → /blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/"
+        ],
+        "responseTime": 89,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/chic-wedding-gifts-for-the-stylish-couple.md",
+        "status": 301,
+        "finalUrl": "/blog/chic-wedding-gifts-for-the-stylish-couple/",
+        "redirectChain": [
+          "301 → /blog/chic-wedding-gifts-for-the-stylish-couple/"
+        ],
+        "responseTime": 103,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/chic-wedding-gifts-for-the-stylish-couple/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/gifts-for-new-homeowners-2025.md",
+        "status": 301,
+        "finalUrl": "/blog/gifts-for-new-homeowners-2025/",
+        "redirectChain": [
+          "301 → /blog/gifts-for-new-homeowners-2025/"
+        ],
+        "responseTime": 116,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/gifts-for-new-homeowners-2025/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond.md",
+        "status": 301,
+        "finalUrl": "/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond/",
+        "redirectChain": [
+          "301 → /blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond/"
+        ],
+        "responseTime": 93,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50.md",
+        "status": 301,
+        "finalUrl": "/blog/gifts-for-remote-workers-under-50/",
+        "redirectChain": [
+          "301 → /blog/gifts-for-remote-workers-under-50/"
+        ],
+        "responseTime": 96,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/gifts-for-remote-workers-under-50/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md",
+        "status": 301,
+        "finalUrl": "/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/",
+        "redirectChain": [
+          "301 → /blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/"
+        ],
+        "responseTime": 98,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/best-home-gifts-on-amazon-2024.md",
+        "status": 301,
+        "finalUrl": "/blog/best-home-gifts-on-amazon-2024/",
+        "redirectChain": [
+          "301 → /blog/best-home-gifts-on-amazon-2024/"
+        ],
+        "responseTime": 104,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/best-home-gifts-on-amazon-2024/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas.md",
+        "status": 301,
+        "finalUrl": "/blog/gifts-for-girlfriend-unique-romantic-ideas/",
+        "redirectChain": [
+          "301 → /blog/gifts-for-girlfriend-unique-romantic-ideas/"
+        ],
+        "responseTime": 117,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/gifts-for-girlfriend-unique-romantic-ideas/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/gifts-under-25-for-coworkers.md",
+        "status": 301,
+        "finalUrl": "/blog/gifts-under-25-for-coworkers/",
+        "redirectChain": [
+          "301 → /blog/gifts-under-25-for-coworkers/"
+        ],
+        "responseTime": 94,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/gifts-under-25-for-coworkers/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/gifts-for-plant-lovers.md",
+        "status": 301,
+        "finalUrl": "/blog/gifts-for-plant-lovers/",
+        "redirectChain": [
+          "301 → /blog/gifts-for-plant-lovers/"
+        ],
+        "responseTime": 103,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/gifts-for-plant-lovers/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget.md",
+        "status": 301,
+        "finalUrl": "/blog/eco-friendly-gift-ideas-for-every-budget/",
+        "redirectChain": [
+          "301 → /blog/eco-friendly-gift-ideas-for-every-budget/"
+        ],
+        "responseTime": 114,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/eco-friendly-gift-ideas-for-every-budget/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/unique-graduation-gifts-creative-minds.md",
+        "status": 301,
+        "finalUrl": "/blog/unique-graduation-gifts-creative-minds/",
+        "redirectChain": [
+          "301 → /blog/unique-graduation-gifts-creative-minds/"
+        ],
+        "responseTime": 115,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/unique-graduation-gifts-creative-minds/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/25-unique-anniversary-gift-ideas-under-50.md",
+        "status": 301,
+        "finalUrl": "/blog/25-unique-anniversary-gift-ideas-under-50/",
+        "redirectChain": [
+          "301 → /blog/25-unique-anniversary-gift-ideas-under-50/"
+        ],
+        "responseTime": 99,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/25-unique-anniversary-gift-ideas-under-50/"
+        },
+        "category": "md-extension",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to clean URL"
+        },
+        "correct": true
+      }
+    ],
+    "missing-page": [
+      {
+        "url": "https://bright-gift.com/ai-gift-guide",
+        "status": 301,
+        "finalUrl": "/blog/",
+        "redirectChain": [
+          "301 → /blog/"
+        ],
+        "responseTime": 101,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/"
+        },
+        "category": "missing-page",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to appropriate page"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/ai-gift-guide/",
+        "status": 301,
+        "finalUrl": "/blog/",
+        "redirectChain": [
+          "301 → /blog/"
+        ],
+        "responseTime": 100,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/"
+        },
+        "category": "missing-page",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to appropriate page"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/top-gifts",
+        "status": 301,
+        "finalUrl": "/blog/",
+        "redirectChain": [
+          "301 → /blog/"
+        ],
+        "responseTime": 88,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/"
+        },
+        "category": "missing-page",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to appropriate page"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/top-gifts/",
+        "status": 301,
+        "finalUrl": "/blog/",
+        "redirectChain": [
+          "301 → /blog/"
+        ],
+        "responseTime": 83,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/"
+        },
+        "category": "missing-page",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to appropriate page"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/about",
+        "status": 301,
+        "finalUrl": "/#about-tool",
+        "redirectChain": [
+          "301 → /#about-tool"
+        ],
+        "responseTime": 104,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/#about-tool"
+        },
+        "category": "missing-page",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to appropriate page"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/about/",
+        "status": 301,
+        "finalUrl": "/#about-tool",
+        "redirectChain": [
+          "301 → /#about-tool"
+        ],
+        "responseTime": 133,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/#about-tool"
+        },
+        "category": "missing-page",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to appropriate page"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners",
+        "status": 301,
+        "finalUrl": "/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners/",
+        "redirectChain": [
+          "301 → /blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners/"
+        ],
+        "responseTime": 113,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners/"
+        },
+        "category": "missing-page",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to appropriate page"
+        },
+        "correct": true
+      }
+    ],
+    "non-existent-blog": [
+      {
+        "url": "https://bright-gift.com/blog/gifts-for-artists",
+        "status": 301,
+        "finalUrl": "/410.html",
+        "redirectChain": [
+          "301 → /410.html"
+        ],
+        "responseTime": 118,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/410.html"
+        },
+        "category": "non-existent-blog",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to 410 Gone page"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/unique-birthday-gifts-for-teens-break-the-mold",
+        "status": 301,
+        "finalUrl": "/410.html",
+        "redirectChain": [
+          "301 → /410.html"
+        ],
+        "responseTime": 95,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/410.html"
+        },
+        "category": "non-existent-blog",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to 410 Gone page"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/eco-friendly-gifts",
+        "status": 301,
+        "finalUrl": "/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/",
+        "redirectChain": [
+          "301 → /blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/"
+        ],
+        "responseTime": 125,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/"
+        },
+        "category": "non-existent-blog",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to 410 Gone page"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/sample-post",
+        "status": 301,
+        "finalUrl": "/410.html",
+        "redirectChain": [
+          "301 → /410.html"
+        ],
+        "responseTime": 88,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/410.html"
+        },
+        "category": "non-existent-blog",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to 410 Gone page"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/handmade-gifts",
+        "status": 301,
+        "finalUrl": "/410.html",
+        "redirectChain": [
+          "301 → /410.html"
+        ],
+        "responseTime": 99,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/410.html"
+        },
+        "category": "non-existent-blog",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to 410 Gone page"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature",
+        "status": 301,
+        "finalUrl": "/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/",
+        "redirectChain": [
+          "301 → /blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/"
+        ],
+        "responseTime": 91,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/"
+        },
+        "category": "non-existent-blog",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to 410 Gone page"
+        },
+        "correct": true
+      }
+    ],
+    "old-category": [
+      {
+        "url": "https://bright-gift.com/category/data-driven/",
+        "status": 301,
+        "finalUrl": "/category/gift-tips/",
+        "redirectChain": [
+          "301 → /category/gift-tips/"
+        ],
+        "responseTime": 105,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/category/gift-tips/"
+        },
+        "category": "old-category",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to new category"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/category/educational/",
+        "status": 301,
+        "finalUrl": "/category/gift-tips/",
+        "redirectChain": [
+          "301 → /category/gift-tips/"
+        ],
+        "responseTime": 99,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/category/gift-tips/"
+        },
+        "category": "old-category",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to new category"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/category/gift-guide",
+        "status": 301,
+        "finalUrl": "/category/gift-guides/",
+        "redirectChain": [
+          "301 → /category/gift-guides/"
+        ],
+        "responseTime": 91,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/category/gift-guides/"
+        },
+        "category": "old-category",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to new category"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/category/gift-guide/",
+        "status": 301,
+        "finalUrl": "/category/gift-guides/",
+        "redirectChain": [
+          "301 → /category/gift-guides/"
+        ],
+        "responseTime": 91,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/category/gift-guides/"
+        },
+        "category": "old-category",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to new category"
+        },
+        "correct": true
+      }
+    ],
+    "gift-guides-structure": [
+      {
+        "url": "https://bright-gift.com/gift-guides/gifts-for-plant-lovers",
+        "status": 301,
+        "finalUrl": "/category/gift-guides/",
+        "redirectChain": [
+          "301 → /category/gift-guides/"
+        ],
+        "responseTime": 103,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/category/gift-guides/"
+        },
+        "category": "gift-guides-structure",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to category page"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/gift-guides/gifts-for-plant-lovers/",
+        "status": 301,
+        "finalUrl": "/category/gift-guides/",
+        "redirectChain": [
+          "301 → /category/gift-guides/"
+        ],
+        "responseTime": 89,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/category/gift-guides/"
+        },
+        "category": "gift-guides-structure",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to category page"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/gift-guides/gifts-for-gamers-under-50/",
+        "status": 301,
+        "finalUrl": "/category/gift-guides/",
+        "redirectChain": [
+          "301 → /category/gift-guides/"
+        ],
+        "responseTime": 108,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/category/gift-guides/"
+        },
+        "category": "gift-guides-structure",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to category page"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/gift-guides/gifts-under-25-for-coworkers/",
+        "status": 301,
+        "finalUrl": "/category/gift-guides/",
+        "redirectChain": [
+          "301 → /category/gift-guides/"
+        ],
+        "responseTime": 112,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/category/gift-guides/"
+        },
+        "category": "gift-guides-structure",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to category page"
+        },
+        "correct": true
+      }
+    ],
+    "critical-page": [
+      {
+        "url": "https://bright-gift.com/contact",
+        "status": 308,
+        "finalUrl": "/contact/",
+        "redirectChain": [
+          "308 → /contact/"
+        ],
+        "responseTime": 114,
+        "headers": {
+          "location": "/contact/"
+        },
+        "category": "critical-page",
+        "expected": {
+          "status": 301,
+          "description": "Should redirect to trailing slash (correct behavior with trailingSlash: always)"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/contact/",
+        "status": 200,
+        "finalUrl": "https://bright-gift.com/contact/",
+        "redirectChain": [],
+        "responseTime": 112,
+        "headers": {
+          "content-type": "text/html; charset=utf-8",
+          "cache-control": "public, max-age=0, must-revalidate"
+        },
+        "category": "critical-page",
+        "expected": {
+          "status": 301,
+          "description": "Should redirect to trailing slash (correct behavior with trailingSlash: always)"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/privacy",
+        "status": 308,
+        "finalUrl": "/privacy/",
+        "redirectChain": [
+          "308 → /privacy/"
+        ],
+        "responseTime": 97,
+        "headers": {
+          "location": "/privacy/"
+        },
+        "category": "critical-page",
+        "expected": {
+          "status": 301,
+          "description": "Should redirect to trailing slash (correct behavior with trailingSlash: always)"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/privacy/",
+        "status": 200,
+        "finalUrl": "https://bright-gift.com/privacy/",
+        "redirectChain": [],
+        "responseTime": 133,
+        "headers": {
+          "content-type": "text/html; charset=utf-8",
+          "cache-control": "public, max-age=0, must-revalidate"
+        },
+        "category": "critical-page",
+        "expected": {
+          "status": 301,
+          "description": "Should redirect to trailing slash (correct behavior with trailingSlash: always)"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/terms",
+        "status": 308,
+        "finalUrl": "/terms/",
+        "redirectChain": [
+          "308 → /terms/"
+        ],
+        "responseTime": 108,
+        "headers": {
+          "location": "/terms/"
+        },
+        "category": "critical-page",
+        "expected": {
+          "status": 301,
+          "description": "Should redirect to trailing slash (correct behavior with trailingSlash: always)"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/terms/",
+        "status": 200,
+        "finalUrl": "https://bright-gift.com/terms/",
+        "redirectChain": [],
+        "responseTime": 128,
+        "headers": {
+          "content-type": "text/html; charset=utf-8",
+          "cache-control": "public, max-age=0, must-revalidate"
+        },
+        "category": "critical-page",
+        "expected": {
+          "status": 301,
+          "description": "Should redirect to trailing slash (correct behavior with trailingSlash: always)"
+        },
+        "correct": true
+      }
+    ],
+    "blog-no-trailing-slash": [
+      {
+        "url": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas",
+        "status": 301,
+        "finalUrl": "/blog/gifts-for-girlfriend-unique-romantic-ideas/",
+        "redirectChain": [
+          "301 → /blog/gifts-for-girlfriend-unique-romantic-ideas/"
+        ],
+        "responseTime": 89,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/gifts-for-girlfriend-unique-romantic-ideas/"
+        },
+        "category": "blog-no-trailing-slash",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to trailing slash"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50",
+        "status": 301,
+        "finalUrl": "/blog/gifts-for-remote-workers-under-50/",
+        "redirectChain": [
+          "301 → /blog/gifts-for-remote-workers-under-50/"
+        ],
+        "responseTime": 98,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/gifts-for-remote-workers-under-50/"
+        },
+        "category": "blog-no-trailing-slash",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to trailing slash"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
+        "status": 301,
+        "finalUrl": "/blog/eco-friendly-gift-ideas-for-every-budget/",
+        "redirectChain": [
+          "301 → /blog/eco-friendly-gift-ideas-for-every-budget/"
+        ],
+        "responseTime": 88,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/eco-friendly-gift-ideas-for-every-budget/"
+        },
+        "category": "blog-no-trailing-slash",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to trailing slash"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/gifts-for-plant-lovers",
+        "status": 301,
+        "finalUrl": "/blog/gifts-for-plant-lovers/",
+        "redirectChain": [
+          "301 → /blog/gifts-for-plant-lovers/"
+        ],
+        "responseTime": 127,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/gifts-for-plant-lovers/"
+        },
+        "category": "blog-no-trailing-slash",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to trailing slash"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50",
+        "status": 301,
+        "finalUrl": "/blog/gifts-for-gamers-under-50/",
+        "redirectChain": [
+          "301 → /blog/gifts-for-gamers-under-50/"
+        ],
+        "responseTime": 142,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/gifts-for-gamers-under-50/"
+        },
+        "category": "blog-no-trailing-slash",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to trailing slash"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/gifts-for-new-homeowners-2025",
+        "status": 301,
+        "finalUrl": "/blog/gifts-for-new-homeowners-2025/",
+        "redirectChain": [
+          "301 → /blog/gifts-for-new-homeowners-2025/"
+        ],
+        "responseTime": 121,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/gifts-for-new-homeowners-2025/"
+        },
+        "category": "blog-no-trailing-slash",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to trailing slash"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75",
+        "status": 301,
+        "finalUrl": "/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/",
+        "redirectChain": [
+          "301 → /blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/"
+        ],
+        "responseTime": 105,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/"
+        },
+        "category": "blog-no-trailing-slash",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to trailing slash"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/last-minute-birthday-gifts-for-busy-professionals",
+        "status": 301,
+        "finalUrl": "/blog/last-minute-birthday-gifts-for-busy-professionals/",
+        "redirectChain": [
+          "301 → /blog/last-minute-birthday-gifts-for-busy-professionals/"
+        ],
+        "responseTime": 114,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/last-minute-birthday-gifts-for-busy-professionals/"
+        },
+        "category": "blog-no-trailing-slash",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to trailing slash"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/how-to-choose-the-perfect-gift-complete-guide",
+        "status": 301,
+        "finalUrl": "/blog/how-to-choose-the-perfect-gift-complete-guide/",
+        "redirectChain": [
+          "301 → /blog/how-to-choose-the-perfect-gift-complete-guide/"
+        ],
+        "responseTime": 93,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/how-to-choose-the-perfect-gift-complete-guide/"
+        },
+        "category": "blog-no-trailing-slash",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to trailing slash"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/best-gifts-for-dads-who-love-outdoor-adventures",
+        "status": 301,
+        "finalUrl": "/blog/best-gifts-for-dads-who-love-outdoor-adventures/",
+        "redirectChain": [
+          "301 → /blog/best-gifts-for-dads-who-love-outdoor-adventures/"
+        ],
+        "responseTime": 92,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/best-gifts-for-dads-who-love-outdoor-adventures/"
+        },
+        "category": "blog-no-trailing-slash",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to trailing slash"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore",
+        "status": 301,
+        "finalUrl": "/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore/",
+        "redirectChain": [
+          "301 → /blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore/"
+        ],
+        "responseTime": 78,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore/"
+        },
+        "category": "blog-no-trailing-slash",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to trailing slash"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024",
+        "status": 301,
+        "finalUrl": "/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/",
+        "redirectChain": [
+          "301 → /blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/"
+        ],
+        "responseTime": 128,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/"
+        },
+        "category": "blog-no-trailing-slash",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to trailing slash"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/special-birthday-gifts-for-lgbtq-youth",
+        "status": 301,
+        "finalUrl": "/blog/special-birthday-gifts-for-lgbtq-youth/",
+        "redirectChain": [
+          "301 → /blog/special-birthday-gifts-for-lgbtq-youth/"
+        ],
+        "responseTime": 151,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/special-birthday-gifts-for-lgbtq-youth/"
+        },
+        "category": "blog-no-trailing-slash",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to trailing slash"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide",
+        "status": 301,
+        "finalUrl": "/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide/",
+        "redirectChain": [
+          "301 → /blog/how-ai-is-revolutionizing-gift-shopping-complete-guide/"
+        ],
+        "responseTime": 90,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide/"
+        },
+        "category": "blog-no-trailing-slash",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to trailing slash"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/gifts-under-25-for-coworkers",
+        "status": 301,
+        "finalUrl": "/blog/gifts-under-25-for-coworkers/",
+        "redirectChain": [
+          "301 → /blog/gifts-under-25-for-coworkers/"
+        ],
+        "responseTime": 77,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/gifts-under-25-for-coworkers/"
+        },
+        "category": "blog-no-trailing-slash",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to trailing slash"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/unique-graduation-gifts-creative-minds",
+        "status": 301,
+        "finalUrl": "/blog/unique-graduation-gifts-creative-minds/",
+        "redirectChain": [
+          "301 → /blog/unique-graduation-gifts-creative-minds/"
+        ],
+        "responseTime": 105,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/unique-graduation-gifts-creative-minds/"
+        },
+        "category": "blog-no-trailing-slash",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to trailing slash"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/the-science-of-human-connection-why-we-need-each-other",
+        "status": 301,
+        "finalUrl": "/blog/the-science-of-human-connection-why-we-need-each-other/",
+        "redirectChain": [
+          "301 → /blog/the-science-of-human-connection-why-we-need-each-other/"
+        ],
+        "responseTime": 96,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/the-science-of-human-connection-why-we-need-each-other/"
+        },
+        "category": "blog-no-trailing-slash",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to trailing slash"
+        },
+        "correct": true
+      },
+      {
+        "url": "https://bright-gift.com/blog/why-we-remember-gifts-we-give-more-than-receive",
+        "status": 301,
+        "finalUrl": "/blog/why-we-remember-gifts-we-give-more-than-receive/",
+        "redirectChain": [
+          "301 → /blog/why-we-remember-gifts-we-give-more-than-receive/"
+        ],
+        "responseTime": 92,
+        "headers": {
+          "content-type": "text/plain;charset=UTF-8",
+          "location": "/blog/why-we-remember-gifts-we-give-more-than-receive/"
+        },
+        "category": "blog-no-trailing-slash",
+        "expected": {
+          "status": 301,
+          "description": "Redirect to trailing slash"
+        },
+        "correct": true
+      }
+    ]
+  },
+  "criticalIssues": []
+}

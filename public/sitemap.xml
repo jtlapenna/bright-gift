@@ -2,49 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bright-gift.com/</loc>
-    <lastmod>2025-10-16</lastmod>
+    <lastmod>2025-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://bright-gift.com/blog/</loc>
-    <lastmod>2025-10-16</lastmod>
+    <lastmod>2025-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bright-gift.com/category/gift-guides/</loc>
-    <lastmod>2025-10-16</lastmod>
+    <lastmod>2025-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bright-gift.com/category/gift-tips/</loc>
-    <lastmod>2025-10-16</lastmod>
+    <lastmod>2025-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bright-gift.com/privacy/</loc>
-    <lastmod>2025-10-16</lastmod>
+    <lastmod>2025-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://bright-gift.com/terms/</loc>
-    <lastmod>2025-10-16</lastmod>
+    <lastmod>2025-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://bright-gift.com/contact/</loc>
-    <lastmod>2025-10-16</lastmod>
+    <lastmod>2025-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://bright-gift.com/data-deletion/</loc>
-    <lastmod>2025-10-16</lastmod>
+    <lastmod>2025-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -309,6 +309,12 @@
   <url>
     <loc>https://bright-gift.com/blog/why-we-remember-gifts-we-give-more-than-receive/</loc>
     <lastmod>2025-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bright-gift.com/blog/emergency-gift-guide-30-last-minute-present-ideas/</loc>
+    <lastmod>2025-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

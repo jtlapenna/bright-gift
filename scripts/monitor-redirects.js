@@ -126,3 +126,4 @@ async function monitorRedirects() {
 
 // Run the monitoring
 monitorRedirects().catch(console.error);
+
