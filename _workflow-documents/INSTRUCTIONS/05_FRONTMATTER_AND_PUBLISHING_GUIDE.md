@@ -49,8 +49,6 @@ keywords: ["primary keyword", "secondary keyword", "related terms"]
 # Images (All Required)
 image: "/images/blog/slug/slug-banner.webp"
 ogImage: "/images/blog/slug/slug-og.webp"
-imageJpg: "/images/blog/slug/slug-banner.jpg"
-ogImageJpg: "/images/blog/slug/slug-og.jpg"
 
 # Site-Agnostic API Fields
 siteId: "brightgift"
@@ -208,15 +206,6 @@ analytics:
 - **Requirements:** No text, optimized for social sharing
 - **Example:** `"/images/blog/plant-lover-gifts/plant-lover-gifts-og.webp"`
 
-#### **imageJpg** (Required - Banner JPG) ✅ **CURRENTLY AVAILABLE**
-- **Purpose:** Banner image in JPG format for compatibility
-- **Format:** `/images/blog/[slug]/[slug]-banner.jpg`
-- **Requirements:** Same as banner.webp but JPG format
-
-#### **ogImageJpg** (Required - OG JPG) ✅ **CURRENTLY AVAILABLE**
-- **Purpose:** Open Graph image in JPG format for compatibility
-- **Format:** `/images/blog/[slug]/[slug]-og.jpg`
-- **Requirements:** Same as og.webp but JPG format
 
 ### **Site-Agnostic API Fields**
 
@@ -568,8 +557,6 @@ const blogCollection = defineCollection({
     keywords: z.array(z.string()),
     image: z.string(),
     ogImage: z.string(),
-    imageJpg: z.string(),
-    ogImageJpg: z.string(),
     siteId: z.string(),
     workflowId: z.string(),
     postId: z.string(),
@@ -643,7 +630,7 @@ const blogCollection = defineCollection({
 ### **✅ Currently Available Fields:**
 - Basic content fields (title, description, date, status)
 - SEO & meta fields (metaTitle, metaDescription, keywords)
-- Image fields (image, ogImage, imageJpg, ogImageJpg)
+- Image fields (image, ogImage)
 - Site-agnostic API fields (siteId, workflowId, postId, generatedAt, version, currentSection, workflowStatus)
 - Content metrics (wordCount, readTime)
 - Original input tracking (originalInput object)

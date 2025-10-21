@@ -4,8 +4,6 @@ description: "Discover 30 thoughtful last-minute gift ideas that look carefully 
 date: "2025-01-17"
 image: "/images/blog/emergency-gift-guide-30-last-minute-present-ideas/emergency-gift-guide-30-last-minute-present-ideas-banner.webp"
 ogImage: "/images/blog/emergency-gift-guide-30-last-minute-present-ideas/emergency-gift-guide-30-last-minute-present-ideas-og.webp"
-imageJpg: "/images/blog/emergency-gift-guide-30-last-minute-present-ideas/emergency-gift-guide-30-last-minute-present-ideas-banner.jpg"
-ogImageJpg: "/images/blog/emergency-gift-guide-30-last-minute-present-ideas/emergency-gift-guide-30-last-minute-present-ideas-og.jpg"
 
 # SEO & Meta (Critical for Search)
 metaTitle: "Last Minute Gifts: 30 Emergency Ideas That Don't Look Rushed"
