@@ -1,7 +1,7 @@
 ---
 title: "Emergency Gift Guide: 30 Last-Minute Present Ideas That Don't Look Rushed"
 description: "Discover 30 thoughtful last-minute gift ideas that look carefully planned, from Amazon Prime same-day delivery to digital gift cards and local experiences."
-date: "2025-01-17"
+date: "2025-01-21"
 image: "/images/blog/emergency-gift-guide-30-last-minute-present-ideas/emergency-gift-guide-30-last-minute-present-ideas-banner.webp"
 ogImage: "/images/blog/emergency-gift-guide-30-last-minute-present-ideas/emergency-gift-guide-30-last-minute-present-ideas-og.webp"
 
