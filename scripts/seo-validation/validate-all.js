@@ -51,9 +51,9 @@ class SEOValidator {
     
     const criticalIssues = [];
     
-    // Check for imageJpg references (exclude frontmatter and commented code)
+    // Check for imageJpg references (exclude commented code)
     try {
-      const result = execSync('grep -r "imageJpg" src/ | grep -v "//" | grep -v "REMOVED" | grep -v "imageJpg:" | grep -v "ogImageJpg:" || true', { encoding: 'utf8' });
+      const result = execSync('grep -r "imageJpg" src/ | grep -v "//" | grep -v "REMOVED" || true', { encoding: 'utf8' });
       if (result.trim()) {
         criticalIssues.push('ImageJpg references found in templates');
       }

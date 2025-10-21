@@ -53,9 +53,9 @@ class ContentValidator {
     
     let hasErrors = false;
     
-    // Check for deprecated imageJpg references (only flag if not in frontmatter)
+    // Check for imageJpg references
     lines.forEach((line, index) => {
-      if (line.includes('imageJpg') && !line.includes('imageJpg:') && !line.includes('ogImageJpg:')) {
+      if (line.includes('imageJpg') || line.includes('imageJpg')) {
         this.addError(filePath, index + 1, 
           `ImageJpg reference found: ${line.trim()}`, 
           'Remove imageJpg references, use only .webp images');
