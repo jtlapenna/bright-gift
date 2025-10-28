@@ -1043,18 +1043,24 @@ const faqData = {
 		});
 		
 		// Filter out groups that don't have both Afrofiliate and Amazon options
+		// A true hybrid card requires:
+		// 1. Must have both primary and alternative
+		// 2. One must be afrofiliate and the other must be amazon
 		const hybridGroups = groupedIdeas.filter(group => {
-			const hasAfrofiliate = group.primary.affiliateType === 'afrofiliate' || 
-								  (group.alternative && group.alternative.affiliateType === 'afrofiliate') ||
-								  /arjdj2msd\.com/i.test(group.primary.link) ||
-								  (group.alternative && /arjdj2msd\.com/i.test(group.alternative.link));
+			// Must have both primary and alternative
+			if (!group.alternative) {
+				return false;
+			}
 			
-			const hasAmazon = group.primary.affiliateType === 'amazon' || 
-							 (group.alternative && group.alternative.affiliateType === 'amazon') ||
-							 /amazon\.com/i.test(group.primary.link) ||
-							 (group.alternative && /amazon\.com/i.test(group.alternative.link));
+			// Check if one is afrofiliate and the other is amazon
+			const primaryIsAfrofiliate = group.primary.affiliateType === 'afrofiliate' || /arjdj2msd\.com/i.test(group.primary.link);
+			const primaryIsAmazon = group.primary.affiliateType === 'amazon' || /amazon\.com/i.test(group.primary.link);
 			
-			return hasAfrofiliate && hasAmazon;
+			const altIsAfrofiliate = group.alternative.affiliateType === 'afrofiliate' || /arjdj2msd\.com/i.test(group.alternative.link);
+			const altIsAmazon = group.alternative.affiliateType === 'amazon' || /amazon\.com/i.test(group.alternative.link);
+			
+			// True hybrid: one afrofiliate, one amazon (in any order)
+			return (primaryIsAfrofiliate && altIsAmazon) || (primaryIsAmazon && altIsAfrofiliate);
 		});
 		
 		// Render hybrid groups first, then regular ideas

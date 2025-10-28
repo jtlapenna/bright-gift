@@ -301,17 +301,25 @@ function determineAfrofiliateLink(title: string, tag: string, interests?: string
     }
   }
   
-  // Check for category and keyword relevance
+  // Check for category and keyword relevance with stricter whole-word matching
   for (const [brandName, brandData] of Object.entries(afrofiliateBrands)) {
-    // Check if interests match brand categories
-    const interestsMatch = brandData.keywords.some(keyword => 
-      lowerInterests.includes(keyword) || lowerTag.includes(keyword)
-    );
+    // Check if interests match brand keywords (must be whole word/phrase)
+    const interestsMatch = brandData.keywords.some(keyword => {
+      // Escape special regex characters in keyword
+      const escapedKeyword = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      // Use word boundaries for whole-word/phrase matching
+      const keywordRegex = new RegExp(`\\b${escapedKeyword}\\b`, 'i');
+      return keywordRegex.test(lowerInterests) || keywordRegex.test(lowerTag);
+    });
     
-    // Check if tag matches brand categories
-    const tagMatch = brandData.categories.some(category => 
-      lowerTag.includes(category) || lowerTitle.includes(category)
-    );
+    // Check if tag matches brand categories (must be whole word/phrase)
+    const tagMatch = brandData.categories.some(category => {
+      // Escape special regex characters in category
+      const escapedCategory = category.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      // Use word boundaries for whole-word/phrase matching
+      const categoryRegex = new RegExp(`\\b${escapedCategory}\\b`, 'i');
+      return categoryRegex.test(lowerTag) || categoryRegex.test(lowerTitle);
+    });
     
     if (interestsMatch || tagMatch) {
       return brandData.link;
@@ -500,7 +508,7 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
         // Bookshop.org for book-related items
         link = generateBookshopLink(title, bookshopAffiliateId);
         icon = 'Book';
-        ideas.push({ title, description, tag, link, icon });
+        ideas.push({ title, description, tag, link, icon, affiliateType: 'bookshop' });
       } else if (afrofiliateLink) {
         // Afrofiliate match found - show both options
         const afrofiliateIcon = getAfrofiliateIcon(title, tag);
@@ -531,12 +539,12 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
         icon = getAmazonIcon(tag);
         // Add a note that this is a general suggestion, not specifically Black-owned
         description += ' (Note: This is a general suggestion. For Black-owned business options, we recommend checking out our Afrofiliate partner brands.)';
-        ideas.push({ title, description, tag, link, icon });
+        ideas.push({ title, description, tag, link, icon, affiliateType: 'amazon' });
       } else {
         // Amazon for everything else (including wellness, athletics, beauty styles)
         link = generateAmazonLink(title, tag);
         icon = getAmazonIcon(tag);
-        ideas.push({ title, description, tag, link, icon });
+        ideas.push({ title, description, tag, link, icon, affiliateType: 'amazon' });
       }
     }
 
@@ -550,21 +558,24 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
           description: "Professional-grade skincare products from a Black-owned cosmetic chemist brand. Perfect for skincare enthusiasts who love science-backed formulations.",
           tag: "Skincare",
           link: AFROFILIATE_LINKS['beautystat'],
-          icon: "Sparkle"
+          icon: "Sparkle",
+          affiliateType: "afrofiliate"
         });
         ideas.push({
           title: "Furi Sport - High-Performance Athletic Wear",
           description: "Stylish, high-performance athletic wear designed for serious athletes. Quality sportswear that combines fashion with function.",
           tag: "Athletic Wear",
           link: AFROFILIATE_LINKS['furi-sport'],
-          icon: "SoccerBall"
+          icon: "SoccerBall",
+          affiliateType: "afrofiliate"
         });
         ideas.push({
           title: "Caribe Coffee - Sustainable Coffee",
           description: "Ethically sourced, high-quality coffee beans roasted to perfection. Perfect for coffee connoisseurs who appreciate sustainable practices.",
           tag: "Coffee",
           link: AFROFILIATE_LINKS['caribe-coffee'],
-          icon: "CookingPot"
+          icon: "CookingPot",
+          affiliateType: "afrofiliate"
         });
       } else {
         ideas.push({
