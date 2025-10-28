@@ -7,7 +7,12 @@ ogImage: "/images/blog/unique-graduation-gifts-creative-minds/unique-graduation-
 metaTitle: "Unique Graduation Gifts for Creative Minds | Artistic Ideas"
 metaDescription: "Find unique graduation gifts for creative minds. Discover artistic graduation gift ideas that celebrate creativity and support their journey."
 keywords: graduation gifts, creative gifts, artistic gifts, gifts for graduates, art supplies
-tags: graduation gifts, creative gifts, artistic gifts, gifts for graduates, art supplies
+tags: 
+  - graduation gifts
+  - creative gifts
+  - artistic gifts
+  - gifts for graduates
+  - art supplies
 category: gift-guide
 readTime: 7
 featured: false
