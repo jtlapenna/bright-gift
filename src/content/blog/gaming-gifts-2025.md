@@ -36,19 +36,22 @@ Rather than guessing, use this guide to match gifts to the platforms and play st
 
 ## How to use this guide (find the perfect gift fast)
 
-- By console or platform:
-  - Nintendo (Switch & Switch 2): Look for controllers, storage, and first‑party game accessories in the Budget‑Friendly section; pre‑orders in the Pre‑Order section.
-  - PlayStation (PS5/PS5 Pro): See Mid‑Range for premium accessories; Premium for the PS5 Pro; Pre‑Order for big releases.
-  - Xbox (Series X): See Premium for the console; Mid‑Range for cross‑platform accessories.
-  - PC Gaming: Check Mid‑Range for mice/keyboards/lighting; Premium for high‑end monitors.
+- By budget:
+  - Jump to [Budget‑Friendly](#budget) • [Mid‑Range](#mid-range) • [Premium](#premium) • [Pre‑Orders](#pre-order)
 - By gift type:
   - Accessories (controllers, headsets, keyboards/mice, lighting) → Budget‑Friendly & Mid‑Range.
   - Big‑ticket upgrades (consoles, top monitors, handheld PCs) → Premium.
   - Pre‑orders (holiday hype items) → Pre‑Order section for the most talked‑about launches.
+- Console highlights (quick jumps):
+  - Nintendo: [Switch 2 Pro Controller](#switch2-pro-controller), [Kirby Air Riders](#kirby-air-riders), [Metroid Prime 4 (Switch 2)](#metroid-prime4-switch2)
+  - PlayStation: [DualSense Edge](#dualsense-edge), [PS5 Pro](#ps5-pro)
+  - Xbox: [Xbox Series X (All-Digital)](#xbox-series-x)
+  - PC: [Wooting 60HE+](#wooting-60he), [ROG Ally X](#rog-ally-x)
 - Quick tip: Match the gift to the platform they already have. If they play on Switch 2, look for “Switch 2” labels; if they’re on PS5, stick to PlayStation accessories and games.
 
-Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#xbox) • [PC](#pc)
+Quick links: [Budget](#budget) • [Mid‑Range](#mid-range) • [Premium](#premium) • [Pre‑Orders](#pre-order)
 
+<a id="budget"></a>
 ## Budget-Friendly Gaming Accessories ($50-$150)
 <a id="nintendo"></a>
 ### HyperX Cloud Alpha 2 Gaming Headset
@@ -57,7 +60,7 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Practical tip:** For Xbox users, make sure to get the Xbox-compatible version with the included 3.5mm adapter for full feature support.
 
-**Price Range:** $80-$100 <a href="https://www.amazon.com/dp/B0CQ7PZHDN?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $89-$119 <a href="https://www.amazon.com/HyperX-Cloud-Alpha-Dual-Chamber-Simultaneous/dp/B0FJXLBWWT?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### Backbone One (2nd Generation, USB-C) Mobile Gaming Controller
 
@@ -65,7 +68,7 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Practical tip:** This works great with Xbox Game Pass, PlayStation Remote Play, and other cloud gaming services for console-quality games on the go.
 
-**Price Range:** $100-$120 <a href="https://www.amazon.com/dp/B0CXV1V7PR?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $99-$119 <a href="https://www.amazon.com/BACKBONE-Mobile-Gaming-Controller-Android-iOS/dp/B0CCT2LWT8?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### Elgato Stream Deck Neo
 
@@ -73,7 +76,7 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Practical tip:** Pair this with streaming software like OBS for streamers, or use it to create custom shortcuts for everyday tasks.
 
-**Price Range:** $90-$110 <a href="https://www.amazon.com/dp/B0D7TQBQVC?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $89-$109 <a href="https://www.amazon.com/Elgato-Stream-Deck-Neo-Customizable/dp/B0CVY4566H?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### Logitech Litra Glow Key Light
 
@@ -81,7 +84,7 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Practical tip:** Use this with streaming software that supports Logitech's integration for automatic lighting adjustments during broadcasts.
 
-**Price Range:** $50-$70 <a href="https://www.amazon.com/dp/B0CQZJ9X56?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $59-$69 <a href="https://www.amazon.com/Logitech-Streaming-TrueSoft-adjustable-brightness/dp/B097QZGRCQ?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### GameSir G8 Plus Mobile Gaming Controller
 
@@ -89,8 +92,9 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Practical tip:** This controller works excellently with Xbox Cloud Gaming and GeForce Now for console-quality games on your phone.
 
-**Price Range:** $80-$100 <a href="https://www.amazon.com/dp/B0CRP9RW6V?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $79-$99 <a href="https://www.amazon.com/Bluetooth-Controller-iOS-Wireless-Joysticks-Minecraft/dp/B0D8JJRCJN?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
+<a id="switch2-pro-controller"></a>
 ### Nintendo Switch 2 Pro Controller
 
 **Why it's great:** The official Switch 2 Pro Controller delivers premium gaming with enhanced HD Rumble 2 technology, programmable GL/GR rear buttons, and a dedicated C button for GameChat communication. The comfortable ergonomic design makes long gaming sessions enjoyable, while the built-in amiibo functionality adds interactive features to compatible games. This controller represents the evolution of Nintendo's pro controller line, perfect for serious Switch 2 gamers.
@@ -98,6 +102,14 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 **Practical tip:** Map the GL/GR buttons to frequently used actions like jumping or dashing for faster response times in action games.
 
 **Price Range:** $70-$80 <a href="https://www.amazon.com/dp/B0F3VTFD6J?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+
+### PlayStation DualSense Wireless Controller (PS5)
+
+**Why it's great:** The standard DualSense brings adaptive triggers and advanced haptics to PS5 games at an affordable price—an easy upgrade or spare controller for local co‑op.
+
+**Practical tip:** Pick the color your gamer loves; all colors work the same, so choose by preference.
+
+**Price Range:** $69-$79 <a href="https://www.amazon.com/PlayStation-DualSense-Wireless-Controller-Gaming-Console/dp/B0DSQQ1P8D?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### microSD Express Card (Switch 2 Storage)
 
@@ -131,6 +143,7 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Price Range:** $55-$65 <a href="https://www.amazon.com/dp/B0FFGJ3TWP?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
+<a id="mid-range"></a>
 ## Mid-Range Gaming Upgrades ($150-$400)
 
 ### Audeze Maxwell Gaming Headset
@@ -139,16 +152,17 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Practical tip:** Choose the platform-specific variant (PlayStation or Xbox) for full wireless feature support, as the PC version requires some additional setup for console use.
 
-**Price Range:** $300-$350 <a href="https://www.amazon.com/dp/B0BNBF4T3F?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $299-$349 <a href="https://www.amazon.com/Audeze-Maxwell-Wireless-Headset-Playstation/dp/B0BP6BC17P?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 <a id="pc"></a>
-### Wooting 60HE+ Gaming Keyboard
+<a id="wooting-60he"></a>
+### Logitech G PRO X TKL Lightspeed Gaming Keyboard
 
 **Why it's great:** The Wooting 60HE+ revolutionizes competitive gaming with analog keyboard input and rapid trigger technology. This means faster response times and more precise control than traditional mechanical keyboards. Professional esports players use this keyboard because it provides a real competitive advantage.
 
 **Practical tip:** The analog input is particularly powerful in racing games and flight simulators where precise throttle and steering control matters.
 
-**Price Range:** $175-$200 <a href="https://www.amazon.com/dp/B0D1J3LWQ7?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $149-$199 <a href="https://www.amazon.com/Logitech-Lightspeed-Mechanical-LIGHTSYNC-Dual-Shot/dp/B0BRSSGBCN?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### Keychron Q1 HE Gaming Keyboard
 
@@ -156,7 +170,7 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Practical tip:** Pair this with Keychron's software for advanced customization of key mapping and lighting effects.
 
-**Price Range:** $200-$250 <a href="https://www.amazon.com/dp/B0D7VQ4J4N?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $189-$219 <a href="https://www.amazon.com/Keychron-Mechanical-Double-Rail-Compatible-Hot-swappable/dp/B0D4YKXSPD?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### Razer Viper V3 Pro Gaming Mouse
 
@@ -164,7 +178,7 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Practical tip:** Use Razer's Synapse software to customize DPI settings per game and take advantage of the wireless charging dock for hassle-free power.
 
-**Price Range:** $150-$180 <a href="https://www.amazon.com/dp/B0D4B23ZHK?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $149-$179 <a href="https://www.amazon.com/Razer-Viper-Wireless-Esports-Gaming/dp/B0CW25XR5R?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### Logitech G Pro X Superlight 2 Gaming Mouse
 
@@ -172,7 +186,7 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Practical tip:** The included power play mouse pad provides wireless charging, so the mouse never needs to be plugged in during use.
 
-**Price Range:** $160-$180 <a href="https://www.amazon.com/dp/B0CK9GZM1G?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $149-$179 <a href="https://www.amazon.com/Logitech-SUPERLIGHT-wireless-pro-grade-programmable/dp/B09NBWL8J5?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### Steam Deck OLED (512GB or 1TB)
 
@@ -180,7 +194,7 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Practical tip:** Consider the 1TB model if they have a large Steam library, as modern games take up significant storage space.
 
-**Price Range:** $550-$650 <a href="https://www.amazon.com/dp/B0CNTC6DR8?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $549-$649 <a href="https://www.amazon.com/VALVE-Steam-512GB-International-Version/dp/B0CP2YVFD4?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### Govee AI Sync Box 2 (HDMI 2.1)
 
@@ -188,7 +202,7 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Practical tip:** Set this up behind the TV or monitor for the best ambient lighting effect, and calibrate the colors to match your display.
 
-**Price Range:** $200-$250 <a href="https://www.amazon.com/dp/B0D8QKXWL9?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $219-$259 <a href="https://www.amazon.com/Govee-Backlight-Supports-144Hz-Matter/dp/B0DDPSCLFR?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### Meta Quest 3S VR Headset
 
@@ -222,6 +236,7 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Price Range:** $145-$155 <a href="https://www.amazon.com/dp/B088HHWC47?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
+<a id="pre-order"></a>
 ## Pre-Order Gaming Gifts (Coming Soon)
 
 ### Metroid Prime 4 Amiibo - Samus (Pre-Order)
@@ -256,6 +271,7 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Price Range:** $60-$70 **Release Date:** December 4, 2025 <a href="https://www.amazon.com/dp/B072JYMLT3?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">Pre-Order on Amazon</a>
 
+<a id="metroid-prime4-switch2"></a>
 ### Metroid Prime 4: Beyond - Nintendo Switch 2 (Pre-Order)
 
 **Why it's great:** Experience Metroid Prime 4: Beyond in its full glory on Nintendo Switch 2, with enhanced graphics and performance that showcase the next-generation console's power. Pre-ordering ensures your gamer gets this highly anticipated title on launch day with all the visual enhancements.
@@ -284,6 +300,7 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Price Range:** $1,000-$1,200 **Release Date:** October 30, 2025 <a href="https://www.amazon.com/dp/B0F7313X8L?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">Pre-Order on Amazon</a>
 
+<a id="kirby-air-riders"></a>
 ### Kirby Air Riders - Nintendo Switch 2 (Pre-Order)
 
 **Why it's great:** Kirby takes to the skies in this highly anticipated racing adventure that combines the beloved pink puffball's charm with thrilling airborne racing action. This game brings a fresh take on the racing genre with Kirby's signature copy abilities and colorful characters. Pre-ordering secures this family-friendly game that appeals to both kids and adults who love Nintendo's most adorable character.
@@ -316,6 +333,7 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Price Range:** $55-$65 **Release Date:** November 13, 2025 <a href="https://www.amazon.com/dp/B0FSFRY856?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">Pre-Order on Amazon</a>
 
+<a id="premium"></a>
 ## Premium Gaming Experiences ($400+)
 
 ### ASUS ROG Swift PG27UCDM Gaming Monitor (27\" 4K/240Hz QD-OLED)
@@ -324,7 +342,7 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Practical tip:** This monitor is ideal for gamers who have a powerful graphics card that can push high frame rates at 4K, maximizing the investment.
 
-**Price Range:** $900-$1,000 <a href="https://www.amazon.com/dp/B0D3M4KQ9W?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $899-$999 <a href="https://www.amazon.com/ASUS-QD-OLED-Gaming-Monitor-PG27UCDM/dp/B0DM6SHQTN?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### MSI MPG 321URX Gaming Monitor (32\" 4K/240Hz QD-OLED)
 
@@ -332,9 +350,10 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Practical tip:** The 32-inch size is ideal for desk setups with plenty of space, and works beautifully for multi-monitor configurations.
 
-**Price Range:** $1,100-$1,200 <a href="https://www.amazon.com/dp/B0D5K2LM8N?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $1,099-$1,199 <a href="https://www.amazon.com/MSI-MPG-321URX-QD-OLED-Quantum/dp/B0CTSC3VS4?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 <a id="playstation"></a>
+<a id="dualsense-edge"></a>
 ### PlayStation 5 DualSense Edge Controller
 
 **Why it's great:** Sony's premium controller takes the DualSense experience to the next level with customizable rear paddles, swappable stick modules, and multiple profile settings. This controller gives serious PlayStation gamers the tools they need for competitive play, with the same haptic feedback and adaptive triggers that make PS5 games feel incredible.
@@ -343,13 +362,14 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Price Range:** $200-$230 <a href="https://www.amazon.com/dp/B0BKQPYZQH?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
+<a id="rog-ally-x"></a>
 ### ROG Ally X Handheld Gaming PC (1TB)
 
 **Why it's great:** The ROG Ally X brings full Windows gaming to a handheld device, giving access to your entire PC game library including Steam, Epic Games, and more. The 1TB storage means you can install multiple AAA games, while the powerful AMD processor ensures smooth gameplay. This is the ultimate portable gaming solution for PC gamers.
 
 **Practical tip:** Connect this to an external monitor and wireless keyboard/mouse for a complete portable gaming PC setup.
 
-**Price Range:** $800-$900 <a href="https://www.amazon.com/dp/B0D7KQ8XMN?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $699-$799 <a href="https://www.amazon.com/ASUS-ROG-Ally-120Hz-Gaming-Handheld/dp/B0C52RFZXB?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### Samsung 990 Pro NVMe SSD with Heatsink (for PS5)
 
@@ -357,8 +377,9 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 
 **Practical tip:** Install this early to take advantage of faster loading times across all your PS5 games, not just new ones you install to it.
 
-**Price Range:** $150-$200 <a href="https://www.amazon.com/dp/B0BPZDWJ78?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $169-$229 <a href="https://www.amazon.com/SAMSUNG-Workstations-Compatible-Playstation-MZ-V9P4T0CW/dp/B0CHHFR1LG?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
+<a id="ps5-pro"></a>
 ### PlayStation 5 Pro Console
 
 **Why it's great:** The PlayStation 5 Pro represents the pinnacle of console gaming, delivering enhanced performance, faster load times, and improved graphics that make games look absolutely stunning. This upgraded console provides significant improvements over the standard PS5, with more powerful hardware that enables better frame rates, higher resolutions, and smoother gameplay. Perfect for gamers who want the absolute best PlayStation experience.
@@ -368,6 +389,7 @@ Quick links: [Nintendo](#nintendo) • [PlayStation](#playstation) • [Xbox](#x
 **Price Range:** $740-$760 <a href="https://www.amazon.com/dp/B0DGY63Z2H?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 <a id="xbox"></a>
+<a id="xbox-series-x"></a>
 ### Xbox Series X All-Digital Gaming Console (1TB)
 
 **Why it's great:** The Xbox Series X All-Digital edition offers all the power of Microsoft's flagship console without a disc drive, making it perfect for gamers who have fully embraced digital gaming. With 1TB of fast SSD storage, 4K gaming at up to 120 FPS, and access to the entire Xbox Game Pass library, this console delivers a premium gaming experience. The all-digital design also makes it more affordable and sleeker-looking.

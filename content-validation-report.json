@@ -1,11 +1,19 @@
 {
-  "timestamp": "2025-10-21T05:28:27.704Z",
+  "timestamp": "2025-10-29T23:59:26.346Z",
   "summary": {
-    "totalFiles": 45,
+    "totalFiles": 46,
     "filesWithErrors": 0,
     "totalErrors": 0,
-    "totalWarnings": 0
+    "totalWarnings": 1
   },
   "errors": [],
-  "warnings": []
+  "warnings": [
+    {
+      "file": "src/content/blog/gaming-gifts-2025.md",
+      "line": 71,
+      "message": "Description length 172 characters (should be 120-160)",
+      "fix": "Optimize description length for SEO",
+      "severity": "warning"
+    }
+  ]
 }

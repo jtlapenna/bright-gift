@@ -597,15 +597,56 @@ const blogCollection = defineCollection({
 
 ---
 
+## ⚠️ **Critical Schema Validation Rules**
+
+**BUILD FAILURE PREVENTION**: Always use correct data types to prevent deployment failures:
+
+### **Array Fields (Must be YAML arrays)**
+```yaml
+# ✅ CORRECT
+tags:
+  - gift-ideas
+  - holiday-gifts
+  - under-50
+
+keywords:
+  - last minute gifts
+  - emergency gifts
+
+# ❌ INCORRECT (causes build failure)
+tags: gift-ideas, holiday-gifts, under-50
+keywords: last minute gifts, emergency gifts
+```
+
+### **String Fields (Must be strings)**
+```yaml
+# ✅ CORRECT
+title: "Emergency Gift Guide: 30 Last-Minute Ideas"
+description: "Discover thoughtful last-minute gift ideas."
+
+# ❌ INCORRECT (causes build failure)
+title: ["Emergency Gift Guide", "30 Last-Minute Ideas"]
+```
+
+### **Common Violations**
+- **tags**: Must be array, not comma-separated string
+- **keywords**: Can be array OR string (prefer array for consistency)
+- **title/description**: Must be strings, not arrays
+- **category**: Must be string, not array
+
+---
+
 ## 📋 **Quality Checklist**
 
 ### **Pre-Publishing Frontmatter Review**
+- [ ] **Schema Compliance**: All fields use correct data types (arrays vs strings)
 - [ ] All required fields completed
 - [ ] Meta title under 60 characters
 - [ ] Meta description 140-160 characters
 - [ ] Primary keyword in title and meta title
 - [ ] All image paths correct and files exist
-- [ ] Tags relevant and properly formatted
+- [ ] Tags in array format (not comma-separated string)
+- [ ] Keywords in array format for consistency
 - [ ] Date format correct (YYYY-MM-DD)
 - [ ] Status set to "published"
 - [ ] Affiliate links properly tracked

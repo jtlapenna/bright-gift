@@ -504,9 +504,11 @@ spell_checked: true
 
 ### Quality Control Checklist
 
+- [ ] **Schema Compliance**: All fields use correct data types (arrays vs strings)
 - [ ] Title is compelling and SEO-optimized
 - [ ] Description is under 160 characters
 - [ ] Keywords are relevant and targeted
+- [ ] Tags are in array format (not comma-separated string)
 - [ ] Images are properly sized and optimized
 - [ ] Affiliate disclosure is included (if applicable)
 - [ ] Social media content is engaging
@@ -519,17 +521,57 @@ spell_checked: true
 - [ ] affiliateLinks array populated for auditing
 - [ ] siteId/postId/workflowId present (if workflow-managed)
 
+### Schema Validation Rules
+
+**CRITICAL**: Always use the correct data types for each field to prevent build failures:
+
+#### Array Fields (Must be YAML arrays)
+```yaml
+# ✅ CORRECT - Array format
+tags:
+  - gift-ideas
+  - holiday-gifts
+  - under-50
+
+keywords:
+  - last minute gifts
+  - emergency gifts
+  - quick delivery
+
+# ❌ INCORRECT - String format (will cause build failure)
+tags: gift-ideas, holiday-gifts, under-50
+keywords: last minute gifts, emergency gifts, quick delivery
+```
+
+#### String Fields (Must be strings)
+```yaml
+# ✅ CORRECT - String format
+title: "Emergency Gift Guide: 30 Last-Minute Ideas"
+description: "Discover thoughtful last-minute gift ideas that look carefully planned."
+
+# ❌ INCORRECT - Array format (will cause build failure)
+title: ["Emergency Gift Guide", "30 Last-Minute Ideas"]
+```
+
+#### Common Schema Violations to Avoid
+- **tags**: Must be array, not comma-separated string
+- **keywords**: Can be array OR string (but prefer array for consistency)
+- **title**: Must be string, not array
+- **description**: Must be string, not array
+- **category**: Must be string, not array
+
 ### Automated Validation
 
 The system automatically validates:
 
-1. **Required Fields**: All required fields are present
-2. **Field Lengths**: Titles and descriptions meet length requirements
-3. **Image Formats**: Images are in correct format and size
-4. **Affiliate Compliance**: Proper disclosure for affiliate posts
-5. **SEO Optimization**: Meta data is properly formatted
-6. **Content Quality**: Word count and reading level are appropriate
-7. **Site-Specific Rules**: Custom validation for each site
+1. **Schema Compliance**: All fields match required data types
+2. **Required Fields**: All required fields are present
+3. **Field Lengths**: Titles and descriptions meet length requirements
+4. **Image Formats**: Images are in correct format and size
+5. **Affiliate Compliance**: Proper disclosure for affiliate posts
+6. **SEO Optimization**: Meta data is properly formatted
+7. **Content Quality**: Word count and reading level are appropriate
+8. **Site-Specific Rules**: Custom validation for each site
 
 ## Best Practices
 
