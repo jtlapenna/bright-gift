@@ -261,25 +261,25 @@ function determineAfrofiliateLink(title: string, tag: string, interests?: string
       link: AFROFILIATE_LINKS['beautystat'],
       categories: ['beauty', 'skincare', 'cosmetics', 'wellness', 'self-care'],
       keywords: ['beauty', 'skincare', 'cosmetic', 'beauty products', 'wellness'],
-      exclusions: ['wine', 'alcohol', 'food', 'beverage', 'kitchen', 'cooking', 'athletic', 'sport', 'fitness']
+      exclusions: ['wine', 'alcohol', 'beer', 'bottle', 'opener', 'food', 'beverage', 'kitchen', 'cooking', 'athletic', 'sport', 'fitness']
     },
     'furi sport': {
       link: AFROFILIATE_LINKS['furi-sport'],
       categories: ['athletic wear', 'sports equipment', 'fitness gear', 'workout accessories'],
       keywords: ['athletic', 'sport', 'fitness', 'workout', 'exercise', 'gym', 'training'],
-      exclusions: ['wine', 'alcohol', 'food', 'beverage', 'kitchen', 'cooking', 'beauty', 'skincare', 'cosmetic']
+      exclusions: ['wine', 'alcohol', 'beer', 'bottle', 'opener', 'food', 'beverage', 'kitchen', 'cooking', 'beauty', 'skincare', 'cosmetic']
     },
     'be yourself 314': {
       link: AFROFILIATE_LINKS['be-yourself-314'],
       categories: ['dance fitness', 'athletic wear', 'fitness apparel'],
       keywords: ['dance', 'fitness', 'athletic', 'workout', 'exercise'],
-      exclusions: ['wine', 'alcohol', 'food', 'beverage', 'kitchen', 'cooking', 'beauty', 'skincare', 'cosmetic']
+      exclusions: ['wine', 'alcohol', 'beer', 'bottle', 'opener', 'food', 'beverage', 'kitchen', 'cooking', 'beauty', 'skincare', 'cosmetic']
     },
     'be rooted': {
       link: AFROFILIATE_LINKS['be-rooted'],
       categories: ['stationery', 'planners', 'journals', 'organization'],
       keywords: ['planner', 'journal', 'stationery', 'organization', 'planning'],
-      exclusions: ['wine', 'alcohol', 'food', 'beverage', 'kitchen', 'cooking', 'athletic', 'sport', 'fitness', 'beauty', 'skincare']
+      exclusions: ['wine', 'alcohol', 'beer', 'bottle', 'opener', 'food', 'beverage', 'kitchen', 'cooking', 'athletic', 'sport', 'fitness', 'beauty', 'skincare']
     },
     'kadalys': {
       link: AFROFILIATE_LINKS['kadalys'],
@@ -291,19 +291,19 @@ function determineAfrofiliateLink(title: string, tag: string, interests?: string
       link: AFROFILIATE_LINKS['endorf'],
       categories: ['wellness', 'supplements', 'health', 'nutrition'],
       keywords: ['wellness', 'supplement', 'health', 'nutrition', 'vitamin'],
-      exclusions: ['wine', 'alcohol', 'food', 'beverage', 'kitchen', 'cooking', 'athletic', 'sport', 'fitness', 'beauty', 'skincare']
+      exclusions: ['wine', 'alcohol', 'beer', 'bottle', 'opener', 'food', 'beverage', 'kitchen', 'cooking', 'athletic', 'sport', 'fitness', 'beauty', 'skincare']
     },
     'caribe coffee': {
       link: AFROFILIATE_LINKS['caribe-coffee'],
       categories: ['coffee', 'beverages', 'food', 'sustainable'],
       keywords: ['coffee', 'beverage', 'drink', 'sustainable', 'organic'],
-      exclusions: ['wine', 'alcohol', 'athletic', 'sport', 'fitness', 'beauty', 'skincare', 'cosmetic']
+      exclusions: ['wine', 'alcohol', 'beer', 'bottle', 'opener', 'athletic', 'sport', 'fitness', 'beauty', 'skincare', 'cosmetic']
     },
     'cashblack': {
       link: AFROFILIATE_LINKS['cashblack-uk'],
       categories: ['financial', 'cashback', 'savings'],
       keywords: ['cashback', 'financial', 'savings', 'money'],
-      exclusions: ['wine', 'alcohol', 'food', 'beverage', 'kitchen', 'cooking', 'athletic', 'sport', 'fitness', 'beauty', 'skincare']
+      exclusions: ['wine', 'alcohol', 'beer', 'bottle', 'opener', 'food', 'beverage', 'kitchen', 'cooking', 'athletic', 'sport', 'fitness', 'beauty', 'skincare']
     }
   };
   
