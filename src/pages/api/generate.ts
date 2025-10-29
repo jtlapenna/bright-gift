@@ -519,6 +519,9 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
     }
     if (!ideasText && lastModelError) throw lastModelError;
 
+    // Log raw model output for forensic debugging
+    console.log('🔍 DEBUG Raw LLM response (first 2k chars):', ideasText.slice(0, 2000));
+
     // Parse markdown output into ideas (simple regex for demo)
     const ideaRegex = /\*\*(\d+\.\s+.+?)\*\*\s+([^_]+)_Tag: ([^_]+)_/g;
     let match;
@@ -527,7 +530,10 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
     while ((match = ideaRegex.exec(ideasText)) !== null) {
       const title = match[1].replace(/^\d+\.\s*/, '');
       let description = match[2].trim();
-      const tag = standardizeTag(match[3].trim());
+      const rawTag = match[3].trim();
+      console.log('🔍 DEBUG Parsed raw tag from LLM before normalization:', rawTag, 'for title:', title);
+      const tag = standardizeTag(rawTag);
+      console.log('🔍 DEBUG Normalized tag:', tag);
       let link = null;
       let icon = null;
       
