@@ -295,8 +295,9 @@ function determineAfrofiliateLink(title: string, tag: string, interests?: string
     },
     'caribe coffee': {
       link: AFROFILIATE_LINKS['caribe-coffee'],
-      categories: ['coffee', 'beverages', 'food', 'sustainable'],
-      keywords: ['coffee', 'beverage', 'drink', 'sustainable', 'organic'],
+      // Restrict to coffee-specific context only to avoid matching generic food/beverage
+      categories: ['coffee', 'coffee gear', 'coffee accessories', 'sustainable coffee'],
+      keywords: ['coffee', 'espresso', 'latte', 'cappuccino', 'beans', 'coffee beans', 'ground coffee', 'coffee maker', 'coffee grinder', 'brew', 'roast', 'organic coffee', 'sustainable coffee'],
       exclusions: ['wine', 'alcohol', 'beer', 'bottle', 'opener', 'athletic', 'sport', 'fitness', 'beauty', 'skincare', 'cosmetic']
     },
     'cashblack': {
@@ -476,6 +477,9 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
     const openai = new OpenAI(project ? { apiKey, project } : { apiKey });
     console.log('🔍 OpenAI client created successfully');
     const prompt = buildPrompt({ recipient, interests, budget, styles });
+    // Debug: Log the exact prompt sent to the LLM for traceability
+    console.log('🔍 DEBUG Prompt sent to LLM (truncated 1k chars):', prompt.slice(0, 1000));
+    console.log('🔍 DEBUG Styles in request:', Array.isArray(styles) ? JSON.stringify(styles) : styles);
 
     // Try multiple models to improve reliability across accounts/quotas
     const candidateModels = ['gpt-4o-mini', 'gpt-4o', 'gpt-4-turbo'];
