@@ -250,47 +250,60 @@ function determineAfrofiliateLink(title: string, tag: string, interests?: string
   const lowerTag = tag.toLowerCase();
   const lowerInterests = interests ? interests.toLowerCase() : '';
   
+  // Debug: Log the actual interests being used for matching
+  if (title.toLowerCase().includes('wine') || tag.toLowerCase().includes('wine')) {
+    console.log(`🔍 DEBUG Wine item matching - Title: "${title}", Tag: "${tag}", Interests: "${interests}"`);
+  }
+  
   // Afrofiliate brand mappings with category relevance
   const afrofiliateBrands = {
     'beautystat': {
       link: AFROFILIATE_LINKS['beautystat'],
       categories: ['beauty', 'skincare', 'cosmetics', 'wellness', 'self-care'],
-      keywords: ['beauty', 'skincare', 'cosmetic', 'beauty products', 'wellness']
+      keywords: ['beauty', 'skincare', 'cosmetic', 'beauty products', 'wellness'],
+      exclusions: ['wine', 'alcohol', 'food', 'beverage', 'kitchen', 'cooking', 'athletic', 'sport', 'fitness']
     },
     'furi sport': {
       link: AFROFILIATE_LINKS['furi-sport'],
       categories: ['athletic wear', 'sports equipment', 'fitness gear', 'workout accessories'],
-      keywords: ['athletic', 'sport', 'fitness', 'workout', 'exercise', 'gym', 'training']
+      keywords: ['athletic', 'sport', 'fitness', 'workout', 'exercise', 'gym', 'training'],
+      exclusions: ['wine', 'alcohol', 'food', 'beverage', 'kitchen', 'cooking', 'beauty', 'skincare', 'cosmetic']
     },
     'be yourself 314': {
       link: AFROFILIATE_LINKS['be-yourself-314'],
       categories: ['dance fitness', 'athletic wear', 'fitness apparel'],
-      keywords: ['dance', 'fitness', 'athletic', 'workout', 'exercise']
+      keywords: ['dance', 'fitness', 'athletic', 'workout', 'exercise'],
+      exclusions: ['wine', 'alcohol', 'food', 'beverage', 'kitchen', 'cooking', 'beauty', 'skincare', 'cosmetic']
     },
     'be rooted': {
       link: AFROFILIATE_LINKS['be-rooted'],
       categories: ['stationery', 'planners', 'journals', 'organization'],
-      keywords: ['planner', 'journal', 'stationery', 'organization', 'planning']
+      keywords: ['planner', 'journal', 'stationery', 'organization', 'planning'],
+      exclusions: ['wine', 'alcohol', 'food', 'beverage', 'kitchen', 'cooking', 'athletic', 'sport', 'fitness', 'beauty', 'skincare']
     },
     'kadalys': {
       link: AFROFILIATE_LINKS['kadalys'],
       categories: ['skincare', 'beauty', 'organic', 'wellness'],
-      keywords: ['skincare', 'beauty', 'organic', 'wellness', 'natural']
+      keywords: ['skincare', 'beauty', 'organic', 'wellness', 'natural'],
+      exclusions: ['wine', 'alcohol', 'food', 'beverage', 'kitchen', 'cooking', 'athletic', 'sport', 'fitness']
     },
     'endorf': {
       link: AFROFILIATE_LINKS['endorf'],
       categories: ['wellness', 'supplements', 'health', 'nutrition'],
-      keywords: ['wellness', 'supplement', 'health', 'nutrition', 'vitamin']
+      keywords: ['wellness', 'supplement', 'health', 'nutrition', 'vitamin'],
+      exclusions: ['wine', 'alcohol', 'food', 'beverage', 'kitchen', 'cooking', 'athletic', 'sport', 'fitness', 'beauty', 'skincare']
     },
     'caribe coffee': {
       link: AFROFILIATE_LINKS['caribe-coffee'],
       categories: ['coffee', 'beverages', 'food', 'sustainable'],
-      keywords: ['coffee', 'beverage', 'drink', 'sustainable', 'organic']
+      keywords: ['coffee', 'beverage', 'drink', 'sustainable', 'organic'],
+      exclusions: ['wine', 'alcohol', 'athletic', 'sport', 'fitness', 'beauty', 'skincare', 'cosmetic']
     },
     'cashblack': {
       link: AFROFILIATE_LINKS['cashblack-uk'],
       categories: ['financial', 'cashback', 'savings'],
-      keywords: ['cashback', 'financial', 'savings', 'money']
+      keywords: ['cashback', 'financial', 'savings', 'money'],
+      exclusions: ['wine', 'alcohol', 'food', 'beverage', 'kitchen', 'cooking', 'athletic', 'sport', 'fitness', 'beauty', 'skincare']
     }
   };
   
@@ -301,27 +314,42 @@ function determineAfrofiliateLink(title: string, tag: string, interests?: string
     }
   }
   
-  // Check for category and keyword relevance with stricter whole-word matching
+  // Check for contextual relevance with stricter matching
   for (const [brandName, brandData] of Object.entries(afrofiliateBrands)) {
-    // Check if interests match brand keywords (must be whole word/phrase)
-    const interestsMatch = brandData.keywords.some(keyword => {
-      // Escape special regex characters in keyword
+    // First check for exclusion terms - if the gift suggestion contains exclusion terms, skip this brand
+    const hasExclusion = brandData.exclusions.some(exclusion => {
+      const exclusionRegex = new RegExp(`\\b${exclusion}\\b`, 'i');
+      return exclusionRegex.test(lowerTitle) || exclusionRegex.test(lowerTag);
+    });
+    
+    if (hasExclusion) {
+      continue;
+    }
+    
+    // Check if title or tag matches brand categories/keywords (primary matching)
+    const titleTagMatch = brandData.keywords.some(keyword => {
       const escapedKeyword = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      // Use word boundaries for whole-word/phrase matching
       const keywordRegex = new RegExp(`\\b${escapedKeyword}\\b`, 'i');
-      return keywordRegex.test(lowerInterests) || keywordRegex.test(lowerTag);
-    });
-    
-    // Check if tag matches brand categories (must be whole word/phrase)
-    const tagMatch = brandData.categories.some(category => {
-      // Escape special regex characters in category
+      return keywordRegex.test(lowerTitle) || keywordRegex.test(lowerTag);
+    }) || brandData.categories.some(category => {
       const escapedCategory = category.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      // Use word boundaries for whole-word/phrase matching
       const categoryRegex = new RegExp(`\\b${escapedCategory}\\b`, 'i');
-      return categoryRegex.test(lowerTag) || categoryRegex.test(lowerTitle);
+      return categoryRegex.test(lowerTitle) || categoryRegex.test(lowerTag);
     });
     
-    if (interestsMatch || tagMatch) {
+    if (titleTagMatch) {
+      return brandData.link;
+    }
+    
+    // Only check user interests if the gift suggestion itself is contextually relevant
+    // This prevents false matches when user interests contain unrelated keywords
+    const interestsMatch = brandData.keywords.some(keyword => {
+      const escapedKeyword = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const keywordRegex = new RegExp(`\\b${escapedKeyword}\\b`, 'i');
+      return keywordRegex.test(lowerInterests);
+    });
+    
+    if (interestsMatch) {
       return brandData.link;
     }
   }
@@ -394,6 +422,8 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
     data = await request.json();
     console.log('🔍 POST /api/generate received data:', data);
     const { recipient, interests, budget, styles } = data;
+    // Debug: Log interests value to track if it's being modified
+    console.log('🔍 DEBUG Raw interests from request:', JSON.stringify(interests));
     if (!recipient || !interests || !budget) {
       return new Response(
         JSON.stringify({ error: 'Missing required fields' }),
