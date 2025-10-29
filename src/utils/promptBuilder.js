@@ -53,7 +53,7 @@ function buildPrompt(data) {
                     styleGuidance += `\n- For wellness: Focus on health, self-care, mindfulness, fitness, nutrition, or wellness-enhancing items. When possible, suggest products from Black-owned wellness brands like Endorf or Caribe Coffee.`;
                     break;
                 case 'athletics':
-                    styleGuidance += `\n- For athletics: Include sports equipment, athletic wear, fitness gear, workout accessories, or performance-enhancing items. When possible, suggest products from Black-owned athletic brands like Furi Sport or Be Yourself 314.`;
+                    styleGuidance += `\n- For athletics: Include sports equipment, athletic wear, fitness gear, workout accessories, or performance-enhancing items. When possible, suggest products from Black-owned athletic brands like Furi Sport or Be Yourself 314. IMPORTANT: Only categorize items as "workout accessories" if they are genuinely related to fitness, exercise, or athletic activities. Do not categorize kitchen tools, beverage accessories, or non-athletic items as workout accessories.`;
                     break;
                 case 'beauty':
                     styleGuidance += `\n- For beauty: Focus on skincare, makeup, beauty tools, grooming products, or beauty-enhancing items. When possible, suggest products from Black-owned beauty brands like BeautyStat or Kadalys.`;
@@ -104,9 +104,9 @@ function buildPrompt(data) {
         prompt += `\n\nAGE-APPROPRIATE GUIDANCE FOR OLDER RECIPIENTS:\n- Focus on practical, useful items that enhance daily life\n- Suggest items that are easy to use and maintain\n- Consider comfort and accessibility in suggestions\n- For readers: suggest comfortable reading aids, large-print books, or ergonomic reading accessories\n- Avoid overly complex gadgets or items requiring technical knowledge\n- Prioritize items that support independence and quality of life`;
     }
     
-    // Add specific guidance for reading interests
-    if (interests && (interests.toLowerCase().includes('reading') || interests.toLowerCase().includes('read') || interests.toLowerCase().includes('book'))) {
-        prompt += `\n\nSPECIAL INSTRUCTIONS FOR READING INTERESTS:\n- Include a mix of actual books and reading accessories\n- For books: suggest specific, popular titles that are likely available on Bookshop.org\n- For reading accessories: suggest practical items like reading lights, bookmarks, book stands, reading glasses\n- Consider the recipient's age and reading habits when suggesting items\n- Focus on items that enhance the reading experience\n- Avoid generic "wellness" items unless they directly relate to reading comfort`;
+    // Add specific guidance for beverage interests
+    if (interests && (interests.toLowerCase().includes('drinking') || interests.toLowerCase().includes('beer') || interests.toLowerCase().includes('wine') || interests.toLowerCase().includes('coffee') || interests.toLowerCase().includes('tea'))) {
+        prompt += `\n\nSPECIAL INSTRUCTIONS FOR BEVERAGE INTERESTS:\n- For beer/wine interests: Suggest appropriate beverage accessories like bottle openers, wine glasses, beer steins, wine bags, etc.\n- For coffee interests: Suggest coffee makers, mugs, coffee accessories, coffee beans, etc.\n- For tea interests: Suggest tea sets, tea accessories, tea varieties, etc.\n- IMPORTANT: Categorize beverage accessories appropriately:\n  * Use "Kitchen Tools" for bottle openers, corkscrews, etc.\n  * Use "Food & Beverages" for actual beverages, glasses, mugs, etc.\n  * Use "Kitchen Accessories" for beverage-related tools\n  * NEVER categorize beverage accessories as "Workout Accessories" or "Athletic Wear"\n- Only suggest athletic/sports items if the recipient has genuine athletic interests, not just beverage interests`;
     }
     
     // Add specific guidance for book-lover style to ensure mix of books and accessories
