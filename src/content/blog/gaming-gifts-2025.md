@@ -46,7 +46,7 @@ Rather than guessing, use this guide to match gifts to the platforms and play st
   - Nintendo: [Switch 2 Pro Controller](#switch2-pro-controller), [Kirby Air Riders](#kirby-air-riders), [Metroid Prime 4 (Switch 2)](#metroid-prime4-switch2)
   - PlayStation: [DualSense Edge](#dualsense-edge), [PS5 Pro](#ps5-pro)
   - Xbox: [Xbox Series X (All-Digital)](#xbox-series-x)
-  - PC: [Wooting 60HE+](#wooting-60he), [ROG Ally X](#rog-ally-x)
+  - PC: [ROG Ally X](#rog-ally-x)
 - Quick tip: Match the gift to the platform they already have. If they play on Switch 2, look for “Switch 2” labels; if they’re on PS5, stick to PlayStation accessories and games.
 
 Quick links: [Budget](#budget) • [Mid‑Range](#mid-range) • [Premium](#premium) • [Pre‑Orders](#pre-order)
@@ -143,6 +143,14 @@ Quick links: [Budget](#budget) • [Mid‑Range](#mid-range) • [Premium](#prem
 
 **Price Range:** $55-$65 <a href="https://www.amazon.com/dp/B0FFGJ3TWP?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
+### Elgato Stream Deck Dreamscape Edition
+
+**Why it's great:** A stylish limited-edition take on the Stream Deck with the same powerful macro control for streaming, editing, and workflows—now in a unique Dreamscape finish.
+
+**Practical tip:** Create profiles per app (OBS, Discord, Premiere) and use multi‑actions to chain routine tasks to a single key.
+
+**Price Range:** $125-$135 <a href="https://www.amazon.com/dp/B09738CV2G?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+
 <a id="mid-range"></a>
 ## Mid-Range Gaming Upgrades ($150-$400)
 
@@ -155,12 +163,12 @@ Quick links: [Budget](#budget) • [Mid‑Range](#mid-range) • [Premium](#prem
 **Price Range:** $299-$349 <a href="https://www.amazon.com/Audeze-Maxwell-Wireless-Headset-Playstation/dp/B0BP6BC17P?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 <a id="pc"></a>
-<a id="wooting-60he"></a>
+<a id="logitech-pro-x-tkl"></a>
 ### Logitech G PRO X TKL Lightspeed Gaming Keyboard
 
-**Why it's great:** The Wooting 60HE+ revolutionizes competitive gaming with analog keyboard input and rapid trigger technology. This means faster response times and more precise control than traditional mechanical keyboards. Professional esports players use this keyboard because it provides a real competitive advantage.
+**Why it's great:** Logitech’s tournament-grade TKL board delivers pro-level performance with LIGHTSPEED wireless, hot-swappable GX switches, and crisp PBT keycaps in a compact layout that frees mouse space. Latency is exceptionally low and battery life is strong for long sessions.
 
-**Practical tip:** The analog input is particularly powerful in racing games and flight simulators where precise throttle and steering control matters.
+**Practical tip:** Pair it with Logitech’s Powerplay pad or keep the USB receiver on a short front‑panel extension for the best wireless signal at LANs.
 
 **Price Range:** $149-$199 <a href="https://www.amazon.com/Logitech-Lightspeed-Mechanical-LIGHTSYNC-Dual-Shot/dp/B0BRSSGBCN?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
@@ -188,13 +196,23 @@ Quick links: [Budget](#budget) • [Mid‑Range](#mid-range) • [Premium](#prem
 
 **Price Range:** $149-$179 <a href="https://www.amazon.com/Logitech-SUPERLIGHT-wireless-pro-grade-programmable/dp/B09NBWL8J5?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
-### Steam Deck OLED (512GB or 1TB)
+### PlayStation 5 DualSense Edge Controller
 
-**Why it's great:** The Steam Deck OLED brings full PC gaming to a handheld device, allowing gamers to take their entire Steam library anywhere. The vibrant OLED screen makes games look stunning, while the improved battery life means longer play sessions on the go. This is perfect for gamers who travel or want flexibility in where they play.
+**Why it's great:** Sony’s pro controller adds swappable sticks, rear paddles, and multiple profiles on top of DualSense haptics and adaptive triggers—huge quality‑of‑life for competitive and comfort play.
 
-**Practical tip:** Consider the 1TB model if they have a large Steam library, as modern games take up significant storage space.
+**Practical tip:** Create per‑genre profiles (FPS, racing, action) and map paddles to actions that keep thumbs on the sticks.
 
-**Price Range:** $549-$649 <a href="https://www.amazon.com/VALVE-Steam-512GB-International-Version/dp/B0CP2YVFD4?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $200-$230 <a href="https://www.amazon.com/dp/B0BKQPYZQH?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+
+### Samsung 990 Pro NVMe SSD with Heatsink (for PS5)
+
+**Why it's great:** A top‑tier PCIe 4.0 SSD that slashes load times and adds tons of fast storage. The included heatsink makes it PS5‑ready out of the box.
+
+**Practical tip:** Move your most‑played titles onto the SSD to feel the biggest day‑to‑day benefit.
+
+**Price Range:** $169-$229 <a href="https://www.amazon.com/SAMSUNG-Workstations-Compatible-Playstation-MZ-V9P4T0CW/dp/B0CHHFR1LG?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+
+<!-- Moved Steam Deck OLED to Premium section -->
 
 ### Govee AI Sync Box 2 (HDMI 2.1)
 
@@ -220,13 +238,7 @@ Quick links: [Budget](#budget) • [Mid‑Range](#mid-range) • [Premium](#prem
 
 **Price Range:** $145-$155 <a href="https://www.amazon.com/dp/B08N612MC8?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
-### Elgato Stream Deck Dreamscape Edition
-
-**Why it's great:** The Dreamscape edition brings a beautiful, limited-edition color scheme to Elgato's Stream Deck, offering the same powerful stream control with a unique visual flair. This version includes all the same features as the standard Stream Deck but with a distinctive design that makes your streaming setup stand out. Perfect for streamers who want both functionality and aesthetic appeal.
-
-**Practical tip:** The Dreamscape design pairs beautifully with other Elgato Dreamscape products like the Wave microphone for a cohesive, professional streaming aesthetic.
-
-**Price Range:** $125-$135 <a href="https://www.amazon.com/dp/B09738CV2G?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<!-- Moved Elgato Stream Deck Dreamscape Edition to Budget section -->
 
 ### Elgato Wave Dreamscape Microphone
 
@@ -336,6 +348,14 @@ Quick links: [Budget](#budget) • [Mid‑Range](#mid-range) • [Premium](#prem
 <a id="premium"></a>
 ## Premium Gaming Experiences ($400+)
 
+### Steam Deck OLED (512GB or 1TB)
+
+**Why it's great:** The Steam Deck OLED brings full PC gaming to a handheld device, letting gamers take their Steam library anywhere. The OLED screen looks fantastic and the bigger battery enables longer sessions.
+
+**Practical tip:** Opt for 1TB if they rotate many AAA titles; storage fills fast with modern games.
+
+**Price Range:** $549-$649 <a href="https://www.amazon.com/VALVE-Steam-512GB-International-Version/dp/B0CP2YVFD4?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+
 ### ASUS ROG Swift PG27UCDM Gaming Monitor (27\" 4K/240Hz QD-OLED)
 
 **Why it's great:** This monitor represents the pinnacle of gaming displays, combining 4K resolution with 240Hz refresh rate and QD-OLED technology for perfect blacks and vibrant colors. Games look absolutely breathtaking, and the high refresh rate provides buttery-smooth gameplay that gives competitive players a real advantage.
@@ -354,13 +374,7 @@ Quick links: [Budget](#budget) • [Mid‑Range](#mid-range) • [Premium](#prem
 
 <a id="playstation"></a>
 <a id="dualsense-edge"></a>
-### PlayStation 5 DualSense Edge Controller
-
-**Why it's great:** Sony's premium controller takes the DualSense experience to the next level with customizable rear paddles, swappable stick modules, and multiple profile settings. This controller gives serious PlayStation gamers the tools they need for competitive play, with the same haptic feedback and adaptive triggers that make PS5 games feel incredible.
-
-**Practical tip:** Set up different profiles for different game genres, with customized paddle mappings that give you faster access to important actions.
-
-**Price Range:** $200-$230 <a href="https://www.amazon.com/dp/B0BKQPYZQH?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<!-- Moved DualSense Edge to Mid-Range section -->
 
 <a id="rog-ally-x"></a>
 ### ROG Ally X Handheld Gaming PC (1TB)
@@ -371,13 +385,7 @@ Quick links: [Budget](#budget) • [Mid‑Range](#mid-range) • [Premium](#prem
 
 **Price Range:** $699-$799 <a href="https://www.amazon.com/ASUS-ROG-Ally-120Hz-Gaming-Handheld/dp/B0C52RFZXB?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
-### Samsung 990 Pro NVMe SSD with Heatsink (for PS5)
-
-**Why it's great:** Expand your PS5's storage with one of the fastest NVMe SSDs available. The 990 Pro dramatically reduces game load times and allows you to store dozens of games. The included heatsink is required for PS5 compatibility and ensures optimal performance during extended gaming sessions.
-
-**Practical tip:** Install this early to take advantage of faster loading times across all your PS5 games, not just new ones you install to it.
-
-**Price Range:** $169-$229 <a href="https://www.amazon.com/SAMSUNG-Workstations-Compatible-Playstation-MZ-V9P4T0CW/dp/B0CHHFR1LG?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<!-- Moved Samsung 990 Pro to Mid-Range section -->
 
 <a id="ps5-pro"></a>
 ### PlayStation 5 Pro Console
