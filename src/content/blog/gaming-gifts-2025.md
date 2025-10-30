@@ -37,19 +37,19 @@ Rather than guessing, use this guide to match gifts to the platforms and play st
 ## How to use this guide (find the perfect gift fast)
 
 - By budget:
-  - Jump to [Budget‑Friendly](#budget) • [Mid‑Range](#mid-range) • [Premium](#premium) • [Pre‑Orders](#pre-order)
+  - Jump to <a href="#budget" class="amazon-link">Budget‑Friendly</a> • <a href="#mid-range" class="amazon-link">Mid‑Range</a> • <a href="#premium" class="amazon-link">Premium</a> • <a href="#pre-order" class="amazon-link">Pre‑Orders</a>
 - By gift type:
   - Accessories (controllers, headsets, keyboards/mice, lighting) → Budget‑Friendly & Mid‑Range.
   - Big‑ticket upgrades (consoles, top monitors, handheld PCs) → Premium.
   - Pre‑orders (holiday hype items) → Pre‑Order section for the most talked‑about launches.
 - Console highlights (quick jumps):
-  - Nintendo: [Switch 2 Pro Controller](#switch2-pro-controller), [Kirby Air Riders](#kirby-air-riders), [Metroid Prime 4 (Switch 2)](#metroid-prime4-switch2)
-  - PlayStation: [DualSense Edge](#dualsense-edge), [PS5 Pro](#ps5-pro)
-  - Xbox: [Xbox Series X (All-Digital)](#xbox-series-x)
-  - PC: [ROG Ally X](#rog-ally-x)
-- Quick tip: Match the gift to the platform they already have. If they play on Switch 2, look for “Switch 2” labels; if they’re on PS5, stick to PlayStation accessories and games.
+  - Nintendo: <a href="#switch2-pro-controller" class="amazon-link">Switch 2 Pro Controller</a>, <a href="#kirby-air-riders" class="amazon-link">Kirby Air Riders</a>, <a href="#metroid-prime4-switch2" class="amazon-link">Metroid Prime 4 (Switch 2)</a>
+  - PlayStation: <a href="#dualsense-edge" class="amazon-link">DualSense Edge</a>, <a href="#ps5-pro" class="amazon-link">PS5 Pro</a>
+  - Xbox: <a href="#xbox-series-x" class="amazon-link">Xbox Series X (All-Digital)</a>
+  - PC: <a href="#rog-ally-x" class="amazon-link">ROG Ally X</a>
+- Quick tip: Match the gift to the platform they already have. If they play on Switch 2, look for "Switch 2" labels; if they're on PS5, stick to PlayStation accessories and games.
 
-Quick links: [Budget](#budget) • [Mid‑Range](#mid-range) • [Premium](#premium) • [Pre‑Orders](#pre-order)
+Quick links: <a href="#budget" class="amazon-link">Budget</a> • <a href="#mid-range" class="amazon-link">Mid‑Range</a> • <a href="#premium" class="amazon-link">Premium</a> • <a href="#pre-order" class="amazon-link">Pre‑Orders</a>
 
 <a id="budget"></a>
 ## Budget-Friendly Gaming Accessories ($50-$150)
