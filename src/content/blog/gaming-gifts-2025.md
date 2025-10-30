@@ -212,6 +212,7 @@ Quick links: <a href="#budget" class="amazon-link">Budget</a> • <a href="#mid-
 
 **Price Range:** $149-$179 <a href="https://www.amazon.com/Logitech-SUPERLIGHT-wireless-pro-grade-programmable/dp/B09NBWL8J5?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
+<a id="dualsense-edge"></a>
 ### PlayStation 5 DualSense Edge Controller
 
 **Why it's great:** Sony’s pro controller adds swappable sticks, rear paddles, and multiple profiles on top of DualSense haptics and adaptive triggers—huge quality‑of‑life for competitive and comfort play.
@@ -371,9 +372,6 @@ Quick links: <a href="#budget" class="amazon-link">Budget</a> • <a href="#mid-
 **Price Range:** $1,099-$1,199 <a href="https://www.amazon.com/MSI-MPG-321URX-QD-OLED-Quantum/dp/B0CTSC3VS4?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 <a id="playstation"></a>
-<a id="dualsense-edge"></a>
-<!-- Moved DualSense Edge to Mid-Range section -->
-
 <a id="rog-ally-x"></a>
 ### ROG Ally X Handheld Gaming PC (1TB)
 
