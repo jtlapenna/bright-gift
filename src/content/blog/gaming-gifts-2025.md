@@ -151,6 +151,31 @@ Quick links: [Budget](#budget) • [Mid‑Range](#mid-range) • [Premium](#prem
 
 **Price Range:** $125-$135 <a href="https://www.amazon.com/dp/B09738CV2G?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
+### Nanoleaf Wall Panels Starter Kit
+
+**Why it's great:** Transform any gaming space into a visually stunning environment with customizable LED wall panels that sync with your games and music. The Nanoleaf starter kit lets you create unique wall art that responds to your gaming sessions, creating an immersive atmosphere that enhances the entire gaming experience. These panels are easy to install and can be arranged in countless creative configurations.
+
+**Practical tip:** Position the panels around your monitor or TV to create a wraparound lighting effect that extends your screen's visuals into your gaming space.
+
+**Price Range:** $145-$155 <a href="https://www.amazon.com/dp/B08N612MC8?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+
+### Elgato Wave Dreamscape Microphone
+
+**Why it's great:** The Dreamscape edition of the Elgato Wave microphone combines professional audio quality with a stunning limited-edition color scheme. This USB microphone delivers broadcast-quality sound perfect for streaming, podcasting, or gaming communication, while the unique Dreamscape design adds visual appeal to your setup. The microphone features intuitive mixing software that lets you control your audio in real-time.
+
+**Practical tip:** Pair this with the Dreamscape Stream Deck for a coordinated, professional streaming setup that looks as good as it sounds.
+
+**Price Range:** $145-$155 <a href="https://www.amazon.com/dp/B088HHWC47?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+
+<a id="logitech-pro-x-tkl"></a>
+### Logitech G PRO X TKL Lightspeed Gaming Keyboard
+
+**Why it's great:** Logitech's tournament-grade TKL board delivers pro-level performance with LIGHTSPEED wireless, hot-swappable GX switches, and crisp PBT keycaps in a compact layout that frees mouse space. Latency is exceptionally low and battery life is strong for long sessions.
+
+**Practical tip:** Pair it with Logitech's Powerplay pad or keep the USB receiver on a short front‑panel extension for the best wireless signal at LANs.
+
+**Price Range:** $149-$199 <a href="https://www.amazon.com/Logitech-Lightspeed-Mechanical-LIGHTSYNC-Dual-Shot/dp/B0BRSSGBCN?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+
 <a id="mid-range"></a>
 ## Mid-Range Gaming Upgrades ($150-$400)
 
@@ -163,15 +188,6 @@ Quick links: [Budget](#budget) • [Mid‑Range](#mid-range) • [Premium](#prem
 **Price Range:** $299-$349 <a href="https://www.amazon.com/Audeze-Maxwell-Wireless-Headset-Playstation/dp/B0BP6BC17P?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 <a id="pc"></a>
-<a id="logitech-pro-x-tkl"></a>
-### Logitech G PRO X TKL Lightspeed Gaming Keyboard
-
-**Why it's great:** Logitech’s tournament-grade TKL board delivers pro-level performance with LIGHTSPEED wireless, hot-swappable GX switches, and crisp PBT keycaps in a compact layout that frees mouse space. Latency is exceptionally low and battery life is strong for long sessions.
-
-**Practical tip:** Pair it with Logitech’s Powerplay pad or keep the USB receiver on a short front‑panel extension for the best wireless signal at LANs.
-
-**Price Range:** $149-$199 <a href="https://www.amazon.com/Logitech-Lightspeed-Mechanical-LIGHTSYNC-Dual-Shot/dp/B0BRSSGBCN?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
-
 ### Keychron Q1 HE Gaming Keyboard
 
 **Why it's great:** The Keychron Q1 HE combines premium build quality with Hall effect switches for ultra-responsive gaming. Its hot-swappable design means gamers can customize their typing experience, while the aluminum case provides durability and a satisfying weight. Perfect for gamers who also use their keyboard for work or content creation.
@@ -229,24 +245,6 @@ Quick links: [Budget](#budget) • [Mid‑Range](#mid-range) • [Premium](#prem
 **Practical tip:** Start with popular VR games like Beat Saber and Supernatural to get comfortable with VR gaming before diving into more intense experiences.
 
 **Price Range:** $300-$350 <a href="https://www.amazon.com/dp/B0D9YXKZ7P?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
-
-### Nanoleaf Wall Panels Starter Kit
-
-**Why it's great:** Transform any gaming space into a visually stunning environment with customizable LED wall panels that sync with your games and music. The Nanoleaf starter kit lets you create unique wall art that responds to your gaming sessions, creating an immersive atmosphere that enhances the entire gaming experience. These panels are easy to install and can be arranged in countless creative configurations.
-
-**Practical tip:** Position the panels around your monitor or TV to create a wraparound lighting effect that extends your screen's visuals into your gaming space.
-
-**Price Range:** $145-$155 <a href="https://www.amazon.com/dp/B08N612MC8?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
-
-<!-- Moved Elgato Stream Deck Dreamscape Edition to Budget section -->
-
-### Elgato Wave Dreamscape Microphone
-
-**Why it's great:** The Dreamscape edition of the Elgato Wave microphone combines professional audio quality with a stunning limited-edition color scheme. This USB microphone delivers broadcast-quality sound perfect for streaming, podcasting, or gaming communication, while the unique Dreamscape design adds visual appeal to your setup. The microphone features intuitive mixing software that lets you control your audio in real-time.
-
-**Practical tip:** Pair this with the Dreamscape Stream Deck for a coordinated, professional streaming setup that looks as good as it sounds.
-
-**Price Range:** $145-$155 <a href="https://www.amazon.com/dp/B088HHWC47?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 <a id="pre-order"></a>
 ## Pre-Order Gaming Gifts (Coming Soon)
