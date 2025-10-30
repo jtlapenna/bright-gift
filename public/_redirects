@@ -5,6 +5,10 @@
 
 # Static pages - let Cloudflare handle trailing slashes naturally
 
+# Force 301 for critical static pages (avoid 308s)
+/terms /terms/ 301
+/privacy /privacy/ 301
+
 # Blog index - handled by Astro trailingSlash: 'never' configuration
 
 # Category pages - handled by Astro trailingSlash: 'never' configuration
