@@ -9,7 +9,8 @@
 /terms /terms/ 301
 /privacy /privacy/ 301
 
-# Blog index - handled by Astro trailingSlash: 'never' configuration
+# Blog index - force 301 (avoid 308 from Astro trailingSlash: 'always')
+/blog /blog/ 301
 
 # Category pages - handled by Astro trailingSlash: 'never' configuration
 
