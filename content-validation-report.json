@@ -1,10 +1,10 @@
 {
-  "timestamp": "2025-10-29T23:59:26.346Z",
+  "timestamp": "2025-11-04T00:13:40.444Z",
   "summary": {
-    "totalFiles": 46,
+    "totalFiles": 47,
     "filesWithErrors": 0,
     "totalErrors": 0,
-    "totalWarnings": 1
+    "totalWarnings": 3
   },
   "errors": [],
   "warnings": [
@@ -12,6 +12,20 @@
       "file": "src/content/blog/gaming-gifts-2025.md",
       "line": 71,
       "message": "Description length 172 characters (should be 120-160)",
+      "fix": "Optimize description length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/best-holiday-gifts-for-dads-2025.md",
+      "line": 5,
+      "message": "Title length 73 characters (should be 10-60)",
+      "fix": "Optimize title length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/best-holiday-gifts-for-dads-2025.md",
+      "line": 88,
+      "message": "Description length 186 characters (should be 120-160)",
       "fix": "Optimize description length for SEO",
       "severity": "warning"
     }
