@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 
-// Function to get all blog posts
+// Function to get all blog posts (excluding drafts)
 function getBlogPosts() {
   const blogDir = path.join(__dirname, '../src/content/blog');
   const posts = [];
@@ -17,6 +17,15 @@ function getBlogPosts() {
         const filePath = path.join(blogDir, file);
         const content = fs.readFileSync(filePath, 'utf8');
         const { data } = matter(content);
+        
+        // Skip draft posts (check both draft field and status field)
+        const isDraft = data.draft === true || data.draft === 'true' || 
+                       data.status === 'draft' || data.status === 'archived';
+        
+        if (isDraft) {
+          continue; // Skip this post
+        }
+        
         const slug = file.replace('.md', '');
         
         posts.push({
@@ -100,8 +109,9 @@ try {
   fs.writeFileSync(outputPath, sitemap);
   
   const blogPosts = getBlogPosts();
+  const staticPageCount = 8; // Home, blog, 2 category pages, privacy, terms, contact, data-deletion
   console.log(`✅ Sitemap generated successfully!`);
-  console.log(`📊 Total URLs: ${7 + blogPosts.length} (${7} static + ${blogPosts.length} blog posts)`);
+  console.log(`📊 Total URLs: ${staticPageCount + blogPosts.length} (${staticPageCount} static + ${blogPosts.length} blog posts)`);
   console.log(`📁 Output: ${outputPath}`);
   
 } catch (error) {

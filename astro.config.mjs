@@ -12,9 +12,6 @@ export default defineConfig({
     driver: 'cookie'
   },
   adapter: cloudflare({
-    platformProxy: {
-      enabled: false
-    },
     // Ensure no implicit KV binding attempts
     sessionKVBindingName: 'DISABLED',
     // Exclude robots.txt and sitemap.xml from Workers processing
