@@ -4,7 +4,7 @@ description: "Discover the ultimate gaming gifts for 2025. From Nintendo Switch 
 date: 2025-10-29
 status: draft
 metaTitle: "Best Gaming Gifts 2025 for Every Gamer"
-metaDescription: "Shop the hottest gaming gifts of 2025 by platform and budget—Nintendo, PlayStation, Xbox, and PC. Find accessories, consoles, and pre‑orders that gamers actually want."
+metaDescription: "Shop the hottest gaming gifts of 2025 by platform and budget. Nintendo, PlayStation, Xbox, and PC accessories, consoles, and pre-orders gamers want."
 keywords:
   - gaming gifts
   - gifts for gamers

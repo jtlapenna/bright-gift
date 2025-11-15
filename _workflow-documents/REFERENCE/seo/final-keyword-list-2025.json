@@ -1,0 +1,960 @@
+{
+  "keyword_list": {
+    "total_keywords": 100,
+    "existing_count": 25,
+    "new_count": 75,
+    "keywords": [
+      {
+        "keyword": "christmas gift ideas",
+        "volume": 40500,
+        "difficulty": "medium",
+        "category": "christmas",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "mother's day gifts",
+        "volume": 22000,
+        "difficulty": "low",
+        "category": "mothers_day",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "gifts for mom",
+        "volume": 18000,
+        "difficulty": "low",
+        "category": "mothers_day",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "valentine's day gift ideas",
+        "volume": 12000,
+        "difficulty": "low",
+        "category": "valentines_day",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "mother's day gift ideas",
+        "volume": 8800,
+        "difficulty": "low",
+        "category": "mothers_day",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "valentine's day gifts under $50",
+        "volume": 8100,
+        "difficulty": "low",
+        "category": "valentines_day",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "christmas gift guide",
+        "volume": 8100,
+        "difficulty": "medium",
+        "category": "christmas",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "unique christmas gifts",
+        "volume": 4400,
+        "difficulty": "medium",
+        "category": "christmas",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "80th birthday gift ideas",
+        "volume": 4400,
+        "difficulty": 24,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "romantic gifts under $50",
+        "volume": 3600,
+        "difficulty": "low",
+        "category": "valentines_day",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "christmas gifts under $50",
+        "volume": 3600,
+        "difficulty": "medium",
+        "category": "christmas",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "gifts for teenagers",
+        "volume": 3600,
+        "difficulty": "medium",
+        "category": "teens",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "romantic valentine's day gifts",
+        "volume": 2900,
+        "difficulty": "low",
+        "category": "valentines_day",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "unique mother's day gifts",
+        "volume": 2900,
+        "difficulty": "low",
+        "category": "mothers_day",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "christmas gifts for everyone",
+        "volume": 2900,
+        "difficulty": "medium",
+        "category": "christmas",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "home office gifts",
+        "volume": 2900,
+        "difficulty": "low",
+        "category": "remote_workers",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "teenage girl gifts",
+        "volume": 2900,
+        "difficulty": "medium",
+        "category": "teens",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "gifts for elderly women",
+        "volume": 2900,
+        "difficulty": 21,
+        "intent": "Informational, Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "best gifts for teachers",
+        "volume": 2900,
+        "difficulty": 30,
+        "intent": "Commercial",
+        "topic": "teacher appreciation gifts",
+        "source": "semrush_2025",
+        "category": "teacher_appreciation_gifts"
+      },
+      {
+        "keyword": "teen birthday gifts",
+        "volume": 2400,
+        "difficulty": "medium",
+        "category": "teens",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "gifts for new grandparents",
+        "volume": 2400,
+        "difficulty": 24,
+        "intent": "Commercial",
+        "topic": "gifts for grandparents",
+        "source": "semrush_2025",
+        "category": "grandparents"
+      },
+      {
+        "keyword": "best boss gifts",
+        "volume": 2400,
+        "difficulty": 27,
+        "intent": "Commercial",
+        "topic": "teacher appreciation gifts",
+        "source": "semrush_2025",
+        "category": "teacher_appreciation_gifts"
+      },
+      {
+        "keyword": "gifts for 20 year old female",
+        "volume": 2400,
+        "difficulty": 27,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "good gifts for teachers",
+        "volume": 2400,
+        "difficulty": 29,
+        "intent": "Informational, Commercial",
+        "topic": "teacher appreciation gifts",
+        "source": "semrush_2025",
+        "category": "teacher_appreciation_gifts"
+      },
+      {
+        "keyword": "gifts for old people",
+        "volume": 2400,
+        "difficulty": 29,
+        "intent": "Informational",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "gifts for elderly",
+        "volume": 2400,
+        "difficulty": 29,
+        "intent": "Informational, Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "travel gifts for women",
+        "volume": 2400,
+        "difficulty": 29,
+        "intent": "Commercial",
+        "topic": "gifts for travelers",
+        "source": "semrush_2025",
+        "category": "travelers"
+      },
+      {
+        "keyword": "gift ideas for older men",
+        "volume": 1900,
+        "difficulty": 18,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "gift ideas for 30 year old man",
+        "volume": 1900,
+        "difficulty": 20,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "gift ideas for 60 year old woman",
+        "volume": 1900,
+        "difficulty": 23,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "gift ideas for elderly woman",
+        "volume": 1900,
+        "difficulty": 23,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "gifts for 70 year old woman",
+        "volume": 1900,
+        "difficulty": 25,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "gifts for 80 year old woman",
+        "volume": 1900,
+        "difficulty": 25,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "gifts for 30 year old woman",
+        "volume": 1900,
+        "difficulty": 28,
+        "intent": "Informational, Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "travel gift ideas",
+        "volume": 1900,
+        "difficulty": 28,
+        "intent": "Commercial",
+        "topic": "gifts for travelers",
+        "source": "semrush_2025",
+        "category": "travelers"
+      },
+      {
+        "keyword": "gifts for your boss",
+        "volume": 1900,
+        "difficulty": 29,
+        "intent": "Informational, Commercial",
+        "topic": "teacher appreciation gifts",
+        "source": "semrush_2025",
+        "category": "teacher_appreciation_gifts"
+      },
+      {
+        "keyword": "small gift ideas for men",
+        "volume": 1900,
+        "difficulty": 29,
+        "intent": "Commercial",
+        "topic": "gifts for travelers",
+        "source": "semrush_2025",
+        "category": "travelers"
+      },
+      {
+        "keyword": "personalized mother's day gifts",
+        "volume": 1800,
+        "difficulty": "low",
+        "category": "mothers_day",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "cool gifts for teens",
+        "volume": 1800,
+        "difficulty": "medium",
+        "category": "teens",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "gifts for remote workers",
+        "volume": 1600,
+        "difficulty": "low",
+        "category": "remote_workers",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "80th birthday gifts",
+        "volume": 1600,
+        "difficulty": 16,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "gifts for 30 year old man",
+        "volume": 1600,
+        "difficulty": 22,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "great grandma gifts",
+        "volume": 1600,
+        "difficulty": 24,
+        "intent": "Informational, Commercial",
+        "topic": "gifts for grandparents",
+        "source": "semrush_2025",
+        "category": "grandparents"
+      },
+      {
+        "keyword": "gifts for first time grandparents",
+        "volume": 1600,
+        "difficulty": 24,
+        "intent": "Commercial",
+        "topic": "gifts for grandparents",
+        "source": "semrush_2025",
+        "category": "grandparents"
+      },
+      {
+        "keyword": "gifts for 80 year old man",
+        "volume": 1600,
+        "difficulty": 25,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "good gifts for boss",
+        "volume": 1600,
+        "difficulty": 27,
+        "intent": "Commercial",
+        "topic": "teacher appreciation gifts",
+        "source": "semrush_2025",
+        "category": "teacher_appreciation_gifts"
+      },
+      {
+        "keyword": "gift ideas for grandparents",
+        "volume": 1600,
+        "difficulty": 28,
+        "intent": "Commercial",
+        "topic": "gifts for grandparents",
+        "source": "semrush_2025",
+        "category": "grandparents"
+      },
+      {
+        "keyword": "teacher appreciation day ideas",
+        "volume": 1600,
+        "difficulty": 28,
+        "intent": "Informational",
+        "topic": "teacher appreciation gifts",
+        "source": "semrush_2025",
+        "category": "teacher_appreciation_gifts"
+      },
+      {
+        "keyword": "fitness gifts",
+        "volume": 1600,
+        "difficulty": 29,
+        "intent": "Commercial",
+        "topic": "gifts for fitness enthusiasts",
+        "source": "semrush_2025",
+        "category": "fitness_enthusiasts"
+      },
+      {
+        "keyword": "80th birthday gift suggestions",
+        "volume": 1300,
+        "difficulty": 17,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "personalized gifts for grandparents",
+        "volume": 1300,
+        "difficulty": 17,
+        "intent": "Commercial",
+        "topic": "gifts for grandparents",
+        "source": "semrush_2025",
+        "category": "grandparents"
+      },
+      {
+        "keyword": "gift for elderly woman who has everything",
+        "volume": 1300,
+        "difficulty": 19,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "gift for senior man",
+        "volume": 1300,
+        "difficulty": 21,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "best gifts for grandpa",
+        "volume": 1300,
+        "difficulty": 23,
+        "intent": "Commercial",
+        "topic": "gifts for grandparents",
+        "source": "semrush_2025",
+        "category": "grandparents"
+      },
+      {
+        "keyword": "birthday gifts for 60 year old woman",
+        "volume": 1300,
+        "difficulty": 23,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "70th birthday gifts for men",
+        "volume": 1300,
+        "difficulty": 25,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "best gift for 50 year old woman",
+        "volume": 1300,
+        "difficulty": 25,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "gifts for 60 year old man",
+        "volume": 1300,
+        "difficulty": 25,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "gift ideas for 90 year old woman",
+        "volume": 1300,
+        "difficulty": 25,
+        "intent": "Informational, Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "80th birthday present",
+        "volume": 1300,
+        "difficulty": 26,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "gifts for fitness guys",
+        "volume": 1300,
+        "difficulty": 26,
+        "intent": "Commercial",
+        "topic": "gifts for fitness enthusiasts",
+        "source": "semrush_2025",
+        "category": "fitness_enthusiasts"
+      },
+      {
+        "keyword": "90th birthday gift ideas",
+        "volume": 1300,
+        "difficulty": 26,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "great travel gifts",
+        "volume": 1300,
+        "difficulty": 26,
+        "intent": "Commercial",
+        "topic": "gifts for travelers",
+        "source": "semrush_2025",
+        "category": "travelers"
+      },
+      {
+        "keyword": "nana gifts",
+        "volume": 1300,
+        "difficulty": 27,
+        "intent": "Informational, Commercial",
+        "topic": "gifts for grandparents",
+        "source": "semrush_2025",
+        "category": "grandparents"
+      },
+      {
+        "keyword": "gifts for 65 year old woman",
+        "volume": 1300,
+        "difficulty": 29,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "cheap valentine's day gifts",
+        "volume": 1200,
+        "difficulty": "low",
+        "category": "valentines_day",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "work from home gifts",
+        "volume": 1200,
+        "difficulty": "low",
+        "category": "remote_workers",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "remote work essentials",
+        "volume": 1200,
+        "difficulty": "low",
+        "category": "remote_workers",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "gifts for gen z",
+        "volume": 1200,
+        "difficulty": "medium",
+        "category": "teens",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "best gifts for seniors",
+        "volume": 1000,
+        "difficulty": 8,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "gift ideas for seniors",
+        "volume": 1000,
+        "difficulty": 16,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "presents for seniors",
+        "volume": 1000,
+        "difficulty": 16,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "personalized grandmother gifts",
+        "volume": 1000,
+        "difficulty": 18,
+        "intent": "Informational, Transactional",
+        "topic": "gifts for grandparents",
+        "source": "semrush_2025",
+        "category": "grandparents"
+      },
+      {
+        "keyword": "fitness gifts for men",
+        "volume": 1000,
+        "difficulty": 19,
+        "intent": "Commercial",
+        "topic": "gifts for fitness enthusiasts",
+        "source": "semrush_2025",
+        "category": "fitness_enthusiasts"
+      },
+      {
+        "keyword": "wfh gift ideas",
+        "volume": 800,
+        "difficulty": "low",
+        "category": "remote_workers",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "gifts for 60 year old woman",
+        "volume": 1000,
+        "difficulty": 19,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "birthday gifts for 80th birthday",
+        "volume": 880,
+        "difficulty": 9,
+        "intent": "Informational, Transactional",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "custom grandmother gifts",
+        "volume": 880,
+        "difficulty": 9,
+        "intent": "Informational, Commercial",
+        "topic": "gifts for grandparents",
+        "source": "semrush_2025",
+        "category": "grandparents"
+      },
+      {
+        "keyword": "gifts for people who like to travel",
+        "volume": 1000,
+        "difficulty": 20,
+        "intent": "Informational",
+        "topic": "gifts for travelers",
+        "source": "semrush_2025",
+        "category": "travelers"
+      },
+      {
+        "keyword": "gifts for people who love to travel",
+        "volume": 1000,
+        "difficulty": 20,
+        "intent": "Informational",
+        "topic": "gifts for travelers",
+        "source": "semrush_2025",
+        "category": "travelers"
+      },
+      {
+        "keyword": "grandma mothers day gift",
+        "volume": 1000,
+        "difficulty": 20,
+        "intent": "Commercial",
+        "topic": "gifts for grandparents",
+        "source": "semrush_2025",
+        "category": "grandparents"
+      },
+      {
+        "keyword": "gift ideas for 30 year old woman",
+        "volume": 1000,
+        "difficulty": 22,
+        "intent": "Informational, Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "personalized presents for teachers",
+        "volume": 1000,
+        "difficulty": 23,
+        "intent": "Commercial",
+        "topic": "teacher appreciation gifts",
+        "source": "semrush_2025",
+        "category": "teacher_appreciation_gifts"
+      },
+      {
+        "keyword": "birthday gifts for 50 year old woman",
+        "volume": 1000,
+        "difficulty": 23,
+        "intent": "Informational, Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "birthday ideas for 80th birthday",
+        "volume": 1000,
+        "difficulty": 24,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "preschool teacher gifts",
+        "volume": 1000,
+        "difficulty": 24,
+        "intent": "Commercial",
+        "topic": "teacher appreciation gifts",
+        "source": "semrush_2025",
+        "category": "teacher_appreciation_gifts"
+      },
+      {
+        "keyword": "teacher mugs",
+        "volume": 1000,
+        "difficulty": 24,
+        "intent": "Informational",
+        "topic": "teacher appreciation gifts",
+        "source": "semrush_2025",
+        "category": "teacher_appreciation_gifts"
+      },
+      {
+        "keyword": "older man gift ideas",
+        "volume": 880,
+        "difficulty": 14,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "unusual gifts for elderly ladies",
+        "volume": 1000,
+        "difficulty": 25,
+        "intent": "Informational, Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "gifts for 70 year old man",
+        "volume": 1000,
+        "difficulty": 25,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "gift ideas from teacher to students",
+        "volume": 1000,
+        "difficulty": 25,
+        "intent": "Informational",
+        "topic": "teacher appreciation gifts",
+        "source": "semrush_2025",
+        "category": "teacher_appreciation_gifts"
+      },
+      {
+        "keyword": "gift ideas for elderly",
+        "volume": 880,
+        "difficulty": 15,
+        "intent": "Informational",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "teacher cups",
+        "volume": 880,
+        "difficulty": 15,
+        "intent": "Informational",
+        "topic": "teacher appreciation gifts",
+        "source": "semrush_2025",
+        "category": "teacher_appreciation_gifts"
+      },
+      {
+        "keyword": "workout gifts",
+        "volume": 1000,
+        "difficulty": 26,
+        "intent": "Commercial",
+        "topic": "gifts for fitness enthusiasts",
+        "source": "semrush_2025",
+        "category": "fitness_enthusiasts"
+      },
+      {
+        "keyword": "aviation gifts",
+        "volume": 880,
+        "difficulty": 16,
+        "intent": "Commercial",
+        "topic": "gifts for travelers",
+        "source": "semrush_2025",
+        "category": "travelers"
+      },
+      {
+        "keyword": "gifts for elderly people",
+        "volume": 880,
+        "difficulty": 16,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "grandson gifts",
+        "volume": 880,
+        "difficulty": 16,
+        "intent": "Informational, Transactional",
+        "topic": "gifts for grandparents",
+        "source": "semrush_2025",
+        "category": "grandparents"
+      },
+      {
+        "keyword": "gift ideas for 80 year old woman",
+        "volume": 1000,
+        "difficulty": 27,
+        "intent": "Informational, Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "great boss gifts",
+        "volume": 1000,
+        "difficulty": 28,
+        "intent": "Commercial",
+        "topic": "teacher appreciation gifts",
+        "source": "semrush_2025",
+        "category": "teacher_appreciation_gifts"
+      },
+      {
+        "keyword": "boss gift ideas",
+        "volume": 1000,
+        "difficulty": 28,
+        "intent": "Informational",
+        "topic": "teacher appreciation gifts",
+        "source": "semrush_2025",
+        "category": "teacher_appreciation_gifts"
+      }
+    ],
+    "generated_date": "2025-01-14"
+  },
+  "rank_trackers": {
+    "rank_trackers": [
+      {
+        "keyword": "christmas gift ideas",
+        "volume": 40500,
+        "difficulty": "medium",
+        "category": "christmas",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "mother's day gifts",
+        "volume": 22000,
+        "difficulty": "low",
+        "category": "mothers_day",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "gifts for mom",
+        "volume": 18000,
+        "difficulty": "low",
+        "category": "mothers_day",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "valentine's day gift ideas",
+        "volume": 12000,
+        "difficulty": "low",
+        "category": "valentines_day",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "christmas gift guide",
+        "volume": 8100,
+        "difficulty": "medium",
+        "category": "christmas",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "unique christmas gifts",
+        "volume": 4400,
+        "difficulty": "medium",
+        "category": "christmas",
+        "source": "existing_research"
+      },
+      {
+        "keyword": "80th birthday gift ideas",
+        "volume": 4400,
+        "difficulty": 24,
+        "intent": "Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "gifts for elderly women",
+        "volume": 2900,
+        "difficulty": 21,
+        "intent": "Informational, Commercial",
+        "topic": "gifts for seniors",
+        "source": "semrush_2025",
+        "category": "seniors"
+      },
+      {
+        "keyword": "best gifts for teachers",
+        "volume": 2900,
+        "difficulty": 30,
+        "intent": "Commercial",
+        "topic": "teacher appreciation gifts",
+        "source": "semrush_2025",
+        "category": "teacher_appreciation_gifts"
+      },
+      {
+        "keyword": "gifts for new grandparents",
+        "volume": 2400,
+        "difficulty": 24,
+        "intent": "Commercial",
+        "topic": "gifts for grandparents",
+        "source": "semrush_2025",
+        "category": "grandparents"
+      }
+    ],
+    "tracking_period": "weekly",
+    "tools": [
+      "Ahrefs",
+      "Google Search Console",
+      "Semrush"
+    ]
+  },
+  "metadata": {
+    "analysis_date": "2025-01-14",
+    "sources": [
+      "existing_research",
+      "semrush_2025"
+    ],
+    "criteria": {
+      "minimum_volume": 50,
+      "maximum_difficulty": 30,
+      "priority": "commercial_intent"
+    }
+  }
+}

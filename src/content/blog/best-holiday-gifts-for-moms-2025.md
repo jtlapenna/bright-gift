@@ -5,7 +5,7 @@ date: 2025-12-15
 status: draft
 draft: false
 metaTitle: "Best Holiday Gifts for Moms 2025 | Thoughtful Christmas Ideas"
-metaDescription: "Discover 20+ thoughtful holiday gifts for moms in 2025! From personalized jewelry to luxury comfort items, find unique Christmas gifts that show you care."
+metaDescription: "Discover 20+ thoughtful holiday gifts for moms in 2025! From personalized jewelry to luxury comfort items, find unique Christmas gifts they'll love."
 keywords:
   - best gifts for moms holidays 2025
   - Christmas gifts for mom

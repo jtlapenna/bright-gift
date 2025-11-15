@@ -42,7 +42,9 @@ for (const field of requiredFields) {
 }
 
 const title = post.data.title || fallbackTitle;
+const metaTitle = post.data.metaTitle; // SEO-optimized title (≤60 chars)
 const description = post.data.description || fallbackDescription;
+const metaDescription = post.data.metaDescription; // SEO-optimized description (140-160 chars)
 const image = post.data.image || fallbackImage;
 // Removed automatic .jpg generation to prevent broken image references
 // const imageJpg = post.data.imageJpg; // REMOVED - causes 404 errors
@@ -175,7 +177,9 @@ if (relatedPosts.length > 0) {
 
 <Layout 
   title={title}
+  metaTitle={metaTitle}
   description={description}
+  metaDescription={metaDescription}
   image={image}
   keywords={keywords}
   canonical={Astro.url.href}

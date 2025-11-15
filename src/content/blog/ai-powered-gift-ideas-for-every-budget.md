@@ -15,9 +15,7 @@ keywords: >-
   shopping 2025
 date: 2025-09-17T00:00:00.000Z
 metaTitle: 'AI-Powered Gift Ideas for Every Budget: Smart Shopping 2025'
-metaDescription: >-
-  Discover AI-powered gift recommendations for every budget. From $25 to $500+,
-  find personalized gifts using smart technology and save time shopping.
+metaDescription: "Discover AI-powered gift recommendations for every budget. From $25 to $500+, find personalized gifts using smart technology and save time shopping."
 wordCount: 1450
 readTime: 8
 seoScore: 92

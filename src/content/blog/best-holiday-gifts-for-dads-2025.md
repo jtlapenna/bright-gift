@@ -5,7 +5,7 @@ date: 2025-11-03
 status: published
 draft: false
 metaTitle: "Best Holiday Gifts for Dads 2025 | Every Type & Budget"
-metaDescription: "Discover 26 best holiday gifts for dads! From tech gadgets to cooking tools, find thoughtful Christmas gifts for every type of dad & budget."
+metaDescription: "Discover 26 best holiday gifts for dads! From tech gadgets to cooking tools, find thoughtful Christmas gifts for every type of dad and budget."
 keywords:
   - best holiday gifts for dads
   - holiday gifts for dad
