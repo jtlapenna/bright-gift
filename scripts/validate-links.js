@@ -319,8 +319,9 @@ class LinkValidator {
       warnings: this.warnings
     };
     
-    fs.writeFileSync('link-validation-report.json', JSON.stringify(report, null, 2));
-    console.log('📄 Detailed report saved to: link-validation-report.json');
+    const reportPath = path.join(__dirname, '../_workflow-documents/reports/link-validation-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log('📄 Detailed report saved to: _workflow-documents/reports/link-validation-report.json');
   }
 }
 

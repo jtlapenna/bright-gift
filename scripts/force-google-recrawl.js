@@ -123,7 +123,7 @@ function createInternalLinkingStrategy() {
     '</div>'
   ];
   
-  const strategyPath = path.join(__dirname, '../internal-linking-strategy.txt');
+  const strategyPath = path.join(__dirname, '../_workflow-documents/seo/internal-linking-strategy.txt');
   fs.writeFileSync(strategyPath, strategy.join('\n'));
   console.log('✅ Internal linking strategy created');
 }
@@ -191,7 +191,7 @@ function createGSCActionPlan() {
     'starting new ones. This will make Google see the current, correct meta tags.'
   ];
   
-  const actionPlanPath = path.join(__dirname, '../gsc-action-plan.txt');
+  const actionPlanPath = path.join(__dirname, '../_workflow-documents/seo/gsc-action-plan.txt');
   fs.writeFileSync(actionPlanPath, actionPlan.join('\n'));
   console.log('✅ GSC action plan created');
 }
@@ -305,14 +305,14 @@ try {
   console.log('\n🎉 FORCE RECRAWL PREPARATION COMPLETE!');
   console.log('\n📋 NEXT STEPS:');
   console.log('1. Deploy these changes');
-  console.log('2. Follow the GSC action plan (gsc-action-plan.txt)');
+  console.log('2. Follow the GSC action plan (_workflow-documents/seo/gsc-action-plan.txt)');
   console.log('3. Run verification script to confirm fixes');
   console.log('4. Monitor GSC for validation success');
   console.log('5. Check Ahrefs in 24-48 hours');
   
   console.log('\n📁 FILES CREATED:');
-  console.log('- gsc-action-plan.txt (GSC instructions)');
-  console.log('- internal-linking-strategy.txt (SEO strategy)');
+  console.log('- _workflow-documents/seo/gsc-action-plan.txt (GSC instructions)');
+  console.log('- _workflow-documents/seo/internal-linking-strategy.txt (SEO strategy)');
   console.log('- scripts/verify-blog-pagination-fix.js (test script)');
   
 } catch (error) {

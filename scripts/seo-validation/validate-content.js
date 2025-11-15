@@ -193,8 +193,9 @@ class ContentValidator {
       warnings: this.warnings
     };
     
-    fs.writeFileSync('content-validation-report.json', JSON.stringify(report, null, 2));
-    console.log('📄 Detailed report saved to: content-validation-report.json');
+    const reportPath = path.join(__dirname, '../../_workflow-documents/reports/content-validation-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log('📄 Detailed report saved to: _workflow-documents/reports/content-validation-report.json');
     
     return this.errors.length === 0;
   }

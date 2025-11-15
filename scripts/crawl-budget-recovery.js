@@ -74,7 +74,7 @@ function generateInternalLinkingBoost() {
     '- Higher priority in Google\'s queue'
   ];
   
-  const strategyPath = path.join(__dirname, '../internal-linking-boost-strategy.txt');
+  const strategyPath = path.join(__dirname, '../_workflow-documents/seo/internal-linking-boost-strategy.txt');
   fs.writeFileSync(strategyPath, strategy.join('\n'));
   
   console.log('✅ Internal linking strategy generated');
@@ -138,7 +138,7 @@ function createCrawlBudgetRecoveryPlan() {
     '- Week 4: 40+ pages indexed, normal crawl frequency'
   ];
   
-  const planPath = path.join(__dirname, '../crawl-budget-recovery-plan.txt');
+  const planPath = path.join(__dirname, '../_workflow-documents/seo/crawl-budget-recovery-plan.txt');
   fs.writeFileSync(planPath, plan.join('\n'));
   
   console.log('✅ Crawl budget recovery plan generated');
@@ -200,7 +200,7 @@ function generateGSCActions() {
     '- Week 4: 40+ pages indexed, regular organic traffic'
   ];
   
-  const actionsPath = path.join(__dirname, '../gsc-crawl-recovery-actions.txt');
+  const actionsPath = path.join(__dirname, '../_workflow-documents/seo/gsc-crawl-recovery-actions.txt');
   fs.writeFileSync(actionsPath, actions.join('\n'));
   
   console.log('✅ GSC actions generated');
@@ -217,7 +217,7 @@ try {
   console.log('\n🎉 Crawl budget recovery strategy complete!');
   console.log('\nNext steps:');
   console.log('1. Deploy the content updates');
-  console.log('2. Follow the GSC actions in gsc-crawl-recovery-actions.txt');
+  console.log('2. Follow the GSC actions in _workflow-documents/seo/gsc-crawl-recovery-actions.txt');
   console.log('3. Implement the internal linking strategy');
   console.log('4. Monitor progress daily');
   

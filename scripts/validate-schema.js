@@ -296,7 +296,8 @@ class SchemaValidator {
       warnings: this.warnings
     };
     
-    fs.writeFileSync('schema-validation-report.json', JSON.stringify(report, null, 2));
+    const reportPath = path.join(__dirname, '../_workflow-documents/reports/schema-validation-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
   }
 
   printSummary() {
@@ -335,7 +336,7 @@ class SchemaValidator {
       console.log('\n✅ All schema requirements are met!');
     }
     
-    console.log('\n📄 Detailed report saved to: schema-validation-report.json');
+    console.log('\n📄 Detailed report saved to: _workflow-documents/reports/schema-validation-report.json');
   }
 }
 

@@ -263,8 +263,9 @@ async function main() {
       allLinks: allLinks
     };
     
-    fs.writeFileSync('internal-link-audit-report.json', JSON.stringify(reportData, null, 2));
-    console.log('\n💾 Detailed report saved to: internal-link-audit-report.json');
+    const reportPath = path.join(__dirname, '../_workflow-documents/reports/internal-link-audit-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(reportData, null, 2));
+    console.log('\n💾 Detailed report saved to: _workflow-documents/reports/internal-link-audit-report.json');
     
   } catch (error) {
     console.error('\n❌ Audit failed:', error.message);

@@ -199,8 +199,9 @@ class TemplateValidator {
       warnings: this.warnings
     };
     
-    fs.writeFileSync('template-validation-report.json', JSON.stringify(report, null, 2));
-    console.log('📄 Detailed report saved to: template-validation-report.json');
+    const reportPath = path.join(__dirname, '../../_workflow-documents/reports/template-validation-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log('📄 Detailed report saved to: _workflow-documents/reports/template-validation-report.json');
     
     return this.errors.length === 0;
   }

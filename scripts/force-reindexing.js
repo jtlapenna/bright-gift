@@ -99,7 +99,7 @@ function generateUrlList() {
   const urls = urlMatches ? urlMatches.map(match => match.replace('<loc>', '').replace('</loc>', '')) : [];
   
   // Generate text file for manual submission
-  const urlListPath = path.join(__dirname, '../urls-for-reindexing.txt');
+  const urlListPath = path.join(__dirname, '../_workflow-documents/seo/urls-for-reindexing.txt');
   const urlListContent = urls.join('\n');
   fs.writeFileSync(urlListPath, urlListContent);
   
@@ -142,7 +142,7 @@ function generateGSCCommands(urls) {
   commands.push('');
   commands.push('5. Check Performance report for traffic increases');
   
-  const commandsPath = path.join(__dirname, '../gsc-reindexing-commands.txt');
+  const commandsPath = path.join(__dirname, '../_workflow-documents/seo/gsc-reindexing-commands.txt');
   fs.writeFileSync(commandsPath, commands.join('\n'));
   
   console.log('✅ GSC commands generated');
@@ -170,7 +170,7 @@ function generateInternalLinkingBoost() {
     '- Ensure every page has at least 3-5 internal links'
   ];
   
-  const strategyPath = path.join(__dirname, '../internal-linking-strategy.txt');
+  const strategyPath = path.join(__dirname, '../_workflow-documents/seo/internal-linking-strategy.txt');
   fs.writeFileSync(strategyPath, strategy.join('\n'));
   
   console.log('✅ Internal linking strategy generated');
@@ -188,7 +188,7 @@ try {
   console.log('\n🎉 Reindexing strategy implementation complete!');
   console.log('\nNext steps:');
   console.log('1. Deploy these changes to production');
-  console.log('2. Follow the GSC commands in gsc-reindexing-commands.txt');
+  console.log('2. Follow the GSC commands in _workflow-documents/seo/gsc-reindexing-commands.txt');
   console.log('3. Monitor Google Search Console for improvements');
   console.log('4. Check site performance in 24-48 hours');
   

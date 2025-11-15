@@ -108,7 +108,7 @@ ogImageAlt: >-
   Recommendations
 ---
 
-# Clean Girl 2.0: Minimalist Gifts With Personality
+## Clean Girl 2.0: Minimalist Gifts With Personality
 
 The Clean Girl aesthetic isn’t going anywhere—but in 2025 it’s less uniform and more you. Think sleek hair and dewy skin, with quiet‑luxury basics, a touch of vintage, and a detail that says this is yours, not the algorithm’s. Recent fashion/beauty coverage confirms the shift toward individuality layered on minimalism, with updated makeup cues like softer lashes and cool‑toned eyes making waves ([Who What Wear – evolution](https://www.whowhatwear.com/fashion/trends/clean-girl-aesthetic-trend?utm_source=openai); [Who What Wear – 2025 makeup](https://www.whowhatwear.com/beauty/makeup/top-makeup-trends-2025?utm_source=openai)).
 

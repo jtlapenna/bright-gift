@@ -151,7 +151,8 @@ class CategoryValidator {
       warnings: this.warnings
     };
     
-    fs.writeFileSync('category-validation-report.json', JSON.stringify(report, null, 2));
+    const reportPath = path.join(__dirname, '../_workflow-documents/reports/category-validation-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
   }
 
   printSummary() {
@@ -193,7 +194,7 @@ class CategoryValidator {
       console.log('\n✅ All categories are valid!');
     }
     
-    console.log('\n📄 Detailed report saved to: category-validation-report.json');
+    console.log('\n📄 Detailed report saved to: _workflow-documents/reports/category-validation-report.json');
   }
 }
 

@@ -54,7 +54,9 @@
 
 **Source:** `meta-tag-todo.md`
 
-### 3. Create High-Priority Content (Keyword Research Gaps)
+### 3. Create High-Priority Content (Keyword Research Gaps) ⚡
+
+> **⚠️ CRITICAL:** These 3 posts are the highest priority based on keyword research. See detailed requirements in `NEXT-CONTENT-TO-WRITE.md`
 
 #### 3.1 Gifts for Seniors Blog Post
 - [ ] Create "Gifts for Seniors: 25 Thoughtful Ideas for Elderly Loved Ones"
@@ -63,6 +65,7 @@
 - [ ] Include affiliate links: Amazon, Bookshop.org
 - [ ] Word count: 1,500-2,000 words
 - [ ] Images: SEO-optimized with alt text
+- **📋 Full requirements:** See `NEXT-CONTENT-TO-WRITE.md` section 1
 
 #### 3.2 Gifts for New Grandparents Blog Post
 - [ ] Create "Gifts for New Grandparents: 20 Meaningful Presents for First-Time Grandparents"
@@ -70,6 +73,7 @@
 - [ ] Structure: First-time grandparent focus, sentimentality, practicality
 - [ ] Include affiliate links: Amazon, personalized gift options
 - [ ] Word count: 1,500-2,000 words
+- **📋 Full requirements:** See `NEXT-CONTENT-TO-WRITE.md` section 2
 
 #### 3.3 Best Gifts for Teachers Blog Post
 - [ ] Create "Best Gifts for Teachers: 20 Thoughtful Ideas They'll Actually Use"
@@ -77,8 +81,10 @@
 - [ ] Structure: By occasion (Teacher Appreciation Week, Christmas, end of year), budget-friendly
 - [ ] Include affiliate links: Amazon, Bookshop.org
 - [ ] Word count: 1,500-2,000 words
+- **📋 Full requirements:** See `NEXT-CONTENT-TO-WRITE.md` section 3
 
-**Source:** `keyword-research-history-2025-01.md`
+**Source:** `keyword-research-history-2025-01.md`  
+**📖 Detailed Content Specs:** `NEXT-CONTENT-TO-WRITE.md`
 
 ---
 
@@ -165,10 +171,12 @@
 - [x] Keyword research completed (100 keywords identified)
 - [x] Rank tracker keywords selected
 - [x] Documentation created
+- [x] Ahrefs audit issues fixed (canonical URLs, title tags, meta descriptions)
+- [x] Layout component updated to use metaTitle and metaDescription
+- [x] All critical SEO fixes committed and pushed
 
 ### In Progress 🟡
-- [ ] Ahrefs Rank Tracker setup
-- [ ] Meta tag fixes
+- [ ] Ahrefs Rank Tracker setup (next step)
 
 ### Next Up 🔜
 - [ ] Content creation for seniors, grandparents, teachers

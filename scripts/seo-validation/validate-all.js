@@ -126,8 +126,9 @@ class SEOValidator {
       }
     };
     
-    fs.writeFileSync('seo-validation-overall-report.json', JSON.stringify(report, null, 2));
-    console.log('\n📄 Detailed report saved to: seo-validation-overall-report.json');
+    const reportPath = path.join(__dirname, '../../_workflow-documents/reports/seo-validation-overall-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log('\n📄 Detailed report saved to: _workflow-documents/reports/seo-validation-overall-report.json');
     
     return this.results.overall.passed;
   }

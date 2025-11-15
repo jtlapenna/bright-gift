@@ -84,7 +84,7 @@ affiliateLinks:
     platform: "amazon"
 ---
 
-# Emergency Gift Guide: 30 Last-Minute Present Ideas That Don't Look Rushed
+## Emergency Gift Guide: 30 Last-Minute Present Ideas That Don't Look Rushed
 
 We've all been there – that moment when you realize you completely forgot about a birthday, anniversary, or special occasion. The panic sets in, but don't worry! This emergency gift guide is your lifeline to thoughtful presents that look like you planned them weeks in advance.
 

@@ -115,7 +115,7 @@ Add to site footer:
 - Higher search rankings
 `;
 
-  const strategyPath = path.join(__dirname, '../internal-linking-boost-strategy.md');
+  const strategyPath = path.join(__dirname, '../_workflow-documents/seo/internal-linking-boost-strategy.md');
   fs.writeFileSync(strategyPath, strategy);
   console.log('✅ Internal linking strategy created');
 }
@@ -199,7 +199,7 @@ function createGSCActionPlan() {
 - Organic traffic returning
 `;
 
-  const actionPlanPath = path.join(__dirname, '../gsc-emergency-action-plan.md');
+  const actionPlanPath = path.join(__dirname, '../_workflow-documents/seo/gsc-emergency-action-plan.md');
   fs.writeFileSync(actionPlanPath, actionPlan);
   console.log('✅ GSC action plan created');
 }
@@ -271,7 +271,7 @@ function createContentFreshnessStrategy() {
 - Higher search rankings
 `;
 
-  const strategyPath = path.join(__dirname, '../content-freshness-strategy.md');
+  const strategyPath = path.join(__dirname, '../_workflow-documents/content/content-freshness-strategy.md');
   fs.writeFileSync(strategyPath, strategy);
   console.log('✅ Content freshness strategy created');
 }
@@ -286,16 +286,16 @@ try {
   
   console.log('\n🎉 EMERGENCY SEO RECOVERY COMPLETE!');
   console.log('\n📋 NEXT STEPS:');
-  console.log('1. Follow the GSC action plan (gsc-emergency-action-plan.md)');
+  console.log('1. Follow the GSC action plan (_workflow-documents/seo/gsc-emergency-action-plan.md)');
   console.log('2. Implement internal linking strategy');
   console.log('3. Create fresh content this week');
   console.log('4. Monitor Google Search Console daily');
   console.log('5. Submit URLs for indexing daily');
   
   console.log('\n📁 FILES CREATED:');
-  console.log('- internal-linking-boost-strategy.md');
-  console.log('- gsc-emergency-action-plan.md');
-  console.log('- content-freshness-strategy.md');
+  console.log('- _workflow-documents/seo/internal-linking-boost-strategy.md');
+  console.log('- _workflow-documents/seo/gsc-emergency-action-plan.md');
+  console.log('- _workflow-documents/content/content-freshness-strategy.md');
   
   console.log('\n⏰ EXPECTED TIMELINE:');
   console.log('- 24-48 hours: First re-indexing requests');

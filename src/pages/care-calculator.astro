@@ -9,8 +9,9 @@ export const prerender = true;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baby Care Calculator - BrightGift</title>
     <meta name="description" content="Baby care shift planner and schedule manager. Track and balance care responsibilities with our comprehensive baby care planning tool.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://bright-gift.com/care-calculator/">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow">
+    <!-- No canonical - page is noindex -->
     
     <!-- Open Graph -->
     <meta property="og:title" content="Baby Care Calculator - BrightGift">
@@ -311,6 +312,17 @@ try {
 } catch(e) { console.warn("Realtime subscribe failed:", e); }
 
 </script>
+    
+    <!-- Footer with navigation -->
+    <footer style="text-align: center; padding: 2rem; margin-top: 3rem; border-top: 1px solid #e5e7eb;">
+        <p style="margin-bottom: 1rem;">
+            <a href="https://bright-gift.com/" style="color: #1C2E4A; text-decoration: underline; font-weight: 500;">← Back to BrightGift Home</a>
+        </p>
+        <p style="font-size: 0.875rem; color: #6b7280;">
+            <a href="https://bright-gift.com/blog/" style="color: #6b7280; text-decoration: underline;">Gift Ideas Blog</a> | 
+            <a href="https://bright-gift.com/contact/" style="color: #6b7280; text-decoration: underline;">Contact</a>
+        </p>
+    </footer>
 
 </body>
 </html>

@@ -103,7 +103,7 @@ const EXPORT_ITEMS = [
   
   // Additional Files
   'README.md',
-  'internal-link-audit-report.json',
+  '_workflow-documents/reports/internal-link-audit-report.json',
   'parse_social_content_enhanced.js',
   'fix-frontmatter.js',
   'test-server.js',

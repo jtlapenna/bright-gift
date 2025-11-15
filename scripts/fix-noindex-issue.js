@@ -95,7 +95,7 @@ function createGSCRevalidationGuide() {
     'If you see "index, follow", the fix is working and Google needs to re-crawl.'
   ];
   
-  const guidePath = path.join(__dirname, '../gsc-noindex-fix-guide.txt');
+  const guidePath = path.join(__dirname, '../_workflow-documents/seo/gsc-noindex-fix-guide.txt');
   fs.writeFileSync(guidePath, guide.join('\n'));
   
   console.log('✅ GSC revalidation guide created');
