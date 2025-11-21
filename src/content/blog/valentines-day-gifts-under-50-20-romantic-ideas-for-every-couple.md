@@ -21,12 +21,9 @@ ogImage: >-
 socialImage: >-
   /images/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/valentines-day-gifts-under-50-social.webp
 category: gift-guides
-metaTitle: 'Valentine''s Day Gifts Under $50: 20 Romantic Ideas for Ev...'
+metaTitle: 'Valentine''s Day Gifts Under $50: 20 Romantic Ideas for Every Couple'
 metaDescription: >-
-  Discover 20 thoughtful Valentine's Day gifts under $50 that will make your
-  partner feel truly special. From romantic experiences to meaningful keepsakes.
-  valentines day gifts, romantic gifts, couples gifts, under $50, valentines day
-  ideas
+  Valentine's Day gifts under $50 that look expensive. Find 20 romantic gift ideas for every couple, from new relationships to long-term love. Shop now.
 tags:
   - valentines-day
   - romantic-gifts
@@ -102,7 +99,7 @@ socialImageAlt: >-
   Recommendations
 ---
 
-
+*Last Updated: January 21, 2025*
 
 Valentine's Day is the perfect opportunity to show your partner how much you care, but finding thoughtful gifts that don't break the bank can be challenging. Whether you're celebrating your first Valentine's Day together or your twentieth, these 20 romantic gift ideas under $50 will help you create meaningful moments without overspending.
 

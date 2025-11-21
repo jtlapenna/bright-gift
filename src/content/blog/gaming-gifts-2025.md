@@ -2,9 +2,9 @@
 title: "Best Gaming Gifts 2025: Perfect Presents for Every Gamer"
 description: "Discover the ultimate gaming gifts for 2025. From Nintendo Switch accessories to high-end PC gaming monitors, find perfect presents for gamers at every budget and platform."
 date: 2025-10-29
-status: draft
-metaTitle: "Best Gaming Gifts 2025 for Every Gamer"
-metaDescription: "Shop the hottest gaming gifts of 2025 by platform and budget. Nintendo, PlayStation, Xbox, and PC accessories, consoles, and pre-orders gamers want."
+status: published
+metaTitle: "Best Gaming Gifts 2025: Perfect Presents for Every Gamer"
+metaDescription: "Best gaming gifts 2025 for every gamer on your list. Find perfect presents for PC, console, and mobile gamers under $100. Shop now."
 keywords:
   - gaming gifts
   - gifts for gamers
@@ -27,6 +27,8 @@ tags:
 category: "gift-guide"
 readTime: 12
 ---
+
+*Last Updated: January 21, 2025*
 
 ## Best Gaming Gifts 2025: Perfect Presents for Every Gamer
 
