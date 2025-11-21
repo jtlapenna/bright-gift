@@ -41,7 +41,7 @@ contentType: gift-guide
 recipient: professionals
 budget: under-100
 occasion: year-round
-canonical: 'https://bright-gift.com/blog/gifts-for-remote-workers-and-wfh-professionals'
+canonical: 'https://bright-gift.com/blog/gifts-for-remote-workers-and-wfh-professionals/'
 faqSchema:
   '@context': 'https://schema.org'
   '@type': FAQPage

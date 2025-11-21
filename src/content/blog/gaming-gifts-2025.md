@@ -25,6 +25,7 @@ tags:
   - xbox
   - pc
 category: "gift-guide"
+canonical: "https://bright-gift.com/blog/gaming-gifts-2025/"
 readTime: 12
 faqSchema:
   '@context': 'https://schema.org'

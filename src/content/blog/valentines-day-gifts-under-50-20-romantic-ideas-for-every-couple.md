@@ -44,7 +44,7 @@ seo_description: >-
   - Discover 20 thoughtful Valentine's Day gifts under $50 that will make your
   partner feel truly special. From romantic experiences to meaningful keepsakes.
 canonical: >-
-  https://bright-gift.com/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple
+  https://bright-gift.com/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/
 faqSchema:
   '@context': 'https://schema.org'
   '@type': FAQPage

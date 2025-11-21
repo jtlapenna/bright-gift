@@ -23,6 +23,7 @@ tags:
   - thoughtful
   - personalized
 category: "gift-guide"
+canonical: "https://bright-gift.com/blog/best-holiday-gifts-for-moms-2025/"
 siteId: "brightgift"
 workflowId: "workflow_1734321600_moms2025"
 postId: "workflow_1734321600_moms2025"

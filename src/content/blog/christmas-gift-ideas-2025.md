@@ -30,7 +30,7 @@ tags:
   - seasonal
   - christmas
   - gift-guide
-canonical: 'https://bright-gift.com/blog/christmas-gift-ideas-2025'
+canonical: 'https://bright-gift.com/blog/christmas-gift-ideas-2025/'
 faqSchema:
   '@context': 'https://schema.org'
   '@type': FAQPage
