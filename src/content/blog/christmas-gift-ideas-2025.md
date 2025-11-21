@@ -251,6 +251,25 @@ Whether you’re buying for family, friends, or coworkers, you’ll find tech up
 - Prefer neutral colors/styles if you’re unsure of their taste.
 - If in doubt, pair a small, useful item with a heartfelt note.
 
+## Christmas Gift Shopping by Budget: Quick Guide
+
+Finding the perfect Christmas gift within your budget doesn't mean compromising on quality or thoughtfulness. Here's how to maximize your gift-giving impact at every price point.
+
+### Under $25: Thoughtful Stocking Stuffers & Small Gifts
+Perfect for coworkers, casual friends, or adding to a larger gift. Focus on practical everyday items like quality candles, small tech accessories, or gourmet treats. These gifts show you care without overspending. Best picks: scented candles, compact power banks, or specialty coffee blends.
+
+### $25-$50: The Sweet Spot for Most Occasions
+This range offers the best balance of quality and affordability for friends, extended family, and colleagues. You can find substantial gifts that feel premium without breaking the bank. Look for items they'll use daily like insulated tumblers, cozy throw blankets, or quality books. These gifts deliver real value and lasting appreciation.
+
+### $50-$100: Impressive Gifts for Close Friends & Family
+When you want to make a statement for someone special, this range offers premium quality and thoughtful upgrades. Consider tech accessories, wellness products, or experience gifts. These presents show significant thought and investment in the relationship. Best for parents, siblings, close friends, or significant others.
+
+### $100+: Luxury Gifts for Immediate Family
+Reserved for your closest relationships, this range allows for major upgrades and luxury items. Think high-end tech, premium home goods, or significant experience gifts. These are the gifts people remember and use for years. Perfect for spouses, parents, or milestone celebrations.
+
+### Budget-Stretching Tips
+Mix price points strategically. Pair a smaller meaningful gift with a heartfelt note for maximum impact. Shop early for better selection and prices. Consider group gifts for expensive items. Focus on quality over quantity—one great gift beats three mediocre ones.
+
 ## FAQs
 
 ### What are good last‑minute Christmas gift ideas?

@@ -292,6 +292,28 @@ The best holiday gifts for moms in 2025 aren't about finding the most expensive 
 
 Remember, the most meaningful Christmas gifts for mom often combine practicality with personalization. They solve real problems, bring genuine joy, and show that you've paid attention to who she is and what she values. From personalized jewelry that she'll treasure forever to everyday luxuries that make routine moments special, the gifts on this list are designed to make her feel truly appreciated this holiday season.
 
+## Mother's Day Gift Ideas by Mom Type
+
+Every mom is unique, and the best gifts reflect her individual personality, lifestyle, and interests. Here's how to choose the perfect Mother's Day gift based on the type of mom she is.
+
+### The Working Mom
+She juggles career and family with grace but rarely takes time for herself. Focus on gifts that save time, reduce stress, or provide moments of relaxation. Think smart home devices, meal delivery subscriptions, premium coffee makers, or spa gift certificates. She'll appreciate anything that makes her busy life easier or gives her permission to pause.
+
+### The Stay-at-Home Mom
+She's the heart of the home, managing countless tasks while making it look effortless. Choose gifts that acknowledge her hard work and provide personal enjoyment. Consider hobby-related items, quality kitchen tools, comfortable loungewear, or experience gifts she can enjoy with family. Show her that her contributions are seen and valued.
+
+### The New Mom
+She's navigating the beautiful chaos of early motherhood and needs both practical support and self-care. Opt for items that make her life easier like meal delivery services, comfortable nursing-friendly clothing, spa treatments, or memory-keeping tools. Balance practical gifts with ones that remind her she's still an individual beyond motherhood.
+
+### The Empty Nester
+Her children have grown, and she's rediscovering herself and her interests. Focus on gifts that celebrate this new chapter—travel accessories, hobby supplies, experience gifts, or items for her evolving home. Support her exploration of new passions and adventures.
+
+### The Grandma
+She's embraced her role with joy and loves staying connected with family. Choose personalized items featuring grandchildren, photo gifts, comfortable home items, or technology that helps her stay in touch. Celebrate the special bond she shares with the next generation.
+
+### The Creative Mom
+She expresses herself through art, crafts, or creative pursuits. Select high-quality supplies for her craft, inspiring books, workshop experiences, or beautiful items for her creative space. Support her passion and give her tools to explore her creativity further.
+
 ## Frequently Asked Questions
 
 ### What do moms really want for Christmas?

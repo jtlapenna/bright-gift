@@ -229,6 +229,25 @@ A subscription to a couples app like "Between" or "Couple" provides features lik
 
 ---
 
+## Valentine's Day Gifts by Relationship Stage
+
+Choosing the right Valentine's Day gift depends on where you are in your relationship journey. Here's how to navigate gift-giving at every stage.
+
+### New Relationships (First Valentine's Day Together)
+Keep it thoughtful but not overwhelming. Avoid overly sentimental or expensive gifts that might feel too intense. Focus on fun, lighthearted presents that show you're paying attention—favorite snacks, books by authors they love, or experience gifts like concert tickets. The goal is to show interest without applying pressure.
+
+### Dating (6 Months to 2 Years)
+You know each other well but are still discovering new things. This is the sweet spot for creative, personalized gifts that reference inside jokes or shared experiences. Consider custom items, romantic date experiences, or gifts related to their hobbies. Show that you remember the details of your time together.
+
+### Long-Term Couples (2+ Years)
+You've moved past the "getting to know you" phase and into comfortable partnership. Focus on gifts that enhance your life together or acknowledge your deep connection. Think practical items you both use, experience gifts that create new memories, or sentimental pieces that celebrate your history. Quality and meaning matter more than novelty.
+
+### Married Couples
+You're building a life together, and gifts can reflect your shared goals and daily reality. Consider items that improve your home, support each other's interests, or create opportunities for quality time. Balance practical gifts (that nice kitchen gadget they mentioned) with romantic gestures (surprise date night). The best gifts show you're still choosing each other every day.
+
+### Long-Distance Relationships
+Physical distance makes thoughtful gestures even more meaningful. Focus on gifts that bridge the gap—care packages with their favorite things, subscription boxes, digital experiences you can enjoy together, or countdown items until you're reunited. Include personal touches like handwritten notes or photos. Show that distance doesn't diminish your connection.
+
 ## Making Your Valentine's Day Gift Extra Special
 
 Remember that the most meaningful Valentine's Day gifts come from the heart. Consider these tips to make your gift even more special:
