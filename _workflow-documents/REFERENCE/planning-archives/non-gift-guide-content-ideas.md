@@ -1,4 +1,16 @@
-# 📚 Non-Gift Guide Content Ideas for SEO Diversification
+# 🚨 DEPRECATED - SEE CONTENT-CREATION-MASTER-LIST.md
+
+> **⚠️ THIS DOCUMENT IS DEPRECATED**  
+> **NEW LOCATION:** `_workflow-documents/CONTENT-CREATION-MASTER-LIST.md`  
+> **Date Deprecated:** January 21, 2025
+
+This document has been consolidated into the **CONTENT-CREATION-MASTER-LIST.md** which is now the single source of truth for all content to be written.
+
+**Please use:** `_workflow-documents/CONTENT-CREATION-MASTER-LIST.md`
+
+---
+
+# 📚 Non-Gift Guide Content Ideas for SEO Diversification (ARCHIVED)
 
 > **Purpose:** This document contains a comprehensive list of non-gift guide content ideas to diversify the blog content mix, boost SEO, and establish authority in the gift-giving space.
 

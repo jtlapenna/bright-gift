@@ -1,5 +1,16 @@
+# 🚨 DEPRECATED - SEE CONTENT-CREATION-MASTER-LIST.md
 
-# Content Freshness Strategy
+> **⚠️ THIS DOCUMENT IS DEPRECATED**  
+> **NEW LOCATION:** `_workflow-documents/CONTENT-CREATION-MASTER-LIST.md`  
+> **Date Deprecated:** January 21, 2025
+
+This document has been consolidated into the **CONTENT-CREATION-MASTER-LIST.md** which is now the single source of truth for all content strategy.
+
+**Please use:** `_workflow-documents/CONTENT-CREATION-MASTER-LIST.md`
+
+---
+
+# Content Freshness Strategy (ARCHIVED)
 ## Signal to Google That Your Site is Active and Updated
 
 ### Immediate Actions (This Week):

@@ -1,8 +1,20 @@
-# 🚨 NEXT CONTENT TO WRITE - HIGH PRIORITY
+# 🚨 DEPRECATED - SEE CONTENT-CREATION-MASTER-LIST.md
+
+> **⚠️ THIS DOCUMENT IS DEPRECATED**  
+> **NEW LOCATION:** `_workflow-documents/CONTENT-CREATION-MASTER-LIST.md`  
+> **Date Deprecated:** January 21, 2025
+
+This document has been consolidated into the **CONTENT-CREATION-MASTER-LIST.md** which is now the single source of truth for all content to be written.
+
+**Please use:** `_workflow-documents/CONTENT-CREATION-MASTER-LIST.md`
+
+---
+
+# 🚨 NEXT CONTENT TO WRITE - HIGH PRIORITY (ARCHIVED)
 
 > **IMPORTANT:** These are the top 3 blog posts to write based on comprehensive keyword research completed January 2025. These keywords represent major content gaps with high search volume and low competition.
 
-**Last Updated:** January 14, 2025  
+**Last Updated:** January 14, 2025 (Archived January 21, 2025)  
 **Source:** `_workflow-documents/REFERENCE/seo/final-keyword-list-2025.json`  
 **Research Date:** January 2025 (Semrush + Ahrefs analysis)
 
