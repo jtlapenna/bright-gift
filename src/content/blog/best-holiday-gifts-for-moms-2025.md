@@ -47,6 +47,34 @@ originalInput:
   selectedContent: null
   additionalNotes: "Focus on thoughtful and practical gifts for moms who have everything"
   timestamp: "2025-12-15T10:00:00.000Z"
+faqSchema:
+  '@context': 'https://schema.org'
+  '@type': FAQPage
+  mainEntity:
+    - '@type': Question
+      name: What do moms really want for Mother's Day?
+      acceptedAnswer:
+        '@type': Answer
+        text: >-
+          Moms want gifts that show thoughtfulness and understanding of their interests and needs. They appreciate practical items that make their lives easier, personalized gifts with sentimental value, and experiences that create lasting memories. The best gifts combine usefulness with personal meaning.
+    - '@type': Question
+      name: What are unique Mother's Day gift ideas?
+      acceptedAnswer:
+        '@type': Answer
+        text: >-
+          Unique Mother's Day gifts include personalized jewelry with meaningful engravings, custom family artwork or portraits, personalized recipe books, premium loungewear sets, gourmet food subscriptions, and experience gifts like spa days or cooking classes.
+    - '@type': Question
+      name: What are the best sentimental gifts for mom?
+      acceptedAnswer:
+        '@type': Answer
+        text: >-
+          The best sentimental gifts for mom include custom photo albums or memory books, personalized jewelry with family initials or birthstones, engraved items with meaningful quotes or dates, custom family portraits, and handwritten recipe books that preserve family traditions.
+    - '@type': Question
+      name: What are practical gifts for working moms?
+      acceptedAnswer:
+        '@type': Answer
+        text: >-
+          Practical gifts for working moms include smart home devices that save time, premium loungewear for comfortable downtime, high-quality kitchen tools that make meal prep easier, aromatherapy diffusers for stress relief, and subscription boxes that introduce new products or experiences.
 ---
 
 *Last Updated: January 21, 2025*
