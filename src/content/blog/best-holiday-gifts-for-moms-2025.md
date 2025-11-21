@@ -287,5 +287,24 @@ Practical gifts for working moms include smart home devices that save time, prem
 
 ---
 
-Ready to find even more personalized gift ideas? Use our [Gift Idea Generator](/care-calculator) to discover custom recommendations tailored specifically to your mom's interests, style, and preferences. Simply answer a few questions about her, and we'll suggest thoughtful gift ideas that are perfect for her unique personality.
+## More Gift Ideas for Special People in Your Life
+
+Looking for more gift inspiration? Explore these curated guides:
+
+### Family & Relationships:
+- **[Christmas Gift Ideas](/blog/christmas-gift-ideas-2025/)** - Thoughtful picks for everyone on your list
+- **[Gifts for Dads](/blog/best-holiday-gifts-for-dads-2025/)** - Perfect presents for fathers
+- **[Gifts for Girlfriend](/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/)** - Romantic and thoughtful ideas
+- **[Valentine's Day Gifts Under $50](/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/)** - Romantic gifts for couples
+
+### Home & Lifestyle:
+- **[Housewarming Gifts](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/)** - Perfect for new homeowners
+- **[Gifts for Remote Workers](/blog/gifts-for-remote-workers-and-wfh-professionals/)** - Home office essentials
+- **[Gifts for Plant Lovers](/blog/gifts-for-plant-lovers/)** - Green thumb gift ideas
+
+### Special Occasions:
+- **[Anniversary Gifts Under $50](/blog/25-unique-anniversary-gift-ideas-under-50/)** - Meaningful anniversary presents
+- **[Gifts for New Parents](/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond/)** - Baby shower and beyond
+
+Ready to find even more personalized gift ideas? Use our [Gift Idea Generator](/) to discover custom recommendations tailored specifically to your mom's interests, style, and preferences.
 
