@@ -124,7 +124,7 @@ Whether you're shopping on a tight budget or looking to splurge on something ext
 
 **Practical tip:** Look for models with good microphone sensitivity and clear speakers for the best user experience in noisy environments.
 
-**Price Range:** $25-$40 <a href="https://amazon.com/s?k=smart+home+mini+assistant&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $25-$40 <a href="https://amazon.com/s?k=smart+home+mini+assistant&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### AI-Powered Photo Frame
 
@@ -132,7 +132,7 @@ Whether you're shopping on a tight budget or looking to splurge on something ext
 
 **Practical tip:** Choose a model with cloud storage integration so family members can easily add photos remotely.
 
-**Price Range:** $35-$50 <a href="https://amazon.com/s?k=ai+photo+frame+digital&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $35-$50 <a href="https://amazon.com/s?k=ai+photo+frame+digital&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Smart Fitness Tracker
 
@@ -140,7 +140,7 @@ Whether you're shopping on a tight budget or looking to splurge on something ext
 
 **Practical tip:** Look for models with long battery life (7+ days) and water resistance for continuous monitoring.
 
-**Price Range:** $40-$50 <a href="https://amazon.com/s?k=ai+fitness+tracker+smart+watch&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $40-$50 <a href="https://amazon.com/s?k=ai+fitness+tracker+smart+watch&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### AI-Powered Smart Speaker
 
@@ -148,7 +148,7 @@ Whether you're shopping on a tight budget or looking to splurge on something ext
 
 **Practical tip:** Look for models with good sound quality and compatibility with your recipient's existing smart home devices.
 
-**Price Range:** $30-$45 <a href="https://amazon.com/s?k=echo+dot+smart+speaker&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $30-$45 <a href="https://amazon.com/s?k=echo+dot+smart+speaker&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Mid-Range AI-Powered Gifts ($50-$150)
 
@@ -158,7 +158,7 @@ Whether you're shopping on a tight budget or looking to splurge on something ext
 
 **Practical tip:** Ensure compatibility with existing smart devices in the recipient's home before purchasing.
 
-**Price Range:** $80-$120 <a href="https://amazon.com/s?k=smart+home+hub+ai+assistant&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $80-$120 <a href="https://amazon.com/s?k=smart+home+hub+ai+assistant&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### AI-Powered Noise-Canceling Headphones
 
@@ -166,7 +166,7 @@ Whether you're shopping on a tight budget or looking to splurge on something ext
 
 **Practical tip:** Look for models with multiple microphones and adaptive noise cancellation for the best performance.
 
-**Price Range:** $100-$150 <a href="https://amazon.com/s?k=ai+noise+canceling+headphones&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $100-$150 <a href="https://amazon.com/s?k=ai+noise+canceling+headphones&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Smart Kitchen Scale with AI Nutrition Analysis
 
@@ -174,7 +174,7 @@ Whether you're shopping on a tight budget or looking to splurge on something ext
 
 **Practical tip:** Choose a model with a large, easy-to-read display and multiple measurement units for versatility.
 
-**Price Range:** $70-$100 <a href="https://amazon.com/s?k=smart+kitchen+scale+ai+nutrition&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $70-$100 <a href="https://amazon.com/s?k=smart+kitchen+scale+ai+nutrition&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### AI-Powered Sleep Tracker
 
@@ -182,7 +182,7 @@ Whether you're shopping on a tight budget or looking to splurge on something ext
 
 **Practical tip:** Look for models that integrate with popular health apps for comprehensive wellness tracking.
 
-**Price Range:** $90-$130 <a href="https://amazon.com/s?k=ai+sleep+tracker+smart&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $90-$130 <a href="https://amazon.com/s?k=ai+sleep+tracker+smart&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Premium AI Gift Experiences ($150-$500+)
 
@@ -192,7 +192,7 @@ Whether you're shopping on a tight budget or looking to splurge on something ext
 
 **Practical tip:** Choose a system with professional monitoring options and mobile app integration for complete control.
 
-**Price Range:** $200-$350 <a href="https://amazon.com/s?k=ai+home+security+system&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $200-$350 <a href="https://amazon.com/s?k=ai+home+security+system&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Smart Mirror with AI Fitness Coaching
 
@@ -200,7 +200,7 @@ Whether you're shopping on a tight budget or looking to splurge on something ext
 
 **Practical tip:** Ensure the mirror has good lighting and a large enough display for clear instruction visibility.
 
-**Price Range:** $300-$500 <a href="https://amazon.com/s?k=smart+mirror+ai+fitness+coaching&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $300-$500 <a href="https://amazon.com/s?k=smart+mirror+ai+fitness+coaching&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### AI-Powered Robot Vacuum with Advanced Mapping
 
@@ -208,7 +208,7 @@ Whether you're shopping on a tight budget or looking to splurge on something ext
 
 **Practical tip:** Look for models with self-emptying bases and multi-floor mapping capabilities for maximum convenience.
 
-**Price Range:** $400-$600 <a href="https://amazon.com/s?k=ai+robot+vacuum+smart+mapping&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $400-$600 <a href="https://amazon.com/s?k=ai+robot+vacuum+smart+mapping&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## AI Shopping Tools and Services
 
@@ -218,7 +218,7 @@ Whether you're shopping on a tight budget or looking to splurge on something ext
 
 **Practical tip:** Look for models with easy installation and compatibility with your existing HVAC system.
 
-**Price Range:** $20-$50 <a href="https://amazon.com/s?k=ai+smart+thermostat+learning&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $20-$50 <a href="https://amazon.com/s?k=ai+smart+thermostat+learning&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### AI-Powered Pet Camera with Treat Dispenser
 
@@ -226,7 +226,7 @@ Whether you're shopping on a tight budget or looking to splurge on something ext
 
 **Practical tip:** Look for models with two-way audio, night vision, and treat capacity that matches your pet's size.
 
-**Price Range:** $15-$40 <a href="https://amazon.com/s?k=ai+pet+camera+treat+dispenser&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $15-$40 <a href="https://amazon.com/s?k=ai+pet+camera+treat+dispenser&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Tips for Choosing AI-Powered Gifts
 

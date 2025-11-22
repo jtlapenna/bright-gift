@@ -8,6 +8,24 @@ This is the single source of truth for all affiliate linking strategies, impleme
 **Goal:** Maximize conversions while providing genuine value to readers
 **Philosophy:** Quality and relevance over artificial platform diversity
 
+### **🔗 Standard Affiliate Link Format**
+
+**CRITICAL:** All affiliate links must use this exact format:
+```html
+target="_blank" rel="noopener sponsored"
+```
+
+**Why:**
+- `target="_blank"` - Opens link in new tab
+- `rel="noopener"` - Security best practice for external links
+- `rel="sponsored"` - Properly marks affiliate/paid links for SEO compliance
+
+**⚠️ Common Mistakes to Avoid:**
+- ❌ `rel="noopener"` only (missing "sponsored")
+- ❌ `rel="nofollow"` (outdated, use "sponsored" instead)
+- ❌ Duplicate attributes (e.g., `target="_blank" target="_blank"`)
+- ❌ Missing attributes entirely
+
 ---
 
 ## 🎯 **Affiliate Strategy & Philosophy**
@@ -64,12 +82,13 @@ https://www.amazon.com/s?k=KEYWORD&tag=bright-gift-20
 #### **Formatting Requirements:**
 - **Affiliate ID:** Always use `bright-gift-20`
 - **CSS Class:** Use `amazon-link` for consistent styling
-- **Target:** `target="_blank" rel="noopener"`
+- **Target:** `target="_blank" rel="noopener sponsored"`
 - **Anchor Text:** "View on Amazon"
+- **CRITICAL:** Use `rel="noopener sponsored"` (not just "noopener") to properly mark affiliate links
 
 #### **Implementation Example:**
 ```html
-<a href="https://www.amazon.com/s?k=plant+stand&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=plant+stand&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 ```
 
 #### **Safe Keyword Strategy:**
@@ -102,6 +121,12 @@ https://www.amazon.com/s?k=KEYWORD&tag=bright-gift-20
 - Supporting independent bookstores aligns with brand values
 - Higher conversion rates for book-specific searches
 
+#### **Formatting Requirements:**
+- **Affiliate ID:** Always use `brightgift` in URLs
+- **CSS Class:** Use `bookshop-link` for consistent styling
+- **Target:** `target="_blank" rel="noopener sponsored"`
+- **Anchor Text:** "View on Bookshop.org"
+
 #### **✅ Bookshop.org - What Works:**
 ✅ **Books Only:** Fiction, non-fiction, children's books, audiobooks, graphic novels
 ❌ **Never Link:** Non-book items, digital subscriptions, experiences
@@ -121,7 +146,7 @@ https://bookshop.org/a/brightgift/ISBN
 
 **Implementation Example:**
 ```html
-<a href="https://bookshop.org/a/brightgift/9780525559474" class="bookshop-link" target="_blank" rel="noopener">View on Bookshop.org</a>
+<a href="https://bookshop.org/a/brightgift/9780525559474" class="bookshop-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
 ```
 
 #### **Search Links (Fallback Method):**
@@ -131,7 +156,7 @@ https://bookshop.org/search?keywords=BOOK+KEYWORDS&affiliate=brightgift
 
 **Implementation Example:**
 ```html
-<a href="https://bookshop.org/search?keywords=midnight+library+matt+haig&affiliate=brightgift" class="bookshop-link" target="_blank" rel="noopener">View on Bookshop.org</a>
+<a href="https://bookshop.org/search?keywords=midnight+library+matt+haig&affiliate=brightgift" class="bookshop-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
 ```
 
 #### **How to Find ISBNs:**
@@ -165,6 +190,11 @@ https://bookshop.org/search?keywords=BOOK+KEYWORDS&affiliate=brightgift
 https://www.arjdj2msd.com/7LKLK3/[BRAND_CODE]/
 ```
 
+#### **Formatting Requirements:**
+- **CSS Class:** Use `afrofiliate-link` for consistent styling
+- **Target:** `target="_blank" rel="noopener sponsored"`
+- **Anchor Text:** "Shop [Brand Name]"
+
 #### **Complete Brand Code Reference:**
 
 **Skincare & Beauty:**
@@ -190,7 +220,7 @@ https://www.arjdj2msd.com/7LKLK3/[BRAND_CODE]/
 
 #### **Implementation Example:**
 ```html
-<a href="https://www.arjdj2msd.com/7LKLK3/QWRG9C/" class="afrofiliate-link" target="_blank" rel="noopener">Shop BeautyStat</a>
+<a href="https://www.arjdj2msd.com/7LKLK3/QWRG9C/" class="afrofiliate-link" target="_blank" rel="noopener sponsored">Shop BeautyStat</a>
 ```
 
 #### **Integration Strategy:**
@@ -232,9 +262,9 @@ https://www.arjdj2msd.com/7LKLK3/[BRAND_CODE]/
 
 This luxurious skincare set makes a perfect gift for anyone who loves self-care...
 
-**Support Black-Owned Business:** <a href="https://www.arjdj2msd.com/7LKLK3/QWRG9C/" class="afrofiliate-link" target="_blank" rel="noopener">Shop BeautyStat</a>
+**Support Black-Owned Business:** <a href="https://www.arjdj2msd.com/7LKLK3/QWRG9C/" class="afrofiliate-link" target="_blank" rel="noopener sponsored">Shop BeautyStat</a>
 
-**Wide Selection:** <a href="https://www.amazon.com/s?k=skincare+gift+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Wide Selection:** <a href="https://www.amazon.com/s?k=skincare+gift+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 ```
 
 ---
@@ -260,7 +290,7 @@ This luxurious skincare set makes a perfect gift for anyone who loves self-care.
 
 **Practical tip:** [1 sentence with helpful advice]
 
-**Price Range:** $XX-$XX <a href="[affiliate-link]" class="[platform]-link" target="_blank" rel="noopener">[Platform CTA]</a>
+**Price Range:** $XX-$XX <a href="[affiliate-link]" class="[platform]-link" target="_blank" rel="noopener sponsored">[Platform CTA]</a>
 ```
 
 ### **Seasonal Integration Opportunities**
@@ -413,7 +443,7 @@ When you want to suggest experiences or services that can't be affiliate linked:
 - [ ] **Keyword verification:** Search terms will return relevant, shippable items
 - [ ] All affiliate links properly formatted with correct CSS classes
 - [ ] Correct affiliate IDs used for each platform (bright-gift-20, brightgift, brand codes)
-- [ ] Links open in new tab with proper attributes (`target="_blank" rel="noopener"`)
+- [ ] Links open in new tab with proper attributes (`target="_blank" rel="noopener sponsored"`)
 - [ ] Anchor text consistent and professional for each platform
 - [ ] No affiliate disclosure in content (handled by template)
 - [ ] All linked products are relevant and high-quality

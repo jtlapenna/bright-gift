@@ -50,29 +50,29 @@ class ContentValidator {
     this.stats.totalFiles++;
     const content = fs.readFileSync(filePath, 'utf8');
     const lines = content.split('\n');
-    
+
     let hasErrors = false;
-    
+
     // Check for imageJpg references
     lines.forEach((line, index) => {
       if (line.includes('imageJpg') || line.includes('imageJpg')) {
-        this.addError(filePath, index + 1, 
-          `ImageJpg reference found: ${line.trim()}`, 
+        this.addError(filePath, index + 1,
+          `ImageJpg reference found: ${line.trim()}`,
           'Remove imageJpg references, use only .webp images');
         hasErrors = true;
       }
     });
-    
+
     // Check canonical URL format
     const canonicalMatch = content.match(/^canonical:\s*(.+)$/m);
     if (canonicalMatch) {
       const canonical = canonicalMatch[1].trim();
       // Handle YAML multi-line syntax (>-) and quotes
       const cleanCanonical = canonical.replace(/^>-?\s*/, '').replace(/^['"]|['"]$/g, '').trim();
-      
+
       // Skip if canonical is empty or just YAML syntax
       if (cleanCanonical && cleanCanonical !== '>-') {
-        if (!cleanCanonical.startsWith('https://bright-gift.com/blog/') || 
+        if (!cleanCanonical.startsWith('https://bright-gift.com/blog/') ||
             cleanCanonical.endsWith('/')) {
           this.addError(filePath, content.indexOf(canonicalMatch[0]) + 1,
             `Malformed canonical URL: ${cleanCanonical}`,
@@ -81,27 +81,65 @@ class ContentValidator {
         }
       }
     }
-    
+
     // Check affiliate link attributes
-    const affiliateLinks = content.match(/rel="nofollow noopener"/g);
-    if (affiliateLinks) {
-      affiliateLinks.forEach((link, index) => {
-        this.addError(filePath, content.indexOf(link) + 1,
-          `Incorrect affiliate link attribute: ${link}`,
-          'Change to rel="sponsored noopener"');
-        hasErrors = true;
+    // Check for old "nofollow" format
+    const nofollowLinks = content.match(/rel="[^"]*nofollow[^"]*"/g);
+    if (nofollowLinks) {
+      nofollowLinks.forEach((link) => {
+        this.addWarning(filePath, content.indexOf(link) + 1,
+          `Outdated affiliate link attribute: ${link}`,
+          'Change to rel="noopener sponsored"');
       });
     }
-    
+
+    // Check for missing "sponsored" attribute on affiliate links
+    const affiliateDomains = ['amazon.com', 'bookshop.org', 'arjdj2msd.com'];
+    const affiliateLinkPattern = /<a[^>]*href="https?:\/\/(www\.)?(amazon\.com|bookshop\.org|arjdj2msd\.com)[^"]*"[^>]*>/g;
+    const allAffiliateLinks = content.match(affiliateLinkPattern);
+
+    if (allAffiliateLinks) {
+      allAffiliateLinks.forEach((link) => {
+        if (!link.includes('rel="noopener sponsored"') && !link.includes('rel="sponsored noopener"')) {
+          if (link.includes('rel=')) {
+            this.addWarning(filePath, content.indexOf(link) + 1,
+              `Affiliate link missing "sponsored" attribute: ${link.substring(0, 100)}...`,
+              'Add rel="noopener sponsored" to affiliate links');
+          } else {
+            this.addWarning(filePath, content.indexOf(link) + 1,
+              `Affiliate link missing rel attribute: ${link.substring(0, 100)}...`,
+              'Add target="_blank" rel="noopener sponsored" to affiliate links');
+          }
+        }
+      });
+    }
+
+    // Check for malformed duplicate attributes
+    const duplicatePattern = /target="_blank"[^>]*target="_blank"/g;
+    if (duplicatePattern.test(content)) {
+      this.addError(filePath, content.indexOf(content.match(duplicatePattern)[0]) + 1,
+        'Malformed affiliate link with duplicate target attributes',
+        'Remove duplicate attributes, use: target="_blank" rel="noopener sponsored"');
+      hasErrors = true;
+    }
+
+    const duplicateRelPattern = /rel="[^"]*"[^>]*rel="[^"]*"/g;
+    if (duplicateRelPattern.test(content)) {
+      this.addError(filePath, content.indexOf(content.match(duplicateRelPattern)[0]) + 1,
+        'Malformed affiliate link with duplicate rel attributes',
+        'Remove duplicate attributes, use: target="_blank" rel="noopener sponsored"');
+      hasErrors = true;
+    }
+
     // Check for fake structured data
-    if (content.includes('"ratingValue": "4.8"') || 
+    if (content.includes('"ratingValue": "4.8"') ||
         content.includes('"reviewCount": "150"')) {
       this.addError(filePath, content.indexOf('"ratingValue"') + 1,
         'Fake structured data ratings found',
         'Remove fake ratings or replace with real data');
       hasErrors = true;
     }
-    
+
     // Check image format (handle ImageKit URLs with query parameters)
     const imageMatches = content.match(/image:\s*["']([^"']+)["']/g);
     if (imageMatches) {
@@ -117,7 +155,7 @@ class ContentValidator {
         }
       });
     }
-    
+
     // Check title length
     const titleMatch = content.match(/^title:\s*["']([^"']+)["']$/m);
     if (titleMatch) {
@@ -128,7 +166,7 @@ class ContentValidator {
           'Optimize title length for SEO');
       }
     }
-    
+
     // Check description length
     const descMatch = content.match(/^description:\s*["']([^"']+)["']$/m);
     if (descMatch) {
@@ -139,7 +177,7 @@ class ContentValidator {
           'Optimize description length for SEO');
       }
     }
-    
+
     if (hasErrors) {
       this.stats.filesWithErrors++;
     }
@@ -148,9 +186,9 @@ class ContentValidator {
   // Validate all blog posts
   validateAllBlogPosts() {
     const blogFiles = glob.sync('src/content/blog/*.md');
-    
+
     console.log(`Found ${blogFiles.length} blog posts to validate...\n`);
-    
+
     blogFiles.forEach(file => {
       this.validateBlogPost(file);
     });
@@ -159,12 +197,12 @@ class ContentValidator {
   // Generate validation report
   generateReport() {
     console.log('📊 CONTENT VALIDATION RESULTS\n');
-    
+
     console.log(`Total Files: ${this.stats.totalFiles}`);
     console.log(`Files with Errors: ${this.stats.filesWithErrors}`);
     console.log(`Total Errors: ${this.stats.totalErrors}`);
     console.log(`Total Warnings: ${this.stats.totalWarnings}\n`);
-    
+
     if (this.errors.length > 0) {
       console.log('🚨 ERRORS FOUND:');
       this.errors.forEach(error => {
@@ -172,7 +210,7 @@ class ContentValidator {
         console.log(`    Fix: ${error.fix}\n`);
       });
     }
-    
+
     if (this.warnings.length > 0) {
       console.log('⚠️  WARNINGS:');
       this.warnings.forEach(warning => {
@@ -180,11 +218,11 @@ class ContentValidator {
         console.log(`    Fix: ${warning.fix}\n`);
       });
     }
-    
+
     if (this.errors.length === 0 && this.warnings.length === 0) {
       console.log('✅ All content passes SEO validation!');
     }
-    
+
     // Save detailed report
     const report = {
       timestamp: new Date().toISOString(),
@@ -192,11 +230,11 @@ class ContentValidator {
       errors: this.errors,
       warnings: this.warnings
     };
-    
+
     const reportPath = path.join(__dirname, '../../_workflow-documents/reports/content-validation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log('📄 Detailed report saved to: _workflow-documents/reports/content-validation-report.json');
-    
+
     return this.errors.length === 0;
   }
 }

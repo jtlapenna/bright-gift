@@ -96,28 +96,28 @@ When a product goes viral, it’s easy to wonder: is it real value or just great
 
 **Practical tip:** Choose models that support both emoji and QR codes for flexible labeling.
 
-**Price Range:** $35–$60 <a href="https://www.amazon.com/s?k=bluetooth+label+maker+app+qr+emoji&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $35–$60 <a href="https://www.amazon.com/s?k=bluetooth+label+maker+app+qr+emoji&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Mini Portable Photo Printer (Sticker Paper)
 ****Why it's great:**** Instantly prints phone snaps for journals, lockers, and cards—no ink cartridges required.
 
 **Practical tip:** Grab a multi‑pack of sticker paper to avoid last‑minute runs.
 
-**Price Range:** $50–$100 <a href="https://www.amazon.com/s?k=mini+portable+photo+printer+sticker+paper+bluetooth&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $50–$100 <a href="https://www.amazon.com/s?k=mini+portable+photo+printer+sticker+paper+bluetooth&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Smart Sunrise Alarm Clock (Gentle Light + Sounds)
 ****Why it's great:**** Helps reset sleep schedules with gradual light, not harsh phone alarms.
 
 **Practical tip:** Set weekday/weekend profiles so it’s truly hands‑off.
 
-**Price Range:** $40–$80 <a href="https://www.amazon.com/s?k=sunrise+alarm+clock+smart+app+sunset&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $40–$80 <a href="https://www.amazon.com/s?k=sunrise+alarm+clock+smart+app+sunset&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Magnetic Power Bank (USB‑C, Slim)
 ****Why it's great:**** Snaps to phones for on‑the‑go charging without cables; perfect for travel days and events.
 
 **Practical tip:** Pick 5,000–10,000 mAh for balance of weight and capacity.
 
-**Price Range:** $25–$45 <a href="https://www.amazon.com/s?k=magnetic+power+bank+usb+c+slim+10000+mah&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $25–$45 <a href="https://www.amazon.com/s?k=magnetic+power+bank+usb+c+slim+10000+mah&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Kitchen & Home Upgrades
 
@@ -126,28 +126,28 @@ When a product goes viral, it’s easy to wonder: is it real value or just great
 
 **Practical tip:** Measure cabinet depth so the rack slides in without door rub.
 
-**Price Range:** $20–$50 <a href="https://www.amazon.com/s?k=pot+and+pan+organizer+rack+cabinet+adjustable&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $20–$50 <a href="https://www.amazon.com/s?k=pot+and+pan+organizer+rack+cabinet+adjustable&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Countertop Nugget Ice Maker (Compact)
 ****Why it's great:**** The internet’s favorite chewable ice—party‑ready in minutes.
 
 **Practical tip:** Add a small pitcher with lid to store extra ice in the freezer.
 
-**Price Range:** $70–$120 <a href="https://www.amazon.com/s?k=compact+nugget+ice+maker+countertop&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $70–$120 <a href="https://www.amazon.com/s?k=compact+nugget+ice+maker+countertop&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Electric Frother + Glass Mug Set
 ****Why it's great:**** Café‑style lattes and matcha at home; way cheaper than daily café runs.
 
 **Practical tip:** Choose double‑wall mugs to keep foam stable and hands cool.
 
-**Price Range:** $20–$45 <a href="https://www.amazon.com/s?k=milk+frother+electric+set+double+wall+glass+mugs&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $20–$45 <a href="https://www.amazon.com/s?k=milk+frother+electric+set+double+wall+glass+mugs&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Magnetic Fridge Spice Jars (Labels Included)
 ****Why it's great:**** TikTok‑clean aesthetic and real storage win—frees a whole drawer.
 
 **Practical tip:** Use short jars for clearance on French‑door fridges.
 
-**Price Range:** $18–$35 <a href="https://www.amazon.com/s?k=magnetic+spice+jars+labels+fridge+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $18–$35 <a href="https://www.amazon.com/s?k=magnetic+spice+jars+labels+fridge+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Beauty, Self‑Care & Wellness
 
@@ -156,28 +156,28 @@ When a product goes viral, it’s easy to wonder: is it real value or just great
 
 **Practical tip:** Start at low intensity 3x/week to build the habit.
 
-**Price Range:** $60–$120 <a href="https://www.amazon.com/s?k=led+face+mask+for+skin+care+time+setting+eye+safe&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $60–$120 <a href="https://www.amazon.com/s?k=led+face+mask+for+skin+care+time+setting+eye+safe&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Heatless Curling Set (Silk or Satin)
 ****Why it's great:**** Viral for a reason—comfortable overnight waves without heat damage.
 
 **Practical tip:** Slightly damp hair, then a light mousse for hold.
 
-**Price Range:** $12–$30 <a href="https://www.amazon.com/s?k=heatless+curling+set+silk+satin+rod&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $12–$30 <a href="https://www.amazon.com/s?k=heatless+curling+set+silk+satin+rod&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Microfiber Hair Towel + Scalp Brush Duo
 ****Why it's great:**** Faster dry time and gentle exfoliation—healthy‑hair routine starter.
 
 **Practical tip:** Replace towels yearly to maintain absorbency.
 
-**Price Range:** $15–$30 <a href="https://www.amazon.com/s?k=microfiber+hair+towel+scalp+brush+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $15–$30 <a href="https://www.amazon.com/s?k=microfiber+hair+towel+scalp+brush+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Weighted Eye Mask or Neck Wrap
 ****Why it's great:**** Soothes headaches, screen fatigue, and pre‑sleep anxiety.
 
 **Practical tip:** Pick removable, washable covers for easy care.
 
-**Price Range:** $20–$45 <a href="https://www.amazon.com/s?k=weighted+eye+mask+microwaveable+neck+wrap&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $20–$45 <a href="https://www.amazon.com/s?k=weighted+eye+mask+microwaveable+neck+wrap&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Cozy & Aesthetic Wins
 
@@ -186,21 +186,21 @@ When a product goes viral, it’s easy to wonder: is it real value or just great
 
 **Practical tip:** Neutral beige/cream works across décor styles.
 
-**Price Range:** $25–$45 <a href="https://www.amazon.com/s?k=ultra+soft+throw+blanket+oeko+tex+neutral&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $25–$45 <a href="https://www.amazon.com/s?k=ultra+soft+throw+blanket+oeko+tex+neutral&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### LED Strip or Light Bar (Desk/TV Glow)
 ****Why it's great:**** Instant vibe upgrade for gaming, studying, or living rooms.
 
 **Practical tip:** Choose addressable RGB for smoother gradients in videos.
 
-**Price Range:** $15–$40 <a href="https://www.amazon.com/s?k=rgb+led+light+bar+desk+tv+backlight+addressable&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $15–$40 <a href="https://www.amazon.com/s?k=rgb+led+light+bar+desk+tv+backlight+addressable&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Aesthetic Glass Soap Dispensers + Labels
 ****Why it's great:**** Small swap, big “elevated” feel for kitchens and bathrooms.
 
 **Practical tip:** Use waterproof labels; refill with concentrated soaps.
 
-**Price Range:** $12–$28 <a href="https://www.amazon.com/s?k=glass+soap+dispenser+set+labels+amber+clear&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $12–$28 <a href="https://www.amazon.com/s?k=glass+soap+dispenser+set+labels+amber+clear&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Smart Home & Practical Gifts
 
@@ -209,28 +209,28 @@ When a product goes viral, it’s easy to wonder: is it real value or just great
 
 **Practical tip:** Confirm Matter/Thread support for better reliability.
 
-**Price Range:** $18–$35 <a href="https://www.amazon.com/s?k=smart+plug+matter+thread+energy+monitor+2+pack&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $18–$35 <a href="https://www.amazon.com/s?k=smart+plug+matter+thread+energy+monitor+2+pack&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Motion‑Sensing Night Lights (Rechargeable)
 ****Why it's great:**** Safer hallways and bathrooms without harsh overheads.
 
 **Practical tip:** Pick warm color temperature (2700–3000K) for night use.
 
-**Price Range:** $16–$30 <a href="https://www.amazon.com/s?k=motion+sensing+night+light+rechargeable+warm+white+pack&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $16–$30 <a href="https://www.amazon.com/s?k=motion+sensing+night+light+rechargeable+warm+white+pack&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Cordless Handheld Vacuum (Pet/Crumb Fixer)
 ****Why it's great:**** Quick cleanups keep cars and sofas looking new—super giftable.
 
 **Practical tip:** Look for crevice tools and washable filters.
 
-**Price Range:** $40–$90 <a href="https://www.amazon.com/s?k=cordless+handheld+vacuum+strong+suction+washable+filter&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $40–$90 <a href="https://www.amazon.com/s?k=cordless+handheld+vacuum+strong+suction+washable+filter&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Large Insulated Tumbler with Straw (Car‑Friendly Base)
 ****Why it's great:**** The viral hydration trend made these everywhere—fits cup holders, keeps drinks cold for hours, and encourages daily water goals.
 
 **Practical tip:** Choose a dishwasher‑safe, BPA‑free model and include a spare straw/cleaning brush.
 
-**Price Range:** $20–$45 <a href="https://www.amazon.com/s?k=large+insulated+tumbler+with+straw+cup+holder+friendly&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $20–$45 <a href="https://www.amazon.com/s?k=large+insulated+tumbler+with+straw+cup+holder+friendly&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## BookTok Bonus (Direct Links)
 
@@ -239,7 +239,7 @@ When a product goes viral, it’s easy to wonder: is it real value or just great
 
 **Practical tip:** Gift the hardcover for a keepsake feel.
 
-**Price Range:** $15–$30 <a href="https://bookshop.org/books/the-midnight-library/9780525559474" class="bookshop-link" target="_blank" rel="noopener">View on Bookshop.org</a>
+**Price Range:** $15–$30 <a href="https://bookshop.org/books/the-midnight-library/9780525559474" class="bookshop-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
 
 ## FAQs
 

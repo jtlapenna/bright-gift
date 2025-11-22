@@ -106,7 +106,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Consider including multiple birthstones if you want to represent family members. Many jewelers can create custom pieces that combine stones in elegant arrangements.
 
-**Price Range:** $50-$150 <a href="https://www.amazon.com/s?k=personalized+birthstone+necklace+engraved&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $50-$150 <a href="https://www.amazon.com/s?k=personalized+birthstone+necklace+engraved&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Skylight Frame Digital Picture Frame
 
@@ -114,7 +114,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Set up the frame before giving it, send a few test photos to ensure it works, and show her how family members can email photos. The frame automatically displays new photos as they're sent, so she'll never need to touch it after initial setup. Include simple written instructions with the frame's email address for family members.
 
-**Price Range:** $149 <a href="https://www.amazon.com/Skylight-Frame-Digital-Picture-Anywhere/dp/B01N7ENHO6?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $149 <a href="https://www.amazon.com/Skylight-Frame-Digital-Picture-Anywhere/dp/B01N7ENHO6?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Custom Photo Book or Memory Scrapbook
 
@@ -122,7 +122,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Use a service like Shutterfly or Mixbook for professional quality. Include captions, dates, and short stories with photos to make it more meaningful. Allow 2-3 weeks for creation and printing.
 
-**Price Range:** $30-$80 <a href="https://www.amazon.com/s?k=custom+photo+book+hardcover+family+memories&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $30-$80 <a href="https://www.amazon.com/s?k=custom+photo+book+hardcover+family+memories&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Plush Robe and Slippers Set
 
@@ -130,7 +130,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Choose machine-washable fabrics for easy care. Consider her height when selecting robe length, and opt for slip-on slippers if bending is difficult.
 
-**Price Range:** $40-$100 <a href="https://www.amazon.com/s?k=plush+robe+slippers+set+women+soft&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $40-$100 <a href="https://www.amazon.com/s?k=plush+robe+slippers+set+women+soft&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Essential Oil Diffuser with Calming Scents
 
@@ -138,7 +138,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Include a starter set of essential oils with calming scents like lavender, chamomile, or eucalyptus. Choose a diffuser with automatic shut-off for safety.
 
-**Price Range:** $25-$60 <a href="https://www.amazon.com/s?k=essential+oil+diffuser+ultrasonic+lavender&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $25-$60 <a href="https://www.amazon.com/s?k=essential+oil+diffuser+ultrasonic+lavender&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Best 80th Birthday Gift Ideas for Men
 
@@ -148,7 +148,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Consider watches with large numerals and clear markings for easy reading. Water-resistant options offer durability for daily wear.
 
-**Price Range:** $80-$300 <a href="https://www.amazon.com/s?k=engraved+watch+men+large+face&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $80-$300 <a href="https://www.amazon.com/s?k=engraved+watch+men+large+face&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Leather Wallet with Monogram
 
@@ -156,7 +156,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Choose a wallet style that matches his current one if he's particular about organization. Consider bifold or trifold based on his preference.
 
-**Price Range:** $40-$100 <a href="https://www.amazon.com/s?k=leather+wallet+monogram+personalized+men&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $40-$100 <a href="https://www.amazon.com/s?k=leather+wallet+monogram+personalized+men&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Amazon Fire Tablet
 
@@ -164,7 +164,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Install video calling apps and add family contacts before giving. Increase font sizes in all apps and show him how to adjust settings. Consider a protective case and stand.
 
-**Price Range:** $80-$150 <a href="https://www.amazon.com/s?k=amazon+fire+tablet+10+inch&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $80-$150 <a href="https://www.amazon.com/s?k=amazon+fire+tablet+10+inch&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Lift Chair Recliner
 
@@ -172,7 +172,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Measure the space where the chair will go and consider doorways for delivery. Test the lift mechanism to ensure it's smooth and quiet. Look for models with USB charging ports.
 
-**Price Range:** $300-$800 <a href="https://www.amazon.com/s?k=lift+chair+recliner+seniors+power&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $300-$800 <a href="https://www.amazon.com/s?k=lift+chair+recliner+seniors+power&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Electric Heated Blanket
 
@@ -180,7 +180,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Choose a blanket with easy-to-use controls and clear temperature settings. Look for machine-washable options. Ensure the blanket has safety certifications.
 
-**Price Range:** $40-$100 <a href="https://www.amazon.com/s?k=electric+heated+blanket+queen+automatic+shut+off&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $40-$100 <a href="https://www.amazon.com/s?k=electric+heated+blanket+queen+automatic+shut+off&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Practical Gifts for Seniors Who Have Everything
 
@@ -190,7 +190,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Choose a cane height that's appropriate for her height. Test the seat mechanism to ensure it's stable and easy to use. Look for models with comfortable handles.
 
-**Price Range:** $40-$80 <a href="https://www.amazon.com/s?k=folding+cane+with+seat+adjustable+height&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $40-$80 <a href="https://www.amazon.com/s?k=folding+cane+with+seat+adjustable+height&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Reacher Grabber Tool
 
@@ -198,7 +198,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Choose a tool with a comfortable grip and good gripping mechanism. Longer models provide more reach but may be heavier. Look for models with magnetic tips for picking up small metal items.
 
-**Price Range:** $15-$30 <a href="https://www.amazon.com/s?k=reacher+grabber+tool+32+inch+lightweight&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $15-$30 <a href="https://www.amazon.com/s?k=reacher+grabber+tool+32+inch+lightweight&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Medical Alert System
 
@@ -206,7 +206,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Research different systems to find one that works in her area and fits her lifestyle. Consider systems that work both at home and on the go. Test the system after installation.
 
-**Price Range:** $100-$300 <a href="https://www.amazon.com/s?k=medical+alert+system+pendant+fall+detection&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $100-$300 <a href="https://www.amazon.com/s?k=medical+alert+system+pendant+fall+detection&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Magnifying Glass with Light
 
@@ -214,7 +214,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Choose a magnifying glass with adjustable brightness and a comfortable handle. Consider hands-free models that can sit on a table for extended reading.
 
-**Price Range:** $15-$40 <a href="https://www.amazon.com/s?k=magnifying+glass+with+led+light+hands+free&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $15-$40 <a href="https://www.amazon.com/s?k=magnifying+glass+with+led+light+hands+free&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Sentimental and Personalized 80th Birthday Gifts
 
@@ -224,7 +224,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Gather family information before ordering. Choose a style that matches her home decor. Consider including birth dates, names, and photos in the design.
 
-**Price Range:** $50-$200 <a href="https://www.amazon.com/s?k=family+tree+wall+art+custom+personalized&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $50-$200 <a href="https://www.amazon.com/s?k=family+tree+wall+art+custom+personalized&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Engraved Plaque or Keepsake
 
@@ -232,7 +232,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Select a quote or message that has personal meaning. Consider the size and where she might display it. Ensure the engraving is clear and readable.
 
-**Price Range:** $30-$100 <a href="https://www.amazon.com/s?k=engraved+plaque+personalized+80th+birthday&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $30-$100 <a href="https://www.amazon.com/s?k=engraved+plaque+personalized+80th+birthday&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Memory Box with Engraving
 
@@ -240,7 +240,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Choose a box size that fits her storage needs. Consider the material and finish to match her style. Include some blank cards or photo sleeves to get her started.
 
-**Price Range:** $25-$75 <a href="https://www.amazon.com/s?k=memory+box+engraved+wooden+keepsake&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $25-$75 <a href="https://www.amazon.com/s?k=memory+box+engraved+wooden+keepsake&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Experience Gifts for Active Seniors
 
@@ -250,7 +250,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Choose a speaker with simple controls and long battery life. Show her how to pair it with her phone or tablet. Consider a speaker with a handle for easy carrying.
 
-**Price Range:** $30-$100 <a href="https://www.amazon.com/s?k=portable+bluetooth+speaker+wireless+waterproof&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $30-$100 <a href="https://www.amazon.com/s?k=portable+bluetooth+speaker+wireless+waterproof&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Massage Gift Set with Essential Oils
 
@@ -258,7 +258,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Include high-quality essential oils in calming scents. Add a plush blanket and perhaps a book about relaxation techniques. Package it beautifully to make it feel special.
 
-**Price Range:** $40-$80 <a href="https://www.amazon.com/s?k=massage+gift+set+essential+oils+relaxation&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $40-$80 <a href="https://www.amazon.com/s?k=massage+gift+set+essential+oils+relaxation&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Comfort and Wellness Gifts for Seniors
 
@@ -268,7 +268,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Choose a massager with multiple speed settings and attachments for different body areas. Look for models with ergonomic handles that are easy to grip.
 
-**Price Range:** $30-$80 <a href="https://www.amazon.com/s?k=handheld+massager+heat+multiple+attachments&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $30-$80 <a href="https://www.amazon.com/s?k=handheld+massager+heat+multiple+attachments&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Foot Massager with Heat
 
@@ -276,7 +276,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Choose a massager that's easy to operate and clean. Look for models with adjustable intensity and heat settings. Ensure it fits her foot size comfortably.
 
-**Price Range:** $50-$150 <a href="https://www.amazon.com/s?k=foot+massager+with+heat+shiatsu&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $50-$150 <a href="https://www.amazon.com/s?k=foot+massager+with+heat+shiatsu&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Massage Chair Pad
 
@@ -284,7 +284,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Choose a pad that fits her chair size. Look for models with multiple massage modes and heat settings. Ensure it has easy-to-reach controls.
 
-**Price Range:** $80-$200 <a href="https://www.amazon.com/s?k=massage+chair+pad+heat+vibration&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $80-$200 <a href="https://www.amazon.com/s?k=massage+chair+pad+heat+vibration&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Weighted Blanket
 
@@ -292,7 +292,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Start with a lighter weight if she's unsure about the sensation. Look for blankets with removable covers for easy washing. Consider her mobility when choosing weight.
 
-**Price Range:** $50-$120 <a href="https://www.amazon.com/s?k=weighted+blanket+15+20+pounds+adult&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $50-$120 <a href="https://www.amazon.com/s?k=weighted+blanket+15+20+pounds+adult&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### White Noise Machine
 
@@ -300,7 +300,7 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Practical tip:** Choose a machine with volume control and multiple sound options. Look for models with timers and nightlight features. Test the sounds to ensure they're pleasant.
 
-**Price Range:** $25-$60 <a href="https://www.amazon.com/s?k=white+noise+machine+sleep+sound+therapy&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $25-$60 <a href="https://www.amazon.com/s?k=white+noise+machine+sleep+sound+therapy&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## What to Consider When Choosing 80th Birthday Gifts
 
@@ -322,25 +322,25 @@ Practicality is key. Will they actually use the gift? The best gifts solve probl
 
 Affordable options include personalized mugs, essential oil diffusers, reacher grabber tools, magnifying glasses with lights, and white noise machines. These gifts provide practical value without breaking the budget.
 
-**Price Range:** $15-$50 <a href="https://www.amazon.com/s?k=personalized+mug+80th+birthday+engraved&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $15-$50 <a href="https://www.amazon.com/s?k=personalized+mug+80th+birthday+engraved&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### $50-$100
 
 Quality comfort items like weighted blankets, electric heated blankets, plush robes and slippers, handheld massagers, and custom photo books create meaningful gifts in this range.
 
-**Price Range:** $50-$100 <a href="https://www.amazon.com/s?k=weighted+blanket+15+pounds+adult&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $50-$100 <a href="https://www.amazon.com/s?k=weighted+blanket+15+pounds+adult&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### $100-$200
 
 Premium comfort items like massage chair pads, foot massagers, digital photo frames, and Amazon Fire tablets offer significant value and functionality.
 
-**Price Range:** $100-$200 <a href="https://www.amazon.com/s?k=massage+chair+pad+heat+vibration&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $100-$200 <a href="https://www.amazon.com/s?k=massage+chair+pad+heat+vibration&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### $200+
 
 High-end items like lift chair recliners provide major comfort and safety benefits. Premium tech devices and major experience gifts with accompanying physical items create memorable occasions.
 
-**Price Range:** $200-$800 <a href="https://www.amazon.com/s?k=lift+chair+recliner+power+reclining&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $200-$800 <a href="https://www.amazon.com/s?k=lift+chair+recliner+power+reclining&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## More Gift Inspiration
 

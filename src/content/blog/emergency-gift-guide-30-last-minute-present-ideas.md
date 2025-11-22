@@ -116,7 +116,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Always check the "Prime Same-Day" filter when searching to ensure quick delivery.
 
-**Price Range:** $15-$200+ <a href="https://www.amazon.com/s?k=prime+same+day+gifts&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $15-$200+ <a href="https://www.amazon.com/s?k=prime+same+day+gifts&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 2. Local Flower Delivery
 
@@ -124,7 +124,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Call ahead to confirm availability and ask about their most popular arrangements.
 
-**Price Range:** $25-$75 <a href="https://www.amazon.com/s?k=flower+delivery+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $25-$75 <a href="https://www.amazon.com/s?k=flower+delivery+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 3. Gourmet Food Delivery
 
@@ -132,7 +132,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Look for local gourmet shops that offer delivery or check services like DoorDash for gift options.
 
-**Price Range:** $30-$100 <a href="https://www.amazon.com/s?k=gourmet+gift+basket&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $30-$100 <a href="https://www.amazon.com/s?k=gourmet+gift+basket&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 4. Wine or Spirits Delivery
 
@@ -140,7 +140,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Include a handwritten note or card to personalize the gift.
 
-**Price Range:** $20-$150 <a href="https://www.amazon.com/s?k=wine+gift+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $20-$150 <a href="https://www.amazon.com/s?k=wine+gift+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 5. Local Bakery Treats
 
@@ -158,7 +158,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Include a personal message about why you chose Amazon for their gift.
 
-**Price Range:** $10-$500 <a href="https://www.amazon.com/s?k=amazon+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $10-$500 <a href="https://www.amazon.com/s?k=amazon+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 7. Kindle & Audible Gift Cards
 
@@ -166,7 +166,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Include a personal message about why you chose books for them.
 
-**Price Range:** $10-$50 <a href="https://www.amazon.com/s?k=kindle+gift+card&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $10-$50 <a href="https://www.amazon.com/s?k=kindle+gift+card&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 8. Amazon Prime Video Gift Cards
 
@@ -174,7 +174,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Perfect for entertainment lovers who enjoy streaming content.
 
-**Price Range:** $10-$100 <a href="https://www.amazon.com/s?k=prime+video+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $10-$100 <a href="https://www.amazon.com/s?k=prime+video+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 9. Gaming Gift Cards
 
@@ -182,7 +182,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Know their gaming platform preference before purchasing.
 
-**Price Range:** $10-$60 <a href="https://www.amazon.com/s?k=gaming+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $10-$60 <a href="https://www.amazon.com/s?k=gaming+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 10. Amazon Music Gift Cards
 
@@ -190,7 +190,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** These are especially thoughtful for music enthusiasts and podcast listeners.
 
-**Price Range:** $10-$100 <a href="https://www.amazon.com/s?k=amazon+music+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $10-$100 <a href="https://www.amazon.com/s?k=amazon+music+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Local Experiences (Book Same Day)
 
@@ -208,7 +208,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Include a note suggesting a specific dish or time to visit.
 
-**Price Range:** $25-$100 <a href="https://www.amazon.com/s?k=restaurant+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $25-$100 <a href="https://www.amazon.com/s?k=restaurant+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 13. Movie Theater Gift Cards
 
@@ -216,7 +216,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Include a note about wanting to see the next big release together.
 
-**Price Range:** $15-$50 <a href="https://www.amazon.com/s?k=movie+theater+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $15-$50 <a href="https://www.amazon.com/s?k=movie+theater+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 14. Local Museum or Attraction Tickets
 
@@ -242,7 +242,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Choose a photo that represents a special memory or moment you shared.
 
-**Price Range:** $15-$40 <a href="https://www.amazon.com/s?k=photo+printing+services&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $15-$40 <a href="https://www.amazon.com/s?k=photo+printing+services&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 17. Quality Coffee or Tea
 
@@ -250,7 +250,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Visit a local coffee roaster or specialty tea shop for the freshest options.
 
-**Price Range:** $15-$50 <a href="https://www.amazon.com/s?k=premium+coffee+gift+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $15-$50 <a href="https://www.amazon.com/s?k=premium+coffee+gift+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 18. Artisanal Candles
 
@@ -258,7 +258,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Choose scents you know they love or that match their home's aesthetic.
 
-**Price Range:** $20-$60 <a href="https://www.amazon.com/s?k=artisanal+candles&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $20-$60 <a href="https://www.amazon.com/s?k=artisanal+candles&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 19. Quality Stationery Set
 
@@ -266,7 +266,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Choose based on their profession or hobbies – writers, students, or professionals all appreciate quality stationery.
 
-**Price Range:** $25-$75 <a href="https://www.amazon.com/s?k=quality+stationery+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $25-$75 <a href="https://www.amazon.com/s?k=quality+stationery+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 20. Plant or Succulent
 
@@ -274,7 +274,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Choose low-maintenance plants like succulents or snake plants for busy people.
 
-**Price Range:** $10-$40 <a href="https://www.amazon.com/s?k=indoor+plants+succulents&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $10-$40 <a href="https://www.amazon.com/s?k=indoor+plants+succulents&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Amazon Services (Start Immediately)
 
@@ -284,7 +284,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Choose products you know they use regularly and include a personal note about why you selected this service.
 
-**Price Range:** $5-$50/month <a href="https://www.amazon.com/s?k=subscribe+and+save&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $5-$50/month <a href="https://www.amazon.com/s?k=subscribe+and+save&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 22. Amazon Fresh Gift Cards
 
@@ -292,7 +292,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** These are especially thoughtful for new parents or busy professionals.
 
-**Price Range:** $25-$200 <a href="https://www.amazon.com/s?k=amazon+fresh+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $25-$200 <a href="https://www.amazon.com/s?k=amazon+fresh+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 23. Amazon Home Services
 
@@ -300,7 +300,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Perfect for homeowners who appreciate practical gifts and time-saving services.
 
-**Price Range:** $50-$500 <a href="https://www.amazon.com/s?k=amazon+home+services&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $50-$500 <a href="https://www.amazon.com/s?k=amazon+home+services&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 24. Amazon Prime Membership
 
@@ -308,7 +308,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Include a note about all the benefits they'll enjoy throughout the year.
 
-**Price Range:** $139/year <a href="https://www.amazon.com/s?k=amazon+prime+membership&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $139/year <a href="https://www.amazon.com/s?k=amazon+prime+membership&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 25. Amazon Audible Membership
 
@@ -316,7 +316,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Choose based on their reading preferences and include a note about why you selected this service.
 
-**Price Range:** $15-$25/month <a href="https://www.amazon.com/s?k=audible+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $15-$25/month <a href="https://www.amazon.com/s?k=audible+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Creative Last-Minute Solutions
 
@@ -326,7 +326,7 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** Be specific about what you appreciate about them and include a memory or inside joke.
 
-**Price Range:** $5-$15 <a href="https://www.amazon.com/s?k=beautiful+greeting+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $5-$15 <a href="https://www.amazon.com/s?k=beautiful+greeting+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 27. Homemade Treats
 

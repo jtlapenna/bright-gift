@@ -114,7 +114,7 @@ This revolutionary wearable device clips onto clothing and records conversations
 
 **Practical tip:** Choose the lanyard attachment for hands-free recording during meetings or presentations.
 
-**Price Range:** $199-$249 <a href="https://www.amazon.com/s?k=PLAUD+NotePin+AI&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
+**Price Range:** $199-$249 <a href="https://www.amazon.com/s?k=PLAUD+NotePin+AI&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### GenXenon AI Smart Glasses
 
@@ -124,7 +124,7 @@ These stylish smart glasses offer real-time translation, voice interaction, and 
 
 **Practical tip:** The bone-conduction audio is perfect for staying aware of your surroundings while listening to music or taking calls.
 
-**Price Range:** $299-$399 <a href="https://www.amazon.com/s?k=GenXenon+AI+Smart+Glasses&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
+**Price Range:** $299-$399 <a href="https://www.amazon.com/s?k=GenXenon+AI+Smart+Glasses&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Rabbit R1 AI Assistant
 
@@ -134,7 +134,7 @@ This compact, cube-shaped AI device combines the conversational powers of ChatGP
 
 **Practical tip:** Place it on your desk or kitchen counter for easy access to AI assistance throughout the day.
 
-**Price Range:** $199-$249 <a href="https://www.amazon.com/s?k=Rabbit+R1+AI+Assistant&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
+**Price Range:** $199-$249 <a href="https://www.amazon.com/s?k=Rabbit+R1+AI+Assistant&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Remote Work & Productivity Essentials
 
@@ -146,7 +146,7 @@ Transform any workspace into a command center with this AI-enhanced productivity
 
 **Practical tip:** Use the voice commands to quickly switch between different workspace configurations for different tasks.
 
-**Price Range:** $149-$199 <a href="https://www.amazon.com/s?k=HiDock+P1+Smart+Docking+Station&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
+**Price Range:** $149-$199 <a href="https://www.amazon.com/s?k=HiDock+P1+Smart+Docking+Station&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### OBSBOT Tiny 2 4K AI Webcam
 
@@ -156,7 +156,7 @@ This compact webcam features AI-powered 4K auto-tracking, built-in face recognit
 
 **Practical tip:** Use the gesture controls to quickly zoom in or out during presentations without interrupting your flow.
 
-**Price Range:** $199-$299 <a href="https://www.amazon.com/s?k=OBSBOT+Tiny+2+4K+AI+Webcam&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
+**Price Range:** $199-$299 <a href="https://www.amazon.com/s?k=OBSBOT+Tiny+2+4K+AI+Webcam&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Ergonomic Standing Desk Converter
 
@@ -166,7 +166,7 @@ Improve posture and energy levels with this adjustable desk converter that trans
 
 **Practical tip:** Start with 30-minute standing sessions and gradually increase the duration as your body adjusts to the new position.
 
-**Price Range:** $89-$149 <a href="https://www.amazon.com/s?k=ergonomic+standing+desk+converter&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
+**Price Range:** $89-$149 <a href="https://www.amazon.com/s?k=ergonomic+standing+desk+converter&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Gaming & Entertainment Innovation
 
@@ -178,7 +178,7 @@ Portable gaming enters the AI era with this powerful handheld console that adapt
 
 **Practical tip:** The AI performance optimization works best when you play the same types of games regularly, allowing it to learn your preferences.
 
-**Price Range:** $699-$899 <a href="https://www.amazon.com/s?k=MSI+Claw+AI+Handheld+Gaming+Console&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
+**Price Range:** $699-$899 <a href="https://www.amazon.com/s?k=MSI+Claw+AI+Handheld+Gaming+Console&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Insta360 Flow 2 Pro AI Gimbal
 
@@ -188,7 +188,7 @@ Capture steady, cinematic footage without professional gear using this AI-powere
 
 **Practical tip:** Use the horizon leveling feature for perfectly straight shots even when walking or moving quickly.
 
-**Price Range:** $299-$399 <a href="https://www.amazon.com/s?k=Insta360+Flow+2+Pro+AI+Gimbal&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
+**Price Range:** $299-$399 <a href="https://www.amazon.com/s?k=Insta360+Flow+2+Pro+AI+Gimbal&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Wellness & Self-Care Technology
 
@@ -200,7 +200,7 @@ Create a peaceful meditation space at home with this premium cushion set that in
 
 **Practical tip:** Start with just 5-10 minutes of meditation daily and gradually increase the duration as you become more comfortable with the practice.
 
-**Price Range:** $59-$89 <a href="https://www.amazon.com/s?k=smart+meditation+cushion+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
+**Price Range:** $59-$89 <a href="https://www.amazon.com/s?k=smart+meditation+cushion+set&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Essential Oil Diffuser with Smart Controls
 
@@ -210,7 +210,7 @@ Transform any room into a calming sanctuary with this beautiful diffuser that in
 
 **Practical tip:** Use lavender oil in the evening to promote better sleep, and citrus oils in the morning to boost energy and focus.
 
-**Price Range:** $39-$79 <a href="https://www.amazon.com/s?k=essential+oil+diffuser+smart+controls&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
+**Price Range:** $39-$79 <a href="https://www.amazon.com/s?k=essential+oil+diffuser+smart+controls&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Smart Home & Lifestyle
 
@@ -222,7 +222,7 @@ This adorable, tennis ball-sized AI robot rolls around your house independently,
 
 **Practical tip:** Place Ballie in your living room or home office where it can easily access multiple smart devices and provide the most value.
 
-**Price Range:** $599-$799 <a href="https://www.amazon.com/s?k=Samsung+Ballie+AI+Robot&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
+**Price Range:** $599-$799 <a href="https://www.amazon.com/s?k=Samsung+Ballie+AI+Robot&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### MechDog Robot Dog Kit with AI Camera
 
@@ -232,7 +232,7 @@ This AI-enabled quadruped robot recognizes faces, maps your house, and responds 
 
 **Practical tip:** Use the programmable movements to create custom routines and behaviors that match your family's lifestyle and interests.
 
-**Price Range:** $299-$499 <a href="https://www.amazon.com/s?k=MechDog+Robot+Dog+Kit+AI+Camera&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
+**Price Range:** $299-$499 <a href="https://www.amazon.com/s?k=MechDog+Robot+Dog+Kit+AI+Camera&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## How to Choose the Right 2025 Holiday Gift
 
@@ -250,4 +250,4 @@ The 2025 holiday season represents a turning point where AI technology becomes t
 
 Whether you choose an AI-powered productivity tool for the remote worker in your life, smart glasses for the tech enthusiast, or a wellness device for someone focused on self-care, you're giving more than just a gift. You're giving them access to the future and the tools to navigate an increasingly digital world with confidence and ease.
 
-Ready to find the perfect 2025 holiday gift? Our [Gift Idea Generator](/#tool) can help you discover personalized recommendations based on your recipient's interests, budget, and lifestyle. Let AI help you choose a gift that will be remembered and appreciated for years to come. 
+Ready to find the perfect 2025 holiday gift? Our [Gift Idea Generator](/#tool) can help you discover personalized recommendations based on your recipient's interests, budget, and lifestyle. Let AI help you choose a gift that will be remembered and appreciated for years to come.

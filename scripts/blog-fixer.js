@@ -16,14 +16,14 @@ class BlogFixer {
 
   async fixAllPosts() {
     console.log('🔧 Starting automatic blog fixes...\n');
-    
+
     const blogFiles = this.getBlogFiles();
-    
+
     for (const file of blogFiles) {
       console.log(`📝 Fixing: ${path.basename(file)}`);
       await this.fixPost(file);
     }
-    
+
     this.printResults();
   }
 
@@ -37,16 +37,16 @@ class BlogFixer {
   async fixPost(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     const { data: frontmatter, content: markdown } = matter(content);
-    
+
     let fixedContent = markdown;
     let fixedFrontmatter = { ...frontmatter };
-    
+
     // Apply fixes
     fixedContent = this.fixAffiliateDisclosure(fixedContent);
     fixedContent = this.fixFormatting(fixedContent);
     fixedContent = this.fixInternalLinks(fixedContent);
     fixedFrontmatter = this.fixFrontmatter(fixedFrontmatter, markdown);
-    
+
     // Write back if changes were made
     if (fixedContent !== markdown || JSON.stringify(fixedFrontmatter) !== JSON.stringify(frontmatter)) {
       const newContent = matter.stringify(fixedContent, fixedFrontmatter);
@@ -61,13 +61,13 @@ class BlogFixer {
     // Remove any hardcoded affiliate disclaimers from content
     // since they're now handled by the template
     let fixed = content;
-    
+
     const disclosurePatterns = [
       /\*As an Amazon Associate.*\*/g,
       /\*This post contains affiliate links.*\*/g,
       /This post contains affiliate links\. We may earn a commission if you click through and make a purchase, at no additional cost to you\./g
     ];
-    
+
     let removed = false;
     disclosurePatterns.forEach(pattern => {
       if (pattern.test(fixed)) {
@@ -75,26 +75,56 @@ class BlogFixer {
         removed = true;
       }
     });
-    
+
     if (removed) {
       this.fixesApplied.push('Removed hardcoded affiliate disclosure (now handled by template)');
     }
-    
+
     return fixed;
   }
 
   fixFormatting(content) {
     let fixed = content;
-    
+
     // Fix "Why it's great" formatting
     fixed = fixed.replace(/\*Why it's great:\*/g, '**Why it\'s great:**');
-    
-    // Fix affiliate link formatting
+
+    // Fix affiliate link formatting - CRITICAL: Check for existing attributes to avoid duplicates
     fixed = fixed.replace(
-      /<a href="([^"]+)" class="amazon-link"([^>]*)>/g,
-      '<a href="$1" class="amazon-link" target="_blank" rel="noopener"$2>'
+      /<a href="([^"]+)" class="(amazon-link|bookshop-link|afrofiliate-link)"([^>]*)>/g,
+      (match, href, className, existingAttrs) => {
+        // Check if target and rel already exist
+        const hasTarget = existingAttrs.includes('target=');
+        const hasRel = existingAttrs.includes('rel=');
+
+        // If both exist, check if they're correct
+        if (hasTarget && hasRel) {
+          // Check for malformed duplicates
+          const targetCount = (existingAttrs.match(/target="[^"]*"/g) || []).length;
+          const relCount = (existingAttrs.match(/rel="[^"]*"/g) || []).length;
+
+          if (targetCount > 1 || relCount > 1) {
+            // Remove duplicates and rebuild
+            const cleanAttrs = existingAttrs
+              .replace(/target="[^"]*"/g, '')
+              .replace(/rel="[^"]*"/g, '')
+              .trim();
+            return `<a href="${href}" class="${className}"${cleanAttrs ? ' ' + cleanAttrs : ''} target="_blank" rel="noopener sponsored">`;
+          }
+          // Already correct, return as-is
+          return match;
+        }
+
+        // Missing target or rel - add them safely
+        const cleanAttrs = existingAttrs
+          .replace(/target="[^"]*"/g, '')
+          .replace(/rel="[^"]*"/g, '')
+          .trim();
+
+        return `<a href="${href}" class="${className}"${cleanAttrs ? ' ' + cleanAttrs : ''} target="_blank" rel="noopener sponsored">`;
+      }
     );
-    
+
     // Fix markdown link formatting
     fixed = fixed.replace(
       /\[([^\]]+)\]\(([^)]+)\)/g,
@@ -105,11 +135,11 @@ class BlogFixer {
         return match;
       }
     );
-    
+
     if (fixed !== content) {
       this.fixesApplied.push('Fixed formatting issues');
     }
-    
+
     return fixed;
   }
 
@@ -121,31 +151,31 @@ class BlogFixer {
 
   fixFrontmatter(frontmatter, content) {
     const fixed = { ...frontmatter };
-    
+
     // Auto-calculate read time if missing or inaccurate
     if (!fixed.readTime || this.isReadTimeInaccurate(fixed.readTime, content)) {
       const wordCount = this.calculateWordCount(content);
       fixed.readTime = Math.ceil(wordCount / 200);
       this.fixesApplied.push('Updated read time calculation');
     }
-    
+
     // Auto-generate meta description if missing
     if (!fixed.metaDescription) {
       fixed.metaDescription = this.generateMetaDescription(content);
       this.fixesApplied.push('Generated missing meta description');
     }
-    
+
     // Auto-generate meta title if missing
     if (!fixed.metaTitle) {
       fixed.metaTitle = this.generateMetaTitle(fixed.title);
       this.fixesApplied.push('Generated missing meta title');
     }
-    
+
     // Ensure required fields
     if (!fixed.draft) fixed.draft = false;
     if (!fixed.status) fixed.status = 'published';
     if (!fixed.featured) fixed.featured = false;
-    
+
     return fixed;
   }
 
@@ -155,7 +185,7 @@ class BlogFixer {
       /bookshop\.org.*affiliate=/i,
       /arjdj2msd\.com.*7LKLK3/i
     ];
-    
+
     return affiliatePatterns.filter(pattern => pattern.test(content));
   }
 
@@ -184,7 +214,7 @@ class BlogFixer {
 
   generateMetaTitle(title) {
     if (!title) return 'Gift Ideas and Recommendations';
-    
+
     // Limit to 60 characters
     if (title.length > 60) {
       return title.substring(0, 57) + '...';
@@ -209,4 +239,4 @@ if (require.main === module) {
   fixer.fixAllPosts();
 }
 
-module.exports = BlogFixer; 
+module.exports = BlogFixer;

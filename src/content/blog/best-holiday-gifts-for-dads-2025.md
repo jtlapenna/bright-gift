@@ -52,7 +52,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Choose a stand that works with multiple phone sizes and includes fast-charging capability for the best experience.
 
-**Price Range:** $25-$45 <a href="https://www.amazon.com/s?k=wireless+charging+stand+phone+holder+fast+charging&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $25-$45 <a href="https://www.amazon.com/s?k=wireless+charging+stand+phone+holder+fast+charging&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Bluetooth Earbuds with Noise Cancellation
 
@@ -60,7 +60,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Look for earbuds with long battery life (8+ hours) and a compact charging case for convenience.
 
-**Price Range:** $50-$150 <a href="https://www.amazon.com/s?k=bluetooth+earbuds+noise+cancelling+long+battery&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $50-$150 <a href="https://www.amazon.com/s?k=bluetooth+earbuds+noise+cancelling+long+battery&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Smart Home Assistant Device
 
@@ -68,7 +68,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Consider what ecosystem he already uses (Google, Amazon, Apple) to ensure compatibility with his existing devices.
 
-**Price Range:** $50-$100 <a href="https://www.amazon.com/s?k=smart+home+assistant+voice+control&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $50-$100 <a href="https://www.amazon.com/s?k=smart+home+assistant+voice+control&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Portable Power Bank with Fast Charging
 
@@ -76,7 +76,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Choose a power bank with at least 10,000mAh capacity and multiple USB ports for charging several devices at once.
 
-**Price Range:** $20-$40 <a href="https://www.amazon.com/s?k=portable+power+bank+fast+charging+10000mah&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $20-$40 <a href="https://www.amazon.com/s?k=portable+power+bank+fast+charging+10000mah&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Gifts for the Outdoorsy Adventurer Dad
 
@@ -86,7 +86,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Look for stainless steel construction and a tool with at least 15-20 functions for maximum versatility.
 
-**Price Range:** $40-$80 <a href="https://www.amazon.com/s?k=high+quality+multi+tool+stainless+steel+15+functions&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $40-$80 <a href="https://www.amazon.com/s?k=high+quality+multi+tool+stainless+steel+15+functions&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Insulated Water Bottle with Temperature Control
 
@@ -94,7 +94,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Choose a size that fits standard cup holders (20-32oz) and includes a wide mouth for easy cleaning.
 
-**Price Range:** $25-$50 <a href="https://www.amazon.com/s?k=insulated+water+bottle+stainless+steel+temperature+control&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $25-$50 <a href="https://www.amazon.com/s?k=insulated+water+bottle+stainless+steel+temperature+control&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Durable Hiking Backpack with Rain Cover
 
@@ -102,7 +102,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Consider the size based on his typical adventures—20-30L is great for day trips, while 40-50L works for longer excursions.
 
-**Price Range:** $60-$120 <a href="https://www.amazon.com/s?k=hiking+backpack+waterproof+rain+cover+padded+straps&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $60-$120 <a href="https://www.amazon.com/s?k=hiking+backpack+waterproof+rain+cover+padded+straps&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Gifts for the Dad Who Has Everything (or Says He Wants Nothing!)
 
@@ -112,7 +112,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Choose a wallet that fits his style—slim and minimalist or traditional with more card slots, depending on what he carries.
 
-**Price Range:** $40-$80 <a href="https://www.amazon.com/s?k=premium+leather+wallet+rfid+blocking&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $40-$80 <a href="https://www.amazon.com/s?k=premium+leather+wallet+rfid+blocking&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### High-Quality Coffee Maker or Espresso Machine
 
@@ -120,7 +120,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Consider his coffee preferences and counter space—French presses are great for bold coffee, while espresso machines are perfect for coffee enthusiasts who want café-quality drinks at home.
 
-**Price Range:** $30-$150 <a href="https://www.amazon.com/s?k=coffee+maker+espresso+machine+quality&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $30-$150 <a href="https://www.amazon.com/s?k=coffee+maker+espresso+machine+quality&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Comfortable Memory Foam Pillow
 
@@ -128,7 +128,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Look for cooling gel memory foam if he tends to sleep hot, and consider his preferred sleep position when choosing firmness.
 
-**Price Range:** $30-$60 <a href="https://www.amazon.com/s?k=memory+foam+pillow+cooling+gel+neck+support&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $30-$60 <a href="https://www.amazon.com/s?k=memory+foam+pillow+cooling+gel+neck+support&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Thoughtful Holiday Gifts for New Dads
 
@@ -138,7 +138,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Choose a carrier that's easy to put on solo and works for both front and back carrying as the baby grows.
 
-**Price Range:** $60-$120 <a href="https://www.amazon.com/s?k=baby+carrier+for+men+active+dads+ergonomic&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $60-$120 <a href="https://www.amazon.com/s?k=baby+carrier+for+men+active+dads+ergonomic&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Practical Parenting Book for New Fathers
 
@@ -146,7 +146,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Look for books written by experienced dads or child development experts that balance practical advice with emotional support.
 
-**Price Range:** $15-$25 <a href="https://bookshop.org/search?keywords=parenting+book+for+new+dads+fatherhood&affiliate=brightgift" class="bookshop-link" target="_blank" rel="noopener">View on Bookshop.org</a>
+**Price Range:** $15-$25 <a href="https://bookshop.org/search?keywords=parenting+book+for+new+dads+fatherhood&affiliate=brightgift" class="bookshop-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
 
 ### Diaper Bag Backpack for Dads
 
@@ -154,7 +154,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Choose a backpack with multiple compartments, insulated bottle pockets, and weather-resistant material for durability.
 
-**Price Range:** $40-$80 <a href="https://www.amazon.com/s?k=diaper+bag+backpack+for+dads+multiple+compartments&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $40-$80 <a href="https://www.amazon.com/s?k=diaper+bag+backpack+for+dads+multiple+compartments&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Holiday Gifts for the Dad Who Loves to Cook or Grill
 
@@ -164,7 +164,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Look for a set with a chef's knife, paring knife, and bread knife as the essentials, plus a knife block or magnetic strip for storage.
 
-**Price Range:** $60-$150 <a href="https://www.amazon.com/s?k=professional+chef+knife+set+stainless+steel+knife+block&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $60-$150 <a href="https://www.amazon.com/s?k=professional+chef+knife+set+stainless+steel+knife+block&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Premium Meat Thermometer with Wireless Display
 
@@ -172,7 +172,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Choose a thermometer with dual probes (for meat and grill temperature) and a range of at least 100 feet for maximum flexibility.
 
-**Price Range:** $40-$80 <a href="https://www.amazon.com/s?k=wireless+meat+thermometer+dual+probe+remote+display&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $40-$80 <a href="https://www.amazon.com/s?k=wireless+meat+thermometer+dual+probe+remote+display&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Cast Iron Dutch Oven
 
@@ -180,7 +180,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Choose a size based on family size—5-6 quarts works well for most families, while larger families might prefer 7-8 quarts.
 
-**Price Range:** $50-$120 <a href="https://www.amazon.com/s?k=cast+iron+dutch+oven+enameled+5+quart&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $50-$120 <a href="https://www.amazon.com/s?k=cast+iron+dutch+oven+enameled+5+quart&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Budget-Friendly & Thoughtful Holiday Gifts for Dad Under $50 (and DIY Ideas!)
 
@@ -190,7 +190,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Pair the gift card with a nice coffee mug or a French press for a complete coffee experience.
 
-**Price Range:** $25-$45 <a href="https://www.amazon.com/s?k=premium+coffee+beans+gift+set+whole+bean&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $25-$45 <a href="https://www.amazon.com/s?k=premium+coffee+beans+gift+set+whole+bean&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Leather Key Organizer
 
@@ -198,7 +198,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Look for one with a bottle opener attachment—it's a bonus feature dads appreciate.
 
-**Price Range:** $20-$35 <a href="https://www.amazon.com/s?k=leather+key+organizer+bottle+opener&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $20-$35 <a href="https://www.amazon.com/s?k=leather+key+organizer+bottle+opener&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### DIY Gift Basket: Movie Night Essentials
 
@@ -214,7 +214,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Look for natural ingredients and include a small comb or brush for best results.
 
-**Price Range:** $25-$45 <a href="https://www.amazon.com/s?k=beard+care+kit+oil+balm+brush+natural&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $25-$45 <a href="https://www.amazon.com/s?k=beard+care+kit+oil+balm+brush+natural&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Unforgettable Gift Ideas That Enhance Experiences (Physical Items That Support Activities)
 
@@ -224,7 +224,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Choose coordinating colors and materials for a cohesive, professional-looking set.
 
-**Price Range:** $40-$75 <a href="https://www.amazon.com/s?k=travel+gear+set+packing+cubes+toiletry+bag+travel+pillow&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $40-$75 <a href="https://www.amazon.com/s?k=travel+gear+set+packing+cubes+toiletry+bag+travel+pillow&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Premium Camping Gear: Portable Camping Chair
 
@@ -232,7 +232,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Choose a chair that folds compactly and includes a carrying bag for easy transport.
 
-**Price Range:** $35-$65 <a href="https://www.amazon.com/s?k=premium+camping+chair+portable+cup+holder+pocket&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $35-$65 <a href="https://www.amazon.com/s?k=premium+camping+chair+portable+cup+holder+pocket&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Fitness Tracking Watch
 
@@ -240,7 +240,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Consider his preferred activities when choosing features—runners need GPS, while general fitness enthusiasts might prioritize battery life and health tracking.
 
-**Price Range:** $80-$200 <a href="https://www.amazon.com/s?k=fitness+watch+heart+rate+gps+tracking&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $80-$200 <a href="https://www.amazon.com/s?k=fitness+watch+heart+rate+gps+tracking&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## Personalized Holiday Gifts for Dad: Add That Special Touch
 
@@ -250,7 +250,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Keep the engraving simple and meaningful—initials or a short phrase work best.
 
-**Price Range:** $35-$70 <a href="https://www.amazon.com/s?k=engraved+leather+wallet+personalized+initials&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $35-$70 <a href="https://www.amazon.com/s?k=engraved+leather+wallet+personalized+initials&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Custom Photo Book or Family Calendar
 
@@ -258,7 +258,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Include photos from different times and occasions to tell a complete story of your family's journey together.
 
-**Price Range:** $25-$50 <a href="https://www.amazon.com/s?k=custom+photo+book+family+memories+hardcover&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $25-$50 <a href="https://www.amazon.com/s?k=custom+photo+book+family+memories+hardcover&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Monogrammed Dopp Kit or Toiletry Bag
 
@@ -266,7 +266,7 @@ Think about what makes your dad unique. Does he spend weekends tinkering in the 
 
 **Practical tip:** Choose a classic color like black, brown, or navy that will match his luggage and style.
 
-**Price Range:** $30-$60 <a href="https://www.amazon.com/s?k=monogrammed+dopp+kit+toiletry+bag+personalized&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $30-$60 <a href="https://www.amazon.com/s?k=monogrammed+dopp+kit+toiletry+bag+personalized&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ## How to Choose the Right Holiday Gift for Your Dad
 

@@ -348,4 +348,4 @@ Whether you're spending $25 or $250, the key is to make your gift reflect genuin
 
 ---
 
-*Sources: National Retail Federation, Deloitte Gift Giving Survey, Pew Research Center, Social Media Analytics Reports, Consumer Spending Data 2024* 
+*Sources: National Retail Federation, Deloitte Gift Giving Survey, Pew Research Center, Social Media Analytics Reports, Consumer Spending Data 2024*
