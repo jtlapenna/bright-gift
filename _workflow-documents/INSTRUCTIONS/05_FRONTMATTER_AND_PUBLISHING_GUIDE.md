@@ -397,7 +397,8 @@ originalInput:
 
 #### **4. Frontmatter Completion**
 - [ ] Fill all required fields
-- [ ] **Set date to actual current date (YYYY-MM-DD format) - DO NOT use example dates**
+- [ ] **⚠️ CRITICAL: Set date to actual current date (YYYY-MM-DD format) - DO NOT use example dates, future dates, or copy from templates**
+- [ ] **Verify date is correct:** Check that date matches today's date (e.g., if publishing on Nov 16, 2025, date should be `2025-11-16`)
 - [ ] Add relevant tags and categorization
 - [ ] Include affiliate link tracking
 - [ ] Add original input tracking

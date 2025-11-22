@@ -246,8 +246,9 @@ A flat-lay scene showcasing [theme-based items] in a warm, editorial style. Each
 ### **Publishing Phase**
 1. **Image Upload:** Add banner and social images
 2. **Frontmatter Completion:** Fill all required metadata
-3. **Internal Linking:** Add relevant internal links
-4. **Final Review:** Last check before publishing
+3. **Date Verification:** ⚠️ **CRITICAL** - Verify date field uses actual current date (YYYY-MM-DD format), NOT example dates or future dates
+4. **Internal Linking:** Add relevant internal links
+5. **Final Review:** Last check before publishing
 
 ---
 
