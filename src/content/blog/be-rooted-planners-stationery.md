@@ -105,6 +105,8 @@ imageAlt: >-
   Best Be Rooted Planners, Journals, and Desk Accessories - Gift Ideas and
   Recommendations
 ogImageAlt: 'best rooted planners - Best Be Rooted Planners, Journals, and Desk Accessories'
+draft: false
+featured: false
 ---
 
 ## Be Rooted: Brand Profile
@@ -114,6 +116,10 @@ What stands out:
 - Inclusive artwork and affirmations woven into functional layouts
 - Category depth: undated and dated planners, journals, padfolios, notepads, pens
 - Giftable pricing with bundles and back-to-school sets
+
+
+> 🎯 **Not sure what to buy?** Our [Gift Idea Generator](https://bright-gift.com) can help you find the perfect gift based on their interests, budget, and occasion!
+
 
 ## Standout Product Examples
 

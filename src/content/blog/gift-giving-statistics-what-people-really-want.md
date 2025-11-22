@@ -1,6 +1,9 @@
 ---
-title: "Gift Giving Statistics: What People Really Want in 2024"
-description: Discover the latest gift giving statistics and data on what people actually want. From spending patterns to preferred gift types, learn what the research...
+title: 'Gift Giving Statistics: What People Really Want in 2024'
+description: >-
+  Discover the latest gift giving statistics and data on what people actually
+  want. From spending patterns to preferred gift types, learn what the
+  research...
 keywords:
   - gift giving statistics
   - gift preferences
@@ -10,8 +13,10 @@ keywords:
   - gift giving research
   - gift data 2024
 date: 2025-07-31T00:00:00.000Z
-image: /images/blog/gift-giving-statistics-what-people-really-want/gift-giving-statistics-what-people-really-want-banner.webp
-ogImage: /images/blog/gift-giving-statistics-what-people-really-want/gift-giving-statistics-what-people-really-want-banner.webp
+image: >-
+  /images/blog/gift-giving-statistics-what-people-really-want/gift-giving-statistics-what-people-really-want-banner.webp
+ogImage: >-
+  /images/blog/gift-giving-statistics-what-people-really-want/gift-giving-statistics-what-people-really-want-banner.webp
 tags:
   - gift giving statistics
   - gift preferences
@@ -24,14 +29,21 @@ author: BrightGift Team
 category: data-driven
 contentType: data-driven
 readTime: 8
-metaDescription: Discover the latest gift giving statistics and data on what people actually want. From spending patterns to preferred gift types, learn what the research reveals.
-metaTitle: "Gift Giving Statistics: What People Really Want in 2024"
+metaDescription: >-
+  Discover the latest gift giving statistics and data on what people actually
+  want. From spending patterns to preferred gift types, learn what the research
+  reveals.
+metaTitle: 'Gift Giving Statistics: What People Really Want in 2024'
 draft: false
 status: published
 featured: false
-canonical: https://bright-gift.com/blog/gift-giving-statistics-what-people-really-want
-imageAlt: "gift giving statistics - Gift Giving Statistics: What People Really Want in 2024"
-ogImageAlt: "gift giving statistics - Gift Giving Statistics: What People Really Want in 2024"
+canonical: 'https://bright-gift.com/blog/gift-giving-statistics-what-people-really-want'
+imageAlt: >-
+  gift giving statistics - Gift Giving Statistics: What People Really Want in
+  2024
+ogImageAlt: >-
+  gift giving statistics - Gift Giving Statistics: What People Really Want in
+  2024
 ---
 
 

@@ -1,8 +1,12 @@
 ---
-title: "Eco-Friendly Gift Ideas for Every Budget: Sustainable"
-metaTitle: "Eco-Friendly Gifts: 15 Sustainable Gift Ideas for Every B..."
-metaDescription: Looking for the perfect eco-friendly gift? Discover 15 sustainable gift ideas for every budget, including green gifts under $25. Shop smarter today
-description: Discover 15+ eco-friendly gift ideas for every budget, from $25 to $100. Find sustainable presents that make a positive impact on the planet while...
+title: 'Eco-Friendly Gift Ideas for Every Budget: Sustainable'
+metaTitle: 'Eco-Friendly Gifts: 15 Sustainable Gift Ideas for Every B...'
+metaDescription: >-
+  Looking for the perfect eco-friendly gift? Discover 15 sustainable gift ideas
+  for every budget, including green gifts under $25. Shop smarter today
+description: >-
+  Discover 15+ eco-friendly gift ideas for every budget, from $25 to $100. Find
+  sustainable presents that make a positive impact on the planet while...
 date: 2025-09-17T00:00:00.000Z
 image: /images/blog/eco-friendly-gift-ideas-banner.webp
 ogImage: /images/blog/eco-friendly-gift-ideas-og.webp
@@ -21,39 +25,59 @@ contentType: gift-guide
 status: published
 keywords: friendly
 category: gift-guides
-canonical: https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget
+canonical: 'https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget'
 faqSchema:
-  "@context": https://schema.org
-  "@type": FAQPage
+  '@context': 'https://schema.org'
+  '@type': FAQPage
   mainEntity:
-    - "@type": Question
+    - '@type': Question
       name: What makes a good gift?
       acceptedAnswer:
-        "@type": Answer
-        text: A good gift is thoughtful, useful, and shows you understand the recipient's interests and needs. It should be something they'll actually use and appreciate, not just something that looks nice.
-    - "@type": Question
+        '@type': Answer
+        text: >-
+          A good gift is thoughtful, useful, and shows you understand the
+          recipient's interests and needs. It should be something they'll
+          actually use and appreciate, not just something that looks nice.
+    - '@type': Question
       name: How much should I spend on a gift?
       acceptedAnswer:
-        "@type": Answer
-        text: The amount you spend should be based on your relationship with the person and your budget. Focus on thoughtfulness over price - a meaningful gift at any price point is better than an expensive but impersonal one.
-    - "@type": Question
+        '@type': Answer
+        text: >-
+          The amount you spend should be based on your relationship with the
+          person and your budget. Focus on thoughtfulness over price - a
+          meaningful gift at any price point is better than an expensive but
+          impersonal one.
+    - '@type': Question
       name: When should I give a gift?
       acceptedAnswer:
-        "@type": Answer
-        text: Gifts are appropriate for birthdays, holidays, celebrations, and special occasions. You can also give gifts 'just because' to show someone you're thinking of them.
-    - "@type": Question
+        '@type': Answer
+        text: >-
+          Gifts are appropriate for birthdays, holidays, celebrations, and
+          special occasions. You can also give gifts 'just because' to show
+          someone you're thinking of them.
+    - '@type': Question
       name: How do I choose a gift for someone I don't know well?
       acceptedAnswer:
-        "@type": Answer
-        text: Consider their interests, lifestyle, and any hints they've dropped. Look at their social media, ask mutual friends, or choose something universally useful like a gift card or experience.
-    - "@type": Question
+        '@type': Answer
+        text: >-
+          Consider their interests, lifestyle, and any hints they've dropped.
+          Look at their social media, ask mutual friends, or choose something
+          universally useful like a gift card or experience.
+    - '@type': Question
       name: Should I include a gift receipt?
       acceptedAnswer:
-        "@type": Answer
-        text: Yes, including a gift receipt is considerate and allows the recipient to exchange the item if it's not quite right for them. It shows you want them to be happy with their gift.
-imageAlt: "friendly gift ideas - Eco-Friendly Gift Ideas for Every Budget: Sustainable"
-ogImageAlt: "Eco-Friendly Gift Ideas for Every Budget: Sustainable - Gift Ideas and Recommendations"
-socialImageAlt: "Eco-Friendly Gift Ideas for Every Budget: Sustainable - Gift Ideas and Recommendations"
+        '@type': Answer
+        text: >-
+          Yes, including a gift receipt is considerate and allows the recipient
+          to exchange the item if it's not quite right for them. It shows you
+          want them to be happy with their gift.
+imageAlt: 'friendly gift ideas - Eco-Friendly Gift Ideas for Every Budget: Sustainable'
+ogImageAlt: >-
+  Eco-Friendly Gift Ideas for Every Budget: Sustainable - Gift Ideas and
+  Recommendations
+socialImageAlt: >-
+  Eco-Friendly Gift Ideas for Every Budget: Sustainable - Gift Ideas and
+  Recommendations
 ---
 
 
@@ -72,17 +96,17 @@ Choosing sustainable gifts isn't just a trend—it's a meaningful way to show yo
 ## Eco-Friendly Gift Ideas Under $25
 
 ### 1. Reusable Shopping Bags
-<a href="https://www.amazon.com/s?k=reusable+shopping+bags&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=reusable+shopping+bags&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
 **Price Range:** $10–$20  
 Durable, foldable, and available in fun designs, reusable shopping bags help cut down on single-use plastic. They're a practical gift for anyone who wants to live more sustainably.
 
 ### 2. Bamboo Toothbrush Set
-<a href="https://www.amazon.com/s?k=bamboo+toothbrush&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=bamboo+toothbrush&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
 **Price Range:** $8–$15  
 A simple swap for a greener routine, bamboo toothbrushes are biodegradable and come in recyclable packaging.
 
 ### 3. Stainless Steel Straws
-<a href="https://www.amazon.com/s?k=stainless+steel+straws&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=stainless+steel+straws&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
 **Price Range:** $7–$18  
 Help friends ditch single-use plastic straws with a set of reusable stainless steel straws, often with a handy cleaning brush included.
 
@@ -91,17 +115,17 @@ Help friends ditch single-use plastic straws with a set of reusable stainless st
 ## Sustainable Gifts for $25–$50
 
 ### 4. Beeswax Food Wraps
-<a href="https://www.amazon.com/s?k=beeswax+food+wraps&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=beeswax+food+wraps&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
 **Price Range:** $15–$30  
 A reusable alternative to plastic wrap, beeswax wraps keep food fresh and reduce kitchen waste.
 
 ### 5. Eco-Friendly Water Bottle
-<a href="https://www.amazon.com/s?k=eco+friendly+water+bottle&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=eco+friendly+water+bottle&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
 **Price Range:** $20–$40  
 Stainless steel or glass water bottles are stylish, durable, and help cut down on plastic waste.
 
 ### 6. Organic Cotton Tote Bag
-<a href="https://www.amazon.com/s?k=organic+cotton+tote+bag&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=organic+cotton+tote+bag&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
 **Price Range:** $15–$30  
 Perfect for groceries, books, or everyday essentials, organic cotton totes are a sustainable staple.
 
@@ -110,17 +134,17 @@ Perfect for groceries, books, or everyday essentials, organic cotton totes are a
 ## Green Gift Ideas Over $50
 
 ### 7. Solar-Powered Phone Charger
-<a href="https://www.amazon.com/s?k=solar+phone+charger&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=solar+phone+charger&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
 **Price Range:** $30–$70  
 Harness the power of the sun with a portable solar charger—great for travelers, campers, or anyone on the go.
 
 ### 8. Indoor Herb Garden Kit
-<a href="https://www.amazon.com/s?k=indoor+herb+garden+kit&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=indoor+herb+garden+kit&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
 **Price Range:** $25–$60  
 Grow fresh herbs year-round with a compact, easy-to-use kit. It's a fun and sustainable way to add flavor to any kitchen.
 
 ### 9. Compost Bin for Kitchen
-<a href="https://www.amazon.com/s?k=compost+bin+for+kitchen&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
+<a href="https://www.amazon.com/s?k=compost+bin+for+kitchen&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener sponsored">View on Amazon</a>
 **Price Range:** $20–$50  
 Encourage eco-friendly habits with a stylish countertop compost bin for food scraps and coffee grounds.
 
