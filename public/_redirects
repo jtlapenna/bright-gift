@@ -33,28 +33,56 @@
 
 # Blog posts - explicit 301 redirects for trailing slashes
 # CRITICAL: These force 301 redirects (not 308) to avoid GSC validation failures
+# ALL blog posts must have redirects to ensure consistent canonical URLs
+/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75 /blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/ 301
+/blog/25-amazing-gifts-from-black-owned-businesses-under-75 /blog/25-amazing-gifts-from-black-owned-businesses-under-75/ 301
+/blog/25-books-to-gift-this-holiday-season /blog/25-books-to-gift-this-holiday-season/ 301
+/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care /blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/ 301
 /blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75 /blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/ 301
+/blog/25-unique-anniversary-gift-ideas-under-50 /blog/25-unique-anniversary-gift-ideas-under-50/ 301
+/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond /blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond/ 301
+/blog/80th-birthday-gift-ideas-seniors /blog/80th-birthday-gift-ideas-seniors/ 301
+/blog/affordable-gifts-for-pet-lovers-under-30 /blog/affordable-gifts-for-pet-lovers-under-30/ 301
+/blog/ai-powered-gift-ideas-for-every-budget /blog/ai-powered-gift-ideas-for-every-budget/ 301
+/blog/ai-tiktok-made-me-buy-it-gifts-2025 /blog/ai-tiktok-made-me-buy-it-gifts-2025/ 301
+/blog/be-rooted-planners-stationery /blog/be-rooted-planners-stationery/ 301
+/blog/best-2025-holiday-gifts-ai-tech-remote-work /blog/best-2025-holiday-gifts-ai-tech-remote-work/ 301
+/blog/best-books-for-different-reading-levels /blog/best-books-for-different-reading-levels/ 301
+/blog/best-gifts-for-dads-who-love-outdoor-adventures /blog/best-gifts-for-dads-who-love-outdoor-adventures/ 301
+/blog/best-holiday-gifts-for-dads-2025 /blog/best-holiday-gifts-for-dads-2025/ 301
+/blog/best-holiday-gifts-for-moms-2025 /blog/best-holiday-gifts-for-moms-2025/ 301
+/blog/best-home-gifts-on-amazon-2024 /blog/best-home-gifts-on-amazon-2024/ 301
+/blog/chic-wedding-gifts-for-the-stylish-couple /blog/chic-wedding-gifts-for-the-stylish-couple/ 301
+/blog/christmas-gift-ideas-2025 /blog/christmas-gift-ideas-2025/ 301
 /blog/clean-girl-2-0-minimalist-gifts-with-personality /blog/clean-girl-2-0-minimalist-gifts-with-personality/ 301
-/blog/gifts-for-girlfriend-unique-romantic-ideas /blog/gifts-for-girlfriend-unique-romantic-ideas/ 301
-/blog/gifts-for-remote-workers-under-50 /blog/gifts-for-remote-workers-under-50/ 301
 /blog/eco-friendly-gift-ideas-for-every-budget /blog/eco-friendly-gift-ideas-for-every-budget/ 301
-/blog/gifts-for-plant-lovers /blog/gifts-for-plant-lovers/ 301
+/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature /blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/ 301
+/blog/emergency-gift-guide-30-last-minute-present-ideas /blog/emergency-gift-guide-30-last-minute-present-ideas/ 301
+/blog/fun-gifts-for-kids-birthday-parties /blog/fun-gifts-for-kids-birthday-parties/ 301
+/blog/gaming-gifts-2025 /blog/gaming-gifts-2025/ 301
+/blog/gift-giving-statistics-what-people-really-want /blog/gift-giving-statistics-what-people-really-want/ 301
+/blog/gifts-for-book-lovers-under-50 /blog/gifts-for-book-lovers-under-50/ 301
+/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience /blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/ 301
+/blog/gifts-for-girlfriend-unique-romantic-ideas /blog/gifts-for-girlfriend-unique-romantic-ideas/ 301
 /blog/gifts-for-gamers-under-50 /blog/gifts-for-gamers-under-50/ 301
 /blog/gifts-for-new-homeowners-2025 /blog/gifts-for-new-homeowners-2025/ 301
-/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75 /blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/ 301
-/blog/last-minute-birthday-gifts-for-busy-professionals /blog/last-minute-birthday-gifts-for-busy-professionals/ 301
-/blog/how-to-choose-the-perfect-gift-complete-guide /blog/how-to-choose-the-perfect-gift-complete-guide/ 301
-/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature /blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/ 301
-/blog/best-gifts-for-dads-who-love-outdoor-adventures /blog/best-gifts-for-dads-who-love-outdoor-adventures/ 301
-/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore /blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore/ 301
-/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024 /blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/ 301
-/blog/special-birthday-gifts-for-lgbtq-youth /blog/special-birthday-gifts-for-lgbtq-youth/ 301
-/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide /blog/how-ai-is-revolutionizing-gift-shopping-complete-guide/ 301
+/blog/gifts-for-plant-lovers /blog/gifts-for-plant-lovers/ 301
+/blog/gifts-for-remote-workers-and-wfh-professionals /blog/gifts-for-remote-workers-and-wfh-professionals/ 301
+/blog/gifts-for-remote-workers-under-50 /blog/gifts-for-remote-workers-under-50/ 301
 /blog/gifts-under-25-for-coworkers /blog/gifts-under-25-for-coworkers/ 301
-/blog/unique-graduation-gifts-creative-minds /blog/unique-graduation-gifts-creative-minds/ 301
+/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide /blog/how-ai-is-revolutionizing-gift-shopping-complete-guide/ 301
+/blog/how-to-choose-the-perfect-gift-complete-guide /blog/how-to-choose-the-perfect-gift-complete-guide/ 301
+/blog/last-minute-birthday-gifts-for-busy-professionals /blog/last-minute-birthday-gifts-for-busy-professionals/ 301
+/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore /blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore/ 301
+/blog/remote-work-2-0-gifts-hybrid-offices-50-100 /blog/remote-work-2-0-gifts-hybrid-offices-50-100/ 301
+/blog/special-birthday-gifts-for-lgbtq-youth /blog/special-birthday-gifts-for-lgbtq-youth/ 301
 /blog/the-science-of-human-connection-why-we-need-each-other /blog/the-science-of-human-connection-why-we-need-each-other/ 301
-/blog/why-we-remember-gifts-we-give-more-than-receive /blog/why-we-remember-gifts-we-give-more-than-receive/ 301
 /blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners /blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners/ 301
+/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024 /blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/ 301
+/blog/unique-gifts-for-board-game-enthusiasts /blog/unique-gifts-for-board-game-enthusiasts/ 301
+/blog/unique-graduation-gifts-creative-minds /blog/unique-graduation-gifts-creative-minds/ 301
+/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple /blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/ 301
+/blog/why-we-remember-gifts-we-give-more-than-receive /blog/why-we-remember-gifts-we-give-more-than-receive/ 301
 
 # Fix template literal leaks (CRITICAL) - these are handled by JavaScript fixes
 

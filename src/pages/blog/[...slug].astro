@@ -53,6 +53,11 @@ const socialImage = post.data.socialImage || ogImage;
 const keywords = post.data.keywords || fallbackKeywords;
 const date = post.data.date || post.data.pubDate || fallbackDate;
 
+// CRITICAL: Generate canonical URL with HTTPS and trailing slash
+// This ensures consistent canonical URLs regardless of how the page was accessed
+const postSlug = post.slug;
+const canonicalUrl = `https://bright-gift.com/blog/${postSlug}/`;
+
 // Calculate read time based on word count (average reading speed: 200-250 words per minute)
 const wordCount = post.body.split(/\s+/).length;
 const readTime = post.data.readTime || Math.max(1, Math.ceil(wordCount / 200));
@@ -89,7 +94,7 @@ const structuredData = {
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": Astro.url.href
+    "@id": canonicalUrl
   },
   "articleSection": type === 'gift-guide' ? "Gift Guides" : "Blog",
   "keywords": Array.isArray(keywords) ? keywords.join(', ') : keywords,
@@ -182,13 +187,13 @@ if (relatedPosts.length > 0) {
   metaDescription={metaDescription}
   image={image}
   keywords={keywords}
-  canonical={Astro.url.href}
+  canonical={canonicalUrl}
   ogType="article"
   twitterCard="summary_large_image"
   breadcrumbs={[
     { name: "Home", url: "https://bright-gift.com/" },
     { name: "Blog", url: "https://bright-gift.com/blog/" },
-    { name: title, url: Astro.url.href }
+    { name: title, url: canonicalUrl }
   ]}
 >
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
@@ -346,7 +351,7 @@ if (relatedPosts.length > 0) {
               <div class="flex gap-2 flex-wrap justify-center">
                 <!-- X (Twitter) -->
                 <a 
-                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(Astro.canonicalURL)}&via=Bright_Gift_AI`}
+                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(canonicalUrl)}&via=Bright_Gift_AI`}
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Share on X (Twitter)"
@@ -358,7 +363,7 @@ if (relatedPosts.length > 0) {
                 </a>
                 <!-- Facebook -->
                 <a 
-                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(Astro.canonicalURL)}`}
+                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(canonicalUrl)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Share on Facebook"
@@ -370,7 +375,7 @@ if (relatedPosts.length > 0) {
                 </a>
                 <!-- Pinterest -->
                 <a 
-                  href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(Astro.canonicalURL)}&media=${encodeURIComponent(image)}&description=${encodeURIComponent(title)}`}
+                  href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(canonicalUrl)}&media=${encodeURIComponent(image)}&description=${encodeURIComponent(title)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Share on Pinterest"

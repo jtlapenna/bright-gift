@@ -42,8 +42,17 @@ const titleTag = metaTitle ? metaTitle.substring(0, 60) : title.substring(0, 60)
 const descriptionTag = metaDescription || description;
 
 const isHome = Astro.url.pathname === "/";
-// Ensure canonical URL uses HTTPS and proper format
-const canonicalUrl = canonical || Astro.url.href.replace('http://', 'https://');
+// Ensure canonical URL uses HTTPS and proper format with trailing slash
+// CRITICAL: Always use trailing slash for consistency (matches trailingSlash: 'always' config)
+let canonicalUrl = canonical || Astro.url.href.replace('http://', 'https://');
+// Ensure trailing slash for all non-root paths (unless already has query params or hash)
+if (!canonical && !isHome && !canonicalUrl.includes('?') && !canonicalUrl.includes('#')) {
+  const urlObj = new URL(canonicalUrl);
+  if (!urlObj.pathname.endsWith('/') && urlObj.pathname !== '/') {
+    urlObj.pathname += '/';
+    canonicalUrl = urlObj.toString();
+  }
+}
 const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.site || Astro.url.origin).toString();
 
 // Generate breadcrumb structured data
