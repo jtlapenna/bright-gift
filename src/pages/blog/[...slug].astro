@@ -251,7 +251,7 @@ if (relatedPosts.length > 0) {
           <h1 class="text-4xl md:text-5xl font-bold drop-shadow-lg" style="font-family: 'Poppins', 'Raleway', Arial, sans-serif; color: #1C2E4A;">{title}</h1>
           
           <!-- Meta information with better layout -->
-          <div class="flex items-center gap-4 text-sm text-gray-600 mb-6">
+          <div class="flex items-center gap-4 text-sm text-gray-600 mb-6" style="padding-top: 20px;">
             <span class="inline-block bg-[#FF6B6B] text-white px-3 py-1 rounded-full font-semibold tracking-wide">
               {type === 'gift-guide' ? 'Gift Guide' : type === 'faq' ? 'FAQ' : 'Blog Post'}
             </span>
@@ -273,7 +273,7 @@ if (relatedPosts.length > 0) {
 
           <!-- Tags -->
           {post.data.tags && Array.isArray(post.data.tags) && post.data.tags.length > 0 && (
-            <div class="flex flex-wrap gap-2" style="margin-bottom: 8.8rem;">
+            <div class="flex flex-wrap gap-2" style="margin-bottom: 4.8rem;">
               {post.data.tags.map((tag) => (
                 <span class="bg-slate-100 text-slate-700 text-sm px-3 py-1 rounded-full">
                   {tag}
