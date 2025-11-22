@@ -38,7 +38,7 @@ This is the single source of truth for all frontmatter schemas, publishing workf
 # Basic Content Information
 title: "Blog Post Title (H1)"
 description: "Internal description for blog previews and cards"
-date: "2024-01-15"
+date: "2025-11-21" # ⚠️ ALWAYS use actual current date (YYYY-MM-DD format) - DO NOT copy example dates
 status: "published" # draft, published, archived
 
 # SEO & Meta (Critical for Search)
@@ -165,7 +165,9 @@ analytics:
 #### **date** (Required) ✅ **CURRENTLY AVAILABLE**
 - **Purpose:** Publication date for chronological ordering
 - **Format:** YYYY-MM-DD
-- **Example:** `"2024-01-15"`
+- **CRITICAL:** Always use the actual current date when publishing (e.g., if publishing on November 21, 2025, use `"2025-11-21"`)
+- **DO NOT:** Copy example dates from documentation templates
+- **Example:** `"2025-11-21"` (use today's date in YYYY-MM-DD format)
 
 #### **status** (Required) ✅ **CURRENTLY AVAILABLE**
 - **Purpose:** Content publication state
@@ -395,6 +397,7 @@ originalInput:
 
 #### **4. Frontmatter Completion**
 - [ ] Fill all required fields
+- [ ] **Set date to actual current date (YYYY-MM-DD format) - DO NOT use example dates**
 - [ ] Add relevant tags and categorization
 - [ ] Include affiliate link tracking
 - [ ] Add original input tracking
@@ -647,7 +650,7 @@ title: ["Emergency Gift Guide", "30 Last-Minute Ideas"]
 - [ ] All image paths correct and files exist
 - [ ] Tags in array format (not comma-separated string)
 - [ ] Keywords in array format for consistency
-- [ ] Date format correct (YYYY-MM-DD)
+- [ ] Date format correct (YYYY-MM-DD) and uses actual current date (not example dates)
 - [ ] Status set to "published"
 - [ ] Affiliate links properly tracked
 - [ ] Social media content appropriate for each platform
