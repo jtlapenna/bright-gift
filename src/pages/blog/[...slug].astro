@@ -236,17 +236,17 @@ if (relatedPosts.length > 0) {
         <div class="lg:col-span-8">
 
           <!-- Affiliate Disclosure -->
-          <div class="mb-4">
+          <div class="mb-4" style="margin-bottom: 4.4rem;">
             <p class="text-xs text-gray-500 italic">
               This post contains affiliate links. We may earn a commission if you click through and make a purchase, at no additional cost to you.
             </p>
           </div>
 
           <!-- Title, Sub-heading, Date/Read Time -->
-          <h1 class="text-4xl md:text-5xl font-bold mb-2 drop-shadow-lg" style="font-family: 'Poppins', 'Raleway', Arial, sans-serif; color: #1C2E4A;">{title}</h1>
+          <h1 class="text-4xl md:text-5xl font-bold drop-shadow-lg" style="font-family: 'Poppins', 'Raleway', Arial, sans-serif; color: #1C2E4A; margin-bottom: 2.2rem;">{title}</h1>
           
           <!-- Meta information with better layout -->
-          <div class="flex items-center gap-4 mb-6 text-sm text-gray-600">
+          <div class="flex items-center gap-4 text-sm text-gray-600" style="margin-bottom: 6.6rem;">
             <span class="inline-block bg-[#FF6B6B] text-white px-3 py-1 rounded-full font-semibold tracking-wide">
               {type === 'gift-guide' ? 'Gift Guide' : type === 'faq' ? 'FAQ' : 'Blog Post'}
             </span>
@@ -264,11 +264,11 @@ if (relatedPosts.length > 0) {
             </div>
           </div>
           
-          <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mb-6" style="font-family: 'Inter', 'Open Sans', Arial, sans-serif;">{description}</p>
+          <p class="text-xl md:text-2xl text-gray-700 max-w-3xl" style="font-family: 'Inter', 'Open Sans', Arial, sans-serif; margin-bottom: 6.6rem;">{description}</p>
 
           <!-- Tags -->
           {post.data.tags && Array.isArray(post.data.tags) && post.data.tags.length > 0 && (
-            <div class="flex flex-wrap gap-2 mb-8">
+            <div class="flex flex-wrap gap-2" style="margin-bottom: 8.8rem;">
               {post.data.tags.map((tag) => (
                 <span class="bg-slate-100 text-slate-700 text-sm px-3 py-1 rounded-full">
                   {tag}
@@ -487,14 +487,14 @@ if (relatedPosts.length > 0) {
   }
   .prose h3 {
     font-size: 1.35rem;
-    margin-top: 2.75rem; /* more separation between items */
-    margin-bottom: 0.35rem;
+    margin-top: 3.025rem; /* 10% more spacing: 2.75rem * 1.1 */
+    margin-bottom: 0.385rem; /* 10% more spacing: 0.35rem * 1.1 */
     line-height: 1.25;
   }
   :global(.prose h3) { /* ensure style is not scoped away */
     font-size: 1.35rem;
-    margin-top: 2.75rem !important; /* enforce item separation */
-    margin-bottom: 0.35rem !important;
+    margin-top: 3.025rem !important; /* 10% more spacing: 2.75rem * 1.1 */
+    margin-bottom: 0.385rem !important; /* 10% more spacing: 0.35rem * 1.1 */
     line-height: 1.25 !important;
   }
   .prose h3 .qualifier {
@@ -550,23 +550,23 @@ if (relatedPosts.length > 0) {
     outline: none;
   }
   .prose p {
-    margin-bottom: 0.7rem; /* slightly tighter within an item */
+    margin-bottom: 0.77rem; /* 10% more spacing: 0.7rem * 1.1 */
     line-height: 1.75;
   }
-  :global(.prose p) { margin-bottom: 0.7rem !important; }
+  :global(.prose p) { margin-bottom: 0.77rem !important; }
   .prose ul {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.375rem; /* 10% more spacing: 1.25rem * 1.1 */
     padding-left: 1.5rem;
   }
   .prose li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.55rem; /* 10% more spacing: 0.5rem * 1.1 */
   }
   .prose blockquote {
     background: #fef3c7;
     border-left: 6px solid #f59e42;
     color: #92400e;
-    padding: 1rem 1.5rem;
-    margin: 2rem 0;
+    padding: 1.1rem 1.65rem; /* 10% more padding: 1rem * 1.1, 1.5rem * 1.1 */
+    margin: 2.2rem 0; /* 10% more spacing: 2rem * 1.1 */
     border-radius: 0.5rem;
     font-style: normal;
     font-size: 1.1em;
@@ -580,28 +580,28 @@ if (relatedPosts.length > 0) {
     top: 1rem;
   }
   .prose ul, .prose ol {
-    margin-bottom: 1rem;
-    margin-top: 0.5rem;
+    margin-bottom: 1.1rem; /* 10% more spacing: 1rem * 1.1 */
+    margin-top: 0.55rem; /* 10% more spacing: 0.5rem * 1.1 */
     padding-left: 2rem;
   }
-  :global(.prose ul), :global(.prose ol) { margin-bottom: 1rem !important; margin-top: 0.5rem !important; }
+  :global(.prose ul), :global(.prose ol) { margin-bottom: 1.1rem !important; margin-top: 0.55rem !important; }
 
   /* Tailwind Typography uses :where(...) selectors; override them directly */
   :global(.prose :where(h3):not(:where(.not-prose *))) {
-    margin-top: 4.75rem !important;  /* increased per request */
-    margin-bottom: 0.35rem !important;
+    margin-top: 5.225rem !important;  /* 10% more spacing: 4.75rem * 1.1 */
+    margin-bottom: 0.385rem !important; /* 10% more spacing: 0.35rem * 1.1 */
     line-height: 1.25 !important;
   }
   :global(.prose :where(p):not(:where(.not-prose *))) {
-    margin-top: 0.2rem !important;
-    margin-bottom: 0.6rem !important; /* tighter within an item */
+    margin-top: 0.22rem !important; /* 10% more spacing: 0.2rem * 1.1 */
+    margin-bottom: 0.66rem !important; /* 10% more spacing: 0.6rem * 1.1 */
   }
   :global(.prose :where(ul,ol):not(:where(.not-prose *))) {
-    margin-top: 0.35rem !important;
-    margin-bottom: 0.8rem !important;
+    margin-top: 0.385rem !important; /* 10% more spacing: 0.35rem * 1.1 */
+    margin-bottom: 0.88rem !important; /* 10% more spacing: 0.8rem * 1.1 */
   }
   .prose li {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.825rem; /* 10% more spacing: 0.75rem * 1.1 */
   }
   .prose strong {
     font-weight: 600;
@@ -610,15 +610,15 @@ if (relatedPosts.length > 0) {
   .prose pre {
     background: #f3f4f6;
     border-radius: 0.5rem;
-    padding: 1rem;
+    padding: 1.1rem; /* 10% more padding: 1rem * 1.1 */
     font-size: 1em;
-    margin: 2rem 0;
+    margin: 2.2rem 0; /* 10% more spacing: 2rem * 1.1 */
     overflow-x: auto;
   }
   .prose .cta-button {
     display: inline-block;
-    margin: 2rem 0 1rem 0;
-    padding: 0.85em 2.2em;
+    margin: 2.2rem 0 1.1rem 0; /* 10% more spacing: 2rem * 1.1, 1rem * 1.1 */
+    padding: 0.935em 2.42em; /* 10% more padding: 0.85em * 1.1, 2.2em * 1.1 */
     background: #FF6B6B;
     color: #fff !important;
     border-radius: 999px;
