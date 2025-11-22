@@ -108,13 +108,13 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 
 **Price Range:** $50-$150 <a href="https://www.amazon.com/s?k=personalized+birthstone+necklace+engraved&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
 
-### Digital Photo Frame Preloaded with Family Photos
+### Skylight Frame Digital Picture Frame
 
-****Why it's great:**** A digital photo frame that comes preloaded with family photos eliminates the need for her to manage technology. She can simply plug it in and enjoy rotating images of loved ones. Many frames connect to Wi-Fi, allowing family members to add new photos remotely. This gift brings family memories into her daily routine without requiring technical knowledge.
+****Why it's great:**** The Skylight Frame is a Wi-Fi connected digital picture frame that makes it incredibly easy for family members to send photos directly to the frame via email. She can simply plug it in and enjoy rotating images of loved ones without needing to manage technology herself. Family members can add new photos remotely by emailing them to the frame's unique address, making it perfect for staying connected across distances. This gift brings family memories into her daily routine without requiring any technical knowledge.
 
-**Practical tip:** Set up the frame before giving it, load it with 50-100 favorite photos, and test that it works. Include simple written instructions for basic operation, though many frames work automatically once configured.
+**Practical tip:** Set up the frame before giving it, send a few test photos to ensure it works, and show her how family members can email photos. The frame automatically displays new photos as they're sent, so she'll never need to touch it after initial setup. Include simple written instructions with the frame's email address for family members.
 
-**Price Range:** $60-$120 <a href="https://www.amazon.com/s?k=digital+photo+frame+10+inch+wi-fi&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener" target="_blank" rel="noopener" target="_blank" rel="noopener">View on Amazon</a>
+**Price Range:** $149 <a href="https://www.amazon.com/Skylight-Frame-Digital-Picture-Anywhere/dp/B01N7ENHO6?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener">View on Amazon</a>
 
 ### Custom Photo Book or Memory Scrapbook
 
