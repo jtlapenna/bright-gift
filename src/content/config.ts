@@ -12,6 +12,13 @@ const blog = defineCollection({
       }
       return val;
     }),
+    lastUpdated: z.union([z.string(), z.date()]).optional().transform((val) => {
+      if (!val) return undefined;
+      if (val instanceof Date) {
+        return val.toISOString().split('T')[0]; // Convert to YYYY-MM-DD string
+      }
+      return val;
+    }),
     // SEO and meta fields
     metaTitle: z.string().optional(),
     metaDescription: z.string().optional(),
