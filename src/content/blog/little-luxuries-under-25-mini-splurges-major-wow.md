@@ -3,7 +3,7 @@ title: Little Luxuries Under $25: Mini Splurges, Major Wow
 description: Discover 29 affordable luxury gifts under $25 that feel expensive. From beauty sets to gourmet treats, find thoughtful gifts that show you care without breaking the bank.
 date: 2025-12-02T00:00:00.000Z
 image: /images/blog/little-luxuries-under-25-mini-splurges-major-wow/little-luxuries-under-25-banner.webp
-ogImage: /images/blog/little-luxuries-under-25-mini-splurges-major-wow/little-luxuries-under-25-og.webp
+ogImage: /images/blog/little-luxuries-under-25-mini-splurges-major-wow/little-luxuries-under-25-banner.webp
 tags:
   - budget-gifts
   - luxury-gifts
