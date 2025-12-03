@@ -2,13 +2,9 @@
 title: 'The Science of Human Connection: Why We Need Each Other'
 metaTitle: 'The Science of Human Connection: Why We Need Each Other |...'
 metaDescription: >-
-  Discover the fascinating science behind human connection and why meaningful
-  relationships are essential for our wellbeing. Learn how to strengthen bonds
-  and ...
+  Discover the fascinating science behind human connection and why meaningful relationships are essential for our wellbeing. Learn how to strengthen bonds and build deeper connections.
 description: >-
-  Explore the scientific research behind human connection and discover why
-  meaningful relationships are fundamental to our happiness, health, and
-  overall...
+  Explore the scientific research behind human connection and discover why meaningful relationships are fundamental to our happiness, health, and overall wellbeing throughout life.
 keywords:
   - human connection
   - relationships

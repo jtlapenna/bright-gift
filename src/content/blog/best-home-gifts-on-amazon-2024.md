@@ -1,9 +1,7 @@
 ---
 title: 'Best Home Gifts on Amazon 2025: Transform Your Space'
 description: >-
-  Discover the top home gifts on Amazon for 2025. From smart home devices to
-  cozy essentials, find perfect gifts under $100 to transform any space into a
-  beautiful home.
+  Discover the top home gifts on Amazon for 2025. From smart home devices to cozy essentials, find perfect gifts under $100 that transform any space into a beautiful, welcoming home.
 keywords: 'amazon, gift, target, noopener, https, bright, gifts, price, range, href'
 date: 2025-09-17T00:00:00.000Z
 image: /images/blog/best-home-gifts-on-amazon-2024/amazon-home-banner.webp
@@ -18,9 +16,7 @@ tags:
 priceRange: $25-$100
 metaTitle: 'Best Home Gifts on Amazon 2025: Top-Rated Home & Garden G...'
 metaDescription: >-
-  Discover the best home gifts on Amazon for 2025. From kitchen essentials to
-  garden tools, find top-rated home and garden gifts for any occasion or budget.
-  Shop now!
+  Discover the best home gifts on Amazon for 2025. From smart home devices to cozy essentials, find top-rated home gifts under $100 that transform any space. Shop now!
 contentType: gift-guide
 readTime: 3
 draft: false

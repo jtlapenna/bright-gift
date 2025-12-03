@@ -1,12 +1,14 @@
 ---
 title: 'Remote Work 2.0: Gifts for Hybrid Offices ($50/$100)'
 description: >-
-  Perfect gifts for remote workers. From ergonomic essentials to productivity
-  boosters, thoughtful presents that enhance their work experience.
+  Perfect gifts for remote workers and hybrid office setups. From ergonomic
+  essentials to productivity boosters, find thoughtful presents under $100 that
+  enhance their workspace and comfort.
 metaTitle: 'Remote Work 2.0: Gifts for Hybrid Offices ($50/$100)'
 metaDescription: >-
-  Perfect gifts for remote workers. From ergonomic essentials to productivity
-  boosters, thoughtful presents that enhance their work experience.
+  Perfect gifts for remote workers and hybrid office setups. From ergonomic
+  essentials to productivity boosters, find thoughtful presents under $100 that
+  enhance their workspace.
 image: >-
   /images/blog/remote-work-2-0-gifts-hybrid-offices-50-100/remote-work-2-0-gifts-hybrid-offices-50-100-banner.webp
 ogImage: >-

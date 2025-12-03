@@ -1,8 +1,7 @@
 ---
 title: Chic Wedding Gifts for the Stylish Couple
 description: >-
-  Discover 20+ chic wedding gifts for stylish couples that set them up for life
-  together. From elegant home decor to luxury essentials, find sophisticated...
+  Discover 20+ chic wedding gifts for stylish couples that set them up for life together. From elegant home decor to luxury essentials, find sophisticated presents they'll cherish forever.
 date: 2025-07-31T00:00:00.000Z
 image: >-
   /images/blog/chic-wedding-gifts-for-the-stylish-couple/chic-wedding-gifts-for-the-stylish-couple-banner.webp
@@ -19,8 +18,7 @@ tags:
 priceRange: $20-$150
 metaTitle: Chic Wedding Gifts for Stylish Couples | Elegant Gift Ideas
 metaDescription: >-
-  Find chic wedding gifts for the stylish couple. Discover elegant wedding gift
-  ideas that combine sophistication with practicality for modern newlyweds.
+  Find chic wedding gifts for the stylish couple. Discover 20+ elegant wedding gift ideas that combine sophistication with practicality for modern newlyweds. Shop now!
 contentType: gift-guide
 readTime: 4
 draft: false

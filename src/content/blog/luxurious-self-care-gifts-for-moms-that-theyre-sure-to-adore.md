@@ -9,16 +9,13 @@ socialImage: >-
   /images/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore-social.webp
 category: gift-guides
 description: >-
-  Discover 20+ luxurious self-care gifts for moms that will make them feel truly
-  pampered. From spa essentials to relaxation tools, find thoughtful presents...
+  Discover 20+ luxurious self-care gifts for moms that will make them feel truly pampered. From spa essentials to relaxation tools, find thoughtful presents that show how much you care.
 keywords: >-
   self-care gifts, mom gifts, luxurious gifts, pampering gifts, Mother's Day
   gifts, spa gifts, relaxation gifts
 metaTitle: 'Luxurious Self-Care Gifts for Moms: 20 Perfect Pampering ...'
 metaDescription: >-
-  Discover 20 luxurious self-care gifts for moms that will make them feel
-  cherished. From spa essentials to wellness items, find the perfect pampering
-  present!
+  Discover 20+ luxurious self-care gifts for moms that will make them feel cherished. From spa essentials to wellness items, find the perfect pampering present. Shop now!
 tags:
   - self-care
   - mom-gifts

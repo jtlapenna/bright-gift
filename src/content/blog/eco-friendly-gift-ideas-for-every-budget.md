@@ -2,11 +2,9 @@
 title: 'Eco-Friendly Gift Ideas for Every Budget: Sustainable'
 metaTitle: 'Eco-Friendly Gifts: 15 Sustainable Gift Ideas for Every B...'
 metaDescription: >-
-  Looking for the perfect eco-friendly gift? Discover 15 sustainable gift ideas
-  for every budget, including green gifts under $25. Shop smarter today
+  Looking for the perfect eco-friendly gift? Discover 15 sustainable gift ideas for every budget, including green gifts under $25. Shop smarter and greener today!
 description: >-
-  Discover 15+ eco-friendly gift ideas for every budget, from $25 to $100. Find
-  sustainable presents that make a positive impact on the planet while...
+  Discover 15+ eco-friendly gift ideas for every budget, from $25 to $100. Find sustainable presents that make a positive impact on the planet while delighting your loved ones.
 date: 2025-09-17T00:00:00.000Z
 image: /images/blog/eco-friendly-gift-ideas-banner.webp
 ogImage: /images/blog/eco-friendly-gift-ideas-og.webp

@@ -19,7 +19,7 @@ keywords:
   - fancy gifts cheap
   - premium gifts budget
 metaTitle: "Little Luxuries Under $25: Mini Splurges, Major Wow"
-metaDescription: "Find 29 affordable luxury gifts under $25 that feel expensive. From beauty sets to gourmet treats, discover thoughtful gifts that show you care."
+metaDescription: "Find 29 affordable luxury gifts under $25 that feel expensive. From beauty sets to gourmet treats, discover mini splurges that show you care and impress. Shop now!"
 readTime: 10
 draft: false
 status: published

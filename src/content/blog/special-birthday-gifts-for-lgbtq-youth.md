@@ -2,7 +2,8 @@
 title: 'Special Birthday Gifts for LGBTQ+ Youth: 15 Meaningful Ideas'
 description: >-
   Find the perfect birthday gift for LGBTQ+ youth with our curated selection of
-  15 thoughtful, inclusive presents that celebrate identity and support their...
+  15 thoughtful, inclusive presents that celebrate identity, support their
+  journey, and show love.
 keywords: 'amazon, their, target, noopener, gift, lgbtq, pride, https, bright, href'
 date: 2025-07-31T00:00:00.000Z
 image: >-
@@ -22,7 +23,8 @@ priceRange: $10-$60
 metaTitle: 'Special Birthday Gifts for LGBTQ+ Youth: Inclusive Gift I...'
 metaDescription: >-
   Discover special birthday gifts for LGBTQ+ youth. Find inclusive, supportive
-  gift ideas that celebrate identity and show love and acceptance.
+  gift ideas that celebrate identity, show love and acceptance, and empower them
+  to be themselves.
 contentType: gift-guide
 readTime: 8
 draft: false

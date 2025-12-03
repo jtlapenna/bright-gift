@@ -2,8 +2,8 @@
 title: 'Unique Graduation Gifts for Creative Minds: 15 Ideas'
 description: >-
   Find the perfect graduation gifts for creative minds with our curated guide.
-  From art supplies to experiences, discover 15 inspiring ideas for artistic
-  graduates.
+  From art supplies to experiences, discover 15 inspiring ideas that celebrate
+  artistic graduates and their future.
 date: '2025-09-17'
 image: >-
   /images/blog/unique-graduation-gifts-creative-minds/unique-graduation-gifts-for-the-creative-minds-banner.webp
@@ -12,7 +12,8 @@ ogImage: >-
 metaTitle: Unique Graduation Gifts for Creative Minds | Artistic Ideas
 metaDescription: >-
   Find unique graduation gifts for creative minds. Discover artistic graduation
-  gift ideas that celebrate creativity and support their journey.
+  gift ideas that celebrate creativity, support their journey, and inspire
+  future success in the arts.
 keywords: >-
   graduation gifts, creative gifts, artistic gifts, gifts for graduates, art
   supplies

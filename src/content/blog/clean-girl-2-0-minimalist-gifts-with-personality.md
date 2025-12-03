@@ -1,9 +1,7 @@
 ---
 title: 'Clean Girl 2.0: Minimalist Gifts With Personality'
 description: >-
-  Discover 20+ minimalist gifts with personality for the modern woman. From
-  sleek hair kits to dewy skin essentials, elevate the Clean Girl aesthetic
-  with...
+  Discover 20+ minimalist gifts with personality for the modern woman. From sleek hair kits to dewy skin essentials, elevate the Clean Girl aesthetic with thoughtful, polished presents.
 keywords:
   - clean girl aesthetic
   - minimalist gifts
@@ -16,8 +14,7 @@ date: 2025-09-17T00:00:00.000Z
 status: published
 metaTitle: 'Clean Girl 2.0 Gifts: Minimalist, Polished, Personal'
 metaDescription: >-
-  Discover 2025 Clean Girl aesthetic gifts: sleek hair tools, dewy skin sets,
-  and minimalist jewelry with vintage details. Perfect gifts for modern women.
+  Discover 20+ Clean Girl 2.0 aesthetic gifts: sleek hair tools, dewy skin sets, and minimalist jewelry with vintage details. Perfect gifts for modern women. Shop now!
 image: >-
   /images/blog/clean-girl-2-0-minimalist-gifts-with-personality/clean-girl-2-0-banner.webp
 ogImage: >-

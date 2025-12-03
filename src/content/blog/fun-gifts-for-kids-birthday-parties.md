@@ -5,8 +5,7 @@ image: >-
   /images/blog/fun-gifts-for-kids-birthday-parties/fun-gifts-for-kids-birthday-parties-banner.webp
 category: gift-guides
 description: >-
-  Discover 25+ fun and engaging gifts for kids' birthday parties that kids will
-  love and parents will appreciate. From educational toys to creative...
+  Discover 25+ fun and engaging gifts for kids' birthday parties that kids will love and parents will appreciate. From educational toys to creative activities that spark imagination.
 keywords: >-
   kids birthday gifts, fun gifts for children, unique gifts for kids, birthday
   present ideas, toys for kids
@@ -41,9 +40,7 @@ socialPosts:
     hashtags: 'giftideas,gifts,brightgift,giftguide'
 metaTitle: Fun Birthday Gifts for Kids | Best Party Gift Ideas
 metaDescription: >-
-  Find fun gifts for kids birthday parties that will make any celebration
-  special. Discover the best birthday gifts for children of all ages and
-  interests.
+  Find 25+ fun gifts for kids birthday parties that will make any celebration special. Discover the best birthday gifts for children of all ages and interests. Shop now!
 contentType: gift-guide
 readTime: 5
 featured: false

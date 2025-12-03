@@ -9,9 +9,7 @@ socialImage: >-
   /images/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature-social.webp
 category: gift-guides
 description: >-
-  Discover 20+ eco-friendly gifts for outdoor enthusiasts that promote
-  sustainability while enjoying nature. From sustainable gear to earth-friendly
-  accessories for hikers.
+  Discover 20+ eco-friendly gifts for outdoor enthusiasts that promote sustainability while enjoying nature. From sustainable gear to earth-friendly accessories perfect for hikers and adventurers.
 keywords: >-
   eco-friendly gifts, gifts for outdoor lovers, sustainable gifts, nature gifts,
   outdoor gear
@@ -46,9 +44,7 @@ socialPosts:
     hashtags: 'giftideas,gifts,brightgift,giftguide'
 metaTitle: Eco-Friendly Gifts for Outdoor Lovers | Sustainable Natur...
 metaDescription: >-
-  Discover eco-friendly gifts for outdoor lovers who want to celebrate nature
-  sustainably. Find green gift ideas for hikers, campers, and nature
-  enthusiasts.
+  Discover 20+ eco-friendly gifts for outdoor lovers who want to celebrate nature sustainably. Find green gift ideas for hikers, campers, and nature enthusiasts. Shop now!
 contentType: gift-guide
 readTime: 5
 featured: false
