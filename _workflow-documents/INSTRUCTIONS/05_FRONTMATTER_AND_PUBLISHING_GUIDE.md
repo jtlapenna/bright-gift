@@ -375,9 +375,20 @@ originalInput:
 
 ## 🚀 **Publishing Workflow**
 
+### **Branch Management**
+⚠️ **CRITICAL:** Always create a new preview branch for any blog post you are writing. Do not work directly on the main branch.
+
+1. **Create Preview Branch:** `git checkout -b preview/blog-post-slug`
+2. **Work on Branch:** Make all changes, commits, and updates on the preview branch
+3. **Verify Locally:** Test the post locally before merging
+4. **Merge to Main:** Once verified as ready to publish, merge the preview branch to main
+
+**Why:** This allows for review, testing, and verification before the post goes live. Preview branches can be deployed to preview environments for final approval.
+
 ### **Content Creation Process**
 
 #### **1. Planning Phase**
+- [ ] Create preview branch: `git checkout -b preview/blog-post-slug`
 - [ ] Keyword research and target keyword selection
 - [ ] Content outline and structure planning
 - [ ] Image concept and style planning
@@ -412,7 +423,9 @@ originalInput:
 - [ ] Confirm reading level and content quality
 
 #### **6. Publishing**
-- [ ] Commit changes to Git repository
+- [ ] Commit changes to preview branch
+- [ ] Test locally and verify post displays correctly
+- [ ] Once verified as ready, merge preview branch to main
 - [ ] Deploy to production
 - [ ] Verify live post displays correctly
 - [ ] Submit to search engines if needed
