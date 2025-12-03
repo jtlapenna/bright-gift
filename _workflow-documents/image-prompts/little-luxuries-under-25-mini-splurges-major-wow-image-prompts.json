@@ -1,0 +1,43 @@
+{
+  "blogPost": "Little Luxuries Under $25: Mini Splurges, Major Wow",
+  "slug": "little-luxuries-under-25-mini-splurges-major-wow",
+  "imagePrompts": {
+    "banner": {
+      "dimensions": "1536x1024px",
+      "format": "WebP and JPG",
+      "description": "Banner image for blog post header - no text allowed",
+      "prompt": "A modern, whimsical illustration showcasing an elegant assortment of affordable luxury gifts arranged in a dynamic, isometric perspective. Include items like a beautifully wrapped gift box with ribbon, a scented candle with soft glow, a premium tea collection in elegant packaging, a small beauty set, artisan chocolates in a decorative box, a quality notebook with pen, and a silk sleep mask. Objects should have rounded edges, smooth matte surfaces, and soft shading. Use a gradient background transitioning from soft teal (#00A99D) to warm coral-orange (#FF6B35), with subtle abstract elements like small stars, dots, and geometric shapes scattered throughout. Soft, diffused lighting creates depth, with gentle shadows grounding each object. The composition should feel balanced yet dynamic, with objects at varying depths. No text, logos, or watermarks. Bright, optimistic, sophisticated atmosphere with ample negative space.",
+      "fileNames": {
+        "webp": "little-luxuries-under-25-banner.webp",
+        "jpg": "little-luxuries-under-25-banner.jpg"
+      }
+    },
+    "ogImage": {
+      "dimensions": "1200x630px",
+      "format": "WebP and JPG",
+      "description": "Open Graph image for social media previews - no text allowed",
+      "prompt": "A clean, sophisticated illustration of affordable luxury gifts arranged elegantly. Include a premium candle with soft glow, a beautifully packaged gift box, artisan chocolates, a quality notebook, and a small beauty set. Objects rendered in modern flat illustration style with subtle 3D depth, rounded edges, and soft matte surfaces. Gradient background from teal (#00A99D) to coral (#FF6B35) with subtle abstract decorative elements. Soft, diffused lighting with gentle shadows. Balanced composition with ample negative space. No text, logos, or watermarks. Bright, optimistic, sophisticated mood.",
+      "fileNames": {
+        "webp": "little-luxuries-under-25-og.webp",
+        "jpg": "little-luxuries-under-25-og.jpg"
+      }
+    },
+    "socialImage": {
+      "dimensions": "1200x1200px",
+      "format": "WebP and JPG",
+      "description": "Social media square image - text allowed for title",
+      "prompt": "A vibrant, engaging square composition featuring affordable luxury gifts arranged in a playful, dynamic layout. Include items like gift boxes, candles, beauty products, gourmet treats, and quality accessories. Modern flat illustration style with soft 3D depth, rounded edges, and smooth matte surfaces. Gradient background from teal to coral with abstract decorative elements. Soft lighting and shadows. Space reserved for text overlay at top or bottom. Bright, optimistic, shareable aesthetic. Text allowed: 'Little Luxuries Under $25: Mini Splurges, Major Wow' in bold, rounded font matching brand style.",
+      "fileNames": {
+        "webp": "little-luxuries-under-25-social.webp",
+        "jpg": "little-luxuries-under-25-social.jpg"
+      }
+    }
+  },
+  "styleNotes": {
+    "colors": ["Teal #00A99D", "Coral-Orange #FF6B35", "Sunshine Yellow #FFD700"],
+    "style": "Modern flat illustration with subtle 3D/isometric depth",
+    "mood": "Optimistic, joyful, sophisticated, inviting",
+    "keyElements": ["Rounded edges", "Soft shadows", "Gradient backgrounds", "Abstract decorative shapes", "Dynamic composition"]
+  }
+}
+

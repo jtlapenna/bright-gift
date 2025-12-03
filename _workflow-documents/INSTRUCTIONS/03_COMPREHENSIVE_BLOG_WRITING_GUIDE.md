@@ -225,6 +225,16 @@ A flat-lay scene showcasing [theme-based items] in a warm, editorial style. Each
 
 ## 📅 **Content Creation Workflow**
 
+### **Branch Management**
+⚠️ **CRITICAL:** Always create a new preview branch for any blog post you are writing. Do not work directly on the main branch.
+
+1. **Create Preview Branch:** `git checkout -b preview/blog-post-slug`
+2. **Work on Branch:** Make all changes, commits, and updates on the preview branch
+3. **Verify Locally:** Test the post locally before merging
+4. **Merge to Main:** Once verified as ready to publish, merge the preview branch to main
+
+**Why:** This allows for review, testing, and verification before the post goes live. Preview branches can be deployed to preview environments for final approval.
+
 ### **Planning Phase**
 1. **Keyword Research:** Identify target keywords and search intent
 2. **Competitor Analysis:** Review top-ranking content for insights
@@ -248,7 +258,8 @@ A flat-lay scene showcasing [theme-based items] in a warm, editorial style. Each
 2. **Frontmatter Completion:** Fill all required metadata
 3. **Date Verification:** ⚠️ **CRITICAL** - Verify date field uses actual current date (YYYY-MM-DD format), NOT example dates or future dates
 4. **Internal Linking:** Add relevant internal links
-5. **Final Review:** Last check before publishing
+5. **Final Review:** Last check before merging to main
+6. **Merge to Main:** Once verified as ready to publish, merge the preview branch to main
 
 ---
 
