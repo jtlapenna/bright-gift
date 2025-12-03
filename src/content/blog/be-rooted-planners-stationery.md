@@ -15,10 +15,8 @@ date: 2025-09-17T00:00:00.000Z
 status: published
 metaTitle: 'Be Rooted Planners & Journals 2025: Best Picks + How to C...'
 metaDescription: >-
-  A curated guide to the best Be Rooted planners, journals, and accessories for
-  2025. Compare formats, sizes, paper quality, and get tips to choose the right
-  p... - Be Rooted - Be Rooted planner - Black-owned stationery - best planners
-  2025 - journals for women - desk accessories - planner setup
+  Discover the best Be Rooted planners and journals for 2025. Compare formats,
+  sizes, and paper quality to find the perfect Black-owned stationery for you.
 image: /images/blog/be-rooted-planners-stationery/be-rooted-og.webp
 ogImage: /images/blog/be-rooted-planners-stationery/be-rooted-banner.webp
 siteId: brightgift

@@ -2,12 +2,13 @@
 title: 'Gifts for Gamers Under $50: 15 Perfect Gaming Gift Ideas'
 metaTitle: Gifts for Gamers Under $50 | 15 Perfect Gaming Ideas
 metaDescription: >-
-  Looking for affordable gifts for gamers? Discover 15 amazing gaming gifts
-  under $50 that will delight any gamer. From accessories to decor.
+  Looking for affordable gifts for gamers under $50? Discover 15 amazing gaming
+  gifts from accessories to room decor. Perfect presents for PC, console, and
+  mobile gamers.
 description: >-
   Find the perfect present with our curated selection of 15 gifts for gamers
-  under $50, from essential gaming accessories to stylish decor that will
-  level...
+  under $50. From essential gaming accessories to stylish room decor, level up
+  their setup.
 date: 2025-09-17T00:00:00.000Z
 lastUpdated: 2025-12-03T00:00:00.000Z
 image: /images/blog/gamers-under-50/gamers-under-50.webp

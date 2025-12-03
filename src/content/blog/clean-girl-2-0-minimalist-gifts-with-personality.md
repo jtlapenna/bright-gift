@@ -16,9 +16,8 @@ date: 2025-09-17T00:00:00.000Z
 status: published
 metaTitle: 'Clean Girl 2.0 Gifts: Minimalist, Polished, Personal'
 metaDescription: >-
-  Updated 2025 Clean Girl aesthetic: sleek hair, dewy skin, and subtle vintage
-  details. Discover minimalist gift ideas for the modern woman. satin pillowcase
-  - dewy skin set - minimalist jewelry - 2025 beauty trends
+  Discover 2025 Clean Girl aesthetic gifts: sleek hair tools, dewy skin sets,
+  and minimalist jewelry with vintage details. Perfect gifts for modern women.
 image: >-
   /images/blog/clean-girl-2-0-minimalist-gifts-with-personality/clean-girl-2-0-banner.webp
 ogImage: >-

@@ -2,11 +2,13 @@
 title: 'Gifts Under $25 for Coworkers: Thoughtful Office Gift Ideas'
 metaTitle: Gifts Under $25 for Coworkers | Perfect Office Gift Ideas
 metaDescription: >-
-  Looking for affordable gifts for coworkers? Discover 15 thoughtful gifts under
-  $25 that will delight any colleague. Perfect for office celebrations!
+  Looking for affordable gifts for coworkers under $25? Discover 15 thoughtful
+  office gift ideas that show appreciation without breaking the bank. Perfect
+  for any occasion!
 description: >-
-  Discover 15 thoughtful gift ideas under $25 perfect for coworkers. From desk
-  accessories to wellness items, find affordable gifts that show appreciation...
+  Discover 15 thoughtful gifts under $25 perfect for coworkers. From desk
+  accessories to wellness items, find budget-friendly office gifts that show
+  appreciation.
 date: 2025-09-17T00:00:00.000Z
 lastUpdated: 2025-12-03T00:00:00.000Z
 image: /images/blog/blog-gifts-under-25-for-coworkers-banner.webp
