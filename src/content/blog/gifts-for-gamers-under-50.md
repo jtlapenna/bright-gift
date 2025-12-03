@@ -223,6 +223,30 @@ A collection of gaming-themed t-shirts lets gamers show off their passion for th
 
 ---
 
+## Frequently Asked Questions
+
+### What are the best gifts for gamers under $50?
+
+The best gifts for gamers under $50 include RGB mouse pads, controller charging stations, gaming headset stands, LED strip lights, cable management kits, and gaming-themed wall art. These accessories enhance their setup without breaking the budget.
+
+### Where can I find affordable gaming gifts?
+
+Amazon offers the widest selection of gaming gifts under $50 with quick shipping. Best Buy and GameStop carry gaming accessories and peripherals. For unique gaming art and collectibles, check Etsy and Redbubble for custom designs.
+
+### What should I avoid when buying gifts for gamers?
+
+Avoid buying games without knowing their library (they might already own it), cheap off-brand controllers that break easily, clothing with outdated game references, and accessories incompatible with their gaming platform (PC, PlayStation, Xbox, Nintendo Switch).
+
+### What are good gifts for PC gamers vs console gamers?
+
+PC gamers appreciate mechanical keyboards, gaming mice, mouse pads, and RGB lighting. Console gamers prefer controller accessories, charging stations, headset stands, and platform-specific items. Multi-platform gamers enjoy universal gifts like LED lights, cable management, and gaming chairs.
+
+### How can I tell what gaming platform someone uses?
+
+Check their social media for gaming posts, ask mutual friends, or look for gaming merchandise they wear or display. If unsure, choose universal gifts like LED lights, gaming mugs, wall art, or gift cards that work across all platforms.
+
+---
+
 ## Explore More Gift Guides
 
 Find the perfect gift for any occasion:

@@ -361,7 +361,31 @@ Looking for more specific gift recommendations? Check out these curated guides:
 - **[Eco-Friendly Gifts](/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/)** - Sustainable gift options
 - **[Gifts from Black-Owned Businesses](/blog/25-amazing-gifts-from-black-owned-businesses-under-75/)** - Support diverse businesses
 
+## Frequently Asked Questions
+
+### What are the best Christmas gift ideas for 2025?
+
+The best Christmas gifts for 2025 include personalized items like custom jewelry or photo books, practical tech gadgets like wireless chargers or smart home devices, cozy essentials like weighted blankets, experience gifts like cooking classes, and thoughtful subscription boxes tailored to their interests.
+
+### Where can I find unique Christmas gifts?
+
+Etsy offers unique handmade and personalized Christmas gifts. Amazon has a vast selection with fast shipping for last-minute needs. Local artisan markets and boutiques carry one-of-a-kind items. For experiences, check Groupon or local event venues for gift certificates.
+
+### What are good last-minute Christmas gifts?
+
+Best last-minute Christmas gifts include digital gift cards (instant delivery), same-day delivery items from Amazon Prime, local experience certificates, subscription services with immediate access, personalized photo gifts with rush shipping, and homemade gift baskets from items you already have.
+
+### How much should I spend on Christmas gifts?
+
+For immediate family, $50-100 per person is common. For extended family and close friends, $25-50 is appropriate. For coworkers or acquaintances, $15-25 works well. Adjust based on your budget and relationship—thoughtfulness matters more than price.
+
+### What are the most popular Christmas gifts this year?
+
+Popular Christmas gifts for 2025 include AI-powered gadgets, sustainable and eco-friendly products, personalized items, wellness and self-care gifts, smart home devices, experience gifts, quality kitchen tools, cozy home essentials, and subscription boxes for various interests.
+
+---
+
 ## Final Thoughts
-Thoughtful gifting is about fit: a small upgrade they’ll use every day often beats a flashy item that sits on a shelf. Use these 20 ideas to choose something practical, well‑made, and personal—so your gift is remembered long after the holidays.
+Thoughtful gifting is about fit: a small upgrade they'll use every day often beats a flashy item that sits on a shelf. Use these 20 ideas to choose something practical, well‑made, and personal—so your gift is remembered long after the holidays.
 
 

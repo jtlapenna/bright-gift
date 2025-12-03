@@ -223,6 +223,30 @@ Wireless earbuds are essential for modern office communication and productivity.
 
 ---
 
+## Frequently Asked Questions
+
+### What are the best gifts for coworkers under $25?
+
+The best gifts for coworkers under $25 include desk organizers, premium coffee samplers, insulated travel mugs, wireless phone chargers, and desk plants. These practical items enhance their workspace while showing thoughtfulness without being overly personal.
+
+### Where can I find affordable coworker gifts?
+
+Amazon offers the widest selection of affordable coworker gifts with quick shipping. Target and local office supply stores also carry excellent options. For unique finds, check Etsy for personalized desk accessories and handmade items under $25.
+
+### What should I avoid when buying gifts for coworkers?
+
+Avoid overly personal items like clothing or perfume, anything political or religious, gag gifts that might offend, and items that require ongoing maintenance. Keep gifts professional, practical, and appropriate for the office environment.
+
+### How much should I spend on a coworker gift?
+
+For general coworkers, $15-25 is appropriate. For close work friends or Secret Santa exchanges, $20-30 is acceptable. For your direct manager or team lead, consider staying in the $25-35 range to show appreciation without appearing inappropriate.
+
+### What are good group gifts for coworkers?
+
+Excellent group gifts include gourmet snack boxes, premium coffee samplers, desk plant collections, or gift cards to popular lunch spots. These items are easy to share, don't require personal knowledge, and work well for office celebrations or team events.
+
+---
+
 ## Explore More Gift Guides
 
 Find the perfect gift for any occasion:

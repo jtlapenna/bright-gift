@@ -192,6 +192,30 @@ Blend of tech and sentiment: upload photos from both your phones to keep memorie
 
 ---
 
+## Frequently Asked Questions
+
+### What are the best unique gifts for girlfriends?
+
+The best unique gifts for girlfriends include personalized jewelry with meaningful engravings, custom star maps of special dates, experience gifts like cooking classes or spa days, and handmade items that show thoughtfulness. Focus on gifts that reflect her interests and your relationship.
+
+### Where can I find romantic gifts for my girlfriend?
+
+Etsy offers unique handmade and personalized romantic gifts. Amazon has a wide selection of jewelry, tech gadgets, and experience gifts. Local artisan shops and boutiques often carry one-of-a-kind items that feel more special than mass-produced gifts.
+
+### What should I avoid when buying gifts for my girlfriend?
+
+Avoid generic gifts that lack personal meaning, practical items like cleaning supplies (unless specifically requested), gifts that imply she needs to change, and anything that feels like an obligation rather than a thoughtful choice. Skip cliché gifts like teddy bears unless they have special significance.
+
+### How much should I spend on a gift for my girlfriend?
+
+Spending depends on your relationship stage and budget. For new relationships, $30-75 is appropriate. For established relationships, $75-150 shows thoughtfulness. Focus on meaning over price—a $40 personalized gift often means more than a $200 generic one.
+
+### What are good anniversary gifts for girlfriends?
+
+Excellent anniversary gifts include custom photo albums or frames, jewelry with birthstones or engravings, weekend getaways, personalized love letters or journals, and experiences you can share together. Choose gifts that celebrate your relationship milestones and shared memories.
+
+---
+
 ## Explore More Gift Guides
 
 Find the perfect gift for any occasion:
