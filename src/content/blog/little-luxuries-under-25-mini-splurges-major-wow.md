@@ -1,6 +1,6 @@
 ---
-title: Little Luxuries Under $25: Mini Splurges, Major Wow
-description: Discover 29 affordable luxury gifts under $25 that feel expensive. From beauty sets to gourmet treats, find thoughtful gifts that show you care without breaking the bank.
+title: "Little Luxuries Under $25: Mini Splurges, Major Wow"
+description: "Discover 29 affordable luxury gifts under $25 that feel expensive. From beauty sets to gourmet treats, find thoughtful gifts that show you care without breaking the bank."
 date: 2025-12-02T00:00:00.000Z
 image: /images/blog/little-luxuries-under-25-mini-splurges-major-wow/little-luxuries-under-25-banner.webp
 ogImage: /images/blog/little-luxuries-under-25-mini-splurges-major-wow/little-luxuries-under-25-banner.webp
@@ -14,12 +14,12 @@ keywords:
   - gifts under 25 2025
   - small luxury gifts
   - affordable luxury gifts
-  - gifts under $25
+  - "gifts under $25"
   - luxury gifts under 25
   - fancy gifts cheap
   - premium gifts budget
-metaTitle: Little Luxuries Under $25: Mini Splurges, Major Wow
-metaDescription: Find 29 affordable luxury gifts under $25 that feel expensive. From beauty sets to gourmet treats, discover thoughtful gifts that show you care.
+metaTitle: "Little Luxuries Under $25: Mini Splurges, Major Wow"
+metaDescription: "Find 29 affordable luxury gifts under $25 that feel expensive. From beauty sets to gourmet treats, discover thoughtful gifts that show you care."
 readTime: 10
 draft: false
 status: published
@@ -30,8 +30,8 @@ recipient: general
 budget: under-25
 occasion: any
 canonical: https://bright-gift.com/blog/little-luxuries-under-25-mini-splurges-major-wow
-imageAlt: little luxuries under 25 - Little Luxuries Under $25: Mini Splurges, Major Wow
-ogImageAlt: Little Luxuries Under $25: Mini Splurges, Major Wow - Affordable Luxury Gifts
+imageAlt: "little luxuries under 25 - Little Luxuries Under $25: Mini Splurges, Major Wow"
+ogImageAlt: "Little Luxuries Under $25: Mini Splurges, Major Wow - Affordable Luxury Gifts"
 ---
 
 Luxury doesn't have to mean expensive. Some of the most thoughtful gifts come with small price tags but deliver major impact. Whether you're shopping for stocking stuffers, coworker gifts, or just-because presents, these little luxuries under $25 prove that quality and thoughtfulness matter more than the price tag.
