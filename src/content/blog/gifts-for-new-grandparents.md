@@ -64,6 +64,16 @@ For more gift ideas for family members, check out our guides on [gifts for moms]
 
 ## Best Gifts for First-Time Grandmas
 
+### Skylight Frame Digital Picture Frame
+
+**Why it's great:** A Skylight Frame displays photos sent directly from family members' phones, keeping grandparents connected with their grandchild's daily moments. They'll receive new photos automatically without needing to learn complicated technology. It's a modern way to share memories and stay close even when apart.
+
+![Skylight Frame Digital Picture Frame - displays photos sent from family members' phones](/images/blog/gifts-for-new-grandparents/skylight-frame.jpg)
+
+**Practical tip:** Set up the frame with the Skylight app so family members can easily send photos. Choose a size that fits their space and viewing preferences.
+
+**Price Range:** $150-$250 <a href="https://www.amazon.com/Skylight-Frame-Digital-Picture-Anywhere/dp/B01N7ENHO6/?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
+
 ### Personalized "Grandma" Jewelry
 
 **Why it's great:** A necklace or bracelet engraved with "Grandma" or the grandchild's name creates a meaningful keepsake. This jewelry becomes a daily reminder of their new role and the special bond they share. It's something she can wear proudly and pass down as a family heirloom.
@@ -221,16 +231,6 @@ For more gift ideas for family members, check out our guides on [gifts for moms]
 **Practical tip:** Choose non-toxic, washable materials. Consider frames or display options that come with the kit.
 
 **Price Range:** $15-$40 <a href="https://www.amazon.com/s?k=handprint+footprint+kit+baby+keepsake&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
-
-### Skylight Frame Digital Picture Frame
-
-**Why it's great:** A Skylight Frame displays photos sent directly from family members' phones, keeping grandparents connected with their grandchild's daily moments. They'll receive new photos automatically without needing to learn complicated technology. It's a modern way to share memories and stay close even when apart.
-
-![Skylight Frame Digital Picture Frame - displays photos sent from family members' phones](/images/blog/gifts-for-new-grandparents/skylight-frame.jpg)
-
-**Practical tip:** Set up the frame with the Skylight app so family members can easily send photos. Choose a size that fits their space and viewing preferences.
-
-**Price Range:** $150-$250 <a href="https://www.amazon.com/Skylight-Frame-Digital-Picture-Anywhere/dp/B01N7ENHO6/?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Memory Jar with Notes
 
