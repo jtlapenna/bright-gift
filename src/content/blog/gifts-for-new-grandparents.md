@@ -72,7 +72,7 @@ For more gift ideas for family members, check out our guides on [gifts for moms]
 
 **Practical tip:** Set up the frame with the Skylight app so family members can easily send photos. Choose a size that fits their space and viewing preferences.
 
-**Price Range:** $150-$250 <a href="https://www.amazon.com/Skylight-Frame-Digital-Picture-Anywhere/dp/B01N7ENHO6/?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
+**Price Range:** $139.99 <a href="https://www.amazon.com/Skylight-Frame-Digital-Picture-Anywhere/dp/B01N7ENHO6/?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Personalized "Grandma" Jewelry
 
