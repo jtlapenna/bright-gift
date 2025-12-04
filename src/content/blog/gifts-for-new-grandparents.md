@@ -39,10 +39,10 @@ wordCount: 2923
 seoScore: 0
 readabilityScore: 0
 contentQuality: pending
-affiliateCount: 32
+affiliateCount: 28
 affiliateDisclosure: false
 affiliatePlatforms:
-  amazon: 30
+  amazon: 26
   bookshop: 2
   other: 0
 originalInput:
@@ -166,9 +166,9 @@ For more gift ideas for family members, check out our guides on [gifts for moms]
 
 **Why it's great:** Tickets to events, memberships, or activity passes create opportunities for shared experiences. Whether it's a zoo membership, museum passes, or sports event tickets, these gifts create lasting memories.
 
-**Practical tip:** Choose activities appropriate for the grandchild's age. Consider annual memberships for ongoing opportunities to spend time together.
+**Practical tip:** Choose activities appropriate for the grandchild's age. Consider annual memberships for ongoing opportunities to spend time together. Purchase gift certificates or memberships directly from local venues, museums, or activity centers.
 
-**Price Range:** $40-$200 <a href="https://www.amazon.com/s?k=zoo+museum+membership+gift+experience&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
+**Price Range:** $40-$200
 
 ## Personalized Grandparent Gifts
 
@@ -222,13 +222,13 @@ For more gift ideas for family members, check out our guides on [gifts for moms]
 
 **Price Range:** $15-$40 <a href="https://www.amazon.com/s?k=handprint+footprint+kit+baby+keepsake&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
-### First Photo Frame Collection
+### Skylight Frame Digital Picture Frame
 
-**Why it's great:** A collection of frames designed for milestone photos creates a beautiful display. They can showcase the first photo, first smile, first steps, and other special moments. It becomes a growing collection of memories.
+**Why it's great:** A Skylight Frame displays photos sent directly from family members' phones, keeping grandparents connected with their grandchild's daily moments. They'll receive new photos automatically without needing to learn complicated technology. It's a modern way to share memories and stay close even when apart.
 
-**Practical tip:** Choose frames in a cohesive style. Consider frames with space for dates or captions to document each milestone.
+**Practical tip:** Set up the frame with the Skylight app so family members can easily send photos. Choose a size that fits their space and viewing preferences.
 
-**Price Range:** $30-$100 <a href="https://www.amazon.com/s?k=first+photo+frame+collection+baby&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
+**Price Range:** $150-$250 <a href="https://www.amazon.com/Skylight-Frame-Digital-Picture-Anywhere/dp/B01N7ENHO6/?tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### Memory Jar with Notes
 
@@ -310,17 +310,17 @@ For more gift ideas for family members, check out our guides on [gifts for moms]
 
 **Why it's great:** An annual membership to a local zoo or aquarium provides ongoing opportunities for shared adventures. They can visit multiple times throughout the year, watching the grandchild's reactions change as they grow. It creates lasting memories and traditions.
 
-**Practical tip:** Choose a location that's convenient for them to visit regularly. Consider memberships that include guest passes for family visits.
+**Practical tip:** Choose a location that's convenient for them to visit regularly. Consider memberships that include guest passes for family visits. Purchase memberships directly from the zoo or aquarium.
 
-**Price Range:** $50-$150 <a href="https://www.amazon.com/s?k=zoo+aquarium+membership+gift+card&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
+**Price Range:** $50-$150
 
 ### Museum Passes
 
 **Why it's great:** Museum passes open up educational and fun experiences they can share. Whether it's children's museums, science centers, or art museums, these visits create learning opportunities and bonding moments.
 
-**Practical tip:** Research museums in their area that offer family-friendly programs. Consider passes that allow multiple visits.
+**Practical tip:** Research museums in their area that offer family-friendly programs. Consider passes that allow multiple visits. Purchase passes directly from the museum or local visitor centers.
 
-**Price Range:** $40-$120 <a href="https://www.amazon.com/s?k=museum+passes+family+membership&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
+**Price Range:** $40-$120
 
 ### Professional Photography Session
 
@@ -342,9 +342,9 @@ For more gift ideas for family members, check out our guides on [gifts for moms]
 
 **Why it's great:** Travel vouchers or gift cards for family-friendly destinations create opportunities for special trips. They can plan a getaway with their grandchild, creating memories that last a lifetime.
 
-**Practical tip:** Choose destinations that are age-appropriate and accessible. Consider vouchers that can be used flexibly.
+**Practical tip:** Choose destinations that are age-appropriate and accessible. Consider vouchers that can be used flexibly. Purchase travel gift cards directly from airlines, hotels, or travel booking sites.
 
-**Price Range:** $100-$500 <a href="https://www.amazon.com/s?k=travel+gift+card+voucher+family&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
+**Price Range:** $100-$500
 
 ## Conclusion
 
