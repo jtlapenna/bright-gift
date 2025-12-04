@@ -16,7 +16,7 @@ keywords:
   - nana gifts
   - best gifts for grandpa
 metaTitle: "Gifts for New Grandparents: 25 Perfect First-Time Presents"
-metaDescription: "Celebrate new grandparents with these 25 thoughtful gift ideas. From personalized keepsakes to practical presents, find the perfect first-time grandparent gift."
+metaDescription: "Discover 25 perfect gifts for new grandparents. From personalized keepsakes to practical presents, find thoughtful first-time grandparent gift ideas today."
 readTime: 10
 draft: false
 status: published
@@ -35,7 +35,7 @@ generatedAt: "2025-12-04T00:00:00.000Z"
 version: "1.0"
 currentSection: content-generation
 workflowStatus: processing
-wordCount: 2100
+wordCount: 2923
 seoScore: 0
 readabilityScore: 0
 contentQuality: pending
