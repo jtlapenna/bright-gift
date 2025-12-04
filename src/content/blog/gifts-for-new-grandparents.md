@@ -5,7 +5,7 @@ date: 2025-12-04
 image: /images/blog/gifts-for-new-grandparents/gifts-for-new-grandparents-banner.webp
 ogImage: /images/blog/gifts-for-new-grandparents/gifts-for-new-grandparents-og.webp
 tags:
-  - 2025
+  - "2025"
   - gift-guides
   - grandparents
 keywords:
