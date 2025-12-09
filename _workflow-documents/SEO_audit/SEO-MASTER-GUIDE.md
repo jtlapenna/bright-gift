@@ -2467,6 +2467,33 @@ curl -I "https://bright-gift.com/url" | grep "308"
 # Expected: No output (no 308 redirects)
 ```
 
+**Status (Dec 2025):** ✅ Resolved - All redirects now return 301 status codes. See `redirect-diagnostic-summary-2025-12-09.md` for details.
+
+#### Missing Redirect Rules
+
+**Symptoms:**
+- Published blog post not redirecting
+- GSC shows "Crawled - currently not indexed" for new posts
+- Verification script reports missing redirects
+
+**Causes:**
+1. New blog post published without adding redirect rule
+2. Redirect rule typo or incorrect format
+3. Redirect rule added to wrong section of `_redirects` file
+
+**Solutions:**
+1. Run `npm run verify:redirects` before deployment
+2. Add redirect rule: `/blog/post-slug /blog/post-slug/ 301`
+3. Verify rule is in correct section (blog posts section)
+4. Test redirect after adding: `curl -I "https://bright-gift.com/blog/post-slug"`
+
+**Prevention:**
+- Always run `npm run verify:redirects` before deploying
+- Add redirect rule immediately after publishing new post
+- Use verification script in CI/CD pipeline
+
+**Status (Dec 2025):** ✅ Resolved - All 51 published posts now have redirect rules. See `redirect-diagnostic-summary-2025-12-09.md` for details.
+
 #### Sitemap Missing Posts
 
 **Symptoms:**
@@ -3036,9 +3063,146 @@ npm run generate:sitemap
 
 This document serves as the definitive reference for all SEO systems, processes, and procedures at BrightGift. For questions or updates, refer to the relevant sections above or consult the source files directly.
 
-**Last Updated:** December 3, 2025  
+**Last Updated:** December 9, 2025  
 **Maintained By:** Development Team  
 **Review Schedule:** Quarterly
+
+---
+
+## 14. SEO Work Log & Historical Reference
+
+This section provides a chronological log of all SEO work, fixes, and improvements with cross-references to detailed documentation. Use this log to understand what was done previously and avoid repeating work.
+
+### Log Format
+
+Each entry includes:
+- **Date:** When the work was completed
+- **Type:** Category of work (fix, improvement, audit, etc.)
+- **Summary:** Brief description of what was done
+- **Reference:** Link to detailed documentation
+- **Impact:** What issues were resolved or improvements made
+
+### 2025 SEO Work Log
+
+#### December 9, 2025 - Comprehensive Redirect Diagnostic & Fix
+
+**Type:** Fix & Tooling  
+**Summary:** Comprehensive diagnostic and fix of all SEO redirect issues, with primary focus on the persistent `/blog` page problem. Created diagnostic tools and fixed missing redirects.
+
+**Reference:** `redirect-diagnostic-summary-2025-12-09.md`
+
+**What Was Done:**
+- Created `scripts/test-all-redirects.js` - comprehensive redirect testing suite
+- Created `scripts/verify-redirects.js` - quick pre-deployment verification script
+- Added missing redirect rules for 2 blog posts (`gifts-for-new-grandparents`, `little-luxuries-under-25-mini-splurges-major-wow`)
+- Verified all 51 published blog posts have redirect rules
+- Confirmed all redirects return 301 status codes (no 308s found)
+- Updated SEO Master Guide with new troubleshooting sections
+
+**Impact:**
+- All published posts now have redirect rules
+- Tools created for ongoing maintenance and prevention
+- Documentation updated with latest findings
+- Ready for GSC validation after deployment
+
+**Next Steps Document:** `next-steps-gsc-validation.md`
+
+---
+
+#### December 3, 2025 - SEO Master Guide Creation
+
+**Type:** Documentation  
+**Summary:** Created comprehensive SEO Master Guide documenting all SEO systems, processes, and procedures.
+
+**Reference:** This document (`SEO-MASTER-GUIDE.md`)
+
+**What Was Done:**
+- Documented redirect system architecture
+- Documented sitemap generation system
+- Documented canonical URL system
+- Documented content structure and frontmatter
+- Documented build process and validation
+- Documented GSC integration procedures
+- Created troubleshooting guide
+- Created quick reference tables
+
+**Impact:**
+- Single source of truth for all SEO systems
+- Complete documentation for future reference
+- Troubleshooting procedures documented
+- Historical context preserved
+
+---
+
+#### December 3, 2025 - GSC URL-Level Diagnostics
+
+**Type:** Audit  
+**Summary:** Comprehensive URL-level diagnostics of GSC issues, testing live redirects and identifying problems.
+
+**Reference:** `december-03-2025/gsc-url-level-diagnostics-2025-12-03.md`
+
+**What Was Done:**
+- Tested all URLs from GSC issue buckets
+- Verified redirect status codes (301 vs 308)
+- Checked canonical tags
+- Identified 308 redirect issues on `/category/gift-guides` and `/contact`
+- Documented redirect chain analysis
+
+**Impact:**
+- Identified specific URLs with 308 redirects
+- Confirmed most redirects working correctly
+- Provided actionable fix recommendations
+
+---
+
+### How to Use This Log
+
+1. **Before Starting New SEO Work:**
+   - Review recent log entries to understand what was done
+   - Check referenced documents for detailed information
+   - Avoid duplicating previous work
+
+2. **When Adding New Entries:**
+   - Use the format above (Date, Type, Summary, Reference, What Was Done, Impact)
+   - Link to detailed documentation files
+   - Include next steps if applicable
+
+3. **When Troubleshooting:**
+   - Search log for similar issues
+   - Review referenced documents for solutions
+   - Check if issue was previously resolved
+
+### Related Documentation
+
+- **Redirect Diagnostics:** `redirect-diagnostic-summary-2025-12-09.md`
+- **GSC Diagnostics:** `december-03-2025/gsc-url-level-diagnostics-2025-12-03.md`
+- **Next Steps:** `next-steps-gsc-validation.md`
+- **Historical Analysis:** `old/blog-redirect-failure-analysis.md`
+- **Historical Diagnostics:** `old/blog-redirect-diagnostic-findings.md`
+
+---
+
+## Recent Updates (December 9, 2025)
+
+### Redirect System Improvements
+
+1. **Comprehensive Diagnostic Tools Created:**
+   - `scripts/test-all-redirects.js` - Full redirect testing suite
+   - `scripts/verify-redirects.js` - Quick pre-deployment verification
+   - Both scripts added to `package.json` for easy access
+
+2. **Missing Redirects Fixed:**
+   - Added redirects for `gifts-for-new-grandparents` and `little-luxuries-under-25-mini-splurges-major-wow`
+   - All 51 published blog posts now have redirect rules
+
+3. **308 Redirect Issue Resolved:**
+   - Live testing confirms all redirects return 301 status codes
+   - `/category/gift-guides` and `/contact` now correctly return 301 (not 308)
+
+4. **Verification Process:**
+   - Run `npm run verify:redirects` before deployments
+   - Run `npm run test:redirects` for comprehensive testing
+   - See `redirect-diagnostic-summary-2025-12-09.md` for full details
 
 ---
 
