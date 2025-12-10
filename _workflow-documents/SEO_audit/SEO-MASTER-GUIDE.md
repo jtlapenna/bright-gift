@@ -3094,10 +3094,24 @@ Each entry includes:
 **What Was Done:**
 - Created `scripts/test-all-redirects.js` - comprehensive redirect testing suite
 - Created `scripts/verify-redirects.js` - quick pre-deployment verification script
-- Added missing redirect rules for 2 blog posts (`gifts-for-new-grandparents`, `little-luxuries-under-25-mini-splurges-major-wow`)
+- Added npm scripts to `package.json`: `test:redirects` and `verify:redirects`
+- Updated `public/_redirects` - added missing redirect rules for 2 blog posts:
+  - `gifts-for-new-grandparents`
+  - `little-luxuries-under-25-mini-splurges-major-wow`
 - Verified all 51 published blog posts have redirect rules
 - Confirmed all redirects return 301 status codes (no 308s found)
-- Updated SEO Master Guide with new troubleshooting sections
+- Updated SEO Master Guide with new troubleshooting sections and work log
+- Created `redirect-diagnostic-summary-2025-12-09.md` - comprehensive diagnostic report
+- Created `next-steps-gsc-validation.md` - deployment and GSC validation guide
+
+**Files Changed:**
+- `_workflow-documents/SEO_audit/SEO-MASTER-GUIDE.md` (updated with log section and troubleshooting)
+- `_workflow-documents/SEO_audit/next-steps-gsc-validation.md` (new)
+- `_workflow-documents/SEO_audit/redirect-diagnostic-summary-2025-12-09.md` (new)
+- `package.json` (added npm scripts)
+- `public/_redirects` (added 2 missing redirects)
+- `scripts/test-all-redirects.js` (new)
+- `scripts/verify-redirects.js` (new)
 
 **Impact:**
 - All published posts now have redirect rules
