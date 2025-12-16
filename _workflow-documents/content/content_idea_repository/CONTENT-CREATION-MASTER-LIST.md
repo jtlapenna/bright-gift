@@ -30,7 +30,7 @@ These 5 posts represent **15,000+ monthly searches** with **ZERO existing conten
 #### Post Specifications
 - **Recommended Title:** "80th Birthday Gift Ideas: 25 Thoughtful Presents for Seniors"
 - **Meta Description:** "80th birthday gift ideas for elderly women and men. Find thoughtful presents seniors will love, from practical to sentimental. Shop now." (150 chars)
-- **Word Count:** 2,500+ words
+- **Word Count:** 1,200-1,500 words
 - **URL Slug:** `80th-birthday-gift-ideas-seniors`
 - **Category:** Gift Guides
 - **Tags:** 2025, gift-guides, seniors
@@ -116,7 +116,7 @@ These 5 posts represent **15,000+ monthly searches** with **ZERO existing conten
 
 ---
 
-### 2. 🟠 HIGH PRIORITY - "Best Gifts for Teachers: 30 Thoughtful Ideas They'll Actually Use"
+### 2. 🟠 HIGH PRIORITY - "Best Gifts for Teachers: 20 Thoughtful Ideas They'll Actually Use"
 
 **Priority:** HIGH - Write Within 2 Weeks  
 **Why:** High search volume (2,900), seasonal relevance, strong commercial intent
@@ -127,9 +127,9 @@ These 5 posts represent **15,000+ monthly searches** with **ZERO existing conten
 - **Long-tail:** "preschool teacher gifts" (1,000), "personalized presents for teachers" (1,000), "teacher mugs" (1,000)
 
 #### Post Specifications
-- **Recommended Title:** "Best Gifts for Teachers: 30 Thoughtful Ideas They'll Actually Use"
+- **Recommended Title:** "Best Gifts for Teachers: 20 Thoughtful Ideas They'll Actually Use"
 - **Meta Description:** "Discover the best gifts for teachers they'll actually use. Find thoughtful, practical, and personalized teacher appreciation gifts under $50." (155 chars)
-- **Word Count:** 2,500+ words
+- **Word Count:** 1,200-1,500 words
 - **URL Slug:** `best-gifts-for-teachers`
 - **Category:** Gift Guides
 - **Tags:** 2025, gift-guides, teachers
@@ -139,7 +139,7 @@ These 5 posts represent **15,000+ monthly searches** with **ZERO existing conten
 ## Introduction (100-150 words)
 - Hook: Teachers shape our children's futures
 - Problem: Finding gifts teachers actually want (not more mugs!)
-- Promise: 30 practical, thoughtful gifts based on teacher surveys
+- Promise: 20 practical, thoughtful gifts based on teacher surveys
 
 ## What Teachers Actually Want (Survey Results) (300 words)
 - Real teacher preferences
@@ -147,54 +147,32 @@ These 5 posts represent **15,000+ monthly searches** with **ZERO existing conten
 - Budget considerations
 - Timing (Teacher Appreciation Week, holidays, end of year)
 
-## Best Teacher Appreciation Gifts Under $25 (500 words)
+## Best Teacher Appreciation Gifts Under $25 (300 words)
 - Classroom supplies (quality pens, markers, organizers)
 - Gift cards (Amazon, Target, Starbucks)
 - Books for classroom library
 - Personalized items (name stamps, tote bags)
 - Self-care items (candles, lotions)
 
-## Best Teacher Appreciation Gifts $25-$50 (500 words)
+## Best Teacher Appreciation Gifts $25-$50 (300 words)
 - Quality tote bags or backpacks
 - Personalized desk accessories
-- Subscription boxes (book, coffee, snacks)
 - Tech accessories (phone stands, chargers)
 - Wellness gifts (spa items, aromatherapy)
 
-## Personalized Gifts for Teachers (400 words)
+## Personalized Gifts for Teachers (200 words)
 - Custom name stamps
 - Engraved pens or pencils
 - Personalized tote bags
 - Custom bookplates
-- Monogrammed items
 
-## Practical Classroom Gifts (300 words)
+## Practical Classroom Gifts (200 words)
 - Quality classroom supplies
 - Organization tools
 - Bulletin board materials
 - Educational games
-- Classroom decor
 
-## End-of-Year Teacher Gifts (300 words)
-- Thank you notes (importance)
-- Summer reading books
-- Vacation-related items
-- Relaxation gifts
-- Gift cards for summer activities
-
-## Preschool & Elementary Teacher Gifts (200 words)
-- Age-appropriate classroom items
-- Storybooks
-- Art supplies
-- Sensory items
-
-## High School & College Teacher Gifts (200 words)
-- Professional items
-- Subject-specific gifts
-- Coffee/tea gifts
-- Tech accessories
-
-## What to Avoid Giving Teachers (200 words)
+## What to Avoid Giving Teachers (150 words)
 - Generic mugs (unless personalized)
 - Apple-themed items (overdone)
 - Cheap candles
@@ -403,7 +381,7 @@ These 5 posts represent **15,000+ monthly searches** with **ZERO existing conten
 #### Post Specifications
 - **Recommended Title:** "Travel Gifts for Women: 25 Perfect Presents for Every Type of Traveler"
 - **Meta Description:** "Discover the best travel gifts for women who love to explore. From practical essentials to luxury accessories, find perfect gifts for travelers." (152 chars)
-- **Word Count:** 2,500+ words
+- **Word Count:** 1,200-1,500 words
 - **URL Slug:** `travel-gifts-for-women`
 - **Category:** Gift Guides
 - **Tags:** 2025, gift-guides, travel
@@ -504,7 +482,8 @@ canonical: "https://bright-gift.com/blog/[slug]/"
 - **Friendly, conversational tone** (not robotic)
 
 #### SEO Requirements
-- **Word count:** 2,000-2,500 words minimum
+- **Word count:** 1,200-1,500 words minimum
+- **Gift ideas:** Around 20 products with detailed descriptions
 - **Primary keyword:** In title, first paragraph, 2+ H2 headings
 - **Secondary keywords:** In H2/H3 headings naturally
 - **Keyword density:** 1-2% for primary, 0.5-1% for secondary
@@ -538,7 +517,8 @@ canonical: "https://bright-gift.com/blog/[slug]/"
 - [ ] Title includes primary keyword (beginning preferred)
 - [ ] Meta description 150-160 characters with CTA
 - [ ] H1 uses target keyword naturally (only ONE H1)
-- [ ] Word count 2,000-2,500 words minimum
+- [ ] Word count 1,200-1,500 words minimum
+- [ ] Around 20 gift ideas with detailed descriptions
 - [ ] Primary keyword in first 100 words
 - [ ] Keywords used naturally (no stuffing)
 - [ ] 5-10 internal links to related posts
