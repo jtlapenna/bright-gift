@@ -264,7 +264,7 @@ if (relatedPosts.length > 0) {
           <!-- Affiliate Disclosure -->
           <div class="mb-4">
             <p class="text-xs text-gray-500 italic">
-              This post contains affiliate links. We may earn a commission if you click through and make a purchase, at no additional cost to you.
+              This post contains affiliate links. We may earn a commission if you click through and purchase, at no additional cost to you.
             </p>
           </div>
 
@@ -618,8 +618,21 @@ if (relatedPosts.length > 0) {
   }
 
   /* Tailwind Typography uses :where(...) selectors; override them directly */
+  /* First h3 after h2 (section title) - keep original spacing */
+  :global(.prose :where(h2 + h3):not(:where(.not-prose *))) {
+    margin-top: 4.75rem !important;
+    margin-bottom: 0.35rem !important;
+    line-height: 1.25 !important;
+  }
+  /* Subsequent h3 items within a section - add 50px (3.125rem) more spacing */
+  :global(.prose :where(h3 + h3):not(:where(.not-prose *))) {
+    margin-top: 7.875rem !important;  /* 4.75rem + 3.125rem (50px) = 7.875rem */
+    margin-bottom: 0.35rem !important;
+    line-height: 1.25 !important;
+  }
+  /* Fallback for any h3 not covered above */
   :global(.prose :where(h3):not(:where(.not-prose *))) {
-    margin-top: 4.75rem !important;  /* increased per request */
+    margin-top: 4.75rem !important;
     margin-bottom: 0.35rem !important;
     line-height: 1.25 !important;
   }
