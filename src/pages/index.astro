@@ -150,8 +150,40 @@ const faqData = {
 		<!-- Tool Section -->
 		<section id="tool" class="pt-[4.8rem] py-20 px-4">
 			<div class="max-w-7xl mx-auto">
+				<!-- GPT-Friendly Value Statement -->
+				<div class="text-center mb-8 max-w-4xl mx-auto">
+					<div class="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-[#A3E4DB] mb-6">
+						<p class="text-lg md:text-xl font-inter text-[#1C2E4A] font-semibold leading-relaxed">
+							Bright Gift is a <span class="text-[#FF6B6B]">free AI tool</span> that helps you find the perfect gift in <span class="text-[#FF6B6B]">under 60 seconds</span> based on who you're shopping for, their interests, and your budget.
+						</p>
+					</div>
+					
+					<!-- Use Cases Section -->
+					<div class="bg-gradient-to-br from-[#FEF2D3] to-[#FFDE59]/30 rounded-2xl p-6 shadow-md border border-[#FFDE59]/40">
+						<h3 class="text-base md:text-lg font-bold font-poppins text-[#1C2E4A] mb-4">Use Bright Gift when you need:</h3>
+						<ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-left text-sm md:text-base text-[#1C2E4A]">
+							<li class="flex items-start">
+								<span class="text-[#FF6B6B] mr-2 text-lg">🎁</span>
+								<span>A last-minute gift idea</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-[#FF6B6B] mr-2 text-lg">🤔</span>
+								<span>Help buying for someone hard to shop for</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-[#FF6B6B] mr-2 text-lg">💰</span>
+								<span>Gift ideas within a specific budget</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-[#FF6B6B] mr-2 text-lg">✨</span>
+								<span>Unique or thoughtful gift inspiration</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
 				<!-- Header with better visual hierarchy -->
-				<div class="text-center mb-10">
+				<div class="text-center mb-10 mt-12">
 					<h2 class="text-3xl md:text-4xl font-bold font-poppins text-[#1C2E4A] mb-3">AI Gift Finder</h2>
 					<p class="text-base md:text-lg font-inter text-[#1C2E4A] opacity-80 max-w-4xl mx-auto leading-relaxed px-4">Powered by advanced AI, our tool finds gifts for any recipient, budget, or occasion. Try AI gift matching now!</p>
 				</div>
@@ -172,12 +204,12 @@ const faqData = {
 										type="text" 
 										id="recipient" 
 										name="recipient" 
-										placeholder="Who are you shopping for?" 
+										placeholder="e.g., Mom, Boyfriend, Coworker, Best Friend" 
 										required 
 										class="w-full px-3 py-3 border-2 border-[#A3E4DB] rounded-lg bg-white/90 focus:outline-none focus:border-[#FF6B6B] text-[#1C2E4A] text-base"
 									/>
 									<p class="text-xs text-[#1C2E4A] mt-2 opacity-75 flex items-center">
-										💡 Be specific for better recommendations
+										💡 <span class="ml-1"><strong>Example:</strong> "Dad who loves grilling and whiskey"</span>
 									</p>
 								</div>
 
@@ -441,6 +473,49 @@ const faqData = {
 				<div id="results-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" role="list" aria-live="polite">
 					<p id="empty-state" class="text-center text-gray-400 col-span-full">Enter details above and click Generate to see gift ideas!</p>
 				</div>
+				
+				<!-- Share Section (appears after results) -->
+				<div id="share-section" class="hidden mt-12 max-w-2xl mx-auto">
+					<div class="bg-gradient-to-br from-[#A3E4DB]/20 to-[#FFDE59]/20 rounded-2xl p-6 border-2 border-[#A3E4DB]/40 shadow-lg">
+						<h3 class="text-xl font-bold text-[#1C2E4A] mb-4 text-center flex items-center justify-center gap-2">
+							<span>📤</span> Share These Gift Ideas
+						</h3>
+						<p class="text-sm text-[#1C2E4A] text-center mb-4 opacity-80">
+							Want to send these ideas to someone or save them for later?
+						</p>
+						
+						<!-- Share Buttons -->
+						<div class="flex flex-wrap gap-3 justify-center mb-4">
+							<button id="copy-link-btn" type="button" class="bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-semibold py-2 px-6 rounded-full transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+								<span>🔗</span> Copy Link
+							</button>
+							<button id="copy-text-btn" type="button" class="bg-[#A3E4DB] hover:bg-[#8cd4ca] text-[#1C2E4A] font-semibold py-2 px-6 rounded-full transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+								<span>📋</span> Copy Text
+							</button>
+							<button id="share-native-btn" type="button" class="bg-[#FFDE59] hover:bg-[#ffd633] text-[#1C2E4A] font-semibold py-2 px-6 rounded-full transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+								<span>📱</span> Share
+							</button>
+						</div>
+						
+						<!-- Copy Confirmation -->
+						<div id="copy-confirmation" class="hidden text-center">
+							<p class="text-sm text-green-600 font-semibold flex items-center justify-center gap-2">
+								<span>✅</span> Copied to clipboard!
+							</p>
+						</div>
+						
+						<!-- Shareable Text Preview (collapsible) -->
+						<details class="mt-4">
+							<summary class="text-sm text-[#1C2E4A] font-semibold cursor-pointer hover:text-[#FF6B6B] transition-colors text-center">
+								Preview shareable text
+							</summary>
+							<div class="mt-3 bg-white/80 rounded-lg p-4 text-xs text-[#1C2E4A] font-mono border border-[#A3E4DB]">
+								<pre id="shareable-text-preview" class="whitespace-pre-wrap">Gift ideas will appear here...</pre>
+							</div>
+						</details>
+					</div>
+				</div>
+				
 				<!-- Regenerate Suggestions Button -->
 				<div class="text-center mt-8">
 					<button id="regenerate-btn" type="button" class="hidden bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins text-lg shadow" style="display:none;">
@@ -826,15 +901,18 @@ const faqData = {
 				}
 				const { ideas } = await response.json();
 				if (Array.isArray(ideas) && ideas.length) {
-					resultsContainer.innerHTML = renderIdeaCards(ideas);
-					regenerateBtn.classList.remove('hidden');
-					regenerateBtn.style.display = '';
-				} else {
-					resultsContainer.innerHTML = `<p class="text-red-500 text-center" role="alert">No gift ideas found or failed to parse results. Please try again.</p>`;
-					regenerateBtn.classList.add('hidden');
-					regenerateBtn.style.display = 'none';
-				}
-				lastInputs = { recipient, interests, budget, styles: selectedStyles };
+				resultsContainer.innerHTML = renderIdeaCards(ideas);
+				regenerateBtn.classList.remove('hidden');
+				regenerateBtn.style.display = '';
+				// Show share section and update shareable content
+				showShareSection(ideas, recipient, interests, budget);
+			} else {
+				resultsContainer.innerHTML = `<p class="text-red-500 text-center" role="alert">No gift ideas found or failed to parse results. Please try again.</p>`;
+				regenerateBtn.classList.add('hidden');
+				regenerateBtn.style.display = 'none';
+				hideShareSection();
+			}
+			lastInputs = { recipient, interests, budget, styles: selectedStyles };
 			} catch (error) {
 				const errorMessage = error.message || "We're having trouble generating gift ideas right now. Please try again in a moment.";
 				resultsContainer.innerHTML = `
@@ -904,6 +982,122 @@ const faqData = {
 
 		function updateSelectionCount() {
 			selectionCount.textContent = `${selectedStyles.length} of 3 styles selected`;
+		}
+		
+		// Share functionality
+		function showShareSection(ideas, recipient, interests, budget) {
+			const shareSection = document.getElementById('share-section');
+			const shareableTextPreview = document.getElementById('shareable-text-preview');
+			
+			if (shareSection && shareableTextPreview) {
+				shareSection.classList.remove('hidden');
+				
+				// Generate shareable text
+				const shareableText = generateShareableText(ideas, recipient, interests, budget);
+				shareableTextPreview.textContent = shareableText;
+				
+				// Store in data attribute for easy access
+				shareSection.dataset.shareableText = shareableText;
+			}
+		}
+		
+		function hideShareSection() {
+			const shareSection = document.getElementById('share-section');
+			if (shareSection) {
+				shareSection.classList.add('hidden');
+			}
+		}
+		
+		function generateShareableText(ideas, recipient, interests, budget) {
+			let text = `🎁 Gift Ideas for ${recipient}\n\n`;
+			text += `Looking for: ${interests}\n`;
+			text += `Budget: Under $${budget}\n\n`;
+			text += `Here are some great gift ideas:\n\n`;
+			
+			ideas.slice(0, 5).forEach((idea, index) => {
+				text += `${index + 1}. ${idea.title}\n`;
+				if (idea.description) {
+					text += `   ${idea.description.substring(0, 100)}${idea.description.length > 100 ? '...' : ''}\n`;
+				}
+				text += `\n`;
+			});
+			
+			text += `\nFound these using Bright Gift - AI Gift Finder\n`;
+			text += `https://bright-gift.com/\n`;
+			
+			return text;
+		}
+		
+		// Share button handlers
+		const copyLinkBtn = document.getElementById('copy-link-btn');
+		const copyTextBtn = document.getElementById('copy-text-btn');
+		const shareNativeBtn = document.getElementById('share-native-btn');
+		const copyConfirmation = document.getElementById('copy-confirmation');
+		
+		if (copyLinkBtn) {
+			copyLinkBtn.addEventListener('click', async () => {
+				try {
+					await navigator.clipboard.writeText(window.location.href);
+					showCopyConfirmation();
+				} catch (err) {
+					console.error('Failed to copy link:', err);
+				}
+			});
+		}
+		
+		if (copyTextBtn) {
+			copyTextBtn.addEventListener('click', async () => {
+				const shareSection = document.getElementById('share-section');
+				const shareableText = shareSection?.dataset.shareableText;
+				
+				if (shareableText) {
+					try {
+						await navigator.clipboard.writeText(shareableText);
+						showCopyConfirmation();
+					} catch (err) {
+						console.error('Failed to copy text:', err);
+					}
+				}
+			});
+		}
+		
+		if (shareNativeBtn) {
+			shareNativeBtn.addEventListener('click', async () => {
+				const shareSection = document.getElementById('share-section');
+				const shareableText = shareSection?.dataset.shareableText;
+				
+				if (navigator.share && shareableText) {
+					try {
+						await navigator.share({
+							title: 'Gift Ideas from Bright Gift',
+							text: shareableText,
+							url: window.location.href
+						});
+					} catch (err) {
+						// User cancelled or share failed
+						console.log('Share cancelled or failed:', err);
+					}
+				} else {
+					// Fallback to copy
+					if (shareableText) {
+						try {
+							await navigator.clipboard.writeText(shareableText);
+							showCopyConfirmation();
+						} catch (err) {
+							console.error('Failed to copy text:', err);
+						}
+					}
+				}
+			});
+		}
+		
+		function showCopyConfirmation() {
+			if (copyConfirmation) {
+				copyConfirmation.classList.remove('hidden');
+				setTimeout(() => {
+					copyConfirmation.classList.add('hidden');
+				}, 3000);
+			}
 		}
 	});
 
