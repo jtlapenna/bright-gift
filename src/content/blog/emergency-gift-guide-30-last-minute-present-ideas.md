@@ -289,6 +289,8 @@ Sometimes the best gifts come from spontaneous moments. When you're pressed for 
 
 **Practical tip:** These are especially thoughtful for new parents or busy professionals.
 
+> 🍼 **Last-Minute Baby Shower Gift?** If you need a baby shower gift urgently, help the parents build their registry with [SmartBaby Checklist](https://smartbabychecklist.com/). This free AI tool creates personalized baby product recommendations in 2 minutes—then you can shop directly from their customized list!
+
 **Price Range:** $25-$200 <a href="https://www.amazon.com/s?k=amazon+fresh+gift+cards&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 ### 23. Amazon Home Services

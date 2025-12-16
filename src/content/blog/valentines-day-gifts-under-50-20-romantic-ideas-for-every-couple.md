@@ -276,6 +276,9 @@ You're building a life together, and gifts can reflect your shared goals and dai
 ### Long-Distance Relationships
 Physical distance makes thoughtful gestures even more meaningful. Focus on gifts that bridge the gap—care packages with their favorite things, subscription boxes, digital experiences you can enjoy together, or countdown items until you're reunited. Include personal touches like handwritten notes or photos. Show that distance doesn't diminish your connection.
 
+### Expecting Couples
+> 👶 **For Couples Expecting a Baby:** If you're celebrating Valentine's Day while preparing for parenthood, [SmartBaby Checklist](https://smartbabychecklist.com/) can help you build a personalized baby registry together. This free AI tool creates customized product recommendations based on your lifestyle, home, and budget—a practical gift that shows you're planning your future together!
+
 ## Making Your Valentine's Day Gift Extra Special
 
 Remember that the most meaningful Valentine's Day gifts come from the heart. Consider these tips to make your gift even more special:

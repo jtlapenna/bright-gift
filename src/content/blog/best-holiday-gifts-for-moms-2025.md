@@ -116,6 +116,8 @@ Finding the perfect Mother's Day gifts for moms can feel overwhelming, especiall
 
 Whether your mom is a working professional juggling multiple responsibilities, a creative soul who loves beautiful things, or someone who values experiences over possessions, this guide will help you discover Christmas gifts for mom that genuinely resonate. We've curated unique, thoughtful, and practical gift ideas that go beyond the expected, focusing on what moms really want: items that make them feel cherished, understood, and appreciated.
 
+> 🤰 **For Expecting Moms:** If your mom is about to become a grandma or you're shopping for a new mom, [SmartBaby Checklist](https://smartbabychecklist.com/) creates personalized baby registries with AI-powered recommendations. It's a thoughtful resource that helps new and expecting moms prepare for their baby's arrival—completely free!
+
 ## Decoding What Moms Really Want for Christmas This Holiday Season
 
 Before diving into specific gift ideas, let's address the core question: what do moms really want for Christmas? The answer isn't as complicated as it might seem. Moms want gifts that show you've paid attention—to her interests, her daily routines, and what would genuinely make her life easier or more enjoyable. They want items that feel personal, not generic. They appreciate practical gifts that solve real problems, luxury items that feel indulgent without being wasteful, and experiences that create lasting memories.

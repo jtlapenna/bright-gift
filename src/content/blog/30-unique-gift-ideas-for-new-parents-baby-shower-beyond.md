@@ -95,6 +95,8 @@ The best baby gifts combine practicality with personal touches, offering solutio
 
 > 🎯 **Not sure what type of baby gift would be most appreciated? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on the parents' style, baby's age, and your budget!**
 
+> 👶 **Building a Baby Registry?** If the parents-to-be are still preparing, check out [SmartBaby Checklist](https://smartbabychecklist.com/) for AI-powered baby registry recommendations. It creates personalized product lists based on their lifestyle, climate, and budget—completely free and takes just 2 minutes!
+
 ---
 
 ## Budget-Friendly Baby Gifts (Under $25)

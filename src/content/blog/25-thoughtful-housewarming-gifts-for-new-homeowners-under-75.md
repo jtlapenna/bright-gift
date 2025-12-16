@@ -311,6 +311,8 @@ A stylish key holder with their name, family name, or a special message. This pr
 - Outdoor entertainment items
 - Storage solutions
 
+> 👶 **For Growing Families:** If the new homeowners are expecting or planning for a baby, share [SmartBaby Checklist](https://smartbabychecklist.com/) with them. This free AI tool creates personalized baby registries based on their home layout, lifestyle, and budget—perfect for families preparing their new space for a little one!
+
 ### Luxury Homes:
 - Premium kitchen items
 - Smart home systems

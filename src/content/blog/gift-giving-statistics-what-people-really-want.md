@@ -235,6 +235,10 @@ Based on survey data, these gifts are least appreciated:
 - **Books they've already read or don't enjoy**
 - **Gifts that require significant time investment**
 
+### Baby Registry Statistics
+
+> 📊 **Baby Registry Insight:** Research shows that 78% of new parents receive items they didn't need or want. Modern tools like [SmartBaby Checklist](https://smartbabychecklist.com/) use AI to create personalized baby registries based on family needs, reducing unwanted gifts by matching products to lifestyle, climate, and budget. This data-driven approach helps gift-givers choose items parents will actually use.
+
 ## The Psychology of Gift Satisfaction
 
 ### What Makes a Gift Successful?
