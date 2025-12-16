@@ -518,18 +518,30 @@ if (relatedPosts.length > 0) {
   }
   .prose h2 {
     font-size: 2rem;
+    margin-top: 3.75em;
   }
   .prose h3 {
     font-size: 1.35rem;
-    margin-top: 2.75rem; /* more separation between items */
+    margin-top: 4.5em; /* spacing between gift items */
     margin-bottom: 0.35rem;
     line-height: 1.25;
   }
+  /* First h3 after h2 (section title) - keep smaller margin */
+  .prose h2 + h3 {
+    margin-top: 2.75rem !important;
+  }
+  :global(.prose h2) {
+    margin-top: 3.75em !important;
+  }
   :global(.prose h3) { /* ensure style is not scoped away */
-    font-size: 1.35rem;
-    margin-top: 2.75rem !important; /* enforce item separation */
+    font-size: 1.35rem !important;
+    margin-top: 4.5em !important; /* spacing between gift items */
     margin-bottom: 0.35rem !important;
     line-height: 1.25 !important;
+  }
+  /* First h3 after h2 - override with smaller margin */
+  :global(.prose h2 + h3) {
+    margin-top: 2.75rem !important;
   }
   .prose h3 .qualifier {
     font-size: 0.82em;
@@ -618,21 +630,19 @@ if (relatedPosts.length > 0) {
   }
 
   /* Tailwind Typography uses :where(...) selectors; override them directly */
-  /* First h3 after h2 (section title) - keep original spacing */
-  :global(.prose :where(h2 + h3):not(:where(.not-prose *))) {
-    margin-top: 4.75rem !important;
-    margin-bottom: 0.35rem !important;
-    line-height: 1.25 !important;
+  /* Section titles (h2) */
+  :global(.prose :where(h2):not(:where(.not-prose *))) {
+    margin-top: 3.75em !important;
   }
-  /* Subsequent h3 items within a section - add 50px (3.125rem) more spacing */
-  :global(.prose :where(h3 + h3):not(:where(.not-prose *))) {
-    margin-top: 7.875rem !important;  /* 4.75rem + 3.125rem (50px) = 7.875rem */
-    margin-bottom: 0.35rem !important;
-    line-height: 1.25 !important;
-  }
-  /* Fallback for any h3 not covered above */
+  /* All h3 items - default spacing between gift items */
   :global(.prose :where(h3):not(:where(.not-prose *))) {
-    margin-top: 4.75rem !important;
+    margin-top: 4.5em !important;
+    margin-bottom: 0.35rem !important;
+    line-height: 1.25 !important;
+  }
+  /* First h3 after h2 (section title) - keep smaller margin */
+  :global(.prose :where(h2 + h3):not(:where(.not-prose *))) {
+    margin-top: 2.75rem !important;
     margin-bottom: 0.35rem !important;
     line-height: 1.25 !important;
   }
