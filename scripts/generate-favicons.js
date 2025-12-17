@@ -2,7 +2,7 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const logoPath = path.join(__dirname, '../public/images/favicon.png');
+const logoPath = path.join(__dirname, '../public/images/favicon-new.png');
 const outputDir = path.join(__dirname, '../public');
 
 // Sizes for different favicon formats
@@ -16,7 +16,7 @@ const sizes = {
 
 // Generate PNG favicons
 async function generateFavicons() {
-  console.log('Generating favicon files from images/favicon.png...');
+  console.log('Generating favicon files from images/favicon-new.png...');
   
   if (!fs.existsSync(logoPath)) {
     console.error(`Logo file not found: ${logoPath}`);
