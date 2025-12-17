@@ -38,7 +38,8 @@
     "seo:check": "npm run seo:validate && npm run build",
     "predeploy": "npm run seo:check",
     "test:redirects": "node scripts/test-all-redirects.js",
-    "verify:redirects": "node scripts/verify-redirects.js"
+    "verify:redirects": "node scripts/verify-redirects.js",
+    "generate:favicons": "node scripts/generate-favicons.js"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.0",
