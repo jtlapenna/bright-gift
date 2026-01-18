@@ -36,7 +36,7 @@ Hardcoded internal links were updated to use canonical trailing-slash URLs so cr
 
 ### 2) Canonicalize markdown internal links (without editing all posts)
 
-Added a small remark plugin to automatically normalize internal markdown links to trailing-slash canonicals for key routes.\n\n**New file:**\n- `src/utils/remarkCanonicalInternalLinks.js`\n\n**Enabled in:**\n- `astro.config.mjs` (via `markdown.remarkPlugins`)
+Added a small remark plugin to automatically normalize internal markdown links to trailing-slash canonicals for key routes.\n\n**New file:**\n- `src/utils/remarkCanonicalInternalLinks.mjs`\n\n**Enabled in:**\n- `astro.config.mjs` (via `markdown.remarkPlugins`)
 
 Behavior:\n- Only rewrites internal links that start with `/` and are known SEO routes (`/blog/*`, `/category/*`, and a few static pages).\n- Does **not** touch URLs with `?` or `#`.\n
 ### 3) Reduce redirect hop chains in `public/_redirects`
