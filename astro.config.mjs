@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import cloudflare from "@astrojs/cloudflare";
+import remarkCanonicalInternalLinks from './src/utils/remarkCanonicalInternalLinks.js';
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,7 +26,9 @@ export default defineConfig({
     // Allow HTML in markdown content
     html: true,
     // Disable syntax highlighting to prevent HTML from being treated as code
-    syntaxHighlight: false
+    syntaxHighlight: false,
+    // Normalize internal markdown links to canonical trailing-slash URLs
+    remarkPlugins: [remarkCanonicalInternalLinks]
   },
   vite: {
     ssr: {

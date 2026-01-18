@@ -17,8 +17,11 @@ const https = require('https');
 const http = require('http');
 const matter = require('gray-matter');
 
-const BASE_URL = 'https://bright-gift.com';
-const HTTP_BASE_URL = 'http://bright-gift.com';
+// Purpose: allow local testing (e.g. REDIRECT_TEST_BASE_URL=http://localhost:4321).
+const BASE_URL = process.env.REDIRECT_TEST_BASE_URL || 'https://bright-gift.com';
+const HTTP_BASE_URL =
+  process.env.REDIRECT_TEST_HTTP_BASE_URL ||
+  (BASE_URL.startsWith('https://') ? BASE_URL.replace('https://', 'http://') : BASE_URL);
 
 // Results storage
 const results = {
@@ -48,9 +51,6 @@ const results = {
  */
 function makeRequest(url, followRedirects = true, maxRedirects = 5) {
   return new Promise((resolve, reject) => {
-    const isHttps = url.startsWith('https://');
-    const client = isHttps ? https : http;
-    
     const redirectChain = [];
     let redirectCount = 0;
     
@@ -65,6 +65,10 @@ function makeRequest(url, followRedirects = true, maxRedirects = 5) {
         return;
       }
       
+      // Purpose: handle protocol changes (http <-> https) correctly per hop.
+      const isHttps = urlToFollow.startsWith('https://');
+      const client = isHttps ? https : http;
+
       const urlObj = new URL(urlToFollow);
       const options = {
         hostname: urlObj.hostname,
@@ -218,7 +222,8 @@ async function testRedirect(source, expectedDestination, description = '') {
       // HTTP might fail, that's okay
     }
     
-    const redirectCount = httpsResult.redirectChain.length;
+    // Count only actual redirect hops (3xx responses). The chain includes the final 200.
+    const redirectHops = httpsResult.redirectChain.filter(r => r.status >= 300 && r.status < 400).length;
     const finalStatus = httpsResult.finalStatus || httpsResult.status;
     const finalUrl = httpsResult.finalUrl;
     
@@ -236,12 +241,12 @@ async function testRedirect(source, expectedDestination, description = '') {
       return { passed: false, issue: '308 status code' };
     }
     
-    // Check for multi-hop redirects (more than 1 redirect)
-    if (redirectCount > 1) {
+    // Check for multi-hop redirects (more than 1 redirect hop)
+    if (redirectHops > 1) {
       results.issues.multiHop.push({
         source,
         expectedDestination,
-        redirectCount,
+        redirectCount: redirectHops,
         redirectChain: httpsResult.redirectChain,
         description
       });
@@ -298,7 +303,7 @@ async function testRedirect(source, expectedDestination, description = '') {
       source,
       expectedDestination,
       status: 'PASS',
-      redirectCount,
+      redirectCount: redirectHops,
       description
     });
     
@@ -410,6 +415,7 @@ async function main() {
   
   const report = {
     timestamp: new Date().toISOString(),
+    baseUrl: BASE_URL,
     summary: results.summary,
     issues: results.issues,
     tested: results.tested.slice(0, 100) // Limit to first 100 for readability

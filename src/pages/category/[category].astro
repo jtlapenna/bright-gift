@@ -103,7 +103,7 @@ const categoryStructuredData = {
         "@type": "BlogPosting",
         "headline": post.data.title,
         "description": post.data.description,
-        "url": `https://bright-gift.com/blog/${post.slug}`,
+        "url": `https://bright-gift.com/blog/${post.slug}/`,
         "datePublished": post.data.date,
         "author": {
           "@type": "Organization",
@@ -138,8 +138,8 @@ function calculateReadTime(content: string): number {
   twitterCard="summary_large_image"
   breadcrumbs={[
     { name: "Home", url: "https://bright-gift.com/" },
-    { name: "Blog", url: "https://bright-gift.com/blog" },
-    { name: metadata.title, url: `https://bright-gift.com/category/${category}` }
+    { name: "Blog", url: "https://bright-gift.com/blog/" },
+    { name: metadata.title, url: `https://bright-gift.com/category/${category}/` }
   ]}
 >
   <script type="application/ld+json" set:html={JSON.stringify(categoryStructuredData)} />
@@ -160,12 +160,12 @@ function calculateReadTime(content: string): number {
               ? 'bg-[#FF6B6B] text-white' 
               : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
           }`}>All Posts</a>
-          <a href="/category/gift-guides" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+          <a href="/category/gift-guides/" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
             category === 'gift-guides' 
               ? 'bg-[#A3E4DB] text-[#1C2E4A]' 
               : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
           }`}>Gift Guides</a>
-          <a href="/category/gift-tips" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+          <a href="/category/gift-tips/" class={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
             category === 'gift-tips' 
               ? 'bg-[#FFDE59] text-[#1C2E4A]' 
               : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
@@ -271,7 +271,7 @@ function calculateReadTime(content: string): number {
           <h2 class="text-2xl font-bold text-[#1C2E4A] mb-4">No posts found in this category</h2>
           <p class="text-slate-600 mb-6">We're working on adding more content to this category. Check back soon!</p>
           <a 
-            href="/blog" 
+            href="/blog/" 
             class="inline-flex items-center px-6 py-3 bg-[#FF6B6B] text-white font-semibold rounded-lg hover:bg-[#ff4c4c] transition-colors"
           >
             Browse All Posts

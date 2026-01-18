@@ -1,0 +1,3183 @@
+{
+  "timestamp": "2026-01-18T15:22:22.031Z",
+  "summary": {
+    "total": 107,
+    "passed": 99,
+    "failed": 8,
+    "status308": 7,
+    "multiHop": 1,
+    "missingRedirects": 0,
+    "redirectLoops": 0,
+    "brokenDestinations": 0
+  },
+  "issues": {
+    "status308": [
+      {
+        "source": "/category/data-driven",
+        "expectedDestination": "/category/gift-tips/",
+        "redirectChain": [
+          {
+            "url": "https://bright-gift.com/category/data-driven",
+            "status": 301,
+            "location": "https://bright-gift.com/category/gift-tips"
+          },
+          {
+            "url": "https://bright-gift.com/category/gift-tips",
+            "status": 308,
+            "location": "https://bright-gift.com/category/gift-tips/"
+          },
+          {
+            "url": "https://bright-gift.com/category/gift-tips/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": ""
+      },
+      {
+        "source": "/category/educational",
+        "expectedDestination": "/category/gift-tips/",
+        "redirectChain": [
+          {
+            "url": "https://bright-gift.com/category/educational",
+            "status": 301,
+            "location": "https://bright-gift.com/category/gift-tips"
+          },
+          {
+            "url": "https://bright-gift.com/category/gift-tips",
+            "status": 308,
+            "location": "https://bright-gift.com/category/gift-tips/"
+          },
+          {
+            "url": "https://bright-gift.com/category/gift-tips/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": ""
+      },
+      {
+        "source": "/oauth/callback/",
+        "expectedDestination": "/oauth/callback",
+        "redirectChain": [
+          {
+            "url": "https://bright-gift.com/oauth/callback/",
+            "status": 301,
+            "location": "https://bright-gift.com/oauth/callback"
+          },
+          {
+            "url": "https://bright-gift.com/oauth/callback",
+            "status": 308,
+            "location": "https://bright-gift.com/oauth/callback/"
+          },
+          {
+            "url": "https://bright-gift.com/oauth/callback/",
+            "status": 301,
+            "location": "https://bright-gift.com/oauth/callback"
+          },
+          {
+            "url": "https://bright-gift.com/oauth/callback",
+            "status": 308,
+            "location": "https://bright-gift.com/oauth/callback/"
+          },
+          {
+            "url": "https://bright-gift.com/oauth/callback/",
+            "status": 301,
+            "location": "https://bright-gift.com/oauth/callback"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "source": "/blog/gifts-for-artists",
+        "expectedDestination": "/410.html",
+        "redirectChain": [
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-artists",
+            "status": 301,
+            "location": "https://bright-gift.com/410.html"
+          },
+          {
+            "url": "https://bright-gift.com/410.html",
+            "status": 308,
+            "location": "https://bright-gift.com/410"
+          },
+          {
+            "url": "https://bright-gift.com/410",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": ""
+      },
+      {
+        "source": "/blog/unique-birthday-gifts-for-teens-break-the-mold",
+        "expectedDestination": "/410.html",
+        "redirectChain": [
+          {
+            "url": "https://bright-gift.com/blog/unique-birthday-gifts-for-teens-break-the-mold",
+            "status": 301,
+            "location": "https://bright-gift.com/410.html"
+          },
+          {
+            "url": "https://bright-gift.com/410.html",
+            "status": 308,
+            "location": "https://bright-gift.com/410"
+          },
+          {
+            "url": "https://bright-gift.com/410",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": ""
+      },
+      {
+        "source": "/blog/sample-post",
+        "expectedDestination": "/410.html",
+        "redirectChain": [
+          {
+            "url": "https://bright-gift.com/blog/sample-post",
+            "status": 301,
+            "location": "https://bright-gift.com/410.html"
+          },
+          {
+            "url": "https://bright-gift.com/410.html",
+            "status": 308,
+            "location": "https://bright-gift.com/410"
+          },
+          {
+            "url": "https://bright-gift.com/410",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": ""
+      },
+      {
+        "source": "/blog/handmade-gifts",
+        "expectedDestination": "/410.html",
+        "redirectChain": [
+          {
+            "url": "https://bright-gift.com/blog/handmade-gifts",
+            "status": 301,
+            "location": "https://bright-gift.com/410.html"
+          },
+          {
+            "url": "https://bright-gift.com/410.html",
+            "status": 308,
+            "location": "https://bright-gift.com/410"
+          },
+          {
+            "url": "https://bright-gift.com/410",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": ""
+      }
+    ],
+    "multiHop": [
+      {
+        "source": "/category/",
+        "expectedDestination": "/category/gift-guides/",
+        "redirectCount": 2,
+        "redirectChain": [
+          {
+            "url": "https://bright-gift.com/category/",
+            "status": 301,
+            "location": "https://bright-gift.com/category/gift-guides"
+          },
+          {
+            "url": "https://bright-gift.com/category/gift-guides",
+            "status": 301,
+            "location": "https://bright-gift.com/category/gift-guides/"
+          },
+          {
+            "url": "https://bright-gift.com/category/gift-guides/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": ""
+      }
+    ],
+    "missingRedirects": [],
+    "redirectLoops": [],
+    "brokenDestinations": [],
+    "httpMultiHop": [
+      {
+        "source": "/terms",
+        "expectedDestination": "/terms/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/terms",
+            "status": 301,
+            "location": "https://bright-gift.com/terms"
+          },
+          {
+            "url": "https://bright-gift.com/terms",
+            "status": 301,
+            "location": "https://bright-gift.com/terms/"
+          },
+          {
+            "url": "https://bright-gift.com/terms/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/privacy",
+        "expectedDestination": "/privacy/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/privacy",
+            "status": 301,
+            "location": "https://bright-gift.com/privacy"
+          },
+          {
+            "url": "https://bright-gift.com/privacy",
+            "status": 301,
+            "location": "https://bright-gift.com/privacy/"
+          },
+          {
+            "url": "https://bright-gift.com/privacy/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/data-deletion",
+        "expectedDestination": "/data-deletion/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/data-deletion",
+            "status": 301,
+            "location": "https://bright-gift.com/data-deletion"
+          },
+          {
+            "url": "https://bright-gift.com/data-deletion",
+            "status": 301,
+            "location": "https://bright-gift.com/data-deletion/"
+          },
+          {
+            "url": "https://bright-gift.com/data-deletion/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/contact",
+        "expectedDestination": "/contact/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/contact",
+            "status": 301,
+            "location": "https://bright-gift.com/contact"
+          },
+          {
+            "url": "https://bright-gift.com/contact",
+            "status": 301,
+            "location": "https://bright-gift.com/contact/"
+          },
+          {
+            "url": "https://bright-gift.com/contact/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog",
+        "expectedDestination": "/blog/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog",
+            "status": 301,
+            "location": "https://bright-gift.com/blog"
+          },
+          {
+            "url": "https://bright-gift.com/blog",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/category/gift-guides",
+        "expectedDestination": "/category/gift-guides/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/category/gift-guides",
+            "status": 301,
+            "location": "https://bright-gift.com/category/gift-guides"
+          },
+          {
+            "url": "https://bright-gift.com/category/gift-guides",
+            "status": 301,
+            "location": "https://bright-gift.com/category/gift-guides/"
+          },
+          {
+            "url": "https://bright-gift.com/category/gift-guides/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/category/data-driven/",
+        "expectedDestination": "/category/gift-tips/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/category/data-driven/",
+            "status": 301,
+            "location": "https://bright-gift.com/category/data-driven/"
+          },
+          {
+            "url": "https://bright-gift.com/category/data-driven/",
+            "status": 301,
+            "location": "https://bright-gift.com/category/gift-tips/"
+          },
+          {
+            "url": "https://bright-gift.com/category/gift-tips/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/category/educational/",
+        "expectedDestination": "/category/gift-tips/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/category/educational/",
+            "status": 301,
+            "location": "https://bright-gift.com/category/educational/"
+          },
+          {
+            "url": "https://bright-gift.com/category/educational/",
+            "status": 301,
+            "location": "https://bright-gift.com/category/gift-tips/"
+          },
+          {
+            "url": "https://bright-gift.com/category/gift-tips/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/category/gift-guide",
+        "expectedDestination": "/category/gift-guides/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/category/gift-guide",
+            "status": 301,
+            "location": "https://bright-gift.com/category/gift-guide"
+          },
+          {
+            "url": "https://bright-gift.com/category/gift-guide",
+            "status": 301,
+            "location": "https://bright-gift.com/category/gift-guides/"
+          },
+          {
+            "url": "https://bright-gift.com/category/gift-guides/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/category/gift-guide/",
+        "expectedDestination": "/category/gift-guides/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/category/gift-guide/",
+            "status": 301,
+            "location": "https://bright-gift.com/category/gift-guide/"
+          },
+          {
+            "url": "https://bright-gift.com/category/gift-guide/",
+            "status": 301,
+            "location": "https://bright-gift.com/category/gift-guides/"
+          },
+          {
+            "url": "https://bright-gift.com/category/gift-guides/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75",
+        "expectedDestination": "/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75"
+          },
+          {
+            "url": "https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/25-amazing-gifts-from-black-owned-businesses-under-75",
+        "expectedDestination": "/blog/25-amazing-gifts-from-black-owned-businesses-under-75/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/25-amazing-gifts-from-black-owned-businesses-under-75",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/25-amazing-gifts-from-black-owned-businesses-under-75"
+          },
+          {
+            "url": "https://bright-gift.com/blog/25-amazing-gifts-from-black-owned-businesses-under-75",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/25-amazing-gifts-from-black-owned-businesses-under-75/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/25-amazing-gifts-from-black-owned-businesses-under-75/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/25-books-to-gift-this-holiday-season",
+        "expectedDestination": "/blog/25-books-to-gift-this-holiday-season/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/25-books-to-gift-this-holiday-season",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/25-books-to-gift-this-holiday-season"
+          },
+          {
+            "url": "https://bright-gift.com/blog/25-books-to-gift-this-holiday-season",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/25-books-to-gift-this-holiday-season/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/25-books-to-gift-this-holiday-season/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care",
+        "expectedDestination": "/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care"
+          },
+          {
+            "url": "https://bright-gift.com/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75",
+        "expectedDestination": "/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75"
+          },
+          {
+            "url": "https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/25-unique-anniversary-gift-ideas-under-50",
+        "expectedDestination": "/blog/25-unique-anniversary-gift-ideas-under-50/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/25-unique-anniversary-gift-ideas-under-50",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/25-unique-anniversary-gift-ideas-under-50"
+          },
+          {
+            "url": "https://bright-gift.com/blog/25-unique-anniversary-gift-ideas-under-50",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/25-unique-anniversary-gift-ideas-under-50/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/25-unique-anniversary-gift-ideas-under-50/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond",
+        "expectedDestination": "/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond"
+          },
+          {
+            "url": "https://bright-gift.com/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/80th-birthday-gift-ideas-seniors",
+        "expectedDestination": "/blog/80th-birthday-gift-ideas-seniors/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/80th-birthday-gift-ideas-seniors",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/80th-birthday-gift-ideas-seniors"
+          },
+          {
+            "url": "https://bright-gift.com/blog/80th-birthday-gift-ideas-seniors",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/80th-birthday-gift-ideas-seniors/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/80th-birthday-gift-ideas-seniors/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/affordable-gifts-for-pet-lovers-under-30",
+        "expectedDestination": "/blog/affordable-gifts-for-pet-lovers-under-30/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/affordable-gifts-for-pet-lovers-under-30",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/affordable-gifts-for-pet-lovers-under-30"
+          },
+          {
+            "url": "https://bright-gift.com/blog/affordable-gifts-for-pet-lovers-under-30",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/affordable-gifts-for-pet-lovers-under-30/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/affordable-gifts-for-pet-lovers-under-30/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/ai-powered-gift-ideas-for-every-budget",
+        "expectedDestination": "/blog/ai-powered-gift-ideas-for-every-budget/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/ai-powered-gift-ideas-for-every-budget",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/ai-powered-gift-ideas-for-every-budget"
+          },
+          {
+            "url": "https://bright-gift.com/blog/ai-powered-gift-ideas-for-every-budget",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/ai-powered-gift-ideas-for-every-budget/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/ai-powered-gift-ideas-for-every-budget/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/ai-tiktok-made-me-buy-it-gifts-2025",
+        "expectedDestination": "/blog/ai-tiktok-made-me-buy-it-gifts-2025/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/ai-tiktok-made-me-buy-it-gifts-2025",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/ai-tiktok-made-me-buy-it-gifts-2025"
+          },
+          {
+            "url": "https://bright-gift.com/blog/ai-tiktok-made-me-buy-it-gifts-2025",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/ai-tiktok-made-me-buy-it-gifts-2025/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/ai-tiktok-made-me-buy-it-gifts-2025/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/be-rooted-planners-stationery",
+        "expectedDestination": "/blog/be-rooted-planners-stationery/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/be-rooted-planners-stationery",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/be-rooted-planners-stationery"
+          },
+          {
+            "url": "https://bright-gift.com/blog/be-rooted-planners-stationery",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/be-rooted-planners-stationery/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/be-rooted-planners-stationery/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/best-2025-holiday-gifts-ai-tech-remote-work",
+        "expectedDestination": "/blog/best-2025-holiday-gifts-ai-tech-remote-work/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/best-2025-holiday-gifts-ai-tech-remote-work",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-2025-holiday-gifts-ai-tech-remote-work"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-2025-holiday-gifts-ai-tech-remote-work",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-2025-holiday-gifts-ai-tech-remote-work/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-2025-holiday-gifts-ai-tech-remote-work/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/best-books-for-different-reading-levels",
+        "expectedDestination": "/blog/best-books-for-different-reading-levels/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/best-books-for-different-reading-levels",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-books-for-different-reading-levels"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-books-for-different-reading-levels",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-books-for-different-reading-levels/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-books-for-different-reading-levels/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/best-gifts-for-dads-who-love-outdoor-adventures",
+        "expectedDestination": "/blog/best-gifts-for-dads-who-love-outdoor-adventures/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/best-gifts-for-dads-who-love-outdoor-adventures",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-gifts-for-dads-who-love-outdoor-adventures"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-gifts-for-dads-who-love-outdoor-adventures",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-gifts-for-dads-who-love-outdoor-adventures/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-gifts-for-dads-who-love-outdoor-adventures/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/best-holiday-gifts-for-dads-2025",
+        "expectedDestination": "/blog/best-holiday-gifts-for-dads-2025/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/best-holiday-gifts-for-dads-2025",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-holiday-gifts-for-dads-2025"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-holiday-gifts-for-dads-2025",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-holiday-gifts-for-dads-2025/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-holiday-gifts-for-dads-2025/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/best-holiday-gifts-for-moms-2025",
+        "expectedDestination": "/blog/best-holiday-gifts-for-moms-2025/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/best-holiday-gifts-for-moms-2025",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-holiday-gifts-for-moms-2025"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-holiday-gifts-for-moms-2025",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-holiday-gifts-for-moms-2025/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-holiday-gifts-for-moms-2025/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/best-home-gifts-on-amazon-2024",
+        "expectedDestination": "/blog/best-home-gifts-on-amazon-2024/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/best-home-gifts-on-amazon-2024",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-home-gifts-on-amazon-2024"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-home-gifts-on-amazon-2024",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-home-gifts-on-amazon-2024/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-home-gifts-on-amazon-2024/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/chic-wedding-gifts-for-the-stylish-couple",
+        "expectedDestination": "/blog/chic-wedding-gifts-for-the-stylish-couple/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/chic-wedding-gifts-for-the-stylish-couple",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/chic-wedding-gifts-for-the-stylish-couple"
+          },
+          {
+            "url": "https://bright-gift.com/blog/chic-wedding-gifts-for-the-stylish-couple",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/chic-wedding-gifts-for-the-stylish-couple/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/chic-wedding-gifts-for-the-stylish-couple/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/christmas-gift-ideas-2025",
+        "expectedDestination": "/blog/christmas-gift-ideas-2025/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/christmas-gift-ideas-2025",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/christmas-gift-ideas-2025"
+          },
+          {
+            "url": "https://bright-gift.com/blog/christmas-gift-ideas-2025",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/christmas-gift-ideas-2025/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/christmas-gift-ideas-2025/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/clean-girl-2-0-minimalist-gifts-with-personality",
+        "expectedDestination": "/blog/clean-girl-2-0-minimalist-gifts-with-personality/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/clean-girl-2-0-minimalist-gifts-with-personality",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/clean-girl-2-0-minimalist-gifts-with-personality"
+          },
+          {
+            "url": "https://bright-gift.com/blog/clean-girl-2-0-minimalist-gifts-with-personality",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/clean-girl-2-0-minimalist-gifts-with-personality/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/clean-girl-2-0-minimalist-gifts-with-personality/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/eco-friendly-gift-ideas-for-every-budget",
+        "expectedDestination": "/blog/eco-friendly-gift-ideas-for-every-budget/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget"
+          },
+          {
+            "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature",
+        "expectedDestination": "/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature"
+          },
+          {
+            "url": "https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/emergency-gift-guide-30-last-minute-present-ideas",
+        "expectedDestination": "/blog/emergency-gift-guide-30-last-minute-present-ideas/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/emergency-gift-guide-30-last-minute-present-ideas",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/emergency-gift-guide-30-last-minute-present-ideas"
+          },
+          {
+            "url": "https://bright-gift.com/blog/emergency-gift-guide-30-last-minute-present-ideas",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/emergency-gift-guide-30-last-minute-present-ideas/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/emergency-gift-guide-30-last-minute-present-ideas/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/fun-gifts-for-kids-birthday-parties",
+        "expectedDestination": "/blog/fun-gifts-for-kids-birthday-parties/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/fun-gifts-for-kids-birthday-parties",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/fun-gifts-for-kids-birthday-parties"
+          },
+          {
+            "url": "https://bright-gift.com/blog/fun-gifts-for-kids-birthday-parties",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/fun-gifts-for-kids-birthday-parties/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/fun-gifts-for-kids-birthday-parties/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gaming-gifts-2025",
+        "expectedDestination": "/blog/gaming-gifts-2025/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gaming-gifts-2025",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gaming-gifts-2025"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gaming-gifts-2025",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gaming-gifts-2025/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gaming-gifts-2025/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gift-giving-statistics-what-people-really-want",
+        "expectedDestination": "/blog/gift-giving-statistics-what-people-really-want/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gift-giving-statistics-what-people-really-want",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gift-giving-statistics-what-people-really-want"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gift-giving-statistics-what-people-really-want",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gift-giving-statistics-what-people-really-want/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gift-giving-statistics-what-people-really-want/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gifts-for-book-lovers-under-50",
+        "expectedDestination": "/blog/gifts-for-book-lovers-under-50/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gifts-for-book-lovers-under-50",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-book-lovers-under-50"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-book-lovers-under-50",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-book-lovers-under-50/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-book-lovers-under-50/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience",
+        "expectedDestination": "/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gifts-for-girlfriend-unique-romantic-ideas",
+        "expectedDestination": "/blog/gifts-for-girlfriend-unique-romantic-ideas/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gifts-for-gamers-under-50",
+        "expectedDestination": "/blog/gifts-for-gamers-under-50/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gifts-for-gamers-under-50",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-gamers-under-50"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-gamers-under-50/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gifts-for-new-homeowners-2025",
+        "expectedDestination": "/blog/gifts-for-new-homeowners-2025/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gifts-for-new-homeowners-2025",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-new-homeowners-2025"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-new-homeowners-2025",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-new-homeowners-2025/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-new-homeowners-2025/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gifts-for-plant-lovers",
+        "expectedDestination": "/blog/gifts-for-plant-lovers/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gifts-for-plant-lovers",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-plant-lovers"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-plant-lovers",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-plant-lovers/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-plant-lovers/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gifts-for-remote-workers-and-wfh-professionals",
+        "expectedDestination": "/blog/gifts-for-remote-workers-and-wfh-professionals/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gifts-for-remote-workers-and-wfh-professionals",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-remote-workers-and-wfh-professionals"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-remote-workers-and-wfh-professionals",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-remote-workers-and-wfh-professionals/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-remote-workers-and-wfh-professionals/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gifts-for-remote-workers-under-50",
+        "expectedDestination": "/blog/gifts-for-remote-workers-under-50/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gifts-for-remote-workers-under-50",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gifts-under-25-for-coworkers",
+        "expectedDestination": "/blog/gifts-under-25-for-coworkers/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gifts-under-25-for-coworkers",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-under-25-for-coworkers"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-under-25-for-coworkers",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-under-25-for-coworkers/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-under-25-for-coworkers/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide",
+        "expectedDestination": "/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide"
+          },
+          {
+            "url": "https://bright-gift.com/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/how-to-choose-the-perfect-gift-complete-guide",
+        "expectedDestination": "/blog/how-to-choose-the-perfect-gift-complete-guide/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/how-to-choose-the-perfect-gift-complete-guide",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/how-to-choose-the-perfect-gift-complete-guide"
+          },
+          {
+            "url": "https://bright-gift.com/blog/how-to-choose-the-perfect-gift-complete-guide",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/how-to-choose-the-perfect-gift-complete-guide/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/how-to-choose-the-perfect-gift-complete-guide/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/last-minute-birthday-gifts-for-busy-professionals",
+        "expectedDestination": "/blog/last-minute-birthday-gifts-for-busy-professionals/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/last-minute-birthday-gifts-for-busy-professionals",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/last-minute-birthday-gifts-for-busy-professionals"
+          },
+          {
+            "url": "https://bright-gift.com/blog/last-minute-birthday-gifts-for-busy-professionals",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/last-minute-birthday-gifts-for-busy-professionals/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/last-minute-birthday-gifts-for-busy-professionals/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore",
+        "expectedDestination": "/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore"
+          },
+          {
+            "url": "https://bright-gift.com/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/remote-work-2-0-gifts-hybrid-offices-50-100",
+        "expectedDestination": "/blog/remote-work-2-0-gifts-hybrid-offices-50-100/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/remote-work-2-0-gifts-hybrid-offices-50-100",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/remote-work-2-0-gifts-hybrid-offices-50-100"
+          },
+          {
+            "url": "https://bright-gift.com/blog/remote-work-2-0-gifts-hybrid-offices-50-100",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/remote-work-2-0-gifts-hybrid-offices-50-100/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/remote-work-2-0-gifts-hybrid-offices-50-100/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/special-birthday-gifts-for-lgbtq-youth",
+        "expectedDestination": "/blog/special-birthday-gifts-for-lgbtq-youth/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/special-birthday-gifts-for-lgbtq-youth",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/special-birthday-gifts-for-lgbtq-youth"
+          },
+          {
+            "url": "https://bright-gift.com/blog/special-birthday-gifts-for-lgbtq-youth",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/special-birthday-gifts-for-lgbtq-youth/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/special-birthday-gifts-for-lgbtq-youth/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/the-science-of-human-connection-why-we-need-each-other",
+        "expectedDestination": "/blog/the-science-of-human-connection-why-we-need-each-other/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/the-science-of-human-connection-why-we-need-each-other",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/the-science-of-human-connection-why-we-need-each-other"
+          },
+          {
+            "url": "https://bright-gift.com/blog/the-science-of-human-connection-why-we-need-each-other",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/the-science-of-human-connection-why-we-need-each-other/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/the-science-of-human-connection-why-we-need-each-other/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners",
+        "expectedDestination": "/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners"
+          },
+          {
+            "url": "https://bright-gift.com/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024",
+        "expectedDestination": "/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024"
+          },
+          {
+            "url": "https://bright-gift.com/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/unique-gifts-for-board-game-enthusiasts",
+        "expectedDestination": "/blog/unique-gifts-for-board-game-enthusiasts/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/unique-gifts-for-board-game-enthusiasts",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/unique-gifts-for-board-game-enthusiasts"
+          },
+          {
+            "url": "https://bright-gift.com/blog/unique-gifts-for-board-game-enthusiasts",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/unique-gifts-for-board-game-enthusiasts/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/unique-gifts-for-board-game-enthusiasts/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/unique-graduation-gifts-creative-minds",
+        "expectedDestination": "/blog/unique-graduation-gifts-creative-minds/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/unique-graduation-gifts-creative-minds",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/unique-graduation-gifts-creative-minds"
+          },
+          {
+            "url": "https://bright-gift.com/blog/unique-graduation-gifts-creative-minds",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/unique-graduation-gifts-creative-minds/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/unique-graduation-gifts-creative-minds/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple",
+        "expectedDestination": "/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple"
+          },
+          {
+            "url": "https://bright-gift.com/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/why-we-remember-gifts-we-give-more-than-receive",
+        "expectedDestination": "/blog/why-we-remember-gifts-we-give-more-than-receive/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/why-we-remember-gifts-we-give-more-than-receive",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/why-we-remember-gifts-we-give-more-than-receive"
+          },
+          {
+            "url": "https://bright-gift.com/blog/why-we-remember-gifts-we-give-more-than-receive",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/why-we-remember-gifts-we-give-more-than-receive/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/why-we-remember-gifts-we-give-more-than-receive/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gifts-for-new-grandparents",
+        "expectedDestination": "/blog/gifts-for-new-grandparents/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gifts-for-new-grandparents",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-new-grandparents"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-new-grandparents",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-new-grandparents/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-new-grandparents/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/little-luxuries-under-25-mini-splurges-major-wow",
+        "expectedDestination": "/blog/little-luxuries-under-25-mini-splurges-major-wow/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/little-luxuries-under-25-mini-splurges-major-wow",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/little-luxuries-under-25-mini-splurges-major-wow"
+          },
+          {
+            "url": "https://bright-gift.com/blog/little-luxuries-under-25-mini-splurges-major-wow",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/little-luxuries-under-25-mini-splurges-major-wow/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/little-luxuries-under-25-mini-splurges-major-wow/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/best-gifts-for-teachers",
+        "expectedDestination": "/blog/best-gifts-for-teachers/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/best-gifts-for-teachers",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-gifts-for-teachers"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-gifts-for-teachers",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-gifts-for-teachers/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-gifts-for-teachers/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/best-books-for-different-reading-levels.md",
+        "expectedDestination": "/blog/best-books-for-different-reading-levels/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/best-books-for-different-reading-levels.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-books-for-different-reading-levels.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-books-for-different-reading-levels.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-books-for-different-reading-levels/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-books-for-different-reading-levels/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/25-books-to-gift-this-holiday-season.md",
+        "expectedDestination": "/blog/25-books-to-gift-this-holiday-season/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/25-books-to-gift-this-holiday-season.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/25-books-to-gift-this-holiday-season.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/25-books-to-gift-this-holiday-season.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/25-books-to-gift-this-holiday-season/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/25-books-to-gift-this-holiday-season/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/best-gifts-for-dads-who-love-outdoor-adventures.md",
+        "expectedDestination": "/blog/best-gifts-for-dads-who-love-outdoor-adventures/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/best-gifts-for-dads-who-love-outdoor-adventures.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-gifts-for-dads-who-love-outdoor-adventures.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-gifts-for-dads-who-love-outdoor-adventures.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-gifts-for-dads-who-love-outdoor-adventures/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-gifts-for-dads-who-love-outdoor-adventures/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024.md",
+        "expectedDestination": "/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/unique-gifts-for-board-game-enthusiasts.md",
+        "expectedDestination": "/blog/unique-gifts-for-board-game-enthusiasts/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/unique-gifts-for-board-game-enthusiasts.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/unique-gifts-for-board-game-enthusiasts.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/unique-gifts-for-board-game-enthusiasts.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/unique-gifts-for-board-game-enthusiasts/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/unique-gifts-for-board-game-enthusiasts/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/fun-gifts-for-kids-birthday-parties.md",
+        "expectedDestination": "/blog/fun-gifts-for-kids-birthday-parties/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/fun-gifts-for-kids-birthday-parties.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/fun-gifts-for-kids-birthday-parties.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/fun-gifts-for-kids-birthday-parties.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/fun-gifts-for-kids-birthday-parties/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/fun-gifts-for-kids-birthday-parties/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/last-minute-birthday-gifts-for-busy-professionals.md",
+        "expectedDestination": "/blog/last-minute-birthday-gifts-for-busy-professionals/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/last-minute-birthday-gifts-for-busy-professionals.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/last-minute-birthday-gifts-for-busy-professionals.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/last-minute-birthday-gifts-for-busy-professionals.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/last-minute-birthday-gifts-for-busy-professionals/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/last-minute-birthday-gifts-for-busy-professionals/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gifts-for-book-lovers-under-50.md",
+        "expectedDestination": "/blog/gifts-for-book-lovers-under-50/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gifts-for-book-lovers-under-50.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-book-lovers-under-50.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-book-lovers-under-50.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-book-lovers-under-50/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-book-lovers-under-50/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/special-birthday-gifts-for-lgbtq-youth.md",
+        "expectedDestination": "/blog/special-birthday-gifts-for-lgbtq-youth/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/special-birthday-gifts-for-lgbtq-youth.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/special-birthday-gifts-for-lgbtq-youth.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/special-birthday-gifts-for-lgbtq-youth.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/special-birthday-gifts-for-lgbtq-youth/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/special-birthday-gifts-for-lgbtq-youth/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/affordable-gifts-for-pet-lovers-under-30.md",
+        "expectedDestination": "/blog/affordable-gifts-for-pet-lovers-under-30/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/affordable-gifts-for-pet-lovers-under-30.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/affordable-gifts-for-pet-lovers-under-30.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/affordable-gifts-for-pet-lovers-under-30.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/affordable-gifts-for-pet-lovers-under-30/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/affordable-gifts-for-pet-lovers-under-30/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide.md",
+        "expectedDestination": "/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gifts-for-gamers-under-50.md",
+        "expectedDestination": "/blog/gifts-for-gamers-under-50/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gifts-for-gamers-under-50.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-gamers-under-50.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-gamers-under-50/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75.md",
+        "expectedDestination": "/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75.md",
+        "expectedDestination": "/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/chic-wedding-gifts-for-the-stylish-couple.md",
+        "expectedDestination": "/blog/chic-wedding-gifts-for-the-stylish-couple/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/chic-wedding-gifts-for-the-stylish-couple.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/chic-wedding-gifts-for-the-stylish-couple.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/chic-wedding-gifts-for-the-stylish-couple.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/chic-wedding-gifts-for-the-stylish-couple/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/chic-wedding-gifts-for-the-stylish-couple/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gifts-for-new-homeowners-2025.md",
+        "expectedDestination": "/blog/gifts-for-new-homeowners-2025/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gifts-for-new-homeowners-2025.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-new-homeowners-2025.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-new-homeowners-2025.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-new-homeowners-2025/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-new-homeowners-2025/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond.md",
+        "expectedDestination": "/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gifts-for-remote-workers-under-50.md",
+        "expectedDestination": "/blog/gifts-for-remote-workers-under-50/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gifts-for-remote-workers-under-50.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-remote-workers-under-50/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md",
+        "expectedDestination": "/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/best-home-gifts-on-amazon-2024.md",
+        "expectedDestination": "/blog/best-home-gifts-on-amazon-2024/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/best-home-gifts-on-amazon-2024.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-home-gifts-on-amazon-2024.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-home-gifts-on-amazon-2024.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/best-home-gifts-on-amazon-2024/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/best-home-gifts-on-amazon-2024/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gifts-for-girlfriend-unique-romantic-ideas.md",
+        "expectedDestination": "/blog/gifts-for-girlfriend-unique-romantic-ideas/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gifts-under-25-for-coworkers.md",
+        "expectedDestination": "/blog/gifts-under-25-for-coworkers/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gifts-under-25-for-coworkers.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-under-25-for-coworkers.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-under-25-for-coworkers.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-under-25-for-coworkers/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-under-25-for-coworkers/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/gifts-for-plant-lovers.md",
+        "expectedDestination": "/blog/gifts-for-plant-lovers/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/gifts-for-plant-lovers.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-plant-lovers.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-plant-lovers.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/gifts-for-plant-lovers/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/gifts-for-plant-lovers/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/eco-friendly-gift-ideas-for-every-budget.md",
+        "expectedDestination": "/blog/eco-friendly-gift-ideas-for-every-budget/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/eco-friendly-gift-ideas-for-every-budget/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/unique-graduation-gifts-creative-minds.md",
+        "expectedDestination": "/blog/unique-graduation-gifts-creative-minds/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/unique-graduation-gifts-creative-minds.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/unique-graduation-gifts-creative-minds.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/unique-graduation-gifts-creative-minds.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/unique-graduation-gifts-creative-minds/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/unique-graduation-gifts-creative-minds/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/25-unique-anniversary-gift-ideas-under-50.md",
+        "expectedDestination": "/blog/25-unique-anniversary-gift-ideas-under-50/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/25-unique-anniversary-gift-ideas-under-50.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/25-unique-anniversary-gift-ideas-under-50.md"
+          },
+          {
+            "url": "https://bright-gift.com/blog/25-unique-anniversary-gift-ideas-under-50.md",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/25-unique-anniversary-gift-ideas-under-50/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/25-unique-anniversary-gift-ideas-under-50/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/ai-gift-guide",
+        "expectedDestination": "/blog/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/ai-gift-guide",
+            "status": 301,
+            "location": "https://bright-gift.com/ai-gift-guide"
+          },
+          {
+            "url": "https://bright-gift.com/ai-gift-guide",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/ai-gift-guide/",
+        "expectedDestination": "/blog/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/ai-gift-guide/",
+            "status": 301,
+            "location": "https://bright-gift.com/ai-gift-guide/"
+          },
+          {
+            "url": "https://bright-gift.com/ai-gift-guide/",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/top-gifts",
+        "expectedDestination": "/blog/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/top-gifts",
+            "status": 301,
+            "location": "https://bright-gift.com/top-gifts"
+          },
+          {
+            "url": "https://bright-gift.com/top-gifts",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/top-gifts/",
+        "expectedDestination": "/blog/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/top-gifts/",
+            "status": 301,
+            "location": "https://bright-gift.com/top-gifts/"
+          },
+          {
+            "url": "https://bright-gift.com/top-gifts/",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/about",
+        "expectedDestination": "/#about-tool",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/about",
+            "status": 301,
+            "location": "https://bright-gift.com/about"
+          },
+          {
+            "url": "https://bright-gift.com/about",
+            "status": 301,
+            "location": "https://bright-gift.com/#about-tool"
+          },
+          {
+            "url": "https://bright-gift.com/#about-tool",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/about/",
+        "expectedDestination": "/#about-tool",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/about/",
+            "status": 301,
+            "location": "https://bright-gift.com/about/"
+          },
+          {
+            "url": "https://bright-gift.com/about/",
+            "status": 301,
+            "location": "https://bright-gift.com/#about-tool"
+          },
+          {
+            "url": "https://bright-gift.com/#about-tool",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/blog/eco-friendly-gifts",
+        "expectedDestination": "/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/blog/eco-friendly-gifts",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/eco-friendly-gifts"
+          },
+          {
+            "url": "https://bright-gift.com/blog/eco-friendly-gifts",
+            "status": 301,
+            "location": "https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/"
+          },
+          {
+            "url": "https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/gift-guides/gifts-for-plant-lovers",
+        "expectedDestination": "/category/gift-guides/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/gift-guides/gifts-for-plant-lovers",
+            "status": 301,
+            "location": "https://bright-gift.com/gift-guides/gifts-for-plant-lovers"
+          },
+          {
+            "url": "https://bright-gift.com/gift-guides/gifts-for-plant-lovers",
+            "status": 301,
+            "location": "https://bright-gift.com/category/gift-guides/"
+          },
+          {
+            "url": "https://bright-gift.com/category/gift-guides/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/gift-guides/gifts-for-plant-lovers/",
+        "expectedDestination": "/category/gift-guides/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/gift-guides/gifts-for-plant-lovers/",
+            "status": 301,
+            "location": "https://bright-gift.com/gift-guides/gifts-for-plant-lovers/"
+          },
+          {
+            "url": "https://bright-gift.com/gift-guides/gifts-for-plant-lovers/",
+            "status": 301,
+            "location": "https://bright-gift.com/category/gift-guides/"
+          },
+          {
+            "url": "https://bright-gift.com/category/gift-guides/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/gift-guides/gifts-for-gamers-under-50/",
+        "expectedDestination": "/category/gift-guides/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/gift-guides/gifts-for-gamers-under-50/",
+            "status": 301,
+            "location": "https://bright-gift.com/gift-guides/gifts-for-gamers-under-50/"
+          },
+          {
+            "url": "https://bright-gift.com/gift-guides/gifts-for-gamers-under-50/",
+            "status": 301,
+            "location": "https://bright-gift.com/category/gift-guides/"
+          },
+          {
+            "url": "https://bright-gift.com/category/gift-guides/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      },
+      {
+        "source": "/gift-guides/gifts-under-25-for-coworkers/",
+        "expectedDestination": "/category/gift-guides/",
+        "redirectCount": 3,
+        "redirectChain": [
+          {
+            "url": "http://bright-gift.com/gift-guides/gifts-under-25-for-coworkers/",
+            "status": 301,
+            "location": "https://bright-gift.com/gift-guides/gifts-under-25-for-coworkers/"
+          },
+          {
+            "url": "https://bright-gift.com/gift-guides/gifts-under-25-for-coworkers/",
+            "status": 301,
+            "location": "https://bright-gift.com/category/gift-guides/"
+          },
+          {
+            "url": "https://bright-gift.com/category/gift-guides/",
+            "status": 200,
+            "location": null
+          }
+        ],
+        "description": "HTTP version creates multi-hop chain"
+      }
+    ]
+  },
+  "tested": [
+    {
+      "source": "/terms",
+      "expectedDestination": "/terms/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/privacy",
+      "expectedDestination": "/privacy/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/data-deletion",
+      "expectedDestination": "/data-deletion/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/contact",
+      "expectedDestination": "/contact/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog",
+      "expectedDestination": "/blog/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/category/gift-guides",
+      "expectedDestination": "/category/gift-guides/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/category/data-driven/",
+      "expectedDestination": "/category/gift-tips/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/category/educational/",
+      "expectedDestination": "/category/gift-tips/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/category/gift-guide",
+      "expectedDestination": "/category/gift-guides/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/category/gift-guide/",
+      "expectedDestination": "/category/gift-guides/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75",
+      "expectedDestination": "/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/25-amazing-gifts-from-black-owned-businesses-under-75",
+      "expectedDestination": "/blog/25-amazing-gifts-from-black-owned-businesses-under-75/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/25-books-to-gift-this-holiday-season",
+      "expectedDestination": "/blog/25-books-to-gift-this-holiday-season/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care",
+      "expectedDestination": "/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75",
+      "expectedDestination": "/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/25-unique-anniversary-gift-ideas-under-50",
+      "expectedDestination": "/blog/25-unique-anniversary-gift-ideas-under-50/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond",
+      "expectedDestination": "/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/80th-birthday-gift-ideas-seniors",
+      "expectedDestination": "/blog/80th-birthday-gift-ideas-seniors/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/affordable-gifts-for-pet-lovers-under-30",
+      "expectedDestination": "/blog/affordable-gifts-for-pet-lovers-under-30/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/ai-powered-gift-ideas-for-every-budget",
+      "expectedDestination": "/blog/ai-powered-gift-ideas-for-every-budget/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/ai-tiktok-made-me-buy-it-gifts-2025",
+      "expectedDestination": "/blog/ai-tiktok-made-me-buy-it-gifts-2025/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/be-rooted-planners-stationery",
+      "expectedDestination": "/blog/be-rooted-planners-stationery/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/best-2025-holiday-gifts-ai-tech-remote-work",
+      "expectedDestination": "/blog/best-2025-holiday-gifts-ai-tech-remote-work/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/best-books-for-different-reading-levels",
+      "expectedDestination": "/blog/best-books-for-different-reading-levels/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/best-gifts-for-dads-who-love-outdoor-adventures",
+      "expectedDestination": "/blog/best-gifts-for-dads-who-love-outdoor-adventures/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/best-holiday-gifts-for-dads-2025",
+      "expectedDestination": "/blog/best-holiday-gifts-for-dads-2025/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/best-holiday-gifts-for-moms-2025",
+      "expectedDestination": "/blog/best-holiday-gifts-for-moms-2025/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/best-home-gifts-on-amazon-2024",
+      "expectedDestination": "/blog/best-home-gifts-on-amazon-2024/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/chic-wedding-gifts-for-the-stylish-couple",
+      "expectedDestination": "/blog/chic-wedding-gifts-for-the-stylish-couple/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/christmas-gift-ideas-2025",
+      "expectedDestination": "/blog/christmas-gift-ideas-2025/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/clean-girl-2-0-minimalist-gifts-with-personality",
+      "expectedDestination": "/blog/clean-girl-2-0-minimalist-gifts-with-personality/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/eco-friendly-gift-ideas-for-every-budget",
+      "expectedDestination": "/blog/eco-friendly-gift-ideas-for-every-budget/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature",
+      "expectedDestination": "/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/emergency-gift-guide-30-last-minute-present-ideas",
+      "expectedDestination": "/blog/emergency-gift-guide-30-last-minute-present-ideas/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/fun-gifts-for-kids-birthday-parties",
+      "expectedDestination": "/blog/fun-gifts-for-kids-birthday-parties/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gaming-gifts-2025",
+      "expectedDestination": "/blog/gaming-gifts-2025/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gift-giving-statistics-what-people-really-want",
+      "expectedDestination": "/blog/gift-giving-statistics-what-people-really-want/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gifts-for-book-lovers-under-50",
+      "expectedDestination": "/blog/gifts-for-book-lovers-under-50/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience",
+      "expectedDestination": "/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gifts-for-girlfriend-unique-romantic-ideas",
+      "expectedDestination": "/blog/gifts-for-girlfriend-unique-romantic-ideas/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gifts-for-gamers-under-50",
+      "expectedDestination": "/blog/gifts-for-gamers-under-50/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gifts-for-new-homeowners-2025",
+      "expectedDestination": "/blog/gifts-for-new-homeowners-2025/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gifts-for-plant-lovers",
+      "expectedDestination": "/blog/gifts-for-plant-lovers/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gifts-for-remote-workers-and-wfh-professionals",
+      "expectedDestination": "/blog/gifts-for-remote-workers-and-wfh-professionals/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gifts-for-remote-workers-under-50",
+      "expectedDestination": "/blog/gifts-for-remote-workers-under-50/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gifts-under-25-for-coworkers",
+      "expectedDestination": "/blog/gifts-under-25-for-coworkers/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide",
+      "expectedDestination": "/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/how-to-choose-the-perfect-gift-complete-guide",
+      "expectedDestination": "/blog/how-to-choose-the-perfect-gift-complete-guide/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/last-minute-birthday-gifts-for-busy-professionals",
+      "expectedDestination": "/blog/last-minute-birthday-gifts-for-busy-professionals/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore",
+      "expectedDestination": "/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/remote-work-2-0-gifts-hybrid-offices-50-100",
+      "expectedDestination": "/blog/remote-work-2-0-gifts-hybrid-offices-50-100/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/special-birthday-gifts-for-lgbtq-youth",
+      "expectedDestination": "/blog/special-birthday-gifts-for-lgbtq-youth/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/the-science-of-human-connection-why-we-need-each-other",
+      "expectedDestination": "/blog/the-science-of-human-connection-why-we-need-each-other/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners",
+      "expectedDestination": "/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024",
+      "expectedDestination": "/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/unique-gifts-for-board-game-enthusiasts",
+      "expectedDestination": "/blog/unique-gifts-for-board-game-enthusiasts/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/unique-graduation-gifts-creative-minds",
+      "expectedDestination": "/blog/unique-graduation-gifts-creative-minds/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple",
+      "expectedDestination": "/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/why-we-remember-gifts-we-give-more-than-receive",
+      "expectedDestination": "/blog/why-we-remember-gifts-we-give-more-than-receive/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gifts-for-new-grandparents",
+      "expectedDestination": "/blog/gifts-for-new-grandparents/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/little-luxuries-under-25-mini-splurges-major-wow",
+      "expectedDestination": "/blog/little-luxuries-under-25-mini-splurges-major-wow/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/best-gifts-for-teachers",
+      "expectedDestination": "/blog/best-gifts-for-teachers/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/best-books-for-different-reading-levels.md",
+      "expectedDestination": "/blog/best-books-for-different-reading-levels/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/25-books-to-gift-this-holiday-season.md",
+      "expectedDestination": "/blog/25-books-to-gift-this-holiday-season/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/best-gifts-for-dads-who-love-outdoor-adventures.md",
+      "expectedDestination": "/blog/best-gifts-for-dads-who-love-outdoor-adventures/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024.md",
+      "expectedDestination": "/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/unique-gifts-for-board-game-enthusiasts.md",
+      "expectedDestination": "/blog/unique-gifts-for-board-game-enthusiasts/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/fun-gifts-for-kids-birthday-parties.md",
+      "expectedDestination": "/blog/fun-gifts-for-kids-birthday-parties/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/last-minute-birthday-gifts-for-busy-professionals.md",
+      "expectedDestination": "/blog/last-minute-birthday-gifts-for-busy-professionals/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gifts-for-book-lovers-under-50.md",
+      "expectedDestination": "/blog/gifts-for-book-lovers-under-50/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/special-birthday-gifts-for-lgbtq-youth.md",
+      "expectedDestination": "/blog/special-birthday-gifts-for-lgbtq-youth/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/affordable-gifts-for-pet-lovers-under-30.md",
+      "expectedDestination": "/blog/affordable-gifts-for-pet-lovers-under-30/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide.md",
+      "expectedDestination": "/blog/how-ai-is-revolutionizing-gift-shopping-complete-guide/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gifts-for-gamers-under-50.md",
+      "expectedDestination": "/blog/gifts-for-gamers-under-50/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75.md",
+      "expectedDestination": "/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75.md",
+      "expectedDestination": "/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/chic-wedding-gifts-for-the-stylish-couple.md",
+      "expectedDestination": "/blog/chic-wedding-gifts-for-the-stylish-couple/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gifts-for-new-homeowners-2025.md",
+      "expectedDestination": "/blog/gifts-for-new-homeowners-2025/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond.md",
+      "expectedDestination": "/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gifts-for-remote-workers-under-50.md",
+      "expectedDestination": "/blog/gifts-for-remote-workers-under-50/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md",
+      "expectedDestination": "/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/best-home-gifts-on-amazon-2024.md",
+      "expectedDestination": "/blog/best-home-gifts-on-amazon-2024/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gifts-for-girlfriend-unique-romantic-ideas.md",
+      "expectedDestination": "/blog/gifts-for-girlfriend-unique-romantic-ideas/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gifts-under-25-for-coworkers.md",
+      "expectedDestination": "/blog/gifts-under-25-for-coworkers/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/gifts-for-plant-lovers.md",
+      "expectedDestination": "/blog/gifts-for-plant-lovers/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/eco-friendly-gift-ideas-for-every-budget.md",
+      "expectedDestination": "/blog/eco-friendly-gift-ideas-for-every-budget/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/unique-graduation-gifts-creative-minds.md",
+      "expectedDestination": "/blog/unique-graduation-gifts-creative-minds/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/25-unique-anniversary-gift-ideas-under-50.md",
+      "expectedDestination": "/blog/25-unique-anniversary-gift-ideas-under-50/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/ai-gift-guide",
+      "expectedDestination": "/blog/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/ai-gift-guide/",
+      "expectedDestination": "/blog/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/top-gifts",
+      "expectedDestination": "/blog/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/top-gifts/",
+      "expectedDestination": "/blog/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/about",
+      "expectedDestination": "/#about-tool",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/about/",
+      "expectedDestination": "/#about-tool",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/blog/eco-friendly-gifts",
+      "expectedDestination": "/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/gift-guides/gifts-for-plant-lovers",
+      "expectedDestination": "/category/gift-guides/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/gift-guides/gifts-for-plant-lovers/",
+      "expectedDestination": "/category/gift-guides/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/gift-guides/gifts-for-gamers-under-50/",
+      "expectedDestination": "/category/gift-guides/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    },
+    {
+      "source": "/gift-guides/gifts-under-25-for-coworkers/",
+      "expectedDestination": "/category/gift-guides/",
+      "status": "PASS",
+      "redirectCount": 1,
+      "description": ""
+    }
+  ]
+}

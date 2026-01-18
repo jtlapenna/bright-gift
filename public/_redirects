@@ -18,12 +18,12 @@
 /category/gift-guides /category/gift-guides/ 301
 
 # General category redirect (no general category page exists)
-/category/ /category/gift-guides 301
+/category/ /category/gift-guides/ 301
 
 # Category redirects (old categories to new ones)
-/category/data-driven /category/gift-tips 301
+/category/data-driven /category/gift-tips/ 301
 /category/data-driven/ /category/gift-tips/ 301
-/category/educational /category/gift-tips 301
+/category/educational /category/gift-tips/ 301
 /category/educational/ /category/gift-tips/ 301
 /category/gift-guide /category/gift-guides/ 301
 /category/gift-guide/ /category/gift-guides/ 301
