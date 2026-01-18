@@ -3,7 +3,7 @@
 title: "Sleep Tech Gifts That Really Work: 17 Top Picks (2026)"
 description: "Discover sleep tech gifts that actually help—trackers, sunrise alarms, cooling solutions, white-noise machines, and more for better rest."
 date: "2026-01-18"
-status: "draft"
+status: "published"
 draft: false
 
 # Purpose: SEO fields (optimize SERP title + click-through rate).
