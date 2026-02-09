@@ -1,0 +1,308 @@
+[
+  {
+    "url": "http://bright-gift.com/",
+    "final_status": 200,
+    "final_url": "https://bright-gift.com/",
+    "redirect_chain": [
+      {
+        "status": 301,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 301,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": null
+      }
+    ],
+    "canonical": "https://bright-gift.com/",
+    "meta_robots": "index, follow"
+  },
+  {
+    "url": "https://bright-gift.com/blog/gifts-for-new-grandparents",
+    "final_status": 200,
+    "final_url": "https://bright-gift.com/blog/gifts-for-new-grandparents/",
+    "redirect_chain": [
+      {
+        "status": 301,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 301,
+        "location": "/blog/gifts-for-new-grandparents/",
+        "x_robots_tag": "index, follow"
+      },
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": "index, follow"
+      }
+    ],
+    "canonical": "https://bright-gift.com/blog/gifts-for-new-grandparents/",
+    "meta_robots": "index, follow"
+  },
+  {
+    "url": "https://bright-gift.com/data-deletion",
+    "final_status": 200,
+    "final_url": "https://bright-gift.com/data-deletion/",
+    "redirect_chain": [
+      {
+        "status": 301,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 301,
+        "location": "/data-deletion/",
+        "x_robots_tag": "index, follow"
+      },
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": "index, follow"
+      }
+    ],
+    "canonical": "https://bright-gift.com/data-deletion/",
+    "meta_robots": "index, follow"
+  },
+  {
+    "url": "https://bright-gift.com/blog/80th-birthday-gift-ideas-seniors",
+    "final_status": 200,
+    "final_url": "https://bright-gift.com/blog/80th-birthday-gift-ideas-seniors/",
+    "redirect_chain": [
+      {
+        "status": 301,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 301,
+        "location": "/blog/80th-birthday-gift-ideas-seniors/",
+        "x_robots_tag": "index, follow"
+      },
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": "index, follow"
+      }
+    ],
+    "canonical": "https://bright-gift.com/blog/80th-birthday-gift-ideas-seniors/",
+    "meta_robots": "index, follow"
+  },
+  {
+    "url": "https://bright-gift.com/blog/80th-birthday-gift-ideas-seniors/",
+    "final_status": 200,
+    "final_url": "https://bright-gift.com/blog/80th-birthday-gift-ideas-seniors/",
+    "redirect_chain": [
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": "index, follow"
+      }
+    ],
+    "canonical": "https://bright-gift.com/blog/80th-birthday-gift-ideas-seniors/",
+    "meta_robots": "index, follow"
+  },
+  {
+    "url": "https://bright-gift.com/blog/gifts-for-remote-workers-and-wfh-professionals/",
+    "final_status": 200,
+    "final_url": "https://bright-gift.com/blog/gifts-for-remote-workers-and-wfh-professionals/",
+    "redirect_chain": [
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": "index, follow"
+      }
+    ],
+    "canonical": "https://bright-gift.com/blog/gifts-for-remote-workers-and-wfh-professionals/",
+    "meta_robots": "index, follow"
+  },
+  {
+    "url": "https://bright-gift.com/blog/christmas-gift-ideas-2025/",
+    "final_status": 200,
+    "final_url": "https://bright-gift.com/blog/christmas-gift-ideas-2025/",
+    "redirect_chain": [
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": "index, follow"
+      }
+    ],
+    "canonical": "https://bright-gift.com/blog/christmas-gift-ideas-2025/",
+    "meta_robots": "index, follow"
+  },
+  {
+    "url": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas/",
+    "final_status": 200,
+    "final_url": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas/",
+    "redirect_chain": [
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": "index, follow"
+      }
+    ],
+    "canonical": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas/",
+    "meta_robots": "index, follow"
+  },
+  {
+    "url": "https://bright-gift.com/blog/remote-work-2-0-gifts-hybrid-offices-50-100/",
+    "final_status": 200,
+    "final_url": "https://bright-gift.com/blog/remote-work-2-0-gifts-hybrid-offices-50-100/",
+    "redirect_chain": [
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": "index, follow"
+      }
+    ],
+    "canonical": "https://bright-gift.com/blog/remote-work-2-0-gifts-hybrid-offices-50-100/",
+    "meta_robots": "index, follow"
+  },
+  {
+    "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50/",
+    "final_status": 200,
+    "final_url": "https://bright-gift.com/blog/gifts-for-gamers-under-50/",
+    "redirect_chain": [
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": "index, follow"
+      }
+    ],
+    "canonical": "https://bright-gift.com/blog/gifts-for-gamers-under-50/",
+    "meta_robots": "index, follow"
+  },
+  {
+    "url": "https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/",
+    "final_status": 200,
+    "final_url": "https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/",
+    "redirect_chain": [
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": "index, follow"
+      }
+    ],
+    "canonical": "https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/",
+    "meta_robots": "index, follow"
+  },
+  {
+    "url": "https://bright-gift.com/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/",
+    "final_status": 200,
+    "final_url": "https://bright-gift.com/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/",
+    "redirect_chain": [
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": "index, follow"
+      }
+    ],
+    "canonical": "https://bright-gift.com/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/",
+    "meta_robots": "index, follow"
+  },
+  {
+    "url": "https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/",
+    "final_status": 200,
+    "final_url": "https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/",
+    "redirect_chain": [
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": "index, follow"
+      }
+    ],
+    "canonical": "https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/",
+    "meta_robots": "index, follow"
+  },
+  {
+    "url": "https://bright-gift.com/blog/best-holiday-gifts-for-moms-2025/",
+    "final_status": 200,
+    "final_url": "https://bright-gift.com/blog/best-holiday-gifts-for-moms-2025/",
+    "redirect_chain": [
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": null
+      },
+      {
+        "status": 200,
+        "location": null,
+        "x_robots_tag": "index, follow"
+      }
+    ],
+    "canonical": "https://bright-gift.com/blog/best-holiday-gifts-for-moms-2025/",
+    "meta_robots": "index, follow"
+  }
+]

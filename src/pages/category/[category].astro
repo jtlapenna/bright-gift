@@ -197,6 +197,19 @@ function calculateReadTime(content: string): number {
         </ol>
       </nav>
 
+      {/* Purpose: add a "hub" block to strengthen internal linking to key guides. */}
+      {category === 'gift-guides' && (
+        <section class="mb-10 bg-white/80 rounded-lg border border-slate-200 p-6">
+          <h2 class="text-lg font-bold text-[#1C2E4A] mb-3">Start here: core gift guides</h2>
+          <p class="text-sm text-slate-600 mb-4">These guides are foundational and connect to multiple related posts.</p>
+          <ul class="text-sm text-slate-700 space-y-1">
+            <li><a class="hover:text-[#FF6B6B] transition-colors" href="/blog/remote-work-2-0-gifts-hybrid-offices-50-100/">Remote Work 2.0: Gifts for Hybrid Offices</a></li>
+            <li><a class="hover:text-[#FF6B6B] transition-colors" href="/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/">20 Ethical Gift Ideas (Eco‑Conscious)</a></li>
+            <li><a class="hover:text-[#FF6B6B] transition-colors" href="/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/">Eco‑Friendly Gifts for Outdoor Lovers</a></li>
+          </ul>
+        </section>
+      )}
+
       <!-- Posts Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {sortedPosts.map((post) => (
