@@ -1,53 +1,38 @@
 {
-  "timestamp": "2025-11-22T18:29:43.752Z",
+  "timestamp": "2026-02-09T23:22:27.763Z",
   "summary": {
-    "totalFiles": 49,
-    "filesWithErrors": 5,
-    "totalErrors": 5,
-    "totalWarnings": 2
+    "totalFiles": 53,
+    "filesWithErrors": 0,
+    "totalErrors": 0,
+    "totalWarnings": 5
   },
-  "errors": [
-    {
-      "file": "src/content/blog/gifts-for-remote-workers-and-wfh-professionals.md",
-      "line": 1393,
-      "message": "Malformed canonical URL: https://bright-gift.com/blog/gifts-for-remote-workers-and-wfh-professionals/",
-      "fix": "Format: https://bright-gift.com/blog/post-slug",
-      "severity": "error"
-    },
-    {
-      "file": "src/content/blog/gaming-gifts-2025.md",
-      "line": 967,
-      "message": "Malformed canonical URL: https://bright-gift.com/blog/gaming-gifts-2025/",
-      "fix": "Format: https://bright-gift.com/blog/post-slug",
-      "severity": "error"
-    },
-    {
-      "file": "src/content/blog/christmas-gift-ideas-2025.md",
-      "line": 1021,
-      "message": "Malformed canonical URL: https://bright-gift.com/blog/christmas-gift-ideas-2025/",
-      "fix": "Format: https://bright-gift.com/blog/post-slug",
-      "severity": "error"
-    },
-    {
-      "file": "src/content/blog/best-holiday-gifts-for-moms-2025.md",
-      "line": 1059,
-      "message": "Malformed canonical URL: https://bright-gift.com/blog/best-holiday-gifts-for-moms-2025/",
-      "fix": "Format: https://bright-gift.com/blog/post-slug",
-      "severity": "error"
-    },
-    {
-      "file": "src/content/blog/80th-birthday-gift-ideas-seniors.md",
-      "line": 1057,
-      "message": "Malformed canonical URL: https://bright-gift.com/blog/80th-birthday-gift-ideas-seniors/",
-      "fix": "Format: https://bright-gift.com/blog/post-slug",
-      "severity": "error"
-    }
-  ],
+  "errors": [],
   "warnings": [
+    {
+      "file": "src/content/blog/little-luxuries-under-25-mini-splurges-major-wow.md",
+      "line": 66,
+      "message": "Description length 170 characters (should be 120-160)",
+      "fix": "Optimize description length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/gifts-for-remote-workers-under-50.md",
+      "line": 5,
+      "message": "Title length 64 characters (should be 10-60)",
+      "fix": "Optimize title length for SEO",
+      "severity": "warning"
+    },
     {
       "file": "src/content/blog/gifts-for-remote-workers-and-wfh-professionals.md",
       "line": 5,
       "message": "Title length 62 characters (should be 10-60)",
+      "fix": "Optimize title length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/gifts-for-new-grandparents.md",
+      "line": 5,
+      "message": "Title length 70 characters (should be 10-60)",
       "fix": "Optimize title length for SEO",
       "severity": "warning"
     },

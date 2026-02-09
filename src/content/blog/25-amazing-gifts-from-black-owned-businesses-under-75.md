@@ -311,4 +311,6 @@ Whether you're shopping for skincare enthusiasts, fitness lovers, wellness seeke
 
 Next time you're looking for the perfect gift, consider how your purchase can support both the recipient and the broader community. These Black-owned brands are proof that quality, innovation, and social impact can go hand in hand.
 
+For graduating artists, also check [Unique Graduation Gifts for Creative Minds](/blog/unique-graduation-gifts-creative-minds/) — 15 curated ideas from art supplies to experiences.
+
 Looking for more personalized gift suggestions? Our [Gift Idea Generator](https://bright-gift.com/) can help you find the perfect present based on your recipient's specific interests and preferences!
