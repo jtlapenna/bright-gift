@@ -1,0 +1,557 @@
+[
+  {
+    "url": "https://bright-gift.com/blog/80th-birthday-gift-ideas-seniors/",
+    "slug": "80th-birthday-gift-ideas-seniors",
+    "target_path": "/blog/80th-birthday-gift-ideas-seniors/",
+    "inbound_internal_link_occurrences_repo": 8,
+    "repo": {
+      "exists": true,
+      "file": "/Users/jeff/Projects/gift-idea-generator/src/content/blog/80th-birthday-gift-ideas-seniors.md",
+      "frontmatter": {
+        "title": "80th Birthday Gift Ideas: 25 Thoughtful Presents for Seniors",
+        "description": ">-",
+        "date": "2025-11-21",
+        "lastUpdated": "2025-12-03T00:00:00.000Z",
+        "status": "published",
+        "draft": "false",
+        "metaTitle": "80th Birthday Gift Ideas: 25 Thoughtful Presents",
+        "metaDescription": ">-",
+        "image": ">-",
+        "ogImage": ">-",
+        "keywords": null,
+        "canonical": "https://bright-gift.com/blog/80th-birthday-gift-ideas-seniors/",
+        "faqSchema_present": true
+      },
+      "content_metrics": {
+        "word_count_est": 3246,
+        "amazon_links": 28,
+        "affiliate_rel_attrs": 28,
+        "internal_blog_links": 11,
+        "external_links_markdown": 3
+      }
+    },
+    "live": {
+      "final_status": 200,
+      "final_url": "https://bright-gift.com/blog/80th-birthday-gift-ideas-seniors/",
+      "redirect_chain": [
+        {
+          "status": 200,
+          "location": null,
+          "x_robots_tag": "index, follow"
+        }
+      ],
+      "canonical": "https://bright-gift.com/blog/80th-birthday-gift-ideas-seniors/",
+      "meta_robots": "index, follow",
+      "title_tag": "80th Birthday Gift Ideas: 25 Thoughtful Presents",
+      "h1": "80th Birthday Gift Ideas: 25 Thoughtful Presents for Seniors",
+      "jsonld_types_sample": [
+        "Article",
+        "BreadcrumbList",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "WebPage"
+      ]
+    }
+  },
+  {
+    "url": "https://bright-gift.com/blog/gifts-for-remote-workers-and-wfh-professionals/",
+    "slug": "gifts-for-remote-workers-and-wfh-professionals",
+    "target_path": "/blog/gifts-for-remote-workers-and-wfh-professionals/",
+    "inbound_internal_link_occurrences_repo": 12,
+    "repo": {
+      "exists": true,
+      "file": "/Users/jeff/Projects/gift-idea-generator/src/content/blog/gifts-for-remote-workers-and-wfh-professionals.md",
+      "frontmatter": {
+        "title": "Gifts for Remote Workers: 27 Home Office Essentials Under $100",
+        "description": ">-",
+        "date": "2025-07-31T00:00:00.000Z",
+        "lastUpdated": "2025-12-03T00:00:00.000Z",
+        "status": "published",
+        "draft": "false",
+        "metaTitle": "Gifts for Remote Workers: 27 Home Office Essentials Under $100",
+        "metaDescription": ">-",
+        "image": ">-",
+        "ogImage": ">-",
+        "keywords": null,
+        "canonical": "https://bright-gift.com/blog/gifts-for-remote-workers-and-wfh-professionals/",
+        "faqSchema_present": true
+      },
+      "content_metrics": {
+        "word_count_est": 2135,
+        "amazon_links": 23,
+        "affiliate_rel_attrs": 26,
+        "internal_blog_links": 13,
+        "external_links_markdown": 1
+      }
+    },
+    "live": {
+      "final_status": 200,
+      "final_url": "https://bright-gift.com/blog/gifts-for-remote-workers-and-wfh-professionals/",
+      "redirect_chain": [
+        {
+          "status": 200,
+          "location": null,
+          "x_robots_tag": "index, follow"
+        }
+      ],
+      "canonical": "https://bright-gift.com/blog/gifts-for-remote-workers-and-wfh-professionals/",
+      "meta_robots": "index, follow",
+      "title_tag": "Gifts for Remote Workers: 27 Home Office Essentials Under $1",
+      "h1": "Gifts for Remote Workers: 27 Home Office Essentials Under $100",
+      "jsonld_types_sample": [
+        "Article",
+        "BreadcrumbList",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "WebPage"
+      ]
+    }
+  },
+  {
+    "url": "https://bright-gift.com/blog/christmas-gift-ideas-2025/",
+    "slug": "christmas-gift-ideas-2025",
+    "target_path": "/blog/christmas-gift-ideas-2025/",
+    "inbound_internal_link_occurrences_repo": 18,
+    "repo": {
+      "exists": true,
+      "file": "/Users/jeff/Projects/gift-idea-generator/src/content/blog/christmas-gift-ideas-2025.md",
+      "frontmatter": {
+        "title": "Christmas Gift Ideas 2025: 20 Thoughtful Picks",
+        "description": ">-",
+        "date": "2025-09-23",
+        "lastUpdated": "2025-12-03T00:00:00.000Z",
+        "status": "published",
+        "draft": "false",
+        "metaTitle": "Christmas Gift Ideas 2025: Your Complete Gift Guide",
+        "metaDescription": ">-",
+        "image": "/images/blog/christmas-gift-ideas-2025/christmas-gift-ideas-2025-banner.webp",
+        "ogImage": "/images/blog/christmas-gift-ideas-2025/christmas-gift-ideas-2025-og.webp",
+        "keywords": null,
+        "canonical": "https://bright-gift.com/blog/christmas-gift-ideas-2025/",
+        "faqSchema_present": true
+      },
+      "content_metrics": {
+        "word_count_est": 2488,
+        "amazon_links": 21,
+        "affiliate_rel_attrs": 24,
+        "internal_blog_links": 12,
+        "external_links_markdown": 1
+      }
+    },
+    "live": {
+      "final_status": 200,
+      "final_url": "https://bright-gift.com/blog/christmas-gift-ideas-2025/",
+      "redirect_chain": [
+        {
+          "status": 200,
+          "location": null,
+          "x_robots_tag": "index, follow"
+        }
+      ],
+      "canonical": "https://bright-gift.com/blog/christmas-gift-ideas-2025/",
+      "meta_robots": "index, follow",
+      "title_tag": "Christmas Gift Ideas 2025: Your Complete Gift Guide",
+      "h1": "Christmas Gift Ideas 2025: 20 Thoughtful Picks",
+      "jsonld_types_sample": [
+        "Article",
+        "BreadcrumbList",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "WebPage"
+      ]
+    }
+  },
+  {
+    "url": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas/",
+    "slug": "gifts-for-girlfriend-unique-romantic-ideas",
+    "target_path": "/blog/gifts-for-girlfriend-unique-romantic-ideas/",
+    "inbound_internal_link_occurrences_repo": 12,
+    "repo": {
+      "exists": true,
+      "file": "/Users/jeff/Projects/gift-idea-generator/src/content/blog/gifts-for-girlfriend-unique-romantic-ideas.md",
+      "frontmatter": {
+        "title": "15 Thoughtful Gifts for Your Girlfriend",
+        "description": ">-",
+        "date": "2025-09-17T00:00:00.000Z",
+        "lastUpdated": "2025-12-03T00:00:00.000Z",
+        "status": "published",
+        "draft": "false",
+        "metaTitle": "Gifts for Girlfriend | 15 Unique Romantic Ideas",
+        "metaDescription": ">-",
+        "image": "/images/blog/gifts-for-girlfriend-unique-romantic-ideas/girlfriend-banner.webp",
+        "ogImage": "/images/blog/gifts-for-girlfriend-unique-romantic-ideas/girlfriend-og.webp",
+        "keywords": "amazon, target, noopener, gift, https, bright, price, href, class, link",
+        "canonical": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas",
+        "faqSchema_present": true
+      },
+      "content_metrics": {
+        "word_count_est": 1051,
+        "amazon_links": 15,
+        "affiliate_rel_attrs": 15,
+        "internal_blog_links": 9,
+        "external_links_markdown": 2
+      }
+    },
+    "live": {
+      "final_status": 200,
+      "final_url": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas/",
+      "redirect_chain": [
+        {
+          "status": 200,
+          "location": null,
+          "x_robots_tag": "index, follow"
+        }
+      ],
+      "canonical": "https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas/",
+      "meta_robots": "index, follow",
+      "title_tag": "Gifts for Girlfriend | 15 Unique Romantic Ideas",
+      "h1": "15 Thoughtful Gifts for Your Girlfriend",
+      "jsonld_types_sample": [
+        "Article",
+        "BreadcrumbList",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "WebPage"
+      ]
+    }
+  },
+  {
+    "url": "https://bright-gift.com/blog/remote-work-2-0-gifts-hybrid-offices-50-100/",
+    "slug": "remote-work-2-0-gifts-hybrid-offices-50-100",
+    "target_path": "/blog/remote-work-2-0-gifts-hybrid-offices-50-100/",
+    "inbound_internal_link_occurrences_repo": 2,
+    "repo": {
+      "exists": true,
+      "file": "/Users/jeff/Projects/gift-idea-generator/src/content/blog/remote-work-2-0-gifts-hybrid-offices-50-100.md",
+      "frontmatter": {
+        "title": "Remote Work 2.0: Gifts for Hybrid Offices ($50/$100)",
+        "description": ">-",
+        "date": "2025-10-08",
+        "lastUpdated": null,
+        "status": "published",
+        "draft": "false",
+        "metaTitle": "Remote Work 2.0: Gifts for Hybrid Offices ($50/$100)",
+        "metaDescription": ">-",
+        "image": ">-",
+        "ogImage": ">-",
+        "keywords": "amazon, with, work, target, noopener, gift, that, while, charging, practical",
+        "canonical": "https://bright-gift.com/blog/remote-work-2-0-gifts-hybrid-offices-50-100",
+        "faqSchema_present": false
+      },
+      "content_metrics": {
+        "word_count_est": 1717,
+        "amazon_links": 14,
+        "affiliate_rel_attrs": 14,
+        "internal_blog_links": 4,
+        "external_links_markdown": 1
+      }
+    },
+    "live": {
+      "final_status": 200,
+      "final_url": "https://bright-gift.com/blog/remote-work-2-0-gifts-hybrid-offices-50-100/",
+      "redirect_chain": [
+        {
+          "status": 200,
+          "location": null,
+          "x_robots_tag": "index, follow"
+        }
+      ],
+      "canonical": "https://bright-gift.com/blog/remote-work-2-0-gifts-hybrid-offices-50-100/",
+      "meta_robots": "index, follow",
+      "title_tag": "Remote Work 2.0: Gifts for Hybrid Offices ($50/$100)",
+      "h1": "Remote Work 2.0: Gifts for Hybrid Offices ($50/$100)",
+      "jsonld_types_sample": [
+        "Article",
+        "BreadcrumbList",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "WebPage"
+      ]
+    }
+  },
+  {
+    "url": "https://bright-gift.com/blog/gifts-for-gamers-under-50/",
+    "slug": "gifts-for-gamers-under-50",
+    "target_path": "/blog/gifts-for-gamers-under-50/",
+    "inbound_internal_link_occurrences_repo": 7,
+    "repo": {
+      "exists": true,
+      "file": "/Users/jeff/Projects/gift-idea-generator/src/content/blog/gifts-for-gamers-under-50.md",
+      "frontmatter": {
+        "title": "Gifts for Gamers Under $50: 15 Perfect Gaming Gift Ideas",
+        "description": ">-",
+        "date": "2025-09-17T00:00:00.000Z",
+        "lastUpdated": "2025-12-03T00:00:00.000Z",
+        "status": "published",
+        "draft": "false",
+        "metaTitle": "Gifts for Gamers Under $50 | 15 Perfect Gaming Ideas",
+        "metaDescription": ">-",
+        "image": "/images/blog/gamers-under-50/gamers-under-50.webp",
+        "ogImage": "/images/blog/gamers-under-50/gamers-under-50.webp",
+        "keywords": "gaming",
+        "canonical": "https://bright-gift.com/blog/gifts-for-gamers-under-50",
+        "faqSchema_present": true
+      },
+      "content_metrics": {
+        "word_count_est": 1303,
+        "amazon_links": 25,
+        "affiliate_rel_attrs": 25,
+        "internal_blog_links": 10,
+        "external_links_markdown": 2
+      }
+    },
+    "live": {
+      "final_status": 200,
+      "final_url": "https://bright-gift.com/blog/gifts-for-gamers-under-50/",
+      "redirect_chain": [
+        {
+          "status": 103,
+          "location": null,
+          "x_robots_tag": null
+        },
+        {
+          "status": 200,
+          "location": null,
+          "x_robots_tag": "index, follow"
+        }
+      ],
+      "canonical": "https://bright-gift.com/blog/gifts-for-gamers-under-50/",
+      "meta_robots": "index, follow",
+      "title_tag": "Gifts for Gamers Under $50 | 15 Perfect Gaming Ideas",
+      "h1": "Gifts for Gamers Under $50: 15 Perfect Gaming Gift Ideas",
+      "jsonld_types_sample": [
+        "Article",
+        "BreadcrumbList",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "WebPage"
+      ]
+    }
+  },
+  {
+    "url": "https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/",
+    "slug": "eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature",
+    "target_path": "/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/",
+    "inbound_internal_link_occurrences_repo": 6,
+    "repo": {
+      "exists": true,
+      "file": "/Users/jeff/Projects/gift-idea-generator/src/content/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature.md",
+      "frontmatter": {
+        "title": "Eco-Friendly Gifts for Outdoor Lovers: 20+ Sustainable Ideas",
+        "description": ">-",
+        "date": "2025-07-31T00:00:00.000Z",
+        "lastUpdated": "2025-12-03T00:00:00.000Z",
+        "status": "published",
+        "draft": "false",
+        "metaTitle": "Eco-Friendly Gifts for Outdoor Lovers | Sustainable Natur...",
+        "metaDescription": ">-",
+        "image": ">-",
+        "ogImage": ">-",
+        "keywords": ">-",
+        "canonical": ">-",
+        "faqSchema_present": true
+      },
+      "content_metrics": {
+        "word_count_est": 1235,
+        "amazon_links": 10,
+        "affiliate_rel_attrs": 10,
+        "internal_blog_links": 6,
+        "external_links_markdown": 1
+      }
+    },
+    "live": {
+      "final_status": 200,
+      "final_url": "https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/",
+      "redirect_chain": [
+        {
+          "status": 200,
+          "location": null,
+          "x_robots_tag": "index, follow"
+        }
+      ],
+      "canonical": "https://bright-gift.com/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/",
+      "meta_robots": "index, follow",
+      "title_tag": "Eco-Friendly Gifts for Outdoor Lovers | Sustainable Natur...",
+      "h1": "Eco-Friendly Gifts for Outdoor Lovers: 20+ Sustainable Ideas",
+      "jsonld_types_sample": [
+        "Article",
+        "BreadcrumbList",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "WebPage"
+      ]
+    }
+  },
+  {
+    "url": "https://bright-gift.com/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/",
+    "slug": "valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple",
+    "target_path": "/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/",
+    "inbound_internal_link_occurrences_repo": 13,
+    "repo": {
+      "exists": true,
+      "file": "/Users/jeff/Projects/gift-idea-generator/src/content/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple.md",
+      "frontmatter": {
+        "title": "Valentine''s Day Gifts Under $50: 20 Romantic Ideas for 2025",
+        "description": ">-",
+        "date": "2025-07-31T00:00:00.000Z",
+        "lastUpdated": "2025-12-03T12:00:00.000Z",
+        "status": "published",
+        "draft": "false",
+        "metaTitle": "Valentine''s Day Gifts Under $50: 20 Romantic Ideas for 2025",
+        "metaDescription": ">-",
+        "image": ">-",
+        "ogImage": ">-",
+        "keywords": null,
+        "canonical": ">-",
+        "faqSchema_present": true
+      },
+      "content_metrics": {
+        "word_count_est": 2369,
+        "amazon_links": 19,
+        "affiliate_rel_attrs": 20,
+        "internal_blog_links": 12,
+        "external_links_markdown": 2
+      }
+    },
+    "live": {
+      "final_status": 200,
+      "final_url": "https://bright-gift.com/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/",
+      "redirect_chain": [
+        {
+          "status": 200,
+          "location": null,
+          "x_robots_tag": "index, follow"
+        }
+      ],
+      "canonical": "https://bright-gift.com/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/",
+      "meta_robots": "index, follow",
+      "title_tag": "Valentine&#39;s Day Gifts Under $50: 20 Romantic Ideas for 2025",
+      "h1": "Valentine&#39;s Day Gifts Under $50: 20 Romantic Ideas for 2025",
+      "jsonld_types_sample": [
+        "Article",
+        "BreadcrumbList",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "WebPage"
+      ]
+    }
+  },
+  {
+    "url": "https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/",
+    "slug": "20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75",
+    "target_path": "/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/",
+    "inbound_internal_link_occurrences_repo": 3,
+    "repo": {
+      "exists": true,
+      "file": "/Users/jeff/Projects/gift-idea-generator/src/content/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75.md",
+      "frontmatter": {
+        "title": "20 Ethical Gift Ideas for Eco-Conscious Loved Ones Under $75",
+        "description": ">-",
+        "date": "2025-09-17T00:00:00.000Z",
+        "lastUpdated": null,
+        "status": "published",
+        "draft": "false",
+        "metaTitle": "20 Ethical Gift Ideas Under $75: Sustainable & Eco-Friend...",
+        "metaDescription": ">-",
+        "image": "/images/blog/ethical-gifts-under-75/eco-banner-OG.webp",
+        "ogImage": "/images/blog/ethical-gifts-under-75/eco-banner-OG.webp",
+        "keywords": ">-",
+        "canonical": ">-",
+        "faqSchema_present": true
+      },
+      "content_metrics": {
+        "word_count_est": 1214,
+        "amazon_links": 20,
+        "affiliate_rel_attrs": 20,
+        "internal_blog_links": 0,
+        "external_links_markdown": 3
+      }
+    },
+    "live": {
+      "final_status": 200,
+      "final_url": "https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/",
+      "redirect_chain": [
+        {
+          "status": 200,
+          "location": null,
+          "x_robots_tag": "index, follow"
+        }
+      ],
+      "canonical": "https://bright-gift.com/blog/20-ethical-gift-ideas-for-eco-conscious-loved-ones-under-75/",
+      "meta_robots": "index, follow",
+      "title_tag": "20 Ethical Gift Ideas Under $75: Sustainable &amp; Eco-Friend...",
+      "h1": "20 Ethical Gift Ideas for Eco-Conscious Loved Ones Under $75",
+      "jsonld_types_sample": [
+        "Article",
+        "BreadcrumbList",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "WebPage"
+      ]
+    }
+  },
+  {
+    "url": "https://bright-gift.com/blog/best-holiday-gifts-for-moms-2025/",
+    "slug": "best-holiday-gifts-for-moms-2025",
+    "target_path": "/blog/best-holiday-gifts-for-moms-2025/",
+    "inbound_internal_link_occurrences_repo": 11,
+    "repo": {
+      "exists": true,
+      "file": "/Users/jeff/Projects/gift-idea-generator/src/content/blog/best-holiday-gifts-for-moms-2025.md",
+      "frontmatter": {
+        "title": "Mother''s Day Gifts: 30 Thoughtful Ideas for the Mom Who Has Everything",
+        "description": ">-",
+        "date": "2025-11-16",
+        "lastUpdated": "2025-12-03T00:00:00.000Z",
+        "status": "published",
+        "draft": "false",
+        "metaTitle": "Mother''s Day Gifts: 30 Thoughtful Ideas for Moms Who Have Everything",
+        "metaDescription": ">-",
+        "image": ">-",
+        "ogImage": ">-",
+        "keywords": null,
+        "canonical": "https://bright-gift.com/blog/best-holiday-gifts-for-moms-2025/",
+        "faqSchema_present": true
+      },
+      "content_metrics": {
+        "word_count_est": 3727,
+        "amazon_links": 16,
+        "affiliate_rel_attrs": 20,
+        "internal_blog_links": 12,
+        "external_links_markdown": 1
+      }
+    },
+    "live": {
+      "final_status": 200,
+      "final_url": "https://bright-gift.com/blog/best-holiday-gifts-for-moms-2025/",
+      "redirect_chain": [
+        {
+          "status": 200,
+          "location": null,
+          "x_robots_tag": "index, follow"
+        }
+      ],
+      "canonical": "https://bright-gift.com/blog/best-holiday-gifts-for-moms-2025/",
+      "meta_robots": "index, follow",
+      "title_tag": "Mother&#39;s Day Gifts: 30 Thoughtful Ideas for Moms Who Have Ev",
+      "h1": "Mother&#39;s Day Gifts: 30 Thoughtful Ideas for the Mom Who Has Everything",
+      "jsonld_types_sample": [
+        "Article",
+        "BreadcrumbList",
+        "ImageObject",
+        "ListItem",
+        "Organization",
+        "WebPage"
+      ]
+    }
+  }
+]

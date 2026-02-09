@@ -72,11 +72,17 @@ class ContentValidator {
 
       // Skip if canonical is empty or just YAML syntax
       if (cleanCanonical && cleanCanonical !== '>-') {
-        if (!cleanCanonical.startsWith('https://bright-gift.com/blog/') ||
-            cleanCanonical.endsWith('/')) {
+        // Purpose: allow trailing-slash canonicals (site-wide canonicalization uses "/").
+        const isValidCanonical =
+          cleanCanonical.startsWith('https://bright-gift.com/blog/') &&
+          !/\s/.test(cleanCanonical) &&
+          !cleanCanonical.includes('?') &&
+          !cleanCanonical.includes('#');
+
+        if (!isValidCanonical) {
           this.addError(filePath, content.indexOf(canonicalMatch[0]) + 1,
             `Malformed canonical URL: ${cleanCanonical}`,
-            'Format: https://bright-gift.com/blog/post-slug');
+            'Format: https://bright-gift.com/blog/post-slug/ (trailing slash ok)');
           hasErrors = true;
         }
       }

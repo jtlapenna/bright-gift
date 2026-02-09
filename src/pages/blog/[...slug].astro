@@ -153,6 +153,19 @@ const allBlogPosts = await getCollection('blog', ({ data }) => isPreview || !dat
 // Find related posts based on tags and category
 const currentTags = post.data.tags || [];
 const currentCategory = post.data.category || 'gift-guides';
+
+// Purpose: make tag matching resilient to phrase-style tags (e.g., "remote work gifts")
+// so "Related posts" is less brittle and improves internal-link discovery.
+const STOP_TOKENS = new Set(['a','an','and','are','as','at','be','best','by','for','from','gift','gifts','guide','guides','ideas','in','is','it','of','on','or','the','to','under','with','you','your']);
+function tagTokens(tags: string[]): Set<string> {
+  const tokens = (tags || [])
+    .join(' ')
+    .toLowerCase()
+    .split(/[^a-z0-9]+/g)
+    .filter(t => t && t.length >= 3 && !STOP_TOKENS.has(t));
+  return new Set(tokens);
+}
+const currentTagTokens = tagTokens(currentTags);
 const relatedPosts = allBlogPosts
   .filter(p => p.id !== post.id)
   .map(p => {
@@ -162,8 +175,9 @@ const relatedPosts = allBlogPosts
     // Calculate relevance score
     let score = 0;
     
-    // Tag overlap (higher weight)
-    const tagOverlap = postTags.filter(tag => currentTags.includes(tag)).length;
+    // Purpose: tag-token overlap (higher weight) for better clustering
+    const postTagTokens = tagTokens(postTags);
+    const tagOverlap = [...postTagTokens].filter(t => currentTagTokens.has(t)).length;
     score += tagOverlap * 3;
     
     // Category match (medium weight)
