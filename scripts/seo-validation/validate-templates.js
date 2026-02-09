@@ -83,7 +83,7 @@ class TemplateValidator {
     // Check for JavaScript redirects (exclude OAuth pages)
     if (!filePath.includes('oauth') && !filePath.includes('callback')) {
       // Purpose: only flag real redirects (writes/calls), not reads like `window.location.href`.
-      const redirectPattern = /(window\.location\.(replace|assign)\s*\(|(?:window\.)?location\.href\s*=|window\.location\.href\s*=|document\.location\s*=)/;
+      const redirectPattern = /(window\.location\.(replace|assign)\s*\(|(?:window\.)?location\.href\s*=(?![=])|document\.location\s*=(?![=]))/;
       lines.forEach((line, index) => {
         if (redirectPattern.test(line)) {
           this.addError(filePath, index + 1,
