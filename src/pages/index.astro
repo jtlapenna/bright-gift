@@ -1118,10 +1118,12 @@ const faqData = {
 		}
 	});
 
-	// Function to get brand name from Afrofiliate link
+	// Function to get brand name from Afrofiliate or direct partner link
 	function getBrandName(link) {
 		console.log('getBrandName called with link:', link);
-		if (!link || !link.includes('arjdj2msd.com')) {
+		if (!link) return 'Brand';
+		if (/littleherolabs\.com/i.test(link)) return 'Little Hero Labs';
+		if (!link.includes('arjdj2msd.com')) {
 			console.log('Link is not Afrofiliate, returning Brand');
 			return 'Brand';
 		}
@@ -1318,14 +1320,17 @@ const faqData = {
 				buttonText = `🌟 Shop ${getBrandName(idea.link)}`;
 			} else if (/bookshop/i.test(idea.link)) {
 				buttonText = '📖 Find on Bookshop.org';
+			} else if (idea.affiliateType === 'direct' || /littleherolabs\.com/i.test(idea.link)) {
+				buttonText = 'Create at Little Hero Labs';
 			} else if (/arjdj2msd\.com/i.test(idea.link)) {
 				buttonText = `🌟 Shop ${getBrandName(idea.link)}`;
 			}
-				
+				const outlineStyle = idea.affiliateType === 'afrofiliate' || /arjdj2msd\.com/i.test(idea.link) || idea.affiliateType === 'direct' || /littleherolabs\.com/i.test(idea.link);
+				const linkLabel = idea.affiliateType === 'direct' || /littleherolabs\.com/i.test(idea.link) ? 'link' : 'affiliate link';
 				buttonHtml = `
 					<a href="${idea.link}" target="_blank" rel="nofollow noopener" 
-					   class="w-full ${idea.affiliateType === 'afrofiliate' || /arjdj2msd\.com/i.test(idea.link) ? 'bg-white hover:bg-gray-50 text-[#1C2E4A] border-2 border-[#1C2E4A] hover:border-[#FF6B6B]' : 'bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white'} font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center" 
-					   aria-label="View ${idea.title} (affiliate link)">
+					   class="w-full ${outlineStyle ? 'bg-white hover:bg-gray-50 text-[#1C2E4A] border-2 border-[#1C2E4A] hover:border-[#FF6B6B]' : 'bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white'} font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center" 
+					   aria-label="View ${idea.title} (${linkLabel})">
 						${buttonText}
 					</a>
 				`;
@@ -1364,14 +1369,17 @@ const faqData = {
 				buttonText = `🌟 Shop ${getBrandName(idea.link)}`;
 			} else if (/bookshop/i.test(idea.link)) {
 				buttonText = '📖 Find on Bookshop.org';
+			} else if (idea.affiliateType === 'direct' || /littleherolabs\.com/i.test(idea.link)) {
+				buttonText = 'Create at Little Hero Labs';
 			} else if (/arjdj2msd\.com/i.test(idea.link)) {
 				buttonText = `🌟 Shop ${getBrandName(idea.link)}`;
 			}
-			
+			const outlineStyle = idea.affiliateType === 'afrofiliate' || /arjdj2msd\.com/i.test(idea.link) || idea.affiliateType === 'direct' || /littleherolabs\.com/i.test(idea.link);
+			const linkLabel = idea.affiliateType === 'direct' || /littleherolabs\.com/i.test(idea.link) ? 'link' : 'affiliate link';
 			const buttonHtml = `
 				<a href="${idea.link}" target="_blank" rel="nofollow noopener" 
-				   class="w-full ${idea.affiliateType === 'afrofiliate' || /arjdj2msd\.com/i.test(idea.link) ? 'bg-white hover:bg-gray-50 text-[#1C2E4A] border-2 border-[#1C2E4A] hover:border-[#FF6B6B]' : 'bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white'} font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center" 
-				   aria-label="View ${idea.title} (affiliate link)">
+				   class="w-full ${outlineStyle ? 'bg-white hover:bg-gray-50 text-[#1C2E4A] border-2 border-[#1C2E4A] hover:border-[#FF6B6B]' : 'bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white'} font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center" 
+				   aria-label="View ${idea.title} (${linkLabel})">
 					${buttonText}
 				</a>
 			`;
