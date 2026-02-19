@@ -4,16 +4,16 @@ description: "Discover 10 personalized gifts for kids—custom storybooks, name 
 metaTitle: "Personalized Gifts for Kids | 10 Keepsakes They'll Love"
 metaDescription: "Discover 10 personalized gifts for kids — custom storybooks, name puzzles, and keepsakes they'll treasure for years. Find the perfect meaningful present!"
 date: "2026-01-18"
-status: "draft"
-draft: true
+status: "published"
+draft: false
 keywords:
   - personalized gifts for kids
   - personalized children's books
   - custom kids gifts
   - personalized baby gifts
   - name gifts for toddlers
-image: "/images/homepage-banner.webp"
-ogImage: "/images/homepage-banner.webp"
+image: "/images/blog/personalized-gifts-for-kids/banner.webp"
+ogImage: "/images/blog/personalized-gifts-for-kids/banner.webp"
 tags:
   - personalized
   - kids
