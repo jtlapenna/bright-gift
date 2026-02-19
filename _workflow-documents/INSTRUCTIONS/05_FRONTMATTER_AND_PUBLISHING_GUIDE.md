@@ -410,6 +410,7 @@ originalInput:
 - [ ] Fill all required fields
 - [ ] **⚠️ CRITICAL: Set date to actual current date (YYYY-MM-DD format) - DO NOT use example dates, future dates, or copy from templates**
 - [ ] **Verify date is correct:** Check that date matches today's date (e.g., if publishing on Nov 16, 2025, date should be `2025-11-16`)
+- [ ] **Avoid copy-paste dates:** Many preview posts wrongly show `2026-01-18` because the date was copied from another post. When creating or publishing a post, always set `date` to **the actual publish/preview date** (run `date +%Y-%m-%d` or use today's date in YYYY-MM-DD).
 - [ ] Add relevant tags and categorization
 - [ ] Include affiliate link tracking
 - [ ] Add original input tracking

@@ -3,7 +3,7 @@ title: "Personalized Gifts for Kids: 10 Keepsakes They'll Treasure"
 description: "Discover 10 personalized gifts for kids—custom storybooks, name puzzles, and keepsakes they'll treasure. From Little Hero Labs to name blankets and more."
 metaTitle: "Personalized Gifts for Kids | 10 Keepsakes They'll Love"
 metaDescription: "Discover 10 personalized gifts for kids — custom storybooks, name puzzles, and keepsakes they'll treasure for years. Find the perfect meaningful present!"
-date: "2026-01-18"
+date: "2026-02-19"
 status: "published"
 draft: false
 keywords:
@@ -67,7 +67,7 @@ Below are 10 curated personalized gifts for kids, from custom storybooks to name
 
 **Practical tip:** Spend a few extra minutes in the character builder getting hair and skin tone right. Kids light up when the character actually looks like them.
 
-**Price:** $29.99 — <a href="https://www.littleherolabs.com" target="_blank" rel="noopener">Create Your Book at Little Hero Labs</a>
+**Price:** $29.99 — <a href="https://www.littleherolabs.com" class="amazon-link" target="_blank" rel="noopener">Create Your Book at Little Hero Labs</a>
 
 ### Personalized "Where the Wild Things Are"–Style Storybook
 

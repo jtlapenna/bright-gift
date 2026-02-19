@@ -44,6 +44,7 @@ This guide establishes systematic verification processes to prevent documentatio
 - [ ] **Meta Tag Limits**: Confirm character limits are accurate
 - [ ] **Affiliate IDs**: Verify against live API implementation
 - [ ] **Link Formats**: Check actual affiliate link generation
+- [ ] **Blog post dates**: For new or preview posts, confirm `date` is the actual publish/preview date (not a template date like `2026-01-18` copied from another post)
 
 #### **Functionality**
 - [ ] **Form Validation**: Test actual form behavior
