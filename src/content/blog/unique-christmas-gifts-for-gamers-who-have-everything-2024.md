@@ -3,7 +3,7 @@ title: Unique Christmas Gifts for Gamers Who Have Everything (2026)
 description: >-
   Find the perfect Christmas gift for gamers who seem to have it all with our
   curated selection of 15+ unique gaming accessories, collectibles, and...
-date: 2026-01-18T00:00:00.000Z
+date: 2026-02-19
 image: >-
   /images/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/unique-christmas-gifts-for-gamers-who-have-everything-2024-banner.webp
 ogImage: >-

@@ -11,7 +11,7 @@ keywords: >-
   AI gift ideas, artificial intelligence gifts, smart gift recommendations, AI
   shopping tools, personalized gifts, budget gift ideas, AI gift finder, smart
   shopping 2026
-date: 2026-01-18T00:00:00.000Z
+date: 2026-02-19
 metaTitle: 'AI-Powered Gift Ideas for Every Budget: Smart Shopping 2026'
 metaDescription: >-
   Discover AI-powered gift recommendations for every budget. From $25 to $500+, find personalized gifts using smart technology and save time shopping. Shop smarter in 2026!

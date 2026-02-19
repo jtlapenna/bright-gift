@@ -4,7 +4,7 @@ description: >-
   Find the perfect graduation gifts for creative minds with our curated guide.
   From art supplies to experiences, discover 15 inspiring ideas that celebrate
   artistic graduates and their future.
-date: '2026-01-18'
+date: '2026-02-19'
 image: >-
   /images/blog/unique-graduation-gifts-creative-minds/unique-graduation-gifts-for-the-creative-minds-banner.webp
 ogImage: >-
