@@ -6,9 +6,6 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   
-  # SEO-friendly headers
-  X-Robots-Tag: index, follow
-  
   # Performance headers
   X-DNS-Prefetch-Control: on
 
