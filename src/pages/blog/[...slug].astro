@@ -5,13 +5,24 @@ import { processAmazonLinks } from '../../utils/processAmazonLinks.js';
 
 export const prerender = true;
 
+function normalizeCategory(category) {
+  if (category === 'gift-guides') return 'gift-guide';
+  return category || 'blog';
+}
+
 // Generate static paths for all content
 export async function getStaticPaths() {
   const isPreview = import.meta.env.IS_PREVIEW === 'true';
   const blogPosts = await getCollection('blog', ({ data }) => isPreview || !data.draft);
 
   const paths = [
-    ...blogPosts.map((post) => ({ params: { slug: post.slug }, props: { post, type: post.data.category || 'blog' } }))
+    ...blogPosts.map((post) => ({
+      params: { slug: post.slug },
+      props: {
+        post,
+        type: post.data.category === 'gift-guides' ? 'gift-guide' : post.data.category || 'blog'
+      }
+    }))
   ];
 
   return paths;
@@ -53,6 +64,8 @@ const socialImage = post.data.socialImage || ogImage;
 const keywords = post.data.keywords || fallbackKeywords;
 const date = post.data.date || post.data.pubDate || fallbackDate;
 const lastUpdated = post.data.lastUpdated;
+const normalizedType = normalizeCategory(type);
+const isGiftGuide = normalizedType === 'gift-guide';
 
 // Debug logging in development
 if (import.meta.env.DEV && post.slug === '80th-birthday-gift-ideas-seniors') {
@@ -96,7 +109,7 @@ const structuredData = {
     "height": 630
   },
   "datePublished": date,
-  "dateModified": date,
+  "dateModified": lastUpdated || date,
   "author": {
     "@type": "Organization",
     "name": "BrightGift",
@@ -117,7 +130,7 @@ const structuredData = {
     "@type": "WebPage",
     "@id": canonicalUrl
   },
-  "articleSection": type === 'gift-guide' ? "Gift Guides" : "Blog",
+  "articleSection": isGiftGuide ? "Gift Guides" : "Blog",
   "keywords": Array.isArray(keywords) ? keywords.join(', ') : keywords,
   "wordCount": post.body.length,
   "timeRequired": `PT${readTime}M`
@@ -127,7 +140,7 @@ const structuredData = {
 const faqSchema = post.data.faqSchema;
 
 // Add gift-specific structured data for gift guides
-if (type === 'gift-guide' && post.data.affiliateLinks && post.data.affiliateLinks.length > 0) {
+if (isGiftGuide && post.data.affiliateLinks && post.data.affiliateLinks.length > 0) {
   structuredData["@type"] = "ItemList";
   structuredData.numberOfItems = post.data.affiliateLinks.length;
   structuredData.itemListElement = post.data.affiliateLinks.map((link, index) => ({
@@ -152,7 +165,7 @@ const allBlogPosts = await getCollection('blog', ({ data }) => isPreview || !dat
 
 // Find related posts based on tags and category
 const currentTags = post.data.tags || [];
-const currentCategory = post.data.category || 'gift-guides';
+const currentCategory = normalizeCategory(post.data.category);
 
 // Purpose: make tag matching resilient to phrase-style tags (e.g., "remote work gifts")
 // so "Related posts" is less brittle and improves internal-link discovery.
@@ -170,7 +183,7 @@ const relatedPosts = allBlogPosts
   .filter(p => p.id !== post.id)
   .map(p => {
     const postTags = p.data.tags || [];
-    const postCategory = p.data.category || 'gift-guides';
+    const postCategory = normalizeCategory(p.data.category);
     
     // Calculate relevance score
     let score = 0;
@@ -262,7 +275,7 @@ if (relatedPosts.length > 0) {
           <!-- Category Badge -->
           <div class="mb-4 flex justify-center">
             <span class="inline-block bg-coral-500 text-white text-base md:text-lg font-semibold px-5 py-2 rounded-full shadow-lg tracking-wide border-2 border-white/40">
-              {type === 'gift-guide' ? 'Gift Guide' : type === 'faq' ? 'FAQ' : 'Blog Post'}
+              {isGiftGuide ? 'Gift Guide' : normalizedType === 'faq' ? 'FAQ' : 'Blog Post'}
             </span>
           </div>
         </div>
@@ -288,7 +301,7 @@ if (relatedPosts.length > 0) {
           <!-- Meta information with better layout -->
           <div class="flex items-center gap-4 text-sm text-gray-600 mb-6" style="padding-top: 20px;">
             <span class="inline-block bg-[#FF6B6B] text-white px-3 py-1 rounded-full font-semibold tracking-wide">
-              {type === 'gift-guide' ? 'Gift Guide' : type === 'faq' ? 'FAQ' : 'Blog Post'}
+              {isGiftGuide ? 'Gift Guide' : normalizedType === 'faq' ? 'FAQ' : 'Blog Post'}
             </span>
             <div class="flex items-center gap-1">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
