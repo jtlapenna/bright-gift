@@ -11,3 +11,33 @@
   
   # Performance headers
   X-DNS-Prefetch-Control: on
+
+/sitemap.xml
+  X-Robots-Tag: noindex
+
+/robots.txt
+  X-Robots-Tag: noindex
+
+/site.webmanifest
+  X-Robots-Tag: noindex
+
+/favicon.ico
+  X-Robots-Tag: noindex
+
+/favicon.svg
+  X-Robots-Tag: noindex
+
+/favicon-16x16.png
+  X-Robots-Tag: noindex
+
+/favicon-32x32.png
+  X-Robots-Tag: noindex
+
+/apple-touch-icon.png
+  X-Robots-Tag: noindex
+
+/android-chrome-192x192.png
+  X-Robots-Tag: noindex
+
+/android-chrome-512x512.png
+  X-Robots-Tag: noindex

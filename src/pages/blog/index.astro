@@ -2,12 +2,12 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
-// Pre-render this page for static generation
-export const prerender = true;
+// Render on request so query-string pagination produces distinct archive pages.
+export const prerender = false;
 
-// Get URL parameters for pagination
+// Read pagination from the request URL.
 const url = new URL(Astro.request.url);
-const currentPage = parseInt(url.searchParams.get('page') || '1');
+const rawPageParam = url.searchParams.get('page');
 
 // Get all blog posts, excluding drafts unless in preview
 const isPreview = import.meta.env.IS_PREVIEW === 'true';
@@ -33,11 +33,36 @@ const totalPublishedPosts = allPosts.length;
 
 // Pagination (9 posts per page for better grid layout)
 const postsPerPage = 9;
-const totalPages = Math.ceil(allContent.length / postsPerPage);
+const totalPages = Math.max(1, Math.ceil(allContent.length / postsPerPage));
 
-// Validate current page
-const validPage = Math.max(1, Math.min(currentPage, totalPages));
-const startIndex = (validPage - 1) * postsPerPage;
+// Generate pagination URLs.
+function getPageUrl(page: number): string {
+  if (page <= 1) {
+    return "https://bright-gift.com/blog/";
+  }
+
+  return `https://bright-gift.com/blog/?page=${page}`;
+}
+
+// Normalize page params so /blog/?page=1, invalid values, and out-of-range pages
+// resolve to a single canonical archive URL.
+const hasNormalizedPageParam = rawPageParam !== null && /^[1-9]\d*$/.test(rawPageParam);
+const requestedPage = hasNormalizedPageParam ? Number.parseInt(rawPageParam, 10) : 1;
+const currentPage = Math.min(Math.max(requestedPage, 1), totalPages);
+
+if (rawPageParam !== null) {
+  const shouldRedirect =
+    !hasNormalizedPageParam ||
+    requestedPage !== currentPage ||
+    currentPage === 1 ||
+    rawPageParam !== String(currentPage);
+
+  if (shouldRedirect) {
+    return Astro.redirect(getPageUrl(currentPage), 301);
+  }
+}
+
+const startIndex = (currentPage - 1) * postsPerPage;
 const endIndex = startIndex + postsPerPage;
 const paginatedContent = allContent.slice(startIndex, endIndex);
 
@@ -45,15 +70,6 @@ const paginatedContent = allContent.slice(startIndex, endIndex);
 function calculateReadTime(content: string): number {
   const wordCount = content.split(/\s+/).length;
   return Math.ceil(wordCount / 200);
-}
-
-// Generate pagination URLs (with trailing slashes)
-function getPageUrl(page: number): string {
-  if (page === 1) {
-    return "https://bright-gift.com/blog/";
-  } else {
-    return `https://bright-gift.com/blog/?page=${page}`;
-  }
 }
 
 // Structured data for blog index
@@ -75,8 +91,8 @@ const blogIndexStructuredData = {
   ogType="website"
   noindex={false}
   twitterCard="summary_large_image"
-  prevPage={validPage > 1 ? getPageUrl(validPage - 1) : undefined}
-  nextPage={validPage < totalPages ? getPageUrl(validPage + 1) : undefined}
+  prevPage={currentPage > 1 ? getPageUrl(currentPage - 1) : undefined}
+  nextPage={currentPage < totalPages ? getPageUrl(currentPage + 1) : undefined}
   breadcrumbs={[
     { name: "Home", url: "https://bright-gift.com/" },
     { name: "Blog", url: "https://bright-gift.com/blog/" }
@@ -276,9 +292,9 @@ const blogIndexStructuredData = {
       {totalPages > 1 && (
         <div class="mt-12 flex justify-center">
           <nav class="flex items-center space-x-2" aria-label="Blog pagination">
-            {validPage > 1 && (
+            {currentPage > 1 && (
               <a 
-                href={getPageUrl(validPage - 1)} 
+                href={getPageUrl(currentPage - 1)} 
                 class="px-4 py-2 text-sm font-medium text-[#1C2E4A] bg-white border border-slate-300 rounded-lg hover:bg-slate-50 transition-colors"
                 aria-label="Previous page"
               >
@@ -287,26 +303,26 @@ const blogIndexStructuredData = {
             )}
             
             {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
-              const page = Math.max(1, Math.min(totalPages - 4, validPage - 2)) + i;
+              const page = Math.max(1, Math.min(totalPages - 4, currentPage - 2)) + i;
               return (
                 <a 
                   href={getPageUrl(page)} 
                   class={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
-                    page === validPage 
+                    page === currentPage 
                       ? 'bg-[#FF6B6B] text-white' 
                       : 'text-[#1C2E4A] bg-white border border-slate-300 hover:bg-slate-50'
                   }`}
                   aria-label={`Page ${page}`}
-                  aria-current={page === validPage ? 'page' : undefined}
+                  aria-current={page === currentPage ? 'page' : undefined}
                 >
                   {page}
                 </a>
               );
             })}
             
-            {validPage < totalPages && (
+            {currentPage < totalPages && (
               <a 
-                href={getPageUrl(validPage + 1)} 
+                href={getPageUrl(currentPage + 1)} 
                 class="px-4 py-2 text-sm font-medium text-[#1C2E4A] bg-white border border-slate-300 rounded-lg hover:bg-slate-50 transition-colors"
                 aria-label="Next page"
               >
