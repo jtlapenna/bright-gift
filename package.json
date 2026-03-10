@@ -26,7 +26,7 @@
     "validate:preview": "node scripts/preview-validator.js",
     "fix:preview": "node scripts/preview-fixer.js",
     "enhance:preview": "node scripts/preview-enhancer.js",
-    "postbuild": "npm run fix:preview && npm run enhance:preview",
+    "postbuild": "node scripts/fix-cloudflare-routes.js && npm run fix:preview && npm run enhance:preview",
     "create-blog": "node scripts/create-blog-automation.js",
     "create-blog:gift-guide": "node scripts/create-blog-automation.js --type gift-guide",
     "create-blog:educational": "node scripts/create-blog-automation.js --type educational",
