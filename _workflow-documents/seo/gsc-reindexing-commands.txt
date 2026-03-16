@@ -1,29 +1,16 @@
-Google Search Console Actions:
-================================
+Google Search Console Reindexing Commands
+=========================================
 
-1. Submit updated sitemap:
-   - Go to: https://search.google.com/search-console
-   - Select your property: bright-gift.com
-   - Go to Sitemaps section
-   - Submit: https://bright-gift.com/sitemap.xml
+1. Submit sitemap:
+   - `https://bright-gift.com/sitemap.xml`
 
-2. Request indexing for key pages:
-   - Go to URL Inspection tool
-   - Test these critical URLs:
+2. Request indexing for the active refresh batch:
+   1. `https://bright-gift.com/blog/gifts-under-25-for-coworkers/`
+   2. `https://bright-gift.com/blog/little-luxuries-under-25-mini-splurges-major-wow/`
+   3. `https://bright-gift.com/blog/clean-girl-2-0-minimalist-gifts-with-personality/`
 
-   1. https://bright-gift.com/
-   2. https://bright-gift.com/blog/
-   3. https://bright-gift.com/category/gift-guides/
-   4. https://bright-gift.com/category/gift-tips/
-   5. https://bright-gift.com/privacy/
-   6. https://bright-gift.com/terms/
-   7. https://bright-gift.com/data-deletion/
-   8. https://bright-gift.com/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024/
-   9. https://bright-gift.com/blog/unique-graduation-gifts-creative-minds/
-   10. https://bright-gift.com/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners/
-
-3. Use "Request Indexing" for each URL above
-
-4. Monitor Coverage report for improvements
-
-5. Check Performance report for traffic increases
+3. Do not request indexing for:
+   - non-slash blog URLs
+   - `.md` URLs
+   - blog pagination URLs
+   - off-season seasonal archive pages

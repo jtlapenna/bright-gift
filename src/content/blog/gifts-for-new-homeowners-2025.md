@@ -154,7 +154,7 @@ A stylish wine accessory is perfect for housewarming celebrations and dinner par
 
 *
 
-> 💡 **Looking for more gift ideas?** Check out our guide to [25 Thoughtful Housewarming Gifts for New Homeowners Under $75](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75) for even more thoughtful options!
+> 💡 **Looking for more gift ideas?** Check out our guide to [25 Thoughtful Housewarming Gifts for New Homeowners Under $75](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/) for even more thoughtful options!
 
 ## Related guides to keep exploring
 

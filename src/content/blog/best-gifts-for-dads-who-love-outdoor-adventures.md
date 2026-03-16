@@ -162,15 +162,15 @@ Water is crucial on long treks. A hydration pack keeps water at arm's reach, ens
 ## More Gift Inspiration
 
 Looking for other gift ideas? Check out our guides to:
-- [Gifts for New Homeowners](/blog/gifts-for-new-homeowners-2025) for housewarming presents
-- [Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget) for sustainable options
-- [Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50) for home office essentials
+- [Gifts for New Homeowners](/blog/gifts-for-new-homeowners-2025/) for housewarming presents
+- [Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget/) for sustainable options
+- [Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50/) for home office essentials
 
 ---
 
 ##
 
-> 💡 **Looking for more gift ideas?** Check out our guide to [Eco-Friendly Gifts for Outdoor Lovers](/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature) for even more thoughtful options!
+> 💡 **Looking for more gift ideas?** Check out our guide to [Eco-Friendly Gifts for Outdoor Lovers](/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/) for even more thoughtful options!
 
 Conclusion
 

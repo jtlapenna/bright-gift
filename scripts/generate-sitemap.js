@@ -3,6 +3,12 @@
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
+const {
+  SITE_ORIGIN,
+  canonicalBlogUrl,
+  getSitemapLastModified,
+  shouldIncludeBlogPostInSitemap
+} = require('./utilities/canonical-url-policy');
 
 // Function to get all blog posts (excluding drafts)
 function getBlogPosts() {
@@ -27,11 +33,15 @@ function getBlogPosts() {
         }
         
         const slug = file.replace('.md', '');
+
+        if (!shouldIncludeBlogPostInSitemap(slug)) {
+          continue;
+        }
         
         posts.push({
           slug,
           pubDate: data.date || new Date(),
-          lastModified: data.lastUpdated || data.date || data.pubDate || new Date(),
+          lastModified: getSitemapLastModified(data),
           title: data.title || slug
         });
       }
@@ -45,15 +55,9 @@ function getBlogPosts() {
     return dateB - dateA;
   });
 }
-
-function formatDate(value) {
-  return new Date(value).toISOString().split('T')[0];
-}
-
 // Function to generate sitemap XML
 function generateSitemap() {
   const blogPosts = getBlogPosts();
-  const currentDate = new Date().toISOString().split('T')[0];
   
   // Static pages (with trailing slashes)
   const staticPages = [
@@ -80,8 +84,7 @@ function generateSitemap() {
   for (const page of staticPages) {
     sitemap += `
   <url>
-    <loc>https://bright-gift.com${page.url}</loc>
-    <lastmod>${currentDate}</lastmod>
+    <loc>${SITE_ORIGIN}${page.url}</loc>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
   </url>`;
@@ -89,11 +92,14 @@ function generateSitemap() {
   
   // Add blog posts (with trailing slashes)
   for (const post of blogPosts) {
-    const lastModified = post.lastModified ? formatDate(post.lastModified) : currentDate;
     sitemap += `
   <url>
-    <loc>https://bright-gift.com/blog/${post.slug}/</loc>
-    <lastmod>${lastModified}</lastmod>
+    <loc>${canonicalBlogUrl(post.slug)}</loc>`;
+    if (post.lastModified) {
+      sitemap += `
+    <lastmod>${post.lastModified}</lastmod>`;
+    }
+    sitemap += `
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>`;

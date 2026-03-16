@@ -83,10 +83,10 @@ class BlogEnhancer {
 
 Looking for other gift ideas? Check out our guides to:
 
-* [Gifts for Plant Lovers](/blog/gifts-for-plant-lovers) for nature-inspired presents
-* [Top Gifts for Yoga Enthusiasts](/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners) for wellness-focused gifts
-* [Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50) for tech-savvy recipients
-* [Eco-Friendly Gifts for Outdoor Lovers](/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature) for sustainable options
+* [Gifts for Plant Lovers](/blog/gifts-for-plant-lovers/) for nature-inspired presents
+* [Top Gifts for Yoga Enthusiasts](/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners/) for wellness-focused gifts
+* [Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50/) for tech-savvy recipients
+* [Eco-Friendly Gifts for Outdoor Lovers](/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/) for sustainable options
 
 `;
       
@@ -190,7 +190,7 @@ Looking for other gift ideas? Check out our guides to:
       "image": frontmatter.image ? `https://bright-gift.com${frontmatter.image}` : undefined,
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": `https://bright-gift.com/blog/${frontmatter.slug}`
+        "@id": `https://bright-gift.com/blog/${frontmatter.slug}/`
       }
     };
   }

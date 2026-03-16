@@ -14,15 +14,28 @@ console.log('🔍 Running Complete SEO Validation...\n');
 class SEOValidator {
   constructor() {
     this.results = {
+      repoPolicy: { passed: false, errors: 0 },
       content: { passed: false, errors: 0 },
       templates: { passed: false, errors: 0 },
       overall: { passed: false, totalErrors: 0 }
     };
   }
 
+  validateRepoPolicy() {
+    console.log('1. Validating repo SEO policy...');
+    try {
+      execSync('node scripts/seo-validation/validate-repo-policy.js', { stdio: 'inherit' });
+      this.results.repoPolicy.passed = true;
+      console.log('✅ Repo SEO policy validation passed\n');
+    } catch (error) {
+      this.results.repoPolicy.passed = false;
+      console.log('❌ Repo SEO policy validation failed\n');
+    }
+  }
+
   // Run content validation
   validateContent() {
-    console.log('1. Validating content...');
+    console.log('2. Validating content...');
     try {
       execSync('node scripts/seo-validation/validate-content.js', { stdio: 'inherit' });
       this.results.content.passed = true;
@@ -35,7 +48,7 @@ class SEOValidator {
 
   // Run template validation
   validateTemplates() {
-    console.log('2. Validating templates...');
+    console.log('3. Validating templates...');
     try {
       execSync('node scripts/seo-validation/validate-templates.js', { stdio: 'inherit' });
       this.results.templates.passed = true;
@@ -48,38 +61,38 @@ class SEOValidator {
 
   // Check for critical SEO issues
   checkCriticalIssues() {
-    console.log('3. Checking for critical SEO issues...');
+    console.log('4. Checking for critical SEO issues...');
     
     const criticalIssues = [];
     
     // Check for imageJpg references (exclude commented code)
     try {
-      const result = execSync('grep -r "imageJpg" src/ | grep -v "//" | grep -v "REMOVED" || true', { encoding: 'utf8' });
+      const result = execSync('rg -n "imageJpg" src | rg -v "//|REMOVED" || true', { encoding: 'utf8' });
       if (result.trim()) {
         criticalIssues.push('ImageJpg references found in templates');
       }
     } catch (error) {
-      // grep returns non-zero exit code when no matches found
+      // rg returns non-zero exit code when no matches found
     }
     
     // Check for fake structured data
     try {
-      const result = execSync('grep -r "ratingValue.*4.8" src/ || true', { encoding: 'utf8' });
+      const result = execSync('rg -n "ratingValue.*4.8" src || true', { encoding: 'utf8' });
       if (result.trim()) {
         criticalIssues.push('Fake structured data ratings found');
       }
     } catch (error) {
-      // grep returns non-zero exit code when no matches found
+      // rg returns non-zero exit code when no matches found
     }
     
     // Check for JavaScript redirects (exclude OAuth pages)
     try {
-      const result = execSync('grep -r "window.location.replace" src/ | grep -v "oauth" | grep -v "callback" || true', { encoding: 'utf8' });
+      const result = execSync('rg -n "window.location.replace" src | rg -v "oauth|callback" || true', { encoding: 'utf8' });
       if (result.trim()) {
         criticalIssues.push('JavaScript redirects found');
       }
     } catch (error) {
-      // grep returns non-zero exit code when no matches found
+      // rg returns non-zero exit code when no matches found
     }
     
     if (criticalIssues.length > 0) {
@@ -99,14 +112,19 @@ class SEOValidator {
   generateReport() {
     console.log('📊 OVERALL SEO VALIDATION RESULTS\n');
     
+    const repoPolicyStatus = this.results.repoPolicy.passed ? '✅ PASSED' : '❌ FAILED';
     const contentStatus = this.results.content.passed ? '✅ PASSED' : '❌ FAILED';
     const templateStatus = this.results.templates.passed ? '✅ PASSED' : '❌ FAILED';
     
+    console.log(`Repo Policy Validation: ${repoPolicyStatus}`);
     console.log(`Content Validation: ${contentStatus}`);
     console.log(`Template Validation: ${templateStatus}`);
     
     // Check if all validations passed
-    this.results.overall.passed = this.results.content.passed && this.results.templates.passed;
+    this.results.overall.passed =
+      this.results.repoPolicy.passed &&
+      this.results.content.passed &&
+      this.results.templates.passed;
     
     if (this.results.overall.passed) {
       console.log('\n🎉 ALL SEO VALIDATIONS PASSED!');
@@ -122,6 +140,7 @@ class SEOValidator {
       results: this.results,
       summary: {
         overallPassed: this.results.overall.passed,
+        repoPolicyPassed: this.results.repoPolicy.passed,
         contentPassed: this.results.content.passed,
         templatePassed: this.results.templates.passed
       }
@@ -136,11 +155,16 @@ class SEOValidator {
 
   // Run all validations
   run() {
+    this.validateRepoPolicy();
     this.validateContent();
     this.validateTemplates();
     const criticalIssuesPassed = this.checkCriticalIssues();
     
-    this.results.overall.passed = this.results.content.passed && this.results.templates.passed && criticalIssuesPassed;
+    this.results.overall.passed =
+      this.results.repoPolicy.passed &&
+      this.results.content.passed &&
+      this.results.templates.passed &&
+      criticalIssuesPassed;
     
     this.generateReport();
     

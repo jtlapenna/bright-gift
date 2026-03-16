@@ -92,7 +92,7 @@ The best gifts for new grandparents combine sentimentality with practicality. Th
 
 This guide features 25 thoughtful gift ideas for new grandparents. From personalized keepsakes to practical items for their home, each gift recognizes the importance of this new role. These presents help new grandparents feel celebrated and prepared for the adventures ahead with their grandchild.
 
-For more gift ideas for family members, check out our guides on [gifts for moms](/blog/best-holiday-gifts-for-moms-2025), [gifts for dads](/blog/best-holiday-gifts-for-dads-2025), and [gifts for new parents](/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond).
+For more gift ideas for family members, check out our guides on [gifts for moms](/blog/best-holiday-gifts-for-moms-2025/), [gifts for dads](/blog/best-holiday-gifts-for-dads-2025/), and [gifts for new parents](/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond/).
 
 > 🎁 **Perfect Gift Idea:** Help new grandparents prepare for their role by sharing [SmartBaby Checklist](https://smartbabychecklist.com/)—a free AI tool that helps families build personalized baby registries. They can use it to understand what the new parents need and make more informed gift choices!
 

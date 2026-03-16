@@ -1,6 +1,10 @@
 {
-  "timestamp": "2026-03-10T16:06:35.404Z",
+  "timestamp": "2026-03-16T19:04:55.885Z",
   "results": {
+    "repoPolicy": {
+      "passed": true,
+      "errors": 0
+    },
     "content": {
       "passed": true,
       "errors": 0
@@ -16,6 +20,7 @@
   },
   "summary": {
     "overallPassed": true,
+    "repoPolicyPassed": true,
     "contentPassed": true,
     "templatePassed": true
   }

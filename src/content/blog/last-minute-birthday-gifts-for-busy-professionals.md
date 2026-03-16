@@ -215,19 +215,19 @@ Keep their loved ones close during long work hours with a digital photo frame th
 ## More Gift Inspiration
 
 Looking for other gift ideas for professionals? Check out our guides to:
-- [Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50) for home office essentials
-- [Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget) for sustainable professional gifts
-- [Gifts for New Homeowners](/blog/gifts-for-new-homeowners-2025) for professionals who recently moved
+- [Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50/) for home office essentials
+- [Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget/) for sustainable professional gifts
+- [Gifts for New Homeowners](/blog/gifts-for-new-homeowners-2025/) for professionals who recently moved
 
 ---
 
 ##
 
-> 💡 **Looking for more gift ideas?** Check out our guide to [birthday gifts for LGBTQ+ youth](/blog/special-birthday-gifts-for-lgbtq-youth) for even more thoughtful options!
+> 💡 **Looking for more gift ideas?** Check out our guide to [birthday gifts for LGBTQ+ youth](/blog/special-birthday-gifts-for-lgbtq-youth/) for even more thoughtful options!
 
 
 
-> 💡 **Looking for more gift ideas?** Check out our guide to [fun birthday gifts for kids](/blog/fun-gifts-for-kids-birthday-parties) for even more thoughtful options!
+> 💡 **Looking for more gift ideas?** Check out our guide to [fun birthday gifts for kids](/blog/fun-gifts-for-kids-birthday-parties/) for even more thoughtful options!
 
 Conclusion
 

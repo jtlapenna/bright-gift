@@ -353,10 +353,10 @@ High-end items like lift chair recliners provide major comfort and safety benefi
 
 Looking for other gift ideas? Check out our guides to:
 
-* [Gifts for Plant Lovers](/blog/gifts-for-plant-lovers) for nature-inspired presents
-* [Top Gifts for Yoga Enthusiasts](/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners) for wellness-focused gifts
-* [Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50) for tech-savvy recipients
-* [Eco-Friendly Gifts for Outdoor Lovers](/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature) for sustainable options
+* [Gifts for Plant Lovers](/blog/gifts-for-plant-lovers/) for nature-inspired presents
+* [Top Gifts for Yoga Enthusiasts](/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners/) for wellness-focused gifts
+* [Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50/) for tech-savvy recipients
+* [Eco-Friendly Gifts for Outdoor Lovers](/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/) for sustainable options
 
 ## Frequently Asked Questions
 
@@ -390,4 +390,4 @@ Consider accessibility, space, and personal interests when selecting gifts. Reme
 
 Finding the perfect 80th birthday gift doesn't have to be overwhelming. Use our AI gift finder to get personalized recommendations based on your loved one's interests, hobbies, and preferences. We'll help you discover thoughtful gifts that show how much you care.
 
-For more gift ideas, explore our guides on [holiday gifts for moms](/blog/best-holiday-gifts-for-moms-2025), [Christmas gift ideas](/blog/christmas-gift-ideas-2025), and [gifts for dads](/blog/best-holiday-gifts-for-dads-2025). You can also learn more about [choosing the perfect gift](/blog/how-to-choose-the-perfect-gift-complete-guide) with our comprehensive guide.
+For more gift ideas, explore our guides on [holiday gifts for moms](/blog/best-holiday-gifts-for-moms-2025/), [Christmas gift ideas](/blog/christmas-gift-ideas-2025/), and [gifts for dads](/blog/best-holiday-gifts-for-dads-2025/). You can also learn more about [choosing the perfect gift](/blog/how-to-choose-the-perfect-gift-complete-guide/) with our comprehensive guide.

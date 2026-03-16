@@ -1,19 +1,21 @@
-# SEO Validation Checklist (Local + Post-Deploy)
+# SEO Validation Checklist
 
-This checklist is designed to prevent regressions for:
-- Redirect chains / unexpected 308s
-- Non-canonical internal links (missing trailing slashes)
-- Sitemap drift (missing URLs, wrong canonical URLs)
+This checklist is the current source of truth for local validation and post-deploy spot checks.
 
-## Local (before deploy)
+## Local
 
-### 1) Verify redirects file coverage
+### 1) Run the guarded SEO validation
 
 ```bash
-npm run verify:redirects
+npm run seo:validate
 ```
 
-### 2) Generate sitemap
+This now includes:
+- content validation
+- template validation
+- repo URL-policy validation
+
+### 2) Generate the sitemap
 
 ```bash
 npm run generate:sitemap
@@ -25,79 +27,38 @@ npm run generate:sitemap
 npm run build
 ```
 
-### 4) Redirect test against local preview (optional but ideal)
+## Post-deploy
 
-In one terminal:
-
-```bash
-npm run preview -- --port 4321
-```
-
-In another terminal:
-
-```bash
-REDIRECT_TEST_BASE_URL=http://localhost:4321 npm run test:redirects
-```
-
-Notes:
-- `scripts/test-all-redirects.js` defaults to production unless `REDIRECT_TEST_BASE_URL` is set.
-- Local preview may not include Cloudflare-managed redirects (HTTP→HTTPS), which is expected.
-
-## Post-deploy (production)
-
-### 1) Spot-check high-signal URLs (status + Location)
+### 1) Spot-check canonical behavior
 
 ```bash
 curl -I https://bright-gift.com/blog
-curl -I https://bright-gift.com/contact
-curl -I https://bright-gift.com/privacy
-curl -I https://bright-gift.com/terms
-curl -I https://bright-gift.com/data-deletion
-curl -I https://bright-gift.com/category/
-curl -I https://bright-gift.com/category/data-driven
-curl -I https://bright-gift.com/category/educational
-```
-
-Expected pattern:
-- Non-slash URLs should be a **single 301** to the trailing-slash canonical URL (or directly to the canonical category).
-- Avoid 308s for SEO-critical redirects.
-
-### 2) Run full redirect diagnostic against production
-
-```bash
-npm run test:redirects
-```
-
-If you want to force the target explicitly:
-
-```bash
-REDIRECT_TEST_BASE_URL=https://bright-gift.com npm run test:redirects
-```
-
-### 3) Confirm sitemap and canonical alignment
-
-```bash
-curl -s https://bright-gift.com/sitemap.xml | head -n 20
-curl -s https://bright-gift.com/blog/fun-gifts-for-kids-birthday-parties/ | grep -i 'rel=\"canonical\"' | head -n 1
+curl -I https://bright-gift.com/blog/
+curl -s https://bright-gift.com/blog/gifts-under-25-for-coworkers/ | grep -i 'rel="canonical"' | head -n 1
+curl -s https://bright-gift.com/sitemap.xml | head -n 30
 ```
 
 Expected:
-- Sitemap URLs are canonical (https + trailing slash where applicable)
-- Canonical tag matches the sitemap URL exactly
+- `/blog` redirects directly to `/blog/`
+- the canonical tag matches the trailing-slash URL exactly
+- sitemap entries are canonical URLs only
+- sitemap does not include blog pagination URLs
 
-## Google Search Console (after deploy)
+### 2) Inspect only canonical URLs in GSC
 
-### 1) URL Inspection (sample)
+Use URL Inspection on:
+- `https://bright-gift.com/blog/gifts-under-25-for-coworkers/`
+- `https://bright-gift.com/blog/little-luxuries-under-25-mini-splurges-major-wow/`
+- `https://bright-gift.com/blog/clean-girl-2-0-minimalist-gifts-with-personality/`
 
-- Inspect a few URLs from each bucket:
-  - Redirect-related (e.g. `/blog`, `/contact`, `/category/gift-guides`)
-  - Crawled-not-indexed (a few representative posts)
-- Confirm “Google-selected canonical” matches the trailing-slash URL.
+Do not inspect:
+- non-slash blog URLs
+- `.md` URLs
+- paginated archive URLs
+- off-season seasonal archive pages
 
-### 2) Re-run validations
+### 3) If GSC reports a redirect issue
 
-In GSC (Page indexing):
-- **Redirect error** → Start new validation
-- **Page with redirect** → Start new validation
-- **Crawled – currently not indexed** → Start new validation (expect slower movement; not always purely technical)
-
+- Find the exact redirecting URL Google is reporting.
+- Search the repo and operator docs for that exact variant.
+- Remove the source before asking GSC to validate again.

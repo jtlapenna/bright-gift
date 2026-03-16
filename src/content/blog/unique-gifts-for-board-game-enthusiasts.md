@@ -215,23 +215,21 @@ Challenge their problem-solving skills with logic and puzzle games that require 
 ## More Gift Inspiration
 
 Looking for other gaming gift ideas? Check out our guides to:
-- [Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50) for video game enthusiasts
+- [Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50/) for video game enthusiasts
 -  for young gamers
-- [Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget) for sustainable options
+- [Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget/) for sustainable options
 
 ---
 
 ##
 
-> 💡 **Looking for more gift ideas?** Check out our guide to [Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50) for even more thoughtful options!
+> 💡 **Looking for more gift ideas?** Check out our guide to [Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50/) for even more thoughtful options!
 
 
 
-> 💡 **Looking for more gift ideas?** Check out our guide to [unique Christmas gifts for gamers](/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024) for even more thoughtful options!
 
 
-
-> 💡 **Looking for more gift ideas?** Check out our guide to [D&D gifts](/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience) for even more thoughtful options!
+> 💡 **Looking for more gift ideas?** Check out our guide to [D&D gifts](/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/) for even more thoughtful options!
 
 Conclusion
 

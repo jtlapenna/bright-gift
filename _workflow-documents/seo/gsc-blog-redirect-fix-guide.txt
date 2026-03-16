@@ -1,109 +1,32 @@
-Google Search Console Blog Redirect Fix Guide
-============================================
+Google Search Console Blog Redirect Guide
+=========================================
 
-ISSUE: Main blog page (/blog) showing "Page with redirect" validation failure
-STATUS: 33 pending URLs, 1 failed URL (https://bright-gift.com/blog)
+Issue:
+- GSC may report `Page with redirect` for `https://bright-gift.com/blog`.
 
-ROOT CAUSE ANALYSIS:
-===================
-1. Astro configuration has trailingSlash: 'always' which causes /blog to redirect to /blog/
-2. Google sees this as a "Page with redirect" instead of a canonical page
-3. The redirect is a 308 (Permanent Redirect) which is correct for SEO, but GSC validation is failing
+What this means:
+- The live canonical blog index is `https://bright-gift.com/blog/`.
+- The non-slash variant is a redirecting variant, not a URL to request indexing for.
 
-TECHNICAL FIXES APPLIED:
-========================
-1. ✅ Changed Astro trailingSlash from 'always' to 'ignore'
-2. ✅ Created /blog page to handle non-trailing slash version
-3. ✅ Ensured proper canonical URL handling
-4. ✅ Deployed changes to production
+Correct response:
 
-CURRENT STATUS:
-==============
-- /blog returns 308 redirect to /blog/ (this is correct SEO behavior)
-- /blog/ returns 200 with proper content (this is correct)
-- GSC validation is failing because it sees the redirect
+1. Inspect the canonical URL only:
+   - `https://bright-gift.com/blog/`
 
-GSC ACTION PLAN:
-===============
+2. Verify the redirect behavior separately:
+   - `curl -I https://bright-gift.com/blog`
+   - Confirm it resolves directly to `https://bright-gift.com/blog/`
 
-IMMEDIATE ACTIONS (Do these NOW):
+3. Trace the source of the redirecting variant:
+   - Search active code, docs, scripts, and operator lists for `/blog` without the trailing slash.
+   - Remove those references before asking Google to validate again.
 
-1. CANCEL CURRENT VALIDATION:
-   - Go to: https://search.google.com/search-console
-   - Navigate to: Page indexing > Page with redirect > Validation details
-   - Click "Cancel validation" for the current failed validation
+4. Do not request indexing for:
+   - `https://bright-gift.com/blog`
+   - any non-slash blog-post URL
+   - any `.md` blog URL
+   - any paginated archive URL
 
-2. START NEW VALIDATION:
-   - Click "START NEW VALIDATION"
-   - Test this specific URL: https://bright-gift.com/blog
-   - Click "Request Indexing"
-
-3. EXPLAIN THE REDIRECT TO GOOGLE:
-   - In the validation request, add this note:
-     "This is a proper SEO redirect from /blog to /blog/ for canonical URL handling.
-      The redirect is intentional and follows SEO best practices. The canonical
-      version is /blog/ which serves the main blog content."
-
-4. SUBMIT UPDATED SITEMAP:
-   - Go to: Sitemaps > Add a new sitemap
-   - Submit: https://bright-gift.com/sitemap.xml
-   - Click "Submit"
-
-5. USE URL INSPECTION TOOL:
-   - Go to: URL Inspection tool
-   - Test: https://bright-gift.com/blog
-   - Test: https://bright-gift.com/blog/
-   - Click "Request Indexing" for both
-
-ALTERNATIVE SOLUTION (If validation continues to fail):
-======================================================
-
-If Google continues to fail the validation, we can implement this alternative:
-
-1. Remove the redirect entirely
-2. Make /blog serve the same content as /blog/ without redirect
-3. Use canonical tags to indicate /blog/ is the preferred version
-
-This would eliminate the redirect but maintain SEO benefits.
-
-EXPECTED TIMELINE:
-=================
-- Immediate: Validation requests submitted
-- 24-48 hours: Google re-crawls and re-evaluates
-- 3-7 days: Validation should succeed
-
-TECHNICAL VERIFICATION:
-======================
-Run these commands to verify the current status:
-
-curl -I https://bright-gift.com/blog
-# Should return: 308 redirect to /blog/
-
-curl -I https://bright-gift.com/blog/
-# Should return: 200 OK
-
-curl -s https://bright-gift.com/blog/ | grep -i "canonical"
-# Should return: <link rel="canonical" href="https://bright-gift.com/blog/">
-
-WHY THIS IS CORRECT SEO BEHAVIOR:
-================================
-1. The redirect from /blog to /blog/ is proper SEO practice
-2. It prevents duplicate content issues
-3. It consolidates link equity to the canonical URL (/blog/)
-4. The 308 status code preserves the original request method
-5. Google should understand this is intentional, not an error
-
-MONITORING:
-===========
-- Check GSC validation status daily
-- Look for "Success" status within 3-7 days
-- If still failing after 7 days, consider the alternative solution
-- Monitor Ahrefs for any impact on SEO scores
-
-CONTACT GOOGLE SUPPORT:
-======================
-If the issue persists after following this guide:
-1. Go to GSC Help Center
-2. Submit a feedback report
-3. Explain that the redirect is intentional SEO practice
-4. Reference this guide as documentation
+Success condition:
+- Active sources emit only `https://bright-gift.com/blog/`.
+- GSC inspections are run against the canonical URL only.

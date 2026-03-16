@@ -190,9 +190,9 @@ A monthly book subscription service that delivers curated books based on their p
 
 > 💡 **
 
-> 💡 **Looking for more gift ideas?** Check out our guide to [books for different reading levels](/blog/best-books-for-different-reading-levels) for even more thoughtful options!
+> 💡 **Looking for more gift ideas?** Check out our guide to [books for different reading levels](/blog/best-books-for-different-reading-levels/) for even more thoughtful options!
 
-Looking for more gift ideas?** Check out our guide to [holiday book gifts](/blog/25-books-to-gift-this-holiday-season) for even more thoughtful options!
+Looking for more gift ideas?** Check out our guide to [holiday book gifts](/blog/25-books-to-gift-this-holiday-season/) for even more thoughtful options!
 
 When shopping for books, consider Bookshop.org as an alternative to Amazon. Bookshop.org supports independent bookstores and provides the same convenience while helping local bookshops thrive. Plus, they offer competitive prices and fast shipping.
 

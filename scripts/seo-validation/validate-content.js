@@ -8,6 +8,8 @@
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
+const matter = require('gray-matter');
+const { isCanonicalBlogUrl } = require('../utilities/canonical-url-policy');
 
 console.log('🔍 Validating Content SEO Standards...\n');
 
@@ -49,6 +51,7 @@ class ContentValidator {
   validateBlogPost(filePath) {
     this.stats.totalFiles++;
     const content = fs.readFileSync(filePath, 'utf8');
+    const parsed = matter(content);
     const lines = content.split('\n');
 
     let hasErrors = false;
@@ -64,27 +67,21 @@ class ContentValidator {
     });
 
     // Check canonical URL format
-    const canonicalMatch = content.match(/^canonical:\s*(.+)$/m);
-    if (canonicalMatch) {
-      const canonical = canonicalMatch[1].trim();
-      // Handle YAML multi-line syntax (>-) and quotes
-      const cleanCanonical = canonical.replace(/^>-?\s*/, '').replace(/^['"]|['"]$/g, '').trim();
-
-      // Skip if canonical is empty or just YAML syntax
-      if (cleanCanonical && cleanCanonical !== '>-') {
-        // Purpose: allow trailing-slash canonicals (site-wide canonicalization uses "/").
-        const isValidCanonical =
-          cleanCanonical.startsWith('https://bright-gift.com/blog/') &&
-          !/\s/.test(cleanCanonical) &&
-          !cleanCanonical.includes('?') &&
-          !cleanCanonical.includes('#');
-
-        if (!isValidCanonical) {
-          this.addError(filePath, content.indexOf(canonicalMatch[0]) + 1,
-            `Malformed canonical URL: ${cleanCanonical}`,
-            'Format: https://bright-gift.com/blog/post-slug/ (trailing slash ok)');
-          hasErrors = true;
-        }
+    const canonicalLine = lines.findIndex((line) => line.startsWith('canonical:')) + 1;
+    const canonical = typeof parsed.data?.canonical === 'string' ? parsed.data.canonical.trim() : '';
+    if (canonical && !isCanonicalBlogUrl(canonical)) {
+      this.addError(filePath, canonicalLine || 1,
+        `Malformed canonical URL: ${canonical}`,
+        'Format: https://bright-gift.com/blog/post-slug/');
+      hasErrors = true;
+    }
+    if (!canonical) {
+      const canonicalMatch = content.match(/^canonical:\s*(.+)$/m);
+      if (canonicalMatch) {
+        this.addError(filePath, canonicalLine || 1,
+          'Canonical URL could not be parsed from frontmatter',
+          'Use a plain canonical URL string with the trailing-slash blog URL');
+        hasErrors = true;
       }
     }
 

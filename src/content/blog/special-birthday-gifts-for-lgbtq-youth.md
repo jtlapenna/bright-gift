@@ -223,17 +223,17 @@ Books, guides, or resources that help them connect with LGBTQ+ communities, supp
 Looking for other inclusive gift ideas? Check out our guides to:
 -  for friends and allies
 -  for more teen gift ideas
-- [Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget) for sustainable options
+- [Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget/) for sustainable options
 
 ---
 
 ##
 
-> 💡 **Looking for more gift ideas?** Check out our guide to [last minute birthday gifts](/blog/last-minute-birthday-gifts-for-busy-professionals) for even more thoughtful options!
+> 💡 **Looking for more gift ideas?** Check out our guide to [last minute birthday gifts](/blog/last-minute-birthday-gifts-for-busy-professionals/) for even more thoughtful options!
 
 
 
-> 💡 **Looking for more gift ideas?** Check out our guide to [fun birthday gifts for kids](/blog/fun-gifts-for-kids-birthday-parties) for even more thoughtful options!
+> 💡 **Looking for more gift ideas?** Check out our guide to [fun birthday gifts for kids](/blog/fun-gifts-for-kids-birthday-parties/) for even more thoughtful options!
 
 Conclusion
 

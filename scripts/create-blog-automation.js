@@ -341,7 +341,7 @@ See \`${this.blogSlug}-image-prompts.json\` for detailed prompts following the B
     const prompt = `Create social media posts for this blog post:
 
 TITLE: "${this.currentBlog.title}"
-URL: https://bright-gift.com/blog/${this.blogSlug}
+URL: https://bright-gift.com/blog/${this.blogSlug}/
 TYPE: ${this.blogType}
 
 Create posts for:
@@ -373,7 +373,7 @@ Format the response as a markdown file with clear sections for each platform.`;
   formatSocialPosts(content) {
     return `# ${this.currentBlog.title} - Social Media Posts
 
-**Blog URL:** https://bright-gift.com/blog/${this.blogSlug}  
+**Blog URL:** https://bright-gift.com/blog/${this.blogSlug}/  
 **Image Path:** \`public/images/blog/${this.blogSlug}/\`
 
 ---

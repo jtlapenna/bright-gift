@@ -186,10 +186,10 @@ Add personality to their home with decorative wall art featuring pet designs, in
 ## More Gift Inspiration
 
 Looking for other gift ideas? Check out our guides to:
-- [Gifts for Plant Lovers](/blog/gifts-for-plant-lovers) for nature enthusiasts
-- [Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50) for home office essentials
-- [Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget) for sustainable options
-- [Gifts for New Homeowners](/blog/gifts-for-new-homeowners-2025) for housewarming presents
+- [Gifts for Plant Lovers](/blog/gifts-for-plant-lovers/) for nature enthusiasts
+- [Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50/) for home office essentials
+- [Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget/) for sustainable options
+- [Gifts for New Homeowners](/blog/gifts-for-new-homeowners-2025/) for housewarming presents
 
 ---
 

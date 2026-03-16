@@ -176,24 +176,22 @@ Transform their gaming space with decorative items featuring D&D artwork, maps, 
 ## More Gift Inspiration
 
 Looking for other gift ideas? Check out our guides to:
-- [Gifts for Gamers](/blog/gifts-for-gamers-under-50) for video game enthusiasts
-- [Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50) for home office essentials
-- [Gifts for New Homeowners](/blog/gifts-for-new-homeowners-2025) for housewarming presents
-- [Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget) for sustainable options
+- [Gifts for Gamers](/blog/gifts-for-gamers-under-50/) for video game enthusiasts
+- [Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50/) for home office essentials
+- [Gifts for New Homeowners](/blog/gifts-for-new-homeowners-2025/) for housewarming presents
+- [Eco-Friendly Gift Ideas](/blog/eco-friendly-gift-ideas-for-every-budget/) for sustainable options
 
 ---
 
 ##
 
-> 💡 **Looking for more gift ideas?** Check out our guide to [Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50) for even more thoughtful options!
+> 💡 **Looking for more gift ideas?** Check out our guide to [Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50/) for even more thoughtful options!
 
 
 
-> 💡 **Looking for more gift ideas?** Check out our guide to [unique Christmas gifts for gamers](/blog/unique-christmas-gifts-for-gamers-who-have-everything-2024) for even more thoughtful options!
 
 
-
-> 💡 **Looking for more gift ideas?** Check out our guide to [board game gifts](/blog/unique-gifts-for-board-game-enthusiasts) for even more thoughtful options!
+> 💡 **Looking for more gift ideas?** Check out our guide to [board game gifts](/blog/unique-gifts-for-board-game-enthusiasts/) for even more thoughtful options!
 
 Conclusion
 

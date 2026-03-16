@@ -354,10 +354,10 @@ Use these statistics to make more informed gift choices:
 
 Looking for other gift ideas? Check out our guides to:
 
-* [Gifts for Plant Lovers](/blog/gifts-for-plant-lovers) for nature-inspired presents
-* [Top Gifts for Yoga Enthusiasts](/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners) for wellness-focused gifts
-* [Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50) for tech-savvy recipients
-* [Eco-Friendly Gifts for Outdoor Lovers](/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature) for sustainable options
+* [Gifts for Plant Lovers](/blog/gifts-for-plant-lovers/) for nature-inspired presents
+* [Top Gifts for Yoga Enthusiasts](/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners/) for wellness-focused gifts
+* [Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50/) for tech-savvy recipients
+* [Eco-Friendly Gifts for Outdoor Lovers](/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/) for sustainable options
 
 
 ## Conclusion: What the Data Really Tells Us

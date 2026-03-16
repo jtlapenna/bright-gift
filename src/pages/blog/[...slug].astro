@@ -38,10 +38,22 @@ const fallbackDescription = 'No description available.';
 // Modern, robust date fallback: prefer frontmatter date, then pubDate, then today
 const fallbackDate = new Date().toISOString().split('T')[0];
 const fallbackKeywords = ['gift ideas'];
+const UNTRUSTED_BULK_LAST_UPDATED = new Set(['2026-03-10']);
 
 // Helper to log warnings in dev
 function warn(msg) {
   if (import.meta.env.DEV) console.warn(msg);
+}
+
+function sanitizeLastUpdated(dateInput) {
+  if (!dateInput) return undefined;
+
+  const normalized =
+    typeof dateInput === 'string'
+      ? dateInput.split('T')[0]
+      : dateInput.toISOString().split('T')[0];
+
+  return UNTRUSTED_BULK_LAST_UPDATED.has(normalized) ? undefined : normalized;
 }
 
 // Validate required fields
@@ -63,7 +75,7 @@ const ogImage = post.data.ogImage || image;
 const socialImage = post.data.socialImage || ogImage;
 const keywords = post.data.keywords || fallbackKeywords;
 const date = post.data.date || post.data.pubDate || fallbackDate;
-const lastUpdated = post.data.lastUpdated;
+const lastUpdated = sanitizeLastUpdated(post.data.lastUpdated);
 const normalizedType = normalizeCategory(type);
 const isGiftGuide = normalizedType === 'gift-guide';
 

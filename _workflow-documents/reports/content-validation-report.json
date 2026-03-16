@@ -1,27 +1,13 @@
 {
-  "timestamp": "2026-03-10T16:06:35.136Z",
+  "timestamp": "2026-03-16T19:04:55.726Z",
   "summary": {
     "totalFiles": 55,
     "filesWithErrors": 0,
     "totalErrors": 0,
-    "totalWarnings": 5
+    "totalWarnings": 6
   },
   "errors": [],
   "warnings": [
-    {
-      "file": "src/content/blog/little-luxuries-under-25-mini-splurges-major-wow.md",
-      "line": 66,
-      "message": "Description length 170 characters (should be 120-160)",
-      "fix": "Optimize description length for SEO",
-      "severity": "warning"
-    },
-    {
-      "file": "src/content/blog/gifts-for-remote-workers-under-50.md",
-      "line": 5,
-      "message": "Title length 64 characters (should be 10-60)",
-      "fix": "Optimize title length for SEO",
-      "severity": "warning"
-    },
     {
       "file": "src/content/blog/gifts-for-remote-workers-and-wfh-professionals.md",
       "line": 5,
@@ -33,6 +19,27 @@
       "file": "src/content/blog/gifts-for-new-grandparents.md",
       "line": 5,
       "message": "Title length 70 characters (should be 10-60)",
+      "fix": "Optimize title length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/eco-friendly-gift-ideas-for-every-budget.md",
+      "line": 5,
+      "message": "Title length 62 characters (should be 10-60)",
+      "fix": "Optimize title length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/christmas-gift-ideas-2025.md",
+      "line": 5,
+      "message": "Title length 63 characters (should be 10-60)",
+      "fix": "Optimize title length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/best-holiday-gifts-for-moms-2025.md",
+      "line": 5,
+      "message": "Title length 63 characters (should be 10-60)",
       "fix": "Optimize title length for SEO",
       "severity": "warning"
     },
