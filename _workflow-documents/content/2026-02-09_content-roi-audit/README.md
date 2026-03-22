@@ -97,6 +97,10 @@ Use `content-roi-audit.md` tables as the source of truth.
 
 **Phase 1 completed (2026-02-19):** All 5 posts above were refreshed — dates set to 2026-02-19, and existing freshness/FAQ/internal links/Related guides verified. Inbound links to `unique-graduation-gifts-creative-minds` from gifts-under-25, black-owned-businesses, and eco-friendly were already in place. SEO validation passed.
 
+**Week of 2026-03-16 refresh batch completed:** Refreshed `fun-gifts-for-kids-birthday-parties`, `25-unique-anniversary-gift-ideas-under-50`, `gifts-for-remote-workers-under-50`, `how-ai-is-revolutionizing-gift-shopping-complete-guide`, and `top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners`. Dates set to 2026-03-16, on-page FAQs aligned with schema, stale-year copy removed from the remote-work and AI evergreen posts, and internal links/Related guides tightened. SEO validation and build passed.
+
+**Week of 2026-03-22 refresh batch completed:** Refreshed `25-thoughtful-housewarming-gifts-for-new-homeowners-under-75`, `be-rooted-planners-stationery`, `valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple`, `best-home-gifts-on-amazon-2024`, and `chic-wedding-gifts-for-the-stylish-couple`. Dates set to 2026-03-22, FAQ/schema alignment corrected across the batch, off-topic or low-signal sections removed, internal linking and related-guide clusters tightened, and the Amazon home-gifts page was corrected so its list and pricing promises matched the actual picks. SEO validation and build passed.
+
 ### Phase 2 (next 30–60 days): strengthen 3 clusters
 Recommended clusters to focus first (based on existing content + indexing focus):
 - **Remote work / productivity**
@@ -136,4 +140,3 @@ On-site (optional):
 ## Files in this folder
 - `content-roi-audit.json`: full dataset (per-post metrics + ROI score)
 - `content-roi-audit.md`: tables + generated plan outline
-
