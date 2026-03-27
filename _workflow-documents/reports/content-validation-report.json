@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-03-22T14:30:37.174Z",
+  "timestamp": "2026-03-27T14:43:23.580Z",
   "summary": {
     "totalFiles": 55,
     "filesWithErrors": 0,
     "totalErrors": 0,
-    "totalWarnings": 6
+    "totalWarnings": 5
   },
   "errors": [],
   "warnings": [
@@ -19,13 +19,6 @@
       "file": "src/content/blog/gifts-for-new-grandparents.md",
       "line": 5,
       "message": "Title length 70 characters (should be 10-60)",
-      "fix": "Optimize title length for SEO",
-      "severity": "warning"
-    },
-    {
-      "file": "src/content/blog/eco-friendly-gift-ideas-for-every-budget.md",
-      "line": 5,
-      "message": "Title length 62 characters (should be 10-60)",
       "fix": "Optimize title length for SEO",
       "severity": "warning"
     },
