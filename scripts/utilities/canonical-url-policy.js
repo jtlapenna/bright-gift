@@ -1,15 +1,10 @@
 #!/usr/bin/env node
 
 const SITE_ORIGIN = 'https://bright-gift.com';
+const seasonalSeoExclusions = require('../../src/data/seasonal-seo-exclusions.json');
 
 // Off-season holiday pages stay live but should not be pushed as fresh crawl targets.
-const SEASONAL_SITEMAP_EXCLUSIONS = new Set([
-  'best-2025-holiday-gifts-ai-tech-remote-work',
-  'best-holiday-gifts-for-dads-2025',
-  'best-holiday-gifts-for-moms-2025',
-  'christmas-gift-ideas-2025',
-  'unique-christmas-gifts-for-gamers-who-have-everything-2024'
-]);
+const SEASONAL_SITEMAP_EXCLUSIONS = new Set(seasonalSeoExclusions);
 
 // Ignore the known bulk-refresh batch that created false freshness signals.
 const UNTRUSTED_BULK_LAST_UPDATED = new Set(['2026-03-10']);

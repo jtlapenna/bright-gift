@@ -22,6 +22,7 @@ const blog = defineCollection({
     // SEO and meta fields
     metaTitle: z.string().optional(),
     metaDescription: z.string().optional(),
+    faqSchema: z.any().optional(),
     keywords: z.union([z.array(z.string()), z.string(), z.null()]).optional().transform((val) => {
       if (val === null) return undefined;
       if (typeof val === 'string') {

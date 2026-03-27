@@ -2,8 +2,11 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import { processAmazonLinks } from '../../utils/processAmazonLinks.js';
+import seasonalSeoExclusions from '../../data/seasonal-seo-exclusions.json';
 
 export const prerender = true;
+
+const SEASONAL_SITEMAP_EXCLUSIONS = new Set(seasonalSeoExclusions);
 
 function normalizeCategory(category) {
   if (category === 'gift-guides') return 'gift-guide';
@@ -193,6 +196,7 @@ function tagTokens(tags: string[]): Set<string> {
 const currentTagTokens = tagTokens(currentTags);
 const relatedPosts = allBlogPosts
   .filter(p => p.id !== post.id)
+  .filter(p => !SEASONAL_SITEMAP_EXCLUSIONS.has(p.slug))
   .map(p => {
     const postTags = p.data.tags || [];
     const postCategory = normalizeCategory(p.data.category);
