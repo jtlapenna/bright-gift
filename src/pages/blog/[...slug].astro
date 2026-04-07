@@ -42,6 +42,7 @@ const fallbackDescription = 'No description available.';
 const fallbackDate = new Date().toISOString().split('T')[0];
 const fallbackKeywords = ['gift ideas'];
 const UNTRUSTED_BULK_LAST_UPDATED = new Set(['2026-03-10']);
+const YEAR_SIGNAL_RE = /20\d{2}/;
 
 // Helper to log warnings in dev
 function warn(msg) {
@@ -57,6 +58,14 @@ function sanitizeLastUpdated(dateInput) {
       : dateInput.toISOString().split('T')[0];
 
   return UNTRUSTED_BULK_LAST_UPDATED.has(normalized) ? undefined : normalized;
+}
+
+function hasYearIntentSignal(postLike) {
+  return YEAR_SIGNAL_RE.test(postLike.slug || '') || YEAR_SIGNAL_RE.test(postLike.data?.title || '');
+}
+
+function isStaleYearIntentPost(postLike) {
+  return hasYearIntentSignal(postLike) && !sanitizeLastUpdated(postLike.data?.lastUpdated);
 }
 
 // Validate required fields
@@ -184,19 +193,41 @@ const currentCategory = normalizeCategory(post.data.category);
 
 // Purpose: make tag matching resilient to phrase-style tags (e.g., "remote work gifts")
 // so "Related posts" is less brittle and improves internal-link discovery.
-const STOP_TOKENS = new Set(['a','an','and','are','as','at','be','best','by','for','from','gift','gifts','guide','guides','ideas','in','is','it','of','on','or','the','to','under','with','you','your']);
-function tagTokens(tags: string[]): Set<string> {
-  const tokens = (tags || [])
-    .join(' ')
+const STOP_TOKENS = new Set([
+  'a','an','and','are','as','at','be','best','by','for','from','gift','gifts',
+  'guide','guides','idea','ideas','in','is','it','of','on','or','perfect',
+  'special','the','thoughtful','to','top','under','unique','with','you','your',
+  'accessory','birthday','budget','day','enthusiast','holiday','lover'
+]);
+
+function normalizeToken(token: string): string {
+  if (token.endsWith('ies') && token.length > 4) {
+    return `${token.slice(0, -3)}y`;
+  }
+
+  if (token.endsWith('s') && token.length > 4 && !token.endsWith('ss')) {
+    return token.slice(0, -1);
+  }
+
+  return token;
+}
+
+function textTokens(value: string | string[]): Set<string> {
+  const source = Array.isArray(value) ? value.join(' ') : value || '';
+  const tokens = source
     .toLowerCase()
     .split(/[^a-z0-9]+/g)
-    .filter(t => t && t.length >= 3 && !STOP_TOKENS.has(t));
+    .map(normalizeToken)
+    .filter(t => t && t.length >= 3 && !STOP_TOKENS.has(t) && Number.isNaN(Number(t)));
+
   return new Set(tokens);
 }
-const currentTagTokens = tagTokens(currentTags);
+const currentTagTokens = textTokens(currentTags);
+const currentTitleTokens = textTokens(post.data.title || '');
 const relatedPosts = allBlogPosts
   .filter(p => p.id !== post.id)
   .filter(p => !SEASONAL_SITEMAP_EXCLUSIONS.has(p.slug))
+  .filter(p => !isStaleYearIntentPost(p))
   .map(p => {
     const postTags = p.data.tags || [];
     const postCategory = normalizeCategory(p.data.category);
@@ -205,7 +236,7 @@ const relatedPosts = allBlogPosts
     let score = 0;
     
     // Purpose: tag-token overlap (higher weight) for better clustering
-    const postTagTokens = tagTokens(postTags);
+    const postTagTokens = textTokens(postTags);
     const tagOverlap = [...postTagTokens].filter(t => currentTagTokens.has(t)).length;
     score += tagOverlap * 3;
     
@@ -214,17 +245,14 @@ const relatedPosts = allBlogPosts
       score += 2;
     }
     
-    // Title keyword overlap (lower weight)
-    const currentTitleWords = post.data.title.toLowerCase().split(/\s+/);
-    const postTitleWords = p.data.title.toLowerCase().split(/\s+/);
-    const titleOverlap = currentTitleWords.filter(word => 
-      word.length > 3 && postTitleWords.includes(word)
-    ).length;
+    // Title keyword overlap (lower weight), filtered to non-generic tokens
+    const postTitleTokens = textTokens(p.data.title || '');
+    const titleOverlap = [...postTitleTokens].filter(token => currentTitleTokens.has(token)).length;
     score += titleOverlap;
     
-    return { ...p, relevanceScore: score };
+    return { ...p, relevanceScore: score, overlapSignals: tagOverlap + titleOverlap };
   })
-  .filter(p => p.relevanceScore > 0)
+  .filter(p => p.overlapSignals > 0 && p.relevanceScore > 0)
   .sort((a, b) => b.relevanceScore - a.relevanceScore)
   .slice(0, 2); // Limit to 2 posts to prevent cutoff
 

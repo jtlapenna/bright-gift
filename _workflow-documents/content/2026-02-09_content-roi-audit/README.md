@@ -101,6 +101,8 @@ Use `content-roi-audit.md` tables as the source of truth.
 
 **Week of 2026-03-22 refresh batch completed:** Refreshed `25-thoughtful-housewarming-gifts-for-new-homeowners-under-75`, `be-rooted-planners-stationery`, `valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple`, `best-home-gifts-on-amazon-2024`, and `chic-wedding-gifts-for-the-stylish-couple`. Dates set to 2026-03-22, FAQ/schema alignment corrected across the batch, off-topic or low-signal sections removed, internal linking and related-guide clusters tightened, and the Amazon home-gifts page was corrected so its list and pricing promises matched the actual picks. SEO validation and build passed.
 
+**Week of 2026-04-07 refresh batch completed:** Refreshed `best-gifts-for-dads-who-love-outdoor-adventures`, `gifts-for-gamers-under-50`, `unique-gifts-for-board-game-enthusiasts`, `gifts-for-plant-lovers`, and `special-birthday-gifts-for-lgbtq-youth`. Dates set to 2026-04-07, generic or mismatched FAQ/schema blocks were replaced with page-specific questions, stale related-link sections were rebuilt, and the gaming, outdoor, plant, and inclusive-birthday guides were tightened around clearer use cases instead of generic filler. SEO validation and build passed.
+
 ### Phase 2 (next 30–60 days): strengthen 3 clusters
 Recommended clusters to focus first (based on existing content + indexing focus):
 - **Remote work / productivity**
