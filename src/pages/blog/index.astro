@@ -49,6 +49,7 @@ function getPageUrl(page: number): string {
 const hasNormalizedPageParam = rawPageParam !== null && /^[1-9]\d*$/.test(rawPageParam);
 const requestedPage = hasNormalizedPageParam ? Number.parseInt(rawPageParam, 10) : 1;
 const currentPage = Math.min(Math.max(requestedPage, 1), totalPages);
+const isPaginatedArchive = currentPage > 1;
 
 if (rawPageParam !== null) {
   const shouldRedirect =
@@ -90,6 +91,7 @@ const blogIndexStructuredData = {
   canonical={currentPage === 1 ? "https://bright-gift.com/blog/" : `https://bright-gift.com/blog/?page=${currentPage}`}
   ogType="website"
   noindex={false}
+  robots={isPaginatedArchive ? "noindex, follow" : "index, follow"}
   twitterCard="summary_large_image"
   prevPage={currentPage > 1 ? getPageUrl(currentPage - 1) : undefined}
   nextPage={currentPage < totalPages ? getPageUrl(currentPage + 1) : undefined}

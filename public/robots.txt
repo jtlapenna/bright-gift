@@ -43,14 +43,3 @@ Disallow: /social-assets/
 
 # Block Cloudflare email protection (not for SEO)
 Disallow: /cdn-cgi/
-
-# Force reindexing hints
-# Last updated: 2025-09-12T16:38:54.081Z
-
-# Blog pagination pages - encourage indexing
-User-agent: Googlebot
-Allow: /blog/?page=*
-Crawl-delay: 0
-
-User-agent: *
-Allow: /blog/?page=*

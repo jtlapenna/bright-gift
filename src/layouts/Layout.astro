@@ -12,6 +12,7 @@ export interface Props {
 	ogType?: string;
 	twitterCard?: string;
 	noindex?: boolean;
+	robots?: string;
 	prevPage?: string;
 	nextPage?: string;
 	breadcrumbs?: Array<{
@@ -31,6 +32,7 @@ const {
 	ogType = "website",
 	twitterCard = "summary_large_image",
 	noindex = false,
+	robots,
 	prevPage,
 	nextPage,
 	breadcrumbs
@@ -40,6 +42,7 @@ const {
 const titleTag = metaTitle ? metaTitle.substring(0, 60) : title.substring(0, 60);
 // Use metaDescription if provided, otherwise use description
 const descriptionTag = metaDescription || description;
+const robotsContent = robots || (noindex ? "noindex, nofollow" : "index, follow");
 
 const isHome = Astro.url.pathname === "/";
 // Ensure canonical URL uses HTTPS and proper format with trailing slash
@@ -84,7 +87,7 @@ const breadcrumbStructuredData = breadcrumbs ? {
 		<meta name="description" content={descriptionTag} />
 		<meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : (typeof keywords === 'string' ? keywords : keywords?.toString() || '')} />
 		<meta name="author" content="BrightGift" />
-		<meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+		<meta name="robots" content={robotsContent} />
 		
 		<!-- Canonical URL -->
 		<link rel="canonical" href={canonicalUrl} />
