@@ -9,8 +9,8 @@ status: published
 draft: false
 metaTitle: Eco-Friendly Gifts for Outdoor Lovers | 20 Picks
 metaDescription: >-
-  Eco-friendly gifts for outdoor lovers, with 20 sustainable ideas for hikers,
-  campers, and nature-focused adventurers.
+  Find eco-friendly gifts for outdoor lovers, with 20 sustainable ideas for
+  hikers, campers, trail runners, and nature-first adventurers.
 keywords:
   - eco-friendly outdoor gifts
   - sustainable gear

@@ -8,7 +8,7 @@ date: '2026-02-09'
 lastUpdated: '2026-03-10'
 status: published
 draft: false
-metaTitle: Little Hero Labs | Personalized Children's Book They'll Treasure
+metaTitle: Little Hero Labs | Personalized Kids' Book Review
 metaDescription: >-
   Little Hero Labs: a personalized children's book where your child is the hero.
   Custom character, gentle story for ages 1–7. Create yours!

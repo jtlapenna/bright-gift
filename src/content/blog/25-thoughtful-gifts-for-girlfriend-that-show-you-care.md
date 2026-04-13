@@ -8,11 +8,10 @@ date: 2025-09-17T00:00:00.000Z
 lastUpdated: '2026-03-10'
 status: published
 draft: false
-metaTitle: 'Thoughtful Gifts for Your Girlfriend: 25 Meaningful Ideas...'
+metaTitle: Thoughtful Gifts for Your Girlfriend | 25 Ideas
 metaDescription: >-
-  Looking for thoughtful gifts for your girlfriend? Discover 25 meaningful gift
-  ideas that show you care, from personalized jewelry to romantic experiences.
-  Find the perfect present!
+  Discover 25 thoughtful gifts for your girlfriend, from personalized jewelry
+  to romantic experiences and cozy upgrades that still feel personal.
 keywords:
   - gifts for girlfriend
   - romantic gifts

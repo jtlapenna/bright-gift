@@ -10,9 +10,8 @@ status: published
 draft: false
 metaTitle: Last Minute Birthday Gifts for Professionals | Quick Ideas
 metaDescription: >-
-  Find perfect last minute birthday gifts for busy professionals. Discover 15
-  quick, thoughtful gift ideas that are easy to find and deliver on time for any
-  occasion. Shop now!
+  Find last-minute birthday gifts for busy professionals, with 15 quick ideas
+  that still feel thoughtful and polished for work friends or clients.
 keywords:
   - birthday gifts
   - last-minute gifts

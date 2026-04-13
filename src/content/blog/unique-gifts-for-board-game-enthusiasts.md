@@ -9,9 +9,8 @@ status: published
 draft: false
 metaTitle: Unique Gifts for Board Game Enthusiasts | Game Night Picks
 metaDescription: >-
-  Shop unique gifts for board game enthusiasts, including accessories,
-  organizers, expansions, and practical game night upgrades for casual hosts
-  and serious collectors.
+  Shop gifts for board game enthusiasts, including organizers, upgrades,
+  expansions, and practical game-night accessories.
 keywords:
   - board game gifts
   - gifts for board game enthusiasts

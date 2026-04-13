@@ -10,9 +10,8 @@ status: published
 draft: false
 metaTitle: LGBTQ+ Youth Birthday Gifts | Supportive Picks
 metaDescription: >-
-  Find meaningful birthday gifts for LGBTQ+ youth, including affirming books,
-  creative supplies, comfort gifts, and low-pressure ideas that celebrate who
-  they are.
+  Find meaningful birthday gifts for LGBTQ+ youth, from affirming books to
+  comfort gifts and creative ideas that celebrate who they are.
 keywords:
   - birthday gifts for LGBTQ+ youth
   - thoughtful LGBTQ+ gifts

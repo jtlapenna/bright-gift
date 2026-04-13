@@ -10,9 +10,8 @@ status: published
 draft: false
 metaTitle: Gifts for Girlfriend | 15 Unique Romantic Gift Ideas
 metaDescription: >-
-  Shop 15 unique romantic gift ideas for your girlfriend, including keepsakes,
-  cozy upgrades, creative date-night gifts, and personalized presents that do
-  not feel generic.
+  Shop 15 romantic gifts for your girlfriend, from keepsakes to cozy upgrades
+  and personalized ideas that do not feel generic.
 keywords:
   - gifts for girlfriend
   - romantic gifts for girlfriend

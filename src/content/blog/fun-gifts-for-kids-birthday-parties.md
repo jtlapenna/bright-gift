@@ -10,9 +10,8 @@ status: published
 draft: false
 metaTitle: Fun Gifts for Kids' Birthday Parties | Creative Picks
 metaDescription: >-
-  Find 25+ fun gifts for kids birthday parties that will make any celebration
-  special. Discover creative, parent-approved birthday gift ideas for different
-  ages and interests.
+  Find fun gifts for kids' birthday parties, with creative and parent-approved
+  ideas for different ages, interests, and budgets.
 keywords:
   - kids birthday gifts
   - fun gifts for children

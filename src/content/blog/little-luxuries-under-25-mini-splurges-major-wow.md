@@ -10,9 +10,8 @@ status: published
 draft: false
 metaTitle: 'Little Luxuries Under $25: Mini Splurges, Major Wow'
 metaDescription: >-
-  Find 29 affordable luxury gifts under $25 that feel expensive. From beauty
-  sets to gourmet treats, discover mini splurges that show you care and impress.
-  Shop now!
+  Find affordable luxury gifts under $25, from beauty sets to gourmet treats
+  and mini splurges that still feel thoughtful.
 keywords:
   - small luxury gifts
   - affordable luxury gifts

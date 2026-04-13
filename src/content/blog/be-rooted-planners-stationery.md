@@ -11,8 +11,7 @@ draft: false
 metaTitle: 'Be Rooted Planners & Journals: Best Picks for Gifting'
 metaDescription: >-
   Compare Be Rooted planners, journals, and desk accessories to find the right
-  gift for students, professionals, and journalers. See formats, use cases, and
-  bundle ideas.
+  gift for students, professionals, and journalers.
 keywords:
   - be rooted planners
   - be rooted stationery

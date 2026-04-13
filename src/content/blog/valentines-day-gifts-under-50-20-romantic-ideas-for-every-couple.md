@@ -10,9 +10,8 @@ status: published
 draft: false
 metaTitle: 'Valentine''s Day Gifts Under $50: 20 Romantic Ideas'
 metaDescription: >-
-  Discover 20 thoughtful Valentine's Day gifts under $50, from personalized
-  keepsakes to cozy date-night ideas. Find meaningful, romantic gifts for every
-  relationship stage.
+  Discover 20 Valentine's Day gifts under $50, from personalized keepsakes to
+  cozy date-night ideas for every relationship stage.
 keywords:
   - valentines day gifts
   - romantic gifts under 50

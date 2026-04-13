@@ -10,9 +10,8 @@ status: published
 draft: false
 metaTitle: 'Last Minute Gifts: 30 Emergency Ideas That Don''t Look Rushed'
 metaDescription: >-
-  Discover 30 thoughtful last-minute gift ideas that look carefully planned!
-  From Amazon Prime same-day delivery to digital gift cards and local
-  experiences. Shop now!
+  Discover 30 last-minute gift ideas that still feel thoughtful, from fast
+  shipping options to digital gifts and local experiences.
 keywords:
   - last minute gifts
   - emergency gifts

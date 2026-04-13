@@ -8,11 +8,10 @@ date: 2025-07-31T00:00:00.000Z
 lastUpdated: '2026-03-10'
 status: published
 draft: false
-metaTitle: 'The Science of Human Connection: Why We Need Each Other |...'
+metaTitle: Human Connection Science | Why We Need Each Other
 metaDescription: >-
-  Discover the fascinating science behind human connection and why meaningful
-  relationships are essential for our wellbeing. Learn how to strengthen bonds
-  and build deeper connections.
+  Learn how human connection supports wellbeing and why meaningful
+  relationships matter for health, resilience, and daily life.
 keywords:
   - human connection
   - social connection

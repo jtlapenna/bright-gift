@@ -10,9 +10,8 @@ status: published
 draft: false
 metaTitle: 30 Unique Baby Gift Ideas | Baby Shower & New Parent Gifts
 metaDescription: >-
-  Discover 30 thoughtful gift ideas for new parents under $75. From baby showers
-  to newborn celebrations, find practical and unique presents that stand out and
-  help new families.
+  Discover 30 gift ideas for new parents under $75, from practical newborn help
+  to thoughtful presents that stand out after the baby shower.
 keywords:
   - baby gifts
   - baby shower gifts

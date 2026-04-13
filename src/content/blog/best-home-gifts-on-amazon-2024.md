@@ -10,9 +10,8 @@ status: published
 draft: false
 metaTitle: 'Best Home Gifts on Amazon: Top-Rated Picks Under $100'
 metaDescription: >-
-  Discover the best home gifts on Amazon, from practical kitchen upgrades to
-  stylish decor and smart-home picks. Find top-rated options for housewarmings
-  and everyday gifting.
+  Discover the best home gifts on Amazon, from kitchen upgrades to smart-home
+  picks and decor that feel useful and easy to give.
 keywords:
   - best home gifts on amazon
   - housewarming gifts

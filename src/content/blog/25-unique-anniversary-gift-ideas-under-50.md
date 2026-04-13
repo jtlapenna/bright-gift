@@ -8,11 +8,10 @@ date: 2026-03-16T00:00:00.000Z
 lastUpdated: '2026-03-16'
 status: published
 draft: false
-metaTitle: '25 Unique Anniversary Gift Ideas Under $50 | Thoughtful Picks'
+metaTitle: '25 Anniversary Gift Ideas Under $50 | Thoughtful Picks'
 metaDescription: >-
-  Discover 25 unique anniversary gift ideas under $50 that are thoughtful,
-  memorable, and romantic without feeling generic. Find meaningful gifts for
-  every relationship milestone.
+  Discover 25 anniversary gift ideas under $50 that feel thoughtful,
+  memorable, and romantic for any relationship milestone.
 keywords:
   - anniversary gifts
   - romantic gifts

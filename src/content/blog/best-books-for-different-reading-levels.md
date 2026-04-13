@@ -10,9 +10,8 @@ status: published
 draft: false
 metaTitle: Best Books for Different Reading Levels | Perfect Gifts
 metaDescription: >-
-  Find the perfect books for every reader in your life! From beginners to
-  bookworms, discover thoughtful book gifts that match their reading level and
-  interests. Shop now!
+  Find giftable books for every reading level, from beginners to lifelong
+  readers, with picks matched to age and interest.
 keywords:
   - books for different reading levels
   - gifts for readers

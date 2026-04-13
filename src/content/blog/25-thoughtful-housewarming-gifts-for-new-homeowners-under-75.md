@@ -10,9 +10,8 @@ status: published
 draft: false
 metaTitle: 25 Thoughtful Housewarming Gifts Under $75
 metaDescription: >-
-  Discover 25 practical, stylish, and personalized housewarming gifts under $75
-  for new homeowners. Find useful kitchen, decor, and move-in gift ideas that
-  feel thoughtful.
+  Discover 25 housewarming gifts under $75, from practical kitchen upgrades to
+  decor and move-in ideas that feel thoughtful.
 keywords:
   - housewarming gifts under 75
   - gifts for new homeowners

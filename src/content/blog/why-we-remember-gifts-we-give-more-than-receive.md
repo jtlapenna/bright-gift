@@ -10,9 +10,8 @@ status: published
 draft: false
 metaTitle: Why We Remember Gifts We Give More Than Receive
 metaDescription: >-
-  Discover the fascinating psychology behind why we remember gifts we give more
-  vividly than the ones we receive, and what this reveals about human memory,
-  relationships, and connection.
+  Explore why we remember gifts we give more vividly than gifts we receive, and
+  what that reveals about memory, meaning, and human connection.
 keywords:
   - Why We Remember Gifts We Give More Than Receive
 image: /images/blog/psychology-gift-giving-memory-banner.webp
