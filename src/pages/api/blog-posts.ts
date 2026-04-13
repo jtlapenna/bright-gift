@@ -9,7 +9,7 @@ export async function GET({ request, locals }: { request: any, locals: any }) {
     
     // Get all published blog posts (not draft)
     const publishedPosts = blogCollection
-      .filter((post: any) => !post.data.draft)
+      .filter((post: any) => !post.data.draft && post.data.sitemap !== false)
       .sort((a: any, b: any) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
     
     if (publishedPosts.length === 0) {

@@ -108,7 +108,7 @@ Gift an experience that can transform their skills and perspective. Workshops an
 
 Curate a collection of books that will inspire and educate them in their field. Include technique books, artist biographies, and coffee table books featuring their favorite styles or artists. These books serve as both reference materials and sources of inspiration for years to come.
 
-More book ideas: [25 Books to Gift This Holiday Season](/blog/25-books-to-gift-this-holiday-season/) and [Gifts for Book Lovers Under $50](/blog/gifts-for-book-lovers-under-50/).
+More book ideas: [Best Books for Different Reading Levels](/blog/best-books-for-different-reading-levels/) and [Gifts for Book Lovers Under $50](/blog/gifts-for-book-lovers-under-50/).
 
 ### 7. Custom Art Portfolio Case
 **Price Range:** $35-$75

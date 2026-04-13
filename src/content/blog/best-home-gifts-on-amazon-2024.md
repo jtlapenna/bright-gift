@@ -78,7 +78,7 @@ Shopping for home gifts on Amazon works best when you stay in the lane of useful
 
 For new homeowners, explore our [25 Thoughtful Housewarming Gifts for New Homeowners Under $75](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/) guide.
 
-For additional move-in essentials, check [Gifts for New Homeowners](/blog/gifts-for-new-homeowners-2025/). If you're balancing style with sustainability, see [Eco-Friendly Gift Ideas for Every Budget](/blog/eco-friendly-gift-ideas-for-every-budget/).
+If you're balancing style with sustainability, see [Eco-Friendly Gift Ideas for Every Budget](/blog/eco-friendly-gift-ideas-for-every-budget/). For registry-adjacent home picks, compare [Chic Wedding Gifts for the Stylish Couple](/blog/chic-wedding-gifts-for-the-stylish-couple/).
 
 ---
 
@@ -179,7 +179,7 @@ A spa-inspired tray for relaxing with a book, wine, or tablet in the bath.
 - **Chic Hanging Planter:** Best when you want something homey without committing to loud decor.
 - **Sleek Insulated Travel Bottle:** A reliable choice when you want function over decor risk.
 
-If you want more move-in-specific options, compare this list with [25 Thoughtful Housewarming Gifts for New Homeowners Under $75](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/) and [Gifts for New Homeowners](/blog/gifts-for-new-homeowners-2025/).
+If you want more move-in-specific options, compare this list with [25 Thoughtful Housewarming Gifts for New Homeowners Under $75](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/) and [Chic Wedding Gifts for the Stylish Couple](/blog/chic-wedding-gifts-for-the-stylish-couple/).
 
 ---
 
@@ -210,7 +210,7 @@ Great under-$50 picks include welcome mats, ceramic bowls, hanging planters, ins
 ## Related Guides
 
 - [25 Thoughtful Housewarming Gifts for New Homeowners Under $75](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/)
-- [Gifts for New Homeowners 2025](/blog/gifts-for-new-homeowners-2025/)
+- [Chic Wedding Gifts for the Stylish Couple](/blog/chic-wedding-gifts-for-the-stylish-couple/)
 - [Eco-Friendly Gift Ideas for Every Budget](/blog/eco-friendly-gift-ideas-for-every-budget/)
 - [How to Choose the Perfect Gift](/blog/how-to-choose-the-perfect-gift-complete-guide/)
 - [Gifts for Plant Lovers](/blog/gifts-for-plant-lovers/)

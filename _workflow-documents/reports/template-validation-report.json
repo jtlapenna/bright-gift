@@ -1,68 +1,11 @@
 {
-  "timestamp": "2026-04-11T18:22:05.300Z",
+  "timestamp": "2026-04-13T20:30:24.567Z",
   "summary": {
     "totalFiles": 18,
     "filesWithErrors": 0,
     "totalErrors": 0,
-    "totalWarnings": 8
+    "totalWarnings": 0
   },
   "errors": [],
-  "warnings": [
-    {
-      "file": "src/pages/index.astro",
-      "line": 0,
-      "message": "Missing meta description tag",
-      "fix": "Add meta description for better SEO",
-      "severity": "warning"
-    },
-    {
-      "file": "src/pages/index.astro",
-      "line": 0,
-      "message": "Missing Open Graph title tag",
-      "fix": "Add og:title for social media sharing",
-      "severity": "warning"
-    },
-    {
-      "file": "src/pages/gift-idea-generator/index.astro",
-      "line": 0,
-      "message": "Missing meta description tag",
-      "fix": "Add meta description for better SEO",
-      "severity": "warning"
-    },
-    {
-      "file": "src/pages/gift-idea-generator/index.astro",
-      "line": 0,
-      "message": "Missing Open Graph title tag",
-      "fix": "Add og:title for social media sharing",
-      "severity": "warning"
-    },
-    {
-      "file": "src/pages/blog/index.astro",
-      "line": 0,
-      "message": "Missing meta description tag",
-      "fix": "Add meta description for better SEO",
-      "severity": "warning"
-    },
-    {
-      "file": "src/pages/blog/index.astro",
-      "line": 0,
-      "message": "Missing Open Graph title tag",
-      "fix": "Add og:title for social media sharing",
-      "severity": "warning"
-    },
-    {
-      "file": "src/pages/blog/[...slug].astro",
-      "line": 0,
-      "message": "Missing meta description tag",
-      "fix": "Add meta description for better SEO",
-      "severity": "warning"
-    },
-    {
-      "file": "src/pages/blog/[...slug].astro",
-      "line": 0,
-      "message": "Missing Open Graph title tag",
-      "fix": "Add og:title for social media sharing",
-      "severity": "warning"
-    }
-  ]
+  "warnings": []
 }

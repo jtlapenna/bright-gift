@@ -1,39 +1,200 @@
 {
-  "timestamp": "2026-04-11T18:22:05.212Z",
+  "timestamp": "2026-04-13T20:30:24.480Z",
   "summary": {
     "totalFiles": 55,
     "filesWithErrors": 0,
     "totalErrors": 0,
-    "totalWarnings": 4
+    "totalWarnings": 27
   },
   "errors": [],
   "warnings": [
     {
-      "file": "src/content/blog/gifts-for-remote-workers-and-wfh-professionals.md",
-      "line": 5,
-      "message": "Title length 62 characters (should be 10-60)",
-      "fix": "Optimize title length for SEO",
+      "file": "src/content/blog/why-we-remember-gifts-we-give-more-than-receive.md",
+      "line": 12,
+      "message": "SEO description length 184 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
       "severity": "warning"
     },
     {
-      "file": "src/content/blog/christmas-gift-ideas-2025.md",
-      "line": 5,
-      "message": "Title length 63 characters (should be 10-60)",
-      "fix": "Optimize title length for SEO",
+      "file": "src/content/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple.md",
+      "line": 12,
+      "message": "SEO description length 171 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
       "severity": "warning"
     },
     {
-      "file": "src/content/blog/best-holiday-gifts-for-moms-2025.md",
-      "line": 5,
-      "message": "Title length 63 characters (should be 10-60)",
-      "fix": "Optimize title length for SEO",
+      "file": "src/content/blog/unique-graduation-gifts-creative-minds.md",
+      "line": 12,
+      "message": "SEO description length 178 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
       "severity": "warning"
     },
     {
-      "file": "src/content/blog/best-holiday-gifts-for-dads-2025.md",
-      "line": 5,
-      "message": "Title length 73 characters (should be 10-60)",
-      "fix": "Optimize title length for SEO",
+      "file": "src/content/blog/unique-gifts-for-board-game-enthusiasts.md",
+      "line": 11,
+      "message": "SEO description length 167 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/the-science-of-human-connection-why-we-need-each-other.md",
+      "line": 12,
+      "message": "SEO description length 182 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/special-birthday-gifts-for-lgbtq-youth.md",
+      "line": 12,
+      "message": "SEO description length 161 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/little-luxuries-under-25-mini-splurges-major-wow.md",
+      "line": 12,
+      "message": "SEO description length 163 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/little-hero-labs-personalized-childrens-book.md",
+      "line": 11,
+      "message": "SEO title length 64 characters (should be 10-60)",
+      "fix": "Optimize metaTitle length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/last-minute-birthday-gifts-for-busy-professionals.md",
+      "line": 12,
+      "message": "SEO description length 174 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/how-to-choose-the-perfect-gift-complete-guide.md",
+      "line": 12,
+      "message": "SEO description length 177 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/gifts-under-25-for-coworkers.md",
+      "line": 12,
+      "message": "SEO description length 170 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/gifts-for-girlfriend-unique-romantic-ideas.md",
+      "line": 12,
+      "message": "SEO description length 170 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md",
+      "line": 12,
+      "message": "SEO description length 173 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/fun-gifts-for-kids-birthday-parties.md",
+      "line": 12,
+      "message": "SEO description length 173 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/emergency-gift-guide-30-last-minute-present-ideas.md",
+      "line": 12,
+      "message": "SEO description length 165 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature.md",
+      "line": 11,
+      "message": "SEO description length 117 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/clean-girl-2-0-minimalist-gifts-with-personality.md",
+      "line": 12,
+      "message": "SEO description length 165 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/best-home-gifts-on-amazon-2024.md",
+      "line": 12,
+      "message": "SEO description length 173 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/best-gifts-for-teachers.md",
+      "line": 12,
+      "message": "SEO description length 161 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/best-books-for-different-reading-levels.md",
+      "line": 12,
+      "message": "SEO description length 169 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/be-rooted-planners-stationery.md",
+      "line": 12,
+      "message": "SEO description length 168 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/affordable-gifts-for-pet-lovers-under-30.md",
+      "line": 12,
+      "message": "SEO description length 167 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond.md",
+      "line": 12,
+      "message": "SEO description length 176 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/25-unique-anniversary-gift-ideas-under-50.md",
+      "line": 11,
+      "message": "SEO title length 61 characters (should be 10-60)",
+      "fix": "Optimize metaTitle length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/25-unique-anniversary-gift-ideas-under-50.md",
+      "line": 12,
+      "message": "SEO description length 177 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75.md",
+      "line": 12,
+      "message": "SEO description length 170 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
+      "severity": "warning"
+    },
+    {
+      "file": "src/content/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care.md",
+      "line": 12,
+      "message": "SEO description length 180 characters (should be 120-160)",
+      "fix": "Optimize metaDescription length for SEO",
       "severity": "warning"
     }
   ]

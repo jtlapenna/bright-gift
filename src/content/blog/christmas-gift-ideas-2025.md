@@ -53,6 +53,7 @@ faqSchema:
           their life usually lands better than a generic trend item.
 readTime: 9
 featured: false
+sitemap: false
 slug: christmas-gift-ideas-2025
 imageAlt: 'Christmas Gift Ideas 2025: 20 Thoughtful Picks for Every Budget banner image'
 ogImageAlt: >-

@@ -11,7 +11,7 @@ const rawPageParam = url.searchParams.get('page');
 
 // Get all blog posts, excluding drafts unless in preview
 const isPreview = import.meta.env.IS_PREVIEW === 'true';
-const allPosts = await getCollection('blog', ({ data }) => isPreview || !data.draft);
+const allPosts = await getCollection('blog', ({ data }) => isPreview || (!data.draft && data.sitemap !== false));
 const allFaqs = await getCollection('faqs', ({ data }) => isPreview || !data.draft);
 
 // Normalize dates (prefer date, then pubDate, then today) and sort by newest first

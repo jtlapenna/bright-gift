@@ -53,6 +53,7 @@ class ContentValidator {
     const content = fs.readFileSync(filePath, 'utf8');
     const parsed = matter(content);
     const lines = content.split('\n');
+    const isSuppressed = parsed.data?.sitemap === false;
 
     let hasErrors = false;
 
@@ -159,25 +160,24 @@ class ContentValidator {
       });
     }
 
-    // Check title length
-    const titleMatch = content.match(/^title:\s*["']([^"']+)["']$/m);
-    if (titleMatch) {
-      const title = titleMatch[1];
-      if (title.length < 10 || title.length > 60) {
-        this.addWarning(filePath, content.indexOf(titleMatch[0]) + 1,
-          `Title length ${title.length} characters (should be 10-60)`,
-          'Optimize title length for SEO');
+    // Prefer SEO-specific fields when they exist. H1 titles can be longer than search titles.
+    const seoTitle = parsed.data?.metaTitle || parsed.data?.title;
+    const seoTitleLine = lines.findIndex((line) => line.startsWith(parsed.data?.metaTitle ? 'metaTitle:' : 'title:')) + 1;
+    if (!isSuppressed && typeof seoTitle === 'string') {
+      if (seoTitle.length < 10 || seoTitle.length > 60) {
+        this.addWarning(filePath, seoTitleLine || 1,
+          `SEO title length ${seoTitle.length} characters (should be 10-60)`,
+          'Optimize metaTitle length for SEO');
       }
     }
 
-    // Check description length
-    const descMatch = content.match(/^description:\s*["']([^"']+)["']$/m);
-    if (descMatch) {
-      const description = descMatch[1];
-      if (description.length < 120 || description.length > 160) {
-        this.addWarning(filePath, content.indexOf(descMatch[0]) + 1,
-          `Description length ${description.length} characters (should be 120-160)`,
-          'Optimize description length for SEO');
+    const seoDescription = parsed.data?.metaDescription || parsed.data?.description;
+    const seoDescriptionLine = lines.findIndex((line) => line.startsWith(parsed.data?.metaDescription ? 'metaDescription:' : 'description:')) + 1;
+    if (!isSuppressed && typeof seoDescription === 'string') {
+      if (seoDescription.length < 120 || seoDescription.length > 160) {
+        this.addWarning(filePath, seoDescriptionLine || 1,
+          `SEO description length ${seoDescription.length} characters (should be 120-160)`,
+          'Optimize metaDescription length for SEO');
       }
     }
 

@@ -81,7 +81,7 @@ socialImageAlt: >-
 
 Stylish couples usually want wedding gifts that feel intentional, elevated, and easy to live with long after the ceremony. The strongest picks are not just pretty objects. They support hosting, daily rituals, or a polished home without feeling like generic registry filler.
 
-This guide works best when you want a present that feels design-aware but still practical. If the couple is moving, renovating, or building a new routine together, also browse [Gifts for New Homeowners 2025](/blog/gifts-for-new-homeowners-2025/), [25 Thoughtful Housewarming Gifts Under $75](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/), and [Best Home Gifts on Amazon](/blog/best-home-gifts-on-amazon-2024/).
+This guide works best when you want a present that feels design-aware but still practical. If the couple is moving, renovating, or building a new routine together, also browse [25 Thoughtful Housewarming Gifts Under $75](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/), [Best Home Gifts on Amazon](/blog/best-home-gifts-on-amazon-2024/), and [Eco-Friendly Gift Ideas for Every Budget](/blog/eco-friendly-gift-ideas-for-every-budget/).
 
 ## How to Pick a Wedding Gift That Feels Elevated
 
@@ -209,7 +209,7 @@ Use a neutral-first approach: wood, white, black, and stainless tones tend to fi
 ## Related Guides
 
 - [25 Unique Anniversary Gift Ideas Under $50](/blog/25-unique-anniversary-gift-ideas-under-50/)
-- [Gifts for New Homeowners 2025](/blog/gifts-for-new-homeowners-2025/)
+- [Best Home Gifts on Amazon](/blog/best-home-gifts-on-amazon-2024/)
 - [25 Thoughtful Housewarming Gifts for New Homeowners Under $75](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/)
 - [How to Choose the Perfect Gift](/blog/how-to-choose-the-perfect-gift-complete-guide/)
 - [Eco-Friendly Gift Ideas for Every Budget](/blog/eco-friendly-gift-ideas-for-every-budget/)

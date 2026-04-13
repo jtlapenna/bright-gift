@@ -34,7 +34,7 @@ function getBlogPosts() {
         
         const slug = file.replace('.md', '');
 
-        if (!shouldIncludeBlogPostInSitemap(slug)) {
+        if (!shouldIncludeBlogPostInSitemap(slug, data)) {
           continue;
         }
         

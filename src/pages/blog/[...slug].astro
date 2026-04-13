@@ -90,6 +90,7 @@ const date = post.data.date || post.data.pubDate || fallbackDate;
 const lastUpdated = sanitizeLastUpdated(post.data.lastUpdated);
 const normalizedType = normalizeCategory(type);
 const isGiftGuide = normalizedType === 'gift-guide';
+const robotsDirective = post.data.sitemap === false ? 'noindex, follow' : undefined;
 
 // Debug logging in development
 if (import.meta.env.DEV && post.slug === '80th-birthday-gift-ideas-seniors') {
@@ -185,7 +186,7 @@ if (isGiftGuide && post.data.affiliateLinks && post.data.affiliateLinks.length >
 
 // Get related posts
 const isPreview = import.meta.env.IS_PREVIEW === 'true';
-const allBlogPosts = await getCollection('blog', ({ data }) => isPreview || !data.draft);
+const allBlogPosts = await getCollection('blog', ({ data }) => isPreview || (!data.draft && data.sitemap !== false));
 
 // Find related posts based on tags and category
 const currentTags = post.data.tags || [];
@@ -282,6 +283,7 @@ if (relatedPosts.length > 0) {
   canonical={canonicalUrl}
   ogType="article"
   twitterCard="summary_large_image"
+  robots={robotsDirective}
   breadcrumbs={[
     { name: "Home", url: "https://bright-gift.com/" },
     { name: "Blog", url: "https://bright-gift.com/blog/" },

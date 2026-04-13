@@ -25,7 +25,13 @@ function isCanonicalBlogUrl(value) {
   return /^https:\/\/bright-gift\.com\/blog\/[a-z0-9-]+\/$/.test(value);
 }
 
-function shouldIncludeBlogPostInSitemap(slug) {
+function shouldIncludeBlogPostInSitemap(slug, data = {}) {
+  const sitemapFlag = data?.sitemap;
+
+  if (sitemapFlag === false || sitemapFlag === 'false') {
+    return false;
+  }
+
   return !SEASONAL_SITEMAP_EXCLUSIONS.has(slug);
 }
 

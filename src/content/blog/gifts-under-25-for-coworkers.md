@@ -259,7 +259,7 @@ Excellent group gifts include gourmet snack boxes, premium coffee samplers, desk
 
 Find the perfect gift for any occasion:
 - [Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50/) - Gaming essentials and accessories
-- [Gaming Gifts 2025](/blog/gaming-gifts-2025/) - Latest gaming gear
+- [Be Rooted Planners & Stationery](/blog/be-rooted-planners-stationery/) - Stylish desk-friendly office picks
 - [Gifts for Remote Workers](/blog/gifts-for-remote-workers-and-wfh-professionals/) - Home office essentials
 - [Unique Graduation Gifts for Creative Minds](/blog/unique-graduation-gifts-creative-minds/) - 15 curated picks for artistic grads
 

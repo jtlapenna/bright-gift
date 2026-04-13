@@ -57,6 +57,7 @@ faqSchema:
           novelty.
 readTime: 19
 featured: false
+sitemap: false
 siteId: brightgift
 workflowId: workflow_1734321600_moms2025
 postId: workflow_1734321600_moms2025

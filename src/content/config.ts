@@ -76,6 +76,12 @@ const blog = defineCollection({
       }
       return val;
     }),
+    sitemap: z.union([z.boolean(), z.string()]).optional().transform((val) => {
+      if (typeof val === 'string') {
+        return val.toLowerCase() === 'true';
+      }
+      return val;
+    }),
   })
 });
 

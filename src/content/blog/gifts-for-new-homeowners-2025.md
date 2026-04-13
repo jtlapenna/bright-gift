@@ -55,6 +55,7 @@ contentType: gift-guide
 priceRange: $20-$70
 readTime: 3
 featured: false
+sitemap: false
 imageAlt: 'Gifts for New Homeowners: 20 Unique Housewarming Ideas banner image'
 ogImageAlt: 'Gifts for New Homeowners: 20 Unique Housewarming Ideas social preview image'
 socialImageAlt: 'Gifts for New Homeowners: 20 Unique Housewarming Ideas social preview image'

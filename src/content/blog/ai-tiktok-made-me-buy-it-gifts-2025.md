@@ -55,6 +55,7 @@ faqSchema:
           of shopping for a generic category.
 readTime: 6
 featured: false
+sitemap: false
 slug: ai-tiktok-made-me-buy-it-gifts-2025
 imageAlt: 'TikTok-Made-Me-Buy-It Gifts 2025: 20 Viral Finds Worth It banner image'
 ogImageAlt: 'TikTok-Made-Me-Buy-It Gifts 2025: 20 Viral Finds Worth It social preview image'

@@ -57,6 +57,7 @@ faqSchema:
           notice several times a week.
 readTime: 10
 featured: false
+sitemap: false
 siteId: brightgift
 workflowId: workflow_20250115_holiday_gifts_2025
 postId: workflow_20250115_holiday_gifts_2025

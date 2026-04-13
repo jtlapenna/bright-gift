@@ -56,6 +56,7 @@ faqSchema:
           fit anyone.
 readTime: 23
 featured: false
+sitemap: false
 imageAlt: 'Best Gaming Gifts 2025: Perfect Presents for Every Gamer banner image'
 ogImageAlt: 'Best Gaming Gifts 2025: Perfect Presents for Every Gamer social preview image'
 ---

@@ -58,6 +58,7 @@ faqSchema:
 contentType: gift-guide
 readTime: 10
 featured: true
+sitemap: false
 affiliateLinks:
   - text: The Midnight Library by Matt Haig
     url: 'https://bookshop.org/a/brightgift/9780525559474'

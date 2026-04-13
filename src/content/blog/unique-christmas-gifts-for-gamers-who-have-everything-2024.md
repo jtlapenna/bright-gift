@@ -58,6 +58,7 @@ contentType: gift-guide
 priceRange: $15-$400
 readTime: 7
 featured: false
+sitemap: false
 imageAlt: Unique Christmas Gifts for Gamers Who Have Everything (2024) banner image
 ogImageAlt: >-
   Unique Christmas Gifts for Gamers Who Have Everything (2024) social preview

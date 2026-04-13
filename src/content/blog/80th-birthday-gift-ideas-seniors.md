@@ -99,9 +99,9 @@ We've curated gift ideas that consider accessibility, comfort, sentimentality, a
 ## Related Gift Guides You'll Love
 
 Looking for more gift inspiration? Check out these guides:
-- [Mother's Day Gifts](/blog/best-holiday-gifts-for-moms-2025/) - Thoughtful ideas for moms
-- [Christmas Gift Ideas 2025](/blog/christmas-gift-ideas-2025/) - Perfect for holiday shopping
-- [Housewarming Gifts Under $75](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/) - Perfect for new homes
+- [Gifts for New Grandparents](/blog/gifts-for-new-grandparents/) - Thoughtful ideas for growing families
+- [Self-Care Gifts for Moms](/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore/) - Comfort-focused ideas for caregivers
+- [How to Choose the Perfect Gift](/blog/how-to-choose-the-perfect-gift-complete-guide/) - A quick framework when you want something personal
 
 ---
 
@@ -390,4 +390,4 @@ Consider accessibility, space, and personal interests when selecting gifts. Reme
 
 Finding the perfect 80th birthday gift doesn't have to be overwhelming. Use our AI gift finder to get personalized recommendations based on your loved one's interests, hobbies, and preferences. We'll help you discover thoughtful gifts that show how much you care.
 
-For more gift ideas, explore our guides on [holiday gifts for moms](/blog/best-holiday-gifts-for-moms-2025/), [Christmas gift ideas](/blog/christmas-gift-ideas-2025/), and [gifts for dads](/blog/best-holiday-gifts-for-dads-2025/). You can also learn more about [choosing the perfect gift](/blog/how-to-choose-the-perfect-gift-complete-guide/) with our comprehensive guide.
+For more gift ideas, explore our guides on [gifts for new grandparents](/blog/gifts-for-new-grandparents/), [self-care gifts for moms](/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore/), and [how to choose the perfect gift](/blog/how-to-choose-the-perfect-gift-complete-guide/). You can also browse [little luxuries under $25](/blog/little-luxuries-under-25-mini-splurges-major-wow/) for smaller comfort-first ideas.

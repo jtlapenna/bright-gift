@@ -58,6 +58,7 @@ faqSchema:
           novelty.
 readTime: 16
 featured: false
+sitemap: false
 imageAlt: >-
   The Ultimate List: Best Holiday Gifts for Dads (For Every Type & Budget!)
   banner image
@@ -335,4 +336,3 @@ Remember, the best holiday gifts for dads aren't always the most expensive onesâ
 - [Best Gifts for Dads Who Love Outdoor Adventures](/blog/best-gifts-for-dads-who-love-outdoor-adventures/) - Specialized gift ideas for adventure-loving dads
 - [Christmas Gift Ideas 2025](/blog/christmas-gift-ideas-2025/) - More holiday gift inspiration for everyone on your list
 - [Eco-Friendly Gift Ideas for Every Budget](/blog/eco-friendly-gift-ideas-for-every-budget/) - Sustainable gift options that align with your values
-

@@ -50,6 +50,10 @@ class TemplateValidator {
     this.stats.totalFiles++;
     const content = fs.readFileSync(filePath, 'utf8');
     const lines = content.split('\n');
+    const usesSharedLayout = /<Layout\b/.test(content);
+    const hasLayoutDescriptionProp = /(?:metaDescription|description)=\{?/.test(content);
+    const hasLayoutTitleProp = /(?:metaTitle|title)=\{?/.test(content);
+    const isRedirectOnlyPage = /Astro\.redirect\s*\(/.test(content) && !usesSharedLayout;
     
     let hasErrors = false;
     
@@ -121,18 +125,34 @@ class TemplateValidator {
     
     // Check for proper meta tags
     if (filePath.includes('blog') || filePath.includes('index')) {
-      if (!content.includes('meta name="description"') && 
+      if (!isRedirectOnlyPage &&
+          !usesSharedLayout &&
+          !content.includes('meta name="description"') && 
           !content.includes('meta property="og:description"')) {
         this.addWarning(filePath, 0,
           'Missing meta description tag',
           'Add meta description for better SEO');
       }
       
-      if (!content.includes('meta property="og:title"') && 
+      if (!isRedirectOnlyPage && usesSharedLayout && !hasLayoutDescriptionProp) {
+        this.addWarning(filePath, 0,
+          'Layout page is missing description props',
+          'Pass description or metaDescription into Layout for better SEO');
+      }
+      
+      if (!isRedirectOnlyPage &&
+          !usesSharedLayout &&
+          !content.includes('meta property="og:title"') && 
           !content.includes('meta name="twitter:title"')) {
         this.addWarning(filePath, 0,
           'Missing Open Graph title tag',
           'Add og:title for social media sharing');
+      }
+
+      if (!isRedirectOnlyPage && usesSharedLayout && !hasLayoutTitleProp) {
+        this.addWarning(filePath, 0,
+          'Layout page is missing title props',
+          'Pass title or metaTitle into Layout for better SEO');
       }
     }
     

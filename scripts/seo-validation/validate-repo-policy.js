@@ -250,11 +250,65 @@ function auditReindexTargets(filePath, content, errors) {
   }
 }
 
+function getSuppressedBlogInventory() {
+  const suppressedSlugs = new Set();
+  const suppressedFiles = new Set();
+
+  for (const filePath of glob.sync('src/content/blog/*.md', { nodir: true })) {
+    const raw = fs.readFileSync(filePath, 'utf8');
+    const parsed = matter(raw);
+    const slug =
+      parsed.data?.slug ||
+      path.basename(filePath, path.extname(filePath));
+
+    if (parsed.data?.sitemap === false || SEASONAL_SITEMAP_EXCLUSIONS.has(slug)) {
+      suppressedSlugs.add(slug);
+      suppressedFiles.add(normalizePath(filePath));
+    }
+  }
+
+  return { suppressedSlugs, suppressedFiles };
+}
+
+function auditSuppressedLinks(filePath, content, suppressedSlugs, suppressedFiles, errors) {
+  const normalized = normalizePath(filePath);
+
+  if (suppressedFiles.has(normalized)) {
+    return;
+  }
+
+  if (
+    !normalized.startsWith('src/content/blog/') &&
+    !normalized.startsWith('src/pages/')
+  ) {
+    return;
+  }
+
+  const lines = content.split('\n');
+
+  lines.forEach((line, index) => {
+    for (const slug of suppressedSlugs) {
+      if (
+        line.includes(`/blog/${slug}/`) ||
+        line.includes(`https://bright-gift.com/blog/${slug}/`)
+      ) {
+        errors.push({
+          file: filePath,
+          line: index + 1,
+          message: `Indexable page links to sitemap-suppressed URL: /blog/${slug}/`,
+          fix: 'Replace the link with an evergreen canonical target or remove it from active promotion'
+        });
+      }
+    }
+  });
+}
+
 function main() {
   console.log('🔍 Validating repo-level SEO policy...\n');
 
   const files = loadActiveFiles();
   const errors = [];
+  const { suppressedSlugs, suppressedFiles } = getSuppressedBlogInventory();
 
   for (const filePath of files) {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -263,6 +317,7 @@ function main() {
     auditTimestampRules(filePath, content, errors);
     auditFaqSync(filePath, errors);
     auditReindexTargets(filePath, content, errors);
+    auditSuppressedLinks(filePath, content, suppressedSlugs, suppressedFiles, errors);
   }
 
   const report = {

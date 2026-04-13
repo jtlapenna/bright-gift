@@ -6,7 +6,7 @@ import { getCollection } from 'astro:content';
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const blogPosts = await getCollection('blog', ({ data }) => !data.draft);
+  const blogPosts = await getCollection('blog', ({ data }) => !data.draft && data.sitemap !== false);
   
   // Get unique categories and map old categories to new ones
   const categories = [...new Set(blogPosts.map(post => {
@@ -36,7 +36,7 @@ export async function getStaticPaths() {
 const { category, originalCategory } = Astro.props;
 
 // Get all blog posts for this category
-const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const allPosts = await getCollection('blog', ({ data }) => !data.draft && data.sitemap !== false);
 const categoryPosts = allPosts.filter(post => {
   const postCategory = post.data.category;
   // Map old categories to new gift-tips category
