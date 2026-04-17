@@ -73,7 +73,7 @@ socialImageAlt: '25 Unique Anniversary Gift Ideas Under $50: Timeless social pre
 
 Anniversaries are special milestones that deserve celebration, regardless of your budget. The best anniversary gifts aren't about the price tag—they're about showing your partner that you remember, care, and want to make them feel special. Whether it's your first anniversary or your twentieth, thoughtful gifts under $50 can create lasting memories and strengthen your bond.
 
-The key is understanding what makes your partner feel loved and appreciated. Some people value experiences, others cherish personalized items, and many appreciate practical gifts that show you pay attention to their daily life. If you want a broader romantic shortlist, compare these ideas with [Valentine's Day Gifts Under $50](/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/), [Gifts for Girlfriend: Unique & Romantic Ideas](/blog/gifts-for-girlfriend-unique-romantic-ideas/), and [25 Thoughtful Gifts for Your Girlfriend That Show You Care](/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/).
+The key is understanding what makes your partner feel loved and appreciated. Some people value experiences, others cherish personalized items, and many appreciate practical gifts that show you pay attention to their daily life. If you want a broader romantic shortlist, compare these ideas with [Gifts for Girlfriend: Unique & Romantic Ideas](/blog/gifts-for-girlfriend-unique-romantic-ideas/), [25 Thoughtful Gifts for Your Girlfriend That Show You Care](/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/), and [Little Luxuries Under $25](/blog/little-luxuries-under-25-mini-splurges-major-wow/).
 
 ---
 
@@ -253,4 +253,4 @@ The best anniversary gift under $50 is the one that feels unmistakably tied to y
 - [Chic Wedding Gifts for the Stylish Couple](/blog/chic-wedding-gifts-for-the-stylish-couple/)
 - [15 Thoughtful Gifts for Your Girlfriend](/blog/gifts-for-girlfriend-unique-romantic-ideas/)
 - [25 Thoughtful Gifts for Your Girlfriend That Show You Care](/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/)
-- [Valentine's Day Gifts Under $50: 20 Romantic Ideas for Every Couple](/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/)
+- [Little Luxuries Under $25: Mini Splurges, Major Wow](/blog/little-luxuries-under-25-mini-splurges-major-wow/)

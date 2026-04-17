@@ -330,7 +330,7 @@ Looking for more gift inspiration? Explore these curated guides:
 - **[AI-Powered Gift Ideas](/blog/ai-powered-gift-ideas-for-every-budget/)** - Tech gifts for every budget
 
 ### Special Occasions:
-- **[Valentine's Day Gifts Under $50](/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple/)** - Gifts for your remote-working partner
+- **[Little Luxuries Under $25](/blog/little-luxuries-under-25-mini-splurges-major-wow/)** - Small upgrades that still feel personal
 - **[Anniversary Gifts Under $50](/blog/25-unique-anniversary-gift-ideas-under-50/)** - Meaningful presents
 
 ## Frequently Asked Questions
