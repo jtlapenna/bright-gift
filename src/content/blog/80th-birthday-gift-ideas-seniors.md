@@ -256,7 +256,7 @@ This is a calming comfort gift for seniors who like a snug, secure feel while re
 
 If you are torn between options, choose the gift that will be easiest to enjoy in the next week. That usually means a family-memory gift, a comfort upgrade, or a practical tool that supports daily independence. Those categories tend to feel more caring than novelty items or clutter-heavy decor.
 
-If you still want help narrowing the lane, try the [Gift Idea Generator](/gift-idea-generator/).
+If you still want help narrowing the lane, try the [Gift Idea Generator](/#gift-generator).
 
 ## Related Gift Guides You'll Love
 

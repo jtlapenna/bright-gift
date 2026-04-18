@@ -9,12 +9,6 @@
   # Performance headers
   X-DNS-Prefetch-Control: on
 
-/sitemap.xml
-  X-Robots-Tag: noindex
-
-/robots.txt
-  X-Robots-Tag: noindex
-
 /site.webmanifest
   X-Robots-Tag: noindex
 

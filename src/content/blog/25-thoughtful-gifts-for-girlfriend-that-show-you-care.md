@@ -252,7 +252,7 @@ This lands when her morning or getting-ready routine matters to her. It is pract
 
 If you keep bouncing between ideas, choose the gift that best fits a real routine: the way she gets ready, winds down, reads, plans, travels, exercises, or remembers things. A gift that slides naturally into her life almost always feels more caring than a romantic idea that looks better in theory than in practice.
 
-If you want more help narrowing the lane, try the [Gift Idea Generator](/gift-idea-generator/).
+If you want more help narrowing the lane, try the [Gift Idea Generator](/#gift-generator).
 
 ## Related Gift Guides
 
