@@ -201,6 +201,7 @@ If you still want help narrowing it down, use the [Gift Idea Generator](/#gift-g
 
 ## Related Gift Guides You'll Love
 
+- [Last-Minute Mother's Day Gifts That Still Feel Thoughtful](/blog/last-minute-mothers-day-gifts-that-still-feel-thoughtful/) - Best if shipping cutoffs are close and you need a fast gift that still feels personal
 - [Luxurious Self-Care Gifts for Moms](/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore/) - Better if you know she wants pure rest, pampering, and calm
 - [Be Rooted Planners, Journals, and Desk Accessories](/blog/be-rooted-planners-stationery/) - Great for moms who love planning, journaling, and beautiful stationery
 - [Gifts for Plant Lovers](/blog/gifts-for-plant-lovers/) - A strong companion for moms who garden or keep the house full of greenery

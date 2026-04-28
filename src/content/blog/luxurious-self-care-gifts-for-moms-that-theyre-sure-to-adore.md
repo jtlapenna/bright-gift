@@ -192,6 +192,7 @@ For the mom who really wants quiet time more than another product, a good book p
 
 ## Related Gift Guides You'll Love
 
+- [Last-Minute Mother's Day Gifts That Still Feel Thoughtful](/blog/last-minute-mothers-day-gifts-that-still-feel-thoughtful/) - Useful when you need a fast self-care or keepsake option that does not look rushed
 - [Be Rooted Planners, Journals, and Desk Accessories](/blog/be-rooted-planners-stationery/) - Great for moms who love planning, journaling, and beautiful stationery
 - [Little Luxuries Under $25](/blog/little-luxuries-under-25-mini-splurges-major-wow/) - Useful if you want a smaller add-on or budget-friendly pampering gift
 - [Top Gifts for Yoga Enthusiasts](/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners/) - Better for movement, recovery, and wellness-focused routines

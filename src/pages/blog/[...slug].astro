@@ -85,6 +85,10 @@ const image = post.data.image || fallbackImage;
 // const imageJpg = post.data.imageJpg; // REMOVED - causes 404 errors
 const ogImage = post.data.ogImage || image;
 const socialImage = post.data.socialImage || ogImage;
+const imageWidth = post.data.imageWidth || 1200;
+const imageHeight = post.data.imageHeight || 630;
+const ogImageWidth = post.data.ogImageWidth || post.data.imageWidth || imageWidth;
+const ogImageHeight = post.data.ogImageHeight || post.data.imageHeight || imageHeight;
 const keywords = post.data.keywords || fallbackKeywords;
 const date = post.data.date || post.data.pubDate || fallbackDate;
 const lastUpdated = sanitizeLastUpdated(post.data.lastUpdated);
@@ -130,8 +134,8 @@ const structuredData = {
   "image": {
     "@type": "ImageObject",
     "url": image.startsWith('http') ? image : `https://bright-gift.com${image.startsWith('/') ? '' : '/'}${image}`,
-    "width": 1200,
-    "height": 630
+    "width": imageWidth,
+    "height": imageHeight
   },
   "datePublished": date,
   "dateModified": lastUpdated || date,
@@ -157,7 +161,7 @@ const structuredData = {
   },
   "articleSection": isGiftGuide ? "Gift Guides" : "Blog",
   "keywords": Array.isArray(keywords) ? keywords.join(', ') : keywords,
-  "wordCount": post.body.length,
+  "wordCount": wordCount,
   "timeRequired": `PT${readTime}M`
 };
 
@@ -281,6 +285,10 @@ if (relatedPosts.length > 0) {
   image={image}
   ogImage={ogImage}
   twitterImage={socialImage}
+  imageWidth={imageWidth}
+  imageHeight={imageHeight}
+  ogImageWidth={ogImageWidth}
+  ogImageHeight={ogImageHeight}
   keywords={keywords}
   canonical={canonicalUrl}
   ogType="article"
