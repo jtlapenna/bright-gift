@@ -1,0 +1,14 @@
+{
+  "slug": "last-minute-mothers-day-gifts-that-still-feel-thoughtful",
+  "model": "gpt-image-1.5",
+  "prompts": [
+    {
+      "label": "banner",
+      "text": "Create a 3:2 blog banner at 1536x1024 in the same visual family as the BrightGift banners for personalized gifts for kids, sleep tech gifts, teacher gifts, eco-friendly outdoor gifts, human connection, gift memory psychology, and 80th birthday gifts for seniors. Build one cohesive close-up tabletop Mother's Day vignette, not a catalog lineup: a coral greeting card, teal tea cup, small framed family-photo illustration, soft folded robe shape, tiny potted herb, and central gift box or card arranged in overlapping layers with saturated teal, coral-orange, sunshine yellow, peach, cream, and warm orange gradients; no text, logos, brand names, watermarks, realistic fabric, wood grain, detailed faces, or botanical realism. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic."
+    },
+    {
+      "label": "og",
+      "text": "Create a 3:2 Open Graph image at 1536x1024 in the same visual family as the BrightGift banners for personalized gifts for kids, sleep tech gifts, teacher gifts, eco-friendly outdoor gifts, human connection, gift memory psychology, and 80th birthday gifts for seniors. Compose one focused, centered Mother's Day gift vignette with overlapping objects rather than a product row: a coral card with a simple heart shape, teal tea cup, small gift box with ribbon, tiny abstract framed family-photo shape, and small flower sprig on a saturated teal-coral-yellow gradient background; no text, logos, brand names, watermarks, realistic fabric, wood grain, detailed faces, or botanical realism. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic."
+    }
+  ]
+}

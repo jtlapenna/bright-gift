@@ -432,6 +432,7 @@ Ready to find the perfect gift for any situation? Try our [AI Gift Idea Generato
 
 ## Related guides to keep exploring
 
+- [Last-Minute Mother's Day Gifts That Still Feel Thoughtful](/blog/last-minute-mothers-day-gifts-that-still-feel-thoughtful/)
 - [AI-Powered Gift Ideas for Every Budget](/blog/ai-powered-gift-ideas-for-every-budget/)
 - [How to Choose the Perfect Gift: A Complete Guide](/blog/how-to-choose-the-perfect-gift-complete-guide/)
 - [Gift Giving Statistics: What People Really Want in 2024](/blog/gift-giving-statistics-what-people-really-want/)

@@ -9,6 +9,10 @@ export interface Props {
 	image?: string;
 	ogImage?: string;
 	twitterImage?: string;
+	imageWidth?: number;
+	imageHeight?: number;
+	ogImageWidth?: number;
+	ogImageHeight?: number;
 	keywords?: string[];
 	canonical?: string;
 	ogType?: string;
@@ -31,6 +35,10 @@ const {
 	image = "/images/homepage-banner.webp",
 	ogImage,
 	twitterImage,
+	imageWidth = 1200,
+	imageHeight = 630,
+	ogImageWidth,
+	ogImageHeight,
 	keywords = ["gift ideas", "AI gifts", "personalized gifts", "gift finder", "gift recommendations", "birthday gifts", "holiday gifts"],
 	canonical,
 	ogType = "website",
@@ -63,6 +71,8 @@ if (!canonical && !isHome && !canonicalUrl.includes('?') && !canonicalUrl.includ
 const fullImageUrl = image.startsWith('http') ? image : new URL(image, Astro.site || Astro.url.origin).toString();
 const resolvedOgImage = ogImage || image;
 const resolvedTwitterImage = twitterImage || ogImage || image;
+const resolvedOgImageWidth = ogImageWidth || imageWidth;
+const resolvedOgImageHeight = ogImageHeight || imageHeight;
 const fullOgImageUrl = resolvedOgImage.startsWith('http') ? resolvedOgImage : new URL(resolvedOgImage, Astro.site || Astro.url.origin).toString();
 const fullTwitterImageUrl = resolvedTwitterImage.startsWith('http') ? resolvedTwitterImage : new URL(resolvedTwitterImage, Astro.site || Astro.url.origin).toString();
 
@@ -122,8 +132,8 @@ const breadcrumbStructuredData = breadcrumbs ? {
 		<meta property="og:title" content={titleTag} />
 		<meta property="og:description" content={descriptionTag} />
 		<meta property="og:image" content={fullOgImageUrl} />
-		<meta property="og:image:width" content="1200" />
-		<meta property="og:image:height" content="630" />
+		<meta property="og:image:width" content={resolvedOgImageWidth.toString()} />
+		<meta property="og:image:height" content={resolvedOgImageHeight.toString()} />
 		<meta property="og:site_name" content="BrightGift" />
 		<meta property="og:locale" content="en_US" />
 		

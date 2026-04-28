@@ -61,6 +61,10 @@ const blog = defineCollection({
     })).optional(),
     // Social and Open Graph
     ogImage: z.string().optional(),
+    imageWidth: z.number().optional(),
+    imageHeight: z.number().optional(),
+    ogImageWidth: z.number().optional(),
+    ogImageHeight: z.number().optional(),
     twitterCard: z.string().optional(),
     // Content metadata
     readTime: z.number().optional(),
