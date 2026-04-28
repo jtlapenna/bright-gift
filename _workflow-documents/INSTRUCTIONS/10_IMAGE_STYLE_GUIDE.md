@@ -180,19 +180,28 @@ Instead of just showing a gift, illustrate the *feeling* or *experience* of rece
 ### 10. Image Dimensions & Ratios
 
 **Banner Images:**
-- **Aspect Ratio:** 16:9 (wide horizontal)
-- **Width:** 1200px minimum
+- **Aspect Ratio:** 3:2 (wide horizontal)
+- **Size:** 1536×1024px
 - **Composition:** Wide, horizontal layouts with multiple elements or scenes
+- **Text:** Never include visible text, typography, logos, watermarks, brand names, or product labels
 
 **OG (Open Graph) Images:**
-- **Aspect Ratio:** 16:9 (wide horizontal)
-- **Width:** 1200px minimum
+- **Aspect Ratio:** 3:2 (wide horizontal)
+- **Size:** 1536×1024px
 - **Composition:** Focused, centered compositions with single strong focal point
+- **Text:** Never include visible text, typography, logos, watermarks, brand names, or product labels
+
+**Instagram Feed Images:**
+- **Aspect Ratio:** 4:5 portrait
+- **Size:** 1080×1350px
+- **Composition:** Strong vertical layout with a short text hook and supporting illustration
+- **Text:** Required or encouraged for promotional Instagram images; keep it to 3-7 words, large, high-contrast, and inside safe margins
+- **Use Case:** Social sharing only, not blog banner or OG metadata
 
 ### 11. Critical Requirements
 
 **NEVER Include:**
-- Text or typography of any kind
+- Text or typography in banner or OG images
 - Logos or watermarks
 - Brand names or product labels visible in the image
 - Realistic or photorealistic rendering
@@ -206,6 +215,12 @@ Instead of just showing a gift, illustrate the *feeling* or *experience* of rece
 - Clean, balanced compositions
 - Vibrant but soft pastel colors
 - Dynamic, engaging arrangement
+
+**Text Exception for Instagram/Social Images:**
+- Instagram feed images may include text because their job is to explain the post in-feed.
+- Use a short title/hook only, such as `Last-Minute Mom Gifts` or `Gifts That Feel Thoughtful`.
+- Keep text large enough to read on mobile and avoid more than one headline plus, at most, a tiny supporting phrase.
+- Do not include logos, URLs, watermarks, affiliate labels, brand names, or dense body copy.
 
 ---
 
@@ -258,12 +273,17 @@ When generating images, always include these keywords:
 
 **For Banner Images:**
 ```
-[Subject matter description with dynamic composition] arranged in a [flowing/organic/floating] manner with [specific elements] positioned at varying depths. [Background description with gradient/split colors]. [Special effects or decorative elements]. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic.
+Create a 3:2 blog banner at 1536x1024 featuring [subject matter] in one cohesive vignette, not a catalog lineup: [specific objects] arranged in overlapping layers with saturated teal, coral-orange, sunshine yellow, peach, cream, and warm orange gradients; no text, logos, brand names, watermarks, realistic textures, hard lighting, product-label detail, or ecommerce still-life composition. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic.
 ```
 
 **For OG Images:**
 ```
-Centered composition featuring [single focal element or small curated group] as the main subject, surrounded by [supporting elements] with [background treatment]. [Special effects or decorative elements]. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic.
+Create a 3:2 Open Graph image at 1536x1024 with one focused, centered [subject] vignette, bold enough to read at social-preview size: [specific objects] on a saturated teal-coral-yellow gradient background with gentle glow, soft shadows, and tiny 2D sparkle accents; no text, logos, brand names, watermarks, realistic textures, hard lighting, product-label detail, or ecommerce still-life composition. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic.
+```
+
+**For Instagram Feed Images:**
+```
+Create a 4:5 Instagram feed image at 1080x1350 for [blog post topic], with a large readable headline that says `[3-7 word headline]` and a supporting BrightGift-style illustration of [specific objects/scene] arranged around the text with safe margins, high contrast, saturated teal/coral/yellow gradients, soft glow, and small sparkle accents; no logos, URLs, watermarks, brand names, affiliate labels, or small unreadable copy. Modern flat illustration with soft 3D-style characters and objects, combined with subtle 2D decorative elements. Use warm, vibrant pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700). Layout must be clean and giftable, using rounded forms, balanced negative space, and minimal visual clutter. The tone should feel cheerful, light, editorial, and creative — never realistic or photorealistic.
 ```
 
 ---
@@ -278,11 +298,12 @@ Before finalizing any image prompt, verify:
 - [ ] Rounded edges and soft shadows included
 - [ ] Gradient or split-color background specified
 - [ ] Subject matter is creative (concept/scene, not just products)
-- [ ] No text, logos, or watermarks mentioned
+- [ ] No text, logos, or watermarks in banner or OG prompts
+- [ ] Instagram prompts use 1080×1350, 4:5 portrait, and one short readable text hook
 - [ ] Soft, diffused lighting specified
 - [ ] Ample negative space for clean feel
 - [ ] Style signature included at end of prompt
-- [ ] Dimensions/aspect ratio specified (16:9, 1200px wide)
+- [ ] Dimensions/aspect ratio specified (`1536x1024` 3:2 for banner/OG, `1080x1350` 4:5 for Instagram)
 
 ---
 
@@ -300,4 +321,3 @@ Before finalizing any image prompt, verify:
 ---
 
 *This style guide ensures all BrightGift images maintain visual consistency while encouraging creative, engaging compositions that elevate the brand and effectively communicate the essence of thoughtful gift-giving.*
-

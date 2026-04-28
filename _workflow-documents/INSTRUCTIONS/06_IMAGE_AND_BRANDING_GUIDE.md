@@ -120,11 +120,12 @@ This is the single source of truth for all visual branding, image creation, and 
 - **Usage:** Falls back to banner image if not provided
 
 #### **Social Media Images**
-- **Size:** 1200×1200px (1:1 square ratio) ✅ **VERIFIED**
+- **Instagram Feed Size:** 1080×1350px (4:5 portrait ratio) ✅ **PREFERRED**
+- **Square Fallback:** 1200×1200px (1:1 square ratio) for non-Instagram uses or legacy assets
 - **Format:** WebP for optimization
-- **Text:** Text allowed and encouraged (include blog title)
+- **Text:** Text allowed and encouraged for Instagram/social promo images; use a short readable title or hook
 - **Purpose:** Instagram, Pinterest, Facebook posts
-- **Style:** Square layout with prominent title text
+- **Style:** Portrait layout with prominent title text and BrightGift-style supporting illustration
 - **Usage:** Falls back to OG image if not provided
 
 #### **Blog Index Thumbnails**
@@ -170,6 +171,7 @@ This file contains:
 **Key Requirements:**
 - **Banner images:** 3:2 ratio (1536×1024), no text or logos
 - **OG images:** 3:2 ratio (1536×1024), no text or logos  
+- **Instagram feed images:** 4:5 ratio (1080×1350), short readable text encouraged
 - **Style:** Modern flat illustration with 3D cartoon objects and 2D decorative elements
 - **Colors:** Warm pastels (teal #00A99D, coral-orange #FF6B35, sunshine yellow #FFD700)
 - **Tone:** Cheerful, light, editorial, creative — never realistic or photorealistic
@@ -269,8 +271,8 @@ This file contains:
 ## 📊 **Brand Application Examples**
 
 ### **Blog Content**
-- **Banner Images:** Gift-themed flat-lay compositions with brand colors
-- **Social Posts:** Square images with blog titles and engaging visuals
+- **Banner Images:** Cohesive gift-themed vignettes with overlapping rounded objects, saturated gradients, and brand colors
+- **Social Posts:** Instagram-optimized 4:5 portrait images with short blog-title hooks and engaging visuals
 - **Thumbnails:** Consistent style across all blog post previews
 
 ### **Website Elements**
@@ -279,7 +281,7 @@ This file contains:
 - **Category Pages:** Organized layouts with brand-consistent imagery
 
 ### **Social Media**
-- **Instagram Posts:** Square format with title text and brand colors
+- **Instagram Posts:** 4:5 portrait format (`1080×1350`) with short title text and brand colors
 - **Pinterest Pins:** Vertical format optimized for Pinterest discovery
 - **Facebook Posts:** Horizontal format for optimal engagement
 
