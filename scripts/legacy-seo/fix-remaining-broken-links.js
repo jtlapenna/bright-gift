@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+// Archived one-off fixer. Do not run as active SEO tooling.
+
 const fs = require('fs');
 const path = require('path');
 

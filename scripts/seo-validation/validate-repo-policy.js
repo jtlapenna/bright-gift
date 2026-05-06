@@ -23,11 +23,7 @@ const ACTIVE_GLOBS = [
   'package.json',
   'src/**/*.{astro,ts,tsx,js,jsx,mjs,cjs,md}',
   'public/**/*.{txt,xml,html}',
-  'scripts/generate-sitemap.js',
-  'scripts/blog-enhancer.js',
-  'scripts/create-blog-automation.js',
-  'scripts/seo-validation/**/*.js',
-  'scripts/utilities/**/*.js',
+  'scripts/**/*.js',
   '_workflow-documents/seo/**/*.{md,txt}'
 ];
 
@@ -36,10 +32,10 @@ const SKIP_FILES = new Set([
 ]);
 
 const SKIP_PATH_PARTS = [
-  `${path.sep}_workflow-documents${path.sep}SEO_audit${path.sep}`,
-  `${path.sep}_workflow-documents${path.sep}archive${path.sep}`,
-  `${path.sep}_workflow-documents${path.sep}seo${path.sep}legacy-seo${path.sep}`,
-  `${path.sep}scripts${path.sep}legacy-seo${path.sep}`
+  '_workflow-documents/SEO_audit/',
+  '_workflow-documents/archive/',
+  '_workflow-documents/seo/legacy-seo/',
+  'scripts/legacy-seo/'
 ];
 
 const FAQ_SYNC_TARGETS = [
@@ -51,7 +47,7 @@ const FAQ_SYNC_TARGETS = [
 const FULL_NO_SLASH_URL_RE =
   /(https:\/\/bright-gift\.com\/blog\/[a-z0-9-]+(?:\.md)?)(?=(?:['")\]\s]|$))/g;
 const RELATIVE_NO_SLASH_PATH_RE =
-  /(\/blog\/[a-z0-9-]+)(?=(?:['")\]\s]|$))/g;
+  /(?<![A-Za-z0-9_-])(\/blog\/[a-z0-9-]+)(?=(?:['")\]\s]|$))/g;
 const MD_PUBLIC_URL_RE =
   /(https:\/\/bright-gift\.com\/blog\/[a-z0-9-]+\.md)(?=(?:['")\]\s]|$))/g;
 
@@ -84,7 +80,7 @@ function shouldSkip(filePath) {
     return true;
   }
 
-  return SKIP_PATH_PARTS.some((segment) => filePath.includes(segment));
+  return SKIP_PATH_PARTS.some((segment) => normalized.includes(segment));
 }
 
 function normalizeQuestion(value) {
