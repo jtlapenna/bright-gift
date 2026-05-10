@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-04-28T18:55:30.197Z",
+  "timestamp": "2026-05-10T19:18:27.559Z",
   "summary": {
-    "totalFiles": 57,
-    "totalLinks": 1532,
-    "brokenLinks": 11,
-    "externalLinks": 1009,
-    "internalLinks": 523
+    "totalFiles": 58,
+    "totalLinks": 1574,
+    "brokenLinks": 13,
+    "externalLinks": 1035,
+    "internalLinks": 539
   },
   "errors": [
     {
@@ -65,16 +65,30 @@
       "severity": "error"
     },
     {
-      "file": "gaming-gifts-2025.md",
-      "line": 115,
-      "message": "External link is not accessible: https://www.amazon.com/dp/B0DR8V899R?tag=bright-gift-20",
+      "file": "fathers-day-gifts-for-every-type-of-dad.md",
+      "line": 3,
+      "message": "External link is not accessible: https://www.timeanddate.com/holidays/us/fathers-day",
       "fix": "Check if the URL is correct and the site is online",
       "severity": "error"
     },
     {
       "file": "gaming-gifts-2025.md",
-      "line": 271,
-      "message": "External link is not accessible: https://www.amazon.com/dp/B0FQXR2NPH?tag=bright-gift-20",
+      "line": 58,
+      "message": "External link is not accessible: https://www.amazon.com/Elgato-Stream-Deck-Neo-Customizable/dp/B0CVY4566H?tag=bright-gift-20",
+      "fix": "Check if the URL is correct and the site is online",
+      "severity": "error"
+    },
+    {
+      "file": "gaming-gifts-2025.md",
+      "line": 107,
+      "message": "External link is not accessible: https://www.amazon.com/dp/B0FFGRQ6XY?tag=bright-gift-20",
+      "fix": "Check if the URL is correct and the site is online",
+      "severity": "error"
+    },
+    {
+      "file": "gaming-gifts-2025.md",
+      "line": 139,
+      "message": "External link is not accessible: https://www.amazon.com/dp/B08N612MC8?tag=bright-gift-20",
       "fix": "Check if the URL is correct and the site is online",
       "severity": "error"
     },

@@ -1,41 +1,272 @@
 {
-  "timestamp": "2025-10-03T18:32:43.187Z",
+  "timestamp": "2026-05-10T19:20:01.251Z",
   "summary": {
-    "totalFiles": 44,
-    "validSchemas": 41,
-    "invalidSchemas": 3,
+    "totalFiles": 58,
+    "validSchemas": 25,
+    "invalidSchemas": 33,
     "missingSchemas": 0,
     "schemaTypes": {
-      "Article": 41
+      "Article": 25
     }
   },
   "errors": [
     {
-      "file": "ai-powered-gift-ideas-for-every-budget.md",
+      "file": "25-amazing-gifts-from-black-owned-businesses-under-75.md",
       "line": 0,
-      "message": "Title too long: 62 characters (max 60)",
-      "fix": "Shorten title to 60 characters or less",
+      "message": "Description too long: 177 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
       "severity": "error"
     },
     {
-      "file": "ai-powered-gift-ideas-for-every-budget.md",
+      "file": "25-books-to-gift-this-holiday-season.md",
       "line": 0,
       "message": "Description too long: 174 characters (max 160)",
       "fix": "Shorten description to 160 characters or less",
       "severity": "error"
     },
     {
-      "file": "ai-tiktok-made-me-buy-it-gifts-2025.md",
+      "file": "25-thoughtful-housewarming-gifts-for-new-homeowners-under-75.md",
       "line": 0,
-      "message": "Title too long: 70 characters (max 60)",
+      "message": "Description too long: 188 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "25-unique-anniversary-gift-ideas-under-50.md",
+      "line": 0,
+      "message": "Description too long: 193 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "30-unique-gift-ideas-for-new-parents-baby-shower-beyond.md",
+      "line": 0,
+      "message": "Description too long: 178 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "affordable-gifts-for-pet-lovers-under-30.md",
+      "line": 0,
+      "message": "Description too long: 184 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "be-rooted-planners-stationery.md",
+      "line": 0,
+      "message": "Description too long: 194 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "best-books-for-different-reading-levels.md",
+      "line": 0,
+      "message": "Description too long: 190 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "best-gifts-for-teachers.md",
+      "line": 0,
+      "message": "Title too long: 65 characters (max 60)",
       "fix": "Shorten title to 60 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "best-gifts-for-teachers.md",
+      "line": 0,
+      "message": "Description too long: 176 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "best-holiday-gifts-for-dads-2025.md",
+      "line": 0,
+      "message": "Title too long: 73 characters (max 60)",
+      "fix": "Shorten title to 60 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "best-holiday-gifts-for-dads-2025.md",
+      "line": 0,
+      "message": "Description too long: 194 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "best-holiday-gifts-for-moms-2025.md",
+      "line": 0,
+      "message": "Title too long: 63 characters (max 60)",
+      "fix": "Shorten title to 60 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "best-home-gifts-on-amazon-2024.md",
+      "line": 0,
+      "message": "Description too long: 187 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
       "severity": "error"
     },
     {
       "file": "christmas-gift-ideas-2025.md",
       "line": 0,
-      "message": "Title too long: 72 characters (max 60)",
+      "message": "Title too long: 63 characters (max 60)",
       "fix": "Shorten title to 60 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "clean-girl-2-0-minimalist-gifts-with-personality.md",
+      "line": 0,
+      "message": "Description too long: 183 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "emergency-gift-guide-30-last-minute-present-ideas.md",
+      "line": 0,
+      "message": "Title too long: 73 characters (max 60)",
+      "fix": "Shorten title to 60 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "emergency-gift-guide-30-last-minute-present-ideas.md",
+      "line": 0,
+      "message": "Description too long: 173 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "fun-gifts-for-kids-birthday-parties.md",
+      "line": 0,
+      "message": "Description too long: 180 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "gaming-gifts-2025.md",
+      "line": 0,
+      "message": "Description too long: 172 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience.md",
+      "line": 0,
+      "message": "Description too long: 185 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "gifts-for-girlfriend-unique-romantic-ideas.md",
+      "line": 0,
+      "message": "Description too long: 172 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "gifts-for-new-grandparents.md",
+      "line": 0,
+      "message": "Description too long: 164 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "gifts-for-new-homeowners-2025.md",
+      "line": 0,
+      "message": "Description too long: 183 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "gifts-for-remote-workers-and-wfh-professionals.md",
+      "line": 0,
+      "message": "Title too long: 62 characters (max 60)",
+      "fix": "Shorten title to 60 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "gifts-for-remote-workers-under-50.md",
+      "line": 0,
+      "message": "Description too long: 188 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "how-ai-is-revolutionizing-gift-shopping-complete-guide.md",
+      "line": 0,
+      "message": "Description too long: 202 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "how-to-choose-the-perfect-gift-complete-guide.md",
+      "line": 0,
+      "message": "Description too long: 186 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "last-minute-birthday-gifts-for-busy-professionals.md",
+      "line": 0,
+      "message": "Description too long: 192 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "little-hero-labs-personalized-childrens-book.md",
+      "line": 0,
+      "message": "Title too long: 65 characters (max 60)",
+      "fix": "Shorten title to 60 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "little-luxuries-under-25-mini-splurges-major-wow.md",
+      "line": 0,
+      "message": "Description too long: 170 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "mothers-day-gifts-for-every-type-of-mom.md",
+      "line": 0,
+      "message": "Title too long: 61 characters (max 60)",
+      "fix": "Shorten title to 60 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "the-science-of-human-connection-why-we-need-each-other.md",
+      "line": 0,
+      "message": "Description too long: 178 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners.md",
+      "line": 0,
+      "message": "Description too long: 192 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple.md",
+      "line": 0,
+      "message": "Title too long: 67 characters (max 60)",
+      "fix": "Shorten title to 60 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple.md",
+      "line": 0,
+      "message": "Description too long: 163 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
+      "severity": "error"
+    },
+    {
+      "file": "why-we-remember-gifts-we-give-more-than-receive.md",
+      "line": 0,
+      "message": "Description too long: 188 characters (max 160)",
+      "fix": "Shorten description to 160 characters or less",
       "severity": "error"
     }
   ],

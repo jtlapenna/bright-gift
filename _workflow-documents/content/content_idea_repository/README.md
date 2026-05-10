@@ -1,11 +1,63 @@
 # Content Idea Repository
 
-**Last Updated:** January 2025  
+**Last Updated:** May 10, 2026
 **Purpose:** Centralized location for all blog post content ideas and prompts
 
 ---
 
 ## 📋 Current Ideas
+
+### May 2026 Trending Topic Batch (Write Next)
+
+1. **[Father's Day Gifts for Every Type of Dad](./11-fathers-day-gifts-for-every-type-of-dad.md)**
+   - Status: Published 2026-05-10
+   - Priority: URGENT
+   - Keywords: Father's Day gifts, gifts for dad, gifts for every type of dad
+
+2. **[Last-Minute Father's Day Gifts That Still Feel Personal](./12-last-minute-fathers-day-gifts-that-still-feel-personal.md)**
+   - Status: Not Started
+   - Priority: HIGH
+   - Keywords: last-minute Father's Day gifts, same-day Father's Day gifts
+
+3. **[Graduation Gifts That Are More Useful Than Cash](./13-graduation-gifts-more-useful-than-cash.md)**
+   - Status: Not Started
+   - Priority: HIGH
+   - Keywords: graduation gifts, useful graduation gifts, gifts for graduates
+
+4. **[Wedding Gifts for Couples Who Already Live Together](./14-wedding-gifts-for-couples-who-already-live-together.md)**
+   - Status: Not Started
+   - Priority: HIGH
+   - Keywords: wedding gifts for couples who already live together, useful wedding gifts
+
+5. **[America 250 Fourth of July Host Gifts](./15-america-250-fourth-of-july-host-gifts.md)**
+   - Status: Not Started
+   - Priority: MEDIUM-HIGH
+   - Keywords: Fourth of July host gifts, America 250 gifts
+
+6. **[Juneteenth Gifts from Black-Owned Businesses](./16-juneteenth-gifts-from-black-owned-businesses.md)**
+   - Status: Not Started
+   - Priority: MEDIUM-HIGH
+   - Keywords: Juneteenth gifts, Black-owned business gifts
+
+7. **[Wearable Tech Gifts That Are Actually Useful](./17-wearable-tech-gifts-that-are-actually-useful.md)**
+   - Status: Not Started
+   - Priority: MEDIUM-HIGH
+   - Keywords: wearable tech gifts, smart ring gifts, wellness tech gifts
+
+8. **[Plush and Collectible Gifts for Grownups](./18-plush-and-collectible-gifts-for-grownups.md)**
+   - Status: Not Started
+   - Priority: MEDIUM
+   - Keywords: collectible gifts for adults, plush gifts for adults, kidult gifts
+
+9. **[Snail Mail Gifts, Stationery, and Keepsakes](./19-snail-mail-gifts-stationery-and-keepsakes.md)**
+   - Status: Not Started
+   - Priority: MEDIUM
+   - Keywords: stationery gifts, snail mail gifts, pen pal gifts
+
+10. **[AI Gadgets That Make Good Gifts and Which to Skip](./20-ai-gadgets-that-make-good-gifts-and-which-to-skip.md)**
+    - Status: Not Started
+    - Priority: MEDIUM
+    - Keywords: AI gadgets, AI gifts, AI gadget gifts
 
 ### High Priority (Write Next)
 
@@ -107,6 +159,7 @@
 
 ## 📊 Idea Sources
 
+- `11-20` May 2026 trend batch - Internet research on Father's Day, graduation, wedding season, America250, Juneteenth, wearables, plush/collectibles, Pinterest Predicts, and AI gadgets
 - `high-potential-post-ideas-2025-10.md` - Original October 2025 list
 - `CONTENT-CREATION-MASTER-LIST.md` - Phase 2 & 3 ideas
 - `PRIORITY-TASK-LIST-2025-01.md` - Additional deferred ideas
@@ -114,4 +167,3 @@
 ---
 
 **Note:** All ideas in this repository are ready for development. Each includes complete briefs with content structure, SEO strategy, and implementation guidance.
-

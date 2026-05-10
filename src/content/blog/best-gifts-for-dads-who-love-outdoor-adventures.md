@@ -73,7 +73,7 @@ socialImageAlt: Best Gifts for Dads Who Love Outdoor Adventures social preview i
 ---
 The best gifts for dads who love outdoor adventures feel useful the next weekend, not someday. Some dads are hikers. Others care more about camping comfort, fishing mornings, road-trip gear, or a better backyard setup for fire pit nights. This guide focuses on durable, practical picks that support the kind of time he already enjoys outside.
 
-If you are building a more tailored gift stack, pair this page with [Eco-Friendly Gifts for Outdoor Lovers](/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/), [Eco-Friendly Gift Ideas for Every Budget](/blog/eco-friendly-gift-ideas-for-every-budget/), [Gifts for Plant Lovers](/blog/gifts-for-plant-lovers/), and [How to Choose the Perfect Gift](/blog/how-to-choose-the-perfect-gift-complete-guide/).
+If you are building a more tailored gift stack, pair this page with the broader [Father's Day Gifts for Every Type of Dad](/blog/fathers-day-gifts-for-every-type-of-dad/), [Eco-Friendly Gifts for Outdoor Lovers](/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/), [Eco-Friendly Gift Ideas for Every Budget](/blog/eco-friendly-gift-ideas-for-every-budget/), [Gifts for Plant Lovers](/blog/gifts-for-plant-lovers/), and [How to Choose the Perfect Gift](/blog/how-to-choose-the-perfect-gift-complete-guide/).
 
 ## Quick Picks by Dad Type
 
@@ -173,6 +173,7 @@ For a bigger-ticket gift, a portable fire pit is memorable without being gimmick
 ## Related Gift Guides You'll Love
 
 - [Eco-Friendly Gifts for Outdoor Lovers](/blog/eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature/) - Great if he hikes, camps, or prefers practical gear with a lower-waste angle
+- [Father's Day Gifts for Every Type of Dad](/blog/fathers-day-gifts-for-every-type-of-dad/) - Better if you want a broader hub across tech, food, books, wellness, and sentimental dad gifts
 - [Eco-Friendly Gift Ideas for Every Budget](/blog/eco-friendly-gift-ideas-for-every-budget/) - Useful for sustainable everyday upgrades that still feel giftable
 - [Gifts for Plant Lovers](/blog/gifts-for-plant-lovers/) - A better fit for dads who garden, landscape, or care more about the yard than the trail
 - [How to Choose the Perfect Gift](/blog/how-to-choose-the-perfect-gift-complete-guide/) - Helpful if you are still narrowing the gift around hobbies, budget, and personality

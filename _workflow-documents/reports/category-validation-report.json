@@ -1,17 +1,75 @@
 {
-  "timestamp": "2025-10-03T18:32:42.988Z",
+  "timestamp": "2026-05-10T19:17:36.105Z",
   "summary": {
-    "totalFiles": 44,
-    "validCategories": 44,
-    "invalidCategories": 0,
+    "totalFiles": 58,
+    "validCategories": 50,
+    "invalidCategories": 8,
     "legacyCategories": 0,
     "missingCategories": 0
   },
   "categoryUsage": {
-    "gift-guides": 39,
+    "gift-guides": 45,
+    "gift-guide": 8,
     "data-driven": 1,
     "educational": 4
   },
-  "errors": [],
+  "errors": [
+    {
+      "file": "80th-birthday-gift-ideas-seniors.md",
+      "line": 0,
+      "message": "Invalid category 'gift-guide'",
+      "fix": "Use one of: gift-guides, gift-tips, educational, data-driven",
+      "severity": "error"
+    },
+    {
+      "file": "best-holiday-gifts-for-dads-2025.md",
+      "line": 0,
+      "message": "Invalid category 'gift-guide'",
+      "fix": "Use one of: gift-guides, gift-tips, educational, data-driven",
+      "severity": "error"
+    },
+    {
+      "file": "best-holiday-gifts-for-moms-2025.md",
+      "line": 0,
+      "message": "Invalid category 'gift-guide'",
+      "fix": "Use one of: gift-guides, gift-tips, educational, data-driven",
+      "severity": "error"
+    },
+    {
+      "file": "emergency-gift-guide-30-last-minute-present-ideas.md",
+      "line": 0,
+      "message": "Invalid category 'gift-guide'",
+      "fix": "Use one of: gift-guides, gift-tips, educational, data-driven",
+      "severity": "error"
+    },
+    {
+      "file": "gaming-gifts-2025.md",
+      "line": 0,
+      "message": "Invalid category 'gift-guide'",
+      "fix": "Use one of: gift-guides, gift-tips, educational, data-driven",
+      "severity": "error"
+    },
+    {
+      "file": "little-hero-labs-personalized-childrens-book.md",
+      "line": 0,
+      "message": "Invalid category 'gift-guide'",
+      "fix": "Use one of: gift-guides, gift-tips, educational, data-driven",
+      "severity": "error"
+    },
+    {
+      "file": "sleep-tech-gifts-that-really-work.md",
+      "line": 0,
+      "message": "Invalid category 'gift-guide'",
+      "fix": "Use one of: gift-guides, gift-tips, educational, data-driven",
+      "severity": "error"
+    },
+    {
+      "file": "unique-graduation-gifts-creative-minds.md",
+      "line": 0,
+      "message": "Invalid category 'gift-guide'",
+      "fix": "Use one of: gift-guides, gift-tips, educational, data-driven",
+      "severity": "error"
+    }
+  ],
   "warnings": []
 }

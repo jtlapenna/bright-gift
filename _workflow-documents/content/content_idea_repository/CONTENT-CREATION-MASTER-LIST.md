@@ -1,8 +1,65 @@
 # 📝 CONTENT CREATION MASTER LIST
 
-**Last Updated:** January 21, 2025  
+**Last Updated:** May 10, 2026
 **Purpose:** Consolidated list of ALL content to be written, prioritized by SEO impact  
 **For:** Developer writing new blog posts
+
+---
+
+## 🚨 CURRENT - MAY 2026 TRENDING TOPIC BATCH
+
+These ideas were added from live trend and event research on May 10, 2026. Write in this order unless a more urgent GSC or seasonal issue appears.
+
+1. **Father's Day Gifts for Every Type of Dad**
+   - Brief: `11-fathers-day-gifts-for-every-type-of-dad.md`
+   - Status: Published 2026-05-10
+   - Priority: Completed
+   - Why: Father's Day 2026 is June 21; NRF reported record 2025 Father's Day spending and strong demand for unique, memory-making gifts.
+
+2. **Last-Minute Father's Day Gifts That Still Feel Personal**
+   - Brief: `12-last-minute-fathers-day-gifts-that-still-feel-personal.md`
+   - Priority: HIGH
+   - Why: urgent mid-June spoke that can support the Father's Day hub.
+
+3. **Graduation Gifts That Are More Useful Than Cash**
+   - Brief: `13-graduation-gifts-more-useful-than-cash.md`
+   - Priority: HIGH
+   - Why: spring/summer graduation demand; NRF reported 2025 graduation spending expected to reach $6.8B.
+
+4. **Wedding Gifts for Couples Who Already Live Together**
+   - Brief: `14-wedding-gifts-for-couples-who-already-live-together.md`
+   - Priority: HIGH
+   - Why: wedding season demand plus modern registry shifts toward functionality, personalization, travel, cash funds, and upgrades.
+
+5. **America 250 Fourth of July Host Gifts**
+   - Brief: `15-america-250-fourth-of-july-host-gifts.md`
+   - Priority: MEDIUM-HIGH
+   - Why: July 4, 2026 is the 250th anniversary of the Declaration of Independence.
+
+6. **Juneteenth Gifts from Black-Owned Businesses**
+   - Brief: `16-juneteenth-gifts-from-black-owned-businesses.md`
+   - Priority: MEDIUM-HIGH
+   - Why: Juneteenth 2026 is June 19 and strengthens the existing Black-owned business gift cluster.
+
+7. **Wearable Tech Gifts That Are Actually Useful**
+   - Brief: `17-wearable-tech-gifts-that-are-actually-useful.md`
+   - Priority: MEDIUM-HIGH
+   - Why: wearables are expanding into wellness, productivity, smart rings, glasses, and healthtech.
+
+8. **Plush and Collectible Gifts for Grownups**
+   - Brief: `18-plush-and-collectible-gifts-for-grownups.md`
+   - Priority: MEDIUM
+   - Why: plush and collectible comfort gifts are a strong adult/kidult social-commerce trend.
+
+9. **Snail Mail Gifts, Stationery, and Keepsakes**
+   - Brief: `19-snail-mail-gifts-stationery-and-keepsakes.md`
+   - Priority: MEDIUM
+   - Why: Pinterest Predicts 2026 includes the analog "Pen Pals" trend.
+
+10. **AI Gadgets That Make Good Gifts and Which to Skip**
+    - Brief: `20-ai-gadgets-that-make-good-gifts-and-which-to-skip.md`
+    - Priority: MEDIUM
+    - Why: CES 2026 AI gadget momentum creates demand for practical buyer guidance.
 
 ---
 
@@ -669,4 +726,3 @@ This document consolidates content from:
 4. `REFERENCE/seo/AHREFS-KEYWORD-OPTIMIZATION-PLAN.md` (SEO strategy and keyword research)
 
 **All other content repositories should reference THIS document as the single source of truth.**
-
