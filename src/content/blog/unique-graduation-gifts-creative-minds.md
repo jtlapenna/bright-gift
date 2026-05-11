@@ -20,7 +20,7 @@ tags:
   - artistic gifts
   - gifts for graduates
   - art supplies
-category: gift-guide
+category: gift-guides
 canonical: "https://bright-gift.com/blog/unique-graduation-gifts-creative-minds/"
 faqSchema:
   "@context": "https://schema.org"

@@ -30,7 +30,7 @@ tags:
   - books
   - gift-guide
   - little-hero-labs
-category: gift-guide
+category: gift-guides
 canonical: 'https://bright-gift.com/blog/little-hero-labs-personalized-childrens-book/'
 faqSchema:
   '@context': 'https://schema.org'

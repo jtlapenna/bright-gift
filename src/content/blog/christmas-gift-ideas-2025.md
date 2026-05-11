@@ -70,7 +70,7 @@ Use this page as your broad holiday starting point, then branch out into more sp
 
 Split the list by type of win: practical upgrades, comfort gifts, sentimental gifts, and crowd-pleasing “safe bets.” That keeps you from over-buying in one category and makes it easier to match gifts to personality instead of just price.
 
-**Supporting resources:** [National Retail Federation holiday insights](https://nrf.com/insights/holiday-and-seasonal-trends) and [USPS holiday shipping updates](https://www.usps.com/holiday/holiday-shipping-dates.htm).
+**Supporting resources:** [National Retail Federation holiday spending context](https://nrf.com/media-center/press-releases/2024-holiday-spending-expected-reach-new-record) and [USPS holiday shipping updates](https://www.usps.com/holiday/holiday-shipping-dates.htm).
 
 ## 🎄 Last-Minute Christmas Gifts 2025 (Order Now for Delivery!)
 

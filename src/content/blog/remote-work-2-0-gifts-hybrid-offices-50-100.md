@@ -98,7 +98,7 @@ This guide focuses on that middle ground between everyday utility and meaningful
 
 Start with the bottleneck: comfort, focus, travel, or desk organization. Someone who complains about posture needs ergonomic gear. Someone who bounces between meetings needs better audio or charging. Someone who hot-desks needs compact tools that move easily and still look professional.
 
-**Supporting resources:** [OSHA computer workstation guidance](https://www.osha.gov/etools/computer-workstations) and [Harvard Business Review on remote work](https://hbr.org/topic/subject/remote-work).
+**Supporting resource:** [Harvard Business Review on remote work](https://hbr.org/topic/subject/remote-work).
 
 ## Ergonomic Essentials for Comfort
 

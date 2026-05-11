@@ -93,7 +93,7 @@ Use this page for the friend, partner, or coworker who likes modern tools but st
 
 The strongest tech gifts save time, reduce clutter, improve focus, or make a routine easier to maintain. Avoid products that sound futuristic but create more setup work than value after the first week.
 
-**Supporting resources:** [Wirecutter tech recommendations](https://www.nytimes.com/wirecutter/tech/) and [Harvard Business Review on AI at work](https://hbr.org/topic/subject/artificial-intelligence).
+**Supporting resources:** [Wirecutter](https://www.nytimes.com/wirecutter/) and [Harvard Business Review on remote work](https://hbr.org/topic/subject/remote-work).
 
 ## AI-Powered Gadgets That Feel Like Science Fiction
 

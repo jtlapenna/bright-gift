@@ -32,7 +32,7 @@ tags:
   - christmas
   - gift-guide
   - budget-friendly
-category: gift-guide
+category: gift-guides
 canonical: 'https://bright-gift.com/blog/best-holiday-gifts-for-dads-2025/'
 faqSchema:
   '@context': 'https://schema.org'

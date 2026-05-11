@@ -30,7 +30,7 @@ tags:
   - cozy gifts for mom
   - personalized gifts for mom
   - thoughtful gifts for mom
-category: gift-guide
+category: gift-guides
 canonical: 'https://bright-gift.com/blog/best-holiday-gifts-for-moms-2025/'
 faqSchema:
   '@context': 'https://schema.org'
@@ -96,7 +96,7 @@ If you are shopping for a mom who already buys what she needs, focus on gifts th
 
 Start by deciding whether she would value comfort, personalization, or convenience most this season. Comfort gifts work best for moms who need rest and small indulgences. Personalized gifts win when you want an emotional moment on Christmas morning. Convenience gifts are best for busy moms who appreciate anything that saves time or upgrades a daily habit.
 
-**Supporting resources:** [National Retail Federation holiday trends](https://nrf.com/insights/holiday-and-seasonal-trends) and [Consumer Reports gift advice](https://www.consumerreports.org/holiday-shopping/).
+**Supporting resources:** [National Retail Federation holiday spending context](https://nrf.com/media-center/press-releases/2024-holiday-spending-expected-reach-new-record) and [Wirecutter](https://www.nytimes.com/wirecutter/).
 
 ## Decoding What Moms Really Want for Christmas This Holiday Season
 

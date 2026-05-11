@@ -97,7 +97,7 @@ For stylish couples, the best off-registry gifts usually fit one of three lanes:
 
 A chic wedding gift should still earn regular use. Beautiful serveware, textured throws, sculptural candles, or elevated coffee-table staples work because they add atmosphere without demanding too much maintenance. The goal is not to buy the flashiest item in the room. It is to choose something the couple will reach for often enough that the gift becomes part of their life together.
 
-**Supporting resources:** [The Knot registry ideas](https://www.theknot.com/content/wedding-registry-ideas) and [Brides registry guidance](https://www.brides.com/wedding-registry-5094041).
+**Supporting resource:** [The Knot registry ideas](https://www.theknot.com/content/wedding-registry-ideas).
 
 ## Chic Wedding Gift Ideas
 

@@ -70,7 +70,7 @@ If you want adjacent ideas with less social-media energy and more category depth
 
 Look for products that fix a small recurring pain point: charging, storage, labeling, desk comfort, better sleep, or better lighting. The moment a gift only works as a joke or an unboxing clip, it is probably not strong enough to buy.
 
-**Supporting resources:** [Consumer Reports](https://www.consumerreports.org/) and [Wirecutter](https://www.nytimes.com/wirecutter/).
+**Supporting resource:** [Wirecutter](https://www.nytimes.com/wirecutter/).
 
 ## Everyday Tech & AI Helpers
 

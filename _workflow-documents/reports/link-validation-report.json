@@ -1,104 +1,12 @@
 {
-  "timestamp": "2026-05-10T19:18:27.559Z",
+  "timestamp": "2026-05-11T18:19:05.690Z",
   "summary": {
     "totalFiles": 58,
     "totalLinks": 1574,
-    "brokenLinks": 13,
-    "externalLinks": 1035,
-    "internalLinks": 539
+    "brokenLinks": 0,
+    "externalLinks": 1031,
+    "internalLinks": 543
   },
-  "errors": [
-    {
-      "file": "ai-tiktok-made-me-buy-it-gifts-2025.md",
-      "line": 11,
-      "message": "External link is not accessible: https://www.consumerreports.org/",
-      "fix": "Check if the URL is correct and the site is online",
-      "severity": "error"
-    },
-    {
-      "file": "best-2025-holiday-gifts-ai-tech-remote-work.md",
-      "line": 11,
-      "message": "External link is not accessible: https://www.nytimes.com/wirecutter/tech/",
-      "fix": "Check if the URL is correct and the site is online",
-      "severity": "error"
-    },
-    {
-      "file": "best-2025-holiday-gifts-ai-tech-remote-work.md",
-      "line": 11,
-      "message": "External link is not accessible: https://hbr.org/topic/subject/artificial-intelligence",
-      "fix": "Check if the URL is correct and the site is online",
-      "severity": "error"
-    },
-    {
-      "file": "best-holiday-gifts-for-moms-2025.md",
-      "line": 11,
-      "message": "External link is not accessible: https://nrf.com/insights/holiday-and-seasonal-trends",
-      "fix": "Check if the URL is correct and the site is online",
-      "severity": "error"
-    },
-    {
-      "file": "best-holiday-gifts-for-moms-2025.md",
-      "line": 11,
-      "message": "External link is not accessible: https://www.consumerreports.org/holiday-shopping/",
-      "fix": "Check if the URL is correct and the site is online",
-      "severity": "error"
-    },
-    {
-      "file": "chic-wedding-gifts-for-the-stylish-couple.md",
-      "line": 21,
-      "message": "External link is not accessible: https://www.brides.com/wedding-registry-5094041",
-      "fix": "Check if the URL is correct and the site is online",
-      "severity": "error"
-    },
-    {
-      "file": "christmas-gift-ideas-2025.md",
-      "line": 11,
-      "message": "External link is not accessible: https://nrf.com/insights/holiday-and-seasonal-trends",
-      "fix": "Check if the URL is correct and the site is online",
-      "severity": "error"
-    },
-    {
-      "file": "eco-friendly-gifts-for-outdoor-lovers-sustainably-celebrating-nature.md",
-      "line": 11,
-      "message": "External link is not accessible: https://lnt.org/why/7-principles/",
-      "fix": "Check if the URL is correct and the site is online",
-      "severity": "error"
-    },
-    {
-      "file": "fathers-day-gifts-for-every-type-of-dad.md",
-      "line": 3,
-      "message": "External link is not accessible: https://www.timeanddate.com/holidays/us/fathers-day",
-      "fix": "Check if the URL is correct and the site is online",
-      "severity": "error"
-    },
-    {
-      "file": "gaming-gifts-2025.md",
-      "line": 58,
-      "message": "External link is not accessible: https://www.amazon.com/Elgato-Stream-Deck-Neo-Customizable/dp/B0CVY4566H?tag=bright-gift-20",
-      "fix": "Check if the URL is correct and the site is online",
-      "severity": "error"
-    },
-    {
-      "file": "gaming-gifts-2025.md",
-      "line": 107,
-      "message": "External link is not accessible: https://www.amazon.com/dp/B0FFGRQ6XY?tag=bright-gift-20",
-      "fix": "Check if the URL is correct and the site is online",
-      "severity": "error"
-    },
-    {
-      "file": "gaming-gifts-2025.md",
-      "line": 139,
-      "message": "External link is not accessible: https://www.amazon.com/dp/B08N612MC8?tag=bright-gift-20",
-      "fix": "Check if the URL is correct and the site is online",
-      "severity": "error"
-    },
-    {
-      "file": "remote-work-2-0-gifts-hybrid-offices-50-100.md",
-      "line": 11,
-      "message": "External link is not accessible: https://www.osha.gov/etools/computer-workstations",
-      "fix": "Check if the URL is correct and the site is online",
-      "severity": "error"
-    }
-  ],
+  "errors": [],
   "warnings": []
 }

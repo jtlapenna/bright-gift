@@ -108,7 +108,7 @@ Use this page when the recipient is defined by the outdoors first and sustainabi
 
 Prioritize gear that lasts, replaces disposable habits, or comes from brands with credible repair, reuse, or recycled-material programs. Outdoor lovers usually appreciate gifts that earn a permanent place in a pack rather than something that feels “eco” only in the product title.
 
-**Supporting resources:** [Leave No Trace](https://lnt.org/why/7-principles/) and [National Park Service sustainability resources](https://www.nps.gov/subjects/sustainability/index.htm).
+**Supporting resource:** [National Park Service sustainability resources](https://www.nps.gov/subjects/sustainability/index.htm).
 
 ## Main Gift Ideas
 

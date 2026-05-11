@@ -30,7 +30,7 @@ tags:
   - last-minute
   - quick-delivery
   - digital-gifts
-category: gift-guide
+category: gift-guides
 canonical: >-
   https://bright-gift.com/blog/emergency-gift-guide-30-last-minute-present-ideas/
 faqSchema:
