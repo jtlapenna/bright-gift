@@ -173,30 +173,87 @@ const breadcrumbStructuredData = breadcrumbs ? {
 		
 		<!-- Remove brittle preloads of hashed CSS files. Astro will inject the correct CSS automatically. -->
 
-		<!-- Ahrefs Web Analytics - Load asynchronously -->
-		<script src="https://analytics.ahrefs.com/analytics.js" data-key="4JPGWiHF06I8NTlAvEpMtQ" async></script>
+			<!-- Ahrefs Web Analytics - Load asynchronously -->
+			<script src="https://analytics.ahrefs.com/analytics.js" data-key="4JPGWiHF06I8NTlAvEpMtQ" async></script>
 
-		<!-- Breadcrumb Structured Data -->
-		{breadcrumbStructuredData && (
-			<script type="application/ld+json" set:html={JSON.stringify(breadcrumbStructuredData)} />
-		)}
+			<!-- Google Analytics - direct GA4 instrumentation for reliable page and event tracking -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-9T1R5LN5VG"></script>
+			<script is:inline>
+			  window.dataLayer = window.dataLayer || [];
+			  window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+			  window.gtag('js', new Date());
+			  window.gtag('config', 'G-9T1R5LN5VG', {
+			    anonymize_ip: true,
+			    cookie_flags: 'SameSite=None;Secure',
+			    transport_type: 'beacon'
+			  });
+
+			  window.brightGiftTrack = function(eventName, params) {
+			    var eventParams = Object.assign({
+			      page_location: window.location.href,
+			      page_path: window.location.pathname,
+			      page_title: document.title
+			    }, params || {});
+
+			    window.dataLayer.push(Object.assign({ event: eventName }, eventParams));
+
+			    if (typeof window.gtag === 'function') {
+			      window.gtag('event', eventName, eventParams);
+			    }
+			  };
+			</script>
+
+			<!-- Breadcrumb Structured Data -->
+			{breadcrumbStructuredData && (
+				<script type="application/ld+json" set:html={JSON.stringify(breadcrumbStructuredData)} />
+			)}
 
 		<!-- Amazon Link Processing Script - Defer to after page load -->
 		<script is:inline>
         // Post-process affiliate links to ensure correct classes
-		  document.addEventListener('DOMContentLoaded', function() {
-		    const articleContent = document.getElementById('article-content');
-		    if (articleContent) {
-		      const links = articleContent.querySelectorAll('a');
-		      links.forEach(link => {
+			  document.addEventListener('DOMContentLoaded', function() {
+			    const articleContent = document.getElementById('article-content');
+			    if (articleContent) {
+			      const links = articleContent.querySelectorAll('a');
+			      links.forEach(link => {
                 const href = (link.getAttribute('href') || '').toLowerCase();
                 if (href.includes('amazon.com')) link.classList.add('amazon-link');
                 if (href.includes('bookshop.org')) link.classList.add('bookshop-link');
-                if (href.includes('arjdj2msd.com')) link.classList.add('afrofiliate-link');
-		      });
-		    }
-		  });
-		</script>
+			        if (href.includes('arjdj2msd.com')) link.classList.add('afrofiliate-link');
+			      });
+			    }
+
+			    function getAffiliatePlatform(url) {
+			      if (url.includes('amazon.com')) return 'amazon';
+			      if (url.includes('bookshop.org')) return 'bookshop';
+			      if (url.includes('arjdj2msd.com')) return 'afrofiliate';
+			      if (url.includes('littleherolabs.com')) return 'direct_partner';
+			      return 'other';
+			    }
+
+			    document.addEventListener('click', function(event) {
+			      const target = event.target;
+			      if (!(target instanceof Element)) return;
+
+			      const link = target.closest('a[href]');
+			      if (!link) return;
+
+			      const href = link.getAttribute('href') || '';
+			      const affiliatePlatform = getAffiliatePlatform(href.toLowerCase());
+			      if (affiliatePlatform === 'other') return;
+
+			      if (typeof window.brightGiftTrack === 'function') {
+			        window.brightGiftTrack('affiliate_click', {
+			          affiliate_platform: affiliatePlatform,
+			          link_url: link.href,
+			          link_text: (link.textContent || '').trim().slice(0, 120),
+			          link_location: articleContent && articleContent.contains(link) ? 'blog_article' : 'sitewide',
+			          outbound: true
+			        });
+			      }
+			    }, { capture: true });
+			  });
+			</script>
 	</head>
 	<body>
 		{/* Navigation Header - Show on all pages */}
@@ -259,38 +316,21 @@ const breadcrumbStructuredData = breadcrumbs ? {
 		</footer>
 		
 		
-		<!-- Google Tag Manager - Load after page content with optimized loading -->
-		<script is:inline>
-		  // Optimized GTM loading to reduce unused JavaScript
-		  window.addEventListener('load', function() {
-		    // Delay GTM loading by 3 seconds to prioritize page content
-		    setTimeout(function() {
-		      // Google Tag Manager
-		      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		      })(window,document,'script','dataLayer','GTM-W7B2JFWV');
-		      
-		      // Google Analytics - Load only essential tracking
-		      var gaScript = document.createElement('script');
-		      gaScript.async = true;
-		      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-9T1R5LN5VG';
-		      document.head.appendChild(gaScript);
-		      
-		      gaScript.onload = function() {
-		        window.dataLayer = window.dataLayer || [];
-		        function gtag(){dataLayer.push(arguments);}
-		        gtag('js', new Date());
-		        gtag('config', 'G-9T1R5LN5VG', {
-		          'send_page_view': false, // Disable automatic page view
-		          'anonymize_ip': true, // Anonymize IP for privacy
-		          'cookie_flags': 'SameSite=None;Secure' // Secure cookies
-		        });
-		      };
-		    }, 3000); // 3 second delay (increased from 2)
-		  });
-		</script>
+			<!-- Google Tag Manager - Load after page content with optimized loading -->
+			<script is:inline>
+			  // Optimized GTM loading to reduce unused JavaScript
+			  window.addEventListener('load', function() {
+			    // Delay GTM loading briefly to prioritize page content; direct GA4 above owns page/event tracking.
+			    setTimeout(function() {
+			      // Google Tag Manager
+			      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			      })(window,document,'script','dataLayer','GTM-W7B2JFWV');
+			    }, 1000);
+			  });
+			</script>
 		
 		<!-- Mobile Menu JavaScript -->
 		<script is:inline>

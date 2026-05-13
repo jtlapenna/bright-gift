@@ -732,10 +732,41 @@ const faqData = {
 		const styleButtons = document.querySelectorAll('button[type="button"]');
 		const regenerateBtn = document.getElementById('regenerate-btn');
 		const emptyState = document.getElementById('empty-state');
-		const selectionCount = document.getElementById('selection-count');
+			const selectionCount = document.getElementById('selection-count');
 
-		let selectedStyles = [];
-		let lastInputs = {};
+			let selectedStyles = [];
+			let lastInputs = {};
+
+			function trackBrightGiftEvent(eventName, params = {}) {
+				const trackingWindow = window as typeof window & {
+					brightGiftTrack?: (eventName: string, params?: Record<string, unknown>) => void;
+				};
+
+				if (typeof trackingWindow.brightGiftTrack === 'function') {
+					trackingWindow.brightGiftTrack(eventName, params);
+				}
+			}
+
+			function getAffiliatePlatform(url = '') {
+				const href = url.toLowerCase();
+				if (href.includes('amazon.com')) return 'amazon';
+				if (href.includes('bookshop.org')) return 'bookshop';
+				if (href.includes('arjdj2msd.com')) return 'afrofiliate';
+				if (href.includes('littleherolabs.com')) return 'direct_partner';
+				return 'other';
+			}
+
+			function getGeneratorTrackingContext(recipient, interests, budget) {
+				const interestText = String(interests || '');
+				return {
+					budget: String(budget || ''),
+					style_count: selectedStyles.length,
+					styles: selectedStyles.join(','),
+					recipient_field_length: String(recipient || '').length,
+					interest_field_length: interestText.length,
+					interest_word_count: interestText.trim() ? interestText.trim().split(/\s+/).length : 0
+				};
+			}
 		
 		// Fun loading messages and tips
 		const loadingMessages = [
@@ -898,13 +929,14 @@ const faqData = {
 			const recipient = formData.get('recipient');
 			const interests = formData.get('interests');
 			const budget = formData.get('budget');
-			if (!recipient || !interests || !budget) {
-				resultsContainer.innerHTML = `<p class="text-red-500 text-center" role="alert">Please fill in all required fields.</p>`;
-				return;
-			}
-			loadingIndicator.classList.remove('hidden');
-			resultsContainer.innerHTML = '';
-			startLoadingAnimation();
+				if (!recipient || !interests || !budget) {
+					resultsContainer.innerHTML = `<p class="text-red-500 text-center" role="alert">Please fill in all required fields.</p>`;
+					return;
+				}
+				trackBrightGiftEvent('gift_generator_start', getGeneratorTrackingContext(recipient, interests, budget));
+				loadingIndicator.classList.remove('hidden');
+				resultsContainer.innerHTML = '';
+				startLoadingAnimation();
 
 			try {
 				const response = await fetch('/api/generate', {
@@ -920,23 +952,32 @@ const faqData = {
 					} catch {}
 					throw new Error(errorMsg);
 				}
-				const { ideas } = await response.json();
-				if (Array.isArray(ideas) && ideas.length) {
-				resultsContainer.innerHTML = renderIdeaCards(ideas);
-				regenerateBtn.classList.remove('hidden');
-				regenerateBtn.style.display = '';
-				// Show share section and update shareable content
-				showShareSection(ideas, recipient, interests, budget);
-			} else {
-				resultsContainer.innerHTML = `<p class="text-red-500 text-center" role="alert">No gift ideas found or failed to parse results. Please try again.</p>`;
-				regenerateBtn.classList.add('hidden');
-				regenerateBtn.style.display = 'none';
-				hideShareSection();
-			}
-			lastInputs = { recipient, interests, budget, styles: selectedStyles };
-			} catch (error) {
-				const errorMessage = error.message || "We're having trouble generating gift ideas right now. Please try again in a moment.";
-				resultsContainer.innerHTML = `
+					const { ideas } = await response.json();
+					if (Array.isArray(ideas) && ideas.length) {
+					resultsContainer.innerHTML = renderIdeaCards(ideas);
+					regenerateBtn.classList.remove('hidden');
+					regenerateBtn.style.display = '';
+					trackBrightGiftEvent('gift_generator_results_shown', {
+						...getGeneratorTrackingContext(recipient, interests, budget),
+						result_count: ideas.length
+					});
+					// Show share section and update shareable content
+					showShareSection(ideas, recipient, interests, budget);
+				} else {
+					resultsContainer.innerHTML = `<p class="text-red-500 text-center" role="alert">No gift ideas found or failed to parse results. Please try again.</p>`;
+					regenerateBtn.classList.add('hidden');
+					regenerateBtn.style.display = 'none';
+					trackBrightGiftEvent('gift_generator_no_results', getGeneratorTrackingContext(recipient, interests, budget));
+					hideShareSection();
+				}
+				lastInputs = { recipient, interests, budget, styles: selectedStyles };
+				} catch (error) {
+					const errorMessage = error.message || "We're having trouble generating gift ideas right now. Please try again in a moment.";
+					trackBrightGiftEvent('gift_generator_error', {
+						...getGeneratorTrackingContext(recipient, interests, budget),
+						error_message: errorMessage.slice(0, 120)
+					});
+					resultsContainer.innerHTML = `
 					<div class="text-center" role="alert">
 						<div class="bg-red-50 border border-red-200 rounded-lg p-6 max-w-md mx-auto">
 							<div class="flex items-center justify-center mb-3">
@@ -959,27 +1000,41 @@ const faqData = {
 			}
 		});
 
-		regenerateBtn.addEventListener('click', async () => {
-			if (!lastInputs.recipient) return;
-			// Scroll to results section before clearing results
-			document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
-			loadingIndicator.classList.remove('hidden');
-			resultsContainer.innerHTML = '';
-			startLoadingAnimation();
+			regenerateBtn.addEventListener('click', async () => {
+				if (!lastInputs.recipient) return;
+				// Scroll to results section before clearing results
+				document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+				trackBrightGiftEvent('gift_generator_start', {
+					...getGeneratorTrackingContext(lastInputs.recipient, lastInputs.interests, lastInputs.budget),
+					is_regeneration: true
+				});
+				loadingIndicator.classList.remove('hidden');
+				resultsContainer.innerHTML = '';
+				startLoadingAnimation();
 			try {
 				const response = await fetch('/api/generate', {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify(lastInputs),
 				});
-				if (!response.ok) throw new Error('Failed to get ideas.');
-				const { ideas } = await response.json();
-				resultsContainer.innerHTML = renderIdeaCards(ideas);
-				regenerateBtn.classList.add('hidden');
-				regenerateBtn.style.display = 'none';
-			} catch (error) {
-				const errorMessage = error.message || "We're having trouble generating gift ideas right now. Please try again in a moment.";
-				resultsContainer.innerHTML = `
+					if (!response.ok) throw new Error('Failed to get ideas.');
+					const { ideas } = await response.json();
+					resultsContainer.innerHTML = renderIdeaCards(ideas);
+					regenerateBtn.classList.add('hidden');
+					regenerateBtn.style.display = 'none';
+					trackBrightGiftEvent('gift_generator_results_shown', {
+						...getGeneratorTrackingContext(lastInputs.recipient, lastInputs.interests, lastInputs.budget),
+						is_regeneration: true,
+						result_count: Array.isArray(ideas) ? ideas.length : 0
+					});
+				} catch (error) {
+					const errorMessage = error.message || "We're having trouble generating gift ideas right now. Please try again in a moment.";
+					trackBrightGiftEvent('gift_generator_error', {
+						...getGeneratorTrackingContext(lastInputs.recipient, lastInputs.interests, lastInputs.budget),
+						is_regeneration: true,
+						error_message: errorMessage.slice(0, 120)
+					});
+					resultsContainer.innerHTML = `
 					<div class="text-center" role="alert">
 						<div class="bg-red-50 border border-red-200 rounded-lg p-6 max-w-md mx-auto">
 							<div class="flex items-center justify-center mb-3">
@@ -1001,11 +1056,30 @@ const faqData = {
 			}
 		});
 
-		function updateSelectionCount() {
-			selectionCount.textContent = `${selectedStyles.length} of 3 styles selected`;
-		}
-		
-		// Share functionality
+			function updateSelectionCount() {
+				selectionCount.textContent = `${selectedStyles.length} of 3 styles selected`;
+			}
+
+			resultsContainer.addEventListener('click', (event) => {
+				const target = event.target;
+				if (!(target instanceof Element)) return;
+
+				const link = target.closest('a[href]');
+				if (!link || !resultsContainer.contains(link)) return;
+
+				const href = link.getAttribute('href') || '';
+				const resultCard = link.closest('[role="listitem"]');
+				const resultTitle = resultCard?.querySelector('h3')?.textContent?.trim() || '';
+
+				trackBrightGiftEvent('gift_generator_result_click', {
+					affiliate_platform: getAffiliatePlatform(href),
+					link_url: (link as HTMLAnchorElement).href,
+					link_text: (link.textContent || '').trim().slice(0, 120),
+					result_title: resultTitle.slice(0, 120)
+				});
+			});
+
+			// Share functionality
 		function showShareSection(ideas, recipient, interests, budget) {
 			const shareSection = document.getElementById('share-section');
 			const shareableTextPreview = document.getElementById('shareable-text-preview');
