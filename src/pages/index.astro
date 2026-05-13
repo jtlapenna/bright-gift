@@ -759,6 +759,7 @@ const faqData = {
 			function getGeneratorTrackingContext(recipient, interests, budget) {
 				const interestText = String(interests || '');
 				return {
+					event_schema_version: '2026-05-13-v2',
 					budget: String(budget || ''),
 					style_count: selectedStyles.length,
 					styles: selectedStyles.join(','),

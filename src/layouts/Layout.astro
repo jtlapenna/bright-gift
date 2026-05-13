@@ -181,12 +181,32 @@ const breadcrumbStructuredData = breadcrumbs ? {
 			<script is:inline>
 			  window.dataLayer = window.dataLayer || [];
 			  window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
-			  window.gtag('js', new Date());
-			  window.gtag('config', 'G-9T1R5LN5VG', {
+			  window.brightGiftGaDebug = false;
+			  try {
+			    var gaDebugParams = new URLSearchParams(window.location.search);
+			    if (gaDebugParams.get('ga_debug') === '1') {
+			      window.localStorage.setItem('brightgift_ga_debug', '1');
+			    }
+			    if (gaDebugParams.get('ga_debug') === '0') {
+			      window.localStorage.removeItem('brightgift_ga_debug');
+			    }
+			    window.brightGiftGaDebug = gaDebugParams.get('ga_debug') === '1' || window.localStorage.getItem('brightgift_ga_debug') === '1';
+			  } catch (error) {
+			    window.brightGiftGaDebug = false;
+			  }
+
+			  var brightGiftGaConfig = {
 			    anonymize_ip: true,
 			    cookie_flags: 'SameSite=None;Secure',
-			    transport_type: 'beacon'
-			  });
+			    transport_type: 'beacon',
+			    send_page_view: false
+			  };
+			  if (window.brightGiftGaDebug) {
+			    brightGiftGaConfig.debug_mode = true;
+			  }
+
+			  window.gtag('js', new Date());
+			  window.gtag('config', 'G-9T1R5LN5VG', brightGiftGaConfig);
 
 			  window.brightGiftTrack = function(eventName, params) {
 			    var eventParams = Object.assign({
@@ -194,6 +214,9 @@ const breadcrumbStructuredData = breadcrumbs ? {
 			      page_path: window.location.pathname,
 			      page_title: document.title
 			    }, params || {});
+			    if (window.brightGiftGaDebug) {
+			      eventParams.debug_mode = true;
+			    }
 
 			    window.dataLayer.push(Object.assign({ event: eventName }, eventParams));
 
@@ -201,6 +224,8 @@ const breadcrumbStructuredData = breadcrumbs ? {
 			      window.gtag('event', eventName, eventParams);
 			    }
 			  };
+
+			  window.brightGiftTrack('page_view');
 			</script>
 
 			<!-- Breadcrumb Structured Data -->
