@@ -249,4 +249,4 @@ Explore these additional guides for eco-conscious gift giving:
 - [25 Thoughtful Housewarming Gifts for New Homeowners Under $75](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/) - Eco-friendly home essentials
 - [Gifts for Gamers Under $50](/blog/gifts-for-gamers-under-50/) - Energy-efficient gaming accessories
 
-> 🎯 **Not sure what type of gift to buy? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect sustainable present!**
+> 🎯 **Not sure what type of gift to buy? Our [Gift Idea Generator](/gift-idea-generator/) can help you discover the perfect sustainable present!**

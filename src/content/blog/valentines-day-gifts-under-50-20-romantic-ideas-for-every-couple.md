@@ -99,7 +99,7 @@ This guide keeps the Valentine's angle intact, but the ideas are useful beyond a
 
 For extra value bundles, pair this list with [Little Luxuries Under $25](/blog/little-luxuries-under-25-mini-splurges-major-wow/), [25 Unique Anniversary Gift Ideas Under $50](/blog/25-unique-anniversary-gift-ideas-under-50/), and [25 Thoughtful Gifts for Your Girlfriend That Show You Care](/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/).
 
-> 🎯 **Not sure what type of Valentine's Day gift your partner would love? Our [Gift Idea Generator](https://bright-gift.com/) can help you identify the perfect romantic gift based on their interests and personality!**
+> 🎯 **Not sure what type of Valentine's Day gift your partner would love? Our [Gift Idea Generator](/gift-idea-generator/) can help you identify the perfect romantic gift based on their interests and personality!**
 
 ---
 

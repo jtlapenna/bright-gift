@@ -251,4 +251,4 @@ Same-day Mother's Day options include candles, tea, cozy robes, books, photo pri
 
 A digital gift can work if it is paired with something personal, such as a printed note, a scheduled call, a shared playlist, uploaded family photos, or a plan for time together. Avoid sending a bare code with no context.
 
-If you still want help narrowing the list, use the [Gift Idea Generator](/#gift-generator) to match a last-minute Mother's Day gift to her personality, routine, and budget.
+If you still want help narrowing the list, use the [AI Gift Idea Generator](/gift-idea-generator/) to match a last-minute Mother's Day gift to her personality, routine, and budget.

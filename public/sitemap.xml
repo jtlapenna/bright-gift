@@ -6,6 +6,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://bright-gift.com/gift-idea-generator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://bright-gift.com/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -90,7 +95,7 @@
   </url>
   <url>
     <loc>https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -114,7 +119,7 @@
   </url>
   <url>
     <loc>https://bright-gift.com/blog/25-unique-anniversary-gift-ideas-under-50/</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -252,13 +257,13 @@
   </url>
   <url>
     <loc>https://bright-gift.com/blog/gifts-for-gamers-under-50/</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bright-gift.com/blog/gifts-for-girlfriend-unique-romantic-ideas/</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -270,7 +275,7 @@
   </url>
   <url>
     <loc>https://bright-gift.com/blog/gifts-under-25-for-coworkers/</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

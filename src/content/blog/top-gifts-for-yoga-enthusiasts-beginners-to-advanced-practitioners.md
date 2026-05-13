@@ -252,7 +252,7 @@ Stick with versatile gifts such as a yoga towel, meditation cushion, blocks, or 
 
 ## Conclusion
 
-The best yoga gifts support how someone actually practices, not just the idea of a wellness routine. Foundational props, restorative accessories, and calm-at-home extras all work when they match the recipient's level and space. If you want a more tailored match by experience level or practice style, try our [Gift Idea Generator](https://bright-gift.com/) for a personalized shortlist.
+The best yoga gifts support how someone actually practices, not just the idea of a wellness routine. Foundational props, restorative accessories, and calm-at-home extras all work when they match the recipient's level and space. If you want a more tailored match by experience level or practice style, try our [Gift Idea Generator](/gift-idea-generator/) for a personalized shortlist.
 
 ## Related guides to keep exploring
 

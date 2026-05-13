@@ -1,0 +1,15 @@
+report,date_range,row_index,channel,source_medium,sessions,engaged_sessions,engagement_rate,avg_engagement_time_per_session,events_per_session,event_count
+traffic_source_medium,"Jan 1-Feb 15, 2026",total,Total,Total,414,154,37.2%,20s,5.43,2250
+traffic_source_medium,"Jan 1-Feb 15, 2026",1,Unassigned,"chatgpt.com / (not set)",190,51,26.84%,8s,4.63,879
+traffic_source_medium,"Jan 1-Feb 15, 2026",2,Referral,"chatgpt.com / referral",110,57,51.82%,28s,6.26,689
+traffic_source_medium,"Jan 1-Feb 15, 2026",3,Direct,"(direct) / (none)",39,9,23.08%,18s,6.36,248
+traffic_source_medium,"Jan 1-Feb 15, 2026",4,Organic Search,"bing / organic",38,24,63.16%,1m 03s,7.58,288
+traffic_source_medium,"Jan 1-Feb 15, 2026",5,Organic Search,"duckduckgo / organic",11,9,81.82%,48s,6.09,67
+traffic_source_medium,"Jan 1-Feb 15, 2026",6,Organic Search,"google / organic",10,2,20%,10s,3.90,39
+traffic_source_medium,"Jan 1-Feb 15, 2026",7,Unassigned,"(not set)",9,0,0%,6s,1.44,13
+traffic_source_medium,"Jan 1-Feb 15, 2026",8,Organic Social,"m.facebook.com / referral",2,0,0%,0s,3.50,7
+traffic_source_medium,"Jan 1-Feb 15, 2026",9,Organic Search,"uk.search.yahoo.com / referral",1,0,0%,0s,3.00,3
+traffic_source_medium,"Jan 1-Feb 15, 2026",10,Organic Search,"yahoo / organic",1,1,100%,1m 07s,7.00,7
+traffic_source_medium,"Jan 1-Feb 15, 2026",11,Organic Social,"facebook.com / referral",1,1,100%,6s,4.00,4
+traffic_source_medium,"Jan 1-Feb 15, 2026",12,Referral,"copilot.com / referral",1,0,0%,0s,3.00,3
+traffic_source_medium,"Jan 1-Feb 15, 2026",13,Unassigned,"perplexity / (not set)",1,0,0%,0s,3.00,3

@@ -1,0 +1,7 @@
+report,date_range,row_index,channel,sessions,engaged_sessions,engagement_rate,avg_engagement_time_per_session,events_per_session,event_count
+traffic_acquisition,"Jan 1-Feb 15, 2026",total,Total,414,154,37.2%,20s,5.43,2250
+traffic_acquisition,"Jan 1-Feb 15, 2026",1,Unassigned,200,51,25.5%,8s,4.48,895
+traffic_acquisition,"Jan 1-Feb 15, 2026",2,Referral,111,57,51.35%,28s,6.23,692
+traffic_acquisition,"Jan 1-Feb 15, 2026",3,Organic Search,61,36,59.02%,51s,6.62,404
+traffic_acquisition,"Jan 1-Feb 15, 2026",4,Direct,39,9,23.08%,18s,6.36,248
+traffic_acquisition,"Jan 1-Feb 15, 2026",5,Organic Social,3,1,33.33%,2s,3.67,11

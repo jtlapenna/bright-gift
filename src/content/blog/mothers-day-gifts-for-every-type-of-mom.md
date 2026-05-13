@@ -197,7 +197,7 @@ For the mom who actually wants quieter time, a beautiful hardcover book can be m
 
 If you are torn between categories, do not try to cover everything. Pick one strong lane: memory, comfort, planning, gardening, reading, or everyday ease. That usually leads to a better Mother's Day gift than combining three unrelated small things just to make the package look fuller.
 
-If you still want help narrowing it down, use the [Gift Idea Generator](/#gift-generator) to match ideas to her personality, routine, and budget.
+If you still want help narrowing it down, use the [AI Gift Idea Generator](/gift-idea-generator/) to match ideas to her personality, routine, and budget.
 
 ## Related Gift Guides You'll Love
 

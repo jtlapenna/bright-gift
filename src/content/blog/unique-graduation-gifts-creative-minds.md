@@ -225,4 +225,4 @@ Avoid novelty decor, generic inspiration quotes, and supplies for a medium they 
 
 The best graduation gifts for creative minds give them momentum. Choose something they can use in the first few weeks after graduation: a better tool, a cleaner workspace, a way to protect their work, or a book that helps them keep growing.
 
-If you are still narrowing the lane, try the [Gift Idea Generator](/#gift-generator) with their medium, budget, and next-step plans.
+If you are still narrowing the lane, try the [AI Gift Idea Generator](/gift-idea-generator/) with their medium, budget, and next-step plans.

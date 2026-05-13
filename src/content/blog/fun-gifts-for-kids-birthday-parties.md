@@ -194,7 +194,7 @@ Creative gifts usually have better staying power because kids can use them in di
 
 ## Conclusion
 
-The right gift can turn a birthday party into an unforgettable experience for any child. These thoughtful, creative, and educational picks give you options for budding artists, curious scientists, and active explorers without defaulting to generic filler toys. If you want a faster match based on age, interests, or budget, try our [Gift Idea Generator](https://bright-gift.com/) for a more tailored shortlist.
+The right gift can turn a birthday party into an unforgettable experience for any child. These thoughtful, creative, and educational picks give you options for budding artists, curious scientists, and active explorers without defaulting to generic filler toys. If you want a faster match based on age, interests, or budget, try our [Gift Idea Generator](/gift-idea-generator/) for a more tailored shortlist.
 
 ## Related guides to keep exploring
 

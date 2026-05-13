@@ -133,7 +133,7 @@ A complete wrist rest set designed specifically for keyboard and mouse use, feat
 **Price Range:** $20-$30 <a href="https://www.amazon.com/s?k=memory+foam+wrist+rest+set+keyboard+mouse&tag=bright-gift-20" class="amazon-link" target="_blank" rel="noopener sponsored">View on Amazon</a>
 
 
-> 🎯 **Not sure what to buy?** Our [Gift Idea Generator](https://bright-gift.com) can help you find the perfect gift based on their interests, budget, and occasion!
+> 🎯 **Not sure what to buy?** Our [Gift Idea Generator](/gift-idea-generator/) can help you find the perfect gift based on their interests, budget, and occasion!
 
 
 ## Productivity and Organization Tools

@@ -216,4 +216,4 @@ Use a neutral-first approach: wood, white, black, and stainless tones tend to fi
 
 ---
 
-Choosing a chic wedding gift is about balancing style, usefulness, and thoughtfulness. If you want more tailored suggestions, try our [Gift Idea Generator](https://bright-gift.com/), which recommends ideas by budget, interests, and lifestyle.
+Choosing a chic wedding gift is about balancing style, usefulness, and thoughtfulness. If you want more tailored suggestions, try our [Gift Idea Generator](/gift-idea-generator/), which recommends ideas by budget, interests, and lifestyle.

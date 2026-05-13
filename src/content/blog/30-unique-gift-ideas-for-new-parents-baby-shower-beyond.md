@@ -76,7 +76,7 @@ Welcoming a new baby is one of life's most joyous occasions, and choosing the ri
 
 The best baby gifts combine practicality with personal touches, offering solutions for common new parent challenges while creating lasting memories. From sustainable options that align with eco-conscious values to personalized keepsakes that grow with the child, thoughtful gifts can make a real difference in a new family's life.
 
-> 🎯 **Not sure what type of baby gift would be most appreciated? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on the parents' style, baby's age, and your budget!**
+> 🎯 **Not sure what type of baby gift would be most appreciated? Our [Gift Idea Generator](/gift-idea-generator/) can help you discover the perfect present based on the parents' style, baby's age, and your budget!**
 
 > 👶 **Building a Baby Registry?** If the parents-to-be are still preparing, check out [SmartBaby Checklist](https://smartbabychecklist.com/) for AI-powered baby registry recommendations. It creates personalized product lists based on their lifestyle, climate, and budget—completely free and takes just 2 minutes!
 
@@ -336,7 +336,7 @@ Bedtime essentials including sleep sacks, books, and white noise machine. Helps 
 
 Looking for more family-gift ideas? Check out our guides to [Gifts for New Grandparents](/blog/gifts-for-new-grandparents/) and [How to Choose the Perfect Gift](/blog/how-to-choose-the-perfect-gift-complete-guide/) for more thoughtful options.
 
-Looking for more baby gift ideas? Check out our other gift guides for different budgets and occasions. Have a specific new parent in mind? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on their style, values, and needs!
+Looking for more baby gift ideas? Check out our other gift guides for different budgets and occasions. Have a specific new parent in mind? Our [Gift Idea Generator](/gift-idea-generator/) can help you discover the perfect present based on their style, values, and needs!
 
 ## Related guides to keep exploring
 

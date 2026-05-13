@@ -298,7 +298,7 @@ Presentation matters. Add one sentence that explains why you chose the gift: "I 
 
 If you are giving an experience, make it concrete. Do not just say "we should go hiking sometime." Choose a date, trail, restaurant, ballgame, museum, or backyard dinner plan, then pair it with a small physical gift that represents the plan.
 
-If you still want help narrowing the options, use the [BrightGift Gift Idea Generator](/#gift-generator) to match a gift to his personality, hobbies, and budget.
+If you still want help narrowing the options, use the [BrightGift AI Gift Idea Generator](/gift-idea-generator/) to match a gift to his personality, hobbies, and budget.
 
 ## Related Gift Guides You'll Love
 

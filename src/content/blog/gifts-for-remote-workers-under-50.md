@@ -197,7 +197,7 @@ Finding the right gift for remote workers doesn't have to break the bank. These 
 
 Whether you choose practical items like ergonomic accessories, organizational tools, or comfort enhancers, your gift will make their remote work setup more efficient and enjoyable. The best gifts for remote workers are those that solve real problems and make their daily routine easier.
 
-Remember that supporting remote workers means investing in their productivity and well-being. These thoughtful gift ideas help them create a workspace that supports their success and makes working from home more comfortable. If you want a more tailored shortlist by role, desk size, or work style, try our [Gift Idea Generator](https://bright-gift.com/) for personalized recommendations.
+Remember that supporting remote workers means investing in their productivity and well-being. These thoughtful gift ideas help them create a workspace that supports their success and makes working from home more comfortable. If you want a more tailored shortlist by role, desk size, or work style, try our [Gift Idea Generator](/gift-idea-generator/) for personalized recommendations.
 
 ---
 

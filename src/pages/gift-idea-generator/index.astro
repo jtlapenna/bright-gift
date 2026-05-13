@@ -1,9 +1,189 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-// Redirect to the main AI gift generator on the homepage
-const redirectUrl = '/#gift-generator';
+const title = 'Free AI Gift Idea Generator';
+const description = 'Use BrightGift, a free AI gift idea generator, to find thoughtful gift ideas by recipient, interests, budget, and occasion in under a minute.';
 
-// Use Astro's redirect function for proper SEO handling
-return Astro.redirect(redirectUrl, 301);
+const faqData = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: [
+		{
+			'@type': 'Question',
+			name: 'Is the BrightGift AI gift idea generator free?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Yes. BrightGift is a free AI gift idea generator that helps shoppers turn recipient details, interests, budget, and occasion into a more useful gift shortlist.'
+			}
+		},
+		{
+			'@type': 'Question',
+			name: 'What information should I enter for better gift ideas?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Add the recipient, two or three real interests, your budget, and any style clues you know. Specific inputs like "dad who grills and camps" work better than broad inputs like "dad."'
+			}
+		},
+		{
+			'@type': 'Question',
+			name: 'Can an AI gift generator help with last-minute gifts?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Yes. BrightGift can narrow the decision quickly, especially when you need gift ideas by budget, relationship, interest, or delivery speed.'
+			}
+		}
+	]
+};
+
+const appData = {
+	'@context': 'https://schema.org',
+	'@type': 'WebApplication',
+	name: 'BrightGift AI Gift Idea Generator',
+	url: 'https://bright-gift.com/gift-idea-generator/',
+	applicationCategory: 'LifestyleApplication',
+	operatingSystem: 'Any',
+	offers: {
+		'@type': 'Offer',
+		price: '0',
+		priceCurrency: 'USD'
+	},
+	description
+};
 ---
+
+<Layout
+	title={title}
+	metaTitle="Free AI Gift Idea Generator | BrightGift"
+	description={description}
+	metaDescription={description}
+	canonical="https://bright-gift.com/gift-idea-generator/"
+	image="/images/homepage-banner.webp"
+	keywords={['AI gift idea generator', 'AI gift generator', 'free gift finder', 'personalized gift ideas', 'gift recommendation tool', 'gift finder by interest', 'gift ideas by budget']}
+>
+	<script type="application/ld+json" set:html={JSON.stringify(appData)} />
+	<script type="application/ld+json" set:html={JSON.stringify(faqData)} />
+
+	<main class="font-sans text-gray-800 dark:text-gray-200">
+		<section class="relative overflow-hidden bg-[#FEF2D3] px-4 py-20 md:py-24">
+			<div class="absolute left-0 top-0 h-40 w-40 rounded-full bg-[#A3E4DB]/60 blur-2xl"></div>
+			<div class="absolute bottom-0 right-0 h-56 w-56 rounded-full bg-[#FFDE59]/70 blur-3xl"></div>
+			<div class="relative mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.08fr_0.92fr]">
+				<div>
+					<p class="mb-4 inline-flex rounded-full bg-white px-4 py-2 text-sm font-bold uppercase tracking-[0.18em] text-[#1C2E4A] shadow-sm">
+						Free AI gift finder
+					</p>
+					<h1 class="mb-6 text-4xl font-black leading-tight text-[#1C2E4A] md:text-6xl">
+						Find better gift ideas in under a minute.
+					</h1>
+					<p class="mb-8 max-w-2xl text-lg leading-relaxed text-[#1C2E4A] md:text-xl">
+						BrightGift turns a few details about the person you are shopping for into a focused gift shortlist by recipient, budget, style, and interests.
+					</p>
+					<div class="flex flex-col gap-3 sm:flex-row">
+						<a href="/#tool" class="inline-flex items-center justify-center rounded-full bg-[#FF6B6B] px-8 py-4 text-lg font-bold text-white shadow-lg transition hover:bg-[#ff4c4c]">
+							Start the gift generator
+						</a>
+						<a href="/blog/how-to-choose-the-perfect-gift-complete-guide/" class="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-bold text-[#1C2E4A] shadow-lg transition hover:bg-[#FFF9F3]">
+							Read the gift framework
+						</a>
+					</div>
+				</div>
+				<div class="rounded-[2rem] border-4 border-white bg-white/80 p-6 shadow-2xl">
+					<div class="rounded-3xl bg-[#1C2E4A] p-6 text-white">
+						<p class="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-[#A3E4DB]">Example prompt</p>
+						<p class="mb-6 rounded-2xl bg-white/10 p-4 text-lg leading-relaxed">
+							"Gift for my brother, under $50, likes PC gaming, coffee, and desk setup upgrades."
+						</p>
+						<div class="space-y-3">
+							<div class="rounded-2xl bg-[#FFDE59] p-4 text-[#1C2E4A]">
+								<strong>Desk setup upgrade:</strong> XL desk mat or headset stand.
+							</div>
+							<div class="rounded-2xl bg-[#A3E4DB] p-4 text-[#1C2E4A]">
+								<strong>Daily-use pick:</strong> insulated tumbler or coffee sampler.
+							</div>
+							<div class="rounded-2xl bg-[#FF6B6B] p-4 text-white">
+								<strong>Safe fallback:</strong> cable management kit under budget.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-white px-4 py-16">
+			<div class="mx-auto max-w-5xl">
+				<div class="mb-10 text-center">
+					<h2 class="mb-4 text-3xl font-bold text-[#1C2E4A] md:text-4xl">How the AI gift idea generator works</h2>
+					<p class="mx-auto max-w-3xl text-lg text-[#1C2E4A]/80">
+						The best results come from useful context, not long forms. Add the person, what they like, how much you want to spend, and the kind of gift that feels right.
+					</p>
+				</div>
+				<div class="grid gap-5 md:grid-cols-3">
+					<div class="rounded-3xl border border-[#A3E4DB] bg-[#FFF9F3] p-6 shadow-sm">
+						<p class="mb-3 text-sm font-black uppercase tracking-[0.14em] text-[#FF6B6B]">Step 1</p>
+						<h3 class="mb-3 text-xl font-bold text-[#1C2E4A]">Describe the recipient</h3>
+						<p class="text-[#1C2E4A]/80">Use relationship plus personality: dad who camps, coworker who loves coffee, girlfriend who likes cozy nights in.</p>
+					</div>
+					<div class="rounded-3xl border border-[#FFDE59] bg-[#FFF9F3] p-6 shadow-sm">
+						<p class="mb-3 text-sm font-black uppercase tracking-[0.14em] text-[#FF6B6B]">Step 2</p>
+						<h3 class="mb-3 text-xl font-bold text-[#1C2E4A]">Add budget and style</h3>
+						<p class="text-[#1C2E4A]/80">Choose a price range and select up to three styles, like practical, funny, eco-friendly, wellness, techy, or book-lover.</p>
+					</div>
+					<div class="rounded-3xl border border-[#FF6B6B] bg-[#FFF9F3] p-6 shadow-sm">
+						<p class="mb-3 text-sm font-black uppercase tracking-[0.14em] text-[#FF6B6B]">Step 3</p>
+						<h3 class="mb-3 text-xl font-bold text-[#1C2E4A]">Compare specific ideas</h3>
+						<p class="text-[#1C2E4A]/80">Use the shortlist as a starting point, then choose the item that best matches their routine, taste, and timing.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-[#1C2E4A] px-4 py-16 text-white">
+			<div class="mx-auto max-w-5xl">
+				<h2 class="mb-8 text-center text-3xl font-bold md:text-4xl">Popular ways to use BrightGift</h2>
+				<div class="grid gap-4 md:grid-cols-2">
+					<a href="/blog/gifts-for-gamers-under-50/" class="rounded-3xl bg-white/10 p-6 transition hover:bg-white/15">
+						<h3 class="mb-2 text-xl font-bold text-[#FFDE59]">Gaming gifts under $50</h3>
+						<p class="text-white/80">Use the generator when you know they game, but not which platform or accessories they already own.</p>
+					</a>
+					<a href="/blog/gifts-under-25-for-coworkers/" class="rounded-3xl bg-white/10 p-6 transition hover:bg-white/15">
+						<h3 class="mb-2 text-xl font-bold text-[#FFDE59]">Coworker gifts under $25</h3>
+						<p class="text-white/80">Get office-safe ideas that stay useful without feeling too personal.</p>
+					</a>
+					<a href="/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/" class="rounded-3xl bg-white/10 p-6 transition hover:bg-white/15">
+						<h3 class="mb-2 text-xl font-bold text-[#FFDE59]">Housewarming gifts</h3>
+						<p class="text-white/80">Find move-in gifts by home type, lifestyle, storage space, and budget.</p>
+					</a>
+					<a href="/blog/gifts-for-girlfriend-unique-romantic-ideas/" class="rounded-3xl bg-white/10 p-6 transition hover:bg-white/15">
+						<h3 class="mb-2 text-xl font-bold text-[#FFDE59]">Romantic gifts</h3>
+						<p class="text-white/80">Turn relationship details, shared memories, and her style into a more personal shortlist.</p>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-white px-4 py-16">
+			<div class="mx-auto max-w-4xl">
+				<h2 class="mb-8 text-center text-3xl font-bold text-[#1C2E4A] md:text-4xl">AI gift generator FAQ</h2>
+				<div class="space-y-5">
+					<div class="rounded-3xl bg-[#FEF2D3] p-6">
+						<h3 class="mb-2 text-xl font-bold text-[#1C2E4A]">Is the BrightGift AI gift idea generator free?</h3>
+						<p class="text-[#1C2E4A]/80">Yes. BrightGift is a free AI gift idea generator that helps shoppers turn recipient details, interests, budget, and occasion into a more useful gift shortlist.</p>
+					</div>
+					<div class="rounded-3xl bg-[#FEF2D3] p-6">
+						<h3 class="mb-2 text-xl font-bold text-[#1C2E4A]">What information should I enter for better gift ideas?</h3>
+						<p class="text-[#1C2E4A]/80">Add the recipient, two or three real interests, your budget, and any style clues you know. Specific inputs like "dad who grills and camps" work better than broad inputs like "dad."</p>
+					</div>
+					<div class="rounded-3xl bg-[#FEF2D3] p-6">
+						<h3 class="mb-2 text-xl font-bold text-[#1C2E4A]">Can an AI gift generator help with last-minute gifts?</h3>
+						<p class="text-[#1C2E4A]/80">Yes. BrightGift can narrow the decision quickly, especially when you need gift ideas by budget, relationship, interest, or delivery speed.</p>
+					</div>
+				</div>
+				<div class="mt-10 text-center">
+					<a href="/#tool" class="inline-flex items-center justify-center rounded-full bg-[#FF6B6B] px-8 py-4 text-lg font-bold text-white shadow-lg transition hover:bg-[#ff4c4c]">
+						Use the free AI gift generator
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>

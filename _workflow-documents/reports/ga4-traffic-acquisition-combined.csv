@@ -1,0 +1,19 @@
+report,date_range,row_index,channel,sessions,engaged_sessions,engagement_rate,avg_engagement_time_per_session,events_per_session,event_count
+traffic_acquisition,"Jan 1-Feb 15, 2026",total,Total,414,154,37.2%,20s,5.43,2250
+traffic_acquisition,"Jan 1-Feb 15, 2026",1,Unassigned,200,51,25.5%,8s,4.48,895
+traffic_acquisition,"Jan 1-Feb 15, 2026",2,Referral,111,57,51.35%,28s,6.23,692
+traffic_acquisition,"Jan 1-Feb 15, 2026",3,Organic Search,61,36,59.02%,51s,6.62,404
+traffic_acquisition,"Jan 1-Feb 15, 2026",4,Direct,39,9,23.08%,18s,6.36,248
+traffic_acquisition,"Jan 1-Feb 15, 2026",5,Organic Social,3,1,33.33%,2s,3.67,11
+traffic_acquisition,"Mar 1-Mar 26, 2026",total,Total,179,67,37.43%,22s,6.11,1093
+traffic_acquisition,"Mar 1-Mar 26, 2026",1,Unassigned,89,17,19.1%,6s,4.71,419
+traffic_acquisition,"Mar 1-Mar 26, 2026",2,Referral,39,20,51.28%,12s,5.79,226
+traffic_acquisition,"Mar 1-Mar 26, 2026",3,Organic Search,34,25,73.53%,1m 21s,11.09,377
+traffic_acquisition,"Mar 1-Mar 26, 2026",4,Direct,15,3,20%,7s,4.00,60
+traffic_acquisition,"Mar 1-Mar 26, 2026",5,Organic Social,2,2,100%,1m 04s,5.50,11
+traffic_acquisition,"Apr 9-May 13, 2026",total,Total,145,70,48.28%,1m 05s,6.93,1005
+traffic_acquisition,"Apr 9-May 13, 2026",1,Organic Search,74,42,56.76%,1m 40s,7.58,561
+traffic_acquisition,"Apr 9-May 13, 2026",2,Direct,27,9,33.33%,40s,6.89,186
+traffic_acquisition,"Apr 9-May 13, 2026",3,Unassigned,22,8,36.36%,6s,4.68,103
+traffic_acquisition,"Apr 9-May 13, 2026",4,Referral,19,10,52.63%,44s,7.42,141
+traffic_acquisition,"Apr 9-May 13, 2026",5,Organic Social,4,1,25%,1s,3.50,14

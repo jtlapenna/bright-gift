@@ -327,7 +327,7 @@ From budget-friendly options under $50 to premium gifts that enhance his hobbies
 
 Remember, the best holiday gifts for dads aren't always the most expensive ones—they're the ones that are thoughtful, practical, and genuinely useful. Whether it's a high-quality tool that makes his hobby more enjoyable, a comfortable item that improves his daily routine, or a personalized gift that celebrates your relationship, your thoughtfulness is what truly matters this holiday season.
 
-> 🎯 **Still not sure what to get? [Try our AI Gift Idea Generator](https://bright-gift.com/) to discover personalized holiday gift recommendations tailored specifically to your dad's interests, budget, and personality!**
+> 🎯 **Still not sure what to get? [Try our AI Gift Idea Generator](/gift-idea-generator/) to discover personalized holiday gift recommendations tailored specifically to your dad's interests, budget, and personality!**
 
 ---
 

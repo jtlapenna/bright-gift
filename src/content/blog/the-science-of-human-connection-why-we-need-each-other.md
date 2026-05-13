@@ -72,7 +72,7 @@ Human connection isn't just a nice-to-have—it's a fundamental biological need 
 
 The truth is, we're not meant to go through life alone. Our ancestors survived and thrived because they worked together, shared resources, and supported each other through difficult times. This evolutionary history has left an indelible mark on our biology, psychology, and behavior. Today, despite our technological advances, our fundamental need for human connection remains unchanged.
 
-> 🎯 **Want to strengthen your relationships through thoughtful gestures? Our [AI Gift Idea Generator](https://bright-gift.com/) can help you discover meaningful ways to show the people in your life how much you care!**
+> 🎯 **Want to strengthen your relationships through thoughtful gestures? Our [AI Gift Idea Generator](/gift-idea-generator/) can help you discover meaningful ways to show the people in your life how much you care!**
 
 ---
 
@@ -269,7 +269,7 @@ The science is clear: we are wired for connection, and our relationships are the
 
 Remember, every interaction is an opportunity to strengthen a connection. Every thoughtful gesture, every meaningful conversation, every moment of genuine presence contributes to the web of relationships that sustains us all. The investment you make in your relationships today will pay dividends in health, happiness, and wellbeing for years to come.
 
-> 🎯 **Ready to strengthen your relationships through thoughtful gestures? Our [AI Gift Idea Generator](https://bright-gift.com/) can help you discover meaningful ways to show the people in your life how much you care. Whether it's a small gesture of appreciation or a grand expression of love, we can help you find the perfect way to strengthen your human connections.**
+> 🎯 **Ready to strengthen your relationships through thoughtful gestures? Our [AI Gift Idea Generator](/gift-idea-generator/) can help you discover meaningful ways to show the people in your life how much you care. Whether it's a small gesture of appreciation or a grand expression of love, we can help you find the perfect way to strengthen your human connections.**
 
 ---
 

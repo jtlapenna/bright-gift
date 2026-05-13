@@ -335,7 +335,7 @@ The key to success with AI gift generators is to view them as collaborative tool
 
 As AI technology continues to evolve, we can expect even more sophisticated and helpful gift recommendation systems. But the core principle remains the same: the best gifts come from understanding and caring about the recipient, whether that understanding starts with human intuition or AI-assisted research.
 
-> 🎯 **Ready to experience the future of gift shopping? [Try our AI Gift Idea Generator now](https://bright-gift.com/) and discover how artificial intelligence can help you find the perfect present for any occasion!**
+> 🎯 **Ready to experience the future of gift shopping? [Try our AI Gift Idea Generator now](/gift-idea-generator/) and discover how artificial intelligence can help you find the perfect present for any occasion!**
 
 ---
 

@@ -1,0 +1,7 @@
+report,date_range,row_index,channel,sessions,engaged_sessions,engagement_rate,avg_engagement_time_per_session,events_per_session,event_count
+traffic_acquisition,"Apr 9-May 13, 2026",total,Total,145,70,48.28%,1m 05s,6.93,1005
+traffic_acquisition,"Apr 9-May 13, 2026",1,Organic Search,74,42,56.76%,1m 40s,7.58,561
+traffic_acquisition,"Apr 9-May 13, 2026",2,Direct,27,9,33.33%,40s,6.89,186
+traffic_acquisition,"Apr 9-May 13, 2026",3,Unassigned,22,8,36.36%,6s,4.68,103
+traffic_acquisition,"Apr 9-May 13, 2026",4,Referral,19,10,52.63%,44s,7.42,141
+traffic_acquisition,"Apr 9-May 13, 2026",5,Organic Social,4,1,25%,1s,3.50,14

@@ -1,0 +1,16 @@
+report,date_range,row_index,channel,source_medium,sessions,engaged_sessions,engagement_rate,avg_engagement_time_per_session,events_per_session,event_count
+traffic_source_medium,"Apr 9-May 13, 2026",total,Total,Total,145,70,48.28%,1m 05s,6.93,1005
+traffic_source_medium,"Apr 9-May 13, 2026",1,Organic Search,"bing / organic",50,27,54%,1m 18s,7.30,365
+traffic_source_medium,"Apr 9-May 13, 2026",2,Direct,"(direct) / (none)",27,9,33.33%,40s,6.89,186
+traffic_source_medium,"Apr 9-May 13, 2026",3,Unassigned,"chatgpt.com / (not set)",19,7,36.84%,7s,4.47,85
+traffic_source_medium,"Apr 9-May 13, 2026",4,Referral,"chatgpt.com / referral",18,9,50%,44s,7.39,133
+traffic_source_medium,"Apr 9-May 13, 2026",5,Organic Search,"duckduckgo / organic",14,8,57.14%,3m 00s,8.14,114
+traffic_source_medium,"Apr 9-May 13, 2026",6,Organic Search,"yahoo / organic",5,3,60%,1m 11s,7.20,36
+traffic_source_medium,"Apr 9-May 13, 2026",7,Organic Social,"m.facebook.com / referral",3,1,33.33%,2s,3.67,11
+traffic_source_medium,"Apr 9-May 13, 2026",8,Unassigned,"dubgtcg.dbz / (not set)",3,1,33.33%,2s,6.00,18
+traffic_source_medium,"Apr 9-May 13, 2026",9,Organic Search,"ecosia.org / organic",2,1,50%,50s,7.00,14
+traffic_source_medium,"Apr 9-May 13, 2026",10,Organic Search,"ca.search.yahoo.com / referral",1,1,100%,5m 40s,12.00,12
+traffic_source_medium,"Apr 9-May 13, 2026",11,Organic Search,"gr.search.yahoo.com / referral",1,1,100%,2m 30s,12.00,12
+traffic_source_medium,"Apr 9-May 13, 2026",12,Organic Search,"in.search.yahoo.com / referral",1,1,100%,32s,8.00,8
+traffic_source_medium,"Apr 9-May 13, 2026",13,Organic Social,"l.facebook.com / referral",1,0,0%,0s,3.00,3
+traffic_source_medium,"Apr 9-May 13, 2026",14,Referral,"copilot.com / referral",1,1,100%,57s,8.00,8

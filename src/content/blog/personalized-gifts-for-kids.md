@@ -178,4 +178,4 @@ Kids especially love personalized storybooks where they're the hero, name puzzle
 
 Personalized gifts for kids aren't just another toy—they're a way to show you see them. Whether it's a custom storybook, a name puzzle, or a keepsake they can grow with, the right pick will be remembered for years.
 
-Still not sure what to choose? Use our [Gift Idea Generator](https://bright-gift.com/) to get tailored ideas based on who you're shopping for.
+Still not sure what to choose? Use our [Gift Idea Generator](/gift-idea-generator/) to get tailored ideas based on who you're shopping for.

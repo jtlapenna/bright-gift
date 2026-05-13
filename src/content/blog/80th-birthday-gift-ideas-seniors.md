@@ -261,7 +261,7 @@ If you are torn between options, choose the gift that will be easiest to enjoy i
 
 The presentation matters as much as the product. A practical gift feels warmer when it arrives with setup help, a handwritten note, or a reason you chose it for their actual routine.
 
-If you still want help narrowing the lane, try the [Gift Idea Generator](/#gift-generator).
+If you still want help narrowing the lane, try the [AI Gift Idea Generator](/gift-idea-generator/).
 
 ## Related Gift Guides You'll Love
 

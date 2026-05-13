@@ -1,0 +1,15 @@
+report,date_range,row_index,channel,source_medium,sessions,engaged_sessions,engagement_rate,avg_engagement_time_per_session,events_per_session,event_count
+traffic_source_medium,"Mar 1-Mar 26, 2026",total,Total,Total,179,67,37.43%,22s,6.11,1093
+traffic_source_medium,"Mar 1-Mar 26, 2026",1,Unassigned,"chatgpt.com / (not set)",87,17,19.54%,6s,4.79,417
+traffic_source_medium,"Mar 1-Mar 26, 2026",2,Referral,"chatgpt.com / referral",39,20,51.28%,12s,5.79,226
+traffic_source_medium,"Mar 1-Mar 26, 2026",3,Organic Search,"bing / organic",21,16,76.19%,1m 45s,14.62,307
+traffic_source_medium,"Mar 1-Mar 26, 2026",4,Direct,"(direct) / (none)",15,3,20%,7s,4.00,60
+traffic_source_medium,"Mar 1-Mar 26, 2026",5,Organic Search,"duckduckgo / organic",5,1,20%,25s,4.20,21
+traffic_source_medium,"Mar 1-Mar 26, 2026",6,Organic Search,"yahoo / organic",3,3,100%,12s,5.00,15
+traffic_source_medium,"Mar 1-Mar 26, 2026",7,Organic Search,"ecosia.org / organic",2,2,100%,51s,5.50,11
+traffic_source_medium,"Mar 1-Mar 26, 2026",8,Unassigned,"(not set)",2,0,0%,0s,1.00,2
+traffic_source_medium,"Mar 1-Mar 26, 2026",9,Organic Search,"cn.bing.com / referral",1,1,100%,4m 30s,6.00,6
+traffic_source_medium,"Mar 1-Mar 26, 2026",10,Organic Search,"sg.search.yahoo.com / referral",1,1,100%,9s,7.00,7
+traffic_source_medium,"Mar 1-Mar 26, 2026",11,Organic Search,"yandex.ru / referral",1,1,100%,30s,10.00,10
+traffic_source_medium,"Mar 1-Mar 26, 2026",12,Organic Social,"l.facebook.com / referral",1,1,100%,2m 08s,5.00,5
+traffic_source_medium,"Mar 1-Mar 26, 2026",13,Organic Social,"m.facebook.com / referral",1,1,100%,0s,6.00,6

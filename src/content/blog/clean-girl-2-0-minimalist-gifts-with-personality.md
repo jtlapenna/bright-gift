@@ -197,7 +197,7 @@ The strongest gifts in this lane do three things at once: they streamline a rout
 ---
 
 
-> 🎯 **Not sure what to buy?** Our [Gift Idea Generator](https://bright-gift.com) can help you find the perfect gift based on their interests, budget, and occasion!
+> 🎯 **Not sure what to buy?** Our [Gift Idea Generator](/gift-idea-generator/) can help you find the perfect gift based on their interests, budget, and occasion!
 
 
 ## How to Personalize a Minimalist Gift (Without Clutter)

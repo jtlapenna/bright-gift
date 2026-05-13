@@ -100,7 +100,7 @@ Be Rooted stands out because the products feel giftable before you even add wrap
 
 If you are building a fuller desk or school bundle, pair this guide with [Gifts Under $25 for Coworkers](/blog/gifts-under-25-for-coworkers/), [Best Gifts for Teachers](/blog/best-gifts-for-teachers/), [Little Luxuries Under $25](/blog/little-luxuries-under-25-mini-splurges-major-wow/), and [25 Amazing Gifts from Black-Owned Businesses Under $75](/blog/25-amazing-gifts-from-black-owned-businesses-under-75/).
 
-> 🎯 **Not sure what to buy?** Our [Gift Idea Generator](https://bright-gift.com) can help you find the right gift based on the recipient's interests, budget, and routine.
+> 🎯 **Not sure what to buy?** Our [Gift Idea Generator](/gift-idea-generator/) can help you find the right gift based on the recipient's interests, budget, and routine.
 
 ## What Makes Be Rooted Worth Gifting
 

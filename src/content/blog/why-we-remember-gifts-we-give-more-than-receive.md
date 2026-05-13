@@ -74,7 +74,7 @@ When we give a gift, we're not just handing over an object—we're creating a me
 **Social Bonding**: Gifts are social currency. When we give, we're strengthening relationships and building social capital. Our brains are wired to remember social interactions that enhance our standing within groups.
 
 
-> 🎯 **Not sure what to buy?** Our [Gift Idea Generator](https://bright-gift.com/) can help you find the perfect gift based on their interests, budget, and occasion!
+> 🎯 **Not sure what to buy?** Our [Gift Idea Generator](/gift-idea-generator/) can help you find the perfect gift based on their interests, budget, and occasion!
 
 
 ## The Science Behind the Memory Gap

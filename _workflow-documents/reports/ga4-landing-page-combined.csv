@@ -1,0 +1,91 @@
+report,date_range,row_index,landing_page,sessions,active_users,new_users,avg_engagement_time_per_session
+landing_page,"Jan 1-Feb 15, 2026",total,Total,414,384,375,20s
+landing_page,"Jan 1-Feb 15, 2026",1,/,67,66,63,56s
+landing_page,"Jan 1-Feb 15, 2026",2,(not set),54,46,28,15s
+landing_page,"Jan 1-Feb 15, 2026",3,/blog/gifts-for-gamers-under-50,44,44,44,9s
+landing_page,"Jan 1-Feb 15, 2026",4,/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75,40,40,40,8s
+landing_page,"Jan 1-Feb 15, 2026",5,/blog/gifts-under-25-for-coworkers,40,36,36,20s
+landing_page,"Jan 1-Feb 15, 2026",6,/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple,40,37,37,7s
+landing_page,"Jan 1-Feb 15, 2026",7,/blog/25-unique-anniversary-gift-ideas-under-50,23,23,23,37s
+landing_page,"Jan 1-Feb 15, 2026",8,/blog/gifts-for-girlfriend-unique-romantic-ideas,21,21,21,7s
+landing_page,"Jan 1-Feb 15, 2026",9,/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond,14,14,14,2s
+landing_page,"Jan 1-Feb 15, 2026",10,/blog/gift-giving-statistics-what-people-really-want,8,8,8,21s
+landing_page,"Jan 1-Feb 15, 2026",11,/blog/gifts-for-remote-workers-and-wfh-professionals,6,5,5,28s
+landing_page,"Jan 1-Feb 15, 2026",12,/blog/best-2025-holiday-gifts-ai-tech-remote-work,5,5,5,33s
+landing_page,"Jan 1-Feb 15, 2026",13,/blog/gifts-for-remote-workers-under-50,5,5,5,7s
+landing_page,"Jan 1-Feb 15, 2026",14,/blog,4,4,4,2s
+landing_page,"Jan 1-Feb 15, 2026",15,/blog/gifts-for-book-lovers-under-50,4,4,4,19s
+landing_page,"Jan 1-Feb 15, 2026",16,/blog/gifts-for-plant-lovers,4,4,4,7s
+landing_page,"Jan 1-Feb 15, 2026",17,/blog/80th-birthday-gift-ideas-seniors,3,3,3,41s
+landing_page,"Jan 1-Feb 15, 2026",18,/blog/ai-powered-gift-ideas-for-every-budget,3,3,3,39s
+landing_page,"Jan 1-Feb 15, 2026",19,/blog/ai-tiktok-made-me-buy-it-gifts-2025,3,3,3,23s
+landing_page,"Jan 1-Feb 15, 2026",20,/blog/eco-friendly-gift-ideas-for-every-budget,3,3,3,8s
+landing_page,"Jan 1-Feb 15, 2026",21,/blog/gifts-for-new-homeowners-2025,3,3,3,5s
+landing_page,"Jan 1-Feb 15, 2026",22,/blog/little-hero-labs-personalized-childrens-book,3,3,2,0s
+landing_page,"Jan 1-Feb 15, 2026",23,/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care,2,2,2,0s
+landing_page,"Jan 1-Feb 15, 2026",24,/blog/be-rooted-planners-stationery,2,2,2,6s
+landing_page,"Jan 1-Feb 15, 2026",25,/blog/clean-girl-2-0-minimalist-gifts-with-personality,2,2,2,12s
+landing_page,"Jan 1-Feb 15, 2026",26,/blog/gaming-gifts-2025,2,2,2,0s
+landing_page,"Jan 1-Feb 15, 2026",27,/blog/how-to-choose-the-perfect-gift-complete-guide,2,2,2,16s
+landing_page,"Jan 1-Feb 15, 2026",28,/blog/sleep-tech-gifts-that-really-work,2,2,2,26s
+landing_page,"Jan 1-Feb 15, 2026",29,/blog/unique-gifts-for-board-game-enthusiasts,2,2,2,0s
+landing_page,"Jan 1-Feb 15, 2026",30,/blog/best-gifts-for-teachers,1,1,1,0s
+landing_page,"Jan 1-Feb 15, 2026",31,/blog/gifts-for-new-grandparents,1,1,1,0s
+landing_page,"Jan 1-Feb 15, 2026",32,/blog/unique-graduation-gifts-creative-minds,1,1,1,0s
+landing_page,"Mar 1-Mar 26, 2026",total,Total,179,170,167,22s
+landing_page,"Mar 1-Mar 26, 2026",1,/blog/gifts-for-girlfriend-unique-romantic-ideas,68,68,68,5s
+landing_page,"Mar 1-Mar 26, 2026",2,/,26,26,26,1m 38s
+landing_page,"Mar 1-Mar 26, 2026",3,(not set),21,19,12,1s
+landing_page,"Mar 1-Mar 26, 2026",4,/blog/gifts-under-25-for-coworkers,8,8,8,2s
+landing_page,"Mar 1-Mar 26, 2026",5,/blog/25-unique-anniversary-gift-ideas-under-50,6,6,6,2s
+landing_page,"Mar 1-Mar 26, 2026",6,/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond,6,6,6,0s
+landing_page,"Mar 1-Mar 26, 2026",7,/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75,5,5,5,19s
+landing_page,"Mar 1-Mar 26, 2026",8,/blog/80th-birthday-gift-ideas-seniors,5,4,4,25s
+landing_page,"Mar 1-Mar 26, 2026",9,/blog/gifts-for-gamers-under-50,5,5,5,10s
+landing_page,"Mar 1-Mar 26, 2026",10,/blog,3,3,2,49s
+landing_page,"Mar 1-Mar 26, 2026",11,/blog/affordable-gifts-for-pet-lovers-under-30,2,2,2,0s
+landing_page,"Mar 1-Mar 26, 2026",12,/blog/christmas-gift-ideas-2025,2,2,2,10s
+landing_page,"Mar 1-Mar 26, 2026",13,/blog/emergency-gift-guide-30-last-minute-present-ideas,2,1,1,0s
+landing_page,"Mar 1-Mar 26, 2026",14,/blog/gift-giving-statistics-what-people-really-want,2,2,2,27s
+landing_page,"Mar 1-Mar 26, 2026",15,/blog/gifts-for-new-grandparents,2,2,2,3m 19s
+landing_page,"Mar 1-Mar 26, 2026",16,/blog/gifts-for-new-homeowners-2025,2,2,2,0s
+landing_page,"Mar 1-Mar 26, 2026",17,/blog/25-books-to-gift-this-holiday-season,1,1,1,0s
+landing_page,"Mar 1-Mar 26, 2026",18,/blog/ai-powered-gift-ideas-for-every-budget,1,1,1,0s
+landing_page,"Mar 1-Mar 26, 2026",19,/blog/best-home-gifts-on-amazon-2024,1,1,1,0s
+landing_page,"Mar 1-Mar 26, 2026",20,/blog/fun-gifts-for-kids-birthday-parties,1,1,1,33s
+landing_page,"Mar 1-Mar 26, 2026",21,/blog/gaming-gifts-2025,1,1,1,8s
+landing_page,"Mar 1-Mar 26, 2026",22,/blog/gifts-for-book-lovers-under-50,1,1,1,0s
+landing_page,"Mar 1-Mar 26, 2026",23,/blog/gifts-for-remote-workers-and-wfh-professionals,1,1,1,1m 30s
+landing_page,"Mar 1-Mar 26, 2026",24,/blog/gifts-for-remote-workers-under-50,1,1,1,49s
+landing_page,"Mar 1-Mar 26, 2026",25,/blog/how-to-choose-the-perfect-gift-complete-guide,1,1,1,0s
+landing_page,"Mar 1-Mar 26, 2026",26,/blog/little-hero-labs-personalized-childrens-book,1,1,1,0s
+landing_page,"Mar 1-Mar 26, 2026",27,/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore,1,1,1,0s
+landing_page,"Mar 1-Mar 26, 2026",28,/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners,1,1,1,0s
+landing_page,"Mar 1-Mar 26, 2026",29,/blog/unique-gifts-for-board-game-enthusiasts,1,1,1,1m 09s
+landing_page,"Mar 1-Mar 26, 2026",30,/blog/valentines-day-gifts-under-50-20-romantic-ideas-for-every-couple,1,1,1,0s
+landing_page,"Apr 9-May 13, 2026",total,Total,145,122,122,1m 05s
+landing_page,"Apr 9-May 13, 2026",1,/,39,36,35,1m 26s
+landing_page,"Apr 9-May 13, 2026",2,(not set),29,24,16,36s
+landing_page,"Apr 9-May 13, 2026",3,/blog/gifts-for-girlfriend-unique-romantic-ideas,22,20,20,12s
+landing_page,"Apr 9-May 13, 2026",4,/blog/gift-giving-statistics-what-people-really-want,13,13,13,1m 32s
+landing_page,"Apr 9-May 13, 2026",5,/blog/80th-birthday-gift-ideas-seniors,6,6,6,36s
+landing_page,"Apr 9-May 13, 2026",6,/blog/gifts-for-new-grandparents,6,3,3,3s
+landing_page,"Apr 9-May 13, 2026",7,/blog/how-to-choose-the-perfect-gift-complete-guide,4,3,3,6m 52s
+landing_page,"Apr 9-May 13, 2026",8,/blog/unique-graduation-gifts-creative-minds,4,4,4,31s
+landing_page,"Apr 9-May 13, 2026",9,/blog/gifts-for-new-homeowners-2025,3,3,3,7s
+landing_page,"Apr 9-May 13, 2026",10,/blog/gifts-under-25-for-coworkers,3,3,3,17s
+landing_page,"Apr 9-May 13, 2026",11,/blog/last-minute-mothers-day-gifts-that-still-feel-thoughtful,2,2,2,15s
+landing_page,"Apr 9-May 13, 2026",13,/blog,1,1,1,36s
+landing_page,"Apr 9-May 13, 2026",14,/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75,1,1,1,14m 56s
+landing_page,"Apr 9-May 13, 2026",15,/blog/25-unique-anniversary-gift-ideas-under-50,1,1,1,6s
+landing_page,"Apr 9-May 13, 2026",16,/blog/ai-powered-gift-ideas-for-every-budget,1,1,1,4m 53s
+landing_page,"Apr 9-May 13, 2026",17,/blog/ai-tiktok-made-me-buy-it-gifts-2025,1,1,1,0s
+landing_page,"Apr 9-May 13, 2026",18,/blog/best-2025-holiday-gifts-ai-tech-remote-work,1,1,1,0s
+landing_page,"Apr 9-May 13, 2026",19,/blog/best-books-for-different-reading-levels,1,1,1,2m 41s
+landing_page,"Apr 9-May 13, 2026",20,/blog/best-home-gifts-on-amazon-2024,1,1,1,12s
+landing_page,"Apr 9-May 13, 2026",21,/blog/christmas-gift-ideas-2025,1,1,1,29s
+landing_page,"Apr 9-May 13, 2026",22,/blog/eco-friendly-gift-ideas-for-every-budget,1,1,1,0s
+landing_page,"Apr 9-May 13, 2026",23,/blog/gifts-for-gamers-under-50,1,1,1,0s
+landing_page,"Apr 9-May 13, 2026",24,/blog/gifts-for-remote-workers-under-50,1,1,1,1m 16s
+landing_page,"Apr 9-May 13, 2026",25,/blog/mothers-day-gifts-for-every-type-of-mom,1,1,1,19s
+landing_page,"Apr 9-May 13, 2026",26,/contact,1,1,1,1s

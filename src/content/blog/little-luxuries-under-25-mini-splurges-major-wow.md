@@ -394,6 +394,6 @@ Little luxuries under $25 prove that thoughtful gifts don't require big budgets.
 
 The best gifts combine quality materials, thoughtful design, and personal relevance. By focusing on items that feel luxurious through their craftsmanship, presentation, or uniqueness, you can give gifts that feel expensive without the high price tag. Remember that perceived value often matters more than actual cost when it comes to gift appreciation.
 
-Not sure which little luxury fits your recipient best? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect affordable luxury gift based on their interests, preferences, and your relationship. Find thoughtful gifts that show you care without breaking the bank.
+Not sure which little luxury fits your recipient best? Our [Gift Idea Generator](/gift-idea-generator/) can help you discover the perfect affordable luxury gift based on their interests, preferences, and your relationship. Find thoughtful gifts that show you care without breaking the bank.
 
 Looking for more gift ideas? Check out our [25 Thoughtful Gifts for Your Girlfriend That Show You Care](/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/) for romantic-but-practical ideas, or explore our [Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50/) for work-from-home professionals.

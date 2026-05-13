@@ -73,7 +73,7 @@ Finding the perfect gift can feel like solving an impossible puzzle. You want so
 
 The good news? Gift-giving is a skill you can master. With the right approach and some proven strategies, you can consistently choose gifts that strengthen relationships and create lasting memories. This comprehensive guide will walk you through everything you need to know about selecting the perfect gift for any situation.
 
-> 🎯 **Not sure where to start? Our [AI Gift Idea Generator](https://bright-gift.com/) can help you discover personalized gift suggestions based on the recipient's interests, personality, and your budget!**
+> 🎯 **Not sure where to start? Our [AI Gift Idea Generator](/gift-idea-generator/) can help you discover personalized gift suggestions based on the recipient's interests, personality, and your budget!**
 
 ---
 
@@ -433,7 +433,7 @@ Remember that the goal isn't perfection—it's connection. A gift that shows you
 
 The most meaningful gifts often come from a place of love and understanding. When you give with that intention, you're not just giving an object—you're giving a piece of your care and attention. That's what makes gift-giving such a powerful way to strengthen relationships and show people they matter.
 
-> 🎯 **Ready to put these strategies into practice? Try our [AI Gift Idea Generator](https://bright-gift.com/) to get personalized gift suggestions based on the recipient's interests, personality, and your budget. It's like having a gift-giving expert in your pocket!**
+> 🎯 **Ready to put these strategies into practice? Try our [AI Gift Idea Generator](/gift-idea-generator/) to get personalized gift suggestions based on the recipient's interests, personality, and your budget. It's like having a gift-giving expert in your pocket!**
 
 ---
 

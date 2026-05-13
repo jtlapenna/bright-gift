@@ -90,7 +90,7 @@ Remote work has become the new normal for millions of professionals worldwide, a
 
 From ergonomic essentials that prevent strain to tech gadgets that streamline workflow, these 27 gift ideas are carefully curated to support the unique needs of remote workers and WFH professionals. Each item has been selected to enhance productivity, improve comfort, or add a touch of joy to the workday.
 
-> 🎯 **Not sure what type of remote worker you're shopping for? Our [Gift Idea Generator](https://bright-gift.com/) can help you identify the perfect gift based on their work style, home office setup, and productivity needs!**
+> 🎯 **Not sure what type of remote worker you're shopping for? Our [Gift Idea Generator](/gift-idea-generator/) can help you identify the perfect gift based on their work style, home office setup, and productivity needs!**
 
 ---
 

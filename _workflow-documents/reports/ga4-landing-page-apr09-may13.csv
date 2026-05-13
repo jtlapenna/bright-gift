@@ -1,0 +1,27 @@
+report,date_range,row_index,landing_page,sessions,active_users,new_users,avg_engagement_time_per_session
+landing_page,"Apr 9-May 13, 2026",total,Total,145,122,122,1m 05s
+landing_page,"Apr 9-May 13, 2026",1,/,39,36,35,1m 26s
+landing_page,"Apr 9-May 13, 2026",2,(not set),29,24,16,36s
+landing_page,"Apr 9-May 13, 2026",3,/blog/gifts-for-girlfriend-unique-romantic-ideas,22,20,20,12s
+landing_page,"Apr 9-May 13, 2026",4,/blog/gift-giving-statistics-what-people-really-want,13,13,13,1m 32s
+landing_page,"Apr 9-May 13, 2026",5,/blog/80th-birthday-gift-ideas-seniors,6,6,6,36s
+landing_page,"Apr 9-May 13, 2026",6,/blog/gifts-for-new-grandparents,6,3,3,3s
+landing_page,"Apr 9-May 13, 2026",7,/blog/how-to-choose-the-perfect-gift-complete-guide,4,3,3,6m 52s
+landing_page,"Apr 9-May 13, 2026",8,/blog/unique-graduation-gifts-creative-minds,4,4,4,31s
+landing_page,"Apr 9-May 13, 2026",9,/blog/gifts-for-new-homeowners-2025,3,3,3,7s
+landing_page,"Apr 9-May 13, 2026",10,/blog/gifts-under-25-for-coworkers,3,3,3,17s
+landing_page,"Apr 9-May 13, 2026",11,/blog/last-minute-mothers-day-gifts-that-still-feel-thoughtful,2,2,2,15s
+landing_page,"Apr 9-May 13, 2026",13,/blog,1,1,1,36s
+landing_page,"Apr 9-May 13, 2026",14,/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75,1,1,1,14m 56s
+landing_page,"Apr 9-May 13, 2026",15,/blog/25-unique-anniversary-gift-ideas-under-50,1,1,1,6s
+landing_page,"Apr 9-May 13, 2026",16,/blog/ai-powered-gift-ideas-for-every-budget,1,1,1,4m 53s
+landing_page,"Apr 9-May 13, 2026",17,/blog/ai-tiktok-made-me-buy-it-gifts-2025,1,1,1,0s
+landing_page,"Apr 9-May 13, 2026",18,/blog/best-2025-holiday-gifts-ai-tech-remote-work,1,1,1,0s
+landing_page,"Apr 9-May 13, 2026",19,/blog/best-books-for-different-reading-levels,1,1,1,2m 41s
+landing_page,"Apr 9-May 13, 2026",20,/blog/best-home-gifts-on-amazon-2024,1,1,1,12s
+landing_page,"Apr 9-May 13, 2026",21,/blog/christmas-gift-ideas-2025,1,1,1,29s
+landing_page,"Apr 9-May 13, 2026",22,/blog/eco-friendly-gift-ideas-for-every-budget,1,1,1,0s
+landing_page,"Apr 9-May 13, 2026",23,/blog/gifts-for-gamers-under-50,1,1,1,0s
+landing_page,"Apr 9-May 13, 2026",24,/blog/gifts-for-remote-workers-under-50,1,1,1,1m 16s
+landing_page,"Apr 9-May 13, 2026",25,/blog/mothers-day-gifts-for-every-type-of-mom,1,1,1,19s
+landing_page,"Apr 9-May 13, 2026",26,/contact,1,1,1,1s

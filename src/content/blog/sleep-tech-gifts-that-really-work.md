@@ -260,4 +260,4 @@ Go “foundation first”: blackout curtains + white-noise machine + a cooling s
 
 The best sleep tech gift is the one they’ll actually use nightly. Match the gift to their real sleep problem, keep it simple, and you’ll give something that improves every day—not just the moment they open it.
 
-Ready for more tailored ideas? Use the [AI Gift Idea Generator](https://bright-gift.com/) and you’ll get recommendations matched to their budget and personality.
+Ready for more tailored ideas? Use the [AI Gift Idea Generator](/gift-idea-generator/) and you’ll get recommendations matched to their budget and personality.

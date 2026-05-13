@@ -5,7 +5,7 @@ description: >-
   accessories to wellness items, find budget-friendly office gifts that show
   appreciation.
 date: 2025-09-17T00:00:00.000Z
-lastUpdated: '2026-03-16'
+lastUpdated: '2026-05-13'
 status: published
 draft: false
 metaTitle: Gifts Under $25 for Coworkers | Perfect Office Gift Ideas
@@ -87,17 +87,26 @@ ogImageAlt: >-
   Gifts Under $25 for Coworkers: Thoughtful Office Gift Ideas social preview
   image
 ---
-Finding the perfect gift for a coworker doesn't have to be expensive or complicated. These thoughtful gifts under $25 are perfect for office celebrations, birthdays, or just showing appreciation.
+Finding the perfect gift for a coworker doesn't have to be expensive or complicated. These thoughtful gifts under $25 are built for office celebrations, birthdays, team thank-yous, Secret Santa exchanges, and low-pressure appreciation moments.
 
-> 🎯 **Not sure what type of coworker you're shopping for? Our [Gift Idea Generator](https://bright-gift.com/) can help you identify the perfect gift based on their interests, work style, and your relationship!**
+> **Not sure what type of coworker you're shopping for?** Use the [AI Gift Idea Generator](/gift-idea-generator/) to match their work style, interests, and your relationship before choosing from this under-$25 list.
 
 For remote workers, check out our [Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50/) guide for more work-from-home gift ideas.
+
+## Quick Picks by Coworker Signal
+
+- **Always has coffee or tea nearby:** Premium Coffee or Tea Sampler, Insulated Travel Mug.
+- **Desk is always organized:** Desk Organizer Set, Professional Notebook Set.
+- **Works long screen-heavy days:** Ergonomic Mouse Pad, Blue Light Blocking Glasses.
+- **Likes small morale boosts:** Healthy Snack Box, Desk Plant, Puzzle or Brain Teaser.
+- **You barely know them:** Choose a consumable gift or practical desk item instead of anything personal.
 
 ---
 
 ## Related Gift Guides You'll Love
 
 Looking for more gift inspiration? Check out these workplace-friendly guides:
+- [AI Gift Idea Generator](/gift-idea-generator/) - Personalize the shortlist by role, budget, and work style
 - [Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50/) - Budget-friendly upgrades for hybrid desks and home offices
 - [Remote Work 2.0: Hybrid Office Gifts](/blog/remote-work-2-0-gifts-hybrid-offices-50-100/) - Bigger-ticket office picks for people who split time between home and HQ
 - [Be Rooted Planners, Journals, and Desk Accessories](/blog/be-rooted-planners-stationery/) - Stylish stationery and desk add-ons that still feel professional
@@ -264,4 +273,4 @@ Find the perfect gift for any occasion:
 
 ---
 
-*Looking for more gift ideas? Check out our other gift guides for different budgets and relationships. Have a specific coworker in mind? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on their unique interests and work style!*
+*Looking for more gift ideas? Check out our other gift guides for different budgets and relationships. Have a specific coworker in mind? The [AI Gift Idea Generator](/gift-idea-generator/) can help you discover a present based on their interests and work style.*

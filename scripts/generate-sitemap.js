@@ -62,6 +62,7 @@ function generateSitemap() {
   // Static pages (with trailing slashes)
   const staticPages = [
     { url: '/', priority: '1.0', changefreq: 'daily' },
+    { url: '/gift-idea-generator/', priority: '0.9', changefreq: 'weekly' },
     { url: '/blog/', priority: '0.8', changefreq: 'weekly' },
     { url: '/category/gift-guides/', priority: '0.8', changefreq: 'weekly' },
     { url: '/category/gift-tips/', priority: '0.8', changefreq: 'weekly' },
@@ -126,7 +127,7 @@ try {
   fs.writeFileSync(outputPath, sitemap);
   
   const blogPosts = getBlogPosts();
-  const staticPageCount = 14; // Home, blog, 2 category pages, 6 landing pages, privacy, terms, contact, data-deletion
+  const staticPageCount = 15; // Home, gift generator, blog, 2 category pages, 6 landing pages, privacy, terms, contact, data-deletion
   console.log(`✅ Sitemap generated successfully!`);
   console.log(`📊 Total URLs: ${staticPageCount + blogPosts.length} (${staticPageCount} static + ${blogPosts.length} blog posts)`);
   console.log(`📁 Output: ${outputPath}`);

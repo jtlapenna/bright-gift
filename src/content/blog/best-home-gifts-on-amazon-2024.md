@@ -73,7 +73,7 @@ socialImageAlt: 'Best Home Gifts on Amazon: Transform Your Space social preview 
 ---
 Shopping for home gifts on Amazon works best when you stay in the lane of useful, style-safe upgrades. Whether you are buying for new homeowners, a housewarming, or someone refreshing a space, the strongest picks are easy to use, easy to style, and unlikely to become clutter.
 
-> 🎯 **Not sure what type of home gift to buy? Our [Gift Idea Generator](https://bright-gift.com/) can help you discover the perfect present based on their style, needs, and budget!**
+> 🎯 **Not sure what type of home gift to buy? Our [Gift Idea Generator](/gift-idea-generator/) can help you discover the perfect present based on their style, needs, and budget!**
 
 For new homeowners, explore our [25 Thoughtful Housewarming Gifts for New Homeowners Under $75](/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/) guide.
 
@@ -214,4 +214,4 @@ Great under-$50 picks include welcome mats, ceramic bowls, hanging planters, ins
 - [How to Choose the Perfect Gift](/blog/how-to-choose-the-perfect-gift-complete-guide/)
 - [Gifts for Plant Lovers](/blog/gifts-for-plant-lovers/)
 
-> 🎯 **Looking for more gift ideas? Try our [Gift Idea Generator](https://bright-gift.com/) to discover the perfect home present based on their style and preferences!**
+> 🎯 **Looking for more gift ideas? Try our [Gift Idea Generator](/gift-idea-generator/) to discover the perfect home present based on their style and preferences!**

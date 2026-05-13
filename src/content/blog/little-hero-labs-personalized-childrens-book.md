@@ -112,4 +112,4 @@ You use the character builder on the Little Hero Labs site to match your child: 
 
 Little Hero Labs is a single product done really well: one personalized story, one hero (your child), and a clear message about inner strength. There are no other characters to buy, no follow-up products. Just one book that's made for them. If you want a gift that feels made for the child and that they're likely to keep and ask for again at story time, it's a strong option. The price is straightforward ($29.99), and the ordering flow is simple: you build the character, place the order, and the book arrives ready to give. For anyone who's tired of giving one more toy that gets forgotten in a week, a Little Hero Labs book is a meaningful alternative.
 
-Looking for more ideas for the same kid, or someone else? Use our [Gift Idea Generator](https://bright-gift.com/) to get tailored recommendations.
+Looking for more ideas for the same kid, or someone else? Use our [Gift Idea Generator](/gift-idea-generator/) to get tailored recommendations.
