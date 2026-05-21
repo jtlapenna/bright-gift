@@ -307,7 +307,9 @@ const breadcrumbStructuredData = breadcrumbs ? {
 						.replace(/^view\s+/i, '')
 						.replace(/\s+\((affiliate )?link\)$/i, '')
 						.trim();
-					if (productName) return productName.slice(0, 120);
+					var normalizedLabel = productName.replace(/[→›»]/g, '').trim();
+					var isGenericLabel = !normalizedLabel || /^(on amazon|on bookshop|shop now|shop|buy now|view details|details)$/i.test(normalizedLabel);
+					if (productName && !isGenericLabel) return productName.slice(0, 120);
 					if (partner === 'amazon') return url.searchParams.get('k') || getAsin(url) || 'Amazon product';
 					if (partner === 'bookshop') return url.searchParams.get('keywords') || 'Bookshop product';
 					return partner;
