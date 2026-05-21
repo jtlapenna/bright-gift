@@ -308,7 +308,7 @@ const breadcrumbStructuredData = breadcrumbs ? {
 						.replace(/\s+\((affiliate )?link\)$/i, '')
 						.trim();
 					var normalizedLabel = productName.replace(/[→›»]/g, '').trim();
-					var isGenericLabel = !normalizedLabel || /^(on amazon|on bookshop|shop now|shop|buy now|view details|details)$/i.test(normalizedLabel);
+					var isGenericLabel = !normalizedLabel || /^(on amazon|on bookshop|find on amazon|find similar on amazon|find similar products on amazon|shop now|shop|buy now|view details|details)$/i.test(normalizedLabel);
 					if (productName && !isGenericLabel) return productName.slice(0, 120);
 					if (partner === 'amazon') return url.searchParams.get('k') || getAsin(url) || 'Amazon product';
 					if (partner === 'bookshop') return url.searchParams.get('keywords') || 'Bookshop product';
