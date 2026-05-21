@@ -233,52 +233,217 @@ const breadcrumbStructuredData = breadcrumbs ? {
 				<script type="application/ld+json" set:html={JSON.stringify(breadcrumbStructuredData)} />
 			)}
 
-		<!-- Amazon Link Processing Script - Defer to after page load -->
+		<!-- Affiliate click/impression tracking -->
 		<script is:inline>
-        // Post-process affiliate links to ensure correct classes
-			  document.addEventListener('DOMContentLoaded', function() {
-			    const articleContent = document.getElementById('article-content');
-			    if (articleContent) {
-			      const links = articleContent.querySelectorAll('a');
-			      links.forEach(link => {
-                const href = (link.getAttribute('href') || '').toLowerCase();
-                if (href.includes('amazon.com')) link.classList.add('amazon-link');
-                if (href.includes('bookshop.org')) link.classList.add('bookshop-link');
-			        if (href.includes('arjdj2msd.com')) link.classList.add('afrofiliate-link');
-			      });
-			    }
+			(function() {
+				var SITE = 'brightgift';
+				var TRACKING_VERSION = '2026-05-21';
+				var AMAZON_TRACKING_ID = 'bright-gift-20';
+				var BOOKSHOP_AFFILIATE_ID = 'brightgift';
 
-			    function getAffiliatePlatform(url) {
-			      if (url.includes('amazon.com')) return 'amazon';
-			      if (url.includes('bookshop.org')) return 'bookshop';
-			      if (url.includes('arjdj2msd.com')) return 'afrofiliate';
-			      if (url.includes('littleherolabs.com')) return 'direct_partner';
-			      return 'other';
-			    }
+				function getUrl(href) {
+					try {
+						return new URL(href, window.location.origin);
+					} catch {
+						return null;
+					}
+				}
 
-			    document.addEventListener('click', function(event) {
-			      const target = event.target;
-			      if (!(target instanceof Element)) return;
+				function getAsin(url) {
+					var match = url.href.match(/\/(?:dp|gp\/product)\/([A-Z0-9]{10})(?:[/?#]|$)/i);
+					return match ? match[1].toUpperCase() : '';
+				}
 
-			      const link = target.closest('a[href]');
-			      if (!link) return;
+				function getPartner(url) {
+					var href = url.href.toLowerCase();
+					if (href.includes('amazon.') || href.includes('amzn.to')) return 'amazon';
+					if (href.includes('bookshop.org')) return 'bookshop';
+					if (href.includes('arjdj2msd.com')) return 'afrofiliate';
+					if (href.includes('littleherolabs.com')) return 'little_hero_labs';
+					if (href.includes('impact.com')) return 'impact';
+					if (href.includes('flexoffers.com')) return 'flexoffers';
+					return 'other';
+				}
 
-			      const href = link.getAttribute('href') || '';
-			      const affiliatePlatform = getAffiliatePlatform(href.toLowerCase());
-			      if (affiliatePlatform === 'other') return;
+				function isAffiliateLink(href) {
+					var url = getUrl(href);
+					if (!url) return false;
+					return getPartner(url) !== 'other';
+				}
 
-			      if (typeof window.brightGiftTrack === 'function') {
-			        window.brightGiftTrack('affiliate_click', {
-			          affiliate_platform: affiliatePlatform,
-			          link_url: link.href,
-			          link_text: (link.textContent || '').trim().slice(0, 120),
-			          link_location: articleContent && articleContent.contains(link) ? 'blog_article' : 'sitewide',
-			          outbound: true
-			        });
-			      }
-			    }, { capture: true });
-			  });
-			</script>
+				function getContentType() {
+					var path = window.location.pathname;
+					if (path === '/') return 'home';
+					if (path.includes('/blog/')) return 'blog_post';
+					if (path.includes('/gift-idea-generator/')) return 'tool';
+					if (path.includes('/category/')) return 'category';
+					return 'page';
+				}
+
+				function getCtaPosition(link) {
+					if (link.dataset.ctaPosition) return link.dataset.ctaPosition;
+					if (link.closest('#results-container')) return 'gift_generator_result';
+					if (link.closest('#article-content')) return 'blog_article';
+					if (link.closest('header')) return 'header';
+					if (link.closest('footer')) return 'footer';
+					if (link.textContent && /shop|buy|find|view|amazon|bookshop|create/i.test(link.textContent)) return 'inline_cta';
+					return 'inline';
+				}
+
+				function getTrackingId(url, partner) {
+					if (partner === 'amazon') return url.searchParams.get('tag') || AMAZON_TRACKING_ID;
+					if (partner === 'bookshop') return url.searchParams.get('affiliate') || BOOKSHOP_AFFILIATE_ID;
+					if (partner === 'afrofiliate') {
+						var parts = url.pathname.split('/').filter(Boolean);
+						return parts.slice(0, 3).join('/');
+					}
+					return url.searchParams.get('tag') || url.searchParams.get('affiliate') || url.searchParams.get('subid') || '';
+				}
+
+				function getProductName(link, url, partner) {
+					var label = link.dataset.productName || link.getAttribute('aria-label') || link.textContent || '';
+					var productName = label
+						.replace(/\s+/g, ' ')
+						.replace(/^view\s+/i, '')
+						.replace(/\s+\((affiliate )?link\)$/i, '')
+						.trim();
+					if (productName) return productName.slice(0, 120);
+					if (partner === 'amazon') return url.searchParams.get('k') || getAsin(url) || 'Amazon product';
+					if (partner === 'bookshop') return url.searchParams.get('keywords') || 'Bookshop product';
+					return partner;
+				}
+
+				function getProductId(link, url, partner) {
+					if (link.dataset.productId) return link.dataset.productId;
+					var asin = getAsin(url);
+					if (asin) return asin;
+					if (partner === 'amazon') return url.searchParams.get('k') || '';
+					if (partner === 'bookshop') return url.pathname.split('/').filter(Boolean).pop() || url.searchParams.get('keywords') || '';
+					return '';
+				}
+
+				function getInternalQaMarker() {
+					try {
+						var params = new URLSearchParams(window.location.search);
+						if (params.get('act_qa') === '1' || params.get('codex_qa') === '1') return 'internal_qa';
+						if (window.localStorage && window.localStorage.getItem('affiliate_control_tower_qa') === '1') return 'internal_qa';
+					} catch {
+						return '';
+					}
+					return '';
+				}
+
+				function getPayload(link) {
+					var url = getUrl(link.href);
+					if (!url) return null;
+					var partner = getPartner(url);
+					if (partner === 'other') return null;
+					var internalQaMarker = getInternalQaMarker();
+					var productName = getProductName(link, url, partner);
+					return {
+						site: SITE,
+						page_url: window.location.pathname,
+						page_title: document.title,
+						content_type: getContentType(),
+						partner: partner,
+						retailer: link.dataset.retailer || partner,
+						product_id: getProductId(link, url, partner),
+						product_name: productName,
+						asin: getAsin(url),
+						affiliate_tracking_id: getTrackingId(url, partner),
+						link_url: url.href,
+						cta_position: getCtaPosition(link),
+						cta_variant: link.dataset.ctaVariant || (link.textContent || '').trim().slice(0, 120),
+						experiment_id: internalQaMarker || link.dataset.experimentId || (link.closest('[data-experiment-id]') && link.closest('[data-experiment-id]').dataset.experimentId) || '',
+						traffic_type: internalQaMarker,
+						tracking_version: TRACKING_VERSION,
+						event_category: 'Affiliate',
+						event_label: partner + ' - ' + productName
+					};
+				}
+
+				function sendEvent(eventName, payload) {
+					if (!payload || typeof window.brightGiftTrack !== 'function') return;
+					window.brightGiftTrack(eventName, payload);
+				}
+
+				function trackAffiliateClick(linkOrEvent) {
+					var link = linkOrEvent && linkOrEvent.target && typeof linkOrEvent.target.closest === 'function'
+						? linkOrEvent.target.closest('a[href]')
+						: linkOrEvent;
+					if (!link || !link.href || !isAffiliateLink(link.href)) return;
+					var payload = getPayload(link);
+					link.dataset.standardAffiliateTracked = 'true';
+					sendEvent('affiliate_click', payload);
+					if (payload && payload.partner === 'amazon') {
+						sendEvent('amazon_click', payload);
+					}
+				}
+
+				function trackClick(event) {
+					var target = event.target;
+					if (!(target instanceof Element)) return;
+					var link = target.closest('a[href]');
+					if (!link || !isAffiliateLink(link.href)) return;
+					if (event.standardAffiliateTrackingHandled) return;
+					event.standardAffiliateTrackingHandled = true;
+					trackAffiliateClick(link);
+				}
+
+				function classifyLinks() {
+					document.querySelectorAll('a[href]').forEach(function(link) {
+						var partner = getPartner(getUrl(link.href) || { href: '' });
+						if (partner === 'amazon') link.classList.add('amazon-link');
+						if (partner === 'bookshop') link.classList.add('bookshop-link');
+						if (partner === 'afrofiliate') link.classList.add('afrofiliate-link');
+					});
+				}
+
+				function trackImpressions() {
+					classifyLinks();
+					var links = Array.from(document.querySelectorAll('a[href]')).filter(function(link) {
+						return isAffiliateLink(link.href) && !link.dataset.ctaImpressionTracked;
+					});
+					if (!links.length) return;
+
+					if (!('IntersectionObserver' in window)) {
+						links.forEach(function(link) {
+							link.dataset.ctaImpressionTracked = 'true';
+							sendEvent('cta_impression', getPayload(link));
+						});
+						return;
+					}
+
+					var observer = new IntersectionObserver(function(entries) {
+						entries.forEach(function(entry) {
+							if (!entry.isIntersecting) return;
+							var link = entry.target;
+							if (link.dataset.ctaImpressionTracked) return;
+							link.dataset.ctaImpressionTracked = 'true';
+							sendEvent('cta_impression', getPayload(link));
+							observer.unobserve(link);
+						});
+					}, { threshold: 0.5 });
+
+					links.forEach(function(link) {
+						observer.observe(link);
+					});
+				}
+
+				window.trackAffiliateClick = trackAffiliateClick;
+				window.addEventListener('click', trackClick, true);
+				document.addEventListener('click', trackClick, true);
+				if (document.readyState === 'loading') {
+					document.addEventListener('DOMContentLoaded', trackImpressions);
+				} else {
+					trackImpressions();
+				}
+
+				new MutationObserver(function() {
+					trackImpressions();
+				}).observe(document.documentElement, { childList: true, subtree: true });
+			})();
+		</script>
 	</head>
 	<body>
 		{/* Navigation Header - Show on all pages */}
