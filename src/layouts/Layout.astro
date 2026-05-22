@@ -356,6 +356,7 @@ const breadcrumbStructuredData = breadcrumbs ? {
 						link_url: url.href,
 						cta_position: getCtaPosition(link),
 						cta_variant: link.dataset.ctaVariant || (link.textContent || '').trim().slice(0, 120),
+						result_position: link.dataset.resultPosition || (link.closest('[data-result-position]') && link.closest('[data-result-position]').dataset.resultPosition) || '',
 						experiment_id: internalQaMarker || link.dataset.experimentId || (link.closest('[data-experiment-id]') && link.closest('[data-experiment-id]').dataset.experimentId) || '',
 						traffic_type: internalQaMarker,
 						tracking_version: TRACKING_VERSION,
