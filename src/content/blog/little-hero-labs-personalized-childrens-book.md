@@ -84,7 +84,7 @@ Little Hero Labs is a personalized children's book. You create a character that 
 
 **Practical tip:** Spend a few extra minutes in the character builder getting hair and skin tone right. Kids really do light up when the character looks like them; it makes the gift feel that much more special.
 
-**Price:** $29.99 <a href="https://www.littleherolabs.com" class="amazon-link" target="_blank" rel="noopener">Create Your Book at Little Hero Labs</a>
+**Price:** $29.99 <a href="https://www.littleherolabs.com" class="direct-link" target="_blank" rel="noopener">Create Your Book at Little Hero Labs</a>
 
 ### Why personalized beats generic for kids
 

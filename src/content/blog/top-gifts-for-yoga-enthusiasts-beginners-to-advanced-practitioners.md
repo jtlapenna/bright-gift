@@ -137,7 +137,7 @@ A yoga strap helps with flexibility, alignment, and reaching poses that might ot
 ## Beginner-Friendly Gifts
 
 ### 4. Yoga for Beginners Book
-<a href="https://bookshop.org/search?keywords=yoga+for+beginners+guide&affiliate=brightgift" class="amazon-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
+<a href="https://bookshop.org/search?keywords=yoga+for+beginners+guide&affiliate=brightgift" class="bookshop-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
 **Price Range:** $15-$25
 A comprehensive guide to yoga fundamentals helps beginners understand poses, breathing techniques, and practice philosophy. Look for books with clear illustrations, step-by-step instructions, and modifications for different body types.
 
@@ -185,7 +185,7 @@ A yoga trapeze allows for aerial yoga practice at home, providing unique perspec
 A comprehensive set of high-quality yoga props includes blocks, straps, bolsters, and blankets. Premium sets often feature eco-friendly materials and come in coordinated colors for a professional look.
 
 ### 12. Yoga Teacher Training Books
-<a href="https://bookshop.org/search?keywords=yoga+teacher+training+anatomy&affiliate=brightgift" class="amazon-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
+<a href="https://bookshop.org/search?keywords=yoga+teacher+training+anatomy&affiliate=brightgift" class="bookshop-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
 **Price Range:** $30-$60
 Advanced practitioners often appreciate books on yoga anatomy, philosophy, and teaching methodology. These resources help deepen their understanding and prepare for potential teacher training.
 

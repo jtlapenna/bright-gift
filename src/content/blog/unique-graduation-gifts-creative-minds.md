@@ -123,13 +123,13 @@ This is a small but genuinely useful gift for painters, makeup artists, ceramici
 
 ### 9. Creative Reference Book
 **Price Range:** $18-$45
-<a href="https://bookshop.org/search?keywords=creative+reference+book" class="bookshop-link" target="_blank" rel="noopener sponsored">Search on Bookshop</a>
+<a href="https://bookshop.org/search?keywords=creative+reference+book&affiliate=brightgift" class="bookshop-link" target="_blank" rel="noopener sponsored">Search on Bookshop</a>
 
 The right book can help a graduate keep learning without feeling like homework. Choose a reference book tied to their field, such as color theory, typography, photography, creative writing, art history, animation, or product design.
 
 ### 10. Guided Creative Journal
 **Price Range:** $15-$35
-<a href="https://bookshop.org/search?keywords=guided+creative+journal" class="bookshop-link" target="_blank" rel="noopener sponsored">Search on Bookshop</a>
+<a href="https://bookshop.org/search?keywords=guided+creative+journal&affiliate=brightgift" class="bookshop-link" target="_blank" rel="noopener sponsored">Search on Bookshop</a>
 
 A guided journal gives writers, artists, and reflective graduates a place to process big life changes and keep ideas moving. It is especially good for someone who likes prompts, planning, sketching, or morning pages.
 

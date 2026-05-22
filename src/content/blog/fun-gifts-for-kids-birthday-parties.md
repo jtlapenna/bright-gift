@@ -136,7 +136,7 @@ This guide focuses on versatile, parent-approved ideas that work across differen
 *****Why it's great:***** Inspire a love of reading with a curated set of beloved children's books. Choose classics or themed collections for every age and interest.
 **Parent tip:** Books make meaningful, lasting gifts that families cherish.
 **Price Range:** $40-$60
-<a href="https://bookshop.org/a/brightgift/9780060254926" class="amazon-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
+<a href="https://bookshop.org/a/brightgift/9780060254926" class="bookshop-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
 
 ### Musical Instrument Set
 *****Why it's great:***** Introduce kids to music with a set of child-sized instruments—think tambourines, maracas, and xylophones. Perfect for group play and dance parties!

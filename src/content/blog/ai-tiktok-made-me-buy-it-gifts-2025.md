@@ -230,7 +230,7 @@ Budget-conscious? Our [Gifts Under $25 for Coworkers](/blog/gifts-under-25-for-c
 
 **Practical tip:** Gift the hardcover for a keepsake feel.
 
-**Price Range:** $15–$30 <a href="https://bookshop.org/books/the-midnight-library/9780525559474" class="bookshop-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
+**Price Range:** $15–$30 <a href="https://bookshop.org/a/brightgift/9780525559474" class="bookshop-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
 
 More reading ideas: [25 Books to Gift This Holiday Season](/blog/25-books-to-gift-this-holiday-season/) and [Gifts for Book Lovers Under $50](/blog/gifts-for-book-lovers-under-50/).
 

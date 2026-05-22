@@ -151,7 +151,7 @@ Running short on time? These gifts offer fast shipping and guaranteed satisfacti
 
 **Practical tip:** Choose popular contemporary fiction for broad appeal.
 
-**Price Range:** $12–$30 <a href="https://bookshop.org/books/where-the-crawdads-sing/9780735219090" class="bookshop-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
+**Price Range:** $12–$30 <a href="https://bookshop.org/a/brightgift/9780735219090" class="bookshop-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
 
 *"Where the Crawdads Sing" by Delia Owens - A mesmerizing mystery about a girl who grows up isolated in the North Carolina marshes, perfect for readers who love atmospheric storytelling.*
 
@@ -243,7 +243,7 @@ Running short on time? These gifts offer fast shipping and guaranteed satisfacti
 
 **Practical tip:** Pick the first in a series to spark ongoing interest.
 
-**Price Range:** $9–$20 <a href="https://bookshop.org/books/the-hate-u-give/9780062498533" class="bookshop-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
+**Price Range:** $9–$20 <a href="https://bookshop.org/a/brightgift/9780062498533" class="bookshop-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
 
 *"The Hate U Give" by Angie Thomas - A powerful story about a teen who witnesses police violence and must find her voice, perfect for readers who want to understand important social issues.*
 

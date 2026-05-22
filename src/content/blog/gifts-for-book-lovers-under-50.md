@@ -90,17 +90,17 @@ Book lovers are some of the most thoughtful and appreciative gift recipients you
 ## Must-Read Books (Under $25)
 
 ### 1. The Midnight Library by Matt Haig
-<a href="https://bookshop.org/a/brightgift/9780525559474" class="amazon-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
+<a href="https://bookshop.org/a/brightgift/9780525559474" class="bookshop-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
 **Price Range:** $15-20
 A beautiful novel about infinite possibilities and the choices that make up a life. Perfect for anyone who loves thought-provoking fiction with heart.
 
 ### 2. Atomic Habits by James Clear
-<a href="https://bookshop.org/a/brightgift/9780735211292" class="amazon-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
+<a href="https://bookshop.org/a/brightgift/9780735211292" class="bookshop-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
 **Price Range:** $18-25
 An essential read for anyone interested in personal development and building better habits. Great for non-fiction lovers.
 
 ### 3. The Seven Husbands of Evelyn Hugo by Taylor Jenkins Reid
-<a href="https://bookshop.org/a/brightgift/9781501161933" class="amazon-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
+<a href="https://bookshop.org/a/brightgift/9781501161933" class="bookshop-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
 **Price Range:** $15-20
 A captivating historical fiction novel that's perfect for fans of strong female characters and Hollywood glamour.
 
@@ -157,7 +157,7 @@ Necklaces, earrings, or bracelets featuring book charms, literary quotes, or fav
 A sturdy tote bag with book quotes or literary designs. Perfect for carrying books, groceries, or everyday items.
 
 ### 12. Book Club Subscription
-<a href="https://bookshop.org/search?keywords=book+club+subscription&affiliate=brightgift" class="amazon-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
+<a href="https://bookshop.org/search?keywords=book+club+subscription&affiliate=brightgift" class="bookshop-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
 **Price Range:** $30-50
 A monthly book subscription service that delivers curated books based on their preferences.
 

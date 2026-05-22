@@ -165,7 +165,7 @@ Blue light blocking glasses help reduce eye strain and improve sleep quality for
 An essential oil diffuser can create a calming or energizing atmosphere in the home office. This gift helps remote workers set the right mood for different types of work.
 
 ### 12.5. Endorf Wellness Supplements
-<a href="https://www.arjdj2msd.com/7LKLK3/24D26TB/" class="amazon-link" target="_blank" rel="noopener sponsored">Shop Endorf</a>
+<a href="https://www.arjdj2msd.com/7LKLK3/24D26TB/" class="afrofiliate-link" target="_blank" rel="noopener sponsored">Shop Endorf</a>
 **Price Range:** $25-$60
 Endorf's mushroom-based wellness supplements support mental clarity and stress management for remote workers. Their natural formulas help maintain focus and energy during long work sessions.
 
@@ -198,7 +198,7 @@ A cable management system keeps the workspace tidy and prevents tripping hazards
 A comprehensive desk organizer keeps supplies, documents, and devices neatly arranged. This gift helps remote workers maintain an efficient and clutter-free workspace.
 
 ### 18. Wall Calendar or Planner
-<a href="https://bookshop.org/search?keywords=wall+calendar+planner&affiliate=brightgift" class="amazon-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
+<a href="https://bookshop.org/search?keywords=wall+calendar+planner&affiliate=brightgift" class="bookshop-link" target="_blank" rel="noopener sponsored">View on Bookshop.org</a>
 **Price Range:** $15-$35
 A wall calendar or planner helps remote workers stay organized and maintain work-life balance. This gift supports time management and productivity.
 
@@ -227,7 +227,7 @@ Comfortable footwear makes a big difference during long workdays at home. This p
 A coffee or tea subscription ensures remote workers always have quality beverages to fuel their workday. This gift adds a touch of luxury and convenience to the daily routine.
 
 ### 22.5. Caribe Coffee Subscription
-<a href="https://www.arjdj2msd.com/7LKLK3/24R58Q6/" class="amazon-link" target="_blank" rel="noopener sponsored">Shop Caribe Coffee</a>
+<a href="https://www.arjdj2msd.com/7LKLK3/24R58Q6/" class="afrofiliate-link" target="_blank" rel="noopener sponsored">Shop Caribe Coffee</a>
 **Price Range:** $35-$80 monthly
 Caribe Coffee offers sustainable, high-quality coffee beans that support remote workers with premium caffeine fuel. Their ethically sourced beans provide the perfect morning boost for productivity.
 

@@ -657,7 +657,8 @@ if (relatedPosts.length > 0) {
   :global(.prose h1) { display: none; }
   .prose .amazon-link,
   .prose .bookshop-link,
-  .prose .afrofiliate-link {
+  .prose .afrofiliate-link,
+  .prose .direct-link {
     display: inline-block;
     margin-left: 1rem;
     padding: 0.2em 0.9em;
@@ -672,7 +673,8 @@ if (relatedPosts.length > 0) {
   }
   .prose .amazon-link:hover, .prose .amazon-link:focus,
   .prose .bookshop-link:hover, .prose .bookshop-link:focus,
-  .prose .afrofiliate-link:hover, .prose .afrofiliate-link:focus {
+  .prose .afrofiliate-link:hover, .prose .afrofiliate-link:focus,
+  .prose .direct-link:hover, .prose .direct-link:focus {
     background: #1C2E4A;
     color: #fff !important;
     box-shadow: 0 2px 8px 0 #1c2e4a33;
@@ -775,7 +777,8 @@ if (relatedPosts.length > 0) {
   }
   a.amazon-link,
   a.bookshop-link,
-  a.afrofiliate-link {
+  a.afrofiliate-link,
+  a.direct-link {
     color: #FF6B6B !important;
     font-weight: 700;
     text-decoration: underline;
@@ -786,7 +789,8 @@ if (relatedPosts.length > 0) {
   }
   a.amazon-link:hover, a.amazon-link:focus,
   a.bookshop-link:hover, a.bookshop-link:focus,
-  a.afrofiliate-link:hover, a.afrofiliate-link:focus {
+  a.afrofiliate-link:hover, a.afrofiliate-link:focus,
+  a.direct-link:hover, a.direct-link:focus {
     color: #1C2E4A !important;
     background: none;
     outline: none;
@@ -794,7 +798,8 @@ if (relatedPosts.length > 0) {
   /* Global styles that apply to the entire document */
   :global(a.amazon-link),
   :global(a.bookshop-link),
-  :global(a.afrofiliate-link) {
+  :global(a.afrofiliate-link),
+  :global(a.direct-link) {
     color: #FF6B6B !important;
     font-weight: 700;
     text-decoration: underline;
@@ -821,7 +826,8 @@ if (relatedPosts.length > 0) {
   }
   :global(a.amazon-link:hover), :global(a.amazon-link:focus),
   :global(a.bookshop-link:hover), :global(a.bookshop-link:focus),
-  :global(a.afrofiliate-link:hover), :global(a.afrofiliate-link:focus) {
+  :global(a.afrofiliate-link:hover), :global(a.afrofiliate-link:focus),
+  :global(a.direct-link:hover), :global(a.direct-link:focus) {
     color: #1C2E4A !important;
     background: none;
     outline: none;
@@ -872,7 +878,8 @@ if (relatedPosts.length > 0) {
   /* Override Amazon link margins to keep on same line as price */
   .prose .amazon-link,
   .prose .bookshop-link,
-  .prose .afrofiliate-link {
+  .prose .afrofiliate-link,
+  .prose .direct-link {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }

@@ -78,19 +78,19 @@ Rather than guessing, use this guide to match gifts to the platforms and play st
 ## How to use this guide (find the perfect gift fast)
 
 - By budget:
-  - Jump to <a href="#budget" class="amazon-link" target="_blank" rel="noopener sponsored">Budget‑Friendly</a> • <a href="#mid-range" class="amazon-link" target="_blank" rel="noopener sponsored">Mid‑Range</a> • <a href="#premium" class="amazon-link" target="_blank" rel="noopener sponsored">Premium</a> • <a href="#pre-order" class="amazon-link" target="_blank" rel="noopener sponsored">Pre‑Orders</a>
+  - Jump to <a href="#budget" class="related-link">Budget‑Friendly</a> • <a href="#mid-range" class="related-link">Mid‑Range</a> • <a href="#premium" class="related-link">Premium</a> • <a href="#pre-order" class="related-link">Pre‑Orders</a>
 - By gift type:
   - Accessories (controllers, headsets, keyboards/mice, lighting) → Budget‑Friendly & Mid‑Range.
   - Big‑ticket upgrades (consoles, top monitors, handheld PCs) → Premium.
   - Pre‑orders (holiday hype items) → Pre‑Order section for the most talked‑about launches.
 - Console highlights (quick jumps):
-  - Nintendo: <a href="#switch2-pro-controller" class="amazon-link" target="_blank" rel="noopener sponsored">Switch 2 Pro Controller</a>, <a href="#kirby-air-riders" class="amazon-link" target="_blank" rel="noopener sponsored">Kirby Air Riders</a>, <a href="#metroid-prime4-switch2" class="amazon-link" target="_blank" rel="noopener sponsored">Metroid Prime 4 (Switch 2)</a>
-  - PlayStation: <a href="#dualsense-edge" class="amazon-link" target="_blank" rel="noopener sponsored">DualSense Edge</a>, <a href="#ps5-pro" class="amazon-link" target="_blank" rel="noopener sponsored">PS5 Pro</a>
-  - Xbox: <a href="#xbox-series-x" class="amazon-link" target="_blank" rel="noopener sponsored">Xbox Series X (All-Digital)</a>
-  - PC: <a href="#rog-ally-x" class="amazon-link" target="_blank" rel="noopener sponsored">ROG Ally X</a>
+  - Nintendo: <a href="#switch2-pro-controller" class="related-link">Switch 2 Pro Controller</a>, <a href="#kirby-air-riders" class="related-link">Kirby Air Riders</a>, <a href="#metroid-prime4-switch2" class="related-link">Metroid Prime 4 (Switch 2)</a>
+  - PlayStation: <a href="#dualsense-edge" class="related-link">DualSense Edge</a>, <a href="#ps5-pro" class="related-link">PS5 Pro</a>
+  - Xbox: <a href="#xbox-series-x" class="related-link">Xbox Series X (All-Digital)</a>
+  - PC: <a href="#rog-ally-x" class="related-link">ROG Ally X</a>
 - Quick tip: Match the gift to the platform they already have. If they play on Switch 2, look for "Switch 2" labels; if they're on PS5, stick to PlayStation accessories and games.
 
-Quick links: <a href="#budget" class="amazon-link" target="_blank" rel="noopener sponsored">Budget</a> • <a href="#mid-range" class="amazon-link" target="_blank" rel="noopener sponsored">Mid‑Range</a> • <a href="#premium" class="amazon-link" target="_blank" rel="noopener sponsored">Premium</a> • <a href="#pre-order" class="amazon-link" target="_blank" rel="noopener sponsored">Pre‑Orders</a>
+Quick links: <a href="#budget" class="related-link">Budget</a> • <a href="#mid-range" class="related-link">Mid‑Range</a> • <a href="#premium" class="related-link">Premium</a> • <a href="#pre-order" class="related-link">Pre‑Orders</a>
 
 <a id="budget"></a>
 ## Budget-Friendly Gaming Accessories ($50-$150)
