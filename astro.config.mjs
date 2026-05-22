@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import cloudflare from "@astrojs/cloudflare";
 import remarkCanonicalInternalLinks from './src/utils/remarkCanonicalInternalLinks.mjs';
+import remarkAffiliateLinkHygiene from './src/utils/remarkAffiliateLinkHygiene.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -28,7 +29,7 @@ export default defineConfig({
     // Disable syntax highlighting to prevent HTML from being treated as code
     syntaxHighlight: false,
     // Normalize internal markdown links to canonical trailing-slash URLs
-    remarkPlugins: [remarkCanonicalInternalLinks]
+    remarkPlugins: [remarkCanonicalInternalLinks, remarkAffiliateLinkHygiene]
   },
   vite: {
     ssr: {
