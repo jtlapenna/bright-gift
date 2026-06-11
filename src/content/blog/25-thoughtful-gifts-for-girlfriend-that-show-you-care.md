@@ -74,6 +74,8 @@ The best thoughtful gifts for a girlfriend do not just look romantic in a search
 
 This page is for gifts that feel caring, attentive, and easy to use in real life. If you want something more dramatic or date-night driven, pair this guide with [Gifts for Your Girlfriend: 15 Unique Romantic Ideas](/blog/gifts-for-girlfriend-unique-romantic-ideas/), [25 Unique Anniversary Gift Ideas Under $50](/blog/25-unique-anniversary-gift-ideas-under-50/), or [How to Choose the Perfect Gift](/blog/how-to-choose-the-perfect-gift-complete-guide/).
 
+Want a shorter shortlist for her exact style? Try the [AI gift idea generator](/#tool) with her interests, budget, and occasion, then use this guide to sanity-check the strongest picks.
+
 ## Quick Picks by Girlfriend Type
 
 - **For the sentimental girlfriend:** a custom name necklace, linen photo album, or smart photo frame.

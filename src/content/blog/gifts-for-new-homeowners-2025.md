@@ -62,7 +62,7 @@ socialImageAlt: 'Gifts for New Homeowners: 20 Unique Housewarming Ideas social p
 ---
 Moving into a new home is a major milestone—and the perfect opportunity to give a thoughtful, memorable gift. Whether you're shopping for friends, family, or coworkers, this guide features the best housewarming gifts for 2025, from practical essentials to unique statement pieces. Every pick is designed to help new homeowners settle in, celebrate, and make their space their own.
 
-> 🎯 **Not sure what to buy? Our [Gift Idea Generator](/gift-idea-generator/) can help you discover the perfect housewarming present based on their style, needs, and budget!**
+> **Not sure what to buy?** Start with the [AI gift idea generator](/#tool) for a style, needs, and budget-based shortlist, then use this housewarming guide to compare practical picks.
 
 ---
 
