@@ -13,8 +13,10 @@ const blogPosts = await getCollection('blog', ({ data }) => isPreview || (!data.
 // Combine and sort all content by date
 const allContent = blogPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
+const experimentId = 'bg-home-generator-sprint-202606';
+
 // Meta description for homepage
-const metaDescription = "Find the perfect gift in seconds with our AI-powered gift idea generator. Get personalized recommendations for any recipient, budget, and occasion. Discover unique gift ideas for birthdays, holidays, and special moments.";
+const metaDescription = "Use BrightGift's free AI gift idea generator to find gift ideas by recipient, budget, interest, and occasion. Get personalized suggestions in under a minute.";
 
 // Define structured data for the homepage
 const structuredData = {
@@ -22,7 +24,7 @@ const structuredData = {
 	"@type": "WebSite",
 	"name": "BrightGift - AI Gift Idea Generator",
 	"url": "https://bright-gift.com/",
-	"description": "Find the perfect gift in seconds with our AI-powered gift idea generator. Personalized recommendations for any recipient, budget, and occasion.",
+		"description": metaDescription,
 	"potentialAction": {
 		"@type": "SearchAction",
 		"target": "https://bright-gift.com/#tool?recipient={recipient}&interests={interests}",
@@ -115,10 +117,10 @@ const faqData = {
 ---
 
 <Layout 
-	title="AI Gift Idea Generator | Find the Perfect Gift in Seconds"
-	description="Find the perfect gift in seconds with our AI-powered gift idea generator. Get personalized recommendations for any recipient, budget, and occasion. Try it free!"
+	title="Free AI Gift Idea Generator by Recipient, Budget & Occasion"
+	description={metaDescription}
 	image="/images/homepage-banner.webp"
-	keywords={["gift ideas", "AI gifts", "personalized gifts", "gift finder", "gift recommendations", "birthday gifts", "holiday gifts", "AI gift search", "AI gift matching", "AI-powered gift tool", "gift suggestions", "unique gift ideas", "thoughtful gifts", "gift guide", "personalized gift recommendations", "AI gift generator", "gift finder tool", "creative gift ideas", "gift shopping", "gift giving"]}
+	keywords={["AI gift idea generator", "free AI gift generator", "gift ideas by budget", "gift finder by recipient", "personalized gift recommendations", "gift ideas for girlfriend", "coworker gifts under 25", "housewarming gifts under 75", "remote worker gifts", "last minute gift ideas", "birthday gift ideas", "holiday gifts", "unique gift ideas", "thoughtful gifts", "gift guide"]}
 	canonical="https://bright-gift.com/"
 	ogType="website"
 	twitterCard="summary_large_image"
@@ -134,8 +136,8 @@ const faqData = {
 			<div class="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl gap-4 md:gap-8 px-2 md:px-6">
 				<div class="flex-1 flex flex-col items-center md:items-start justify-center text-center md:text-left mt-36 md:mt-0">
 					<img src="/bright-gift-logo.png" alt="BrightGift logo - AI gift idea generator" class="h-12 md:h-24 mb-1 md:mb-4" />
-					<h1 class="text-xl md:text-4xl font-bold font-poppins text-[#1C2E4A] mb-1 md:mb-2 md:whitespace-nowrap">Find the Perfect Gift with AI!</h1>
-					<p class="text-sm md:text-lg font-inter text-[#333] mb-1 md:mb-4">AI-powered gift suggestions for any recipient, budget, or occasion. Try our free AI gift finder today!</p>
+						<h1 class="text-xl md:text-4xl font-bold font-poppins text-[#1C2E4A] mb-1 md:mb-2 md:whitespace-nowrap">Free AI Gift Idea Generator</h1>
+						<p class="text-sm md:text-lg font-inter text-[#333] mb-1 md:mb-4">Find gift ideas by recipient, budget, interest, and occasion in under a minute.</p>
 				</div>
 				<div class="flex-1 flex items-center justify-center relative mt-30 md:mt-0">
 					<picture>
@@ -160,16 +162,49 @@ const faqData = {
 					
 				</div>
 				
-				<!-- Header with better visual hierarchy -->
-				<div class="text-center mb-10 mt-12">
-					<h2 class="text-3xl md:text-4xl font-bold font-poppins text-[#1C2E4A] mb-3">AI Gift Finder</h2>
-					<p class="text-base md:text-lg font-inter text-[#1C2E4A] opacity-80 max-w-4xl mx-auto leading-relaxed px-4">Powered by advanced AI, our tool finds gifts for any recipient, budget, or occasion. Try AI gift matching now!</p>
-				</div>
+					<section class="mb-10 rounded-2xl border-2 border-[#FFDE59] bg-white/90 p-5 shadow-md" data-experiment-id={experimentId}>
+						<div class="text-center mb-5">
+							<h2 class="text-2xl md:text-3xl font-bold font-poppins text-[#1C2E4A] mb-2">Start with a popular gift search</h2>
+							<p class="text-sm md:text-base font-inter text-[#1C2E4A]/80">Use a quick prompt, then tweak the details before generating your list.</p>
+						</div>
+						<div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+							<button type="button" data-generator-preset data-recipient="girlfriend" data-interests="romantic, cozy nights in, beauty, keepsakes" data-budget="50" data-styles="beauty,luxury" data-cta-position="homepage_prompt_preset" data-cta-variant="girlfriend_under_50" data-experiment-id={experimentId} class="rounded-xl border border-[#FF6B6B]/30 bg-[#FFF9F3] px-4 py-3 text-left font-inter text-sm text-[#1C2E4A] shadow-sm transition hover:border-[#FF6B6B] hover:bg-white">
+								<span class="block font-bold">Gifts for girlfriend under $50</span>
+								<span class="text-xs text-[#1C2E4A]/70">Romantic, cozy, and useful picks.</span>
+							</button>
+							<button type="button" data-generator-preset data-recipient="coworker" data-interests="coffee, desk setup, office, practical gifts" data-budget="25" data-styles="quirky,techy" data-cta-position="homepage_prompt_preset" data-cta-variant="coworker_under_25" data-experiment-id={experimentId} class="rounded-xl border border-[#A3E4DB] bg-[#FFF9F3] px-4 py-3 text-left font-inter text-sm text-[#1C2E4A] shadow-sm transition hover:border-[#FF6B6B] hover:bg-white">
+								<span class="block font-bold">Coworker gifts under $25</span>
+								<span class="text-xs text-[#1C2E4A]/70">Office-safe, useful, low-risk ideas.</span>
+							</button>
+							<button type="button" data-generator-preset data-recipient="new homeowner" data-interests="home, kitchen, hosting, organization" data-budget="75" data-styles="eco-friendly,luxury" data-cta-position="homepage_prompt_preset" data-cta-variant="housewarming_under_75" data-experiment-id={experimentId} class="rounded-xl border border-[#FFDE59] bg-[#FFF9F3] px-4 py-3 text-left font-inter text-sm text-[#1C2E4A] shadow-sm transition hover:border-[#FF6B6B] hover:bg-white">
+								<span class="block font-bold">Housewarming gifts under $75</span>
+								<span class="text-xs text-[#1C2E4A]/70">Move-in gifts that feel personal.</span>
+							</button>
+							<button type="button" data-generator-preset data-recipient="remote worker" data-interests="home office, productivity, coffee, desk setup" data-budget="50" data-styles="techy,wellness" data-cta-position="homepage_prompt_preset" data-cta-variant="remote_worker_under_50" data-experiment-id={experimentId} class="rounded-xl border border-[#A3E4DB] bg-[#FFF9F3] px-4 py-3 text-left font-inter text-sm text-[#1C2E4A] shadow-sm transition hover:border-[#FF6B6B] hover:bg-white">
+								<span class="block font-bold">Remote worker gifts under $50</span>
+								<span class="text-xs text-[#1C2E4A]/70">Desk, comfort, and focus upgrades.</span>
+							</button>
+							<button type="button" data-generator-preset data-recipient="birthday recipient" data-interests="last-minute gifts, hobbies, practical gifts, fun surprises" data-budget="50" data-styles="funny,quirky" data-cta-position="homepage_prompt_preset" data-cta-variant="last_minute_birthday" data-experiment-id={experimentId} class="rounded-xl border border-[#FF6B6B]/30 bg-[#FFF9F3] px-4 py-3 text-left font-inter text-sm text-[#1C2E4A] shadow-sm transition hover:border-[#FF6B6B] hover:bg-white">
+								<span class="block font-bold">Last-minute birthday gifts</span>
+								<span class="text-xs text-[#1C2E4A]/70">Fast ideas when you are stuck.</span>
+							</button>
+							<a href="/gift-idea-generator/" data-cta-position="homepage_prompt_preset" data-cta-variant="gift_generator_landing_page" data-experiment-id={experimentId} class="rounded-xl border border-[#1C2E4A]/20 bg-[#1C2E4A] px-4 py-3 text-left font-inter text-sm text-white shadow-sm transition hover:bg-[#263b5c]">
+								<span class="block font-bold">How the generator works</span>
+								<span class="text-xs text-white/75">See examples and tips for better results.</span>
+							</a>
+						</div>
+					</section>
+
+					<!-- Header with better visual hierarchy -->
+					<div class="text-center mb-10 mt-12">
+						<h2 class="text-3xl md:text-4xl font-bold font-poppins text-[#1C2E4A] mb-3">AI Gift Finder</h2>
+						<p class="text-base md:text-lg font-inter text-[#1C2E4A] opacity-80 max-w-4xl mx-auto leading-relaxed px-4">Powered by advanced AI, our tool finds gifts for any recipient, budget, interest, or occasion. Try AI gift matching now!</p>
+					</div>
 				
 				<!-- Main form container with better visual design -->
 				<div class="bg-gradient-to-br from-[#A3E4DB] via-[#B8E8E0] to-[#A3E4DB] rounded-3xl shadow-2xl border border-white/20 overflow-hidden">
 					<div class="p-6 md:p-10">
-						<form aria-label="Gift Finder Form" class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
+							<form aria-label="Gift Finder Form" class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10" data-experiment-id={experimentId}>
 							<!-- Left Column: Input Fields (5/12 width) -->
 							<div class="lg:col-span-5 space-y-6">
 								<!-- Recipient Info with enhanced styling -->
@@ -729,7 +764,8 @@ const faqData = {
 		const form = document.querySelector('form');
 		const resultsContainer = document.getElementById('results-container');
 		const loadingIndicator = document.getElementById('loading');
-		const styleButtons = document.querySelectorAll('button[type="button"]');
+			const styleButtons = document.querySelectorAll('button[type="button"]');
+			const promptPresetButtons = document.querySelectorAll('[data-generator-preset]');
 		const regenerateBtn = document.getElementById('regenerate-btn');
 		const emptyState = document.getElementById('empty-state');
 			const selectionCount = document.getElementById('selection-count');
@@ -882,8 +918,8 @@ const faqData = {
 			updateStylePreview();
 		}
 		
-		function updateStylePreview() {
-			const displayContainer = document.getElementById('selected-styles-display');
+			function updateStylePreview() {
+				const displayContainer = document.getElementById('selected-styles-display');
 			
 			if (selectedStyles.length > 0) {
 				displayContainer.innerHTML = selectedStyles.map(style => {
@@ -892,10 +928,58 @@ const faqData = {
 				}).join('');
 			} else {
 				displayContainer.innerHTML = `<span class="text-xs text-[#1C2E4A] opacity-50">No styles selected yet</span>`;
+				}
 			}
-		}
 
-		// Function to cycle through loading messages
+			function updateSelectionCount() {
+				if (selectionCount) {
+					selectionCount.textContent = selectedStyles.length.toString();
+				}
+			}
+
+			function applyPromptPreset(button) {
+				const recipientInput = document.getElementById('recipient');
+				const interestsInput = document.getElementById('interests');
+				const budgetInput = document.getElementById('budget');
+				const presetStyles = (button.dataset.styles || '')
+					.split(',')
+					.map(style => style.trim())
+					.filter(Boolean)
+					.slice(0, 3);
+
+				if (recipientInput) recipientInput.value = button.dataset.recipient || '';
+				if (interestsInput) interestsInput.value = button.dataset.interests || '';
+				if (budgetInput && button.dataset.budget) budgetInput.value = button.dataset.budget;
+
+				selectedStyles = presetStyles;
+				styleChips.forEach(styleButton => {
+					styleButton.setAttribute('aria-pressed', selectedStyles.includes(styleButton.dataset.style) ? 'true' : 'false');
+				});
+				updateAllButtonStates();
+				updateSelectionCount();
+
+				trackBrightGiftEvent('gift_generator_preset_click', {
+					experiment_id: button.dataset.experimentId || '',
+					cta_position: button.dataset.ctaPosition || 'homepage_prompt_preset',
+					cta_variant: button.dataset.ctaVariant || '',
+					recipient: button.dataset.recipient || '',
+					budget: button.dataset.budget || '',
+					styles: selectedStyles.join(','),
+					content_type: 'home',
+					tracking_version: '2026-06-11'
+				});
+
+				document.getElementById('tool')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				setTimeout(() => {
+					if (interestsInput) interestsInput.focus();
+				}, 350);
+			}
+
+			promptPresetButtons.forEach(button => {
+				button.addEventListener('click', () => applyPromptPreset(button));
+			});
+
+			// Function to cycle through loading messages
 		function startLoadingAnimation() {
 			const loadingMessage = document.getElementById('loading-message');
 			const loadingTip = document.getElementById('loading-tip');
@@ -1057,11 +1141,7 @@ const faqData = {
 			}
 		});
 
-			function updateSelectionCount() {
-				selectionCount.textContent = `${selectedStyles.length} of 3 styles selected`;
-			}
-
-			resultsContainer.addEventListener('click', (event) => {
+				resultsContainer.addEventListener('click', (event) => {
 				const target = event.target;
 				if (!(target instanceof Element)) return;
 

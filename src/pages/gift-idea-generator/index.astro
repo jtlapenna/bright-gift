@@ -1,7 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-const title = 'Free AI Gift Idea Generator';
+const experimentId = 'bg-home-generator-sprint-202606';
+const title = 'Free AI Gift Idea Generator by Recipient, Budget & Occasion';
 const description = 'Use BrightGift, a free AI gift idea generator, to find thoughtful gift ideas by recipient, interests, budget, and occasion in under a minute.';
 
 const faqData = {
@@ -53,7 +54,7 @@ const appData = {
 
 <Layout
 	title={title}
-	metaTitle="Free AI Gift Idea Generator | BrightGift"
+	metaTitle="Free AI Gift Generator by Budget & Recipient | BrightGift"
 	description={description}
 	metaDescription={description}
 	canonical="https://bright-gift.com/gift-idea-generator/"
@@ -79,7 +80,7 @@ const appData = {
 						BrightGift turns a few details about the person you are shopping for into a focused gift shortlist by recipient, budget, style, and interests.
 					</p>
 					<div class="flex flex-col gap-3 sm:flex-row">
-						<a href="/#tool" class="inline-flex items-center justify-center rounded-full bg-[#FF6B6B] px-8 py-4 text-lg font-bold text-white shadow-lg transition hover:bg-[#ff4c4c]">
+						<a href="/#tool" data-generator-cta data-cta-position="tool_landing_hero" data-cta-variant="start_gift_generator" data-experiment-id={experimentId} class="inline-flex items-center justify-center rounded-full bg-[#FF6B6B] px-8 py-4 text-lg font-bold text-white shadow-lg transition hover:bg-[#ff4c4c]">
 							Start the gift generator
 						</a>
 						<a href="/blog/how-to-choose-the-perfect-gift-complete-guide/" class="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-bold text-[#1C2E4A] shadow-lg transition hover:bg-[#FFF9F3]">
@@ -179,7 +180,7 @@ const appData = {
 					</div>
 				</div>
 				<div class="mt-10 text-center">
-					<a href="/#tool" class="inline-flex items-center justify-center rounded-full bg-[#FF6B6B] px-8 py-4 text-lg font-bold text-white shadow-lg transition hover:bg-[#ff4c4c]">
+						<a href="/#tool" data-generator-cta data-cta-position="tool_landing_faq" data-cta-variant="use_free_ai_gift_generator" data-experiment-id={experimentId} class="inline-flex items-center justify-center rounded-full bg-[#FF6B6B] px-8 py-4 text-lg font-bold text-white shadow-lg transition hover:bg-[#ff4c4c]">
 						Use the free AI gift generator
 					</a>
 				</div>

@@ -446,9 +446,61 @@ const breadcrumbStructuredData = breadcrumbs ? {
 				new MutationObserver(function() {
 					trackImpressions();
 				}).observe(document.documentElement, { childList: true, subtree: true });
-			})();
-		</script>
-	</head>
+				})();
+			</script>
+			<!-- Generator CTA tracking for internal traffic into the gift tool -->
+			<script is:inline>
+				(function() {
+					var SITE = 'brightgift';
+					var TRACKING_VERSION = '2026-06-11';
+
+					function getContentType() {
+						var path = window.location.pathname;
+						if (path === '/') return 'home';
+						if (path.includes('/blog/')) return 'blog_post';
+						if (path.includes('/gift-idea-generator/')) return 'tool';
+						if (path.includes('/category/')) return 'category';
+						return 'page';
+					}
+
+					function getInternalQaMarker() {
+						try {
+							var params = new URLSearchParams(window.location.search);
+							if (params.get('act_qa') === '1' || params.get('codex_qa') === '1') return 'internal_qa';
+							if (window.localStorage && window.localStorage.getItem('affiliate_control_tower_qa') === '1') return 'internal_qa';
+						} catch {
+							return '';
+						}
+						return '';
+					}
+
+					function trackGeneratorCtaClick(event) {
+						var target = event.target;
+						if (!(target instanceof Element)) return;
+						var link = target.closest('a[data-generator-cta]');
+						if (!link || typeof window.brightGiftTrack !== 'function') return;
+						var internalQaMarker = getInternalQaMarker();
+						window.brightGiftTrack('generator_cta_click', {
+							site: SITE,
+							page_url: window.location.pathname,
+							page_title: document.title,
+							content_type: getContentType(),
+							link_url: link.href,
+							link_text: (link.textContent || '').trim().slice(0, 120),
+							cta_position: link.dataset.ctaPosition || 'generator_cta',
+							cta_variant: link.dataset.ctaVariant || '',
+							experiment_id: internalQaMarker || link.dataset.experimentId || '',
+							traffic_type: internalQaMarker,
+							tracking_version: TRACKING_VERSION,
+							event_category: 'Generator',
+							event_label: link.dataset.ctaVariant || (link.textContent || '').trim().slice(0, 120)
+						});
+					}
+
+					window.addEventListener('click', trackGeneratorCtaClick, true);
+				})();
+			</script>
+		</head>
 	<body>
 		{/* Navigation Header - Show on all pages */}
 		<header class="w-full bg-[#FEF2D3] border-b border-slate-100 py-3 px-4 flex items-center justify-between">
