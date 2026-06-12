@@ -16,16 +16,16 @@ description: "Processing authentication callback for BrightGift."
 						<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
 					</svg>
 				</div>
-				
+
 				<h1 class="text-2xl font-bold text-[#1C2E4A] mb-4">Processing Authentication</h1>
-				
+
 				<p class="text-gray-700 leading-relaxed">
 					Please wait while we complete your authentication. You will be redirected automatically once the process is complete.
 				</p>
-				
+
 				<div class="mt-6">
 					<p class="text-sm text-gray-500">
-						If you are not redirected automatically, 
+						If you are not redirected automatically,
 						<a href="/" class="text-[#FF6B6B] hover:underline">click here to return to the homepage</a>.
 					</p>
 				</div>
@@ -42,7 +42,7 @@ description: "Processing authentication callback for BrightGift."
 		const code = urlParams.get('code');
 		const state = urlParams.get('state');
 		const error = urlParams.get('error');
-		
+
 		if (error) {
 			// Handle error
 			console.error('OAuth error:', error);
@@ -52,7 +52,9 @@ description: "Processing authentication callback for BrightGift."
 			}, 2000);
 		} else if (code) {
 			// Handle successful authentication
-			console.log('OAuth code received:', code);
+			if (import.meta.env.DEV) {
+				console.log('OAuth code received.');
+			}
 			// Process the authorization code here
 			// For now, redirect to homepage after a delay
 			setTimeout(() => {
@@ -65,4 +67,4 @@ description: "Processing authentication callback for BrightGift."
 			}, 1000);
 		}
 	});
-</script> 
+</script>

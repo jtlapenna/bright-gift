@@ -116,7 +116,7 @@ const faqData = {
 };
 ---
 
-<Layout 
+<Layout
 	title="Free AI Gift Idea Generator by Recipient, Budget & Occasion"
 	description={metaDescription}
 	image="/images/homepage-banner.webp"
@@ -159,9 +159,9 @@ const faqData = {
 							Bright Gift is a <span class="text-[#FF6B6B]">free AI tool</span> that helps you find the perfect gift in <span class="text-[#FF6B6B]">under 60 seconds</span> based on who you're shopping for, their interests, and your budget.
 						</p>
 					</div>
-					
+
 				</div>
-				
+
 					<section class="mb-10 rounded-2xl border-2 border-[#FFDE59] bg-white/90 p-5 shadow-md" data-experiment-id={experimentId}>
 						<div class="text-center mb-5">
 							<h2 class="text-2xl md:text-3xl font-bold font-poppins text-[#1C2E4A] mb-2">Start with a popular gift search</h2>
@@ -200,7 +200,7 @@ const faqData = {
 						<h2 class="text-3xl md:text-4xl font-bold font-poppins text-[#1C2E4A] mb-3">AI Gift Finder</h2>
 						<p class="text-base md:text-lg font-inter text-[#1C2E4A] opacity-80 max-w-4xl mx-auto leading-relaxed px-4">Powered by advanced AI, our tool finds gifts for any recipient, budget, interest, or occasion. Try AI gift matching now!</p>
 					</div>
-				
+
 				<!-- Main form container with better visual design -->
 				<div class="bg-gradient-to-br from-[#A3E4DB] via-[#B8E8E0] to-[#A3E4DB] rounded-3xl shadow-2xl border border-white/20 overflow-hidden">
 					<div class="p-6 md:p-10">
@@ -213,12 +213,12 @@ const faqData = {
 										<span class="bg-[#FF6B6B] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2">1</span>
 										Who are you shopping for?
 									</label>
-									<input 
-										type="text" 
-										id="recipient" 
-										name="recipient" 
-										placeholder="e.g., Mom, Boyfriend, Coworker, Best Friend" 
-										required 
+									<input
+										type="text"
+										id="recipient"
+										name="recipient"
+										placeholder="e.g., Mom, Boyfriend, Coworker, Best Friend"
+										required
 										class="w-full px-3 py-3 border-2 border-[#A3E4DB] rounded-lg bg-white/90 focus:outline-none focus:border-[#FF6B6B] text-[#1C2E4A] text-base"
 									/>
 									<p class="text-xs text-[#1C2E4A] mt-2 opacity-75 flex items-center">
@@ -232,12 +232,12 @@ const faqData = {
 										<span class="bg-[#FF6B6B] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2">2</span>
 										What do they like?
 									</label>
-									<input 
-										type="text" 
-										id="interests" 
-										name="interests" 
-										placeholder="e.g., reading, cooking, gaming, fitness" 
-										required 
+									<input
+										type="text"
+										id="interests"
+										name="interests"
+										placeholder="e.g., reading, cooking, gaming, fitness"
+										required
 										class="w-full px-3 py-3 border-2 border-[#A3E4DB] rounded-lg bg-white/90 focus:outline-none focus:border-[#FF6B6B] text-[#1C2E4A] text-base"
 									/>
 									<p class="text-xs text-[#1C2E4A] mt-2 opacity-75 flex items-center">
@@ -252,7 +252,7 @@ const faqData = {
 										What's your budget?
 									</label>
 									<div class="relative">
-										<select id="budget" name="budget" aria-required="true" 
+										<select id="budget" name="budget" aria-required="true"
 											class="w-full px-4 py-3 border-2 border-[#A3E4DB] rounded-xl bg-white/90 focus:outline-none focus:border-[#FF6B6B] text-[#1C2E4A] text-base appearance-none cursor-pointer shadow-sm hover:shadow-md">
 											<option value="25" class="py-2 text-[#1C2E4A] bg-white">Under $25 - Budget-Friendly</option>
 											<option value="50" selected class="py-2 text-[#1C2E4A] bg-white">Under $50 - Sweet Spot</option>
@@ -301,7 +301,7 @@ const faqData = {
 										What's the style? (Select up to 3)
 									</label>
 									<div class="grid grid-cols-2 md:grid-cols-3 gap-3 pb-4" role="group" aria-label="Gift Style Selection">
-										<button type="button" 
+										<button type="button"
 											data-style="eco-friendly"
 											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
@@ -310,7 +310,7 @@ const faqData = {
 												<span>Eco-Friendly</span>
 											</div>
 										</button>
-										<button type="button" 
+										<button type="button"
 											data-style="handmade"
 											class="style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
@@ -319,7 +319,7 @@ const faqData = {
 												<span>Handmade</span>
 											</div>
 										</button>
-										<button type="button" 
+										<button type="button"
 											data-style="funny"
 											class="style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
@@ -328,7 +328,7 @@ const faqData = {
 												<span>Funny</span>
 											</div>
 										</button>
-										<button type="button" 
+										<button type="button"
 											data-style="pride-gifts"
 											class="style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
@@ -337,7 +337,7 @@ const faqData = {
 												<span>Pride Gifts</span>
 											</div>
 										</button>
-										<button type="button" 
+										<button type="button"
 											data-style="quirky"
 											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
@@ -346,7 +346,7 @@ const faqData = {
 												<span>Quirky</span>
 											</div>
 										</button>
-										<button type="button" 
+										<button type="button"
 											data-style="luxury"
 											class="style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
@@ -355,7 +355,7 @@ const faqData = {
 												<span>Luxury</span>
 											</div>
 										</button>
-										<button type="button" 
+										<button type="button"
 											data-style="techy"
 											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
@@ -364,7 +364,7 @@ const faqData = {
 												<span>Techy</span>
 											</div>
 										</button>
-										<button type="button" 
+										<button type="button"
 											data-style="wellness"
 											class="style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
@@ -373,7 +373,7 @@ const faqData = {
 												<span>Wellness</span>
 											</div>
 										</button>
-										<button type="button" 
+										<button type="button"
 											data-style="athletics"
 											class="style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
@@ -382,7 +382,7 @@ const faqData = {
 												<span>Athletics</span>
 											</div>
 										</button>
-										<button type="button" 
+										<button type="button"
 											data-style="beauty"
 											class="style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
@@ -391,7 +391,7 @@ const faqData = {
 												<span>Beauty</span>
 											</div>
 										</button>
-										<button type="button" 
+										<button type="button"
 											data-style="black-owned"
 											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
@@ -400,7 +400,7 @@ const faqData = {
 												<span>Black-Owned</span>
 											</div>
 										</button>
-										<button type="button" 
+										<button type="button"
 											data-style="book-lover"
 											class="style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
 											aria-pressed="false">
@@ -463,7 +463,7 @@ const faqData = {
 							<div class="absolute -bottom-2 -left-2 text-blue-400 animate-ping" style="animation-delay: 1s;">⭐</div>
 							<div class="absolute -bottom-2 -right-2 text-purple-400 animate-ping" style="animation-delay: 1.5s;">🌟</div>
 						</div>
-						
+
 						<!-- Fun loading messages -->
 						<div class="space-y-2">
 							<span class="text-[#1C2E4A] font-semibold text-lg" id="loading-message">🎯 Finding the perfect gifts...</span>
@@ -473,7 +473,7 @@ const faqData = {
 								<div class="w-2 h-2 bg-[#FFDE59] rounded-full animate-bounce" style="animation-delay: 0.2s;"></div>
 							</div>
 						</div>
-						
+
 						<!-- Fun fact or tip -->
 						<div class="max-w-md mx-auto">
 							<p class="text-[#1C2E4A] text-sm opacity-75 italic" id="loading-tip">
@@ -486,7 +486,7 @@ const faqData = {
 				<div id="results-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" role="list" aria-live="polite">
 					<p id="empty-state" class="text-center text-gray-400 col-span-full">Enter details above and click Generate to see gift ideas!</p>
 				</div>
-				
+
 				<!-- Share Section (appears after results) -->
 				<div id="share-section" class="hidden mt-12 max-w-2xl mx-auto">
 					<div class="bg-gradient-to-br from-[#A3E4DB]/20 to-[#FFDE59]/20 rounded-2xl p-6 border-2 border-[#A3E4DB]/40 shadow-lg">
@@ -496,7 +496,7 @@ const faqData = {
 						<p class="text-sm text-[#1C2E4A] text-center mb-4 opacity-80">
 							Want to send these ideas to someone or save them for later?
 						</p>
-						
+
 						<!-- Share Buttons -->
 						<div class="flex flex-wrap gap-3 justify-center mb-4">
 							<button id="copy-link-btn" type="button" class="bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-semibold py-2 px-6 rounded-full transition-all shadow-md hover:shadow-lg flex items-center gap-2">
@@ -509,14 +509,14 @@ const faqData = {
 								<span>📱</span> Share
 							</button>
 						</div>
-						
+
 						<!-- Copy Confirmation -->
 						<div id="copy-confirmation" class="hidden text-center">
 							<p class="text-sm text-green-600 font-semibold flex items-center justify-center gap-2">
 								<span>✅</span> Copied to clipboard!
 							</p>
 						</div>
-						
+
 						<!-- Shareable Text Preview (collapsible) -->
 						<details class="mt-4">
 							<summary class="text-sm text-[#1C2E4A] font-semibold cursor-pointer hover:text-[#FF6B6B] transition-colors text-center">
@@ -528,7 +528,7 @@ const faqData = {
 						</details>
 					</div>
 				</div>
-				
+
 				<!-- Regenerate Suggestions Button -->
 				<div class="text-center mt-8">
 					<button id="regenerate-btn" type="button" class="hidden bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins text-lg shadow" style="display:none;">
@@ -549,9 +549,9 @@ const faqData = {
 							<div class="relative">
 								<picture>
 									{allContent[0].data.image?.endsWith('.webp') && <source srcset={allContent[0].data.image} type="image/webp" />}
-									<img 
-										src={allContent[0].data.image || '/images/homepage-banner.webp'} 
-										alt={`${allContent[0].data.title} - Latest gift guide`} 
+									<img
+										src={allContent[0].data.image || '/images/homepage-banner.webp'}
+										alt={`${allContent[0].data.title} - Latest gift guide`}
 										class="w-full h-64 md:h-80 object-cover"
 										loading="eager"
 									/>
@@ -562,15 +562,15 @@ const faqData = {
 									</span>
 								</div>
 							</div>
-							
+
 							{/* Content below banner */}
 							<div class="p-8">
 								<div class="flex items-center gap-2 mb-4">
 									<span class="text-sm text-[#1C2E4A]/70 font-inter">
-										{new Date(allContent[0].data.date).toLocaleDateString('en-US', { 
-											year: 'numeric', 
-											month: 'long', 
-											day: 'numeric' 
+										{new Date(allContent[0].data.date).toLocaleDateString('en-US', {
+											year: 'numeric',
+											month: 'long',
+											day: 'numeric'
 										})}
 									</span>
 									<span class="text-[#1C2E4A]/50">•</span>
@@ -578,17 +578,17 @@ const faqData = {
 										{allContent[0].data.category}
 									</span>
 								</div>
-								
+
 								<h2 class="text-2xl md:text-3xl font-bold mb-4 font-poppins text-[#1C2E4A]">
 									{allContent[0].data.title}
 								</h2>
-								
+
 								<p class="text-[#1C2E4A]/80 mb-6 font-inter leading-relaxed text-lg">
 									{allContent[0].data.description}
 								</p>
-								
-								<a 
-									        href={`/blog/${allContent[0].slug}/`} 
+
+								<a
+									        href={`/blog/${allContent[0].slug}/`}
 									class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins shadow"
 									aria-label={`Read the complete ${allContent[0].data.title} guide`}
 								>
@@ -605,7 +605,7 @@ const faqData = {
 					<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 						{allContent.length > 1 ? (
 							allContent.slice(1, 4).map(item => (
-								<article class="bg-[#A3E4DB] rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300" tabindex="0" aria-label={`Gift Guide: ${item.data.title}`}> 
+								<article class="bg-[#A3E4DB] rounded-2xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300" tabindex="0" aria-label={`Gift Guide: ${item.data.title}`}>
 									<picture>
 										{item.data.image?.endsWith('.webp') && <source srcset={item.data.image} type="image/webp" />}
 										<img src={item.data.image || '/images/homepage-banner.webp'} alt={`${item.data.title} - Gift ideas and recommendations`} class="h-40 w-full object-cover rounded-t-xl shadow">
@@ -689,7 +689,7 @@ const faqData = {
 						</ul>
 					</div>
 				</div>
-				
+
 				<!-- Use Cases Section -->
 				<div class="bg-gradient-to-br from-[#FEF2D3] to-[#FFDE59]/30 rounded-2xl p-6 shadow-md border border-[#FFDE59]/40 mt-8">
 					<h3 class="text-base md:text-lg font-bold font-poppins text-[#1C2E4A] mb-4 text-center">Use Bright Gift when you need:</h3>
@@ -712,7 +712,7 @@ const faqData = {
 						</li>
 					</ul>
 				</div>
-				
+
 				<div class="mt-8">
 					<a href="#tool" class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-8 rounded-full transition-colors font-poppins text-lg shadow" aria-label="Try the AI Gift Finder now">
 						Try the AI Gift Finder
@@ -804,7 +804,7 @@ const faqData = {
 					interest_word_count: interestText.trim() ? interestText.trim().split(/\s+/).length : 0
 				};
 			}
-		
+
 		// Fun loading messages and tips
 		const loadingMessages = [
 			"🎯 Finding the perfect gifts...",
@@ -816,7 +816,7 @@ const faqData = {
 			"🎨 Personalizing suggestions...",
 			"💝 Making gift-giving magical..."
 		];
-		
+
 		const loadingTips = [
 			"💡 Did you know? The average person spends 15 hours searching for the perfect gift!",
 			"🎯 Pro tip: Consider their hobbies and interests for more meaningful gifts!",
@@ -827,12 +827,12 @@ const faqData = {
 			"🎨 Fun fact: The color of gift wrap can influence how the gift is perceived!",
 			"✨ Remember: The best gifts solve a problem or fulfill a desire!"
 		];
-		
+
 		let loadingInterval;
 
 		// Multi-select style chip functionality
 		const styleChips = document.querySelectorAll('.style-chip');
-		
+
 		// Store original colors for each button (original BrightGift brand colors)
 		const originalColors = {
 			'eco-friendly': { bg: 'bg-[#FFDE59]', text: 'text-[#1C2E4A]', border: 'border-[#FFDE59]', hover: 'hover:bg-[#FFF9F3]' },
@@ -848,7 +848,7 @@ const faqData = {
 			'black-owned': { bg: 'bg-[#A3E4DB]', text: 'text-[#1C2E4A]', border: 'border-[#A3E4DB]', hover: 'hover:bg-[#FFF9F3]' },
 			'book-lover': { bg: 'bg-[#FFDE59]', text: 'text-[#1C2E4A]', border: 'border-[#FFDE59]', hover: 'hover:bg-[#FFF9F3]' }
 		};
-		
+
 		styleChips.forEach(button => {
 			button.addEventListener('click', () => {
 				const style = button.dataset.style;
@@ -865,7 +865,7 @@ const faqData = {
 						button.setAttribute('aria-pressed', 'true');
 					}
 				}
-				
+
 				// Update all button states based on selection
 				updateAllButtonStates();
 				updateSelectionCount();
@@ -877,7 +877,7 @@ const faqData = {
 				const style = button.dataset.style;
 				const isSelected = button.getAttribute('aria-pressed') === 'true';
 				const isDisabled = !isSelected && selectedStyles.length >= 3;
-				
+
 				// Reset to base state - all unselected styles become white when any style is selected
 				if (selectedStyles.length > 0 && !isSelected) {
 					// Unselected styles get white background
@@ -892,7 +892,7 @@ const faqData = {
 						button.className = `style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1`;
 					}
 				}
-				
+
 				if (isSelected) {
 					// Selected state - make it more prominent with original color
 					if (style === 'eco-friendly' || style === 'quirky' || style === 'techy' || style === 'black-owned') {
@@ -913,14 +913,14 @@ const faqData = {
 					button.classList.remove('opacity-50', 'cursor-not-allowed', 'grayscale');
 				}
 			});
-			
+
 			// Update visual preview
 			updateStylePreview();
 		}
-		
+
 			function updateStylePreview() {
 				const displayContainer = document.getElementById('selected-styles-display');
-			
+
 			if (selectedStyles.length > 0) {
 				displayContainer.innerHTML = selectedStyles.map(style => {
 					const displayName = style.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
@@ -985,12 +985,12 @@ const faqData = {
 			const loadingTip = document.getElementById('loading-tip');
 			let messageIndex = 0;
 			let tipIndex = 0;
-			
+
 			loadingInterval = setInterval(() => {
 				// Cycle through messages every 2 seconds
 				loadingMessage.textContent = loadingMessages[messageIndex];
 				messageIndex = (messageIndex + 1) % loadingMessages.length;
-				
+
 				// Cycle through tips every 4 seconds
 				if (messageIndex % 2 === 0) {
 					loadingTip.textContent = loadingTips[tipIndex];
@@ -998,7 +998,7 @@ const faqData = {
 				}
 			}, 2000);
 		}
-		
+
 		function stopLoadingAnimation() {
 			if (loadingInterval) {
 				clearInterval(loadingInterval);
@@ -1169,32 +1169,32 @@ const faqData = {
 		function showShareSection(ideas, recipient, interests, budget) {
 			const shareSection = document.getElementById('share-section');
 			const shareableTextPreview = document.getElementById('shareable-text-preview');
-			
+
 			if (shareSection && shareableTextPreview) {
 				shareSection.classList.remove('hidden');
-				
+
 				// Generate shareable text
 				const shareableText = generateShareableText(ideas, recipient, interests, budget);
 				shareableTextPreview.textContent = shareableText;
-				
+
 				// Store in data attribute for easy access
 				shareSection.dataset.shareableText = shareableText;
 			}
 		}
-		
+
 		function hideShareSection() {
 			const shareSection = document.getElementById('share-section');
 			if (shareSection) {
 				shareSection.classList.add('hidden');
 			}
 		}
-		
+
 		function generateShareableText(ideas, recipient, interests, budget) {
 			let text = `🎁 Gift Ideas for ${recipient}\n\n`;
 			text += `Looking for: ${interests}\n`;
 			text += `Budget: Under $${budget}\n\n`;
 			text += `Here are some great gift ideas:\n\n`;
-			
+
 			ideas.slice(0, 5).forEach((idea, index) => {
 				text += `${index + 1}. ${idea.title}\n`;
 				if (idea.description) {
@@ -1202,19 +1202,19 @@ const faqData = {
 				}
 				text += `\n`;
 			});
-			
+
 			text += `\nFound these using Bright Gift - AI Gift Finder\n`;
 			text += `https://bright-gift.com/\n`;
-			
+
 			return text;
 		}
-		
+
 		// Share button handlers
 		const copyLinkBtn = document.getElementById('copy-link-btn');
 		const copyTextBtn = document.getElementById('copy-text-btn');
 		const shareNativeBtn = document.getElementById('share-native-btn');
 		const copyConfirmation = document.getElementById('copy-confirmation');
-		
+
 		if (copyLinkBtn) {
 			copyLinkBtn.addEventListener('click', async () => {
 				try {
@@ -1225,12 +1225,12 @@ const faqData = {
 				}
 			});
 		}
-		
+
 		if (copyTextBtn) {
 			copyTextBtn.addEventListener('click', async () => {
 				const shareSection = document.getElementById('share-section');
 				const shareableText = shareSection?.dataset.shareableText;
-				
+
 				if (shareableText) {
 					try {
 						await navigator.clipboard.writeText(shareableText);
@@ -1241,12 +1241,12 @@ const faqData = {
 				}
 			});
 		}
-		
+
 		if (shareNativeBtn) {
 			shareNativeBtn.addEventListener('click', async () => {
 				const shareSection = document.getElementById('share-section');
 				const shareableText = shareSection?.dataset.shareableText;
-				
+
 				if (navigator.share && shareableText) {
 					try {
 						await navigator.share({
@@ -1256,7 +1256,9 @@ const faqData = {
 						});
 					} catch (err) {
 						// User cancelled or share failed
-						console.log('Share cancelled or failed:', err);
+						if (window.location.search.includes('debug_share=1')) {
+							console.log('Share cancelled or failed:', err);
+						}
 					}
 				} else {
 					// Fallback to copy
@@ -1271,7 +1273,7 @@ const faqData = {
 				}
 			});
 		}
-		
+
 		function showCopyConfirmation() {
 			if (copyConfirmation) {
 				copyConfirmation.classList.remove('hidden');
@@ -1284,14 +1286,12 @@ const faqData = {
 
 	// Function to get brand name from Afrofiliate or direct partner link
 	function getBrandName(link) {
-		console.log('getBrandName called with link:', link);
 		if (!link) return 'Brand';
 		if (/littleherolabs\.com/i.test(link)) return 'Little Hero Labs';
 		if (!link.includes('arjdj2msd.com')) {
-			console.log('Link is not Afrofiliate, returning Brand');
 			return 'Brand';
 		}
-		
+
 		const brandMap = {
 			'QWRG9C': 'BeautyStat',
 			'R2Z4H6': 'Furi Sport',
@@ -1303,15 +1303,13 @@ const faqData = {
 			'2CTPL1': 'Cashblack UK',
 			'M823SF': 'Cashblack US'
 		};
-		
+
 		for (const [code, name] of Object.entries(brandMap)) {
 			if (link.includes(code)) {
-				console.log('Found brand code:', code, 'returning:', name);
 				return name;
 			}
 		}
-		
-		console.log('No brand code found, returning Brand');
+
 		return 'Brand';
 	}
 
@@ -1352,7 +1350,7 @@ const faqData = {
 			FrameCorners: '/icons/FrameCorners.svg',
 			Gift: '/icons/Gift.svg'
 		};
-		
+
 		// Function to get descriptive alt text for icons
 		function getIconDescription(iconName) {
 			const descriptions = {
@@ -1409,15 +1407,15 @@ const faqData = {
 			if (idea.affiliateType === 'amazon' || link.includes('amazon.')) return 'amazon';
 			return idea.affiliateType || 'other';
 		}
-		
+
 		// Group ideas by title to handle hybrid cards
 		const groupedIdeas = [];
 		const processedTitles = new Set();
-		
+
 		// First pass: group by title and affiliate type
 		ideas.forEach(idea => {
 			const baseTitle = idea.title;
-			
+
 			if (processedTitles.has(baseTitle)) {
 				// Find the existing group and add this as the alternative
 				const existingGroup = groupedIdeas.find(group => group.baseTitle === baseTitle);
@@ -1434,7 +1432,7 @@ const faqData = {
 				});
 			}
 		});
-		
+
 		// Filter out groups that don't have both Afrofiliate and Amazon options
 		// A true hybrid card requires:
 		// 1. Must have both primary and alternative
@@ -1444,18 +1442,18 @@ const faqData = {
 			if (!group.alternative) {
 				return false;
 			}
-			
+
 			// Check if one is afrofiliate and the other is amazon
 			const primaryIsAfrofiliate = group.primary.affiliateType === 'afrofiliate' || /arjdj2msd\.com/i.test(group.primary.link);
 			const primaryIsAmazon = group.primary.affiliateType === 'amazon' || /amazon\.com/i.test(group.primary.link);
-			
+
 			const altIsAfrofiliate = group.alternative.affiliateType === 'afrofiliate' || /arjdj2msd\.com/i.test(group.alternative.link);
 			const altIsAmazon = group.alternative.affiliateType === 'amazon' || /amazon\.com/i.test(group.alternative.link);
-			
+
 			// True hybrid: one afrofiliate, one amazon (in any order)
 			return (primaryIsAfrofiliate && altIsAmazon) || (primaryIsAmazon && altIsAfrofiliate);
 		});
-		
+
 		// Render hybrid groups first, then regular ideas
 		const hybridCards = hybridGroups.map((group, index) => {
 			const idea = group.primary;
@@ -1467,36 +1465,36 @@ const faqData = {
 				const iconDescription = getIconDescription(idea.icon);
 				iconHtml = `<img src="${iconPath}" alt="${iconDescription}" class="h-20 w-20 mb-6 mt-2" loading="lazy" />`;
 			}
-			
+
 			// Check if this is a hybrid card (has both Afrofiliate and Amazon options)
-			const isHybrid = group.alternative && 
+			const isHybrid = group.alternative &&
 				((idea.affiliateType === 'afrofiliate' && group.alternative.affiliateType === 'amazon') ||
 				 (idea.affiliateType === 'amazon' && group.alternative.affiliateType === 'afrofiliate'));
-			
+
 			let buttonHtml = '';
 			if (isHybrid) {
 				// Hybrid card with two buttons
 				const afrofiliateIdea = idea.affiliateType === 'afrofiliate' ? idea : group.alternative;
 				const amazonIdea = idea.affiliateType === 'amazon' ? idea : group.alternative;
-				
+
 				buttonHtml = `
 					<div class="w-full space-y-3">
-						<a href="${afrofiliateIdea.link}" target="_blank" rel="nofollow noopener" 
+						<a href="${afrofiliateIdea.link}" target="_blank" rel="sponsored nofollow noopener noreferrer"
 						   data-cta-position="gift_generator_result_${resultPosition}_afrofiliate"
 						   data-cta-variant="generated_result_hybrid_afrofiliate"
 						   data-product-name="${resultTitle}"
 						   data-retailer="afrofiliate"
-						   class="w-full bg-white hover:bg-gray-50 text-[#1C2E4A] font-bold py-3 px-6 rounded-full transition-colors font-poppins text-sm shadow text-center border-2 border-[#1C2E4A] hover:border-[#FF6B6B] flex items-center justify-center gap-2 whitespace-nowrap" 
+						   class="w-full bg-white hover:bg-gray-50 text-[#1C2E4A] font-bold py-3 px-6 rounded-full transition-colors font-poppins text-sm shadow text-center border-2 border-[#1C2E4A] hover:border-[#FF6B6B] flex items-center justify-center gap-2 whitespace-nowrap"
 						   aria-label="Shop ${idea.title} from Black-owned brand">
 							<span>🌟</span>
 							<span>Shop ${getBrandName(afrofiliateIdea.link)}</span>
 						</a>
-						<a href="${amazonIdea.link}" target="_blank" rel="nofollow noopener" 
+						<a href="${amazonIdea.link}" target="_blank" rel="sponsored nofollow noopener noreferrer"
 						   data-cta-position="gift_generator_result_${resultPosition}_amazon"
 						   data-cta-variant="generated_result_hybrid_amazon"
 						   data-product-name="${resultTitle}"
 						   data-retailer="amazon"
-						   class="w-full bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-6 rounded-full transition-colors font-poppins text-sm shadow text-center flex items-center justify-center gap-2 whitespace-nowrap" 
+						   class="w-full bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-3 px-6 rounded-full transition-colors font-poppins text-sm shadow text-center flex items-center justify-center gap-2 whitespace-nowrap"
 						   aria-label="Find similar products on Amazon">
 							<span>🛒</span>
 							<span>Find Similar on Amazon</span>
@@ -1518,18 +1516,18 @@ const faqData = {
 				const outlineStyle = idea.affiliateType === 'afrofiliate' || /arjdj2msd\.com/i.test(idea.link) || idea.affiliateType === 'direct' || /littleherolabs\.com/i.test(idea.link);
 				const linkLabel = idea.affiliateType === 'direct' || /littleherolabs\.com/i.test(idea.link) ? 'link' : 'affiliate link';
 				buttonHtml = `
-					<a href="${idea.link}" target="_blank" rel="nofollow noopener" 
+					<a href="${idea.link}" target="_blank" rel="sponsored nofollow noopener noreferrer"
 					   data-cta-position="gift_generator_result_${resultPosition}_${getIdeaPartner(idea)}"
 					   data-cta-variant="generated_result_single"
 					   data-product-name="${resultTitle}"
 					   data-retailer="${getIdeaPartner(idea)}"
-					   class="w-full ${outlineStyle ? 'bg-white hover:bg-gray-50 text-[#1C2E4A] border-2 border-[#1C2E4A] hover:border-[#FF6B6B]' : 'bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white'} font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center" 
+					   class="w-full ${outlineStyle ? 'bg-white hover:bg-gray-50 text-[#1C2E4A] border-2 border-[#1C2E4A] hover:border-[#FF6B6B]' : 'bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white'} font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center"
 					   aria-label="View ${idea.title} (${linkLabel})">
 						${buttonText}
 					</a>
 				`;
 			}
-			
+
 			return `
 				<div class="flex flex-col items-center justify-between bg-[#A3E4DB] rounded-2xl shadow-lg p-6 min-h-[480px] transition-transform hover:-translate-y-1 hover:shadow-2xl animate-fade-in" role="listitem" data-result-position="${resultPosition}" data-product-name="${resultTitle}">
 					${iconHtml || (idea.image ? `<img src="${idea.image}" alt="${idea.title} - Gift recommendation" class="h-40 w-full object-cover mb-4 rounded-xl shadow" loading="lazy">` : '')}
@@ -1540,15 +1538,15 @@ const faqData = {
 				</div>
 			`;
 		});
-		
+
 		// Render regular ideas (non-hybrid)
 		const regularIdeas = ideas.filter(idea => {
-			const isInHybridGroup = hybridGroups.some(group => 
+			const isInHybridGroup = hybridGroups.some(group =>
 				group.baseTitle === idea.title
 			);
 			return !isInHybridGroup;
 		});
-		
+
 		const regularCards = regularIdeas.map((idea, index) => {
 			const resultPosition = hybridGroups.length + index + 1;
 			const resultTitle = escapeAttr(idea.title);
@@ -1558,7 +1556,7 @@ const faqData = {
 				const iconDescription = getIconDescription(idea.icon);
 				iconHtml = `<img src="${iconPath}" alt="${iconDescription}" class="h-20 w-20 mb-6 mt-2" loading="lazy" />`;
 			}
-			
+
 			// Single button for regular cards
 			let buttonText = 'Find on Amazon';
 			if (idea.affiliateType === 'afrofiliate') {
@@ -1573,17 +1571,17 @@ const faqData = {
 			const outlineStyle = idea.affiliateType === 'afrofiliate' || /arjdj2msd\.com/i.test(idea.link) || idea.affiliateType === 'direct' || /littleherolabs\.com/i.test(idea.link);
 			const linkLabel = idea.affiliateType === 'direct' || /littleherolabs\.com/i.test(idea.link) ? 'link' : 'affiliate link';
 			const buttonHtml = `
-				<a href="${idea.link}" target="_blank" rel="nofollow noopener" 
+				<a href="${idea.link}" target="_blank" rel="sponsored nofollow noopener noreferrer"
 				   data-cta-position="gift_generator_result_${resultPosition}_${getIdeaPartner(idea)}"
 				   data-cta-variant="generated_result_single"
 				   data-product-name="${resultTitle}"
 				   data-retailer="${getIdeaPartner(idea)}"
-				   class="w-full ${outlineStyle ? 'bg-white hover:bg-gray-50 text-[#1C2E4A] border-2 border-[#1C2E4A] hover:border-[#FF6B6B]' : 'bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white'} font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center" 
+				   class="w-full ${outlineStyle ? 'bg-white hover:bg-gray-50 text-[#1C2E4A] border-2 border-[#1C2E4A] hover:border-[#FF6B6B]' : 'bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white'} font-bold py-3 rounded-full transition-colors font-poppins text-lg shadow text-center"
 				   aria-label="View ${idea.title} (${linkLabel})">
 					${buttonText}
 				</a>
 			`;
-			
+
 			return `
 				<div class="flex flex-col items-center justify-between bg-[#A3E4DB] rounded-2xl shadow-lg p-6 min-h-[480px] transition-transform hover:-translate-y-1 hover:shadow-2xl animate-fade-in" role="listitem" data-result-position="${resultPosition}" data-product-name="${resultTitle}">
 					${iconHtml || (idea.image ? `<img src="${idea.image}" alt="${idea.title} - Gift recommendation" class="h-40 w-full object-cover mb-4 rounded-xl shadow" loading="lazy">` : '')}
@@ -1594,7 +1592,7 @@ const faqData = {
 				</div>
 			`;
 		});
-		
+
 		return [...hybridCards, ...regularCards].join('');
 	}
 
@@ -1607,29 +1605,29 @@ const faqData = {
 		.animate-fade-in {
 			animation: fadeIn 0.5s ease-out forwards;
 		}
-		
+
 		/* Style chip animations and states */
 		.style-chip {
 			transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 		}
-		
+
 		.style-chip:hover:not(.cursor-not-allowed) {
 			transform: translateY(-1px);
 		}
-		
+
 		.style-chip:active {
 			transform: translateY(0);
 		}
-		
+
 		/* Selected state with subtle glow */
 		.style-chip[aria-pressed="true"] {
 			box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
 		}
-		
+
 		/* Disabled state */
 		.style-chip.cursor-not-allowed {
 			pointer-events: none;
 		}
 	`;
 	document.head.appendChild(style);
-</script> 
+</script>

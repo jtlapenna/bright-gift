@@ -1,6 +1,14 @@
 import { buildPrompt } from '../../utils/promptBuilder.js';
 import OpenAI from 'openai';
 
+const ENABLE_GENERATOR_DEBUG = import.meta.env.DEV || process.env.BRIGHT_GIFT_GENERATOR_DEBUG === '1';
+
+function debugLog(...args: any[]) {
+  if (ENABLE_GENERATOR_DEBUG) {
+    console.log(...args);
+  }
+}
+
 // Helper to generate Bookshop.org affiliate link
 function generateBookshopLink(keywords: string, affiliateId: string) {
   // Bookshop.org uses a simple search URL format with affiliate tracking
@@ -22,7 +30,7 @@ function generateAmazonLink(title: string, tag: string) {
     .filter(word => word.length > 2) // Filter out short words
     .slice(0, 4) // Take first 4 meaningful words
     .join(' ');
-  
+
   return `https://www.amazon.com/s?k=${encodeURIComponent(searchTerms)}&tag=bright-gift-20`;
 }
 
@@ -30,17 +38,17 @@ function generateSimilarAmazonLink(title: string, tag: string) {
   // For Afrofiliate products, generate more generic search terms
   // Remove brand names and focus on product type
   let searchTerms = title.toLowerCase();
-  
+
   // Remove known Afrofiliate brand names
   const brandNames = [
-    'beautystat', 'furi sport', 'be yourself 314', 'be rooted', 
+    'beautystat', 'furi sport', 'be yourself 314', 'be rooted',
     'kadalys', 'endorf', 'caribe coffee', 'cashblack'
   ];
-  
+
   brandNames.forEach(brand => {
     searchTerms = searchTerms.replace(new RegExp(brand, 'gi'), '');
   });
-  
+
   // Clean up and extract meaningful terms
   searchTerms = searchTerms
     .replace(/[^\w\s]/g, ' ') // Remove special characters
@@ -48,18 +56,18 @@ function generateSimilarAmazonLink(title: string, tag: string) {
     .filter(word => word.length > 2) // Filter out short words
     .slice(0, 3) // Take first 3 meaningful words
     .join(' ');
-  
+
   // If we don't have enough terms, use the tag
   if (searchTerms.trim().length < 3) {
     searchTerms = tag.toLowerCase();
   }
-  
+
   return `https://www.amazon.com/s?k=${encodeURIComponent(searchTerms)}&tag=bright-gift-20`;
 }
 
 function standardizeTag(tag: string): string {
   const lowerTag = tag.toLowerCase().trim();
-  
+
   // Standardize common variations
   const tagMap: { [key: string]: string } = {
     // Athletic/Sports variations
@@ -74,14 +82,14 @@ function standardizeTag(tag: string): string {
     'workout': 'Workout Accessories',
     'workout accessories': 'Workout Accessories',
     'performance-enhancing items': 'Performance-Enhancing Items',
-    
+
     // Beauty/Skincare variations
     'beauty': 'Beauty Products',
     'beauty products': 'Beauty Products',
     'skincare': 'Skincare',
     'makeup': 'Beauty Products',
     'cosmetic': 'Beauty Products',
-    
+
     // Wellness/Health variations
     'wellness': 'Wellness Products',
     'wellness products': 'Wellness Products',
@@ -90,19 +98,19 @@ function standardizeTag(tag: string): string {
     'supplement': 'Supplements',
     'supplements': 'Supplements',
     'vitamin': 'Supplements',
-    
+
     // Coffee/Food variations
     'coffee': 'Coffee',
     'food': 'Food & Beverages',
     'beverage': 'Food & Beverages',
     'drink': 'Food & Beverages',
-    
+
     // Stationery variations
     'stationery': 'Stationery',
     'stationary': 'Stationery',
     'planner': 'Stationery',
     'journal': 'Stationery',
-    
+
     // Book variations
     'book': 'Book',
     'books': 'Book',
@@ -110,28 +118,28 @@ function standardizeTag(tag: string): string {
     'reading accessories': 'Reading Accessories',
     'literary': 'Literary Gifts',
     'literary gifts': 'Literary Gifts',
-    
+
     // Black-owned business variations
     'black-owned': 'Products from Black-Owned Businesses',
     'black owned': 'Products from Black-Owned Businesses',
     'products from black-owned businesses': 'Products from Black-Owned Businesses',
     'supporting diverse entrepreneurs': 'Supporting Diverse Entrepreneurs'
   };
-  
+
   // Check for exact matches first
   if (tagMap[lowerTag]) {
     return tagMap[lowerTag];
   }
-  
+
   // Check for partial matches
   for (const [key, value] of Object.entries(tagMap)) {
     if (lowerTag.includes(key) || key.includes(lowerTag)) {
       return value;
     }
   }
-  
+
   // If no match found, capitalize first letter of each word
-  return tag.split(' ').map(word => 
+  return tag.split(' ').map(word =>
     word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
   ).join(' ');
 }
@@ -194,30 +202,30 @@ function getAmazonIcon(tag: string) {
 function getAfrofiliateIcon(title: string, tag: string) {
   const lowerTitle = title.toLowerCase();
   const lowerTag = tag.toLowerCase();
-  
+
   // Map Afrofiliate brands to appropriate icons
-  if (lowerTitle.includes('beautystat') || lowerTitle.includes('kadalys') || 
+  if (lowerTitle.includes('beautystat') || lowerTitle.includes('kadalys') ||
       lowerTag.includes('skincare') || lowerTag.includes('beauty') || lowerTag.includes('makeup')) {
     return 'Sparkle'; // Beauty/skincare icon
   }
-  
-  if (lowerTitle.includes('furi-sport') || lowerTitle.includes('be-yourself-314') || 
+
+  if (lowerTitle.includes('furi-sport') || lowerTitle.includes('be-yourself-314') ||
       lowerTag.includes('athletic') || lowerTag.includes('sport') || lowerTag.includes('fitness')) {
     return 'SoccerBall'; // Sports/athletics icon
   }
-  
+
   if (lowerTitle.includes('be-rooted') || lowerTag.includes('stationery') || lowerTag.includes('planner')) {
     return 'Note'; // Stationery icon
   }
-  
+
   if (lowerTitle.includes('endorf') || lowerTag.includes('wellness') || lowerTag.includes('supplement')) {
     return 'Heartbeat'; // Health/wellness icon
   }
-  
+
   if (lowerTitle.includes('caribe-coffee') || lowerTag.includes('coffee')) {
     return 'CookingPot'; // Coffee/food icon
   }
-  
+
   // Default fallback
   return 'ShoppingBag';
 }
@@ -249,12 +257,12 @@ function determineAfrofiliateLink(title: string, tag: string, interests?: string
   const lowerTitle = title.toLowerCase();
   const lowerTag = tag.toLowerCase();
   const lowerInterests = interests ? interests.toLowerCase() : '';
-  
-  // Debug: Log the actual interests being used for matching
+
+  // Debug-only: inspect edge-case matching without logging production inputs.
   if (title.toLowerCase().includes('wine') || tag.toLowerCase().includes('wine')) {
-    console.log(`🔍 DEBUG Wine item matching - Title: "${title}", Tag: "${tag}", Interests: "${interests}"`);
+    debugLog(`Wine item matching - Title: "${title}", Tag: "${tag}", Interests: "${interests}"`);
   }
-  
+
   // Afrofiliate brand mappings with category relevance
   const afrofiliateBrands = {
     'beautystat': {
@@ -307,14 +315,14 @@ function determineAfrofiliateLink(title: string, tag: string, interests?: string
       exclusions: ['wine', 'alcohol', 'beer', 'bottle', 'opener', 'food', 'beverage', 'kitchen', 'cooking', 'athletic', 'sport', 'fitness', 'beauty', 'skincare']
     }
   };
-  
+
   // Check for exact brand name matches first
   for (const [brandName, brandData] of Object.entries(afrofiliateBrands)) {
     if (lowerTitle.includes(brandName) || lowerTag.includes(brandName)) {
       return brandData.link;
     }
   }
-  
+
   // Check for contextual relevance with stricter matching
   for (const [brandName, brandData] of Object.entries(afrofiliateBrands)) {
     // First check for exclusion terms - if the gift suggestion contains exclusion terms, skip this brand
@@ -322,11 +330,11 @@ function determineAfrofiliateLink(title: string, tag: string, interests?: string
       const exclusionRegex = new RegExp(`\\b${exclusion}\\b`, 'i');
       return exclusionRegex.test(lowerTitle) || exclusionRegex.test(lowerTag);
     });
-    
+
     if (hasExclusion) {
       continue;
     }
-    
+
     // Check if title or tag matches brand categories/keywords (primary matching)
     const titleTagMatch = brandData.keywords.some(keyword => {
       const escapedKeyword = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -337,11 +345,11 @@ function determineAfrofiliateLink(title: string, tag: string, interests?: string
       const categoryRegex = new RegExp(`\\b${escapedCategory}\\b`, 'i');
       return categoryRegex.test(lowerTitle) || categoryRegex.test(lowerTag);
     });
-    
+
     if (titleTagMatch) {
       return brandData.link;
     }
-    
+
     // Only check user interests if the gift suggestion itself is contextually relevant
     // This prevents false matches when user interests contain unrelated keywords
     const interestsMatch = brandData.keywords.some(keyword => {
@@ -349,12 +357,12 @@ function determineAfrofiliateLink(title: string, tag: string, interests?: string
       const keywordRegex = new RegExp(`\\b${escapedKeyword}\\b`, 'i');
       return keywordRegex.test(lowerInterests);
     });
-    
+
     if (interestsMatch) {
       return brandData.link;
     }
   }
-  
+
   return null;
 }
 
@@ -362,43 +370,43 @@ function determineAffiliateSource(title: string, tag: string, styles: string[], 
   const lowerTitle = title.toLowerCase();
   const lowerTag = tag.toLowerCase();
   const lowerInterests = interests ? interests.toLowerCase() : '';
-  
+
   // Check for Afrofiliate matches with intelligent relevance
   const afrofiliateLink = determineAfrofiliateLink(title, tag, interests);
   if (afrofiliateLink) {
     return 'afrofiliate';
   }
-  
+
   // If Black-owned style is selected but no Afrofiliate match, prioritize Black-owned suggestions
   const isBlackOwnedStyle = styles && styles.includes('black-owned');
   if (isBlackOwnedStyle) {
     return 'black-owned-amazon';
   }
-  
+
   // Intelligent book suggestions for any topic
-  const isBook = lowerTag === 'book' || 
+  const isBook = lowerTag === 'book' ||
     (lowerTag.includes('book') && !lowerTag.includes('journal') && !lowerTag.includes('accessory') && !lowerTag.includes('gift')) ||
     (lowerTag.includes('fiction') || lowerTag.includes('nonfiction') || lowerTag.includes('novel') || lowerTag.includes('poetry')) &&
     !lowerTag.includes('journal') && !lowerTag.includes('accessory');
-  
+
   if (isBook) {
     return 'bookshop';
   }
-  
+
   // Reading accessories and literary gifts go to Amazon
-  const isReadingAccessory = lowerTag === 'reading accessories' || 
-    lowerTag === 'literary gifts' || 
+  const isReadingAccessory = lowerTag === 'reading accessories' ||
+    lowerTag === 'literary gifts' ||
     lowerTag.includes('bookmark') ||
     lowerTag.includes('reading light') ||
     lowerTag.includes('book stand') ||
     lowerTag.includes('reading journal') ||
     lowerTag.includes('journal') ||
     lowerTag.includes('accessory');
-  
+
   if (isReadingAccessory) {
     return 'amazon';
   }
-  
+
   // Everything else goes to Amazon
   return 'amazon';
 }
@@ -430,20 +438,19 @@ export async function GET() {
 }
 
 export async function POST({ request, locals }: { request: any, locals: any }) {
-  console.log('🔍 POST /api/generate invoked');
-  console.log('🔍 Request method:', request.method);
-  console.log('🔍 Request URL:', request.url);
-  console.log('🔍 Request headers:', Object.fromEntries(request.headers.entries()));
-  console.log('🔍 Locals available:', !!locals);
-  console.log('🔍 Runtime env available:', !!locals?.runtime?.env);
-  
+  debugLog('POST /api/generate invoked');
+  debugLog('Request method:', request.method);
+  debugLog('Request URL:', request.url);
+  debugLog('Request headers:', Object.fromEntries(request.headers.entries()));
+  debugLog('Locals available:', !!locals);
+  debugLog('Runtime env available:', !!locals?.runtime?.env);
+
   let data;
   try {
     data = await request.json();
-    console.log('🔍 POST /api/generate received data:', data);
+    debugLog('POST /api/generate received data:', data);
     const { recipient, interests, budget, styles } = data;
-    // Debug: Log interests value to track if it's being modified
-    console.log('🔍 DEBUG Raw interests from request:', JSON.stringify(interests));
+    debugLog('Raw interests from request:', JSON.stringify(interests));
     if (!recipient || !interests || !budget) {
       return new Response(
         JSON.stringify({ error: 'Missing required fields' }),
@@ -452,20 +459,20 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
     }
 
     // Get the OpenAI API key from Cloudflare SSR runtime context
-    console.log('🔍 Checking environment variables...');
-    console.log('🔍 locals?.runtime?.env?.OPENAI_API_KEY exists:', !!locals?.runtime?.env?.OPENAI_API_KEY);
-    console.log('🔍 process.env.OPENAI_API_KEY exists:', !!process.env.OPENAI_API_KEY);
-    
+    debugLog('Checking environment variables...');
+    debugLog('locals?.runtime?.env?.OPENAI_API_KEY exists:', !!locals?.runtime?.env?.OPENAI_API_KEY);
+    debugLog('process.env.OPENAI_API_KEY exists:', !!process.env.OPENAI_API_KEY);
+
     const apiKeyRaw = locals?.runtime?.env?.OPENAI_API_KEY || process.env.OPENAI_API_KEY;
     const apiKey = typeof apiKeyRaw === 'string' ? apiKeyRaw.trim().replace(/^"|"$/g, '') : apiKeyRaw;
-    console.log('🔍 API Key available:', !!apiKey);
-    console.log('🔍 API Key length:', apiKey ? apiKey.length : 0);
-    
+    debugLog('API key available:', !!apiKey);
+
     const projectIdRaw = locals?.runtime?.env?.OPENAI_PROJECT || locals?.runtime?.env?.OPENAI_PROJECT_ID || process.env.OPENAI_PROJECT || process.env.OPENAI_PROJECT_ID;
     const project = typeof projectIdRaw === 'string' ? projectIdRaw.trim().replace(/^"|"$/g, '') : undefined;
-    console.log('🔍 Project ID available:', !!project);
+    debugLog('Project ID available:', !!project);
     if (!apiKey) {
-      console.error('OpenAI API key not found. Debug info:', {
+      console.error('OpenAI API key not configured for Bright Gift generator.');
+      debugLog('OpenAI env debug:', {
         locals: !!locals,
         runtime: !!locals?.runtime,
         env: !!locals?.runtime?.env,
@@ -490,25 +497,24 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
 
     // Get Bookshop.org affiliate ID from env
     const bookshopAffiliateId = locals?.runtime?.env?.BOOKSHOP_AFFILIATE_ID || 'brightgift';
-    console.log('Bookshop.org affiliate ID:', bookshopAffiliateId);
+    debugLog('Bookshop.org affiliate ID:', bookshopAffiliateId);
 
-    console.log('🔍 Creating OpenAI client...');
+    debugLog('Creating OpenAI client...');
     const openai = new OpenAI(project ? { apiKey, project } : { apiKey });
-    console.log('🔍 OpenAI client created successfully');
+    debugLog('OpenAI client created successfully');
     const prompt = buildPrompt({ recipient, interests, budget, styles });
-    // Debug: Log the exact prompt sent to the LLM for traceability
-    console.log('🔍 DEBUG Prompt sent to LLM (truncated 1k chars):', prompt.slice(0, 1000));
-    console.log('🔍 DEBUG Styles in request:', Array.isArray(styles) ? JSON.stringify(styles) : styles);
+    debugLog('Prompt sent to LLM (truncated 1k chars):', prompt.slice(0, 1000));
+    debugLog('Styles in request:', Array.isArray(styles) ? JSON.stringify(styles) : styles);
 
     // Try multiple models to improve reliability across accounts/quotas
     const candidateModels = ['gpt-4o-mini', 'gpt-4o', 'gpt-4-turbo'];
     let ideasText = '';
     let lastModelError: any = null;
-    console.log('🔍 Starting OpenAI API call with models:', candidateModels);
-    
+    debugLog('Starting OpenAI API call with models:', candidateModels);
+
     for (const model of candidateModels) {
       try {
-        console.log(`🔍 Trying model: ${model}`);
+        debugLog(`Trying model: ${model}`);
         const completion = await openai.chat.completions.create({
           model,
           messages: [
@@ -517,52 +523,51 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
           ],
         });
         ideasText = completion.choices[0]?.message?.content?.trim() || '';
-        console.log(`🔍 Model ${model} response length:`, ideasText.length);
+        debugLog(`Model ${model} response length:`, ideasText.length);
         if (ideasText) {
-          console.log(`✅ Success with model: ${model}`);
+          debugLog(`Success with model: ${model}`);
           break;
         }
       } catch (err: any) {
         lastModelError = err;
-        console.log(`❌ Model ${model} failed:`, err.message);
+        debugLog(`Model ${model} failed:`, err.message);
         const msg = (err?.message || '').toLowerCase();
         // Try next model on model errors or 4xx specific to model availability
         if (msg.includes('model') || msg.includes('not found') || msg.includes('unsupported')) {
-          console.log(`🔄 Trying next model due to model-specific error`);
+          debugLog(`Trying next model due to model-specific error`);
           continue;
         }
         // Otherwise rethrow (auth/network/etc.)
-        console.log(`💥 Fatal error with model ${model}, not retrying:`, err.message);
+        debugLog(`Fatal error with model ${model}, not retrying:`, err.message);
         throw err;
       }
     }
     if (!ideasText && lastModelError) throw lastModelError;
 
-    // Log raw model output for forensic debugging
-    console.log('🔍 DEBUG Raw LLM response (first 2k chars):', ideasText.slice(0, 2000));
+    debugLog('Raw LLM response (first 2k chars):', ideasText.slice(0, 2000));
 
     // Parse markdown output into ideas (simple regex for demo)
     const ideaRegex = /\*\*(\d+\.\s+.+?)\*\*\s+([^_]+)_Tag: ([^_]+)_/g;
     let match;
     const ideas = [];
-    
+
     while ((match = ideaRegex.exec(ideasText)) !== null) {
       const title = match[1].replace(/^\d+\.\s*/, '');
       let description = match[2].trim();
       const rawTag = match[3].trim();
-      console.log('🔍 DEBUG Parsed raw tag from LLM before normalization:', rawTag, 'for title:', title);
+      debugLog('Parsed raw tag from LLM before normalization:', rawTag, 'for title:', title);
       const tag = standardizeTag(rawTag);
-      console.log('🔍 DEBUG Normalized tag:', tag);
+      debugLog('Normalized tag:', tag);
       let link = null;
       let icon = null;
-      
+
       // Check for Afrofiliate match first (regardless of style selection)
       const afrofiliateLink = determineAfrofiliateLink(title, tag, interests);
       const amazonLink = generateAmazonLink(title, tag);
-      
+
       // Determine affiliate source based on improved logic
       const affiliateSource = determineAffiliateSource(title, tag, styles, interests);
-      
+
       if (affiliateSource === 'bookshop') {
         // Bookshop.org for book-related items
         link = generateBookshopLink(title, bookshopAffiliateId);
@@ -572,23 +577,23 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
         // Afrofiliate match found - show both options
         const afrofiliateIcon = getAfrofiliateIcon(title, tag);
         const amazonIcon = getAmazonIcon(tag);
-        
+
         // Add Afrofiliate option
-        ideas.push({ 
-          title, 
-          description, 
-          tag, 
-          link: afrofiliateLink, 
+        ideas.push({
+          title,
+          description,
+          tag,
+          link: afrofiliateLink,
           icon: afrofiliateIcon,
           affiliateType: 'afrofiliate'
         });
-        
+
         // Add Amazon option with similar products search
-        ideas.push({ 
-          title: title, 
-          description, 
-          tag, 
-          link: generateSimilarAmazonLink(title, tag), 
+        ideas.push({
+          title: title,
+          description,
+          tag,
+          link: generateSimilarAmazonLink(title, tag),
           icon: amazonIcon,
           affiliateType: 'amazon'
         });
@@ -652,21 +657,21 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
       }
     }
 
-    console.log('✅ API call successful, returning', ideas.length, 'ideas');
+    debugLog('API call successful, returning', ideas.length, 'ideas');
     return new Response(JSON.stringify({ ideas }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (error: any) {
-    console.error('POST /api/generate error:', error);
-    
+    console.error('POST /api/generate error:', error?.message || error);
+
     // Provide user-friendly error messages based on error type
     let userMessage = "We're having trouble generating gift ideas right now. Please try again in a moment.";
     let statusCode = 500;
-    
+
     if (error?.message) {
       const errorMessage = error.message.toLowerCase();
-      
+
       // Handle OpenAI API quota/billing errors
       if (errorMessage.includes('quota') || errorMessage.includes('billing') || errorMessage.includes('429')) {
         userMessage = "We're experiencing high demand right now. Please try again in a few minutes.";
@@ -695,11 +700,11 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
         statusCode = 503;
       }
     }
-    
-    console.log('❌ API call failed, returning error:', userMessage, 'Status:', statusCode);
+
+    debugLog('API call failed, returning error:', userMessage, 'Status:', statusCode);
     return new Response(
       JSON.stringify({ error: userMessage }),
       { status: statusCode, headers: { 'Content-Type': 'application/json' } }
     );
   }
-} 
+}

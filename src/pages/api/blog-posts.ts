@@ -2,8 +2,6 @@ import { getCollection } from 'astro:content';
 
 export async function GET({ request, locals }: { request: any, locals: any }) {
   try {
-    console.log('GET /api/blog-posts invoked');
-    
     // Get the blog collection
     const blogCollection = await getCollection('blog');
     
@@ -44,8 +42,6 @@ export async function GET({ request, locals }: { request: any, locals: any }) {
       metaTitle: post.data.metaTitle,
       metaDescription: post.data.metaDescription
     }));
-    
-    console.log(`Returning ${postsData.length} blog posts`);
     
     return new Response(
       JSON.stringify(postsData),

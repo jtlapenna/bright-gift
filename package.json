@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "prebuild": "npm run generate:sitemap || true",
+    "prebuild": "npm run generate:sitemap",
     "prebuild:enhanced": "npm run seo:validate && node scripts/validate-images.js && npm run validate:links && npm run validate:categories && npm run validate:schema && npm run validate:yaml && npm run generate:sitemap",
     "build": "astro build",
     "preview": "astro preview",
@@ -17,6 +17,8 @@
     "clean": "rm -rf dist",
     "compile": "tsc",
     "validate:yaml": "node scripts/validate-yaml.js",
+    "validate:control-tower": "node ../scripts/analytics/validate-control-tower-site.mjs --site-key brightgift",
+    "validate-fast": "npm run validate:control-tower && npm run validate:links && npm run validate:categories && npm run validate:yaml",
     "validate:links": "node scripts/validate-links.js",
     "validate:categories": "node scripts/validate-categories.js",
     "validate:schema": "node scripts/validate-schema.js",
@@ -65,7 +67,6 @@
   },
   "devDependencies": {
     "@types/node": "^24.0.10",
-    "astro": "^5.11.0",
     "glob": "^11.0.3",
     "js-yaml": "^4.1.0",
     "typescript": "^5.0.0"

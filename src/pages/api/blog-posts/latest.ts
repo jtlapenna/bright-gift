@@ -2,8 +2,6 @@ import { getCollection } from 'astro:content';
 
 export async function GET({ request, locals }: { request: any, locals: any }) {
   try {
-    console.log('GET /api/blog-posts/latest invoked');
-    
     // Get the blog collection
     const blogCollection = await getCollection('blog');
     
@@ -47,8 +45,6 @@ export async function GET({ request, locals }: { request: any, locals: any }) {
       metaTitle: latestPost.data.metaTitle,
       metaDescription: latestPost.data.metaDescription
     };
-    
-    console.log('Returning latest blog post data:', postData);
     
     return new Response(
       JSON.stringify(postData),
