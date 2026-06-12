@@ -69,6 +69,10 @@ function generateSitemap() {
     { url: '/unique-gift-ideas/', priority: '0.7', changefreq: 'monthly' },
     { url: '/thoughtful-gift-ideas/', priority: '0.7', changefreq: 'monthly' },
     { url: '/last-minute-gift-ideas/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/gift-ideas-by-recipient/', priority: '0.8', changefreq: 'monthly' },
+    { url: '/gift-ideas-by-budget/', priority: '0.8', changefreq: 'monthly' },
+    { url: '/gift-ideas-by-occasion/', priority: '0.8', changefreq: 'monthly' },
+    { url: '/gift-ideas-by-interest/', priority: '0.8', changefreq: 'monthly' },
     { url: '/gifts-under-50/', priority: '0.7', changefreq: 'monthly' },
     { url: '/gifts-for-people-who-have-everything/', priority: '0.7', changefreq: 'monthly' },
     { url: '/gift-ideas-for-hard-to-shop-for-people/', priority: '0.7', changefreq: 'monthly' },
@@ -127,7 +131,7 @@ try {
   fs.writeFileSync(outputPath, sitemap);
   
   const blogPosts = getBlogPosts();
-  const staticPageCount = 15; // Home, gift generator, blog, 2 category pages, 6 landing pages, privacy, terms, contact, data-deletion
+  const staticPageCount = 19;
   console.log(`✅ Sitemap generated successfully!`);
   console.log(`📊 Total URLs: ${staticPageCount + blogPosts.length} (${staticPageCount} static + ${blogPosts.length} blog posts)`);
   console.log(`📁 Output: ${outputPath}`);

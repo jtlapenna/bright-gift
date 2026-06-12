@@ -1,0 +1,159 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+
+const featuredLinks = [
+	{
+		title: 'Gifts under $25 for coworkers',
+		description: 'Office-friendly gifts that stay affordable and avoid awkward over-spending.',
+		href: '/blog/gifts-under-25-for-coworkers/',
+		label: 'Under $25',
+		tags: ['coworker gifts', 'office', 'budget']
+	},
+	{
+		title: 'Gifts for remote workers under $50',
+		description: 'Desk, comfort, and work-from-home ideas that stay useful without getting too expensive.',
+		href: '/blog/gifts-for-remote-workers-under-50/',
+		label: 'Under $50',
+		tags: ['remote work', 'home office', 'practical']
+	},
+	{
+		title: 'Housewarming gifts under $75',
+		description: 'Move-in gifts with enough budget for practical tools, cozy upgrades, and hosting basics.',
+		href: '/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/',
+		label: 'Under $75',
+		tags: ['housewarming', 'home', 'new homeowners']
+	}
+];
+
+const sections = [
+	{
+		title: 'Budget gift pages that already have a clear job',
+		description: 'These guides are useful when the budget is fixed and the relationship still needs a little context.',
+		links: [
+			{
+				title: 'Little luxuries under $25',
+				description: 'Small gifts that feel more special than their price tag.',
+				href: '/blog/little-luxuries-under-25-mini-splurges-major-wow/',
+				label: 'Under $25',
+				tags: ['small gifts', 'mini splurges', 'affordable']
+			},
+			{
+				title: 'Gifts for gamers under $50',
+				description: 'Lower-risk gaming accessories and desk upgrades when you do not know their exact setup.',
+				href: '/blog/gifts-for-gamers-under-50/',
+				label: 'Under $50',
+				tags: ['gaming', 'tech', 'safe picks']
+			},
+			{
+				title: 'Gifts for book lovers under $50',
+				description: 'Reading lights, journals, cozy extras, and book-adjacent gifts that fit a moderate budget.',
+				href: '/blog/gifts-for-book-lovers-under-50/',
+				label: 'Under $50',
+				tags: ['books', 'cozy', 'reader']
+			},
+			{
+				title: 'Anniversary gifts under $50',
+				description: 'Romantic and useful anniversary ideas that do not rely on a huge spend.',
+				href: '/blog/25-unique-anniversary-gift-ideas-under-50/',
+				label: 'Under $50',
+				tags: ['anniversary', 'romantic', 'relationship']
+			}
+		]
+	},
+	{
+		title: 'Budget ranges by buying situation',
+		description: 'Use these pages when price matters, but the occasion or relationship matters more.',
+		links: [
+			{
+				title: 'Gifts under $50',
+				description: 'A budget landing page for shoppers who want the generator to keep recommendations realistic.',
+				href: '/gifts-under-50/',
+				label: 'Budget finder',
+				tags: ['under $50', 'generator', 'broad']
+			},
+			{
+				title: 'Eco-friendly gifts for every budget',
+				description: 'Sustainable gift ideas across lower and mid-range price points.',
+				href: '/blog/eco-friendly-gift-ideas-for-every-budget/',
+				label: 'Sustainable',
+				tags: ['eco-friendly', 'budget', 'values']
+			},
+			{
+				title: 'Pet lover gifts under $30',
+				description: 'Affordable pet-themed gifts that are easier to buy without overthinking.',
+				href: '/blog/affordable-gifts-for-pet-lovers-under-30/',
+				label: 'Under $30',
+				tags: ['pets', 'affordable', 'fun']
+			},
+			{
+				title: 'Black-owned business gifts under $75',
+				description: 'Thoughtful gifts with a broader marketplace angle and a clear upper budget.',
+				href: '/blog/25-amazing-gifts-from-black-owned-businesses-under-75/',
+				label: 'Under $75',
+				tags: ['small business', 'under $75', 'marketplace']
+			}
+		]
+	},
+	{
+		title: 'When budget is not the only constraint',
+		description: 'These pages are better when the recipient is picky, time is tight, or you need a stronger concept than a price range.',
+		links: [
+			{
+				title: 'Last-minute gift ideas',
+				description: 'Fast gift decisions for shoppers who need something good without a long browse session.',
+				href: '/last-minute-gift-ideas/',
+				label: 'Time crunch',
+				tags: ['last minute', 'quick', 'generator']
+			},
+			{
+				title: 'People who have everything',
+				description: 'Use this when the biggest problem is novelty, not price.',
+				href: '/gifts-for-people-who-have-everything/',
+				label: 'Hard to shop for',
+				tags: ['unique', 'personalized', 'experience']
+			},
+			{
+				title: 'Thoughtful gift ideas',
+				description: 'A broad gift-idea page for shoppers who want the gift to feel considered instead of cheap.',
+				href: '/thoughtful-gift-ideas/',
+				label: 'Thoughtful',
+				tags: ['meaningful', 'personal', 'safe']
+			},
+			{
+				title: 'Unique gift ideas',
+				description: 'A broader route when the shopper cares more about originality than exact price.',
+				href: '/unique-gift-ideas/',
+				label: 'Unique',
+				tags: ['unusual', 'personalized', 'broad']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What is a good default gift budget?',
+		answer: 'For coworkers and casual friends, $15 to $25 usually feels right. For closer friends and family, $35 to $75 gives you more useful options without requiring a premium purchase.'
+	},
+	{
+		question: 'Should I choose the cheapest gift that matches the person?',
+		answer: 'Not always. The best budget gift still needs a job: daily use, comfort, personalization, humor, or problem solving. A cheap gift that adds clutter is rarely the strongest pick.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Gift Ideas by Budget"
+	metaTitle="Gift Ideas by Budget | BrightGift"
+	description="Browse BrightGift gift ideas by budget, including gifts under $25, gifts under $50, housewarming gifts under $75, and budget-friendly AI gift finder pages."
+	canonicalPath="/gift-ideas-by-budget/"
+	eyebrow="Browse by price"
+	heroTitle="Gift ideas by budget, with enough context to still feel thoughtful."
+	intro="Budget pages work best when they do more than cap the price. This hub points shoppers toward affordable gifts that still match the person, occasion, and level of closeness."
+	keywords={['gift ideas by budget', 'gifts under 25', 'gifts under 50', 'affordable gift ideas', 'budget gift ideas', 'housewarming gifts under 75']}
+	ctaVariant="budget_hub_generator"
+	primaryCtaLabel="Find gifts in your budget"
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>

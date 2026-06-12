@@ -1,0 +1,546 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+interface HubLink {
+	title: string;
+	description: string;
+	href: string;
+	label?: string;
+	tags?: string[];
+}
+
+interface HubSection {
+	title: string;
+	description: string;
+	links: HubLink[];
+}
+
+interface Props {
+	title: string;
+	metaTitle: string;
+	description: string;
+	canonicalPath: string;
+	eyebrow: string;
+	heroTitle: string;
+	intro: string;
+	keywords: string[];
+	ctaVariant: string;
+	primaryCtaLabel: string;
+	sections: HubSection[];
+	featuredLinks: HubLink[];
+	faqs?: Array<{ question: string; answer: string }>;
+}
+
+const {
+	title,
+	metaTitle,
+	description,
+	canonicalPath,
+	eyebrow,
+	heroTitle,
+	intro,
+	keywords,
+	ctaVariant,
+	primaryCtaLabel,
+	sections,
+	featuredLinks,
+	faqs = []
+} = Astro.props;
+
+const baseUrl = 'https://bright-gift.com';
+const canonical = `${baseUrl}${canonicalPath}`;
+const experimentId = 'bg-hub-architecture-202606';
+const allLinks = [
+	...featuredLinks,
+	...sections.flatMap((section) => section.links)
+];
+const itemListStructuredData = {
+	'@context': 'https://schema.org',
+	'@type': 'ItemList',
+	name: title,
+	description,
+	url: canonical,
+	itemListElement: allLinks.map((link, index) => ({
+		'@type': 'ListItem',
+		position: index + 1,
+		name: link.title,
+		url: new URL(link.href, baseUrl).toString()
+	}))
+};
+const faqStructuredData = faqs.length
+	? {
+			'@context': 'https://schema.org',
+			'@type': 'FAQPage',
+			mainEntity: faqs.map((faq) => ({
+				'@type': 'Question',
+				name: faq.question,
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: faq.answer
+				}
+			}))
+		}
+	: null;
+---
+
+<Layout
+	title={title}
+	metaTitle={metaTitle}
+	description={description}
+	metaDescription={description}
+	canonical={canonical}
+	image="/images/homepage-banner.webp"
+	keywords={keywords}
+	breadcrumbs={[
+		{ name: 'Home', url: `${baseUrl}/` },
+		{ name: title, url: canonical }
+	]}
+>
+	<script type="application/ld+json" set:html={JSON.stringify(itemListStructuredData)} />
+	{faqStructuredData && <script type="application/ld+json" set:html={JSON.stringify(faqStructuredData)} />}
+
+	<main class="gift-hub-page">
+		<section class="hub-hero">
+			<div class="hub-shell hub-hero-grid">
+				<div>
+					<p class="hub-eyebrow">{eyebrow}</p>
+					<h1>{heroTitle}</h1>
+					<p class="hub-intro">{intro}</p>
+					<div class="hub-actions">
+						<a
+							href="/#tool"
+							class="hub-button hub-button-primary"
+							data-generator-cta
+							data-cta-position="hub_hero"
+							data-cta-variant={ctaVariant}
+							data-experiment-id={experimentId}
+						>
+							{primaryCtaLabel}
+						</a>
+						<a href="/gift-idea-generator/" class="hub-button hub-button-secondary">
+							Use the full generator
+						</a>
+					</div>
+				</div>
+				<aside class="hub-panel" aria-label="How to use this hub">
+					<p class="hub-panel-kicker">Fast path</p>
+					<ol>
+						<li>Choose the closest recipient, budget, occasion, or interest.</li>
+						<li>Open the guide that matches the buying moment.</li>
+						<li>Use the generator when you need a more personal shortlist.</li>
+					</ol>
+				</aside>
+			</div>
+		</section>
+
+		<section class="hub-section">
+			<div class="hub-shell">
+				<div class="hub-section-heading">
+					<p class="hub-eyebrow">Start here</p>
+					<h2>Most useful gift paths</h2>
+					<p>These are the pages most likely to answer a real shopping question quickly.</p>
+				</div>
+				<div class="hub-feature-grid">
+					{featuredLinks.map((link) => (
+						<a href={link.href} class="hub-feature-card">
+							<span>{link.label || 'Guide'}</span>
+							<h3>{link.title}</h3>
+							<p>{link.description}</p>
+						</a>
+					))}
+				</div>
+			</div>
+		</section>
+
+		{sections.map((section, sectionIndex) => (
+			<section class={`hub-section ${sectionIndex % 2 === 0 ? 'hub-section-soft' : ''}`}>
+				<div class="hub-shell">
+					<div class="hub-section-heading">
+						<h2>{section.title}</h2>
+						<p>{section.description}</p>
+					</div>
+					<div class="hub-link-grid">
+						{section.links.map((link) => (
+							<a href={link.href} class="hub-link-card">
+								<div>
+									<span>{link.label || 'Gift guide'}</span>
+									<h3>{link.title}</h3>
+									<p>{link.description}</p>
+								</div>
+								{link.tags?.length ? (
+									<ul aria-label={`${link.title} tags`}>
+										{link.tags.map((tag) => <li>{tag}</li>)}
+									</ul>
+								) : null}
+							</a>
+						))}
+					</div>
+				</div>
+			</section>
+		))}
+
+		{faqs.length ? (
+			<section class="hub-section hub-faq">
+				<div class="hub-shell">
+					<div class="hub-section-heading">
+						<p class="hub-eyebrow">Gift finder FAQ</p>
+						<h2>How to use these gift hubs</h2>
+					</div>
+					<div class="hub-faq-list">
+						{faqs.map((faq) => (
+							<article>
+								<h3>{faq.question}</h3>
+								<p>{faq.answer}</p>
+							</article>
+						))}
+					</div>
+				</div>
+			</section>
+		) : null}
+
+		<section class="hub-final-cta">
+			<div class="hub-shell">
+				<h2>Still narrowing the list?</h2>
+				<p>Use the BrightGift generator with the recipient, budget, occasion, and two real interests. The more specific the prompt, the better the shortlist.</p>
+				<a
+					href="/#tool"
+					class="hub-button hub-button-primary"
+					data-generator-cta
+					data-cta-position="hub_footer"
+					data-cta-variant={ctaVariant}
+					data-experiment-id={experimentId}
+				>
+					Get personalized gift ideas
+				</a>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.gift-hub-page {
+		--hub-navy: #1c2e4a;
+		--hub-coral: #ff6b6b;
+		--hub-coral-dark: #e84f4f;
+		--hub-cream: #fef2d3;
+		--hub-mint: #a3e4db;
+		--hub-yellow: #ffde59;
+		--hub-ink-muted: rgba(28, 46, 74, 0.74);
+		--hub-border: rgba(28, 46, 74, 0.14);
+		--hub-surface: #fffaf0;
+		--hub-shadow: 0 18px 42px rgba(28, 46, 74, 0.12);
+		background: #ffffff;
+		color: var(--hub-navy);
+		font-family: Inter, system-ui, sans-serif;
+	}
+
+	.hub-shell {
+		width: min(1120px, calc(100% - 32px));
+		margin: 0 auto;
+	}
+
+	.hub-hero {
+		background:
+			linear-gradient(135deg, rgba(255, 222, 89, 0.22), transparent 42%),
+			linear-gradient(180deg, var(--hub-cream), #ffffff);
+		padding: clamp(64px, 9vw, 104px) 0;
+	}
+
+	.hub-hero-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.7fr);
+		gap: clamp(28px, 5vw, 64px);
+		align-items: center;
+	}
+
+	.hub-eyebrow,
+	.hub-panel-kicker {
+		margin: 0 0 14px;
+		color: var(--hub-coral-dark);
+		font-size: 0.82rem;
+		font-weight: 900;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+	.hub-hero h1,
+	.hub-section-heading h2,
+	.hub-final-cta h2 {
+		margin: 0;
+		color: var(--hub-navy);
+		font-family: Poppins, Inter, system-ui, sans-serif;
+		font-weight: 900;
+		line-height: 1.05;
+		text-wrap: balance;
+	}
+
+	.hub-hero h1 {
+		max-width: 760px;
+		font-size: clamp(2.5rem, 7vw, 5.4rem);
+	}
+
+	.hub-intro {
+		max-width: 720px;
+		margin: 24px 0 0;
+		color: var(--hub-ink-muted);
+		font-size: clamp(1.06rem, 1.2vw, 1.22rem);
+		line-height: 1.7;
+		text-wrap: pretty;
+	}
+
+	.hub-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 14px;
+		margin-top: 32px;
+	}
+
+	.hub-button {
+		display: inline-flex;
+		min-height: 48px;
+		align-items: center;
+		justify-content: center;
+		border-radius: 999px;
+		padding: 14px 24px;
+		font-weight: 900;
+		text-decoration: none;
+		transition: background-color 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+	}
+
+	.hub-button:hover,
+	.hub-button:focus-visible {
+		transform: translateY(-1px);
+	}
+
+	.hub-button:focus-visible,
+	.hub-feature-card:focus-visible,
+	.hub-link-card:focus-visible {
+		outline: 3px solid var(--hub-yellow);
+		outline-offset: 4px;
+	}
+
+	.hub-button-primary {
+		background: var(--hub-coral);
+		color: white;
+		box-shadow: 0 12px 28px rgba(255, 107, 107, 0.24);
+	}
+
+	.hub-button-primary:hover,
+	.hub-button-primary:focus-visible {
+		background: var(--hub-coral-dark);
+		color: white;
+	}
+
+	.hub-button-secondary {
+		background: white;
+		border: 1px solid var(--hub-border);
+		color: var(--hub-navy);
+	}
+
+	.hub-button-secondary:hover,
+	.hub-button-secondary:focus-visible {
+		background: var(--hub-surface);
+		color: var(--hub-navy);
+	}
+
+	.hub-panel {
+		border: 1px solid rgba(28, 46, 74, 0.1);
+		border-radius: 28px;
+		background: rgba(255, 255, 255, 0.86);
+		padding: clamp(24px, 4vw, 34px);
+		box-shadow: var(--hub-shadow);
+	}
+
+	.hub-panel ol {
+		display: grid;
+		gap: 16px;
+		margin: 0;
+		padding-left: 22px;
+		color: var(--hub-ink-muted);
+		font-size: 1rem;
+		line-height: 1.6;
+	}
+
+	.hub-section {
+		padding: clamp(56px, 8vw, 88px) 0;
+	}
+
+	.hub-section-soft {
+		background: var(--hub-surface);
+	}
+
+	.hub-section-heading {
+		max-width: 760px;
+		margin-bottom: 28px;
+	}
+
+	.hub-section-heading h2 {
+		font-size: clamp(2rem, 4vw, 3.35rem);
+	}
+
+	.hub-section-heading p {
+		margin: 14px 0 0;
+		color: var(--hub-ink-muted);
+		font-size: 1.05rem;
+		line-height: 1.65;
+	}
+
+	.hub-feature-grid,
+	.hub-link-grid {
+		display: grid;
+		gap: 18px;
+	}
+
+	.hub-feature-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.hub-link-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.hub-feature-card,
+	.hub-link-card {
+		display: flex;
+		min-height: 100%;
+		flex-direction: column;
+		justify-content: space-between;
+		border: 1px solid var(--hub-border);
+		border-radius: 20px;
+		background: #ffffff;
+		color: var(--hub-navy);
+		padding: 24px;
+		text-decoration: none;
+		box-shadow: 0 10px 24px rgba(28, 46, 74, 0.07);
+		transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+	}
+
+	.hub-feature-card:hover,
+	.hub-link-card:hover,
+	.hub-feature-card:focus-visible,
+	.hub-link-card:focus-visible {
+		border-color: rgba(255, 107, 107, 0.45);
+		box-shadow: var(--hub-shadow);
+		transform: translateY(-2px);
+	}
+
+	.hub-feature-card span,
+	.hub-link-card span {
+		color: var(--hub-coral-dark);
+		font-size: 0.8rem;
+		font-weight: 900;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+	}
+
+	.hub-feature-card h3,
+	.hub-link-card h3 {
+		margin: 12px 0 10px;
+		color: var(--hub-navy);
+		font-family: Poppins, Inter, system-ui, sans-serif;
+		font-size: 1.28rem;
+		line-height: 1.2;
+	}
+
+	.hub-feature-card p,
+	.hub-link-card p,
+	.hub-final-cta p,
+	.hub-faq-list p {
+		margin: 0;
+		color: var(--hub-ink-muted);
+		line-height: 1.65;
+	}
+
+	.hub-link-card ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin: 20px 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.hub-link-card li {
+		border-radius: 999px;
+		background: rgba(163, 228, 219, 0.34);
+		padding: 7px 10px;
+		color: var(--hub-navy);
+		font-size: 0.78rem;
+		font-weight: 800;
+	}
+
+	.hub-faq {
+		background: var(--hub-cream);
+	}
+
+	.hub-faq-list {
+		display: grid;
+		gap: 16px;
+	}
+
+	.hub-faq-list article {
+		border-radius: 20px;
+		background: white;
+		padding: 24px;
+		box-shadow: 0 8px 18px rgba(28, 46, 74, 0.06);
+	}
+
+	.hub-faq-list h3 {
+		margin: 0 0 10px;
+		color: var(--hub-navy);
+		font-family: Poppins, Inter, system-ui, sans-serif;
+		font-size: 1.15rem;
+	}
+
+	.hub-final-cta {
+		background: var(--hub-navy);
+		padding: clamp(56px, 8vw, 84px) 0;
+		color: white;
+		text-align: center;
+	}
+
+	.hub-final-cta h2 {
+		color: white;
+		font-size: clamp(2rem, 5vw, 3.8rem);
+	}
+
+	.hub-final-cta p {
+		max-width: 720px;
+		margin: 18px auto 28px;
+		color: rgba(255, 255, 255, 0.78);
+	}
+
+	@media (max-width: 860px) {
+		.hub-hero-grid,
+		.hub-feature-grid,
+		.hub-link-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.hub-actions {
+			align-items: stretch;
+			flex-direction: column;
+		}
+
+		.hub-button {
+			width: 100%;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.hub-button,
+		.hub-feature-card,
+		.hub-link-card {
+			transition: none;
+		}
+
+		.hub-button:hover,
+		.hub-button:focus-visible,
+		.hub-feature-card:hover,
+		.hub-link-card:hover,
+		.hub-feature-card:focus-visible,
+		.hub-link-card:focus-visible {
+			transform: none;
+		}
+	}
+</style>

@@ -1,0 +1,159 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+
+const featuredLinks = [
+	{
+		title: 'Gifts for book lovers',
+		description: 'Reading accessories, cozy upgrades, and book-adjacent gifts for people whose shelf is never empty.',
+		href: '/blog/gifts-for-book-lovers-under-50/',
+		label: 'Book lovers',
+		tags: ['books', 'reading', 'under $50']
+	},
+	{
+		title: 'Gifts for gamers',
+		description: 'Gaming gift ideas when you know the hobby but not every detail of the setup.',
+		href: '/blog/gifts-for-gamers-under-50/',
+		label: 'Gamers',
+		tags: ['gaming', 'tech', 'desk']
+	},
+	{
+		title: 'Work-from-home gifts',
+		description: 'Desk, comfort, and routine upgrades for remote workers and home-office people.',
+		href: '/blog/gifts-for-remote-workers-under-50/',
+		label: 'Home office',
+		tags: ['remote work', 'desk', 'under $50']
+	}
+];
+
+const sections = [
+	{
+		title: 'Home, work, and daily routine interests',
+		description: 'These guides work when the gift should fit into someone\'s everyday life.',
+		links: [
+			{
+				title: 'Housewarming gifts',
+				description: 'Practical and warm gifts for people settling into a new home.',
+				href: '/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/',
+				label: 'Home',
+				tags: ['housewarming', 'new homeowners', 'practical']
+			},
+			{
+				title: 'Best home gifts on Amazon',
+				description: 'A broader home category guide for decor, organization, kitchen, and comfort ideas.',
+				href: '/blog/best-home-gifts-on-amazon-2024/',
+				label: 'Home gifts',
+				tags: ['home', 'Amazon', 'decor']
+			},
+			{
+				title: 'Remote work and WFH professional gifts',
+				description: 'A broader home-office lane for productivity, comfort, and focus.',
+				href: '/blog/gifts-for-remote-workers-and-wfh-professionals/',
+				label: 'Work from home',
+				tags: ['WFH', 'productivity', 'desk']
+			},
+			{
+				title: 'Sleep-tech gifts',
+				description: 'Rest and recovery gifts for people who care about better sleep.',
+				href: '/blog/sleep-tech-gifts-that-really-work/',
+				label: 'Sleep',
+				tags: ['wellness', 'sleep', 'tech']
+			}
+		]
+	},
+	{
+		title: 'Hobby and personality interests',
+		description: 'Use these when a hobby gives you a stronger clue than the occasion does.',
+		links: [
+			{
+				title: 'Gifts for plant lovers',
+				description: 'Plant care, display, and greenery gifts for indoor gardeners.',
+				href: '/blog/gifts-for-plant-lovers/',
+				label: 'Plants',
+				tags: ['plants', 'home', 'hobby']
+			},
+			{
+				title: 'Gifts for Dungeons and Dragons enthusiasts',
+				description: 'Tabletop gifts for players, dungeon masters, and fantasy-loving friends.',
+				href: '/blog/gifts-for-dungeons-dragons-enthusiasts-level-up-their-experience/',
+				label: 'Tabletop',
+				tags: ['D&D', 'gaming', 'hobby']
+			},
+			{
+				title: 'Gifts for board game enthusiasts',
+				description: 'Board game and game-night gifts for people who like strategy, groups, and replayability.',
+				href: '/blog/unique-gifts-for-board-game-enthusiasts/',
+				label: 'Board games',
+				tags: ['board games', 'game night', 'hobby']
+			},
+			{
+				title: 'Yoga gifts',
+				description: 'Yoga props, recovery accessories, and calming gifts for different practice levels.',
+				href: '/blog/top-gifts-for-yoga-enthusiasts-beginners-to-advanced-practitioners/',
+				label: 'Yoga',
+				tags: ['wellness', 'yoga', 'practice']
+			}
+		]
+	},
+	{
+		title: 'Values, style, and shopping preferences',
+		description: 'Sometimes the best gift clue is not a hobby, but the kind of purchase the recipient respects.',
+		links: [
+			{
+				title: 'Eco-friendly gift ideas',
+				description: 'Lower-waste gifts for recipients who care about sustainability.',
+				href: '/blog/eco-friendly-gift-ideas-for-every-budget/',
+				label: 'Eco-friendly',
+				tags: ['sustainable', 'values', 'budget']
+			},
+			{
+				title: 'Clean-girl minimalist gifts',
+				description: 'Polished, minimal gifts with personality for style-conscious recipients.',
+				href: '/blog/clean-girl-2-0-minimalist-gifts-with-personality/',
+				label: 'Minimalist style',
+				tags: ['style', 'minimal', 'beauty']
+			},
+			{
+				title: 'Black-owned business gifts',
+				description: 'Gift ideas sourced from Black-owned businesses and marketplaces.',
+				href: '/blog/25-amazing-gifts-from-black-owned-businesses-under-75/',
+				label: 'Small business',
+				tags: ['Black-owned', 'marketplace', 'under $75']
+			},
+			{
+				title: 'Personalized gifts for kids',
+				description: 'Custom and personal gift ideas for kids where age, interests, and safety matter.',
+				href: '/blog/personalized-gifts-for-kids/',
+				label: 'Personalized',
+				tags: ['kids', 'personalized', 'family']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'Why browse gift ideas by interest?',
+		answer: 'Interests make gift selection easier because they reveal what the person already spends time on. The safest gifts improve or support an existing hobby instead of forcing a new one.'
+	},
+	{
+		question: 'What if I know several interests?',
+		answer: 'Choose the interest with the clearest daily routine or strongest need. If you are unsure, enter all of them into the BrightGift generator and compare the shortlist.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Gift Ideas by Interest"
+	metaTitle="Gift Ideas by Interest | BrightGift"
+	description="Browse BrightGift gift ideas by interest, including book lovers, gamers, plant lovers, pet lovers, remote workers, yoga fans, homebodies, and hobby gifts."
+	canonicalPath="/gift-ideas-by-interest/"
+	eyebrow="Browse by interest"
+	heroTitle="Gift ideas by interest, when their hobby is the best clue."
+	intro="Interest-led gift pages are useful when the relationship is broad but the hobby is specific. Start with what they actually do, then use the generator to tailor the idea by budget and occasion."
+	keywords={['gift ideas by interest', 'gifts for book lovers', 'gifts for gamers', 'gifts for plant lovers', 'work from home gifts', 'hobby gifts']}
+	ctaVariant="interest_hub_generator"
+	primaryCtaLabel="Find gifts by interest"
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>

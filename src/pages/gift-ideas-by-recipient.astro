@@ -1,0 +1,159 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+
+const featuredLinks = [
+	{
+		title: 'Gifts for girlfriends',
+		description: 'Thoughtful, romantic, cozy, and practical ideas when you want the gift to feel personal.',
+		href: '/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/',
+		label: 'High-demand guide',
+		tags: ['girlfriend', 'romantic', 'thoughtful']
+	},
+	{
+		title: 'Gifts for coworkers',
+		description: 'Office-safe gift ideas for birthdays, team thank-yous, Secret Santa, and low-pressure appreciation.',
+		href: '/blog/gifts-under-25-for-coworkers/',
+		label: 'Workplace gifts',
+		tags: ['coworker', 'office', 'under $25']
+	},
+	{
+		title: 'Housewarming gifts for new homeowners',
+		description: 'Move-in gifts that help new homeowners settle in, host, cook, and make the place feel finished.',
+		href: '/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/',
+		label: 'Housewarming',
+		tags: ['new homeowners', 'housewarming', 'under $75']
+	}
+];
+
+const sections = [
+	{
+		title: 'Relationship and family gift ideas',
+		description: 'Start with the person you are shopping for, then narrow by the occasion and how close the relationship is.',
+		links: [
+			{
+				title: 'Gifts for dads who love outdoor adventures',
+				description: 'Useful gifts for dads who camp, hike, grill, travel, or spend more time outside than indoors.',
+				href: '/blog/best-gifts-for-dads-who-love-outdoor-adventures/',
+				label: 'Dad gifts',
+				tags: ['dad', 'outdoors', 'practical']
+			},
+			{
+				title: 'Mother\'s Day gifts for every type of mom',
+				description: 'Gift lanes for cozy moms, practical moms, sentimental moms, and moms who need a real break.',
+				href: '/blog/mothers-day-gifts-for-every-type-of-mom/',
+				label: 'Mom gifts',
+				tags: ['mom', 'self-care', 'occasion']
+			},
+			{
+				title: 'Gifts for new parents',
+				description: 'Baby-shower and new-parent gift ideas that support recovery, routines, and real-life convenience.',
+				href: '/blog/30-unique-gift-ideas-for-new-parents-baby-shower-beyond/',
+				label: 'New parents',
+				tags: ['new parents', 'baby shower', 'family']
+			},
+			{
+				title: 'Gifts for new grandparents',
+				description: 'Thoughtful gifts for grandparents celebrating a new role, a new baby, and new family rituals.',
+				href: '/blog/gifts-for-new-grandparents/',
+				label: 'Grandparents',
+				tags: ['grandparents', 'family', 'sentimental']
+			}
+		]
+	},
+	{
+		title: 'Friends, work, and hard-to-shop-for people',
+		description: 'Use these when you know the person, but the gift lane still feels too broad.',
+		links: [
+			{
+				title: 'Gifts for people who have everything',
+				description: 'A generator-first page for recipients who already own the obvious picks.',
+				href: '/gifts-for-people-who-have-everything/',
+				label: 'Hard to shop for',
+				tags: ['unique', 'personalized', 'experience']
+			},
+			{
+				title: 'Gifts for remote workers',
+				description: 'Work-from-home gift ideas for desk comfort, focus, and daily routines.',
+				href: '/blog/gifts-for-remote-workers-under-50/',
+				label: 'Remote work',
+				tags: ['remote work', 'home office', 'under $50']
+			},
+			{
+				title: 'Gifts for teachers',
+				description: 'Useful, appreciative gifts that avoid classroom clutter and over-personal choices.',
+				href: '/blog/best-gifts-for-teachers/',
+				label: 'Teacher gifts',
+				tags: ['teacher', 'appreciation', 'practical']
+			},
+			{
+				title: 'Gifts for hard-to-shop-for people',
+				description: 'A broader page for recipients where a normal gift list keeps missing the mark.',
+				href: '/gift-ideas-for-hard-to-shop-for-people/',
+				label: 'Gift finder',
+				tags: ['hard to shop for', 'unique', 'generator']
+			}
+		]
+	},
+	{
+		title: 'Interest-led recipient guides',
+		description: 'When their hobby is the strongest clue, these pages are better than starting from the relationship.',
+		links: [
+			{
+				title: 'Gifts for book lovers',
+				description: 'Reading accessories, cozy upgrades, and book-adjacent gifts for people who always have a next read.',
+				href: '/blog/gifts-for-book-lovers-under-50/',
+				label: 'Book lovers',
+				tags: ['books', 'under $50', 'cozy']
+			},
+			{
+				title: 'Gifts for gamers',
+				description: 'Useful gaming gifts under $50 when you do not know their exact setup.',
+				href: '/blog/gifts-for-gamers-under-50/',
+				label: 'Gamers',
+				tags: ['gaming', 'under $50', 'tech']
+			},
+			{
+				title: 'Gifts for plant lovers',
+				description: 'Plant care, display, and cozy greenery gifts for indoor gardeners.',
+				href: '/blog/gifts-for-plant-lovers/',
+				label: 'Plant lovers',
+				tags: ['plants', 'home', 'hobby']
+			},
+			{
+				title: 'Gifts for pet lovers',
+				description: 'Affordable pet-themed gifts that feel fun without becoming too niche.',
+				href: '/blog/affordable-gifts-for-pet-lovers-under-30/',
+				label: 'Pet lovers',
+				tags: ['pets', 'under $30', 'fun']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'How do I choose a gift by recipient?',
+		answer: 'Start with the relationship, then choose one specific clue: their routine, hobby, home situation, or the occasion. That keeps the gift from feeling generic.'
+	},
+	{
+		question: 'What if I do not know the person very well?',
+		answer: 'Use safer categories like food, desk upgrades, home basics, useful accessories, or the BrightGift generator. Avoid clothing, fragrance, and anything too personal.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Gift Ideas by Recipient"
+	metaTitle="Gift Ideas by Recipient | BrightGift"
+	description="Browse BrightGift gift ideas by recipient, including girlfriends, coworkers, new homeowners, parents, teachers, remote workers, book lovers, gamers, and more."
+	canonicalPath="/gift-ideas-by-recipient/"
+	eyebrow="Browse by person"
+	heroTitle="Gift ideas by recipient, without starting from a blank page."
+	intro="Choose the person first, then jump into the guide that matches the relationship, occasion, and buying pressure. This hub helps the BrightGift generator and blog pages work together instead of living as disconnected gift lists."
+	keywords={['gift ideas by recipient', 'gifts for girlfriend', 'coworker gifts', 'gifts for new homeowners', 'gifts for people who have everything', 'personalized gift ideas']}
+	ctaVariant="recipient_hub_generator"
+	primaryCtaLabel="Find gifts for a specific person"
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>
