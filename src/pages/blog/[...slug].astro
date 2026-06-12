@@ -784,6 +784,69 @@ if (relatedPosts.length > 0) {
     box-shadow: 0 4px 16px 0 #1c2e4a33;
     outline: none;
   }
+  :global(.prose .support-generator-cta) {
+    margin: 2rem 0 2.5rem;
+    border: 1px solid #A3E4DB;
+    border-radius: 1.5rem;
+    background: #FEF2D3;
+    padding: 1.5rem;
+    box-shadow: 0 18px 45px rgba(28, 46, 74, 0.08);
+  }
+  :global(.prose .support-generator-cta h2) {
+    margin: 0 0 0.75rem !important;
+    color: #1C2E4A;
+    font-family: 'Poppins', 'Raleway', Arial, sans-serif;
+    font-size: clamp(1.45rem, 2vw, 2rem);
+    font-weight: 900;
+    line-height: 1.18;
+    letter-spacing: 0;
+  }
+  :global(.prose .support-generator-cta p) {
+    margin: 0 0 1rem !important;
+    color: rgba(28, 46, 74, 0.82);
+    line-height: 1.65;
+  }
+  :global(.prose .support-generator-kicker) {
+    margin-bottom: 0.65rem !important;
+    color: #FF6B6B !important;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  :global(.prose .support-generator-button) {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: #FF6B6B !important;
+    color: #ffffff !important;
+    padding: 0.8rem 1.4rem;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none !important;
+    box-shadow: 0 10px 24px rgba(255, 107, 107, 0.28);
+    transition: background 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+  }
+  :global(.prose .support-generator-button:hover),
+  :global(.prose .support-generator-button:focus) {
+    background: #1C2E4A !important;
+    color: #ffffff !important;
+    box-shadow: 0 14px 30px rgba(28, 46, 74, 0.22);
+    outline: none;
+    transform: translateY(-1px);
+  }
+  :global(.prose .support-generator-button:focus-visible) {
+    outline: 3px solid #FFDE59;
+    outline-offset: 3px;
+  }
+  @media (min-width: 768px) {
+    :global(.prose .support-generator-cta) {
+      padding: 2rem;
+    }
+  }
   a.amazon-link,
   a.bookshop-link,
   a.afrofiliate-link,

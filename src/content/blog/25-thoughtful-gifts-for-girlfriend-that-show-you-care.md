@@ -5,7 +5,7 @@ description: >-
   and cozy upgrades to practical everyday picks that still feel genuinely
   personal.
 date: "2025-08-05"
-lastUpdated: "2026-04-16"
+lastUpdated: "2026-06-12"
 status: published
 draft: false
 metaTitle: "Thoughtful Gifts for Your Girlfriend | 25 Ideas"
@@ -75,6 +75,13 @@ The best thoughtful gifts for a girlfriend do not just look romantic in a search
 This page is for gifts that feel caring, attentive, and easy to use in real life. If you want something more dramatic or date-night driven, pair this guide with [Gifts for Your Girlfriend: 15 Unique Romantic Ideas](/blog/gifts-for-girlfriend-unique-romantic-ideas/), [25 Unique Anniversary Gift Ideas Under $50](/blog/25-unique-anniversary-gift-ideas-under-50/), or [How to Choose the Perfect Gift](/blog/how-to-choose-the-perfect-gift-complete-guide/).
 
 Want a shorter shortlist for her exact style? Try the [AI gift idea generator](/#tool) with her interests, budget, and occasion, then use this guide to sanity-check the strongest picks.
+
+<div class="support-generator-cta">
+  <p class="support-generator-kicker">Personalized girlfriend gift finder</p>
+  <h2>Still deciding what feels like her?</h2>
+  <p>Tell BrightGift her interests, your budget, and the occasion. The generator will turn that into a tighter girlfriend gift shortlist you can compare against the ideas below.</p>
+  <a href="/#tool" data-generator-cta data-cta-position="girlfriend_support_intro" data-cta-variant="girlfriend_gift_finder" data-experiment-id="bg-support-generator-cta-202606" class="support-generator-button">Get personalized girlfriend gift ideas</a>
+</div>
 
 ## Quick Picks by Girlfriend Type
 
