@@ -82,7 +82,7 @@ For a custom shortlist by job type, desk size, and budget, start with the [AI gi
   <p class="support-generator-kicker">Remote-work gift finder</p>
   <h2>Shopping for a desk setup you have not seen?</h2>
   <p>Give BrightGift the recipient's role, budget, desk size, and work style. It will suggest remote-work gifts that fit the way they actually work from home.</p>
-  <a href="/#tool" data-generator-cta data-cta-position="remote_worker_support_intro" data-cta-variant="remote_worker_gift_finder" data-experiment-id="bg-support-generator-cta-202606" class="support-generator-button">Get remote worker gift ideas</a>
+  <a href="/?recipient=remote%20worker&amp;interests=home%20office%2C%20productivity%2C%20coffee%2C%20desk%20setup&amp;budget=50&amp;styles=techy%2Cwellness&amp;source_cta=remote_worker_support_intro&amp;source_variant=remote_worker_gift_finder&amp;source_experiment=bg-support-generator-cta-202606#tool" data-generator-cta data-cta-position="remote_worker_support_intro" data-cta-variant="remote_worker_gift_finder" data-experiment-id="bg-support-generator-cta-202606" class="support-generator-button">Get remote worker gift ideas</a>
 </div>
 
 ---

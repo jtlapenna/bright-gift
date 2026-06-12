@@ -962,19 +962,23 @@ const faqData = {
 				}
 			}
 
-			function applyPromptPreset(button) {
-				const recipientInput = document.getElementById('recipient');
-				const interestsInput = document.getElementById('interests');
-				const budgetInput = document.getElementById('budget');
-				const presetStyles = (button.dataset.styles || '')
+			function getPresetStyles(styles) {
+				return String(styles || '')
 					.split(',')
 					.map(style => style.trim())
 					.filter(Boolean)
 					.slice(0, 3);
+			}
 
-				if (recipientInput) recipientInput.value = button.dataset.recipient || '';
-				if (interestsInput) interestsInput.value = button.dataset.interests || '';
-				if (budgetInput && button.dataset.budget) budgetInput.value = button.dataset.budget;
+			function applyGeneratorPreset(preset) {
+				const recipientInput = document.getElementById('recipient');
+				const interestsInput = document.getElementById('interests');
+				const budgetInput = document.getElementById('budget');
+				const presetStyles = getPresetStyles(preset.styles);
+
+				if (recipientInput) recipientInput.value = preset.recipient || '';
+				if (interestsInput) interestsInput.value = preset.interests || '';
+				if (budgetInput && preset.budget) budgetInput.value = preset.budget;
 
 				selectedStyles = presetStyles;
 				styleChips.forEach(styleButton => {
@@ -982,27 +986,74 @@ const faqData = {
 				});
 				updateAllButtonStates();
 				updateSelectionCount();
+			}
+
+			function scrollToGeneratorForm() {
+				document.getElementById('tool')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				setTimeout(() => {
+					const interestsInput = document.getElementById('interests');
+					if (interestsInput) interestsInput.focus();
+				}, 350);
+			}
+
+			function applyPromptPreset(button) {
+				const preset = {
+					recipient: button.dataset.recipient || '',
+					interests: button.dataset.interests || '',
+					budget: button.dataset.budget || '',
+					styles: button.dataset.styles || ''
+				};
+				applyGeneratorPreset(preset);
 
 				trackBrightGiftEvent('gift_generator_preset_click', {
 					experiment_id: button.dataset.experimentId || '',
 					cta_position: button.dataset.ctaPosition || 'homepage_prompt_preset',
 					cta_variant: button.dataset.ctaVariant || '',
-					recipient: button.dataset.recipient || '',
-					budget: button.dataset.budget || '',
+					recipient: preset.recipient,
+					budget: preset.budget,
 					styles: selectedStyles.join(','),
 					content_type: 'home',
 					tracking_version: '2026-06-11'
 				});
 
-				document.getElementById('tool')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-				setTimeout(() => {
-					if (interestsInput) interestsInput.focus();
-				}, 350);
+				scrollToGeneratorForm();
+			}
+
+			function applyUrlPrefill() {
+				const params = new URLSearchParams(window.location.search);
+				const hasPrefill = ['recipient', 'interests', 'budget', 'styles'].some(param => params.has(param));
+				if (!hasPrefill) return;
+
+				const preset = {
+					recipient: params.get('recipient') || '',
+					interests: params.get('interests') || '',
+					budget: params.get('budget') || '',
+					styles: params.get('styles') || ''
+				};
+				applyGeneratorPreset(preset);
+
+				trackBrightGiftEvent('gift_generator_prefill', {
+					experiment_id: params.get('source_experiment') || 'bg-support-generator-cta-202606',
+					cta_position: params.get('source_cta') || 'generator_url_prefill',
+					cta_variant: params.get('source_variant') || '',
+					recipient: preset.recipient,
+					budget: preset.budget,
+					styles: selectedStyles.join(','),
+					content_type: 'home',
+					source: 'url_prefill',
+					tracking_version: '2026-06-12'
+				});
+
+				if (window.location.hash === '#tool') {
+					scrollToGeneratorForm();
+				}
 			}
 
 			promptPresetButtons.forEach(button => {
 				button.addEventListener('click', () => applyPromptPreset(button));
 			});
+
+			applyUrlPrefill();
 
 			// Function to cycle through loading messages
 		function startLoadingAnimation() {
