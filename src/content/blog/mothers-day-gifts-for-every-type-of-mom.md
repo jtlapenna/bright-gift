@@ -82,13 +82,6 @@ The best Mother's Day gifts feel specific. They show that you noticed what kind 
 
 This guide is built as a broad Mother's Day hub, not just a self-care list. If you already know she would love a more focused angle, pair this with [Luxurious Self-Care Gifts for Moms](/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore/), [Be Rooted Planners, Journals, and Desk Accessories](/blog/be-rooted-planners-stationery/), [Gifts for Plant Lovers](/blog/gifts-for-plant-lovers/), and [Little Luxuries Under $25](/blog/little-luxuries-under-25-mini-splurges-major-wow/).
 
-<div class="support-generator-cta">
-  <p class="support-generator-kicker">Mother's Day gift finder</p>
-  <h2>Match the gift to the way she actually unwinds.</h2>
-  <p>Tell BrightGift whether she likes keepsakes, rest, gardening, reading, beauty, or practical home upgrades. The generator will prefill a Mother's Day shortlist that feels specific without adding clutter.</p>
-  <a href="/?recipient=mom&amp;interests=self-care%2C%20family%20keepsakes%2C%20gardening%2C%20reading&amp;budget=100&amp;styles=thoughtful%2Cluxury&amp;source_cta=mothers_day_intro&amp;source_variant=mom_type_gift_finder&amp;source_experiment=bg-seasonal-generator-cta-202606#tool" data-generator-cta data-cta-position="mothers_day_intro" data-cta-variant="mom_type_gift_finder" data-experiment-id="bg-seasonal-generator-cta-202606" class="support-generator-button">Get Mother's Day gift ideas</a>
-</div>
-
 ## Quick Picks by Mom Type
 
 - **For the sentimental mom:** A birthstone necklace, digital photo frame, or instant photo printer.

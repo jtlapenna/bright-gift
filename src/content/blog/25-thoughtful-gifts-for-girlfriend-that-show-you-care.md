@@ -76,13 +76,6 @@ This page is for gifts that feel caring, attentive, and easy to use in real life
 
 Want a shorter shortlist for her exact style? Try the [AI gift idea generator](/#tool) with her interests, budget, and occasion, then use this guide to sanity-check the strongest picks.
 
-<div class="support-generator-cta">
-  <p class="support-generator-kicker">Personalized girlfriend gift finder</p>
-  <h2>Still deciding what feels like her?</h2>
-  <p>Tell BrightGift her interests, your budget, and the occasion. The generator will turn that into a tighter girlfriend gift shortlist you can compare against the ideas below.</p>
-  <a href="/?recipient=girlfriend&amp;interests=romantic%2C%20cozy%20nights%20in%2C%20beauty%2C%20keepsakes&amp;budget=50&amp;styles=beauty%2Cluxury&amp;source_cta=girlfriend_support_intro&amp;source_variant=girlfriend_gift_finder&amp;source_experiment=bg-support-generator-cta-202606#tool" data-generator-cta data-cta-position="girlfriend_support_intro" data-cta-variant="girlfriend_gift_finder" data-experiment-id="bg-support-generator-cta-202606" class="support-generator-button">Get personalized girlfriend gift ideas</a>
-</div>
-
 ## Quick Picks by Girlfriend Type
 
 - **For the sentimental girlfriend:** a custom name necklace, linen photo album, or smart photo frame.

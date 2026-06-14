@@ -95,6 +95,79 @@ const lastUpdated = sanitizeLastUpdated(post.data.lastUpdated);
 const normalizedType = normalizeCategory(type);
 const isGiftGuide = normalizedType === 'gift-guide';
 const robotsDirective = post.data.sitemap === false ? 'noindex, follow' : undefined;
+const supportGeneratorCtas = {
+  '25-thoughtful-gifts-for-girlfriend-that-show-you-care': {
+    kicker: 'Personalized girlfriend gift finder',
+    heading: 'Still deciding what feels like her?',
+    body: 'Tell BrightGift her interests, your budget, and the occasion. The generator will turn that into a tighter girlfriend gift shortlist you can compare against the ideas below.',
+    href: '/?recipient=girlfriend&interests=romantic%2C%20cozy%20nights%20in%2C%20beauty%2C%20keepsakes&budget=50&styles=beauty%2Cluxury&source_cta=girlfriend_support_intro&source_variant=girlfriend_gift_finder&source_experiment=bg-support-generator-cta-202606#tool',
+    label: 'Get personalized girlfriend gift ideas',
+    ctaPosition: 'girlfriend_support_intro',
+    ctaVariant: 'girlfriend_gift_finder',
+    experimentId: 'bg-support-generator-cta-202606',
+  },
+  'gifts-under-25-for-coworkers': {
+    kicker: 'Office-safe gift finder',
+    heading: 'Need a coworker gift that will not feel awkward?',
+    body: 'Use the BrightGift generator with their role, office style, and your budget. It is useful when you need ideas that feel thoughtful, professional, and safely under $25.',
+    href: '/?recipient=coworker&interests=coffee%2C%20desk%20setup%2C%20office%2C%20practical%20gifts&budget=25&styles=quirky%2Ctechy&source_cta=coworker_support_intro&source_variant=coworker_gift_finder&source_experiment=bg-support-generator-cta-202606#tool',
+    label: 'Get coworker gift ideas',
+    ctaPosition: 'coworker_support_intro',
+    ctaVariant: 'coworker_gift_finder',
+    experimentId: 'bg-support-generator-cta-202606',
+  },
+  'gifts-for-remote-workers-under-50': {
+    kicker: 'Remote-work gift finder',
+    heading: 'Shopping for a desk setup you have not seen?',
+    body: 'Give BrightGift the recipient\'s role, budget, desk size, and work style. It will suggest remote-work gifts that fit the way they actually work from home.',
+    href: '/?recipient=remote%20worker&interests=home%20office%2C%20productivity%2C%20coffee%2C%20desk%20setup&budget=50&styles=techy%2Cwellness&source_cta=remote_worker_support_intro&source_variant=remote_worker_gift_finder&source_experiment=bg-support-generator-cta-202606#tool',
+    label: 'Get remote worker gift ideas',
+    ctaPosition: 'remote_worker_support_intro',
+    ctaVariant: 'remote_worker_gift_finder',
+    experimentId: 'bg-support-generator-cta-202606',
+  },
+  '25-thoughtful-housewarming-gifts-for-new-homeowners-under-75': {
+    kicker: 'Housewarming gift finder',
+    heading: 'Choose the gift by how they will use the new home.',
+    body: 'Tell BrightGift whether they are first-time homeowners, apartment dwellers, frequent hosts, or practical minimalists. The generator will prefill a housewarming shortlist that matches the home, budget, and amount of clutter they can actually handle.',
+    href: '/?recipient=new%20homeowner&interests=kitchen%20upgrades%2C%20cozy%20home%2C%20hosting%2C%20move-in%20essentials&budget=75&styles=home%2Cpractical&source_cta=housewarming_intro&source_variant=housewarming_gift_finder&source_experiment=bg-housewarming-generator-cta-202606#tool',
+    label: 'Build a housewarming shortlist',
+    ctaPosition: 'housewarming_intro',
+    ctaVariant: 'housewarming_gift_finder',
+    experimentId: 'bg-housewarming-generator-cta-202606',
+  },
+  'last-minute-birthday-gifts-for-busy-professionals': {
+    kicker: 'Professional birthday gift finder',
+    heading: 'Need a polished gift without overthinking it?',
+    body: 'Tell BrightGift their work style, schedule, and budget. The generator will prefill a shortlist for busy professionals, from desk upgrades to wellness picks that still feel personal.',
+    href: '/?recipient=busy%20professional&interests=productivity%2C%20desk%20setup%2C%20coffee%2C%20wellness&budget=100&styles=techy%2Cpractical&source_cta=professional_birthday_intro&source_variant=professional_birthday_gift_finder&source_experiment=bg-seasonal-generator-cta-202606#tool',
+    label: 'Get professional birthday gift ideas',
+    ctaPosition: 'professional_birthday_intro',
+    ctaVariant: 'professional_birthday_gift_finder',
+    experimentId: 'bg-seasonal-generator-cta-202606',
+  },
+  'fathers-day-gifts-for-every-type-of-dad': {
+    kicker: 'Father\'s Day gift finder',
+    heading: 'Start with the kind of dad you actually have.',
+    body: 'Tell BrightGift whether he is outdoorsy, techy, sentimental, hard to shop for, or always upgrading the grill. The generator will prefill a Father\'s Day shortlist around his real habits and your budget.',
+    href: '/?recipient=dad&interests=outdoors%2C%20tech%2C%20grilling%2C%20family%20keepsakes&budget=75&styles=practical%2Cthoughtful&source_cta=fathers_day_intro&source_variant=dad_type_gift_finder&source_experiment=bg-seasonal-generator-cta-202606#tool',
+    label: 'Get Father\'s Day gift ideas',
+    ctaPosition: 'fathers_day_intro',
+    ctaVariant: 'dad_type_gift_finder',
+    experimentId: 'bg-seasonal-generator-cta-202606',
+  },
+  'mothers-day-gifts-for-every-type-of-mom': {
+    kicker: 'Mother\'s Day gift finder',
+    heading: 'Match the gift to the way she actually unwinds.',
+    body: 'Tell BrightGift whether she likes keepsakes, rest, gardening, reading, beauty, or practical home upgrades. The generator will prefill a Mother\'s Day shortlist that feels specific without adding clutter.',
+    href: '/?recipient=mom&interests=self-care%2C%20family%20keepsakes%2C%20gardening%2C%20reading&budget=100&styles=thoughtful%2Cluxury&source_cta=mothers_day_intro&source_variant=mom_type_gift_finder&source_experiment=bg-seasonal-generator-cta-202606#tool',
+    label: 'Get Mother\'s Day gift ideas',
+    ctaPosition: 'mothers_day_intro',
+    ctaVariant: 'mom_type_gift_finder',
+    experimentId: 'bg-seasonal-generator-cta-202606',
+  },
+};
+const supportGeneratorCta = supportGeneratorCtas[postSlug];
 
 // Debug logging in development
 if (import.meta.env.DEV && post.slug === '80th-birthday-gift-ideas-seniors') {
@@ -392,6 +465,24 @@ if (relatedPosts.length > 0) {
                 </span>
               ))}
             </div>
+          )}
+
+          {supportGeneratorCta && (
+            <section class="support-generator-cta" aria-labelledby="support-generator-heading">
+              <p class="support-generator-kicker">{supportGeneratorCta.kicker}</p>
+              <h2 id="support-generator-heading">{supportGeneratorCta.heading}</h2>
+              <p>{supportGeneratorCta.body}</p>
+              <a
+                href={supportGeneratorCta.href}
+                data-generator-cta
+                data-cta-position={supportGeneratorCta.ctaPosition}
+                data-cta-variant={supportGeneratorCta.ctaVariant}
+                data-experiment-id={supportGeneratorCta.experimentId}
+                class="support-generator-button"
+              >
+                {supportGeneratorCta.label}
+              </a>
+            </section>
           )}
 
           <!-- Article Body -->
@@ -784,7 +875,7 @@ if (relatedPosts.length > 0) {
     box-shadow: 0 4px 16px 0 #1c2e4a33;
     outline: none;
   }
-  :global(.prose .support-generator-cta) {
+  :global(.support-generator-cta) {
     margin: 2rem 0 2.5rem;
     border: 1px solid #A3E4DB;
     border-radius: 1.5rem;
@@ -792,7 +883,7 @@ if (relatedPosts.length > 0) {
     padding: 1.5rem;
     box-shadow: 0 18px 45px rgba(28, 46, 74, 0.08);
   }
-  :global(.prose .support-generator-cta h2) {
+  :global(.support-generator-cta h2) {
     margin: 0 0 0.75rem !important;
     color: #1C2E4A;
     font-family: 'Poppins', 'Raleway', Arial, sans-serif;
@@ -801,12 +892,12 @@ if (relatedPosts.length > 0) {
     line-height: 1.18;
     letter-spacing: 0;
   }
-  :global(.prose .support-generator-cta p) {
+  :global(.support-generator-cta p) {
     margin: 0 0 1rem !important;
     color: rgba(28, 46, 74, 0.82);
     line-height: 1.65;
   }
-  :global(.prose .support-generator-kicker) {
+  :global(.support-generator-kicker) {
     margin-bottom: 0.65rem !important;
     color: #FF6B6B !important;
     font-size: 0.78rem;
@@ -815,7 +906,7 @@ if (relatedPosts.length > 0) {
     line-height: 1.2;
     text-transform: uppercase;
   }
-  :global(.prose .support-generator-button) {
+  :global(.support-generator-button) {
     display: inline-flex;
     min-height: 48px;
     align-items: center;
@@ -830,20 +921,20 @@ if (relatedPosts.length > 0) {
     box-shadow: 0 10px 24px rgba(255, 107, 107, 0.28);
     transition: background 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
   }
-  :global(.prose .support-generator-button:hover),
-  :global(.prose .support-generator-button:focus) {
+  :global(.support-generator-button:hover),
+  :global(.support-generator-button:focus) {
     background: #1C2E4A !important;
     color: #ffffff !important;
     box-shadow: 0 14px 30px rgba(28, 46, 74, 0.22);
     outline: none;
     transform: translateY(-1px);
   }
-  :global(.prose .support-generator-button:focus-visible) {
+  :global(.support-generator-button:focus-visible) {
     outline: 3px solid #FFDE59;
     outline-offset: 3px;
   }
   @media (min-width: 768px) {
-    :global(.prose .support-generator-cta) {
+    :global(.support-generator-cta) {
       padding: 2rem;
     }
   }

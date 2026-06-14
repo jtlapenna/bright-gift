@@ -82,13 +82,6 @@ If you want a broader move-in shortlist, pair this guide with our [Gift Ideas by
 
 > **Not sure what type of housewarming gift would be most appreciated?** Use the [AI Gift Idea Generator](/gift-idea-generator/) to narrow ideas by home type, lifestyle, storage space, and budget.
 
-<div class="support-generator-cta">
-  <p class="support-generator-kicker">Housewarming gift finder</p>
-  <h2>Choose the gift by how they will use the new home.</h2>
-  <p>Tell BrightGift whether they are first-time homeowners, apartment dwellers, frequent hosts, or practical minimalists. The generator will prefill a housewarming shortlist that matches the home, budget, and amount of clutter they can actually handle.</p>
-  <a href="/?recipient=new%20homeowner&amp;interests=kitchen%20upgrades%2C%20cozy%20home%2C%20hosting%2C%20move-in%20essentials&amp;budget=75&amp;styles=home%2Cpractical&amp;source_cta=housewarming_intro&amp;source_variant=housewarming_gift_finder&amp;source_experiment=bg-housewarming-generator-cta-202606#tool" data-generator-cta data-cta-position="housewarming_intro" data-cta-variant="housewarming_gift_finder" data-experiment-id="bg-housewarming-generator-cta-202606" class="support-generator-button">Build a housewarming shortlist</a>
-</div>
-
 ---
 
 ## How We Picked These Gifts

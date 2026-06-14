@@ -91,13 +91,6 @@ Finding the perfect gift for a coworker doesn't have to be expensive or complica
 
 > **Not sure what type of coworker you're shopping for?** Use the [AI Gift Idea Generator](/gift-idea-generator/) to match their work style, interests, and your relationship before choosing from this under-$25 list.
 
-<div class="support-generator-cta">
-  <p class="support-generator-kicker">Office-safe gift finder</p>
-  <h2>Need a coworker gift that will not feel awkward?</h2>
-  <p>Use the BrightGift generator with their role, office style, and your budget. It is useful when you need ideas that feel thoughtful, professional, and safely under $25.</p>
-  <a href="/?recipient=coworker&amp;interests=coffee%2C%20desk%20setup%2C%20office%2C%20practical%20gifts&amp;budget=25&amp;styles=quirky%2Ctechy&amp;source_cta=coworker_support_intro&amp;source_variant=coworker_gift_finder&amp;source_experiment=bg-support-generator-cta-202606#tool" data-generator-cta data-cta-position="coworker_support_intro" data-cta-variant="coworker_gift_finder" data-experiment-id="bg-support-generator-cta-202606" class="support-generator-button">Get coworker gift ideas</a>
-</div>
-
 For remote workers, check out our [Gifts for Remote Workers Under $50](/blog/gifts-for-remote-workers-under-50/) guide for more work-from-home gift ideas.
 
 ## Quick Picks by Coworker Signal
