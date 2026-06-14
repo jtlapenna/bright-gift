@@ -95,6 +95,7 @@ const lastUpdated = sanitizeLastUpdated(post.data.lastUpdated);
 const normalizedType = normalizeCategory(type);
 const isGiftGuide = normalizedType === 'gift-guide';
 const robotsDirective = post.data.sitemap === false ? 'noindex, follow' : undefined;
+const postSlug = post.slug;
 const supportGeneratorCtas = {
   '25-thoughtful-gifts-for-girlfriend-that-show-you-care': {
     kicker: 'Personalized girlfriend gift finder',
@@ -167,7 +168,7 @@ const supportGeneratorCtas = {
     experimentId: 'bg-seasonal-generator-cta-202606',
   },
 };
-const supportGeneratorCta = supportGeneratorCtas[postSlug];
+const supportGeneratorCta = supportGeneratorCtas[postSlug as keyof typeof supportGeneratorCtas];
 
 // Debug logging in development
 if (import.meta.env.DEV && post.slug === '80th-birthday-gift-ideas-seniors') {
@@ -191,7 +192,6 @@ function formatDate(dateInput) {
 
 // CRITICAL: Generate canonical URL with HTTPS and trailing slash
 // This ensures consistent canonical URLs regardless of how the page was accessed
-const postSlug = post.slug;
 const canonicalUrl = `https://bright-gift.com/blog/${postSlug}/`;
 
 // Calculate read time based on word count (average reading speed: 200-250 words per minute)
