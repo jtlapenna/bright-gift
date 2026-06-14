@@ -5,7 +5,7 @@ description: >-
   curated selection of 15 thoughtful, practical presents that show you care
   without the stress of last-minute shopping.
 date: 2025-09-17T00:00:00.000Z
-lastUpdated: '2026-03-10'
+lastUpdated: '2026-06-13'
 status: published
 draft: false
 metaTitle: Last Minute Birthday Gifts for Professionals | Quick Ideas
@@ -77,7 +77,12 @@ The best birthday gifts for busy professionals combine practicality with persona
 
 From productivity tools that streamline their workday to wellness items that help them recharge, each gift has been carefully selected for its quality, usefulness, and ability to make a busy professional's life a little easier.
 
-> 🎯 **Not sure what type of professional you're shopping for? Our [Gift Idea Generator](/gift-idea-generator/) can help you discover the perfect present based on their industry, work style, and personal interests!**
+<div class="support-generator-cta">
+  <p class="support-generator-kicker">Professional birthday gift finder</p>
+  <h2>Need a polished gift without overthinking it?</h2>
+  <p>Tell BrightGift their work style, schedule, and budget. The generator will prefill a shortlist for busy professionals, from desk upgrades to wellness picks that still feel personal.</p>
+  <a href="/?recipient=busy%20professional&amp;interests=productivity%2C%20desk%20setup%2C%20coffee%2C%20wellness&amp;budget=100&amp;styles=techy%2Cpractical&amp;source_cta=professional_birthday_intro&amp;source_variant=professional_birthday_gift_finder&amp;source_experiment=bg-seasonal-generator-cta-202606#tool" data-generator-cta data-cta-position="professional_birthday_intro" data-cta-variant="professional_birthday_gift_finder" data-experiment-id="bg-seasonal-generator-cta-202606" class="support-generator-button">Get professional birthday gift ideas</a>
+</div>
 
 ---
 

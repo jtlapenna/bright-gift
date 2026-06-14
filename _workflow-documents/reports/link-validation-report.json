@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-06-12T06:39:42.134Z",
+  "timestamp": "2026-06-14T19:08:51.532Z",
   "summary": {
     "totalFiles": 58,
-    "totalLinks": 1575,
+    "totalLinks": 1580,
     "brokenLinks": 0,
     "externalLinks": 1020,
-    "internalLinks": 555
+    "internalLinks": 560
   },
   "errors": [],
   "warnings": []

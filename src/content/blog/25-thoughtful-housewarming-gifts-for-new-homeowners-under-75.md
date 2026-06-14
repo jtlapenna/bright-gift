@@ -5,7 +5,7 @@ description: >-
   practical kitchen upgrades, move-in tools, cozy decor, and personalized
   touches that help a new place feel like home.
 date: 2026-03-22T00:00:00.000Z
-lastUpdated: '2026-06-12'
+lastUpdated: '2026-06-13'
 status: published
 draft: false
 metaTitle: Housewarming Gifts for New Homeowners Under $75
@@ -82,11 +82,11 @@ If you want a broader move-in shortlist, pair this guide with our [Gift Ideas by
 
 > **Not sure what type of housewarming gift would be most appreciated?** Use the [AI Gift Idea Generator](/gift-idea-generator/) to narrow ideas by home type, lifestyle, storage space, and budget.
 
-<div class="not-prose my-8 rounded-3xl border border-[#A3E4DB] bg-[#FEF2D3] p-6 md:p-8">
-  <p class="mb-3 text-sm font-black uppercase tracking-[0.12em] text-[#FF6B6B]">Housewarming gift finder</p>
-  <h2 class="mb-3 font-poppins text-2xl font-black leading-tight text-[#1C2E4A] md:text-3xl">Choose the gift by how they will use the new home.</h2>
-  <p class="mb-5 text-[#1C2E4A]/80">For first-time homeowners, lean practical. For apartment dwellers, choose compact. For frequent hosts, choose serving, kitchen, or entryway upgrades. For minimalists, choose useful gifts that do not add clutter.</p>
-  <a href="/#tool" data-generator-cta data-cta-position="housewarming_intro" data-cta-variant="housewarming_gift_finder" data-experiment-id="bg-housewarming-refresh-202606" class="inline-flex min-h-[48px] items-center justify-center rounded-full bg-[#FF6B6B] px-6 py-3 font-bold text-white no-underline shadow transition hover:bg-[#e84f4f]">Build a housewarming shortlist</a>
+<div class="support-generator-cta">
+  <p class="support-generator-kicker">Housewarming gift finder</p>
+  <h2>Choose the gift by how they will use the new home.</h2>
+  <p>Tell BrightGift whether they are first-time homeowners, apartment dwellers, frequent hosts, or practical minimalists. The generator will prefill a housewarming shortlist that matches the home, budget, and amount of clutter they can actually handle.</p>
+  <a href="/?recipient=new%20homeowner&amp;interests=kitchen%20upgrades%2C%20cozy%20home%2C%20hosting%2C%20move-in%20essentials&amp;budget=75&amp;styles=home%2Cpractical&amp;source_cta=housewarming_intro&amp;source_variant=housewarming_gift_finder&amp;source_experiment=bg-housewarming-generator-cta-202606#tool" data-generator-cta data-cta-position="housewarming_intro" data-cta-variant="housewarming_gift_finder" data-experiment-id="bg-housewarming-generator-cta-202606" class="support-generator-button">Build a housewarming shortlist</a>
 </div>
 
 ---

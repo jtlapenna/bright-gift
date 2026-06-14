@@ -4,7 +4,7 @@ description: >-
   Find Father's Day gifts for every type of dad, from outdoor and tech picks to
   books, wellness upgrades, grilling gear, and sentimental keepsakes.
 date: '2026-05-10'
-lastUpdated: '2026-05-10'
+lastUpdated: '2026-06-13'
 status: published
 draft: false
 metaTitle: "Father's Day Gifts for Every Type of Dad"
@@ -85,6 +85,13 @@ Father's Day gifts work best when they match the kind of dad you are actually sh
 Father's Day 2026 falls on Sunday, June 21, according to <a href="https://www.officeholidays.com/holidays/usa/fathers-day" target="_blank" rel="noopener">Office Holidays</a>. The occasion is also a serious gift-shopping moment: the <a href="https://nrf.com/media-center/press-releases/father-s-day-spending-to-reach-record-24-billion" target="_blank" rel="noopener">National Retail Federation reported that Father's Day spending was expected to reach a record $24 billion in 2025</a>, with shoppers especially interested in unique gifts and memory-making.
 
 This guide is built as the main BrightGift Father's Day hub. If you already know his exact lane, you can go deeper with [outdoor gifts for dads](/blog/best-gifts-for-dads-who-love-outdoor-adventures/), [sleep tech gifts](/blog/sleep-tech-gifts-that-really-work/), [book gifts under $50](/blog/gifts-for-book-lovers-under-50/), or the [complete gift-choosing guide](/blog/how-to-choose-the-perfect-gift-complete-guide/).
+
+<div class="support-generator-cta">
+  <p class="support-generator-kicker">Father's Day gift finder</p>
+  <h2>Start with the kind of dad you actually have.</h2>
+  <p>Tell BrightGift whether he is outdoorsy, techy, sentimental, hard to shop for, or always upgrading the grill. The generator will prefill a Father's Day shortlist around his real habits and your budget.</p>
+  <a href="/?recipient=dad&amp;interests=outdoors%2C%20tech%2C%20grilling%2C%20family%20keepsakes&amp;budget=75&amp;styles=practical%2Cthoughtful&amp;source_cta=fathers_day_intro&amp;source_variant=dad_type_gift_finder&amp;source_experiment=bg-seasonal-generator-cta-202606#tool" data-generator-cta data-cta-position="fathers_day_intro" data-cta-variant="dad_type_gift_finder" data-experiment-id="bg-seasonal-generator-cta-202606" class="support-generator-button">Get Father's Day gift ideas</a>
+</div>
 
 ## Quick Picks by Dad Type
 
