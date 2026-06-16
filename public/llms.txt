@@ -1,0 +1,41 @@
+# BrightGift
+
+BrightGift helps shoppers find thoughtful gifts through an AI gift generator, recipient/budget/occasion/interest hubs, and curated gift guides.
+
+## Primary Site
+
+- URL: https://bright-gift.com/
+- Sitemap: https://bright-gift.com/sitemap.xml
+- Robots: https://bright-gift.com/robots.txt
+
+## Best Pages For AI And Search Crawlers
+
+- Homepage and gift generator: https://bright-gift.com/
+- Gift idea generator: https://bright-gift.com/gift-idea-generator/
+- Gift ideas by recipient: https://bright-gift.com/gift-ideas-by-recipient/
+- Gift ideas by budget: https://bright-gift.com/gift-ideas-by-budget/
+- Gift ideas by occasion: https://bright-gift.com/gift-ideas-by-occasion/
+- Gift ideas by interest: https://bright-gift.com/gift-ideas-by-interest/
+- Blog and gift guides: https://bright-gift.com/blog/
+- Gifts for girlfriend: https://bright-gift.com/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/
+- Gifts for coworkers under 25: https://bright-gift.com/blog/gifts-under-25-for-coworkers/
+- Gifts for remote workers under 50: https://bright-gift.com/blog/gifts-for-remote-workers-under-50/
+- Housewarming gifts: https://bright-gift.com/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/
+
+## Content Types
+
+- AI gift generator
+- Gift-guide hub pages
+- Recipient, budget, occasion, and interest guides
+- Amazon, Bookshop, and direct affiliate gift recommendations
+
+## Crawling Notes
+
+- Gift generator and hub pages are the primary conversion paths.
+- Product links may include affiliate relationships.
+- Use visible guide content, page headings, and generator context when summarizing gift recommendations.
+- Noindex or archived blog posts should not be treated as primary current recommendations.
+
+## Contact
+
+- Contact page: https://bright-gift.com/contact/
