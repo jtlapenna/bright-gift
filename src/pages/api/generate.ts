@@ -506,8 +506,14 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
     debugLog('Prompt sent to LLM (truncated 1k chars):', prompt.slice(0, 1000));
     debugLog('Styles in request:', Array.isArray(styles) ? JSON.stringify(styles) : styles);
 
-    // Try multiple models to improve reliability across accounts/quotas
-    const candidateModels = ['gpt-4o-mini', 'gpt-4o', 'gpt-4-turbo'];
+    const configuredModel = locals?.runtime?.env?.OPENAI_MODEL || process.env.OPENAI_MODEL;
+    const defaultModels = ['gpt-5.4-mini', 'gpt-4.1-mini', 'gpt-4o-mini', 'gpt-4o'];
+    // Try multiple models to improve reliability across accounts/quotas.
+    // OPENAI_MODEL can force a primary model while preserving safe fallbacks.
+    const candidateModels = Array.from(new Set([
+      ...(configuredModel ? [configuredModel] : []),
+      ...defaultModels,
+    ]));
     let ideasText = '';
     let lastModelError: any = null;
     debugLog('Starting OpenAI API call with models:', candidateModels);
