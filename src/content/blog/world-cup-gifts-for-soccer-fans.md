@@ -7,7 +7,6 @@ date: '2026-06-19'
 lastUpdated: '2026-06-19'
 status: published
 draft: false
-sitemap: false
 metaTitle: World Cup Gifts for Soccer Fans | 2026 Guide
 metaDescription: >-
   World Cup gifts for soccer fans, from official merch and watch-party gear to
