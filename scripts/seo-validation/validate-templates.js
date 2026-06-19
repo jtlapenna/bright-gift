@@ -156,16 +156,36 @@ class TemplateValidator {
       }
     }
     
-    // Check for proper canonical URLs
-    if (content.includes('canonical') && 
-        !content.includes('https://bright-gift.com/') &&
-        !content.includes('canonicalUrl') &&
-        !content.includes('Astro.url.href')) {
-      this.addError(filePath, content.indexOf('canonical') + 1,
-        'Canonical URL missing full domain',
-        'Use full domain: https://bright-gift.com/...');
-      hasErrors = true;
-    }
+    // Check for actual relative canonical tags/props without flagging helper props like canonicalPath.
+    lines.forEach((line, index) => {
+      const trimmedLine = line.trim();
+      const hasCanonicalLink = /rel=["']canonical["']/.test(trimmedLine);
+      const canonicalLiteral = trimmedLine.match(/\bcanonical=(["'])(.*?)\1/);
+      const canonicalExpression = trimmedLine.match(/\bcanonical=\{([^}]+)\}/);
+      const linkHref = trimmedLine.match(/\bhref=(["'])(.*?)\1/);
+
+      const hasRelativeCanonicalLink =
+        hasCanonicalLink &&
+        linkHref &&
+        linkHref[2] &&
+        !linkHref[2].startsWith('https://bright-gift.com/');
+
+      const hasRelativeCanonicalLiteral =
+        canonicalLiteral &&
+        canonicalLiteral[2] &&
+        !canonicalLiteral[2].startsWith('https://bright-gift.com/');
+
+      const hasRelativeCanonicalExpression =
+        canonicalExpression &&
+        /^\s*["'`]\//.test(canonicalExpression[1]);
+
+      if (hasRelativeCanonicalLink || hasRelativeCanonicalLiteral || hasRelativeCanonicalExpression) {
+        this.addError(filePath, index + 1,
+          'Canonical URL missing full domain',
+          'Use full domain: https://bright-gift.com/...');
+        hasErrors = true;
+      }
+    });
     
     if (hasErrors) {
       this.stats.filesWithErrors++;
