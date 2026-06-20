@@ -1,69 +1,131 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const metaDescription = "Need a gift fast? Our AI gift finder generates personalized last-minute gift ideas in under 60 seconds. No more panic buying—find thoughtful gifts instantly.";
+const experimentId = 'bg-last-minute-generator-prefill-202606';
+const prefillHref = '/?recipient=friend%20or%20family%20member&interests=last-minute%20gifts%2C%20fast%20shipping%2C%20digital%20gifts%2C%20practical%20surprises&budget=50&styles=quirky%2Ctechy&source_cta=last_minute_landing_hero&source_variant=last_minute_general_under_50&source_experiment=bg-last-minute-generator-prefill-202606#tool';
+const coworkerPrefillHref = '/?recipient=coworker&interests=last-minute%20office%20gift%2C%20coffee%2C%20desk%20setup%2C%20useful%20small%20gifts&budget=25&styles=quirky%2Ctechy&source_cta=last_minute_landing_card&source_variant=last_minute_coworker_under_25&source_experiment=bg-last-minute-generator-prefill-202606#tool';
+const birthdayPrefillHref = '/?recipient=birthday%20recipient&interests=last-minute%20birthday%20gift%2C%20hobbies%2C%20fun%20surprises%2C%20practical%20gifts&budget=50&styles=funny%2Cquirky&source_cta=last_minute_landing_card&source_variant=last_minute_birthday_under_50&source_experiment=bg-last-minute-generator-prefill-202606#tool';
+const homePrefillHref = '/?recipient=host%20or%20new%20homeowner&interests=last-minute%20housewarming%2C%20kitchen%2C%20hosting%2C%20cozy%20home&budget=75&styles=eco-friendly%2Cluxury&source_cta=last_minute_landing_card&source_variant=last_minute_housewarming_under_75&source_experiment=bg-last-minute-generator-prefill-202606#tool';
+
+const metaDescription = "Need a gift fast? Use BrightGift's AI gift finder for thoughtful last-minute gift ideas by recipient, budget, and occasion in under 60 seconds.";
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	"name": "Last-Minute Gift Ideas",
+	"description": metaDescription,
+	"url": "https://bright-gift.com/last-minute-gift-ideas/",
+	"mainEntity": {
+		"@type": "SoftwareApplication",
+		"name": "BrightGift AI Gift Idea Generator",
+		"applicationCategory": "LifestyleApplication",
+		"operatingSystem": "Web",
+		"url": "https://bright-gift.com/"
+	}
+};
 ---
 
 <Layout 
-	title="Last-Minute Gift Ideas | AI Gift Finder"
+	title="Last-Minute Gift Ideas by Recipient, Budget & Occasion"
+	metaTitle="Last-Minute Gift Ideas | BrightGift AI Finder"
 	description={metaDescription}
 	canonical="https://bright-gift.com/last-minute-gift-ideas/"
+	keywords={['last-minute gift ideas', 'last minute gifts', 'fast shipping gifts', 'digital gifts', 'same day gifts', 'AI gift finder', 'birthday gifts', 'coworker gifts', 'housewarming gifts']}
 >
-	<main class="font-sans text-gray-800 dark:text-gray-200">
-		<section class="py-20 px-4 bg-gradient-to-br from-[#FEF2D3] to-[#FFDE59]/30">
-			<div class="max-w-4xl mx-auto text-center">
-				<h1 class="text-4xl md:text-5xl font-bold font-poppins text-[#1C2E4A] mb-6">
-					⏰ Last-Minute Gift Ideas
-				</h1>
-				<p class="text-lg md:text-xl text-[#1C2E4A] mb-8 leading-relaxed">
-					Forgot someone's birthday? Party tonight? No problem. Our AI gift finder generates personalized gift ideas in under 60 seconds—no more panic buying generic gifts.
-				</p>
-				
-				<div class="bg-white/90 rounded-2xl p-8 shadow-lg mb-8">
-					<h2 class="text-2xl font-bold text-[#1C2E4A] mb-4">Perfect for:</h2>
-					<ul class="text-left text-[#1C2E4A] space-y-3 max-w-2xl mx-auto">
-						<li class="flex items-start">
-							<span class="text-[#FF6B6B] mr-3 text-xl">🎂</span>
-							<span>Birthdays you forgot about</span>
-						</li>
-						<li class="flex items-start">
-							<span class="text-[#FF6B6B] mr-3 text-xl">🎉</span>
-							<span>Last-minute party invitations</span>
-						</li>
-						<li class="flex items-start">
-							<span class="text-[#FF6B6B] mr-3 text-xl">🎄</span>
-							<span>Holiday shopping procrastination</span>
-						</li>
-						<li class="flex items-start">
-							<span class="text-[#FF6B6B] mr-3 text-xl">💝</span>
-							<span>Same-day gift needs</span>
-						</li>
-					</ul>
-				</div>
-				
-				<div class="bg-gradient-to-r from-[#FF6B6B] to-[#ff4c4c] rounded-2xl p-8 shadow-lg text-white">
-					<h2 class="text-2xl font-bold mb-4">Get Gift Ideas in 60 Seconds</h2>
-					<p class="mb-6">
-						Enter who you're shopping for and their interests. Our AI instantly suggests thoughtful gifts you can order today.
+	<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+	<main class="font-sans text-[#1C2E4A]">
+		<section class="border-t-8 border-[#FF6B6B] bg-gradient-to-br from-[#FEF2D3] via-white to-[#A3E4DB]/30 px-4 py-16 md:py-20">
+			<div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-center">
+				<div>
+					<p class="mb-4 font-inter text-sm font-black uppercase tracking-[0.16em] text-[#FF6B6B]">Fast gift finder</p>
+					<h1 class="mb-5 font-poppins text-4xl font-black leading-tight md:text-6xl">
+						Last-minute gift ideas that still feel personal.
+					</h1>
+					<p class="mb-7 max-w-2xl font-inter text-lg leading-relaxed text-[#1C2E4A]/80 md:text-xl">
+						Need a birthday, housewarming, coworker, or holiday gift fast? Start with a prefilled BrightGift prompt, add one real detail about the person, and generate a tighter shortlist in under a minute.
 					</p>
-					<a href="/#tool" class="inline-block bg-white text-[#FF6B6B] font-bold py-4 px-8 rounded-full transition-colors text-lg shadow-lg hover:bg-gray-100">
-						Find Last-Minute Gifts Now →
-					</a>
+					<div class="flex flex-col gap-3 sm:flex-row">
+						<a
+							href={prefillHref}
+							data-generator-cta
+							data-cta-position="last_minute_landing_hero"
+							data-cta-variant="last_minute_general_under_50"
+							data-experiment-id={experimentId}
+							class="inline-flex items-center justify-center rounded-full bg-[#FF6B6B] px-7 py-4 font-poppins text-base font-bold text-white shadow-lg transition hover:bg-[#ff4c4c] focus:outline-none focus:ring-4 focus:ring-[#FFDE59]"
+						>
+							Open a prefilled gift finder
+						</a>
+						<a
+							href="/blog/emergency-gift-guide-30-last-minute-present-ideas/"
+							class="inline-flex items-center justify-center rounded-full border-2 border-[#1C2E4A]/15 bg-white px-7 py-4 font-poppins text-base font-bold text-[#1C2E4A] shadow-sm transition hover:border-[#FF6B6B] focus:outline-none focus:ring-4 focus:ring-[#FFDE59]"
+						>
+							Read the emergency gift guide
+						</a>
+					</div>
+				</div>
+
+				<aside class="rounded-3xl border-2 border-white bg-white/90 p-6 shadow-xl" aria-label="Last-minute gift shortcuts">
+					<h2 class="mb-4 font-poppins text-2xl font-bold">Pick the panic you are in</h2>
+					<div class="grid gap-3">
+						<a href={birthdayPrefillHref} data-generator-cta data-cta-position="last_minute_landing_card" data-cta-variant="last_minute_birthday_under_50" data-experiment-id={experimentId} class="rounded-2xl border border-[#FF6B6B]/25 bg-[#FFF9F3] p-4 text-[#1C2E4A] transition hover:border-[#FF6B6B] hover:bg-white">
+							<span class="block font-poppins text-lg font-bold">Forgot a birthday</span>
+							<span class="font-inter text-sm text-[#1C2E4A]/70">Fast, friendly ideas under $50.</span>
+						</a>
+						<a href={coworkerPrefillHref} data-generator-cta data-cta-position="last_minute_landing_card" data-cta-variant="last_minute_coworker_under_25" data-experiment-id={experimentId} class="rounded-2xl border border-[#A3E4DB] bg-[#FFF9F3] p-4 text-[#1C2E4A] transition hover:border-[#FF6B6B] hover:bg-white">
+							<span class="block font-poppins text-lg font-bold">Need an office-safe gift</span>
+							<span class="font-inter text-sm text-[#1C2E4A]/70">Coworker ideas under $25.</span>
+						</a>
+						<a href={homePrefillHref} data-generator-cta data-cta-position="last_minute_landing_card" data-cta-variant="last_minute_housewarming_under_75" data-experiment-id={experimentId} class="rounded-2xl border border-[#FFDE59] bg-[#FFF9F3] p-4 text-[#1C2E4A] transition hover:border-[#FF6B6B] hover:bg-white">
+							<span class="block font-poppins text-lg font-bold">Showing up at someone's home</span>
+							<span class="font-inter text-sm text-[#1C2E4A]/70">Housewarming and host gifts under $75.</span>
+						</a>
+					</div>
+				</aside>
+			</div>
+		</section>
+
+		<section class="bg-white px-4 py-16">
+			<div class="mx-auto max-w-5xl">
+				<div class="mb-8 text-center">
+					<h2 class="mb-3 font-poppins text-3xl font-bold">What makes a last-minute gift safer?</h2>
+					<p class="mx-auto max-w-3xl font-inter text-base leading-relaxed text-[#1C2E4A]/75">
+						The safest late gifts are easy to receive, easy to use, and clearly connected to the person. Think fast-shipping basics, digital gifts, food, books, home comforts, or small upgrades to something they already do.
+					</p>
+				</div>
+				<div class="grid gap-4 md:grid-cols-3">
+					<div class="rounded-2xl border border-[#A3E4DB] bg-[#FEF2D3]/60 p-5">
+						<h3 class="mb-2 font-poppins text-xl font-bold">Fast shipping</h3>
+						<p class="font-inter text-sm leading-relaxed text-[#1C2E4A]/75">Good when you still need a physical gift: kitchen, coffee, desk, cozy, books, and practical upgrades.</p>
+					</div>
+					<div class="rounded-2xl border border-[#A3E4DB] bg-[#FEF2D3]/60 p-5">
+						<h3 class="mb-2 font-poppins text-xl font-bold">Instant delivery</h3>
+						<p class="font-inter text-sm leading-relaxed text-[#1C2E4A]/75">Good when shipping is too risky: Kindle, Audible, Bookshop, subscriptions, gift cards, and local experiences.</p>
+					</div>
+					<div class="rounded-2xl border border-[#A3E4DB] bg-[#FEF2D3]/60 p-5">
+						<h3 class="mb-2 font-poppins text-xl font-bold">Personal clue</h3>
+						<p class="font-inter text-sm leading-relaxed text-[#1C2E4A]/75">Add one detail to the generator: their hobby, routine, relationship, age, style, or the reason you are buying.</p>
+					</div>
 				</div>
 			</div>
 		</section>
-		
-		<section class="py-16 px-4 bg-white">
-			<div class="max-w-4xl mx-auto text-center">
-				<h2 class="text-3xl font-bold text-[#1C2E4A] mb-4">Use the AI Gift Finder Above</h2>
-				<p class="text-lg text-[#1C2E4A] mb-8">
-					Stop stressing. Start finding. Get personalized gift ideas instantly.
+
+		<section class="bg-[#1C2E4A] px-4 py-16 text-white">
+			<div class="mx-auto max-w-4xl text-center">
+				<h2 class="mb-4 font-poppins text-3xl font-bold">Start with the details you know.</h2>
+				<p class="mx-auto mb-7 max-w-2xl font-inter text-base leading-relaxed text-white/78">
+					You do not need the perfect idea before you begin. Tell BrightGift who the gift is for, what the moment is, and the budget you want to stay under.
 				</p>
-				<a href="/#tool" class="inline-block bg-[#A3E4DB] hover:bg-[#8cd4ca] text-[#1C2E4A] font-bold py-3 px-8 rounded-full transition-colors text-lg shadow">
-					Try the AI Gift Finder
+				<a
+					href={prefillHref}
+					data-generator-cta
+					data-cta-position="last_minute_landing_footer"
+					data-cta-variant="last_minute_general_under_50"
+					data-experiment-id={experimentId}
+					class="inline-flex items-center justify-center rounded-full bg-[#FF6B6B] px-8 py-4 font-poppins text-base font-bold text-white shadow-lg transition hover:bg-[#ff4c4c] focus:outline-none focus:ring-4 focus:ring-[#FFDE59]"
+				>
+					Get last-minute gift ideas
 				</a>
 			</div>
 		</section>
 	</main>
 </Layout>
-

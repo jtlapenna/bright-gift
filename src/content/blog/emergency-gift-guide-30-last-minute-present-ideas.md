@@ -5,7 +5,7 @@ description: >-
   from Amazon Prime same-day delivery to digital gift cards and local
   experiences that save the day.
 date: '2025-10-20'
-lastUpdated: '2026-03-10'
+lastUpdated: '2026-06-20'
 status: published
 draft: false
 metaTitle: 'Last Minute Gifts: 30 Emergency Ideas That Don''t Look Rushed'
@@ -135,6 +135,13 @@ ogImageAlt: >-
 We've all been there – that moment when you realize you completely forgot about a birthday, anniversary, or special occasion. The panic sets in, but don't worry! This emergency gift guide is your lifeline to thoughtful presents that look like you planned them weeks in advance.
 
 Whether you need Amazon Prime same-day delivery, digital gift cards, or local experiences, these 30 last-minute gift ideas will save the day while making you look like the most thoughtful gift-giver ever.
+
+<div class="my-8 rounded-2xl border-2 border-[#FFDE59] bg-[#FFF9F3] p-6 shadow-sm">
+  <p class="mb-2 text-sm font-black uppercase tracking-[0.12em] text-[#FF6B6B]">Fast path</p>
+  <h2 class="mb-3 text-2xl font-bold text-[#1C2E4A]">Need the gift now?</h2>
+  <p class="mb-5 text-[#1C2E4A]/80">Open a prefilled BrightGift prompt for fast-shipping, digital, and practical last-minute ideas. Add one detail about the person before you generate results.</p>
+  <a href="/?recipient=friend%20or%20family%20member&amp;interests=last-minute%20gifts%2C%20fast%20shipping%2C%20digital%20gifts%2C%20practical%20surprises&amp;budget=50&amp;styles=quirky%2Ctechy&amp;source_cta=last_minute_blog_intro&amp;source_variant=emergency_gift_generator&amp;source_experiment=bg-last-minute-generator-prefill-202606#tool" data-generator-cta data-cta-position="last_minute_blog_intro" data-cta-variant="emergency_gift_generator" data-experiment-id="bg-last-minute-generator-prefill-202606" class="inline-flex rounded-full bg-[#FF6B6B] px-6 py-3 font-bold text-white no-underline shadow transition hover:bg-[#ff4c4c]">Get last-minute gift ideas</a>
+</div>
 
 ## Why Last-Minute Gifts Can Actually Be Better
 
@@ -428,7 +435,7 @@ Last-minute gifts don't have to look rushed or thoughtless. With the right appro
 
 Remember, the best gifts come from the heart, not from the amount of time you had to plan them. These emergency gift ideas prove that thoughtful giving is always possible, no matter how much time you have.
 
-Ready to find the perfect gift for any situation? Try our [AI Gift Idea Generator](/) to discover personalized recommendations that match any recipient, budget, and occasion – even when you're in a hurry!
+Ready to find the perfect gift for any situation? Use the [prefilled last-minute gift finder](/?recipient=friend%20or%20family%20member&interests=last-minute%20gifts%2C%20fast%20shipping%2C%20digital%20gifts%2C%20practical%20surprises&budget=50&styles=quirky%2Ctechy&source_cta=last_minute_blog_footer&source_variant=emergency_gift_generator&source_experiment=bg-last-minute-generator-prefill-202606#tool) to discover personalized recommendations that match any recipient, budget, and occasion - even when you're in a hurry.
 
 ## Related guides to keep exploring
 
