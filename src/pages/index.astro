@@ -800,6 +800,72 @@ const faqData = {
 				return 'other';
 			}
 
+			function getTrackingUrl(href = '') {
+				try {
+					return new URL(href, window.location.origin);
+				} catch {
+					return null;
+				}
+			}
+
+			function getAsin(url) {
+				const match = url.href.match(/\/(?:dp|gp\/product)\/([A-Z0-9]{10})(?:[/?#]|$)/i);
+				return match ? match[1].toUpperCase() : '';
+			}
+
+			function getAffiliateTrackingId(url, partner) {
+				if (partner === 'amazon') return url.searchParams.get('tag') || 'bright-gift-20';
+				if (partner === 'bookshop') return url.searchParams.get('affiliate') || 'brightgift';
+				if (partner === 'afrofiliate') return url.pathname.split('/').filter(Boolean).slice(0, 3).join('/');
+				return url.searchParams.get('tag') || url.searchParams.get('affiliate') || url.searchParams.get('subid') || '';
+			}
+
+			function getInternalQaMarker() {
+				try {
+					const params = new URLSearchParams(window.location.search);
+					if (params.get('act_qa') === '1' || params.get('codex_qa') === '1') return 'internal_qa';
+					if (window.localStorage?.getItem('affiliate_control_tower_qa') === '1') return 'internal_qa';
+				} catch {
+					return '';
+				}
+				return '';
+			}
+
+			function getGeneratorResultPayload(link, resultTitle, resultPosition) {
+				const url = getTrackingUrl((link as HTMLAnchorElement).href || link.getAttribute('href') || '');
+				if (!url) return null;
+				const partner = getAffiliatePlatform(url.href);
+				if (partner === 'other') return null;
+
+				const internalQaMarker = getInternalQaMarker();
+				const productName = (link.getAttribute('data-product-name') || resultTitle || link.textContent || '').trim().slice(0, 120);
+				const ctaPosition = link.getAttribute('data-cta-position') || (resultPosition ? `gift_generator_result_${resultPosition}` : 'gift_generator_result');
+				const ctaVariant = link.getAttribute('data-cta-variant') || 'generated_result';
+
+				return {
+					site: 'brightgift',
+					page_url: window.location.pathname,
+					page_title: document.title,
+					content_type: 'home',
+					partner,
+					retailer: link.getAttribute('data-retailer') || partner,
+					product_id: getAsin(url) || url.searchParams.get('k') || productName.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, ''),
+					product_name: productName,
+					asin: getAsin(url),
+					affiliate_tracking_id: getAffiliateTrackingId(url, partner),
+					link_url: url.href,
+					link_text: (link.textContent || '').trim().slice(0, 120),
+					result_position: resultPosition,
+					cta_position: ctaPosition,
+					cta_variant: ctaVariant,
+					experiment_id: internalQaMarker || link.getAttribute('data-experiment-id') || 'bg-generator-result-click-202606',
+					traffic_type: internalQaMarker,
+					tracking_version: '2026-06-20',
+					event_category: 'Affiliate',
+					event_label: `${partner} - ${productName}`
+				};
+			}
+
 			function getGeneratorTrackingContext(recipient, interests, budget) {
 				const interestText = String(interests || '');
 				return {
@@ -1211,6 +1277,7 @@ const faqData = {
 				const resultCard = link.closest('[role="listitem"]');
 				const resultTitle = resultCard?.querySelector('h3')?.textContent?.trim() || '';
 				const resultPosition = resultCard?.getAttribute('data-result-position') || '';
+				const standardPayload = getGeneratorResultPayload(link, resultTitle, resultPosition);
 
 				trackBrightGiftEvent('gift_generator_result_click', {
 					affiliate_platform: getAffiliatePlatform(href),
@@ -1222,6 +1289,13 @@ const faqData = {
 					result_position: resultPosition,
 					cta_position: link.getAttribute('data-cta-position') || (resultPosition ? `gift_generator_result_${resultPosition}` : 'gift_generator_result')
 				});
+
+				if (standardPayload) {
+					trackBrightGiftEvent('affiliate_click', standardPayload);
+					if (standardPayload.partner === 'amazon') {
+						trackBrightGiftEvent('amazon_click', standardPayload);
+					}
+				}
 			});
 
 			// Share functionality

@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-06-14T19:34:02.965Z",
+  "timestamp": "2026-06-20T23:46:36.980Z",
   "summary": {
-    "totalFiles": 58,
-    "validCategories": 58,
+    "totalFiles": 59,
+    "validCategories": 59,
     "invalidCategories": 0,
     "legacyCategories": 0,
     "missingCategories": 0
   },
   "categoryUsage": {
-    "gift-guides": 53,
+    "gift-guides": 54,
     "data-driven": 1,
     "educational": 4
   },

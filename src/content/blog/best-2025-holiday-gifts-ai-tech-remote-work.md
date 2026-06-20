@@ -4,7 +4,7 @@ description: >-
   Discover the best holiday gifts for 2025, from AI-powered gadgets and desk
   upgrades to remote-work essentials that solve everyday problems.
 date: 2026-02-19T00:00:00.000Z
-lastUpdated: '2026-03-10'
+lastUpdated: '2026-06-20'
 status: published
 draft: false
 metaTitle: 'Best Holiday Gifts 2025: AI Tech & Remote Work Essentials'
@@ -93,7 +93,7 @@ Use this page for the friend, partner, or coworker who likes modern tools but st
 
 The strongest tech gifts save time, reduce clutter, improve focus, or make a routine easier to maintain. Avoid products that sound futuristic but create more setup work than value after the first week.
 
-**Supporting resources:** [Wirecutter](https://www.nytimes.com/wirecutter/) and [Harvard Business Review on remote work](https://hbr.org/topic/subject/remote-work).
+**Supporting resource:** [Harvard Business Review on remote work](https://hbr.org/topic/subject/remote-work).
 
 ## AI-Powered Gadgets That Feel Like Science Fiction
 
