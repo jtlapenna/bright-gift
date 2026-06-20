@@ -1291,10 +1291,10 @@ const faqData = {
 				});
 
 				if (standardPayload) {
-					trackBrightGiftEvent('affiliate_click', standardPayload);
 					if (standardPayload.partner === 'amazon') {
 						trackBrightGiftEvent('amazon_click', standardPayload);
 					}
+					trackBrightGiftEvent('affiliate_click', standardPayload);
 				}
 			});
 
