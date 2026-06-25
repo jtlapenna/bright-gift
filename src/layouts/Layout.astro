@@ -496,15 +496,8 @@ const breadcrumbStructuredData = breadcrumbs ? {
 							event_label: link.dataset.ctaVariant || (link.textContent || '').trim().slice(0, 120)
 						});
 
-						if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0 || link.target === '_blank') {
-							return;
+							// Keep normal anchor navigation so this remains crawl-safe; GA is configured to use beacon transport.
 						}
-
-						event.preventDefault();
-						window.setTimeout(function() {
-							window.location.assign(link.href);
-						}, 120);
-					}
 
 					window.addEventListener('click', trackGeneratorCtaClick, true);
 				})();

@@ -114,7 +114,7 @@ Official World Cup apparel is the cleanest gift when you know the fan wants tour
 
 **Practical tip:** If you do not know their size, choose a cap, scarf, tote, poster, or drinkware instead of apparel.
 
-**Price Range:** $20-$80 <a href="https://www.amazon.com/s?k=official+world+cup+2026+merchandise&tag=bright-gift-20" target="_blank" rel="sponsored nofollow noopener noreferrer">Find licensed World Cup fan gear</a>
+**Price Range:** $20-$80 <a href="https://www.amazon.com/s?k=official+world+cup+2026+merchandise&tag=bright-gift-20" target="_blank" rel="noopener sponsored">Find licensed World Cup fan gear</a>
 
 ### 2. Team-Color Scarf
 A scarf is one of the most giftable soccer items because it works for watch parties, wall decor, match photos, and cold-weather games long after the World Cup ends. If you know their country, choose team colors. If not, pick a general soccer scarf or neutral club-style design.
@@ -128,7 +128,7 @@ Host-city collectibles are strong for fans attending a match, living near a host
 
 **Practical tip:** Pair it with a simple frame so the gift feels finished.
 
-**Price Range:** $19-$40 <a href="https://www.amazon.com/s?k=world+cup+2026+soccer+fan+gifts&tag=bright-gift-20" target="_blank" rel="sponsored nofollow noopener noreferrer">Find World Cup 2026 fan gifts</a>
+**Price Range:** $19-$40 <a href="https://www.amazon.com/s?k=world+cup+2026+soccer+fan+gifts&tag=bright-gift-20" target="_blank" rel="noopener sponsored">Find World Cup 2026 fan gifts</a>
 
 ### 4. Mini Soccer Ball Display
 A mini ball works for collectors, kids, and desk decor without requiring a full-size ball or gear setup. Choose a display stand if the fan already has signed balls, tournament souvenirs, or a favorite club shelf.
