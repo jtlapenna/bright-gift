@@ -1,0 +1,251 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-generator-search-entry-202606';
+const holidayHeroHref = buildGeneratorPrefillHref({
+	recipient: 'friend or family member',
+	interests: 'holiday gifts, Christmas gifts, cozy gifts, useful gifts, personal interests',
+	budget: 75,
+	styles: 'thoughtful,practical',
+	sourceCta: 'holiday_hub_hero',
+	sourceVariant: 'holiday_general_under_75',
+	sourceExperiment: experimentId
+});
+const holidayFooterHref = buildGeneratorPrefillHref({
+	recipient: 'friend or family member',
+	interests: 'holiday gift list, Christmas gifts, budget, relationship, hobbies',
+	budget: 75,
+	styles: 'thoughtful,unique',
+	sourceCta: 'holiday_hub_footer',
+	sourceVariant: 'holiday_general_under_75',
+	sourceExperiment: experimentId
+});
+const girlfriendPromptHref = buildGeneratorPrefillHref({
+	recipient: 'girlfriend',
+	interests: 'holiday gifts, romantic gifts, cozy nights in, beauty, keepsakes',
+	budget: 50,
+	styles: 'thoughtful,luxury',
+	sourceCta: 'holiday_hub_prompt',
+	sourceVariant: 'holiday_girlfriend_under_50',
+	sourceExperiment: experimentId
+});
+const coworkerPromptHref = buildGeneratorPrefillHref({
+	recipient: 'coworker',
+	interests: 'Secret Santa, office gift, coffee, desk setup, useful small gifts',
+	budget: 25,
+	styles: 'practical,quirky',
+	sourceCta: 'holiday_hub_prompt',
+	sourceVariant: 'holiday_coworker_secret_santa_under_25',
+	sourceExperiment: experimentId
+});
+const parentPromptHref = buildGeneratorPrefillHref({
+	recipient: 'parent',
+	interests: 'holiday gifts for parents, cozy gifts, kitchen, family memories, useful upgrades',
+	budget: 75,
+	styles: 'thoughtful,practical',
+	sourceCta: 'holiday_hub_prompt',
+	sourceVariant: 'holiday_parent_under_75',
+	sourceExperiment: experimentId
+});
+const remoteWorkerPromptHref = buildGeneratorPrefillHref({
+	recipient: 'remote worker',
+	interests: 'holiday gifts, home office, desk setup, coffee, focus, comfort',
+	budget: 50,
+	styles: 'practical,techy',
+	sourceCta: 'holiday_hub_prompt',
+	sourceVariant: 'holiday_remote_worker_under_50',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Christmas gift ideas for 2025',
+		description: 'A broad holiday gift guide for family, friends, coworkers, partners, and hard-to-shop-for people.',
+		href: '/blog/christmas-gift-ideas-2025/',
+		label: 'Holiday guide',
+		tags: ['Christmas', 'holiday', '2025']
+	},
+	{
+		title: 'Last-minute gift ideas',
+		description: 'A faster route when shipping time is short or you need a stronger shortlist today.',
+		href: '/last-minute-gift-ideas/',
+		label: 'Fast path',
+		tags: ['last minute', 'fast shipping', 'generator']
+	},
+	{
+		title: 'Gifts under $25 for coworkers',
+		description: 'Office-safe and Secret Santa-friendly ideas that keep the budget low.',
+		href: '/blog/gifts-under-25-for-coworkers/',
+		label: 'Secret Santa',
+		tags: ['coworker', 'office', 'under $25']
+	}
+];
+
+const sections = [
+	{
+		title: 'Holiday gifts by recipient',
+		description: 'Start with the person on your list, then narrow by budget, tone, and how personal the gift should feel.',
+		links: [
+			{
+				title: 'Best holiday gifts for moms',
+				description: 'Cozy, useful, sentimental, and everyday luxury ideas for moms during the holiday season.',
+				href: '/blog/best-holiday-gifts-for-moms-2025/',
+				label: 'Mom gifts',
+				tags: ['mom', 'Christmas', 'family']
+			},
+			{
+				title: 'Best holiday gifts for dads',
+				description: 'Practical, tech, cooking, outdoor, and comfort ideas for different dad types.',
+				href: '/blog/best-holiday-gifts-for-dads-2025/',
+				label: 'Dad gifts',
+				tags: ['dad', 'Christmas', 'family']
+			},
+			{
+				title: 'Thoughtful gifts for your girlfriend',
+				description: 'Romantic, cozy, beauty, and keepsake ideas that work for Christmas or birthdays.',
+				href: '/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/',
+				label: 'Girlfriend',
+				tags: ['girlfriend', 'romantic', 'under $50']
+			},
+			{
+				title: 'Gifts for remote workers under $50',
+				description: 'Home-office, desk comfort, and daily routine upgrades for remote workers and WFH pros.',
+				href: '/blog/gifts-for-remote-workers-under-50/',
+				label: 'Remote work',
+				tags: ['home office', 'under $50', 'practical']
+			}
+		]
+	},
+	{
+		title: 'Holiday gifts by budget and timing',
+		description: 'Use these when price or delivery risk is the constraint.',
+		links: [
+			{
+				title: 'Gift ideas by budget',
+				description: 'Browse under $25, under $50, and under $75 paths before opening the generator.',
+				href: '/gift-ideas-by-budget/',
+				label: 'Budget hub',
+				tags: ['budget', 'under $50', 'under $75']
+			},
+			{
+				title: 'Little luxuries under $25',
+				description: 'Small gifts that feel more special than their price tag.',
+				href: '/blog/little-luxuries-under-25-mini-splurges-major-wow/',
+				label: 'Under $25',
+				tags: ['small gifts', 'affordable', 'stocking stuffer']
+			},
+			{
+				title: '25 books to gift this holiday season',
+				description: 'Book gifts for readers, family, friends, and quieter holiday moments.',
+				href: '/blog/25-books-to-gift-this-holiday-season/',
+				label: 'Book gifts',
+				tags: ['books', 'holiday', 'media']
+			},
+			{
+				title: 'Emergency last-minute gift guide',
+				description: 'A backup route for shoppers who need useful ideas fast.',
+				href: '/blog/emergency-gift-guide-30-last-minute-present-ideas/',
+				label: 'Last minute',
+				tags: ['urgent', 'fast', 'backup']
+			}
+		]
+	},
+	{
+		title: 'Holiday gifts by interest',
+		description: 'When the person has a clear hobby or routine, use that as the strongest shopping signal.',
+		links: [
+			{
+				title: 'Gifts for book lovers under $50',
+				description: 'Reading accessories, cozy upgrades, and book-adjacent gifts.',
+				href: '/blog/gifts-for-book-lovers-under-50/',
+				label: 'Books',
+				tags: ['books', 'under $50', 'cozy']
+			},
+			{
+				title: 'Gifts for gamers under $50',
+				description: 'Lower-risk gaming gifts for desk, comfort, lighting, and setup upgrades.',
+				href: '/blog/gifts-for-gamers-under-50/',
+				label: 'Gaming',
+				tags: ['gaming', 'tech', 'under $50']
+			},
+			{
+				title: 'Eco-friendly gift ideas',
+				description: 'Sustainable gifts for recipients who care about lower-waste choices.',
+				href: '/blog/eco-friendly-gift-ideas-for-every-budget/',
+				label: 'Eco-friendly',
+				tags: ['sustainable', 'values', 'budget']
+			},
+			{
+				title: 'Gift ideas by interest',
+				description: 'A broader hub for books, gaming, plants, pets, wellness, and home-office interests.',
+				href: '/gift-ideas-by-interest/',
+				label: 'Interest hub',
+				tags: ['hobbies', 'interests', 'generator']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'How should I start a holiday gift list?',
+		answer: 'Start by grouping people by relationship and budget. Then add one real clue for each person: a hobby, routine, problem, favorite category, or delivery constraint.'
+	},
+	{
+		question: 'When should I use the BrightGift generator for holiday gifts?',
+		answer: 'Use the generator when the broad guide is close but not specific enough. The best prompt includes recipient, budget, occasion, and two interests.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Holiday Gift Ideas"
+	metaTitle="Holiday Gift Ideas | BrightGift AI Gift Finder"
+	description="Find holiday gift ideas by recipient, budget, occasion, and interest. Start with Christmas gifts, Secret Santa gifts, coworker gifts, parent gifts, and prefilled BrightGift generator paths."
+	canonicalPath="/holiday-gift-ideas/"
+	eyebrow="Holiday gift finder"
+	heroTitle="Holiday gift ideas by recipient, budget, and last-minute reality."
+	intro="Use this as the Q4 starting point for Christmas gifts, Secret Santa, gifts for parents, coworker gifts, girlfriend gifts, and last-minute holiday shopping. Choose a guide when you know the lane, or open a prefilled BrightGift prompt when you need a faster shortlist."
+	keywords={['holiday gift ideas', 'Christmas gift ideas', 'Secret Santa gifts', 'gifts for coworkers', 'gifts for parents', 'last minute gifts', 'AI gift finder']}
+	ctaVariant="holiday_general_under_75"
+	primaryCtaLabel="Open the holiday gift finder"
+	primaryCtaHref={holidayHeroHref}
+	footerCtaHref={holidayFooterHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Start with a holiday shopping scenario"
+	generatorPromptDescription="These paths turn the most common Q4 shopping jobs into prefilled generator prompts. Add one personal clue on the homepage to tighten the results."
+	generatorPrompts={[
+		{
+			title: 'Girlfriend holiday gifts under $50',
+			description: 'Romantic, cozy, beauty, and keepsake gift ideas with a clear budget.',
+			href: girlfriendPromptHref,
+			ctaVariant: 'holiday_girlfriend_under_50',
+			label: 'Girlfriend'
+		},
+		{
+			title: 'Coworker or Secret Santa under $25',
+			description: 'Office-safe, low-pressure gifts for work exchanges and team appreciation.',
+			href: coworkerPromptHref,
+			ctaVariant: 'holiday_coworker_secret_santa_under_25',
+			label: 'Secret Santa'
+		},
+		{
+			title: 'Holiday gifts for parents under $75',
+			description: 'Cozy, practical, kitchen, comfort, and family-memory gift ideas.',
+			href: parentPromptHref,
+			ctaVariant: 'holiday_parent_under_75',
+			label: 'Parents'
+		},
+		{
+			title: 'Remote worker gifts under $50',
+			description: 'Home-office, desk comfort, coffee, and focus gifts for WFH routines.',
+			href: remoteWorkerPromptHref,
+			ctaVariant: 'holiday_remote_worker_under_50',
+			label: 'Remote work'
+		}
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>

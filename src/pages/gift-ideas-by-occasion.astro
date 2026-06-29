@@ -1,5 +1,53 @@
 ---
 import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-generator-search-entry-202606';
+const occasionHeroHref = buildGeneratorPrefillHref({
+	recipient: 'host or celebrant',
+	interests: 'occasion gifts, birthday, housewarming, holiday gifts, anniversary',
+	budget: 75,
+	styles: 'thoughtful,practical',
+	sourceCta: 'occasion_hub_hero',
+	sourceVariant: 'occasion_hub_generator',
+	sourceExperiment: experimentId
+});
+const occasionFooterHref = buildGeneratorPrefillHref({
+	recipient: 'friend or family member',
+	interests: 'upcoming occasion, relationship, budget, useful gifts, personal details',
+	budget: 75,
+	styles: 'thoughtful,unique',
+	sourceCta: 'occasion_hub_footer',
+	sourceVariant: 'occasion_hub_generator',
+	sourceExperiment: experimentId
+});
+const holidayPromptHref = buildGeneratorPrefillHref({
+	recipient: 'friend or family member',
+	interests: 'holiday gifts, Christmas gifts, cozy gifts, useful gifts, personal interests',
+	budget: 75,
+	styles: 'thoughtful,practical',
+	sourceCta: 'occasion_hub_prompt',
+	sourceVariant: 'occasion_holiday_under_75',
+	sourceExperiment: experimentId
+});
+const birthdayPromptHref = buildGeneratorPrefillHref({
+	recipient: 'birthday recipient',
+	interests: 'birthday gift, hobbies, useful surprise, daily routine',
+	budget: 50,
+	styles: 'funny,thoughtful',
+	sourceCta: 'occasion_hub_prompt',
+	sourceVariant: 'occasion_birthday_under_50',
+	sourceExperiment: experimentId
+});
+const housewarmingPromptHref = buildGeneratorPrefillHref({
+	recipient: 'new homeowner',
+	interests: 'housewarming, kitchen, hosting, cozy home, move-in gift',
+	budget: 75,
+	styles: 'practical,luxury',
+	sourceCta: 'occasion_hub_prompt',
+	sourceVariant: 'occasion_housewarming_under_75',
+	sourceExperiment: experimentId
+});
 
 const featuredLinks = [
 	{
@@ -17,11 +65,11 @@ const featuredLinks = [
 		tags: ['last minute', 'quick', 'broad']
 	},
 	{
-		title: 'Anniversary gifts under $50',
-		description: 'Relationship gifts for shoppers who need something meaningful but not overbuilt.',
-		href: '/blog/25-unique-anniversary-gift-ideas-under-50/',
-		label: 'Relationship occasion',
-		tags: ['anniversary', 'romantic', 'under $50']
+		title: 'Holiday gift ideas',
+		description: 'A Q4 starting point for Christmas gifts, Secret Santa gifts, family gifts, and last-minute shopping.',
+		href: '/holiday-gift-ideas/',
+		label: 'Holiday hub',
+		tags: ['holiday', 'Christmas', 'Q4']
 	}
 ];
 
@@ -64,6 +112,13 @@ const sections = [
 		title: 'Holidays and appreciation days',
 		description: 'Use these when the occasion matters more than the exact product category.',
 		links: [
+			{
+				title: 'Holiday gift ideas by recipient and budget',
+				description: 'A Q4 entry page that routes shoppers into the generator by person, budget, and moment.',
+				href: '/holiday-gift-ideas/',
+				label: 'Holiday hub',
+				tags: ['holiday', 'Christmas', 'generator']
+			},
 			{
 				title: 'Mother\'s Day gifts',
 				description: 'Gift lanes for different kinds of moms, from cozy to practical to sentimental.',
@@ -153,6 +208,34 @@ const faqs = [
 	keywords={['gift ideas by occasion', 'housewarming gifts', 'last minute gift ideas', 'anniversary gifts', 'birthday gift ideas', 'wedding gift ideas']}
 	ctaVariant="occasion_hub_generator"
 	primaryCtaLabel="Find gifts for an occasion"
+	primaryCtaHref={occasionHeroHref}
+	footerCtaHref={occasionFooterHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Start with the occasion, then add the person"
+	generatorPromptDescription="These prefilled paths cover the moments with the clearest shopping intent: holidays, birthdays, and housewarming gifts."
+	generatorPrompts={[
+		{
+			title: 'Holiday gifts under $75',
+			description: 'A Q4 path for family, friends, coworkers, Christmas, and Secret Santa shopping.',
+			href: holidayPromptHref,
+			ctaVariant: 'occasion_holiday_under_75',
+			label: 'Holiday'
+		},
+		{
+			title: 'Birthday gifts under $50',
+			description: 'A flexible path for fast birthday ideas tied to hobbies and daily routines.',
+			href: birthdayPromptHref,
+			ctaVariant: 'occasion_birthday_under_50',
+			label: 'Birthday'
+		},
+		{
+			title: 'Housewarming gifts under $75',
+			description: 'A practical path for new homeowners, hosts, kitchen gifts, and cozy-home upgrades.',
+			href: housewarmingPromptHref,
+			ctaVariant: 'occasion_housewarming_under_75',
+			label: 'Housewarming'
+		}
+	]}
 	featuredLinks={featuredLinks}
 	sections={sections}
 	faqs={faqs}

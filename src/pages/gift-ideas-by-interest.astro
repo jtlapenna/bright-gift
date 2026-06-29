@@ -1,5 +1,53 @@
 ---
 import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-generator-search-entry-202606';
+const interestHeroHref = buildGeneratorPrefillHref({
+	recipient: 'hobby lover',
+	interests: 'books, games, plants, home office, wellness',
+	budget: 50,
+	styles: 'practical,quirky',
+	sourceCta: 'interest_hub_hero',
+	sourceVariant: 'interest_hub_generator',
+	sourceExperiment: experimentId
+});
+const interestFooterHref = buildGeneratorPrefillHref({
+	recipient: 'hobby lover',
+	interests: 'hobbies, daily routine, favorite activities, useful accessories',
+	budget: 50,
+	styles: 'thoughtful,practical',
+	sourceCta: 'interest_hub_footer',
+	sourceVariant: 'interest_hub_generator',
+	sourceExperiment: experimentId
+});
+const bookPromptHref = buildGeneratorPrefillHref({
+	recipient: 'book lover',
+	interests: 'reading, cozy gifts, book accessories, journals, tea',
+	budget: 50,
+	styles: 'cozy,thoughtful',
+	sourceCta: 'interest_hub_prompt',
+	sourceVariant: 'interest_book_lover_under_50',
+	sourceExperiment: experimentId
+});
+const gamerPromptHref = buildGeneratorPrefillHref({
+	recipient: 'gamer',
+	interests: 'gaming, desk setup, controller accessories, lighting, comfort',
+	budget: 50,
+	styles: 'techy,practical',
+	sourceCta: 'interest_hub_prompt',
+	sourceVariant: 'interest_gamer_under_50',
+	sourceExperiment: experimentId
+});
+const remoteWorkerPromptHref = buildGeneratorPrefillHref({
+	recipient: 'remote worker',
+	interests: 'home office, desk setup, coffee, focus, comfort',
+	budget: 50,
+	styles: 'practical,techy',
+	sourceCta: 'interest_hub_prompt',
+	sourceVariant: 'interest_remote_worker_under_50',
+	sourceExperiment: experimentId
+});
 
 const featuredLinks = [
 	{
@@ -153,6 +201,34 @@ const faqs = [
 	keywords={['gift ideas by interest', 'gifts for book lovers', 'gifts for gamers', 'gifts for plant lovers', 'work from home gifts', 'hobby gifts']}
 	ctaVariant="interest_hub_generator"
 	primaryCtaLabel="Find gifts by interest"
+	primaryCtaHref={interestHeroHref}
+	footerCtaHref={interestFooterHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Use the hobby as the first clue"
+	generatorPromptDescription="These prefilled gift finder paths use interests that already map well to shopping behavior: books, gaming, and remote-work routines."
+	generatorPrompts={[
+		{
+			title: 'Book lover gifts under $50',
+			description: 'A cozy path for reading accessories, journals, lights, tea, and book-adjacent picks.',
+			href: bookPromptHref,
+			ctaVariant: 'interest_book_lover_under_50',
+			label: 'Books'
+		},
+		{
+			title: 'Gamer gifts under $50',
+			description: 'A lower-risk path for desk, comfort, lighting, controller, and setup upgrades.',
+			href: gamerPromptHref,
+			ctaVariant: 'interest_gamer_under_50',
+			label: 'Gaming'
+		},
+		{
+			title: 'Remote worker gifts under $50',
+			description: 'A useful path for home-office comfort, focus, desk, and coffee gifts.',
+			href: remoteWorkerPromptHref,
+			ctaVariant: 'interest_remote_worker_under_50',
+			label: 'Home office'
+		}
+	]}
 	featuredLinks={featuredLinks}
 	sections={sections}
 	faqs={faqs}

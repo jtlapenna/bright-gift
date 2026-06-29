@@ -1,5 +1,53 @@
 ---
 import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-generator-search-entry-202606';
+const budgetHeroHref = buildGeneratorPrefillHref({
+	recipient: 'friend or family member',
+	interests: 'budget gifts, useful gifts, small luxuries, practical surprises',
+	budget: 50,
+	styles: 'practical,thoughtful',
+	sourceCta: 'budget_hub_hero',
+	sourceVariant: 'budget_hub_generator',
+	sourceExperiment: experimentId
+});
+const budgetFooterHref = buildGeneratorPrefillHref({
+	recipient: 'friend or family member',
+	interests: 'affordable gift ideas, gift occasion, hobbies, daily routine',
+	budget: 50,
+	styles: 'thoughtful,quirky',
+	sourceCta: 'budget_hub_footer',
+	sourceVariant: 'budget_hub_generator',
+	sourceExperiment: experimentId
+});
+const under25PromptHref = buildGeneratorPrefillHref({
+	recipient: 'coworker or casual friend',
+	interests: 'small gifts, office gifts, coffee, desk, useful everyday items',
+	budget: 25,
+	styles: 'practical,quirky',
+	sourceCta: 'budget_hub_prompt',
+	sourceVariant: 'budget_under_25',
+	sourceExperiment: experimentId
+});
+const under50PromptHref = buildGeneratorPrefillHref({
+	recipient: 'friend or family member',
+	interests: 'gift ideas under 50, cozy gifts, tech accessories, books, useful upgrades',
+	budget: 50,
+	styles: 'thoughtful,practical',
+	sourceCta: 'budget_hub_prompt',
+	sourceVariant: 'budget_under_50',
+	sourceExperiment: experimentId
+});
+const under75PromptHref = buildGeneratorPrefillHref({
+	recipient: 'host or new homeowner',
+	interests: 'housewarming, hosting, kitchen, home decor, cozy home',
+	budget: 75,
+	styles: 'luxury,practical',
+	sourceCta: 'budget_hub_prompt',
+	sourceVariant: 'budget_under_75',
+	sourceExperiment: experimentId
+});
 
 const featuredLinks = [
 	{
@@ -153,6 +201,34 @@ const faqs = [
 	keywords={['gift ideas by budget', 'gifts under 25', 'gifts under 50', 'affordable gift ideas', 'budget gift ideas', 'housewarming gifts under 75']}
 	ctaVariant="budget_hub_generator"
 	primaryCtaLabel="Find gifts in your budget"
+	primaryCtaHref={budgetHeroHref}
+	footerCtaHref={budgetFooterHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Choose a budget before you browse"
+	generatorPromptDescription="These prefilled gift finder paths keep recommendations inside the price range shoppers actually search for."
+	generatorPrompts={[
+		{
+			title: 'Gifts under $25',
+			description: 'Best for coworkers, casual friends, stocking stuffers, and low-pressure gift moments.',
+			href: under25PromptHref,
+			ctaVariant: 'budget_under_25',
+			label: 'Under $25'
+		},
+		{
+			title: 'Gifts under $50',
+			description: 'A flexible path for thoughtful gifts that still feel affordable.',
+			href: under50PromptHref,
+			ctaVariant: 'budget_under_50',
+			label: 'Under $50'
+		},
+		{
+			title: 'Housewarming under $75',
+			description: 'A higher-intent path for new homeowners, hosts, kitchen gifts, and cozy home upgrades.',
+			href: under75PromptHref,
+			ctaVariant: 'budget_under_75',
+			label: 'Under $75'
+		}
+	]}
 	featuredLinks={featuredLinks}
 	sections={sections}
 	faqs={faqs}

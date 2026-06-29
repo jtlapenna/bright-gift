@@ -1,5 +1,53 @@
 ---
 import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-generator-search-entry-202606';
+const recipientHeroHref = buildGeneratorPrefillHref({
+	recipient: 'specific gift recipient',
+	interests: 'recipient gift ideas, personal style, daily routine, useful gifts',
+	budget: 50,
+	styles: 'thoughtful,practical',
+	sourceCta: 'recipient_hub_hero',
+	sourceVariant: 'recipient_hub_generator',
+	sourceExperiment: experimentId
+});
+const recipientFooterHref = buildGeneratorPrefillHref({
+	recipient: 'specific gift recipient',
+	interests: 'hard-to-shop-for person, hobbies, personal routine, gift occasion',
+	budget: 75,
+	styles: 'thoughtful,unique',
+	sourceCta: 'recipient_hub_footer',
+	sourceVariant: 'recipient_hub_generator',
+	sourceExperiment: experimentId
+});
+const girlfriendPromptHref = buildGeneratorPrefillHref({
+	recipient: 'girlfriend',
+	interests: 'romantic gifts, cozy nights in, beauty, keepsakes',
+	budget: 50,
+	styles: 'thoughtful,luxury',
+	sourceCta: 'recipient_hub_prompt',
+	sourceVariant: 'recipient_girlfriend_under_50',
+	sourceExperiment: experimentId
+});
+const coworkerPromptHref = buildGeneratorPrefillHref({
+	recipient: 'coworker',
+	interests: 'office gift, coffee, desk setup, useful small gifts',
+	budget: 25,
+	styles: 'practical,quirky',
+	sourceCta: 'recipient_hub_prompt',
+	sourceVariant: 'recipient_coworker_under_25',
+	sourceExperiment: experimentId
+});
+const newHomeownerPromptHref = buildGeneratorPrefillHref({
+	recipient: 'new homeowner',
+	interests: 'housewarming, kitchen, hosting, cozy home',
+	budget: 75,
+	styles: 'practical,luxury',
+	sourceCta: 'recipient_hub_prompt',
+	sourceVariant: 'recipient_new_homeowner_under_75',
+	sourceExperiment: experimentId
+});
 
 const featuredLinks = [
 	{
@@ -153,6 +201,34 @@ const faqs = [
 	keywords={['gift ideas by recipient', 'gifts for girlfriend', 'coworker gifts', 'gifts for new homeowners', 'gifts for people who have everything', 'personalized gift ideas']}
 	ctaVariant="recipient_hub_generator"
 	primaryCtaLabel="Find gifts for a specific person"
+	primaryCtaHref={recipientHeroHref}
+	footerCtaHref={recipientFooterHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Start with a recipient, then personalize it"
+	generatorPromptDescription="These prefilled gift finder paths cover the recipient searches BrightGift is already trying to win: girlfriend gifts, coworker gifts, and housewarming gifts for new homeowners."
+	generatorPrompts={[
+		{
+			title: 'Girlfriend gifts under $50',
+			description: 'A prefilled path for romantic, cozy, useful, and beauty-adjacent gift ideas.',
+			href: girlfriendPromptHref,
+			ctaVariant: 'recipient_girlfriend_under_50',
+			label: 'Girlfriend'
+		},
+		{
+			title: 'Coworker gifts under $25',
+			description: 'A safer office-gift path for birthdays, Secret Santa, team thanks, and small appreciation gifts.',
+			href: coworkerPromptHref,
+			ctaVariant: 'recipient_coworker_under_25',
+			label: 'Coworker'
+		},
+		{
+			title: 'New homeowner gifts under $75',
+			description: 'A practical housewarming path for kitchen, hosting, and cozy-home ideas.',
+			href: newHomeownerPromptHref,
+			ctaVariant: 'recipient_new_homeowner_under_75',
+			label: 'New homeowner'
+		}
+	]}
 	featuredLinks={featuredLinks}
 	sections={sections}
 	faqs={faqs}

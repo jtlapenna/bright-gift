@@ -6,6 +6,7 @@ const prefillHref = '/?recipient=friend%20or%20family%20member&interests=last-mi
 const coworkerPrefillHref = '/?recipient=coworker&interests=last-minute%20office%20gift%2C%20coffee%2C%20desk%20setup%2C%20useful%20small%20gifts&budget=25&styles=quirky%2Ctechy&source_cta=last_minute_landing_card&source_variant=last_minute_coworker_under_25&source_experiment=bg-last-minute-generator-prefill-202606#tool';
 const birthdayPrefillHref = '/?recipient=birthday%20recipient&interests=last-minute%20birthday%20gift%2C%20hobbies%2C%20fun%20surprises%2C%20practical%20gifts&budget=50&styles=funny%2Cquirky&source_cta=last_minute_landing_card&source_variant=last_minute_birthday_under_50&source_experiment=bg-last-minute-generator-prefill-202606#tool';
 const homePrefillHref = '/?recipient=host%20or%20new%20homeowner&interests=last-minute%20housewarming%2C%20kitchen%2C%20hosting%2C%20cozy%20home&budget=75&styles=eco-friendly%2Cluxury&source_cta=last_minute_landing_card&source_variant=last_minute_housewarming_under_75&source_experiment=bg-last-minute-generator-prefill-202606#tool';
+const holidayPrefillHref = '/?recipient=friend%20or%20family%20member&interests=last-minute%20holiday%20gifts%2C%20Christmas%20gifts%2C%20fast%20shipping%2C%20cozy%20gifts%2C%20useful%20gifts&budget=75&styles=thoughtful%2Cpractical&source_cta=last_minute_landing_card&source_variant=last_minute_holiday_under_75&source_experiment=bg-last-minute-generator-prefill-202606#tool';
 
 const metaDescription = "Need a gift fast? Use BrightGift's AI gift finder for thoughtful last-minute gift ideas by recipient, budget, and occasion in under 60 seconds.";
 const structuredData = {
@@ -78,6 +79,10 @@ const structuredData = {
 						<a href={homePrefillHref} data-generator-cta data-cta-position="last_minute_landing_card" data-cta-variant="last_minute_housewarming_under_75" data-experiment-id={experimentId} class="rounded-2xl border border-[#FFDE59] bg-[#FFF9F3] p-4 text-[#1C2E4A] transition hover:border-[#FF6B6B] hover:bg-white">
 							<span class="block font-poppins text-lg font-bold">Showing up at someone's home</span>
 							<span class="font-inter text-sm text-[#1C2E4A]/70">Housewarming and host gifts under $75.</span>
+						</a>
+						<a href={holidayPrefillHref} data-generator-cta data-cta-position="last_minute_landing_card" data-cta-variant="last_minute_holiday_under_75" data-experiment-id={experimentId} class="rounded-2xl border border-[#A3E4DB] bg-[#FFF9F3] p-4 text-[#1C2E4A] transition hover:border-[#FF6B6B] hover:bg-white">
+							<span class="block font-poppins text-lg font-bold">Holiday list still has gaps</span>
+							<span class="font-inter text-sm text-[#1C2E4A]/70">Christmas and Q4 gift ideas under $75.</span>
 						</a>
 					</div>
 				</aside>

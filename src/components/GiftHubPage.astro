@@ -15,6 +15,15 @@ interface HubSection {
 	links: HubLink[];
 }
 
+interface GeneratorPrompt {
+	title: string;
+	description: string;
+	href: string;
+	ctaVariant: string;
+	label?: string;
+	ctaPosition?: string;
+}
+
 interface Props {
 	title: string;
 	metaTitle: string;
@@ -26,6 +35,12 @@ interface Props {
 	keywords: string[];
 	ctaVariant: string;
 	primaryCtaLabel: string;
+	primaryCtaHref?: string;
+	footerCtaHref?: string;
+	experimentId?: string;
+	generatorPromptTitle?: string;
+	generatorPromptDescription?: string;
+	generatorPrompts?: GeneratorPrompt[];
 	sections: HubSection[];
 	featuredLinks: HubLink[];
 	faqs?: Array<{ question: string; answer: string }>;
@@ -42,6 +57,12 @@ const {
 	keywords,
 	ctaVariant,
 	primaryCtaLabel,
+	primaryCtaHref = '/#tool',
+	footerCtaHref,
+	experimentId = 'bg-hub-architecture-202606',
+	generatorPromptTitle = 'Open a prefilled gift finder',
+	generatorPromptDescription = 'Start with a shopping scenario, then add one personal clue before generating recommendations.',
+	generatorPrompts = [],
 	sections,
 	featuredLinks,
 	faqs = []
@@ -49,7 +70,6 @@ const {
 
 const baseUrl = 'https://bright-gift.com';
 const canonical = `${baseUrl}${canonicalPath}`;
-const experimentId = 'bg-hub-architecture-202606';
 const allLinks = [
 	...featuredLinks,
 	...sections.flatMap((section) => section.links)
@@ -108,7 +128,7 @@ const faqStructuredData = faqs.length
 					<p class="hub-intro">{intro}</p>
 					<div class="hub-actions">
 						<a
-							href="/#tool"
+							href={primaryCtaHref}
 							class="hub-button hub-button-primary"
 							data-generator-cta
 							data-cta-position="hub_hero"
@@ -151,6 +171,34 @@ const faqStructuredData = faqs.length
 				</div>
 			</div>
 		</section>
+
+		{generatorPrompts.length ? (
+			<section class="hub-section hub-section-soft">
+				<div class="hub-shell">
+					<div class="hub-section-heading">
+						<p class="hub-eyebrow">Personalized paths</p>
+						<h2>{generatorPromptTitle}</h2>
+						<p>{generatorPromptDescription}</p>
+					</div>
+					<div class="hub-prompt-grid">
+						{generatorPrompts.map((prompt) => (
+							<a
+								href={prompt.href}
+								class="hub-prompt-card"
+								data-generator-cta
+								data-cta-position={prompt.ctaPosition || 'hub_prompt_card'}
+								data-cta-variant={prompt.ctaVariant}
+								data-experiment-id={experimentId}
+							>
+								<span>{prompt.label || 'Prefilled finder'}</span>
+								<h3>{prompt.title}</h3>
+								<p>{prompt.description}</p>
+							</a>
+						))}
+					</div>
+				</div>
+			</section>
+		) : null}
 
 		{sections.map((section, sectionIndex) => (
 			<section class={`hub-section ${sectionIndex % 2 === 0 ? 'hub-section-soft' : ''}`}>
@@ -203,7 +251,7 @@ const faqStructuredData = faqs.length
 				<h2>Still narrowing the list?</h2>
 				<p>Use the BrightGift generator with the recipient, budget, occasion, and two real interests. The more specific the prompt, the better the shortlist.</p>
 				<a
-					href="/#tool"
+					href={footerCtaHref || primaryCtaHref}
 					class="hub-button hub-button-primary"
 					data-generator-cta
 					data-cta-position="hub_footer"
@@ -315,7 +363,8 @@ const faqStructuredData = faqs.length
 
 	.hub-button:focus-visible,
 	.hub-feature-card:focus-visible,
-	.hub-link-card:focus-visible {
+	.hub-link-card:focus-visible,
+	.hub-prompt-card:focus-visible {
 		outline: 3px solid var(--hub-yellow);
 		outline-offset: 4px;
 	}
@@ -387,7 +436,8 @@ const faqStructuredData = faqs.length
 	}
 
 	.hub-feature-grid,
-	.hub-link-grid {
+	.hub-link-grid,
+	.hub-prompt-grid {
 		display: grid;
 		gap: 18px;
 	}
@@ -396,12 +446,17 @@ const faqStructuredData = faqs.length
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
+	.hub-prompt-grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+
 	.hub-link-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
 	.hub-feature-card,
-	.hub-link-card {
+	.hub-link-card,
+	.hub-prompt-card {
 		display: flex;
 		min-height: 100%;
 		flex-direction: column;
@@ -418,15 +473,18 @@ const faqStructuredData = faqs.length
 
 	.hub-feature-card:hover,
 	.hub-link-card:hover,
+	.hub-prompt-card:hover,
 	.hub-feature-card:focus-visible,
-	.hub-link-card:focus-visible {
+	.hub-link-card:focus-visible,
+	.hub-prompt-card:focus-visible {
 		border-color: rgba(255, 107, 107, 0.45);
 		box-shadow: var(--hub-shadow);
 		transform: translateY(-2px);
 	}
 
 	.hub-feature-card span,
-	.hub-link-card span {
+	.hub-link-card span,
+	.hub-prompt-card span {
 		color: var(--hub-coral-dark);
 		font-size: 0.8rem;
 		font-weight: 900;
@@ -435,7 +493,8 @@ const faqStructuredData = faqs.length
 	}
 
 	.hub-feature-card h3,
-	.hub-link-card h3 {
+	.hub-link-card h3,
+	.hub-prompt-card h3 {
 		margin: 12px 0 10px;
 		color: var(--hub-navy);
 		font-family: Poppins, Inter, system-ui, sans-serif;
@@ -445,6 +504,7 @@ const faqStructuredData = faqs.length
 
 	.hub-feature-card p,
 	.hub-link-card p,
+	.hub-prompt-card p,
 	.hub-final-cta p,
 	.hub-faq-list p {
 		margin: 0;
@@ -518,6 +578,7 @@ const faqStructuredData = faqs.length
 	@media (max-width: 860px) {
 		.hub-hero-grid,
 		.hub-feature-grid,
+		.hub-prompt-grid,
 		.hub-link-grid {
 			grid-template-columns: 1fr;
 		}
@@ -535,7 +596,8 @@ const faqStructuredData = faqs.length
 	@media (prefers-reduced-motion: reduce) {
 		.hub-button,
 		.hub-feature-card,
-		.hub-link-card {
+		.hub-link-card,
+		.hub-prompt-card {
 			transition: none;
 		}
 
@@ -544,7 +606,9 @@ const faqStructuredData = faqs.length
 		.hub-feature-card:hover,
 		.hub-link-card:hover,
 		.hub-feature-card:focus-visible,
-		.hub-link-card:focus-visible {
+		.hub-link-card:focus-visible,
+		.hub-prompt-card:hover,
+		.hub-prompt-card:focus-visible {
 			transform: none;
 		}
 	}
