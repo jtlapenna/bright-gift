@@ -1,0 +1,165 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-gifts-for-women-202606';
+
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'woman',
+	interests: 'style, beauty, books, wellness, home, travel, hobbies, thoughtful useful gifts',
+	budget: 75,
+	styles: 'thoughtful,luxury',
+	sourceCta: 'women_gifts_hero',
+	sourceVariant: 'women_gifts_under_75',
+	sourceExperiment: experimentId
+});
+
+const wellnessHref = buildGeneratorPrefillHref({
+	recipient: 'woman who likes wellness and self-care',
+	interests: 'self-care, skincare, sleep, tea, bath, wellness, cozy routines',
+	budget: 75,
+	styles: 'cozy,luxury',
+	sourceCta: 'women_gifts_prompt',
+	sourceVariant: 'wellness_women_under_75',
+	sourceExperiment: experimentId
+});
+
+const stylishHref = buildGeneratorPrefillHref({
+	recipient: 'stylish woman',
+	interests: 'minimal jewelry, bags, beauty, home decor, travel accessories',
+	budget: 100,
+	styles: 'luxury,thoughtful',
+	sourceCta: 'women_gifts_prompt',
+	sourceVariant: 'stylish_women_under_100',
+	sourceExperiment: experimentId
+});
+
+const practicalHref = buildGeneratorPrefillHref({
+	recipient: 'practical woman',
+	interests: 'useful gifts, work, home, kitchen, travel, daily routines',
+	budget: 50,
+	styles: 'practical,thoughtful',
+	sourceCta: 'women_gifts_prompt',
+	sourceVariant: 'practical_women_under_50',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Christmas gifts for girlfriend',
+		description: 'A more specific holiday page for romantic, cozy, and practical girlfriend gifts.',
+		href: '/christmas-gifts-for-girlfriend/',
+		label: 'Girlfriend',
+		tags: ['girlfriend', 'Christmas', 'romantic']
+	},
+	{
+		title: 'Luxurious self-care gifts for moms',
+		description: 'Rest, beauty, sleep, and comfort gifts for moms who need a real pause.',
+		href: '/blog/luxurious-self-care-gifts-for-moms-that-theyre-sure-to-adore/',
+		label: 'Mom gifts',
+		tags: ['mom', 'self-care', 'luxury']
+	},
+	{
+		title: 'Clean girl 2.0 gifts',
+		description: 'Minimalist beauty, style, and daily-routine gifts with more personality.',
+		href: '/blog/clean-girl-2-0-minimalist-gifts-with-personality/',
+		label: 'Style',
+		tags: ['beauty', 'style', 'minimal']
+	}
+];
+
+const sections = [
+	{
+		title: 'Gift ideas for women by style',
+		description: 'The broad term works best when you immediately narrow by routine, taste, or relationship.',
+		links: [
+			{
+				title: 'Wellness and self-care gifts',
+				description: 'Sleep, bath, tea, skincare, comfort, and slower-routine ideas.',
+				href: wellnessHref,
+				label: 'Open finder',
+				tags: ['self-care', 'wellness', 'cozy']
+			},
+			{
+				title: 'Stylish gifts for women',
+				description: 'Minimal jewelry, bags, beauty, decor, and travel accessories.',
+				href: stylishHref,
+				label: 'Open finder',
+				tags: ['style', 'beauty', 'under $100']
+			},
+			{
+				title: 'Practical gifts for women',
+				description: 'Daily-use upgrades for work, home, kitchen, travel, and routines.',
+				href: practicalHref,
+				label: 'Open finder',
+				tags: ['useful', 'daily routine', 'under $50']
+			}
+		]
+	},
+	{
+		title: 'Related recipient guides',
+		description: 'Use these when the relationship is clearer than the broad women-gifts search.',
+		links: [
+			{
+				title: 'Gift ideas by recipient',
+				description: 'Browse girlfriend, coworker, parent, teacher, and family gift lanes.',
+				href: '/gift-ideas-by-recipient/',
+				label: 'Recipient hub',
+				tags: ['recipient', 'relationship', 'browse']
+			},
+			{
+				title: 'Mother\'s Day gifts for every type of mom',
+				description: 'Gift lanes for practical, sentimental, cozy, and hobby-driven moms.',
+				href: '/blog/mothers-day-gifts-for-every-type-of-mom/',
+				label: 'Mom gifts',
+				tags: ['mom', 'occasion', 'thoughtful']
+			},
+			{
+				title: 'Thoughtful gift ideas',
+				description: 'A broader page when the priority is meaning and personal fit.',
+				href: '/thoughtful-gift-ideas/',
+				label: 'Thoughtful',
+				tags: ['meaningful', 'personal', 'safe']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What are good gift ideas for women?',
+		answer: 'Start with the specific person, not the category. Wellness, style, daily routines, books, hobbies, home, travel, and useful upgrades are stronger clues than gender alone.'
+	},
+	{
+		question: 'Should I buy beauty gifts for women?',
+		answer: 'Beauty gifts work best when you know her preferences. If not, choose safer adjacent gifts like skincare tools, travel pouches, hair accessories, bath items, or a gift card paired with a small personal item.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Gift Ideas for Women"
+	metaTitle="Gift Ideas for Women | BrightGift"
+	description="Find gift ideas for women by style, relationship, budget, and occasion, including wellness, beauty, practical, cozy, stylish, and personalized gift paths."
+	canonicalPath="/gift-ideas-for-women/"
+	eyebrow="Recipient gift finder"
+	heroTitle="Gift ideas for women, narrowed by what she actually likes."
+	intro="Broad gift lists for women get generic fast. Use this page to narrow by wellness, style, practicality, relationship, occasion, and budget, then open a prefilled BrightGift prompt for a more personal shortlist."
+	keywords={['gift ideas for women', 'gifts for women', 'best gifts for women', 'thoughtful gifts for women', 'unique gifts for women']}
+	ctaVariant="women_gifts_under_75"
+	primaryCtaLabel="Open the gift finder for women"
+	primaryCtaHref={heroHref}
+	footerCtaHref={heroHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Start with her real taste"
+	generatorPromptDescription="These prompts turn a broad women-gifts search into a more useful shortlist."
+	generatorPrompts={[
+		{ title: 'Wellness gifts under $75', description: 'Self-care, sleep, skincare, bath, tea, and cozy routines.', href: wellnessHref, ctaVariant: 'wellness_women_under_75', label: 'Wellness' },
+		{ title: 'Stylish gifts under $100', description: 'Jewelry, bags, beauty, decor, and travel accessories.', href: stylishHref, ctaVariant: 'stylish_women_under_100', label: 'Stylish' },
+		{ title: 'Practical gifts under $50', description: 'Work, home, kitchen, travel, and daily-use upgrades.', href: practicalHref, ctaVariant: 'practical_women_under_50', label: 'Practical' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>
+

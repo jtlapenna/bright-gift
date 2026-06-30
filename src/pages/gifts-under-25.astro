@@ -1,0 +1,165 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-gifts-under-25-202606';
+
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'coworker, friend, teacher, or casual gift recipient',
+	interests: 'small gifts, useful gifts, coffee, desk, cozy, snacks, books, self-care',
+	budget: 25,
+	styles: 'practical,thoughtful',
+	sourceCta: 'under_25_hero',
+	sourceVariant: 'gifts_under_25',
+	sourceExperiment: experimentId
+});
+
+const coworkerHref = buildGeneratorPrefillHref({
+	recipient: 'coworker',
+	interests: 'desk accessories, coffee, snacks, office comfort, useful small gifts',
+	budget: 25,
+	styles: 'practical,quirky',
+	sourceCta: 'under_25_prompt',
+	sourceVariant: 'coworker_under_25',
+	sourceExperiment: experimentId
+});
+
+const stockingHref = buildGeneratorPrefillHref({
+	recipient: 'family member',
+	interests: 'stocking stuffers, cozy gifts, snacks, small gadgets, self-care',
+	budget: 25,
+	styles: 'thoughtful,cozy',
+	sourceCta: 'under_25_prompt',
+	sourceVariant: 'stocking_stuffer_under_25',
+	sourceExperiment: experimentId
+});
+
+const teacherHref = buildGeneratorPrefillHref({
+	recipient: 'teacher',
+	interests: 'classroom, coffee, desk, thank you gifts, useful supplies',
+	budget: 25,
+	styles: 'practical,thoughtful',
+	sourceCta: 'under_25_prompt',
+	sourceVariant: 'teacher_under_25',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Gifts under $25 for coworkers',
+		description: 'Office-safe picks for teammates, managers, Secret Santa, and casual work gifts.',
+		href: '/blog/gifts-under-25-for-coworkers/',
+		label: 'Coworkers',
+		tags: ['office', 'under $25', 'safe']
+	},
+	{
+		title: 'Secret Santa gifts',
+		description: 'Small gift exchange ideas where budget, tone, and low awkwardness matter.',
+		href: '/secret-santa-gifts/',
+		label: 'Holiday',
+		tags: ['Secret Santa', 'Q4', 'small gifts']
+	},
+	{
+		title: 'Little luxuries under $25',
+		description: 'Mini splurges that feel more special than their price tag.',
+		href: '/blog/little-luxuries-under-25-mini-splurges-major-wow/',
+		label: 'Mini luxuries',
+		tags: ['affordable', 'small', 'splurge']
+	}
+];
+
+const sections = [
+	{
+		title: 'Best uses for a $25 gift budget',
+		description: 'At this price, the strongest gifts are practical, consumable, cozy, or a small upgrade to something they already use.',
+		links: [
+			{
+				title: 'Coworker gifts under $25',
+				description: 'Desk, coffee, snack, and office-friendly ideas that do not feel too personal.',
+				href: coworkerHref,
+				label: 'Open finder',
+				tags: ['coworker', 'office', 'practical']
+			},
+			{
+				title: 'Stocking stuffers under $25',
+				description: 'Small cozy, useful, edible, or gadget-style gifts for holiday lists.',
+				href: stockingHref,
+				label: 'Open finder',
+				tags: ['stocking stuffer', 'holiday', 'small']
+			},
+			{
+				title: 'Teacher gifts under $25',
+				description: 'Useful appreciation gifts that avoid classroom clutter and over-personal choices.',
+				href: teacherHref,
+				label: 'Open finder',
+				tags: ['teacher', 'thank you', 'useful']
+			}
+		]
+	},
+	{
+		title: 'Budget pages to browse next',
+		description: 'Move up or sideways when the $25 limit is flexible or the recipient is more specific.',
+		links: [
+			{
+				title: 'Gift ideas by budget',
+				description: 'Browse under $25, under $50, and under $75 paths from one hub.',
+				href: '/gift-ideas-by-budget/',
+				label: 'Budget hub',
+				tags: ['budget', 'under $50', 'under $75']
+			},
+			{
+				title: 'Gifts under $50',
+				description: 'A wider budget lane when you want more room for quality.',
+				href: '/gifts-under-50/',
+				label: 'Under $50',
+				tags: ['budget', 'friend', 'family']
+			},
+			{
+				title: 'Last-minute gift ideas',
+				description: 'Fast ideas when delivery or timing matters more than deep personalization.',
+				href: '/last-minute-gift-ideas/',
+				label: 'Fast path',
+				tags: ['last minute', 'quick', 'backup']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What makes a good gift under $25?',
+		answer: 'Choose a gift with one clear job: daily use, comfort, snackable enjoyment, desk utility, or a small personal upgrade. Avoid cheap novelty items that add clutter.'
+	},
+	{
+		question: 'Are gifts under $25 too cheap?',
+		answer: 'No. For coworkers, casual friends, teachers, Secret Santa, and stocking stuffers, under $25 is often the right range.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Gifts Under $25"
+	metaTitle="Gifts Under $25 | BrightGift"
+	description="Find gifts under $25 for coworkers, Secret Santa, teachers, stocking stuffers, and casual friends with prefilled BrightGift AI gift finder paths."
+	canonicalPath="/gifts-under-25/"
+	eyebrow="Budget gift finder"
+	heroTitle="Gifts under $25 that still feel considered."
+	intro="Under $25 works best when the gift is useful, consumable, cozy, or specific to a daily routine. Use this page for coworkers, Secret Santa, teachers, stocking stuffers, and casual recipients where thoughtful matters more than expensive."
+	keywords={['gifts under 25', 'best gifts under 25', 'gifts under $25', 'Secret Santa gifts under 25', 'coworker gifts under 25']}
+	ctaVariant="gifts_under_25"
+	primaryCtaLabel="Find gifts under $25"
+	primaryCtaHref={heroHref}
+	footerCtaHref={heroHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Pick the $25 gift situation"
+	generatorPromptDescription="A small budget works better when the recipient context is clear."
+	generatorPrompts={[
+		{ title: 'Coworker gifts under $25', description: 'Office-safe gifts for teammates, managers, or work friends.', href: coworkerHref, ctaVariant: 'coworker_under_25', label: 'Coworker' },
+		{ title: 'Stocking stuffers under $25', description: 'Small holiday gifts that feel useful or cozy.', href: stockingHref, ctaVariant: 'stocking_stuffer_under_25', label: 'Stocking' },
+		{ title: 'Teacher gifts under $25', description: 'Practical appreciation gifts that avoid clutter.', href: teacherHref, ctaVariant: 'teacher_under_25', label: 'Teacher' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>
+

@@ -1,0 +1,165 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-christmas-girlfriend-202606';
+
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'girlfriend',
+	interests: 'Christmas gifts, romantic gifts, cozy nights, beauty, jewelry, keepsakes, experiences',
+	budget: 75,
+	styles: 'thoughtful,luxury',
+	sourceCta: 'christmas_girlfriend_hero',
+	sourceVariant: 'christmas_girlfriend_under_75',
+	sourceExperiment: experimentId
+});
+
+const cozyHref = buildGeneratorPrefillHref({
+	recipient: 'girlfriend',
+	interests: 'cozy nights in, tea, books, blankets, candles, self-care, winter',
+	budget: 50,
+	styles: 'cozy,thoughtful',
+	sourceCta: 'christmas_girlfriend_prompt',
+	sourceVariant: 'cozy_girlfriend_under_50',
+	sourceExperiment: experimentId
+});
+
+const romanticHref = buildGeneratorPrefillHref({
+	recipient: 'girlfriend',
+	interests: 'romantic keepsakes, jewelry, memories, photos, date nights, personalized gifts',
+	budget: 100,
+	styles: 'romantic,personalized',
+	sourceCta: 'christmas_girlfriend_prompt',
+	sourceVariant: 'romantic_girlfriend_under_100',
+	sourceExperiment: experimentId
+});
+
+const practicalHref = buildGeneratorPrefillHref({
+	recipient: 'girlfriend',
+	interests: 'useful gifts, daily routine, beauty, travel, work bag, home comfort',
+	budget: 75,
+	styles: 'practical,luxury',
+	sourceCta: 'christmas_girlfriend_prompt',
+	sourceVariant: 'practical_girlfriend_under_75',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Thoughtful gifts for your girlfriend',
+		description: 'The evergreen girlfriend gift guide for romantic, practical, and personal ideas.',
+		href: '/blog/25-thoughtful-gifts-for-girlfriend-that-show-you-care/',
+		label: 'Evergreen guide',
+		tags: ['girlfriend', 'romantic', 'thoughtful']
+	},
+	{
+		title: 'Holiday gift ideas',
+		description: 'The broader Q4 hub for Christmas gifts, Secret Santa, parents, coworkers, and last-minute shopping.',
+		href: '/holiday-gift-ideas/',
+		label: 'Holiday hub',
+		tags: ['Christmas', 'Q4', 'holiday']
+	},
+	{
+		title: 'Gift ideas for women',
+		description: 'A broader recipient page when you know her style but the relationship is not girlfriend-specific.',
+		href: '/gift-ideas-for-women/',
+		label: 'Women',
+		tags: ['women', 'style', 'recipient']
+	}
+];
+
+const sections = [
+	{
+		title: 'Christmas girlfriend gift lanes',
+		description: 'Start with the emotion you want the gift to create: cozy, romantic, practical, or personalized.',
+		links: [
+			{
+				title: 'Cozy Christmas gifts for girlfriend',
+				description: 'Winter-friendly comfort gifts for quiet nights, reading, tea, candles, and soft routines.',
+				href: cozyHref,
+				label: 'Open finder',
+				tags: ['cozy', 'winter', 'under $50']
+			},
+			{
+				title: 'Romantic Christmas gifts for girlfriend',
+				description: 'Keepsakes, jewelry, photo gifts, and date-night ideas that feel personal.',
+				href: romanticHref,
+				label: 'Open finder',
+				tags: ['romantic', 'personalized', 'under $100']
+			},
+			{
+				title: 'Practical gifts she will actually use',
+				description: 'Beauty, travel, bag, home, and daily-routine upgrades that still feel gift-worthy.',
+				href: practicalHref,
+				label: 'Open finder',
+				tags: ['useful', 'daily routine', 'under $75']
+			}
+		]
+	},
+	{
+		title: 'Related relationship and holiday pages',
+		description: 'Use these if the budget, timing, or recipient type matters more than the Christmas angle.',
+		links: [
+			{
+				title: 'Last-minute gift ideas',
+				description: 'Use this when shipping time is tight and you still need something thoughtful.',
+				href: '/last-minute-gift-ideas/',
+				label: 'Fast path',
+				tags: ['last minute', 'quick', 'holiday']
+			},
+			{
+				title: 'Gifts under $50',
+				description: 'A flexible budget lane for thoughtful gifts without overspending.',
+				href: '/gifts-under-50/',
+				label: 'Budget',
+				tags: ['under $50', 'budget', 'safe']
+			},
+			{
+				title: 'Unique gift ideas',
+				description: 'A broader route when she already owns the obvious things.',
+				href: '/unique-gift-ideas/',
+				label: 'Unique',
+				tags: ['unique', 'hard to shop for', 'personal']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What is a good Christmas gift for a girlfriend?',
+		answer: 'Choose something that reflects a real detail: her routine, style, hobby, comfort needs, favorite memories, or plans you share. Generic luxury is weaker than specific thought.'
+	},
+	{
+		question: 'How much should I spend on a Christmas gift for my girlfriend?',
+		answer: 'A common range is $50 to $150, but the right budget depends on the relationship, shared expectations, and what feels comfortable. A personal $60 gift beats an expensive generic one.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Christmas Gifts for Girlfriend"
+	metaTitle="Christmas Gifts for Girlfriend | BrightGift"
+	description="Find Christmas gifts for your girlfriend, including cozy, romantic, practical, personalized, beauty, jewelry, and experience gift ideas with BrightGift AI prompts."
+	canonicalPath="/christmas-gifts-for-girlfriend/"
+	eyebrow="Girlfriend gift finder"
+	heroTitle="Christmas gifts for your girlfriend that feel personal, not generic."
+	intro="The best Christmas gift for a girlfriend usually connects to a real part of her life: cozy routines, beauty, style, memories, travel, books, home, or time together. Start with one lane, then personalize the shortlist with BrightGift."
+	keywords={['Christmas gifts for girlfriend', 'best Christmas gifts for girlfriend', 'holiday gifts for girlfriend', 'romantic Christmas gifts', 'thoughtful gifts for girlfriend']}
+	ctaVariant="christmas_girlfriend_under_75"
+	primaryCtaLabel="Open the girlfriend gift finder"
+	primaryCtaHref={heroHref}
+	footerCtaHref={heroHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Choose the girlfriend gift angle"
+	generatorPromptDescription="These prompts turn broad Christmas gift searches into specific, relationship-aware shortlists."
+	generatorPrompts={[
+		{ title: 'Cozy gifts under $50', description: 'Comfort, winter, reading, candles, tea, and self-care.', href: cozyHref, ctaVariant: 'cozy_girlfriend_under_50', label: 'Cozy' },
+		{ title: 'Romantic gifts under $100', description: 'Keepsakes, jewelry, photos, date nights, and personalized memories.', href: romanticHref, ctaVariant: 'romantic_girlfriend_under_100', label: 'Romantic' },
+		{ title: 'Practical gifts under $75', description: 'Beauty, travel, home, work, and daily-use upgrades.', href: practicalHref, ctaVariant: 'practical_girlfriend_under_75', label: 'Practical' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>
+
