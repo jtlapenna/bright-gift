@@ -32,6 +32,7 @@ interface Props {
 	eyebrow: string;
 	heroTitle: string;
 	intro: string;
+	updatedAt?: string;
 	keywords: string[];
 	ctaVariant: string;
 	primaryCtaLabel: string;
@@ -54,6 +55,7 @@ const {
 	eyebrow,
 	heroTitle,
 	intro,
+	updatedAt,
 	keywords,
 	ctaVariant,
 	primaryCtaLabel,
@@ -70,6 +72,14 @@ const {
 
 const baseUrl = 'https://bright-gift.com';
 const canonical = `${baseUrl}${canonicalPath}`;
+const formattedUpdatedAt = updatedAt
+	? new Date(`${updatedAt}T00:00:00Z`).toLocaleDateString('en-US', {
+			month: 'long',
+			day: 'numeric',
+			year: 'numeric',
+			timeZone: 'UTC'
+		})
+	: null;
 const allLinks = [
 	...featuredLinks,
 	...sections.flatMap((section) => section.links)
@@ -80,6 +90,7 @@ const itemListStructuredData = {
 	name: title,
 	description,
 	url: canonical,
+	...(updatedAt ? { dateModified: updatedAt } : {}),
 	itemListElement: allLinks.map((link, index) => ({
 		'@type': 'ListItem',
 		position: index + 1,
@@ -126,6 +137,7 @@ const faqStructuredData = faqs.length
 					<p class="hub-eyebrow">{eyebrow}</p>
 					<h1>{heroTitle}</h1>
 					<p class="hub-intro">{intro}</p>
+					{formattedUpdatedAt && <p class="hub-updated">Updated {formattedUpdatedAt}</p>}
 					<div class="hub-actions">
 						<a
 							href={primaryCtaHref}
@@ -335,6 +347,13 @@ const faqStructuredData = faqs.length
 		font-size: clamp(1.06rem, 1.2vw, 1.22rem);
 		line-height: 1.7;
 		text-wrap: pretty;
+	}
+
+	.hub-updated {
+		margin: 14px 0 0;
+		color: var(--hub-ink-muted);
+		font-size: 0.95rem;
+		font-weight: 800;
 	}
 
 	.hub-actions {
