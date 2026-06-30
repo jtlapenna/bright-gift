@@ -8,7 +8,10 @@ const birthdayPrefillHref = '/?recipient=birthday%20recipient&interests=last-min
 const homePrefillHref = '/?recipient=host%20or%20new%20homeowner&interests=last-minute%20housewarming%2C%20kitchen%2C%20hosting%2C%20cozy%20home&budget=75&styles=eco-friendly%2Cluxury&source_cta=last_minute_landing_card&source_variant=last_minute_housewarming_under_75&source_experiment=bg-last-minute-generator-prefill-202606#tool';
 const holidayPrefillHref = '/?recipient=friend%20or%20family%20member&interests=last-minute%20holiday%20gifts%2C%20Christmas%20gifts%2C%20fast%20shipping%2C%20cozy%20gifts%2C%20useful%20gifts&budget=75&styles=thoughtful%2Cpractical&source_cta=last_minute_landing_card&source_variant=last_minute_holiday_under_75&source_experiment=bg-last-minute-generator-prefill-202606#tool';
 
-const metaDescription = "Need a gift fast? Use BrightGift's AI gift finder for thoughtful last-minute gift ideas by recipient, budget, and occasion in under 60 seconds.";
+const christmasPrefillHref = '/?recipient=friend%20or%20family%20member&interests=Christmas%20gift%20ideas%2C%20holiday%20gifts%2C%20cozy%20gifts%2C%20useful%20gifts%2C%20fast%20shipping&budget=75&styles=thoughtful%2Cpractical&source_cta=last_minute_landing_search_support&source_variant=christmas_gift_generator&source_experiment=bg-last-minute-generator-prefill-202606#tool';
+const randomPrefillHref = '/?recipient=friend%20or%20family%20member&interests=random%20gift%20ideas%2C%20fun%20surprises%2C%20useful%20gifts%2C%20small%20upgrades&budget=50&styles=funny%2Cquirky&source_cta=last_minute_landing_search_support&source_variant=random_gift_generator&source_experiment=bg-last-minute-generator-prefill-202606#tool';
+
+const metaDescription = "Need a gift fast? Use BrightGift's AI gift finder for thoughtful last-minute gift ideas, same-day gifts, and Christmas gift generator prompts by recipient and budget.";
 const structuredData = {
 	"@context": "https://schema.org",
 	"@type": "WebPage",
@@ -20,8 +23,50 @@ const structuredData = {
 		"name": "BrightGift AI Gift Idea Generator",
 		"applicationCategory": "LifestyleApplication",
 		"operatingSystem": "Web",
-		"url": "https://bright-gift.com/"
+		"url": "https://bright-gift.com/",
+		"isAccessibleForFree": true,
+		"offers": {
+			"@type": "Offer",
+			"price": "0",
+			"priceCurrency": "USD"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "BrightGift",
+			"url": "https://bright-gift.com/"
+		}
 	}
+};
+
+const faqData = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [
+		{
+			"@type": "Question",
+			"name": "What are good last-minute gift ideas?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Good last-minute gift ideas are easy to receive, easy to use, and connected to something the person already likes. Fast-shipping home, coffee, book, desk, cozy, food, and digital gifts are usually safer than random novelty items."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "Can BrightGift work as a Christmas gift generator?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Yes. BrightGift can work as a Christmas gift generator when you enter the recipient, budget, interests, and timing. It is useful for holiday lists, girlfriend gifts, coworker gifts, parents, and people who are hard to shop for."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "What is the safest same-day gift?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "The safest same-day gift is usually a digital gift, a local pickup item, flowers or food from a local shop, or a practical product with same-day delivery. Add a personal note so it does not feel like a fallback."
+			}
+		}
+	]
 };
 ---
 
@@ -30,9 +75,10 @@ const structuredData = {
 	metaTitle="Last-Minute Gift Ideas | BrightGift AI Finder"
 	description={metaDescription}
 	canonical="https://bright-gift.com/last-minute-gift-ideas/"
-	keywords={['last-minute gift ideas', 'last minute gifts', 'fast shipping gifts', 'digital gifts', 'same day gifts', 'AI gift finder', 'birthday gifts', 'coworker gifts', 'housewarming gifts']}
+	keywords={['last-minute gift ideas', 'last minute gifts', 'fast shipping gifts', 'digital gifts', 'same day gifts', 'AI gift finder', 'Christmas gift generator', 'random gift generator', 'birthday gifts', 'coworker gifts', 'housewarming gifts']}
 >
 	<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+	<script type="application/ld+json" set:html={JSON.stringify(faqData)} />
 
 	<main class="font-sans text-[#1C2E4A]">
 		<section class="border-t-8 border-[#FF6B6B] bg-gradient-to-br from-[#FEF2D3] via-white to-[#A3E4DB]/30 px-4 py-16 md:py-20">
@@ -109,6 +155,52 @@ const structuredData = {
 					<div class="rounded-2xl border border-[#A3E4DB] bg-[#FEF2D3]/60 p-5">
 						<h3 class="mb-2 font-poppins text-xl font-bold">Personal clue</h3>
 						<p class="font-inter text-sm leading-relaxed text-[#1C2E4A]/75">Add one detail to the generator: their hobby, routine, relationship, age, style, or the reason you are buying.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-[#FFF9F3] px-4 py-16">
+			<div class="mx-auto max-w-5xl">
+				<div class="mb-8 text-center">
+					<p class="mb-3 font-inter text-sm font-black uppercase tracking-[0.16em] text-[#FF6B6B]">Search shortcuts</p>
+					<h2 class="mb-3 font-poppins text-3xl font-bold">Use the generator for the exact last-minute gift search</h2>
+					<p class="mx-auto max-w-3xl font-inter text-base leading-relaxed text-[#1C2E4A]/75">
+						Start from the situation instead of staring at a blank form. These paths map to the gift searches people use most often when time is tight.
+					</p>
+				</div>
+				<div class="grid gap-4 md:grid-cols-3">
+					<a href={christmasPrefillHref} data-generator-cta data-cta-position="last_minute_landing_search_support" data-cta-variant="christmas_gift_generator" data-experiment-id={experimentId} class="rounded-2xl border border-[#FF6B6B]/25 bg-white p-5 text-[#1C2E4A] shadow-sm transition hover:border-[#FF6B6B] hover:shadow-lg">
+						<span class="block font-poppins text-xl font-bold">Christmas gift generator</span>
+						<span class="mt-2 block font-inter text-sm leading-relaxed text-[#1C2E4A]/75">Prefilled for Q4, holiday lists, fast shipping, and useful gifts under $75.</span>
+					</a>
+					<a href={randomPrefillHref} data-generator-cta data-cta-position="last_minute_landing_search_support" data-cta-variant="random_gift_generator" data-experiment-id={experimentId} class="rounded-2xl border border-[#A3E4DB] bg-white p-5 text-[#1C2E4A] shadow-sm transition hover:border-[#FF6B6B] hover:shadow-lg">
+						<span class="block font-poppins text-xl font-bold">Random gift generator</span>
+						<span class="mt-2 block font-inter text-sm leading-relaxed text-[#1C2E4A]/75">Useful when you only know the budget and need a safe, quick starting point.</span>
+					</a>
+					<a href="/blog/gifts-under-25-for-coworkers/" class="rounded-2xl border border-[#FFDE59] bg-white p-5 text-[#1C2E4A] shadow-sm transition hover:border-[#FF6B6B] hover:shadow-lg">
+						<span class="block font-poppins text-xl font-bold">Coworker gifts under $25</span>
+						<span class="mt-2 block font-inter text-sm leading-relaxed text-[#1C2E4A]/75">Office-safe ideas for coworkers, Secret Santa swaps, and useful small upgrades.</span>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-white px-4 py-16">
+			<div class="mx-auto max-w-4xl">
+				<h2 class="mb-8 text-center font-poppins text-3xl font-bold">Last-minute gift FAQ</h2>
+				<div class="space-y-4">
+					<div class="rounded-2xl bg-[#FEF2D3]/70 p-5">
+						<h3 class="mb-2 font-poppins text-xl font-bold">What are good last-minute gift ideas?</h3>
+						<p class="font-inter text-sm leading-relaxed text-[#1C2E4A]/75">Good last-minute gift ideas are easy to receive, easy to use, and connected to something the person already likes. Fast-shipping home, coffee, book, desk, cozy, food, and digital gifts are usually safer than random novelty items.</p>
+					</div>
+					<div class="rounded-2xl bg-[#FEF2D3]/70 p-5">
+						<h3 class="mb-2 font-poppins text-xl font-bold">Can BrightGift work as a Christmas gift generator?</h3>
+						<p class="font-inter text-sm leading-relaxed text-[#1C2E4A]/75">Yes. BrightGift can work as a Christmas gift generator when you enter the recipient, budget, interests, and timing. It is useful for holiday lists, girlfriend gifts, coworker gifts, parents, and people who are hard to shop for.</p>
+					</div>
+					<div class="rounded-2xl bg-[#FEF2D3]/70 p-5">
+						<h3 class="mb-2 font-poppins text-xl font-bold">What is the safest same-day gift?</h3>
+						<p class="font-inter text-sm leading-relaxed text-[#1C2E4A]/75">The safest same-day gift is usually a digital gift, a local pickup item, flowers or food from a local shop, or a practical product with same-day delivery. Add a personal note so it does not feel like a fallback.</p>
 					</div>
 				</div>
 			</div>

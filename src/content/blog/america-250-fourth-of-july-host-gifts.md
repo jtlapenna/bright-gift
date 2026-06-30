@@ -84,7 +84,7 @@ slug: america-250-fourth-of-july-host-gifts
 imageAlt: Illustrated Fourth of July host gifts with a cooler, picnic blanket, grill tools, lanterns, books, and summer party supplies
 ogImageAlt: Illustrated America 250 Fourth of July host gift bundle with cookout, picnic, and summer gathering gifts
 ---
-Fourth of July host gifts feel especially timely in 2026. July 4, 2026 marks the 250th anniversary of the signing of the Declaration of Independence, and <a href="https://america250.org/" target="_blank" rel="noopener">America250</a> is coordinating commemorations, service efforts, and local celebrations around the semiquincentennial. That does not mean your gift needs to be formal, political, or covered in flags. It does mean a summer gathering gift can feel more intentional this year.
+Fourth of July host gifts feel especially timely in 2026. July 4, 2026 marks the 250th anniversary of the signing of the Declaration of Independence, and the America250 initiative is coordinating commemorations, service efforts, and local celebrations around the semiquincentennial. That does not mean your gift needs to be formal, political, or covered in flags. It does mean a summer gathering gift can feel more intentional this year.
 
 The commercial signal is strong too: the <a href="https://nrf.com/research-insights/holiday-data-and-trends/independence-day" target="_blank" rel="noopener">National Retail Federation reports that 87% of consumers plan to celebrate the Fourth of July in 2026</a>, with record average food spending of $94.41. In practical terms, people are hosting cookouts, lake weekends, family reunions, fireworks-viewing nights, and neighborhood block parties.
 

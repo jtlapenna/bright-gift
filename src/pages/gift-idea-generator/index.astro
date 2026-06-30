@@ -2,8 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 
 const experimentId = 'bg-home-generator-sprint-202606';
-const title = 'Free AI Gift Idea Generator by Recipient, Budget & Occasion';
-const description = 'Use BrightGift, a free AI gift idea generator, to find thoughtful gift ideas by recipient, interests, budget, and occasion in under a minute.';
+const title = 'Free AI Gift Generator for Gift Ideas by Recipient & Budget';
+const description = 'Use BrightGift as a free AI gift generator, gift idea finder, random gift generator, or Christmas gift generator for personalized picks by recipient, budget, and occasion.';
 
 const faqData = {
 	'@context': 'https://schema.org',
@@ -32,6 +32,30 @@ const faqData = {
 				'@type': 'Answer',
 				text: 'Yes. BrightGift can narrow the decision quickly, especially when you need gift ideas by budget, relationship, interest, or delivery speed.'
 			}
+		},
+		{
+			'@type': 'Question',
+			name: 'What is a gift generator?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'A gift generator is a tool that turns shopping clues like recipient, budget, interests, and occasion into a shortlist of gift ideas. BrightGift is built for practical search moments like coworker gifts, Christmas gifts, last-minute gifts, and gifts for people who have everything.'
+			}
+		},
+		{
+			'@type': 'Question',
+			name: 'Can I use BrightGift as a random gift generator?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Yes. If you are stuck, use BrightGift as a random gift generator by entering a broad recipient, budget, and one or two interests. The results are more useful when you add at least one real clue about the person.'
+			}
+		},
+		{
+			'@type': 'Question',
+			name: 'Can BrightGift help with Christmas gift ideas?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Yes. BrightGift can work as a Christmas gift generator by combining recipient, budget, and interests. It is especially useful for girlfriend gifts, coworker gifts, parents who have everything, and last-minute holiday shopping.'
+			}
 		}
 	]
 };
@@ -43,6 +67,7 @@ const appData = {
 	url: 'https://bright-gift.com/gift-idea-generator/',
 	applicationCategory: 'LifestyleApplication',
 	operatingSystem: 'Any',
+	isAccessibleForFree: true,
 	offers: {
 		'@type': 'Offer',
 		price: '0',
@@ -54,12 +79,12 @@ const appData = {
 
 <Layout
 	title={title}
-	metaTitle="Free AI Gift Generator by Budget & Recipient | BrightGift"
+	metaTitle="Free AI Gift Generator & Gift Finder | BrightGift"
 	description={description}
 	metaDescription={description}
 	canonical="https://bright-gift.com/gift-idea-generator/"
 	image="/images/homepage-banner.webp"
-	keywords={['AI gift idea generator', 'AI gift generator', 'free gift finder', 'personalized gift ideas', 'gift recommendation tool', 'gift finder by interest', 'gift ideas by budget']}
+	keywords={['AI gift idea generator', 'AI gift generator', 'free gift finder', 'gift generator', 'random gift generator', 'Christmas gift generator', 'last-minute gift ideas', 'gift ideas by budget', 'gifts for parents who have everything', 'coworker gifts under $25']}
 >
 	<script type="application/ld+json" set:html={JSON.stringify(appData)} />
 	<script type="application/ld+json" set:html={JSON.stringify(faqData)} />
@@ -139,6 +164,47 @@ const appData = {
 		</section>
 
 		<section class="bg-[#1C2E4A] px-4 py-16 text-white">
+			<div class="mx-auto mb-14 max-w-5xl rounded-[2rem] border border-white/15 bg-white/[0.08] p-6 shadow-xl md:p-8">
+				<div class="mb-8">
+					<p class="mb-3 text-sm font-black uppercase tracking-[0.16em] text-[#A3E4DB]">Gift finder shortcuts</p>
+					<h2 class="mb-3 text-3xl font-bold md:text-4xl">Use BrightGift for the gift searches people actually make</h2>
+					<p class="max-w-3xl text-white/78">
+						Start with the situation you already know, then let the generator narrow the recipient, budget, and interest details into a more useful shortlist.
+					</p>
+				</div>
+				<div class="grid gap-4 md:grid-cols-3">
+					<a href="/last-minute-gift-ideas/" class="rounded-2xl border border-white/15 bg-white/10 p-5 text-white transition hover:bg-white/15">
+						<span class="block text-sm font-black uppercase tracking-[0.14em] text-[#FFDE59]">Fast decision</span>
+						<span class="mt-2 block text-xl font-bold">Last-minute gift ideas</span>
+						<span class="mt-2 block text-sm leading-relaxed text-white/75">For birthdays, hosts, coworkers, and forgotten holiday gifts.</span>
+					</a>
+					<a href="/holiday-gift-ideas/" class="rounded-2xl border border-white/15 bg-white/10 p-5 text-white transition hover:bg-white/15">
+						<span class="block text-sm font-black uppercase tracking-[0.14em] text-[#FFDE59]">Holiday shopping</span>
+						<span class="mt-2 block text-xl font-bold">Christmas gift generator</span>
+						<span class="mt-2 block text-sm leading-relaxed text-white/75">For girlfriend, coworker, parents, remote workers, and holiday lists.</span>
+					</a>
+					<a href="/gift-ideas-by-recipient/" class="rounded-2xl border border-white/15 bg-white/10 p-5 text-white transition hover:bg-white/15">
+						<span class="block text-sm font-black uppercase tracking-[0.14em] text-[#FFDE59]">Personal fit</span>
+						<span class="mt-2 block text-xl font-bold">Gift finder by recipient</span>
+						<span class="mt-2 block text-sm leading-relaxed text-white/75">Start with who the gift is for, then narrow by budget and interest.</span>
+					</a>
+					<a href="/blog/gifts-under-25-for-coworkers/" class="rounded-2xl border border-white/15 bg-white/10 p-5 text-white transition hover:bg-white/15">
+						<span class="block text-sm font-black uppercase tracking-[0.14em] text-[#FFDE59]">Work gifts</span>
+						<span class="mt-2 block text-xl font-bold">Coworker gifts under $25</span>
+						<span class="mt-2 block text-sm leading-relaxed text-white/75">Office-safe ideas for coworkers, team swaps, and small holiday gifts.</span>
+					</a>
+					<a href="/gift-ideas-by-occasion/" class="rounded-2xl border border-white/15 bg-white/10 p-5 text-white transition hover:bg-white/15">
+						<span class="block text-sm font-black uppercase tracking-[0.14em] text-[#FFDE59]">Occasion fit</span>
+						<span class="mt-2 block text-xl font-bold">Gift ideas by occasion</span>
+						<span class="mt-2 block text-sm leading-relaxed text-white/75">Housewarming, birthday, anniversary, wedding, holidays, and more.</span>
+					</a>
+					<a href="/gifts-for-people-who-have-everything/" class="rounded-2xl border border-white/15 bg-white/10 p-5 text-white transition hover:bg-white/15">
+						<span class="block text-sm font-black uppercase tracking-[0.14em] text-[#FFDE59]">Hard recipient</span>
+						<span class="mt-2 block text-xl font-bold">Gifts for people who have everything</span>
+						<span class="mt-2 block text-sm leading-relaxed text-white/75">Use taste, routine, and interest clues instead of broad guesses.</span>
+					</a>
+				</div>
+			</div>
 			<div class="mx-auto max-w-5xl">
 				<h2 class="mb-8 text-center text-3xl font-bold md:text-4xl">Popular ways to use BrightGift</h2>
 				<div class="grid gap-4 md:grid-cols-2">
@@ -207,6 +273,18 @@ const appData = {
 					<div class="rounded-3xl bg-[#FEF2D3] p-6">
 						<h3 class="mb-2 text-xl font-bold text-[#1C2E4A]">Can an AI gift generator help with last-minute gifts?</h3>
 						<p class="text-[#1C2E4A]/80">Yes. BrightGift can narrow the decision quickly, especially when you need gift ideas by budget, relationship, interest, or delivery speed.</p>
+					</div>
+					<div class="rounded-3xl bg-[#FEF2D3] p-6">
+						<h3 class="mb-2 text-xl font-bold text-[#1C2E4A]">What is a gift generator?</h3>
+						<p class="text-[#1C2E4A]/80">A gift generator turns shopping clues like recipient, budget, interests, and occasion into a shortlist of gift ideas. BrightGift is built for practical search moments like coworker gifts, Christmas gifts, last-minute gifts, and gifts for people who have everything.</p>
+					</div>
+					<div class="rounded-3xl bg-[#FEF2D3] p-6">
+						<h3 class="mb-2 text-xl font-bold text-[#1C2E4A]">Can I use BrightGift as a random gift generator?</h3>
+						<p class="text-[#1C2E4A]/80">Yes. If you are stuck, use BrightGift as a random gift generator by entering a broad recipient, budget, and one or two interests. The results are more useful when you add at least one real clue about the person.</p>
+					</div>
+					<div class="rounded-3xl bg-[#FEF2D3] p-6">
+						<h3 class="mb-2 text-xl font-bold text-[#1C2E4A]">Can BrightGift help with Christmas gift ideas?</h3>
+						<p class="text-[#1C2E4A]/80">Yes. BrightGift can work as a Christmas gift generator by combining recipient, budget, and interests. It is especially useful for girlfriend gifts, coworker gifts, parents who have everything, and last-minute holiday shopping.</p>
 					</div>
 				</div>
 				<div class="mt-10 text-center">
