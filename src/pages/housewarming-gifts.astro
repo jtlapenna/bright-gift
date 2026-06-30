@@ -1,0 +1,192 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-generator-search-entry-202606';
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'new homeowner',
+	interests: 'housewarming gifts, Amazon home gifts, kitchen, hosting, cozy home, move-in essentials',
+	budget: 75,
+	styles: 'practical,luxury',
+	sourceCta: 'housewarming_hub_hero',
+	sourceVariant: 'housewarming_under_75',
+	sourceExperiment: experimentId
+});
+const footerHref = buildGeneratorPrefillHref({
+	recipient: 'new homeowner',
+	interests: 'home gifts, Amazon gifts for the home, apartment, hosting, decor style, storage space',
+	budget: 75,
+	styles: 'practical,thoughtful',
+	sourceCta: 'housewarming_hub_footer',
+	sourceVariant: 'housewarming_home_gifts',
+	sourceExperiment: experimentId
+});
+const apartmentHref = buildGeneratorPrefillHref({
+	recipient: 'apartment dweller',
+	interests: 'small-space housewarming, apartment kitchen, cozy decor, storage, renter-friendly',
+	budget: 50,
+	styles: 'practical,cozy',
+	sourceCta: 'housewarming_hub_prompt',
+	sourceVariant: 'housewarming_apartment_under_50',
+	sourceExperiment: experimentId
+});
+const hostHref = buildGeneratorPrefillHref({
+	recipient: 'friend who hosts',
+	interests: 'hosting, serving board, dinnerware, kitchen upgrades, candles, wine accessories',
+	budget: 75,
+	styles: 'luxury,practical',
+	sourceCta: 'housewarming_hub_prompt',
+	sourceVariant: 'housewarming_host_under_75',
+	sourceExperiment: experimentId
+});
+const practicalHref = buildGeneratorPrefillHref({
+	recipient: 'first-time homeowner',
+	interests: 'tools, smart home, kitchen basics, entryway, move-in essentials',
+	budget: 75,
+	styles: 'practical,minimalist',
+	sourceCta: 'housewarming_hub_prompt',
+	sourceVariant: 'housewarming_practical_under_75',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Housewarming gifts under $75',
+		description: 'A deeper list of move-in gifts, kitchen upgrades, cozy decor, and practical tools.',
+		href: '/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/',
+		label: 'New homeowners',
+		tags: ['housewarming', 'under $75', 'move-in']
+	},
+	{
+		title: 'Amazon home gifts',
+		description: 'Easy-shipping Amazon gifts for the home, from smart speakers to hosting upgrades.',
+		href: '/blog/best-home-gifts-on-amazon-2024/',
+		label: 'Amazon home',
+		tags: ['Amazon', 'home gifts', 'shipping']
+	},
+	{
+		title: 'Gifts under $25',
+		description: 'Small housewarming add-ons and budget-friendly host gifts that still feel useful.',
+		href: '/gifts-under-25/',
+		label: 'Budget add-ons',
+		tags: ['under $25', 'small gifts', 'budget']
+	}
+];
+
+const sections = [
+	{
+		title: 'Housewarming gifts by home type',
+		description: 'Start with the space. A first house, apartment, shared home, and hosting-heavy kitchen all call for different gifts.',
+		links: [
+			{
+				title: 'First-time homeowner gifts',
+				description: 'Practical move-in gifts that help with setup, organization, and daily routines.',
+				href: practicalHref,
+				label: 'Prefilled finder',
+				tags: ['first home', 'tools', 'practical']
+			},
+			{
+				title: 'Apartment housewarming gifts',
+				description: 'Small-space gifts for renters, apartments, and homes with limited storage.',
+				href: apartmentHref,
+				label: 'Prefilled finder',
+				tags: ['apartment', 'small space', 'renter']
+			},
+			{
+				title: 'Gifts for people who host',
+				description: 'Serving, kitchen, and table gifts for recipients who like having people over.',
+				href: hostHref,
+				label: 'Prefilled finder',
+				tags: ['hosting', 'kitchen', 'entertaining']
+			}
+		]
+	},
+	{
+		title: 'Home-gift guides to compare',
+		description: 'Use these when you know the category and want a more detailed product shortlist.',
+		links: [
+			{
+				title: 'Best home gifts on Amazon',
+				description: 'Amazon gifts for the home that are easy to ship and safer across decor styles.',
+				href: '/blog/best-home-gifts-on-amazon-2024/',
+				label: 'Amazon home gifts',
+				tags: ['Amazon', 'home', 'under $100']
+			},
+			{
+				title: 'Chic wedding gifts',
+				description: 'Polished shared-home gifts for couples who care about design and usefulness.',
+				href: '/blog/chic-wedding-gifts-for-the-stylish-couple/',
+				label: 'Wedding',
+				tags: ['couple', 'home', 'style']
+			},
+			{
+				title: 'Eco-friendly gift ideas',
+				description: 'Lower-waste home and lifestyle gifts for sustainability-minded recipients.',
+				href: '/blog/eco-friendly-gift-ideas-for-every-budget/',
+				label: 'Eco-friendly',
+				tags: ['sustainable', 'home', 'budget']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What is a good housewarming gift?',
+		answer: 'A good housewarming gift helps the recipient use or enjoy the home sooner. Kitchen tools, serving pieces, entryway items, smart-home basics, and cozy textiles are safer than large decor pieces.'
+	},
+	{
+		question: 'Are Amazon home gifts good for housewarming?',
+		answer: 'Yes, especially when you choose practical, neutral, easy-shipping items. Amazon home gifts work best for last-minute housewarming gifts, apartment gifts, and move-in essentials.'
+	},
+	{
+		question: 'How much should I spend on a housewarming gift?',
+		answer: 'For acquaintances or coworkers, $20 to $35 is plenty. For close friends or family, $50 to $75 gives you better options without feeling excessive.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Housewarming Gifts"
+	metaTitle="Housewarming Gifts & Amazon Home Gifts | BrightGift"
+	description="Find housewarming gifts, Amazon home gifts, gifts for new homeowners, apartment gifts, and practical gifts for the home with BrightGift AI gift finder paths."
+	canonicalPath="/housewarming-gifts/"
+	eyebrow="Housewarming gift finder"
+	heroTitle="Housewarming gifts and Amazon home gifts that feel useful, not random."
+	intro="Use this page when someone just moved, bought a first home, upgraded an apartment, or started hosting more. Start with a practical housewarming guide, compare Amazon gifts for the home, or open a prefilled BrightGift path for their home type and budget."
+	updatedAt="2026-06-30"
+	keywords={['housewarming gifts', 'amazon home gifts', 'amazon gifts for the home', 'gifts for new homeowners', 'home gifts', 'apartment gifts']}
+	ctaVariant="housewarming_under_75"
+	primaryCtaLabel="Open the housewarming gift finder"
+	primaryCtaHref={heroHref}
+	footerCtaHref={footerHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Start with the home situation"
+	generatorPromptDescription="These prefilled paths turn broad housewarming intent into a more useful shortlist by home type, budget, and lifestyle."
+	generatorPrompts={[
+		{
+			title: 'Apartment housewarming gifts under $50',
+			description: 'Renter-friendly, small-space gifts that avoid clutter.',
+			href: apartmentHref,
+			ctaVariant: 'housewarming_apartment_under_50',
+			label: 'Apartment'
+		},
+		{
+			title: 'Host gifts under $75',
+			description: 'Kitchen, serving, and cozy-home ideas for someone who likes to entertain.',
+			href: hostHref,
+			ctaVariant: 'housewarming_host_under_75',
+			label: 'Hosts'
+		},
+		{
+			title: 'Practical first-home gifts',
+			description: 'Tools, smart-home basics, kitchen starters, and entryway upgrades.',
+			href: practicalHref,
+			ctaVariant: 'housewarming_practical_under_75',
+			label: 'First home'
+		}
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>

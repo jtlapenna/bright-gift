@@ -1,0 +1,192 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-generator-search-entry-202606';
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'friend or family member',
+	interests: 'last-minute Christmas gifts, fast shipping, cozy gifts, useful gifts, gift cards, stocking stuffers',
+	budget: 50,
+	styles: 'thoughtful,practical',
+	sourceCta: 'last_minute_christmas_hero',
+	sourceVariant: 'last_minute_christmas_under_50',
+	sourceExperiment: experimentId
+});
+const footerHref = buildGeneratorPrefillHref({
+	recipient: 'holiday gift recipient',
+	interests: 'Christmas gift, delivery time, budget, relationship, hobbies, digital gifts',
+	budget: 50,
+	styles: 'thoughtful,unique',
+	sourceCta: 'last_minute_christmas_footer',
+	sourceVariant: 'last_minute_christmas_general',
+	sourceExperiment: experimentId
+});
+const girlfriendHref = buildGeneratorPrefillHref({
+	recipient: 'girlfriend',
+	interests: 'last-minute Christmas gifts, cozy gifts, beauty, keepsakes, date night, jewelry',
+	budget: 75,
+	styles: 'thoughtful,luxury',
+	sourceCta: 'last_minute_christmas_prompt',
+	sourceVariant: 'last_minute_christmas_girlfriend',
+	sourceExperiment: experimentId
+});
+const coworkerHref = buildGeneratorPrefillHref({
+	recipient: 'coworker',
+	interests: 'last-minute Christmas gifts, Secret Santa, office gift, coffee, desk, snacks',
+	budget: 25,
+	styles: 'practical,quirky',
+	sourceCta: 'last_minute_christmas_prompt',
+	sourceVariant: 'last_minute_christmas_coworker',
+	sourceExperiment: experimentId
+});
+const parentHref = buildGeneratorPrefillHref({
+	recipient: 'parent',
+	interests: 'last-minute Christmas gifts, cozy home, kitchen, family memories, useful upgrades',
+	budget: 75,
+	styles: 'thoughtful,practical',
+	sourceCta: 'last_minute_christmas_prompt',
+	sourceVariant: 'last_minute_christmas_parent',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Last-minute gift ideas',
+		description: 'The broader fast-gift hub for birthdays, housewarming, coworkers, and holidays.',
+		href: '/last-minute-gift-ideas/',
+		label: 'Fast path',
+		tags: ['last minute', 'fast shipping', 'generator']
+	},
+	{
+		title: 'Secret Santa gifts',
+		description: 'Office-safe holiday gifts and low-pressure ideas under $25.',
+		href: '/secret-santa-gifts/',
+		label: 'Under $25',
+		tags: ['Secret Santa', 'coworker', 'budget']
+	},
+	{
+		title: 'Christmas gifts for girlfriend',
+		description: 'A deeper holiday page for romantic, cozy, beauty, and personalized ideas.',
+		href: '/christmas-gifts-for-girlfriend/',
+		label: 'Girlfriend',
+		tags: ['Christmas', 'girlfriend', 'romantic']
+	}
+];
+
+const sections = [
+	{
+		title: 'Last-minute Christmas gifts by recipient',
+		description: 'When time is short, the relationship matters more than browsing a giant gift list.',
+		links: [
+			{
+				title: 'Last-minute Christmas gifts for girlfriend',
+				description: 'Cozy, romantic, beauty, keepsake, and experience ideas with a little more personal weight.',
+				href: girlfriendHref,
+				label: 'Prefilled finder',
+				tags: ['girlfriend', 'romantic', 'Christmas']
+			},
+			{
+				title: 'Last-minute Christmas gifts for coworkers',
+				description: 'Coffee, desk, snack, and Secret Santa ideas that stay office-safe.',
+				href: coworkerHref,
+				label: 'Prefilled finder',
+				tags: ['coworker', 'office', 'under $25']
+			},
+			{
+				title: 'Last-minute Christmas gifts for parents',
+				description: 'Cozy home, family-memory, kitchen, and practical upgrade ideas.',
+				href: parentHref,
+				label: 'Prefilled finder',
+				tags: ['parents', 'family', 'holiday']
+			}
+		]
+	},
+	{
+		title: 'Safe categories when shipping time is tight',
+		description: 'These categories work better than fragile decor or obscure niche products when delivery risk matters.',
+		links: [
+			{
+				title: 'Gifts under $25',
+				description: 'Small useful gifts, stocking stuffers, and budget ideas that can still feel thoughtful.',
+				href: '/gifts-under-25/',
+				label: 'Budget',
+				tags: ['under $25', 'stocking stuffers', 'small gifts']
+			},
+			{
+				title: 'Holiday gift ideas',
+				description: 'The full Q4 hub for Christmas, Secret Santa, parents, coworkers, and recipient paths.',
+				href: '/holiday-gift-ideas/',
+				label: 'Holiday hub',
+				tags: ['Christmas', 'Q4', 'holiday']
+			},
+			{
+				title: 'Gift idea generator',
+				description: 'Use the full generator when you need to add budget, hobbies, and the exact relationship.',
+				href: '/gift-idea-generator/',
+				label: 'Generator',
+				tags: ['AI gift finder', 'personalized', 'fast']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What is the safest last-minute Christmas gift?',
+		answer: 'The safest choices are useful, easy-shipping gifts tied to a real routine: coffee, cozy home items, books, food gifts, self-care, desk accessories, or a gift card paired with a personal note.'
+	},
+	{
+		question: 'How late can I buy Christmas gifts online?',
+		answer: 'It depends on the retailer and shipping cutoff. If delivery is uncertain, use digital gifts, pickup options, subscriptions, or consumable gifts available locally.'
+	},
+	{
+		question: 'Should I use the gift generator for last-minute Christmas gifts?',
+		answer: 'Yes. A prefilled generator path helps narrow the list quickly, especially when you add recipient, budget, shipping deadline, and one real interest.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Last-Minute Christmas Gifts"
+	metaTitle="Last-Minute Christmas Gifts | BrightGift"
+	description="Find last-minute Christmas gifts by recipient, budget, delivery risk, and relationship, with prefilled BrightGift AI gift finder paths for fast holiday shopping."
+	canonicalPath="/last-minute-christmas-gifts/"
+	eyebrow="Last-minute Christmas finder"
+	heroTitle="Last-minute Christmas gifts that still feel considered."
+	intro="When the shipping clock is loud, choose a safer category first: useful, cozy, consumable, digital, or easy to pick up. This page routes urgent Christmas shopping into recipient-specific guides and prefilled BrightGift prompts."
+	updatedAt="2026-06-30"
+	keywords={['last-minute Christmas gifts', 'last minute Christmas gifts', 'last-minute holiday gifts', 'Christmas gift ideas', 'fast shipping gifts', 'Secret Santa gifts']}
+	ctaVariant="last_minute_christmas_under_50"
+	primaryCtaLabel="Open the Christmas gift finder"
+	primaryCtaHref={heroHref}
+	footerCtaHref={footerHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Start with who the gift is for"
+	generatorPromptDescription="These prefilled paths keep the gift realistic for the relationship, budget, and delivery risk."
+	generatorPrompts={[
+		{
+			title: 'Girlfriend Christmas gifts',
+			description: 'A more personal path for romantic or cozy last-minute ideas.',
+			href: girlfriendHref,
+			ctaVariant: 'last_minute_christmas_girlfriend',
+			label: 'Girlfriend'
+		},
+		{
+			title: 'Coworker or Secret Santa',
+			description: 'Office-safe ideas under $25 when you need something soon.',
+			href: coworkerHref,
+			ctaVariant: 'last_minute_christmas_coworker',
+			label: 'Coworker'
+		},
+		{
+			title: 'Parents or family',
+			description: 'Cozy, practical, family-memory, and kitchen gift ideas.',
+			href: parentHref,
+			ctaVariant: 'last_minute_christmas_parent',
+			label: 'Parents'
+		}
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>
