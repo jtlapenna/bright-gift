@@ -1,0 +1,210 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-parent-gifts-202606';
+
+const parentHeroHref = buildGeneratorPrefillHref({
+	recipient: 'parent who has everything',
+	interests: 'useful upgrades, family memories, cozy routines, kitchen, home, experiences',
+	budget: 75,
+	styles: 'thoughtful,practical',
+	sourceCta: 'parents_everything_hero',
+	sourceVariant: 'parents_everything_under_75',
+	sourceExperiment: experimentId
+});
+
+const parentFooterHref = buildGeneratorPrefillHref({
+	recipient: 'parent who has everything',
+	interests: 'personalized gifts, consumable gifts, comfort upgrades, experience gifts, family keepsakes',
+	budget: 100,
+	styles: 'thoughtful,luxury',
+	sourceCta: 'parents_everything_footer',
+	sourceVariant: 'parents_everything_personalized',
+	sourceExperiment: experimentId
+});
+
+const cozyPromptHref = buildGeneratorPrefillHref({
+	recipient: 'parent who likes cozy nights at home',
+	interests: 'tea, coffee, reading, blankets, cooking, family photos',
+	budget: 50,
+	styles: 'cozy,thoughtful',
+	sourceCta: 'parents_everything_prompt',
+	sourceVariant: 'cozy_parent_under_50',
+	sourceExperiment: experimentId
+});
+
+const practicalPromptHref = buildGeneratorPrefillHref({
+	recipient: 'practical parent who has everything',
+	interests: 'kitchen upgrades, organization, home comfort, daily routines, useful gifts',
+	budget: 75,
+	styles: 'practical,minimal',
+	sourceCta: 'parents_everything_prompt',
+	sourceVariant: 'practical_parent_under_75',
+	sourceExperiment: experimentId
+});
+
+const sentimentalPromptHref = buildGeneratorPrefillHref({
+	recipient: 'sentimental parent',
+	interests: 'family memories, photo gifts, personalized keepsakes, handwritten notes, experiences',
+	budget: 100,
+	styles: 'sentimental,personalized',
+	sourceCta: 'parents_everything_prompt',
+	sourceVariant: 'sentimental_parent_under_100',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Gifts for people who have everything',
+		description: 'The broader hard-to-shop-for page when novelty matters more than relationship type.',
+		href: '/gifts-for-people-who-have-everything/',
+		label: 'Hard to shop for',
+		tags: ['unique', 'experience', 'personalized']
+	},
+	{
+		title: 'Holiday gifts for moms',
+		description: 'Cozy, useful, sentimental, and everyday luxury ideas for moms during the holiday season.',
+		href: '/blog/best-holiday-gifts-for-moms-2025/',
+		label: 'Mom gifts',
+		tags: ['mom', 'holiday', 'family']
+	},
+	{
+		title: 'Holiday gifts for dads',
+		description: 'Practical, tech, outdoor, cooking, and comfort ideas for different dad types.',
+		href: '/blog/best-holiday-gifts-for-dads-2025/',
+		label: 'Dad gifts',
+		tags: ['dad', 'holiday', 'practical']
+	}
+];
+
+const sections = [
+	{
+		title: 'Gift lanes that work for parents who already own the obvious things',
+		description: 'The best parent gifts usually solve one of four jobs: daily comfort, easier routines, shared memories, or low-clutter enjoyment.',
+		links: [
+			{
+				title: 'Consumable gifts',
+				description: 'Coffee, tea, pantry upgrades, specialty snacks, wine, bath goods, and items they can enjoy without storing forever.',
+				href: cozyPromptHref,
+				label: 'Open finder',
+				tags: ['low clutter', 'cozy', 'safe']
+			},
+			{
+				title: 'Useful home upgrades',
+				description: 'Small kitchen, organization, comfort, or hosting upgrades that improve a routine they already have.',
+				href: practicalPromptHref,
+				label: 'Open finder',
+				tags: ['practical', 'home', 'under $75']
+			},
+			{
+				title: 'Sentimental gifts',
+				description: 'Photo books, framed memories, custom maps, handwritten keepsakes, and family-history gifts.',
+				href: sentimentalPromptHref,
+				label: 'Open finder',
+				tags: ['personalized', 'family', 'keepsake']
+			},
+			{
+				title: 'Experience gifts',
+				description: 'Classes, local outings, restaurant credit, museum passes, day trips, and shared experiences.',
+				href: '/gifts-for-people-who-have-everything/',
+				label: 'Guide',
+				tags: ['experience', 'no clutter', 'personal']
+			}
+		]
+	},
+	{
+		title: 'Related parent gift guides',
+		description: 'Use these when the parent type, season, or budget is clearer than the broad "has everything" problem.',
+		links: [
+			{
+				title: 'Mother\'s Day gifts by mom type',
+				description: 'A better fit when you know whether she prefers rest, beauty, gardening, reading, or practical help.',
+				href: '/blog/mothers-day-gifts-for-every-type-of-mom/',
+				label: 'Mom gifts',
+				tags: ['mom', 'occasion', 'thoughtful']
+			},
+			{
+				title: 'Father\'s Day gift ideas',
+				description: 'Use this for dads with clearer lanes like grilling, outdoors, tools, tech, or family keepsakes.',
+				href: '/blog/fathers-day-gifts-for-every-type-of-dad/',
+				label: 'Dad gifts',
+				tags: ['dad', 'occasion', 'practical']
+			},
+			{
+				title: 'Gift ideas by budget',
+				description: 'Start here if you already know the price range and need options that still feel personal.',
+				href: '/gift-ideas-by-budget/',
+				label: 'Budget hub',
+				tags: ['under $25', 'under $50', 'under $75']
+			},
+			{
+				title: 'Holiday gift ideas',
+				description: 'The Q4 route for Christmas gifts, Secret Santa, coworker gifts, parent gifts, and last-minute shopping.',
+				href: '/holiday-gift-ideas/',
+				label: 'Holiday hub',
+				tags: ['Christmas', 'holiday', 'Q4']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What do you buy parents who have everything?',
+		answer: 'Start with low-clutter gifts: consumables, better versions of things they already use, family-memory gifts, or experiences. Avoid generic gadgets unless they solve a real routine problem.'
+	},
+	{
+		question: 'Are personalized gifts good for parents?',
+		answer: 'Personalized gifts work well when they connect to a real family memory, home, hobby, or milestone. Keep them subtle and useful if the parent dislikes clutter.'
+	},
+	{
+		question: 'What is a safe budget for gifts for parents who have everything?',
+		answer: 'A useful range is $35 to $100. Below that, choose consumables or small comforts. Above that, experiences, premium home upgrades, and custom keepsakes become stronger options.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Gifts for Parents Who Have Everything"
+	metaTitle="Gifts for Parents Who Have Everything | BrightGift"
+	description="Find gifts for parents who have everything, including low-clutter gifts, useful home upgrades, personalized keepsakes, experience gifts, and prefilled BrightGift AI gift finder paths."
+	canonicalPath="/gifts-for-parents-who-have-everything/"
+	eyebrow="Parent gift finder"
+	heroTitle="Gifts for parents who have everything, without buying more clutter."
+	intro="When parents already own the obvious gifts, the better move is not a bigger generic present. Start with comfort, routine upgrades, family memories, consumables, or experiences, then use the BrightGift generator to personalize the final shortlist."
+	keywords={['gifts for parents who have everything', 'gifts for parents', 'parents who have everything', 'unique gifts for parents', 'personalized gifts for parents', 'experience gifts for parents']}
+	ctaVariant="parents_everything_under_75"
+	primaryCtaLabel="Open the parent gift finder"
+	primaryCtaHref={parentHeroHref}
+	footerCtaHref={parentFooterHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Start with the kind of parent you are shopping for"
+	generatorPromptDescription="These prefilled prompts turn vague parent-gift searches into useful shortlists. Add one real detail on the generator page for better recommendations."
+	generatorPrompts={[
+		{
+			title: 'Cozy parent gifts under $50',
+			description: 'Comfort, tea, coffee, reading, home, and slower-night ideas.',
+			href: cozyPromptHref,
+			ctaVariant: 'cozy_parent_under_50',
+			label: 'Cozy'
+		},
+		{
+			title: 'Practical parent gifts under $75',
+			description: 'Useful kitchen, home, routine, and organization upgrades.',
+			href: practicalPromptHref,
+			ctaVariant: 'practical_parent_under_75',
+			label: 'Practical'
+		},
+		{
+			title: 'Sentimental parent gifts under $100',
+			description: 'Photo, keepsake, family-memory, and personalized gift ideas.',
+			href: sentimentalPromptHref,
+			ctaVariant: 'sentimental_parent_under_100',
+			label: 'Sentimental'
+		}
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-06-12T00:39:24.843Z",
+  "timestamp": "2026-06-30T07:54:14.582Z",
   "summary": {
-    "totalFiles": 58,
-    "validSchemas": 25,
-    "invalidSchemas": 33,
+    "totalFiles": 60,
+    "validSchemas": 28,
+    "invalidSchemas": 32,
     "missingSchemas": 0,
     "schemaTypes": {
-      "Article": 25
+      "Article": 28
     }
   },
   "errors": [
@@ -27,7 +27,7 @@
     {
       "file": "25-thoughtful-housewarming-gifts-for-new-homeowners-under-75.md",
       "line": 0,
-      "message": "Description too long: 188 characters (max 160)",
+      "message": "Description too long: 194 characters (max 160)",
       "fix": "Shorten description to 160 characters or less",
       "severity": "error"
     },
@@ -168,13 +168,6 @@
       "file": "gifts-for-new-grandparents.md",
       "line": 0,
       "message": "Description too long: 164 characters (max 160)",
-      "fix": "Shorten description to 160 characters or less",
-      "severity": "error"
-    },
-    {
-      "file": "gifts-for-new-homeowners-2025.md",
-      "line": 0,
-      "message": "Description too long: 183 characters (max 160)",
       "fix": "Shorten description to 160 characters or less",
       "severity": "error"
     },

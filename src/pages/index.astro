@@ -16,7 +16,7 @@ const allContent = blogPosts.sort((a, b) => new Date(b.data.date).getTime() - ne
 const experimentId = 'bg-home-generator-sprint-202606';
 
 // Meta description for homepage
-const metaDescription = "Use BrightGift's free AI gift idea generator to find gift ideas by recipient, budget, interest, and occasion. Get personalized suggestions in under a minute.";
+const metaDescription = "Use BrightGift's free AI gift idea generator, present picker, and gift helper to find gift ideas by recipient, budget, interest, or occasion in under a minute.";
 
 // Define structured data for the homepage
 const structuredData = {
@@ -24,15 +24,32 @@ const structuredData = {
 	"@type": "WebSite",
 	"name": "BrightGift - AI Gift Idea Generator",
 	"url": "https://bright-gift.com/",
-		"description": metaDescription,
-	"potentialAction": {
-		"@type": "SearchAction",
-		"target": "https://bright-gift.com/#tool?recipient={recipient}&interests={interests}",
-		"query-input": [
-			"required name=recipient",
-			"required name=interests"
-		]
-	}
+	"description": metaDescription
+};
+
+// App schema for the visible homepage generator. Do not add aggregateRating unless ratings are sourced and visible.
+const appData = {
+	"@context": "https://schema.org",
+	"@type": "SoftwareApplication",
+	"name": "BrightGift AI Gift Idea Generator",
+	"alternateName": ["BrightGift", "Bright Gift AI Gift Finder"],
+	"url": "https://bright-gift.com/",
+	"description": metaDescription,
+	"applicationCategory": "LifestyleApplication",
+	"operatingSystem": "Web",
+	"isAccessibleForFree": true,
+	"offers": {
+		"@type": "Offer",
+		"price": "0",
+		"priceCurrency": "USD"
+	},
+	"featureList": [
+		"AI gift idea generator",
+		"Gift finder by recipient",
+		"Budget-aware gift suggestions",
+		"Occasion and interest-based gift recommendations",
+		"Prefilled generator paths for holiday, coworker, housewarming, and hard-to-shop-for gift ideas"
+	]
 };
 
 // Organization schema
@@ -120,12 +137,13 @@ const faqData = {
 	title="Free AI Gift Idea Generator by Recipient, Budget & Occasion"
 	description={metaDescription}
 	image="/images/homepage-banner.webp"
-	keywords={["AI gift idea generator", "free AI gift generator", "gift ideas by budget", "gift finder by recipient", "personalized gift recommendations", "gift ideas for girlfriend", "coworker gifts under 25", "housewarming gifts under 75", "remote worker gifts", "last minute gift ideas", "birthday gift ideas", "holiday gifts", "unique gift ideas", "thoughtful gifts", "gift guide"]}
+	keywords={["AI gift idea generator", "free AI gift generator", "gift generator free", "present picker", "gift helper", "random gift generator", "christmas gift idea generator", "gift ideas by budget", "gift finder by recipient", "personalized gift recommendations", "gift ideas for girlfriend", "coworker gifts under 25", "housewarming gifts under 75", "remote worker gifts", "last minute gift ideas", "birthday gift ideas", "holiday gifts", "unique gift ideas", "thoughtful gifts", "gift guide"]}
 	canonical="https://bright-gift.com/"
 	ogType="website"
 	twitterCard="summary_large_image"
 >
 	<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+	<script type="application/ld+json" set:html={JSON.stringify(appData)} />
 	<script type="application/ld+json" set:html={JSON.stringify(organizationData)} />
 	<script type="application/ld+json" set:html={JSON.stringify(breadcrumbData)} />
 	<script type="application/ld+json" set:html={JSON.stringify(faqData)} />
@@ -157,6 +175,9 @@ const faqData = {
 					<div class="bg-white/90 backdrop-blur-sm rounded-2xl p-4 md:p-5 shadow-lg border-2 border-[#A3E4DB] mb-4">
 						<p class="text-base md:text-lg font-inter text-[#1C2E4A] font-semibold leading-relaxed">
 							Bright Gift is a <span class="text-[#FF6B6B]">free AI tool</span> that helps you find the perfect gift in <span class="text-[#FF6B6B]">under 60 seconds</span> based on who you're shopping for, their interests, and your budget.
+						</p>
+						<p class="mt-3 text-sm md:text-base font-inter text-[#1C2E4A]/80 leading-relaxed">
+							Use it as a free gift generator, present picker, gift helper, random gift generator, or Christmas gift idea generator when a normal gift list is too broad.
 						</p>
 					</div>
 
@@ -653,6 +674,7 @@ const faqData = {
 								<li><a class="inline-flex rounded-full bg-[#FEF2D3] px-3 py-2 font-semibold text-[#1C2E4A] transition hover:bg-[#FFDE59] focus:outline-none focus:ring-4 focus:ring-[#FFDE59]" href="/blog/gifts-under-25-for-coworkers/">Coworkers Under $25</a></li>
 								<li><a class="inline-flex rounded-full bg-[#FEF2D3] px-3 py-2 font-semibold text-[#1C2E4A] transition hover:bg-[#FFDE59] focus:outline-none focus:ring-4 focus:ring-[#FFDE59]" href="/blog/25-thoughtful-housewarming-gifts-for-new-homeowners-under-75/">Housewarming Under $75</a></li>
 								<li><a class="inline-flex rounded-full bg-[#FEF2D3] px-3 py-2 font-semibold text-[#1C2E4A] transition hover:bg-[#FFDE59] focus:outline-none focus:ring-4 focus:ring-[#FFDE59]" href="/blog/gifts-for-remote-workers-under-50/">Remote Workers Under $50</a></li>
+								<li><a class="inline-flex rounded-full bg-[#FEF2D3] px-3 py-2 font-semibold text-[#1C2E4A] transition hover:bg-[#FFDE59] focus:outline-none focus:ring-4 focus:ring-[#FFDE59]" href="/gifts-for-parents-who-have-everything/">Parents Who Have Everything</a></li>
 								<li><a class="inline-flex rounded-full bg-[#FEF2D3] px-3 py-2 font-semibold text-[#1C2E4A] transition hover:bg-[#FFDE59] focus:outline-none focus:ring-4 focus:ring-[#FFDE59]" href="/holiday-gift-ideas/">Holiday Gift Ideas</a></li>
 							</ul>
 						</div>

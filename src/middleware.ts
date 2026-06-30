@@ -1,11 +1,34 @@
 import type { MiddlewareHandler } from 'astro';
 
-export const onRequest: MiddlewareHandler = (context, next) => {
+const generatorPrefillParams = new Set([
+  'recipient',
+  'interests',
+  'budget',
+  'styles',
+  'source_cta',
+  'source_variant',
+  'source_experiment'
+]);
+
+export const onRequest: MiddlewareHandler = async (context, next) => {
   const url = new URL(context.request.url);
   
   // Only handle GET requests
   if (context.request.method !== 'GET') {
     return next();
+  }
+
+  const isGeneratorLanding = url.pathname === '/' || url.pathname === '/gift-idea-generator' || url.pathname === '/gift-idea-generator/';
+  const hasGeneratorPrefillParams = [...url.searchParams.keys()].some((param) => generatorPrefillParams.has(param));
+
+  if (isGeneratorLanding && hasGeneratorPrefillParams) {
+    const response = await next();
+    const canonicalPath = url.pathname === '/' ? '/' : '/gift-idea-generator/';
+
+    response.headers.set('X-Robots-Tag', 'noindex, follow');
+    response.headers.append('Link', `<https://bright-gift.com${canonicalPath}>; rel="canonical"`);
+
+    return response;
   }
   
   // Skip redirects for:
