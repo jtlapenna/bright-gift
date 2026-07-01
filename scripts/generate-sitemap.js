@@ -10,6 +10,38 @@ const {
   shouldIncludeBlogPostInSitemap
 } = require('./utilities/canonical-url-policy');
 
+const staticPages = [
+  { url: '/', priority: '1.0', changefreq: 'daily' },
+  { url: '/gift-idea-generator/', priority: '0.9', changefreq: 'weekly' },
+  { url: '/blog/', priority: '0.8', changefreq: 'weekly' },
+  { url: '/category/gift-guides/', priority: '0.8', changefreq: 'weekly' },
+  { url: '/category/gift-tips/', priority: '0.8', changefreq: 'weekly' },
+  { url: '/unique-gift-ideas/', priority: '0.7', changefreq: 'monthly' },
+  { url: '/thoughtful-gift-ideas/', priority: '0.7', changefreq: 'monthly' },
+  { url: '/last-minute-gift-ideas/', priority: '0.7', changefreq: 'monthly' },
+  { url: '/holiday-gift-ideas/', priority: '0.8', changefreq: 'weekly' },
+  { url: '/last-minute-christmas-gifts/', priority: '0.8', changefreq: 'weekly' },
+  { url: '/gift-ideas-by-recipient/', priority: '0.8', changefreq: 'monthly' },
+  { url: '/gift-ideas-by-budget/', priority: '0.8', changefreq: 'monthly' },
+  { url: '/gift-ideas-by-occasion/', priority: '0.8', changefreq: 'monthly' },
+  { url: '/gift-ideas-by-interest/', priority: '0.8', changefreq: 'monthly' },
+  { url: '/gifts-under-50/', priority: '0.7', changefreq: 'monthly' },
+  { url: '/gifts-under-25/', priority: '0.8', changefreq: 'monthly' },
+  { url: '/gifts-for-coworkers-under-25/', priority: '0.8', changefreq: 'monthly' },
+  { url: '/secret-santa-gifts/', priority: '0.8', changefreq: 'weekly' },
+  { url: '/christmas-gifts-for-girlfriend/', priority: '0.8', changefreq: 'weekly' },
+  { url: '/gift-ideas-for-women/', priority: '0.7', changefreq: 'monthly' },
+  { url: '/gifts-for-parents-who-have-everything/', priority: '0.8', changefreq: 'monthly' },
+  { url: '/housewarming-gifts/', priority: '0.8', changefreq: 'monthly' },
+  { url: '/gifts-for-people-who-have-everything/', priority: '0.7', changefreq: 'monthly' },
+  { url: '/gift-ideas-for-hard-to-shop-for-people/', priority: '0.7', changefreq: 'monthly' },
+  { url: '/care-calculator/', priority: '0.5', changefreq: 'monthly' },
+  { url: '/privacy/', priority: '0.3', changefreq: 'monthly' },
+  { url: '/terms/', priority: '0.3', changefreq: 'monthly' },
+  { url: '/contact/', priority: '0.3', changefreq: 'monthly' },
+  { url: '/data-deletion/', priority: '0.3', changefreq: 'monthly' }
+];
+
 // Function to get all blog posts (excluding drafts)
 function getBlogPosts() {
   const blogDir = path.join(__dirname, '../src/content/blog');
@@ -58,29 +90,6 @@ function getBlogPosts() {
 // Function to generate sitemap XML
 function generateSitemap() {
   const blogPosts = getBlogPosts();
-  
-  // Static pages (with trailing slashes)
-  const staticPages = [
-    { url: '/', priority: '1.0', changefreq: 'daily' },
-    { url: '/gift-idea-generator/', priority: '0.9', changefreq: 'weekly' },
-    { url: '/blog/', priority: '0.8', changefreq: 'weekly' },
-    { url: '/category/gift-guides/', priority: '0.8', changefreq: 'weekly' },
-    { url: '/category/gift-tips/', priority: '0.8', changefreq: 'weekly' },
-    { url: '/unique-gift-ideas/', priority: '0.7', changefreq: 'monthly' },
-    { url: '/thoughtful-gift-ideas/', priority: '0.7', changefreq: 'monthly' },
-    { url: '/last-minute-gift-ideas/', priority: '0.7', changefreq: 'monthly' },
-    { url: '/gift-ideas-by-recipient/', priority: '0.8', changefreq: 'monthly' },
-    { url: '/gift-ideas-by-budget/', priority: '0.8', changefreq: 'monthly' },
-    { url: '/gift-ideas-by-occasion/', priority: '0.8', changefreq: 'monthly' },
-    { url: '/gift-ideas-by-interest/', priority: '0.8', changefreq: 'monthly' },
-    { url: '/gifts-under-50/', priority: '0.7', changefreq: 'monthly' },
-    { url: '/gifts-for-people-who-have-everything/', priority: '0.7', changefreq: 'monthly' },
-    { url: '/gift-ideas-for-hard-to-shop-for-people/', priority: '0.7', changefreq: 'monthly' },
-    { url: '/privacy/', priority: '0.3', changefreq: 'monthly' },
-    { url: '/terms/', priority: '0.3', changefreq: 'monthly' },
-    { url: '/contact/', priority: '0.3', changefreq: 'monthly' },
-    { url: '/data-deletion/', priority: '0.3', changefreq: 'monthly' }
-  ];
   
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
@@ -131,9 +140,8 @@ try {
   fs.writeFileSync(outputPath, sitemap);
   
   const blogPosts = getBlogPosts();
-  const staticPageCount = 19;
   console.log(`✅ Sitemap generated successfully!`);
-  console.log(`📊 Total URLs: ${staticPageCount + blogPosts.length} (${staticPageCount} static + ${blogPosts.length} blog posts)`);
+  console.log(`📊 Total URLs: ${staticPages.length + blogPosts.length} (${staticPages.length} static + ${blogPosts.length} blog posts)`);
   console.log(`📁 Output: ${outputPath}`);
   
 } catch (error) {

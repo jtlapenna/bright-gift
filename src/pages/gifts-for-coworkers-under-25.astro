@@ -1,0 +1,180 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-coworker-under-25-202606';
+
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'coworker, teammate, manager, or Secret Santa recipient',
+	interests: 'desk accessories, coffee, tea, snacks, office comfort, practical work gifts, low-pressure gifts',
+	budget: 25,
+	styles: 'practical,thoughtful',
+	sourceCta: 'coworker_under_25_hero',
+	sourceVariant: 'coworker_under_25',
+	sourceExperiment: experimentId
+});
+
+const safeCoworkerHref = buildGeneratorPrefillHref({
+	recipient: 'coworker I do not know well',
+	interests: 'coffee, tea, snacks, desk accessories, office supplies, useful small gifts',
+	budget: 25,
+	styles: 'practical,thoughtful',
+	sourceCta: 'coworker_under_25_prompt',
+	sourceVariant: 'safe_coworker_under_25',
+	sourceExperiment: experimentId
+});
+
+const managerHref = buildGeneratorPrefillHref({
+	recipient: 'manager or team lead',
+	interests: 'coffee, notebooks, desk organization, professional accessories, useful office gifts',
+	budget: 25,
+	styles: 'professional,thoughtful',
+	sourceCta: 'coworker_under_25_prompt',
+	sourceVariant: 'manager_under_25',
+	sourceExperiment: experimentId
+});
+
+const remoteCoworkerHref = buildGeneratorPrefillHref({
+	recipient: 'remote coworker',
+	interests: 'home office, coffee, desk comfort, snacks, video call setup, small useful gifts',
+	budget: 25,
+	styles: 'practical,cozy',
+	sourceCta: 'coworker_under_25_prompt',
+	sourceVariant: 'remote_coworker_under_25',
+	sourceExperiment: experimentId
+});
+
+const secretSantaHref = buildGeneratorPrefillHref({
+	recipient: 'coworker for Secret Santa',
+	interests: 'office gift exchange, snacks, coffee, desk accessories, cozy winter gifts, safe funny gifts',
+	budget: 25,
+	styles: 'practical,quirky',
+	sourceCta: 'coworker_under_25_prompt',
+	sourceVariant: 'secret_santa_coworker_under_25',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Coworker gift guide with Amazon links',
+		description: 'A product-style guide with direct sponsored Amazon search paths for desk, coffee, snack, and office gifts.',
+		href: '/blog/gifts-under-25-for-coworkers/',
+		label: 'Product guide',
+		tags: ['Amazon', 'office', 'under $25']
+	},
+	{
+		title: 'Gifts under $25',
+		description: 'The broader budget hub for coworkers, teachers, Secret Santa, stocking stuffers, and casual recipients.',
+		href: '/gifts-under-25/',
+		label: 'Budget hub',
+		tags: ['budget', 'small gifts', 'under $25']
+	},
+	{
+		title: 'Secret Santa gifts',
+		description: 'Holiday exchange ideas for coworkers, teams, and people you do not know well.',
+		href: '/secret-santa-gifts/',
+		label: 'Holiday',
+		tags: ['Secret Santa', 'Q4', 'coworker']
+	}
+];
+
+const sections = [
+	{
+		title: 'Coworker gifts by office relationship',
+		description: 'The safest coworker gift depends on how well you know the person and whether the gift is public, private, or part of an exchange.',
+		links: [
+			{
+				title: 'Safe gifts for a coworker you barely know',
+				description: 'Useful, consumable, and low-pressure ideas that will not feel too personal.',
+				href: safeCoworkerHref,
+				label: 'Open finder',
+				tags: ['safe', 'office', 'under $25']
+			},
+			{
+				title: 'Gifts for a manager under $25',
+				description: 'Professional, modest, and practical ideas for a team lead or supervisor.',
+				href: managerHref,
+				label: 'Open finder',
+				tags: ['manager', 'professional', 'under $25']
+			},
+			{
+				title: 'Remote coworker gifts under $25',
+				description: 'Home-office comfort, coffee, snacks, and useful desk upgrades for work-from-home teammates.',
+				href: remoteCoworkerHref,
+				label: 'Open finder',
+				tags: ['remote work', 'home office', 'useful']
+			}
+		]
+	},
+	{
+		title: 'Workplace gift situations',
+		description: 'Use these lanes when the coworker gift has a timing rule, budget rule, or holiday exchange attached.',
+		links: [
+			{
+				title: 'Coworker Secret Santa gifts under $25',
+				description: 'Office-safe exchange gifts that stay useful, lightly fun, and within the usual budget.',
+				href: secretSantaHref,
+				label: 'Open finder',
+				tags: ['Secret Santa', 'holiday', 'office']
+			},
+			{
+				title: 'Last-minute coworker gifts',
+				description: 'Fast-shipping and same-day-friendly paths when you need a safe backup.',
+				href: '/last-minute-gift-ideas/',
+				label: 'Fast path',
+				tags: ['last minute', 'quick', 'work']
+			},
+			{
+				title: 'Teacher and staff gifts',
+				description: 'Adjacent professional gift ideas for school staff, team helpers, and appreciation moments.',
+				href: '/blog/best-gifts-for-teachers/',
+				label: 'Staff gifts',
+				tags: ['teacher', 'staff', 'thank you']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What are good gifts for coworkers under $25?',
+		answer: 'The safest coworker gifts under $25 are practical, consumable, or desk-friendly: coffee or tea samplers, snack boxes, insulated mugs, small organizers, notebooks, low-maintenance plants, and useful workday comfort items.'
+	},
+	{
+		question: 'How much should I spend on a coworker gift?',
+		answer: 'For most coworkers, $15 to $25 is enough. It feels thoughtful without making the exchange uncomfortable, especially for birthdays, thank-yous, Secret Santa, or casual appreciation.'
+	},
+	{
+		question: 'What coworker gifts should I avoid?',
+		answer: 'Avoid clothing sizes, perfume, political jokes, intimate gifts, alcohol unless you know it is welcome, and anything that creates desk clutter or awkward attention.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Gifts for Coworkers Under $25"
+	metaTitle="Gifts for Coworkers Under $25 | BrightGift"
+	description="Find gifts for coworkers under $25, including safe office gifts, Secret Santa gifts, manager gifts, remote coworker gifts, and practical desk-friendly ideas."
+	canonicalPath="/gifts-for-coworkers-under-25/"
+	eyebrow="Workplace gift finder"
+	heroTitle="Coworker gifts under $25 that feel thoughtful, not awkward."
+	intro="Coworker gifts work best when they are useful, modest, and easy to enjoy at work. Start with the exact office relationship, then use the BrightGift finder or the Amazon-linked guide to move from idea to purchase."
+	updatedAt="2026-06-30"
+	keywords={['gifts for coworkers under $25', 'coworker gifts under 25', 'gifts under 25 for coworkers', 'office gifts under 25', 'Secret Santa gifts for coworkers under 25']}
+	ctaVariant="coworker_under_25"
+	primaryCtaLabel="Find coworker gifts under $25"
+	primaryCtaHref={heroHref}
+	footerCtaHref={heroHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Choose the coworker gift situation"
+	generatorPromptDescription="The right $25 gift changes depending on whether this is a manager, remote teammate, Secret Santa exchange, or a coworker you barely know."
+	generatorPrompts={[
+		{ title: 'Safe coworker gifts under $25', description: 'Practical, low-pressure ideas for someone you do not know well.', href: safeCoworkerHref, ctaVariant: 'safe_coworker_under_25', label: 'Safe' },
+		{ title: 'Manager gifts under $25', description: 'Modest, professional ideas for a team lead or supervisor.', href: managerHref, ctaVariant: 'manager_under_25', label: 'Manager' },
+		{ title: 'Remote coworker gifts under $25', description: 'Work-from-home desk, coffee, snack, and comfort ideas.', href: remoteCoworkerHref, ctaVariant: 'remote_coworker_under_25', label: 'Remote' },
+		{ title: 'Coworker Secret Santa gifts', description: 'Office-safe exchange gifts that stay within the usual budget.', href: secretSantaHref, ctaVariant: 'secret_santa_coworker_under_25', label: 'Secret Santa' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>
