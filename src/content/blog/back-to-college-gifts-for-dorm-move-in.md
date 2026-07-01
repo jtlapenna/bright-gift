@@ -19,11 +19,11 @@ keywords:
   - college care package gifts
   - dorm essentials gifts
 image: >-
-  /images/blog/back-to-college-gifts-for-dorm-move-in/back-to-college-gifts-for-dorm-move-in-banner.webp
+  /images/blog/back-to-college-gifts-for-dorm-move-in/back-to-college-dorm-move-in-banner-v2.webp
 imageWidth: 1536
 imageHeight: 1024
 ogImage: >-
-  /images/blog/back-to-college-gifts-for-dorm-move-in/back-to-college-gifts-for-dorm-move-in-og.webp
+  /images/blog/back-to-college-gifts-for-dorm-move-in/back-to-college-dorm-move-in-og-v2.webp
 ogImageWidth: 1536
 ogImageHeight: 1024
 tags:
