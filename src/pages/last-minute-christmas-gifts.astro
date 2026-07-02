@@ -48,6 +48,15 @@ const parentHref = buildGeneratorPrefillHref({
 	sourceVariant: 'last_minute_christmas_parent',
 	sourceExperiment: experimentId
 });
+const digitalHref = buildGeneratorPrefillHref({
+	recipient: 'friend or family member',
+	interests: 'digital gifts, subscriptions, audiobook credits, bookstore gift card, food delivery, local pickup',
+	budget: 50,
+	styles: 'practical,thoughtful',
+	sourceCta: 'last_minute_christmas_prompt',
+	sourceVariant: 'digital_last_minute_gifts',
+	sourceExperiment: experimentId
+});
 
 const featuredLinks = [
 	{
@@ -77,6 +86,13 @@ const featuredLinks = [
 		href: '/christmas-gifts-for-girlfriend/',
 		label: 'Girlfriend',
 		tags: ['Christmas', 'girlfriend', 'romantic']
+	},
+	{
+		title: 'Personalized Christmas gifts',
+		description: 'Custom gifts that still work when you choose fast-shipping formats, digital proofing, or simple engraving.',
+		href: '/personalized-christmas-gifts/',
+		label: 'Personalized',
+		tags: ['custom', 'Christmas', 'keepsake']
 	}
 ];
 
@@ -105,6 +121,13 @@ const sections = [
 				href: parentHref,
 				label: 'Prefilled finder',
 				tags: ['parents', 'family', 'holiday']
+			},
+			{
+				title: 'Digital Christmas gifts',
+				description: 'Audiobooks, subscriptions, bookstore credits, food delivery, and local pickup ideas when shipping is risky.',
+				href: digitalHref,
+				label: 'Prefilled finder',
+				tags: ['digital', 'fast', 'pickup']
 			}
 		]
 	},
@@ -139,6 +162,13 @@ const sections = [
 				href: '/christmas-gifts-for-book-lovers/',
 				label: 'Book gifts',
 				tags: ['books', 'Christmas', 'fast']
+			},
+			{
+				title: 'Gifts for coworkers under $25',
+				description: 'Office-safe gifts that work for last-minute workplace exchanges and team thank-yous.',
+				href: '/gifts-for-coworkers-under-25/',
+				label: 'Coworkers',
+				tags: ['office', 'under $25', 'safe']
 			}
 		]
 	}
@@ -168,7 +198,7 @@ const faqs = [
 	eyebrow="Last-minute Christmas finder"
 	heroTitle="Last-minute Christmas gifts that still feel considered."
 	intro="When the shipping clock is loud, choose a safer category first: useful, cozy, consumable, digital, or easy to pick up. This page routes urgent Christmas shopping into recipient-specific guides and prefilled BrightGift prompts."
-	updatedAt="2026-06-30"
+	updatedAt="2026-07-02"
 	keywords={['last-minute Christmas gifts', 'last minute Christmas gifts', 'last-minute holiday gifts', 'Christmas gift ideas', 'fast shipping gifts', 'Secret Santa gifts']}
 	ctaVariant="last_minute_christmas_under_50"
 	primaryCtaLabel="Open the Christmas gift finder"
@@ -198,6 +228,13 @@ const faqs = [
 			href: parentHref,
 			ctaVariant: 'last_minute_christmas_parent',
 			label: 'Parents'
+		},
+		{
+			title: 'Digital or pickup gifts',
+			description: 'Fast options when delivery timing is uncertain.',
+			href: digitalHref,
+			ctaVariant: 'digital_last_minute_gifts',
+			label: 'Digital'
 		}
 	]}
 	featuredLinks={featuredLinks}
