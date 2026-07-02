@@ -1,0 +1,186 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-personalized-christmas-202607';
+
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'holiday gift recipient',
+	interests: 'personalized Christmas gifts, custom book gifts, photo gifts, monogrammed gifts, keepsakes',
+	budget: 75,
+	styles: 'thoughtful,personalized',
+	sourceCta: 'personalized_christmas_hero',
+	sourceVariant: 'personalized_christmas_under_75',
+	sourceExperiment: experimentId
+});
+
+const girlfriendHref = buildGeneratorPrefillHref({
+	recipient: 'girlfriend',
+	interests: 'personalized Christmas gifts, jewelry, photos, custom books, romantic keepsakes',
+	budget: 100,
+	styles: 'romantic,personalized',
+	sourceCta: 'personalized_christmas_prompt',
+	sourceVariant: 'personalized_christmas_girlfriend',
+	sourceExperiment: experimentId
+});
+
+const parentHref = buildGeneratorPrefillHref({
+	recipient: 'parent',
+	interests: 'family memories, photo books, personalized ornaments, custom calendars, keepsakes',
+	budget: 75,
+	styles: 'sentimental,thoughtful',
+	sourceCta: 'personalized_christmas_prompt',
+	sourceVariant: 'personalized_christmas_parent',
+	sourceExperiment: experimentId
+});
+
+const bookHref = buildGeneratorPrefillHref({
+	recipient: 'book lover',
+	interests: 'personalized book gifts, reading journal, custom book stamp, book accessories, cozy reading gifts',
+	budget: 50,
+	styles: 'cozy,personalized',
+	sourceCta: 'personalized_christmas_prompt',
+	sourceVariant: 'personalized_book_gifts',
+	sourceExperiment: experimentId
+});
+
+const coworkerHref = buildGeneratorPrefillHref({
+	recipient: 'coworker',
+	interests: 'personalized office gifts, desk accessories, custom mug, notebook, Secret Santa',
+	budget: 25,
+	styles: 'practical,personalized',
+	sourceCta: 'personalized_christmas_prompt',
+	sourceVariant: 'personalized_coworker_under_25',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Christmas gifts for girlfriend',
+		description: 'Romantic, cozy, practical, and personal holiday gift paths for your partner.',
+		href: '/christmas-gifts-for-girlfriend/',
+		label: 'Girlfriend',
+		tags: ['Christmas', 'girlfriend', 'personalized']
+	},
+	{
+		title: 'Gifts for parents who have everything',
+		description: 'Family-memory, low-clutter, experience, and personalized gift ideas for parents.',
+		href: '/gifts-for-parents-who-have-everything/',
+		label: 'Parents',
+		tags: ['parents', 'keepsake', 'family']
+	},
+	{
+		title: 'Secret Santa gifts',
+		description: 'Budget-safe personalized office gifts and lower-risk Christmas exchange ideas.',
+		href: '/secret-santa-gifts/',
+		label: 'Secret Santa',
+		tags: ['coworker', 'under $25', 'office']
+	},
+	{
+		title: 'Last-minute Christmas gifts',
+		description: 'Use this when personalization is no longer realistic and timing matters more.',
+		href: '/last-minute-christmas-gifts/',
+		label: 'Fast path',
+		tags: ['last minute', 'Christmas', 'backup']
+	}
+];
+
+const sections = [
+	{
+		title: 'Personalized Christmas gifts by recipient',
+		description: 'Personalization works when it reflects the relationship, not just a name on a product.',
+		links: [
+			{
+				title: 'Personalized Christmas gifts for girlfriend',
+				description: 'Romantic keepsakes, custom jewelry, photo gifts, book gifts, and date-night prompts.',
+				href: girlfriendHref,
+				label: 'Open finder',
+				tags: ['girlfriend', 'romantic', 'keepsake']
+			},
+			{
+				title: 'Personalized Christmas gifts for parents',
+				description: 'Photo books, family calendars, memory gifts, ornaments, and custom home gifts.',
+				href: parentHref,
+				label: 'Open finder',
+				tags: ['parents', 'family', 'photo gifts']
+			},
+			{
+				title: 'Personalized coworker gifts under $25',
+				description: 'Small office gifts that feel specific without being too intimate.',
+				href: coworkerHref,
+				label: 'Open finder',
+				tags: ['coworker', 'office', 'under $25']
+			}
+		]
+	},
+	{
+		title: 'Personalized book and keepsake gift paths',
+		description: 'Book-adjacent gifts can convert well because they are easy to personalize by taste, hobby, or routine.',
+		links: [
+			{
+				title: 'Personalized book gifts',
+				description: 'Reading journals, book stamps, custom bookplates, beautiful editions, and cozy reading add-ons.',
+				href: bookHref,
+				label: 'Book finder',
+				tags: ['books', 'reading', 'personalized']
+			},
+			{
+				title: 'Gift ideas for women',
+				description: 'Use this broader recipient page when the relationship is not girlfriend-specific.',
+				href: '/gift-ideas-for-women/',
+				label: 'Recipient hub',
+				tags: ['women', 'style', 'recipient']
+			},
+			{
+				title: 'Holiday gift ideas',
+				description: 'The main Q4 hub for Christmas, Secret Santa, parents, coworkers, and urgent shopping.',
+				href: '/holiday-gift-ideas/',
+				label: 'Holiday hub',
+				tags: ['Christmas', 'Q4', 'holiday']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What is a good personalized Christmas gift?',
+		answer: 'A good personalized Christmas gift connects to a real detail: a memory, hobby, pet, home, book taste, travel plan, family moment, or daily routine. A name alone is not enough.'
+	},
+	{
+		question: 'Are personalized gifts risky?',
+		answer: 'They can be risky when you guess on size, taste, decor, or relationship tone. Safer personalized gifts include photo books, ornaments, custom calendars, reading journals, bookplates, and low-clutter keepsakes.'
+	},
+	{
+		question: 'What if it is too late for a personalized gift?',
+		answer: 'Move to a fast-shipping or digital category, then personalize the note. A good message can make a practical gift feel chosen instead of rushed.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Personalized Christmas Gifts"
+	metaTitle="Personalized Christmas Gifts | BrightGift"
+	description="Find personalized Christmas gifts, custom book gifts, photo gifts, keepsakes, girlfriend gifts, parent gifts, and coworker gifts with BrightGift AI gift finder paths."
+	canonicalPath="/personalized-christmas-gifts/"
+	eyebrow="Personalized Christmas finder"
+	heroTitle="Personalized Christmas gifts that feel specific for the right reason."
+	intro="The strongest personalized gifts are not just customized. They reflect a memory, reading habit, home routine, pet, family moment, or relationship detail. Use this page to choose the right personalized lane, then open a prefilled BrightGift prompt when you need a faster shortlist."
+	updatedAt="2026-07-02"
+	keywords={['personalized Christmas gifts', 'personalized book gifts', 'custom Christmas gifts', 'photo gifts', 'personalized gifts for girlfriend', 'personalized gifts for parents']}
+	ctaVariant="personalized_christmas_under_75"
+	primaryCtaLabel="Open the personalized gift finder"
+	primaryCtaHref={heroHref}
+	footerCtaHref={heroHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Choose the personalized gift angle"
+	generatorPromptDescription="These prefilled paths make personalization safer by starting with the relationship and the type of personal detail."
+	generatorPrompts={[
+		{ title: 'Girlfriend personalized gifts', description: 'Romantic keepsakes, jewelry, photo gifts, custom books, and date-night ideas.', href: girlfriendHref, ctaVariant: 'personalized_christmas_girlfriend', label: 'Girlfriend' },
+		{ title: 'Parents and family memories', description: 'Photo books, ornaments, family calendars, and low-clutter keepsakes.', href: parentHref, ctaVariant: 'personalized_christmas_parent', label: 'Parents' },
+		{ title: 'Personalized book gifts', description: 'Reading journals, bookplates, beautiful editions, and cozy reading add-ons.', href: bookHref, ctaVariant: 'personalized_book_gifts', label: 'Books' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>
