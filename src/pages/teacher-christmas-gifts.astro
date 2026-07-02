@@ -1,0 +1,172 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-q4-expansion-202607';
+
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'teacher',
+	interests: 'Christmas gift, classroom supplies, coffee, desk organization, thank you note, useful teacher gifts',
+	budget: 35,
+	styles: 'practical,thoughtful',
+	sourceCta: 'teacher_christmas_hero',
+	sourceVariant: 'teacher_christmas_gifts',
+	sourceExperiment: experimentId
+});
+
+const under25Href = buildGeneratorPrefillHref({
+	recipient: 'teacher',
+	interests: 'teacher Christmas gift under $25, coffee, pens, classroom supplies, desk organizer, thank you card',
+	budget: 25,
+	styles: 'practical,thoughtful',
+	sourceCta: 'teacher_christmas_prompt',
+	sourceVariant: 'teacher_christmas_under_25',
+	sourceExperiment: experimentId
+});
+
+const groupGiftHref = buildGeneratorPrefillHref({
+	recipient: 'teacher from a class group',
+	interests: 'group gift, gift card, classroom supplies, tote bag, coffee, personalized thank you',
+	budget: 75,
+	styles: 'practical,appreciative',
+	sourceCta: 'teacher_christmas_prompt',
+	sourceVariant: 'teacher_group_gift',
+	sourceExperiment: experimentId
+});
+
+const lastMinuteHref = buildGeneratorPrefillHref({
+	recipient: 'teacher',
+	interests: 'last-minute teacher gift, gift card, coffee, snacks, desk supplies, printable thank you note',
+	budget: 30,
+	styles: 'practical,thoughtful',
+	sourceCta: 'teacher_christmas_prompt',
+	sourceVariant: 'last_minute_teacher_gift',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Best gifts for teachers',
+		description: 'A product-style teacher guide with direct Amazon and Bookshop shopping paths.',
+		href: '/blog/best-gifts-for-teachers/',
+		label: 'Product guide',
+		tags: ['Amazon', 'teacher', 'thank you']
+	},
+	{
+		title: 'Gifts under $25',
+		description: 'Budget-friendly gifts for teachers, coworkers, Secret Santa, and casual holiday moments.',
+		href: '/gifts-under-25/',
+		label: 'Budget hub',
+		tags: ['under $25', 'teacher', 'small gifts']
+	},
+	{
+		title: 'Stocking stuffers under $25',
+		description: 'Small classroom-safe add-ons, coffee gifts, and desk extras.',
+		href: '/stocking-stuffers-under-25/',
+		label: 'Small gifts',
+		tags: ['stocking stuffers', 'under $25', 'Christmas']
+	},
+	{
+		title: 'Office holiday gifts',
+		description: 'A neighboring professional-gift path for staff, teams, and workplace exchanges.',
+		href: '/office-holiday-gifts/',
+		label: 'Work gifts',
+		tags: ['office', 'staff', 'holiday']
+	}
+];
+
+const sections = [
+	{
+		title: 'Teacher Christmas gifts by situation',
+		description: 'Teacher gifts should feel useful, appreciative, and classroom-safe rather than overly personal.',
+		links: [
+			{
+				title: 'Teacher Christmas gifts under $25',
+				description: 'Coffee, pens, classroom supplies, desk organizers, and small thank-you bundles.',
+				href: under25Href,
+				label: 'Open finder',
+				tags: ['under $25', 'teacher', 'practical']
+			},
+			{
+				title: 'Class group gifts for teachers',
+				description: 'Higher-budget ideas when multiple families are contributing to one gift.',
+				href: groupGiftHref,
+				label: 'Open finder',
+				tags: ['group gift', 'class', 'teacher']
+			},
+			{
+				title: 'Last-minute teacher gifts',
+				description: 'Useful gifts that can still work when the school holiday deadline is close.',
+				href: lastMinuteHref,
+				label: 'Open finder',
+				tags: ['last minute', 'Christmas', 'school']
+			}
+		]
+	},
+	{
+		title: 'Professional gift paths to browse next',
+		description: 'Use these when the teacher gift overlaps with staff appreciation, coworkers, or low-pressure office gifts.',
+		links: [
+			{
+				title: 'Gifts for coworkers under $25',
+				description: 'Office-safe gifts for other professional relationships.',
+				href: '/gifts-for-coworkers-under-25/',
+				label: 'Coworkers',
+				tags: ['office', 'under $25', 'safe']
+			},
+			{
+				title: 'Secret Santa gifts',
+				description: 'Low-pressure holiday exchange gifts for people you may not know well.',
+				href: '/secret-santa-gifts/',
+				label: 'Secret Santa',
+				tags: ['holiday', 'exchange', 'under $25']
+			},
+			{
+				title: 'Last-minute Christmas gifts',
+				description: 'Fast-shipping and digital fallback paths for urgent holiday shopping.',
+				href: '/last-minute-christmas-gifts/',
+				label: 'Last minute',
+				tags: ['Christmas', 'fast', 'backup']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What do teachers actually want for Christmas?',
+		answer: 'Most teachers appreciate practical gifts, gift cards, coffee or lunch support, classroom supplies, useful desk tools, and a sincere note. Avoid overly personal items unless you know the teacher well.'
+	},
+	{
+		question: 'How much should I spend on a teacher Christmas gift?',
+		answer: 'For an individual family, $15 to $35 is usually comfortable. For a class group gift, a higher budget can work because the cost is shared.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Teacher Christmas Gifts"
+	metaTitle="Teacher Christmas Gifts | BrightGift"
+	description="Find teacher Christmas gifts by budget and situation, including under-$25 teacher gifts, class group gifts, last-minute ideas, and classroom-safe picks."
+	canonicalPath="/teacher-christmas-gifts/"
+	eyebrow="Teacher gift finder"
+	heroTitle="Teacher Christmas gifts that feel useful, appreciative, and classroom-safe."
+	intro="A strong teacher gift says thank you without creating clutter or awkwardness. Start with the budget and whether this is from one family, a class group, or a last-minute school deadline."
+	updatedAt="2026-07-02"
+	keywords={['teacher Christmas gifts', 'Christmas gifts for teachers', 'teacher gifts under 25', 'teacher appreciation gifts', 'last minute teacher gifts']}
+	ctaVariant="teacher_christmas_gifts"
+	primaryCtaLabel="Find teacher Christmas gifts"
+	primaryCtaHref={heroHref}
+	footerCtaHref={heroHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Pick the teacher gift situation"
+	generatorPromptDescription="A teacher gift gets easier when the budget, deadline, and gift-giver are clear."
+	generatorPrompts={[
+		{ title: 'Teacher gifts under $25', description: 'Small, useful, classroom-safe ideas.', href: under25Href, ctaVariant: 'teacher_christmas_under_25', label: 'Under $25' },
+		{ title: 'Class group gifts', description: 'Higher-budget ideas from multiple families.', href: groupGiftHref, ctaVariant: 'teacher_group_gift', label: 'Group' },
+		{ title: 'Last-minute teacher gifts', description: 'Fast, practical Christmas backup ideas.', href: lastMinuteHref, ctaVariant: 'last_minute_teacher_gift', label: 'Last minute' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>

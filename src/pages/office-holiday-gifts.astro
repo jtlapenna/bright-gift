@@ -1,0 +1,172 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-q4-expansion-202607';
+
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'coworker, manager, client, or team member',
+	interests: 'office holiday gifts, coffee, desk accessories, snacks, team gifts, Secret Santa, professional gifts',
+	budget: 35,
+	styles: 'professional,practical',
+	sourceCta: 'office_holiday_hero',
+	sourceVariant: 'office_holiday_gifts',
+	sourceExperiment: experimentId
+});
+
+const teamHref = buildGeneratorPrefillHref({
+	recipient: 'work team',
+	interests: 'office holiday team gifts, snacks, coffee bar, desk accessories, team appreciation, break room gifts',
+	budget: 100,
+	styles: 'practical,shareable',
+	sourceCta: 'office_holiday_prompt',
+	sourceVariant: 'team_holiday_gifts',
+	sourceExperiment: experimentId
+});
+
+const managerHref = buildGeneratorPrefillHref({
+	recipient: 'manager or team lead',
+	interests: 'professional holiday gift, coffee, notebook, desk organization, useful office gift',
+	budget: 40,
+	styles: 'professional,thoughtful',
+	sourceCta: 'office_holiday_prompt',
+	sourceVariant: 'manager_holiday_gifts',
+	sourceExperiment: experimentId
+});
+
+const clientHref = buildGeneratorPrefillHref({
+	recipient: 'client or business contact',
+	interests: 'professional holiday gift, gourmet snacks, coffee, desk gift, thank you gift, branded-safe gift',
+	budget: 50,
+	styles: 'professional,polished',
+	sourceCta: 'office_holiday_prompt',
+	sourceVariant: 'client_holiday_gifts',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Gifts for coworkers under $25',
+		description: 'The core office-safe gift page for coworkers, managers, remote teammates, and workplace exchanges.',
+		href: '/gifts-for-coworkers-under-25/',
+		label: 'Coworkers',
+		tags: ['office', 'under $25', 'coworker']
+	},
+	{
+		title: 'Secret Santa gifts',
+		description: 'Office gift-exchange ideas for low-pressure holiday buying.',
+		href: '/secret-santa-gifts/',
+		label: 'Gift exchange',
+		tags: ['Secret Santa', 'office', 'Q4']
+	},
+	{
+		title: 'Last-minute Christmas gifts',
+		description: 'Fast-shipping, digital, and local-pickup options when the office deadline is close.',
+		href: '/last-minute-christmas-gifts/',
+		label: 'Last minute',
+		tags: ['Christmas', 'fast', 'backup']
+	},
+	{
+		title: 'Teacher Christmas gifts',
+		description: 'A related staff-appreciation path for school and education gift moments.',
+		href: '/teacher-christmas-gifts/',
+		label: 'Staff',
+		tags: ['teacher', 'staff', 'holiday']
+	}
+];
+
+const sections = [
+	{
+		title: 'Office holiday gifts by relationship',
+		description: 'Workplace gifts need to be useful, modest, and appropriate for the relationship.',
+		links: [
+			{
+				title: 'Team holiday gifts',
+				description: 'Shareable snacks, coffee, break-room upgrades, and useful group-friendly gifts.',
+				href: teamHref,
+				label: 'Open finder',
+				tags: ['team', 'shareable', 'office']
+			},
+			{
+				title: 'Manager holiday gifts',
+				description: 'Professional, modest gifts for a manager or team lead without overdoing it.',
+				href: managerHref,
+				label: 'Open finder',
+				tags: ['manager', 'professional', 'holiday']
+			},
+			{
+				title: 'Client holiday gifts',
+				description: 'Polished, branded-safe gift ideas for clients and business contacts.',
+				href: clientHref,
+				label: 'Open finder',
+				tags: ['client', 'business', 'polished']
+			}
+		]
+	},
+	{
+		title: 'Budget and timing support pages',
+		description: 'Use these when the office gift has a price cap or a sudden deadline.',
+		links: [
+			{
+				title: 'Gifts under $25',
+				description: 'Small, useful gifts for coworkers, Secret Santa, staff, and casual recipients.',
+				href: '/gifts-under-25/',
+				label: 'Budget hub',
+				tags: ['under $25', 'budget', 'small gifts']
+			},
+			{
+				title: 'Stocking stuffers under $25',
+				description: 'Small office-safe holiday add-ons for desks, snacks, coffee, and cozy extras.',
+				href: '/stocking-stuffers-under-25/',
+				label: 'Stocking',
+				tags: ['small gifts', 'Christmas', 'under $25']
+			},
+			{
+				title: 'Gift ideas by budget',
+				description: 'Compare under-$25, under-$50, and under-$75 lanes before generating ideas.',
+				href: '/gift-ideas-by-budget/',
+				label: 'Budget',
+				tags: ['budget', 'under $50', 'under $75']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What are safe office holiday gifts?',
+		answer: 'Safe office holiday gifts are practical, consumable, modest, and not too personal: coffee, snacks, desk accessories, notebooks, small organizers, mugs, or shareable team treats.'
+	},
+	{
+		question: 'What office holiday gifts should I avoid?',
+		answer: 'Avoid clothing sizes, perfume, political jokes, intimate gifts, alcohol unless you know it is welcome, and expensive gifts that make the relationship feel awkward.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Office Holiday Gifts"
+	metaTitle="Office Holiday Gifts | BrightGift"
+	description="Find office holiday gifts for coworkers, managers, teams, clients, and Secret Santa exchanges with professional, budget-aware BrightGift finder paths."
+	canonicalPath="/office-holiday-gifts/"
+	eyebrow="Office holiday gift finder"
+	heroTitle="Office holiday gifts that feel professional, useful, and low-pressure."
+	intro="Workplace holiday gifts need a narrower lane than personal Christmas gifts. Use this page for coworkers, managers, team gifts, client gifts, Secret Santa, and last-minute office deadlines."
+	updatedAt="2026-07-02"
+	keywords={['office holiday gifts', 'holiday gifts for coworkers', 'workplace holiday gifts', 'client holiday gifts', 'team holiday gifts', 'Secret Santa gifts']}
+	ctaVariant="office_holiday_gifts"
+	primaryCtaLabel="Find office holiday gifts"
+	primaryCtaHref={heroHref}
+	footerCtaHref={heroHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Pick the office gift relationship"
+	generatorPromptDescription="The safest workplace gift depends on whether it is for one coworker, a manager, a team, or a client."
+	generatorPrompts={[
+		{ title: 'Team holiday gifts', description: 'Shareable office gifts for a whole team.', href: teamHref, ctaVariant: 'team_holiday_gifts', label: 'Team' },
+		{ title: 'Manager holiday gifts', description: 'Professional gifts for a team lead.', href: managerHref, ctaVariant: 'manager_holiday_gifts', label: 'Manager' },
+		{ title: 'Client holiday gifts', description: 'Polished gift ideas for business contacts.', href: clientHref, ctaVariant: 'client_holiday_gifts', label: 'Client' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>

@@ -1,0 +1,190 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-q4-expansion-202607';
+
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'family member, coworker, friend, or teen',
+	interests: 'stocking stuffers, small useful gifts, cozy gifts, snacks, beauty minis, desk gadgets, book accessories',
+	budget: 25,
+	styles: 'practical,cozy',
+	sourceCta: 'stocking_stuffers_hero',
+	sourceVariant: 'stocking_stuffers_under_25',
+	sourceExperiment: experimentId
+});
+
+const coworkerHref = buildGeneratorPrefillHref({
+	recipient: 'coworker',
+	interests: 'stocking stuffers, coffee, desk accessories, snacks, office gift exchange, useful small gifts',
+	budget: 25,
+	styles: 'practical,quirky',
+	sourceCta: 'stocking_stuffers_prompt',
+	sourceVariant: 'coworker_stocking_stuffers',
+	sourceExperiment: experimentId
+});
+
+const bookHref = buildGeneratorPrefillHref({
+	recipient: 'book lover',
+	interests: 'bookmarks, book light, reading journal, tea, cozy socks, bookstore gift card',
+	budget: 25,
+	styles: 'cozy,thoughtful',
+	sourceCta: 'stocking_stuffers_prompt',
+	sourceVariant: 'book_lover_stocking_stuffers',
+	sourceExperiment: experimentId
+});
+
+const teenHref = buildGeneratorPrefillHref({
+	recipient: 'teen or college student',
+	interests: 'small tech accessories, snacks, self-care, desk accessories, travel pouches, cozy gifts',
+	budget: 25,
+	styles: 'fun,practical',
+	sourceCta: 'stocking_stuffers_prompt',
+	sourceVariant: 'teen_stocking_stuffers',
+	sourceExperiment: experimentId
+});
+
+const lastMinuteHref = buildGeneratorPrefillHref({
+	recipient: 'family member',
+	interests: 'last-minute stocking stuffers, digital gifts, local pickup, snacks, coffee, self-care',
+	budget: 25,
+	styles: 'practical,thoughtful',
+	sourceCta: 'stocking_stuffers_prompt',
+	sourceVariant: 'last_minute_stocking_stuffers',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Gifts under $25',
+		description: 'The broader budget hub for stocking stuffers, coworkers, teachers, and casual recipients.',
+		href: '/gifts-under-25/',
+		label: 'Budget hub',
+		tags: ['under $25', 'small gifts', 'budget']
+	},
+	{
+		title: 'Secret Santa gifts',
+		description: 'Office-safe exchange gifts that overlap naturally with useful stocking stuffers.',
+		href: '/secret-santa-gifts/',
+		label: 'Gift exchange',
+		tags: ['Secret Santa', 'office', 'Q4']
+	},
+	{
+		title: 'Last-minute Christmas gifts',
+		description: 'Fast-shipping, digital, and local-pickup backup paths when the stocking still needs one more thing.',
+		href: '/last-minute-christmas-gifts/',
+		label: 'Last minute',
+		tags: ['Christmas', 'fast', 'backup']
+	},
+	{
+		title: 'Christmas gifts for book lovers',
+		description: 'Reader-friendly small gifts like book lights, bookmarks, journals, tea, and cozy extras.',
+		href: '/christmas-gifts-for-book-lovers/',
+		label: 'Readers',
+		tags: ['books', 'cozy', 'Christmas']
+	}
+];
+
+const sections = [
+	{
+		title: 'Stocking stuffers by recipient',
+		description: 'Small gifts work better when they match a real routine instead of becoming random filler.',
+		links: [
+			{
+				title: 'Coworker stocking stuffers under $25',
+				description: 'Desk-friendly, snackable, and office-safe gifts for workplace exchanges.',
+				href: coworkerHref,
+				label: 'Open finder',
+				tags: ['coworker', 'office', 'under $25']
+			},
+			{
+				title: 'Book-lover stocking stuffers',
+				description: 'Bookmarks, book lights, reading journals, tea, and cozy reading add-ons.',
+				href: bookHref,
+				label: 'Open finder',
+				tags: ['books', 'reader', 'cozy']
+			},
+			{
+				title: 'Teen and college stocking stuffers',
+				description: 'Small tech, snacks, pouches, desk extras, and self-care items with practical use.',
+				href: teenHref,
+				label: 'Open finder',
+				tags: ['teen', 'college', 'small gifts']
+			},
+			{
+				title: 'Last-minute stocking stuffers',
+				description: 'Fast backup ideas when shipping risk or timing matters more than novelty.',
+				href: lastMinuteHref,
+				label: 'Open finder',
+				tags: ['last minute', 'Christmas', 'fast']
+			}
+		]
+	},
+	{
+		title: 'Browse adjacent Christmas gift paths',
+		description: 'Use these when the stocking-stuffer budget expands into a fuller gift.',
+		links: [
+			{
+				title: 'Personalized Christmas gifts',
+				description: 'Custom and keepsake ideas when you want the gift to feel more specific.',
+				href: '/personalized-christmas-gifts/',
+				label: 'Personalized',
+				tags: ['custom', 'keepsake', 'Christmas']
+			},
+			{
+				title: 'Office holiday gifts',
+				description: 'Workplace-safe gifts for team exchanges, managers, and office holiday moments.',
+				href: '/office-holiday-gifts/',
+				label: 'Office',
+				tags: ['office', 'coworker', 'holiday']
+			},
+			{
+				title: 'Teacher Christmas gifts',
+				description: 'Useful, classroom-safe, and appreciation-focused holiday gifts for teachers.',
+				href: '/teacher-christmas-gifts/',
+				label: 'Teachers',
+				tags: ['teacher', 'thank you', 'school']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What makes a good stocking stuffer under $25?',
+		answer: 'The strongest stocking stuffers are useful, consumable, cozy, or tied to a small routine: snacks, tea, book accessories, desk tools, lip balm, mini self-care, or small tech accessories.'
+	},
+	{
+		question: 'How many stocking stuffers should I buy?',
+		answer: 'A few thoughtful small gifts are better than a pile of filler. Start with one useful item, one fun item, and one consumable item, then stop when the stocking feels full enough.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Stocking Stuffers Under $25"
+	metaTitle="Stocking Stuffers Under $25 | BrightGift"
+	description="Find stocking stuffers under $25 for coworkers, book lovers, teens, family, and last-minute Christmas shopping with prefilled BrightGift gift finder paths."
+	canonicalPath="/stocking-stuffers-under-25/"
+	eyebrow="Stocking stuffer finder"
+	heroTitle="Stocking stuffers under $25 that are useful, cozy, or actually fun."
+	intro="The best stocking stuffers do one small job well. Use this page for budget-friendly Christmas gifts that avoid junk-drawer filler and still route you toward specific, giftable ideas."
+	updatedAt="2026-07-02"
+	keywords={['stocking stuffers under 25', 'stocking stuffers under $25', 'Christmas stocking stuffers', 'small Christmas gifts', 'gifts under 25']}
+	ctaVariant="stocking_stuffers_under_25"
+	primaryCtaLabel="Find stocking stuffers"
+	primaryCtaHref={heroHref}
+	footerCtaHref={heroHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Choose the stocking-stuffer situation"
+	generatorPromptDescription="Small gifts land better when the recipient and buying deadline are clear."
+	generatorPrompts={[
+		{ title: 'Coworker stocking stuffers', description: 'Office-safe small gifts under $25.', href: coworkerHref, ctaVariant: 'coworker_stocking_stuffers', label: 'Coworker' },
+		{ title: 'Book-lover stocking stuffers', description: 'Reader accessories and cozy add-ons.', href: bookHref, ctaVariant: 'book_lover_stocking_stuffers', label: 'Books' },
+		{ title: 'Teen stocking stuffers', description: 'Small useful, fun, and practical ideas.', href: teenHref, ctaVariant: 'teen_stocking_stuffers', label: 'Teen' },
+		{ title: 'Last-minute stocking stuffers', description: 'Fast backup ideas for Christmas week.', href: lastMinuteHref, ctaVariant: 'last_minute_stocking_stuffers', label: 'Last minute' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>
