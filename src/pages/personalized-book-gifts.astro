@@ -1,0 +1,176 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-personalized-book-gifts-202607';
+
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'book lover',
+	interests: 'personalized book gifts, custom book stamp, reading journal, bookplates, cozy reading gifts',
+	budget: 50,
+	styles: 'cozy,personalized',
+	sourceCta: 'personalized_book_hero',
+	sourceVariant: 'personalized_book_gifts_under_50',
+	sourceExperiment: experimentId
+});
+
+const girlfriendHref = buildGeneratorPrefillHref({
+	recipient: 'girlfriend who loves books',
+	interests: 'personalized book gifts, romance books, reading journal, cozy blanket, custom bookplate',
+	budget: 75,
+	styles: 'romantic,cozy',
+	sourceCta: 'personalized_book_prompt',
+	sourceVariant: 'book_gifts_for_girlfriend',
+	sourceExperiment: experimentId
+});
+
+const parentHref = buildGeneratorPrefillHref({
+	recipient: 'parent who likes reading',
+	interests: 'family memory book, custom photo book, reading light, book stand, personalized journal',
+	budget: 75,
+	styles: 'thoughtful,personalized',
+	sourceCta: 'personalized_book_prompt',
+	sourceVariant: 'book_gifts_for_parent',
+	sourceExperiment: experimentId
+});
+
+const coworkerHref = buildGeneratorPrefillHref({
+	recipient: 'coworker who reads',
+	interests: 'reading journal, nice notebook, desk book stand, book sleeve, custom bookmark',
+	budget: 25,
+	styles: 'practical,cozy',
+	sourceCta: 'personalized_book_prompt',
+	sourceVariant: 'coworker_book_gifts_under_25',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Personalized Christmas gifts',
+		description: 'The broader custom-gift page for photo gifts, keepsakes, ornaments, books, and family-memory ideas.',
+		href: '/personalized-christmas-gifts/',
+		label: 'Christmas',
+		tags: ['personalized', 'Christmas', 'keepsake']
+	},
+	{
+		title: 'Gifts for book lovers under $50',
+		description: 'A product-guide path for reading accessories, cozy upgrades, and book-adjacent gifts.',
+		href: '/blog/gifts-for-book-lovers-under-50/',
+		label: 'Book lovers',
+		tags: ['books', 'under $50', 'cozy']
+	},
+	{
+		title: 'Christmas gifts for girlfriend',
+		description: 'Romantic, cozy, practical, and personal holiday gift paths for your partner.',
+		href: '/christmas-gifts-for-girlfriend/',
+		label: 'Girlfriend',
+		tags: ['girlfriend', 'romantic', 'Christmas']
+	},
+	{
+		title: 'Gifts under $25',
+		description: 'Budget-safe ideas for bookmarks, journals, book lights, book sleeves, and small Secret Santa gifts.',
+		href: '/gifts-under-25/',
+		label: 'Budget',
+		tags: ['under $25', 'small gifts', 'Secret Santa']
+	}
+];
+
+const sections = [
+	{
+		title: 'Personalized book gifts by recipient',
+		description: 'Book gifts work best when they match the reader, not just the category.',
+		links: [
+			{
+				title: 'Book gifts for girlfriend',
+				description: 'Romantic books, bookplates, cozy reading gifts, and custom journals for a reader you know well.',
+				href: girlfriendHref,
+				label: 'Open finder',
+				tags: ['girlfriend', 'romantic', 'books']
+			},
+			{
+				title: 'Book gifts for parents',
+				description: 'Family memory books, photo books, journals, reading lights, and practical reading upgrades.',
+				href: parentHref,
+				label: 'Open finder',
+				tags: ['parents', 'family', 'personalized']
+			},
+			{
+				title: 'Book gifts for coworkers under $25',
+				description: 'Bookmarks, notebooks, book sleeves, reading accessories, and desk-friendly ideas.',
+				href: coworkerHref,
+				label: 'Open finder',
+				tags: ['coworker', 'under $25', 'office']
+			}
+		]
+	},
+	{
+		title: 'Book gift categories that personalize well',
+		description: 'These categories leave room for taste without forcing you to guess exact clothing size, decor style, or fragrance preference.',
+		links: [
+			{
+				title: 'Custom bookplates and book stamps',
+				description: 'Best for people who lend books, build a home library, or annotate their favorites.',
+				href: heroHref,
+				label: 'Bookplates',
+				tags: ['custom', 'library', 'book stamp']
+			},
+			{
+				title: 'Reading journals and annotation kits',
+				description: 'Good for readers who track quotes, ratings, reading goals, or book club notes.',
+				href: heroHref,
+				label: 'Journals',
+				tags: ['journal', 'annotation', 'planner']
+			},
+			{
+				title: 'Cozy reading add-ons',
+				description: 'Book lights, blankets, mugs, lap desks, and page holders that are easy to pair with a favorite genre.',
+				href: heroHref,
+				label: 'Cozy',
+				tags: ['cozy', 'reading nook', 'comfort']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What is a good personalized book gift?',
+		answer: 'A good personalized book gift matches the person\'s reading habit. Strong options include custom bookplates, a book stamp, a reading journal, a personalized bookmark, a beautiful edition, or cozy reading accessories.'
+	},
+	{
+		question: 'Are books risky gifts?',
+		answer: 'Books can be risky if you guess the exact title. Book-adjacent gifts are safer: journals, book lights, book sleeves, annotation kits, bookplates, and gift cards paired with a personal note.'
+	},
+	{
+		question: 'What if I need a book gift fast?',
+		answer: 'Choose a fast-shipping reading accessory, a digital audiobook credit, a bookstore gift card, or a practical cozy add-on, then personalize the message instead of the product.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Personalized Book Gifts"
+	metaTitle="Personalized Book Gifts | BrightGift"
+	description="Find personalized book gifts, custom bookplates, reading journals, cozy reading gifts, book gifts for girlfriend, parents, coworkers, and Christmas shoppers."
+	canonicalPath="/personalized-book-gifts/"
+	eyebrow="Personalized book gift finder"
+	heroTitle="Personalized book gifts for readers you actually know."
+	intro="A great book gift does not always mean guessing the perfect title. Bookplates, reading journals, custom stamps, cozy accessories, and beautiful reading tools can feel personal while staying safer than picking the wrong book. Use this page to choose the right lane, then open a prefilled BrightGift prompt for a tighter shortlist."
+	updatedAt="2026-07-02"
+	keywords={['personalized book gifts', 'book gifts for book lovers', 'custom book gifts', 'personalized Christmas book gifts', 'reading journal gifts', 'gifts for book lovers']}
+	ctaVariant="personalized_book_gifts_under_50"
+	primaryCtaLabel="Open the book gift finder"
+	primaryCtaHref={heroHref}
+	footerCtaHref={heroHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Start with the reader, then personalize the gift"
+	generatorPromptDescription="These prefilled paths keep the gift specific without forcing you to guess the one perfect book."
+	generatorPrompts={[
+		{ title: 'Book gifts for girlfriend', description: 'Romantic, cozy, and custom reading gifts for a reader you know well.', href: girlfriendHref, ctaVariant: 'book_gifts_for_girlfriend', label: 'Girlfriend' },
+		{ title: 'Book gifts for parents', description: 'Family memory books, reading tools, journals, and low-clutter keepsakes.', href: parentHref, ctaVariant: 'book_gifts_for_parent', label: 'Parents' },
+		{ title: 'Coworker book gifts under $25', description: 'Office-safe, small reading gifts that still feel thoughtful.', href: coworkerHref, ctaVariant: 'coworker_book_gifts_under_25', label: 'Coworker' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>

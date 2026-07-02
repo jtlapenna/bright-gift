@@ -30,6 +30,7 @@ const staticPages = [
   { url: '/gifts-for-coworkers-under-25/', priority: '0.8', changefreq: 'monthly' },
   { url: '/secret-santa-gifts/', priority: '0.8', changefreq: 'weekly' },
   { url: '/christmas-gifts-for-girlfriend/', priority: '0.8', changefreq: 'weekly' },
+  { url: '/personalized-book-gifts/', priority: '0.8', changefreq: 'weekly' },
   { url: '/gift-ideas-for-women/', priority: '0.7', changefreq: 'monthly' },
   { url: '/gifts-for-parents-who-have-everything/', priority: '0.8', changefreq: 'monthly' },
   { url: '/housewarming-gifts/', priority: '0.8', changefreq: 'monthly' },
