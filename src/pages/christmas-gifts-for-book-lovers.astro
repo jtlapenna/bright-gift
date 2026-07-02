@@ -1,0 +1,186 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-christmas-book-lover-gifts-202607';
+
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'book lover',
+	interests: 'Christmas gifts for book lovers, cozy reading gifts, personalized book gifts, reading journal, book light, book sleeve',
+	budget: 50,
+	styles: 'cozy,personalized',
+	sourceCta: 'christmas_book_hero',
+	sourceVariant: 'christmas_book_gifts_under_50',
+	sourceExperiment: experimentId
+});
+
+const girlfriendHref = buildGeneratorPrefillHref({
+	recipient: 'girlfriend who loves books',
+	interests: 'Christmas gifts for book lovers, romance books, cozy reading gifts, custom bookmark, reading journal',
+	budget: 75,
+	styles: 'romantic,cozy',
+	sourceCta: 'christmas_book_prompt',
+	sourceVariant: 'christmas_book_gifts_girlfriend',
+	sourceExperiment: experimentId
+});
+
+const coworkerHref = buildGeneratorPrefillHref({
+	recipient: 'coworker who reads',
+	interests: 'book light, notebook, desk book stand, book sleeve, reading journal, coffee',
+	budget: 25,
+	styles: 'practical,office-safe',
+	sourceCta: 'christmas_book_prompt',
+	sourceVariant: 'coworker_book_gifts_under_25',
+	sourceExperiment: experimentId
+});
+
+const lastMinuteHref = buildGeneratorPrefillHref({
+	recipient: 'book lover',
+	interests: 'last-minute book gifts, fast shipping, audiobook gift, bookstore gift card, reading accessories',
+	budget: 50,
+	styles: 'practical,cozy',
+	sourceCta: 'christmas_book_prompt',
+	sourceVariant: 'last_minute_book_gifts',
+	sourceExperiment: experimentId
+});
+
+const personalizedHref = buildGeneratorPrefillHref({
+	recipient: 'book lover',
+	interests: 'custom bookplates, book stamp, personalized bookmark, reading journal, custom library gift',
+	budget: 50,
+	styles: 'personalized,cozy',
+	sourceCta: 'christmas_book_prompt',
+	sourceVariant: 'personalized_book_gifts',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Personalized book gifts',
+		description: 'Custom bookplates, book stamps, reading journals, bookmarks, and safer personalized reader gifts.',
+		href: '/personalized-book-gifts/',
+		label: 'Personalized',
+		tags: ['books', 'custom', 'reader']
+	},
+	{
+		title: 'Gifts for book lovers under $50',
+		description: 'A product-guide path for reading accessories, cozy upgrades, and book-adjacent gifts.',
+		href: '/blog/gifts-for-book-lovers-under-50/',
+		label: 'Under $50',
+		tags: ['books', 'budget', 'cozy']
+	},
+	{
+		title: 'Personalized Christmas gifts',
+		description: 'The broader Q4 page for custom gifts, photo gifts, keepsakes, and family-memory ideas.',
+		href: '/personalized-christmas-gifts/',
+		label: 'Christmas',
+		tags: ['personalized', 'Christmas', 'keepsake']
+	},
+	{
+		title: 'Last-minute Christmas gifts',
+		description: 'Use this when shipping time matters more than personalization.',
+		href: '/last-minute-christmas-gifts/',
+		label: 'Fast path',
+		tags: ['last minute', 'Christmas', 'fast shipping']
+	}
+];
+
+const sections = [
+	{
+		title: 'Christmas gifts for book lovers by recipient',
+		description: 'The safest reader gift depends on whether the recipient is your partner, coworker, parent, or friend.',
+		links: [
+			{
+				title: 'Book gifts for girlfriend',
+				description: 'Romantic, cozy, and personal reading gifts without guessing the exact title.',
+				href: girlfriendHref,
+				label: 'Open finder',
+				tags: ['girlfriend', 'romantic', 'books']
+			},
+			{
+				title: 'Book gifts for coworkers under $25',
+				description: 'Office-safe reading gifts: book lights, notebooks, coffee, bookmarks, and desk-friendly ideas.',
+				href: coworkerHref,
+				label: 'Open finder',
+				tags: ['coworker', 'under $25', 'office']
+			},
+			{
+				title: 'Last-minute book gifts',
+				description: 'Fast-shipping accessories, audiobook credits, bookstore gift cards, and practical reader upgrades.',
+				href: lastMinuteHref,
+				label: 'Open finder',
+				tags: ['last minute', 'fast shipping', 'books']
+			}
+		]
+	},
+	{
+		title: 'Reader gift categories that work well at Christmas',
+		description: 'These categories are more forgiving than guessing a new release or obscure genre pick.',
+		links: [
+			{
+				title: 'Personalized reader gifts',
+				description: 'Custom bookplates, stamps, bookmarks, and reading journals that feel specific without choosing the wrong book.',
+				href: personalizedHref,
+				label: 'Open finder',
+				tags: ['personalized', 'bookplates', 'journal']
+			},
+			{
+				title: 'Cozy reading nook gifts',
+				description: 'Book lights, blankets, lap desks, mugs, page holders, and quiet home upgrades.',
+				href: heroHref,
+				label: 'Cozy ideas',
+				tags: ['cozy', 'reading nook', 'home']
+			},
+			{
+				title: 'Small book gifts under $25',
+				description: 'Bookmarks, annotation tabs, book sleeves, tiny lights, notebooks, and Secret Santa-friendly extras.',
+				href: coworkerHref,
+				label: 'Budget ideas',
+				tags: ['under $25', 'small gifts', 'Secret Santa']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What is a good Christmas gift for a book lover?',
+		answer: 'A good Christmas gift for a book lover supports the reading habit without forcing you to guess the perfect title. Strong picks include book lights, book sleeves, reading journals, custom bookplates, bookstore gift cards, cozy blankets, and annotation kits.'
+	},
+	{
+		question: 'Should I buy an actual book as a gift?',
+		answer: 'Buy a specific book only if you know their taste or wishlist. If you are unsure, choose a book-adjacent gift or a bookstore gift card with a personal note.'
+	},
+	{
+		question: 'What are safe last-minute book gifts?',
+		answer: 'Safe last-minute options include audiobook credits, bookstore gift cards, fast-shipping reading accessories, book lights, journals, and cozy add-ons that do not depend on knowing their exact reading list.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Christmas Gifts for Book Lovers"
+	metaTitle="Christmas Gifts for Book Lovers | BrightGift"
+	description="Find Christmas gifts for book lovers, including personalized book gifts, cozy reading gifts, book gifts for girlfriend, coworker book gifts, and last-minute reader gifts."
+	canonicalPath="/christmas-gifts-for-book-lovers/"
+	eyebrow="Christmas book gift finder"
+	heroTitle="Christmas gifts for book lovers that do not require guessing the perfect book."
+	intro="Book lovers can be surprisingly hard to shop for because the obvious gift is also the riskiest one. This page focuses on safer reader gifts: personalized bookplates, reading journals, book lights, cozy reading-nook upgrades, bookstore credits, and prefilled BrightGift prompts when you know the person but not the exact title."
+	updatedAt="2026-07-02"
+	keywords={['Christmas gifts for book lovers', 'book gifts for book lovers', 'personalized book gifts', 'gifts for readers', 'book lover Christmas gifts', 'last-minute book gifts']}
+	ctaVariant="christmas_book_gifts_under_50"
+	primaryCtaLabel="Open the book lover gift finder"
+	primaryCtaHref={heroHref}
+	footerCtaHref={heroHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Choose the book-lover gift path"
+	generatorPromptDescription="These prefilled prompts keep the gift personal without forcing you to guess the one perfect book."
+	generatorPrompts={[
+		{ title: 'Book gifts for girlfriend', description: 'Romantic, cozy, custom, and reader-friendly Christmas ideas.', href: girlfriendHref, ctaVariant: 'christmas_book_gifts_girlfriend', label: 'Girlfriend' },
+		{ title: 'Coworker book gifts under $25', description: 'Office-safe, small reader gifts for coworkers and Secret Santa exchanges.', href: coworkerHref, ctaVariant: 'coworker_book_gifts_under_25', label: 'Coworker' },
+		{ title: 'Last-minute book gifts', description: 'Fast-shipping and digital paths when the delivery clock is tight.', href: lastMinuteHref, ctaVariant: 'last_minute_book_gifts', label: 'Last minute' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>

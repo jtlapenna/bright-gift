@@ -101,6 +101,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bright-gift.com/christmas-gifts-for-book-lovers/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bright-gift.com/gift-ideas-for-women/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
