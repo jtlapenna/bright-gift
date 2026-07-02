@@ -846,6 +846,42 @@ if (relatedPosts.length > 0) {
     font-weight: 600;
     color: #111827;
   }
+  :global(.prose table) {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #A3E4DB;
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin: 2rem 0;
+  }
+
+  :global(.prose th),
+  :global(.prose td) {
+    min-width: 9.5rem;
+    padding: 0.75rem 1rem;
+    border-right: 1px solid #A3E4DB;
+    border-bottom: 1px solid #A3E4DB;
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+  }
+
+  :global(.prose th) {
+    background: #FEF2D3;
+    color: #1C2E4A;
+    font-family: 'Poppins', 'Raleway', Arial, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 800;
+    line-height: 1.35;
+  }
+
+
   .prose pre {
     background: #f3f4f6;
     border-radius: 0.5rem;
