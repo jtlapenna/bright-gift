@@ -1,73 +1,200 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
 
-const metaDescription = "What do you get someone who has everything? Our AI gift finder suggests unique, experiential, and personalized gifts they don't already own.";
+const experimentId = 'bg-people-have-everything-202607';
+
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'person who has everything',
+	interests: 'low clutter gifts, experiences, personalized gifts, useful upgrades, consumables, hobbies',
+	budget: 75,
+	styles: 'thoughtful,practical',
+	sourceCta: 'people_everything_hero',
+	sourceVariant: 'people_everything_under_75',
+	sourceExperiment: experimentId
+});
+
+const footerHref = buildGeneratorPrefillHref({
+	recipient: 'hard to shop for person',
+	interests: 'unique gifts, daily routine, favorite hobby, useful upgrade, experience gift, personalized keepsake',
+	budget: 100,
+	styles: 'thoughtful,quirky',
+	sourceCta: 'people_everything_footer',
+	sourceVariant: 'people_everything_personalized',
+	sourceExperiment: experimentId
+});
+
+const minimalistHref = buildGeneratorPrefillHref({
+	recipient: 'minimalist who has everything',
+	interests: 'low clutter gifts, consumables, useful upgrades, experiences, travel, home routines',
+	budget: 50,
+	styles: 'practical,thoughtful',
+	sourceCta: 'people_everything_prompt',
+	sourceVariant: 'minimalist_people_everything_under_50',
+	sourceExperiment: experimentId
+});
+
+const luxuryHref = buildGeneratorPrefillHref({
+	recipient: 'person who likes little luxuries',
+	interests: 'premium everyday upgrades, home, coffee, travel, self-care, entertaining',
+	budget: 100,
+	styles: 'luxury,thoughtful',
+	sourceCta: 'people_everything_prompt',
+	sourceVariant: 'luxury_people_everything_under_100',
+	sourceExperiment: experimentId
+});
+
+const experienceHref = buildGeneratorPrefillHref({
+	recipient: 'person who prefers experiences',
+	interests: 'classes, local experiences, food, concerts, creative hobbies, shared memories',
+	budget: 100,
+	styles: 'thoughtful,quirky',
+	sourceCta: 'people_everything_prompt',
+	sourceVariant: 'experience_people_everything_under_100',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Gifts for parents who have everything',
+		description: 'Low-clutter, useful, cozy, and family-memory gift paths for parents who already own the obvious things.',
+		href: '/gifts-for-parents-who-have-everything/',
+		label: 'Parents',
+		tags: ['parents', 'low clutter', 'family']
+	},
+	{
+		title: 'Gifts for men who have everything',
+		description: 'Practical, hobby-led, experience, and everyday-upgrade ideas for hard-to-shop-for men.',
+		href: '/gifts-for-men-who-have-everything/',
+		label: 'Men',
+		tags: ['men', 'useful', 'hobby']
+	},
+	{
+		title: 'Gifts for book lovers who have everything',
+		description: 'Safer reader gifts when they already own the books: bookplates, journals, lights, cozy tools, and reading rituals.',
+		href: '/gifts-for-book-lovers-who-have-everything/',
+		label: 'Book lovers',
+		tags: ['books', 'cozy', 'personalized']
+	},
+	{
+		title: 'Gift ideas for women',
+		description: 'Wellness, style, practical, cozy, and personalized paths when the broad women-gifts search needs narrowing.',
+		href: '/gift-ideas-for-women/',
+		label: 'Women',
+		tags: ['women', 'style', 'wellness']
+	}
+];
+
+const sections = [
+	{
+		title: 'Best gift lanes when someone already has enough stuff',
+		description: 'The safest gifts either disappear, improve a routine, personalize something they already love, or create a shared memory.',
+		links: [
+			{
+				title: 'Consumable gifts',
+				description: 'Coffee, tea, snacks, pantry upgrades, candles, bath goods, and other gifts they can enjoy without storing forever.',
+				href: minimalistHref,
+				label: 'Open finder',
+				tags: ['low clutter', 'consumable', 'safe']
+			},
+			{
+				title: 'Everyday luxury upgrades',
+				description: 'Better versions of small things they already use: travel, coffee, kitchen, desk, home, and self-care upgrades.',
+				href: luxuryHref,
+				label: 'Open finder',
+				tags: ['premium', 'daily routine', 'under $100']
+			},
+			{
+				title: 'Experience gifts',
+				description: 'Classes, local outings, food experiences, museum passes, creative workshops, and shared-memory gifts.',
+				href: experienceHref,
+				label: 'Open finder',
+				tags: ['experience', 'no clutter', 'memory']
+			},
+			{
+				title: 'Personalized book gifts',
+				description: 'Bookplates, reading journals, book stamps, and reader gifts that feel personal without guessing the perfect title.',
+				href: '/personalized-book-gifts/',
+				label: 'Book gifts',
+				tags: ['books', 'personalized', 'cozy']
+			}
+		]
+	},
+	{
+		title: 'Hard-to-shop-for recipient variants',
+		description: 'Use a more specific page when relationship, hobby, or holiday timing gives you a stronger clue.',
+		links: [
+			{
+				title: 'Gifts for parents who have everything',
+				description: 'Parent-specific low-clutter, sentimental, useful, and cozy gift paths.',
+				href: '/gifts-for-parents-who-have-everything/',
+				label: 'Parent guide',
+				tags: ['parents', 'family', 'keepsake']
+			},
+			{
+				title: 'Gifts for men who have everything',
+				description: 'A better fit for men when useful upgrades, hobbies, gear, food, or experiences matter more than novelty.',
+				href: '/gifts-for-men-who-have-everything/',
+				label: 'Men guide',
+				tags: ['men', 'practical', 'experience']
+			},
+			{
+				title: 'Christmas gifts for book lovers',
+				description: 'Q4 reader gifts for cozy, personalized, girlfriend, coworker, and last-minute book-shopping paths.',
+				href: '/christmas-gifts-for-book-lovers/',
+				label: 'Reader Christmas',
+				tags: ['Christmas', 'books', 'reader']
+			},
+			{
+				title: 'Last-minute gift ideas',
+				description: 'Fast-shipping and digital-friendly ideas when timing is the biggest constraint.',
+				href: '/last-minute-gift-ideas/',
+				label: 'Fast path',
+				tags: ['last minute', 'shipping', 'backup']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What do you get someone who has everything?',
+		answer: 'Choose a low-clutter gift, a consumable upgrade, an experience, a personalized item, or a better version of something they already use. Avoid novelty items that create more storage work.'
+	},
+	{
+		question: 'Are experience gifts better for people who have everything?',
+		answer: 'Often, yes. Classes, tickets, local food experiences, memberships, and shared outings work well because they do not depend on the person needing more objects.'
+	},
+	{
+		question: 'How do I personalize a gift without making it risky?',
+		answer: 'Personalize the context, not necessarily the object. A note, a family photo, a bookplate, a chosen flavor, or a gift tied to their actual routine can feel personal without being too specific.'
+	}
+];
 ---
 
-<Layout 
-	title="Gifts for People Who Have Everything | AI Gift Finder"
-	description={metaDescription}
-	canonical="https://bright-gift.com/gifts-for-people-who-have-everything/"
->
-	<main class="font-sans text-gray-800 dark:text-gray-200">
-		<section class="py-20 px-4 bg-gradient-to-br from-[#FEF2D3] to-[#FFDE59]/30">
-			<div class="max-w-4xl mx-auto text-center">
-				<h1 class="text-4xl md:text-5xl font-bold font-poppins text-[#1C2E4A] mb-6">
-					Gifts for People Who Have Everything
-				</h1>
-				<p class="text-lg md:text-xl text-[#1C2E4A] mb-8 leading-relaxed">
-					When someone already owns everything they need, traditional gifts fall flat. Our AI suggests experiences, personalized items, and unique finds they don't have yet.
-				</p>
-				
-				<div class="bg-white/90 rounded-2xl p-8 shadow-lg mb-8">
-					<h2 class="text-2xl font-bold text-[#1C2E4A] mb-4">What Works for People Who Have Everything:</h2>
-					<ul class="text-left text-[#1C2E4A] space-y-3 max-w-2xl mx-auto">
-						<li class="flex items-start">
-							<span class="text-[#FF6B6B] mr-3 text-xl">🎭</span>
-							<span><strong>Experiences</strong> - Concert tickets, classes, adventures</span>
-						</li>
-						<li class="flex items-start">
-							<span class="text-[#FF6B6B] mr-3 text-xl">✨</span>
-							<span><strong>Personalized items</strong> - Custom art, engraved pieces</span>
-						</li>
-						<li class="flex items-start">
-							<span class="text-[#FF6B6B] mr-3 text-xl">🌱</span>
-							<span><strong>Consumables</strong> - Gourmet food, wine, specialty items</span>
-						</li>
-						<li class="flex items-start">
-							<span class="text-[#FF6B6B] mr-3 text-xl">💝</span>
-							<span><strong>Charitable donations</strong> - In their name to causes they care about</span>
-						</li>
-						<li class="flex items-start">
-							<span class="text-[#FF6B6B] mr-3 text-xl">🎨</span>
-							<span><strong>Handmade/artisan goods</strong> - One-of-a-kind pieces</span>
-						</li>
-					</ul>
-				</div>
-				
-				<div class="bg-gradient-to-r from-[#A3E4DB] to-[#B8E8E0] rounded-2xl p-8 shadow-lg">
-					<h2 class="text-2xl font-bold text-[#1C2E4A] mb-4">Let AI Find the Perfect Gift</h2>
-					<p class="text-[#1C2E4A] mb-6">
-						Tell us about their interests and lifestyle. Our AI will suggest creative, unexpected gifts that go beyond the usual options.
-					</p>
-					<a href="/#tool" class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-4 px-8 rounded-full transition-colors text-lg shadow-lg">
-						Find Unique Gifts Now →
-					</a>
-				</div>
-			</div>
-		</section>
-		
-		<section class="py-16 px-4 bg-white">
-			<div class="max-w-4xl mx-auto text-center">
-				<h2 class="text-3xl font-bold text-[#1C2E4A] mb-4">Use the AI Gift Finder Above</h2>
-				<p class="text-lg text-[#1C2E4A] mb-8">
-					Enter their interests and let AI suggest gifts they don't already have.
-				</p>
-				<a href="/#tool" class="inline-block bg-[#A3E4DB] hover:bg-[#8cd4ca] text-[#1C2E4A] font-bold py-3 px-8 rounded-full transition-colors text-lg shadow">
-					Try the AI Gift Finder
-				</a>
-			</div>
-		</section>
-	</main>
-</Layout>
-
+<GiftHubPage
+	title="Gifts for People Who Have Everything"
+	metaTitle="Gifts for People Who Have Everything | BrightGift"
+	description="Find gifts for people who have everything, including low-clutter gifts, experience gifts, personalized gifts, consumables, everyday upgrades, and hard-to-shop-for recipient paths."
+	canonicalPath="/gifts-for-people-who-have-everything/"
+	eyebrow="Hard-to-shop-for gift finder"
+	heroTitle="Gifts for people who have everything, without adding clutter."
+	intro="When someone already owns the obvious gifts, a generic list usually gets worse, not better. Start with low-clutter gifts, experiences, personalized details, consumables, or better versions of daily-use items, then open a prefilled BrightGift prompt for a sharper shortlist."
+	updatedAt="2026-07-03"
+	keywords={['gifts for people who have everything', 'gift ideas for people who have everything', 'hard to shop for gifts', 'unique gifts for people who have everything', 'experience gifts', 'low clutter gifts']}
+	ctaVariant="people_everything_under_75"
+	primaryCtaLabel="Open the hard-to-shop-for gift finder"
+	primaryCtaHref={heroHref}
+	footerCtaHref={footerHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Start with why they are hard to shop for"
+	generatorPromptDescription="These prefilled paths keep the search specific: low clutter, small luxuries, experiences, and real routines."
+	generatorPrompts={[
+		{ title: 'Low-clutter gifts under $50', description: 'Consumables, practical upgrades, and useful gifts for minimalists.', href: minimalistHref, ctaVariant: 'minimalist_people_everything_under_50', label: 'Low clutter' },
+		{ title: 'Everyday luxuries under $100', description: 'Premium daily-use upgrades for home, coffee, travel, desk, and self-care routines.', href: luxuryHref, ctaVariant: 'luxury_people_everything_under_100', label: 'Little luxury' },
+		{ title: 'Experience gifts under $100', description: 'Classes, local outings, food, concerts, creative hobbies, and shared memories.', href: experienceHref, ctaVariant: 'experience_people_everything_under_100', label: 'Experience' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>

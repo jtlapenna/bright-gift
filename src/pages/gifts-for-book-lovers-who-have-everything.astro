@@ -1,0 +1,165 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-book-lovers-have-everything-202607';
+
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'book lover who has everything',
+	interests: 'reading accessories, bookplates, reading journal, book light, cozy reading gifts, bookstore gift card',
+	budget: 50,
+	styles: 'book-lover,cozy',
+	sourceCta: 'book_lovers_everything_hero',
+	sourceVariant: 'book_lovers_everything_under_50',
+	sourceExperiment: experimentId
+});
+
+const libraryHref = buildGeneratorPrefillHref({
+	recipient: 'home library book lover',
+	interests: 'bookplates, book stamp, bookshelf organization, bookends, reading journal, home library',
+	budget: 75,
+	styles: 'book-lover,thoughtful',
+	sourceCta: 'book_lovers_everything_prompt',
+	sourceVariant: 'home_library_book_lover_under_75',
+	sourceExperiment: experimentId
+});
+
+const cozyHref = buildGeneratorPrefillHref({
+	recipient: 'cozy book lover',
+	interests: 'book light, blanket, tea, mug, lap desk, reading pillow, page holder',
+	budget: 50,
+	styles: 'book-lover,cozy',
+	sourceCta: 'book_lovers_everything_prompt',
+	sourceVariant: 'cozy_book_lover_under_50',
+	sourceExperiment: experimentId
+});
+
+const lastMinuteHref = buildGeneratorPrefillHref({
+	recipient: 'book lover needing a fast gift',
+	interests: 'bookstore gift card, audiobook credit, reading journal, book light, fast shipping, personalized note',
+	budget: 50,
+	styles: 'book-lover,practical',
+	sourceCta: 'book_lovers_everything_prompt',
+	sourceVariant: 'last_minute_book_lover_under_50',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Personalized book gifts',
+		description: 'Bookplates, book stamps, journals, personalized bookmarks, and book-adjacent gifts by recipient.',
+		href: '/personalized-book-gifts/',
+		label: 'Personalized',
+		tags: ['bookplates', 'journals', 'custom']
+	},
+	{
+		title: 'Christmas gifts for book lovers',
+		description: 'Holiday-specific reader gift ideas for cozy, personalized, budget, and last-minute shopping.',
+		href: '/christmas-gifts-for-book-lovers/',
+		label: 'Christmas',
+		tags: ['Christmas', 'books', 'cozy']
+	},
+	{
+		title: 'Gifts for people who have everything',
+		description: 'The broader hard-to-shop-for hub when the person is difficult for more than one reason.',
+		href: '/gifts-for-people-who-have-everything/',
+		label: 'Hard to shop for',
+		tags: ['low clutter', 'unique', 'experience']
+	}
+];
+
+const sections = [
+	{
+		title: 'Safer book-lover gifts when they already own the books',
+		description: 'The trick is to support the reading ritual instead of guessing the perfect title.',
+		links: [
+			{
+				title: 'Home-library gifts',
+				description: 'Bookplates, custom stamps, bookends, shelf organization, and reading journals for someone building a personal library.',
+				href: libraryHref,
+				label: 'Open finder',
+				tags: ['library', 'custom', 'journal']
+			},
+			{
+				title: 'Cozy reading gifts',
+				description: 'Book lights, blankets, mugs, lap desks, page holders, and comfort upgrades for reading time.',
+				href: cozyHref,
+				label: 'Open finder',
+				tags: ['cozy', 'reading nook', 'under $50']
+			},
+			{
+				title: 'Last-minute book-lover gifts',
+				description: 'Bookstore gift cards, audiobook credits, reading journals, fast-shipping accessories, and a better personal note.',
+				href: lastMinuteHref,
+				label: 'Open finder',
+				tags: ['last minute', 'fast', 'safe']
+			}
+		]
+	},
+	{
+		title: 'Reader gift pages to browse next',
+		description: 'Use these when holiday timing, personalization, or a smaller budget matters more.',
+		links: [
+			{
+				title: 'Gifts for book lovers under $50',
+				description: 'A product-guide path for accessories, cozy upgrades, and book-adjacent ideas.',
+				href: '/blog/gifts-for-book-lovers-under-50/',
+				label: 'Under $50',
+				tags: ['books', 'budget', 'cozy']
+			},
+			{
+				title: 'Stocking stuffers under $25',
+				description: 'Small reader-friendly ideas for bookmarks, lights, cozy extras, and holiday lists.',
+				href: '/stocking-stuffers-under-25/',
+				label: 'Stocking',
+				tags: ['under $25', 'Christmas', 'small gifts']
+			},
+			{
+				title: 'Gift ideas by interest',
+				description: 'Browse other hobby-led paths if books are only one of their interests.',
+				href: '/gift-ideas-by-interest/',
+				label: 'Interest hub',
+				tags: ['hobbies', 'books', 'browse']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What do you get a book lover who has everything?',
+		answer: 'Choose book-adjacent gifts instead of guessing a title: custom bookplates, a book stamp, a reading journal, a book light, a cozy reading upgrade, or bookstore credit with a personal note.'
+	},
+	{
+		question: 'Is a book a good gift for a book lover?',
+		answer: 'It can be if you know their taste very well. If not, choose a reading accessory, gift card, special edition, or personalized library item so the gift still fits their hobby.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Gifts for Book Lovers Who Have Everything"
+	metaTitle="Gifts for Book Lovers Who Have Everything | BrightGift"
+	description="Find gifts for book lovers who have everything, including bookplates, reading journals, cozy reading gifts, book lights, bookstore gift cards, and personalized reader gifts."
+	canonicalPath="/gifts-for-book-lovers-who-have-everything/"
+	eyebrow="Book-lover gift finder"
+	heroTitle="Gifts for book lovers who have everything, without guessing the wrong book."
+	intro="When a reader already owns a towering to-be-read pile, the safest gift is often book-adjacent: a better reading ritual, a home-library upgrade, a personalized detail, or a gift that lets them choose the next title."
+	updatedAt="2026-07-03"
+	keywords={['gifts for book lovers who have everything', 'book lover gifts', 'personalized book gifts', 'gifts for readers', 'book gifts under 50', 'cozy reading gifts']}
+	ctaVariant="book_lovers_everything_under_50"
+	primaryCtaLabel="Open the book-lover gift finder"
+	primaryCtaHref={heroHref}
+	footerCtaHref={heroHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Choose the reader gift lane"
+	generatorPromptDescription="These paths avoid risky book-title guessing and focus on reading rituals, home libraries, and fast gifts."
+	generatorPrompts={[
+		{ title: 'Home-library gifts under $75', description: 'Bookplates, custom stamps, bookends, shelf organization, and reading journals.', href: libraryHref, ctaVariant: 'home_library_book_lover_under_75', label: 'Home library' },
+		{ title: 'Cozy reading gifts under $50', description: 'Book lights, blankets, tea, mugs, lap desks, and reading comfort upgrades.', href: cozyHref, ctaVariant: 'cozy_book_lover_under_50', label: 'Cozy' },
+		{ title: 'Last-minute reader gifts', description: 'Bookstore credit, audiobook gifts, journals, book lights, and fast-shipping accessories.', href: lastMinuteHref, ctaVariant: 'last_minute_book_lover_under_50', label: 'Fast path' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>

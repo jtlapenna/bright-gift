@@ -1,74 +1,172 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
 
-const metaDescription = "Struggling to find gifts for people who have everything? Use our free AI gift finder to discover unique, personalized gift ideas for even the hardest-to-shop-for people.";
+const experimentId = 'bg-hard-to-shop-for-202607';
+
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'hard to shop for person',
+	interests: 'specific tastes, no wishlist, hobbies, low clutter gifts, useful gifts, experience gifts',
+	budget: 50,
+	styles: 'thoughtful,practical',
+	sourceCta: 'hard_to_shop_hero',
+	sourceVariant: 'hard_to_shop_for_people',
+	sourceExperiment: experimentId
+});
+
+const noWishlistHref = buildGeneratorPrefillHref({
+	recipient: 'person who never gives a wishlist',
+	interests: 'daily routine, favorite snacks, coffee, hobbies, home, work, small upgrades',
+	budget: 50,
+	styles: 'practical,thoughtful',
+	sourceCta: 'hard_to_shop_prompt',
+	sourceVariant: 'no_wishlist_under_50',
+	sourceExperiment: experimentId
+});
+
+const nicheTasteHref = buildGeneratorPrefillHref({
+	recipient: 'person with specific niche interests',
+	interests: 'niche hobby, books, games, plants, fitness, cooking, desk setup, collecting',
+	budget: 75,
+	styles: 'quirky,thoughtful',
+	sourceCta: 'hard_to_shop_prompt',
+	sourceVariant: 'niche_taste_under_75',
+	sourceExperiment: experimentId
+});
+
+const minimalistHref = buildGeneratorPrefillHref({
+	recipient: 'minimalist hard to shop for person',
+	interests: 'low clutter gifts, consumables, experiences, useful upgrades, travel, home',
+	budget: 50,
+	styles: 'practical,cozy',
+	sourceCta: 'hard_to_shop_prompt',
+	sourceVariant: 'minimalist_hard_to_shop_under_50',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Gifts for people who have everything',
+		description: 'Use this when the main problem is that they already own the obvious gifts.',
+		href: '/gifts-for-people-who-have-everything/',
+		label: 'Has everything',
+		tags: ['low clutter', 'unique', 'experience']
+	},
+	{
+		title: 'Gifts for men who have everything',
+		description: 'A more specific path for hard-to-shop-for men with practical, hobby, and experience-led ideas.',
+		href: '/gifts-for-men-who-have-everything/',
+		label: 'Men',
+		tags: ['men', 'practical', 'hobby']
+	},
+	{
+		title: 'Gift ideas by interest',
+		description: 'Start with books, gaming, plants, remote work, wellness, pets, or another hobby clue.',
+		href: '/gift-ideas-by-interest/',
+		label: 'Interests',
+		tags: ['hobbies', 'specific tastes', 'browse']
+	}
+];
+
+const sections = [
+	{
+		title: 'Why they are hard to shop for',
+		description: 'The right gift strategy changes depending on what makes the person difficult.',
+		links: [
+			{
+				title: 'They never give a wishlist',
+				description: 'Use daily routines, favorite snacks, coffee, home, work, or hobby clues instead of guessing big-ticket items.',
+				href: noWishlistHref,
+				label: 'Open finder',
+				tags: ['no wishlist', 'safe', 'routine']
+			},
+			{
+				title: 'They have very specific interests',
+				description: 'Choose supporting accessories, storage, display, comfort, or gift cards around the hobby instead of guessing the exact collectible.',
+				href: nicheTasteHref,
+				label: 'Open finder',
+				tags: ['niche', 'hobby', 'accessories']
+			},
+			{
+				title: 'They dislike clutter',
+				description: 'Consumables, experiences, useful upgrades, and digital gifts are safer than decorative objects.',
+				href: minimalistHref,
+				label: 'Open finder',
+				tags: ['minimalist', 'low clutter', 'experience']
+			}
+		]
+	},
+	{
+		title: 'Better pages when you know one extra clue',
+		description: 'Move to a narrower page when relationship, budget, timing, or hobby is clear.',
+		links: [
+			{
+				title: 'Gift ideas by recipient',
+				description: 'Browse girlfriend, coworker, parents, teachers, remote workers, and other recipient paths.',
+				href: '/gift-ideas-by-recipient/',
+				label: 'Recipient hub',
+				tags: ['recipient', 'relationship', 'browse']
+			},
+			{
+				title: 'Gifts under $25',
+				description: 'Budget-safe options for coworkers, teachers, Secret Santa, and casual recipients.',
+				href: '/gifts-under-25/',
+				label: 'Budget hub',
+				tags: ['under $25', 'safe', 'small gifts']
+			},
+			{
+				title: 'Last-minute gift ideas',
+				description: 'Fast options when delivery time is short and overthinking is making the gift worse.',
+				href: '/last-minute-gift-ideas/',
+				label: 'Fast path',
+				tags: ['last minute', 'delivery', 'backup']
+			},
+			{
+				title: 'Personalized book gifts',
+				description: 'A safer path for readers when you do not want to guess their next book.',
+				href: '/personalized-book-gifts/',
+				label: 'Book gifts',
+				tags: ['books', 'personalized', 'reader']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'How do you buy a gift for someone who is hard to shop for?',
+		answer: 'Identify why they are hard to shop for first. If they own everything, choose low-clutter gifts. If they have niche tastes, choose accessories around the hobby. If they give no hints, start with daily routines.'
+	},
+	{
+		question: 'What gifts are safest for people with specific taste?',
+		answer: 'Safer choices include consumables, useful accessories, storage, gift cards paired with a small personal item, experiences, or upgrades to something they already use.'
+	}
+];
 ---
 
-<Layout 
-	title="Gift Ideas for Hard-to-Shop-For People | AI Gift Finder"
-	description={metaDescription}
-	canonical="https://bright-gift.com/gift-ideas-for-hard-to-shop-for-people/"
->
-	<main class="font-sans text-gray-800 dark:text-gray-200">
-		<section class="py-20 px-4 bg-gradient-to-br from-[#FEF2D3] to-[#FFDE59]/30">
-			<div class="max-w-4xl mx-auto text-center">
-				<h1 class="text-4xl md:text-5xl font-bold font-poppins text-[#1C2E4A] mb-6">
-					Gift Ideas for Hard-to-Shop-For People
-				</h1>
-				<p class="text-lg md:text-xl text-[#1C2E4A] mb-8 leading-relaxed">
-					We all know someone who's impossible to buy for—the person who has everything, never drops hints, or has very specific tastes. Our AI gift finder solves this problem by analyzing their interests and suggesting unique, thoughtful gifts they'll actually love.
-				</p>
-				
-				<div class="bg-white/90 rounded-2xl p-8 shadow-lg mb-8">
-					<h2 class="text-2xl font-bold text-[#1C2E4A] mb-4">Why People Are Hard to Shop For:</h2>
-					<ul class="text-left text-[#1C2E4A] space-y-3 max-w-2xl mx-auto">
-						<li class="flex items-start">
-							<span class="text-[#FF6B6B] mr-3 text-xl">•</span>
-							<span>They already have everything they need</span>
-						</li>
-						<li class="flex items-start">
-							<span class="text-[#FF6B6B] mr-3 text-xl">•</span>
-							<span>They have very specific or niche interests</span>
-						</li>
-						<li class="flex items-start">
-							<span class="text-[#FF6B6B] mr-3 text-xl">•</span>
-							<span>They never share what they want</span>
-						</li>
-						<li class="flex items-start">
-							<span class="text-[#FF6B6B] mr-3 text-xl">•</span>
-							<span>You don't know them well enough yet</span>
-						</li>
-						<li class="flex items-start">
-							<span class="text-[#FF6B6B] mr-3 text-xl">•</span>
-							<span>They're minimalists who don't want more stuff</span>
-						</li>
-					</ul>
-				</div>
-				
-				<div class="bg-gradient-to-r from-[#A3E4DB] to-[#B8E8E0] rounded-2xl p-8 shadow-lg">
-					<h2 class="text-2xl font-bold text-[#1C2E4A] mb-4">How Our AI Gift Finder Helps:</h2>
-					<p class="text-[#1C2E4A] mb-6">
-						Instead of spending hours browsing generic gift guides, our AI analyzes what you know about the person—their hobbies, lifestyle, recent changes—and suggests creative, unexpected gifts that match their personality.
-					</p>
-					<a href="/#tool" class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-4 px-8 rounded-full transition-colors text-lg shadow-lg">
-						Find the Perfect Gift Now →
-					</a>
-				</div>
-			</div>
-		</section>
-		
-		<!-- Tool Section (embedded) -->
-		<section class="py-16 px-4 bg-white">
-			<div class="max-w-4xl mx-auto text-center">
-				<h2 class="text-3xl font-bold text-[#1C2E4A] mb-4">Use the AI Gift Finder Above</h2>
-				<p class="text-lg text-[#1C2E4A] mb-8">
-					Enter what you know about the person, and our AI will suggest unique gifts they'll love.
-				</p>
-				<a href="/#tool" class="inline-block bg-[#A3E4DB] hover:bg-[#8cd4ca] text-[#1C2E4A] font-bold py-3 px-8 rounded-full transition-colors text-lg shadow">
-					Try the AI Gift Finder
-				</a>
-			</div>
-		</section>
-	</main>
-</Layout>
-
+<GiftHubPage
+	title="Gift Ideas for Hard-to-Shop-For People"
+	metaTitle="Gift Ideas for Hard-to-Shop-For People | BrightGift"
+	description="Find gift ideas for hard-to-shop-for people by narrowing why they are difficult: no wishlist, specific taste, low clutter, hobbies, tight budget, or last-minute timing."
+	canonicalPath="/gift-ideas-for-hard-to-shop-for-people/"
+	eyebrow="Hard-to-shop-for gift finder"
+	heroTitle="Gift ideas for hard-to-shop-for people, starting with why they are difficult."
+	intro="Some people are hard to shop for because they have everything. Others have niche taste, hate clutter, never share a wishlist, or already buy what they want. This page helps you choose the right strategy before you open the BrightGift generator."
+	updatedAt="2026-07-03"
+	keywords={['gift ideas for hard to shop for people', 'hard to shop for gifts', 'gifts for someone who has everything', 'unique gift ideas', 'low clutter gifts', 'personalized gift ideas']}
+	ctaVariant="hard_to_shop_for_people"
+	primaryCtaLabel="Open the hard-to-shop-for finder"
+	primaryCtaHref={heroHref}
+	footerCtaHref={heroHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Pick the shopping problem first"
+	generatorPromptDescription="These paths keep the generator focused on the real obstacle: no wishlist, niche taste, or low-clutter preferences."
+	generatorPrompts={[
+		{ title: 'They never give a wishlist', description: 'Routine, snack, home, work, and hobby clues when they give you nothing.', href: noWishlistHref, ctaVariant: 'no_wishlist_under_50', label: 'No wishlist' },
+		{ title: 'They have niche taste', description: 'Safer hobby accessories and useful upgrades for specific interests.', href: nicheTasteHref, ctaVariant: 'niche_taste_under_75', label: 'Niche taste' },
+		{ title: 'They hate clutter', description: 'Consumables, experiences, and useful low-clutter gift ideas.', href: minimalistHref, ctaVariant: 'minimalist_hard_to_shop_under_50', label: 'Minimalist' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>

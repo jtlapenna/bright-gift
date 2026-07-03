@@ -1,0 +1,165 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-men-have-everything-202607';
+
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'man who has everything',
+	interests: 'useful upgrades, hobbies, coffee, grilling, outdoors, travel, desk setup, experiences',
+	budget: 75,
+	styles: 'practical,thoughtful',
+	sourceCta: 'men_everything_hero',
+	sourceVariant: 'men_everything_under_75',
+	sourceExperiment: experimentId
+});
+
+const practicalHref = buildGeneratorPrefillHref({
+	recipient: 'practical man who has everything',
+	interests: 'everyday carry, tools, coffee, desk setup, travel, kitchen, organization',
+	budget: 75,
+	styles: 'practical,professional',
+	sourceCta: 'men_everything_prompt',
+	sourceVariant: 'practical_men_everything_under_75',
+	sourceExperiment: experimentId
+});
+
+const outdoorsHref = buildGeneratorPrefillHref({
+	recipient: 'man who likes outdoors and grilling',
+	interests: 'outdoors, camping, grilling, cooking, travel, weekend projects, sports',
+	budget: 100,
+	styles: 'practical,athletics',
+	sourceCta: 'men_everything_prompt',
+	sourceVariant: 'outdoors_men_everything_under_100',
+	sourceExperiment: experimentId
+});
+
+const experienceHref = buildGeneratorPrefillHref({
+	recipient: 'man who prefers experiences',
+	interests: 'classes, concerts, food, sports, local experiences, hobbies, shared memories',
+	budget: 100,
+	styles: 'thoughtful,quirky',
+	sourceCta: 'men_everything_prompt',
+	sourceVariant: 'experience_men_everything_under_100',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Gifts for people who have everything',
+		description: 'The broader hard-to-shop-for hub for low-clutter, experience, personalized, and useful gift lanes.',
+		href: '/gifts-for-people-who-have-everything/',
+		label: 'Hard to shop for',
+		tags: ['unique', 'low clutter', 'experience']
+	},
+	{
+		title: 'Gifts for dads who love outdoor adventures',
+		description: 'A stronger route when the recipient is a dad and outdoors, travel, or practical gear is the main clue.',
+		href: '/blog/best-gifts-for-dads-who-love-outdoor-adventures/',
+		label: 'Dad gifts',
+		tags: ['dad', 'outdoors', 'practical']
+	},
+	{
+		title: 'Last-minute gift ideas',
+		description: 'Fast-shipping and digital-friendly paths if the hard-to-shop-for gift also needs to happen today.',
+		href: '/last-minute-gift-ideas/',
+		label: 'Fast path',
+		tags: ['last minute', 'shipping', 'backup']
+	}
+];
+
+const sections = [
+	{
+		title: 'Gift lanes that work for men who already own the obvious things',
+		description: 'Avoid novelty clutter. Start with routines, hobbies, consumables, experiences, or better versions of things he already uses.',
+		links: [
+			{
+				title: 'Practical daily upgrades',
+				description: 'Everyday carry, desk, travel, coffee, kitchen, organization, and useful home upgrades.',
+				href: practicalHref,
+				label: 'Open finder',
+				tags: ['practical', 'daily use', 'under $75']
+			},
+			{
+				title: 'Outdoors, grilling, and weekend gifts',
+				description: 'Camping, cooking, grilling, sports, travel, and hobby-adjacent accessories that support what he already does.',
+				href: outdoorsHref,
+				label: 'Open finder',
+				tags: ['outdoors', 'grilling', 'hobby']
+			},
+			{
+				title: 'Experience gifts',
+				description: 'Classes, tastings, local outings, sports, concerts, or shared activities when more stuff is the wrong answer.',
+				href: experienceHref,
+				label: 'Open finder',
+				tags: ['experience', 'no clutter', 'shared']
+			}
+		]
+	},
+	{
+		title: 'Related hard-to-shop-for paths',
+		description: 'Use these if the relationship, budget, or timing matters more than the broad men-gifts category.',
+		links: [
+			{
+				title: 'Gifts for parents who have everything',
+				description: 'A better fit if the recipient is a parent and family, home, comfort, or memories are the main clue.',
+				href: '/gifts-for-parents-who-have-everything/',
+				label: 'Parent gifts',
+				tags: ['parents', 'family', 'keepsake']
+			},
+			{
+				title: 'Gift ideas by interest',
+				description: 'Browse books, gaming, plants, remote work, wellness, pets, and hobby-led gift paths.',
+				href: '/gift-ideas-by-interest/',
+				label: 'Interest hub',
+				tags: ['hobbies', 'interests', 'browse']
+			},
+			{
+				title: 'Gifts under $25',
+				description: 'Budget-safe small gifts when you need useful, office-safe, or low-pressure options.',
+				href: '/gifts-under-25/',
+				label: 'Budget hub',
+				tags: ['under $25', 'small gifts', 'safe']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What do you get a man who has everything?',
+		answer: 'Start with useful upgrades, consumables, experiences, or accessories for a hobby he already has. Avoid random gadgets unless they solve a real routine problem.'
+	},
+	{
+		question: 'Are personalized gifts good for men who have everything?',
+		answer: 'They can be, especially when the personalization is subtle and tied to a real use case: a travel item, bookplate, home bar accessory, photo gift, or hobby-related keepsake.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Gifts for Men Who Have Everything"
+	metaTitle="Gifts for Men Who Have Everything | BrightGift"
+	description="Find gifts for men who have everything, including practical upgrades, experience gifts, outdoors and grilling ideas, low-clutter gifts, and prefilled BrightGift finder paths."
+	canonicalPath="/gifts-for-men-who-have-everything/"
+	eyebrow="Men's hard-to-shop-for gifts"
+	heroTitle="Gifts for men who have everything, without defaulting to another gadget."
+	intro="When he already owns the obvious gift, the best move is usually more specific: upgrade a routine, support a hobby, choose a consumable, or give an experience. Use this page to narrow the lane before opening the BrightGift finder."
+	updatedAt="2026-07-03"
+	keywords={['gifts for men who have everything', 'gift ideas for men who have everything', 'unique gifts for men', 'practical gifts for men', 'experience gifts for men']}
+	ctaVariant="men_everything_under_75"
+	primaryCtaLabel="Open the men gift finder"
+	primaryCtaHref={heroHref}
+	footerCtaHref={heroHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Pick the safest lane for him"
+	generatorPromptDescription="Use what he actually does: daily routines, outdoors/grilling, or experiences."
+	generatorPrompts={[
+		{ title: 'Practical upgrades under $75', description: 'Everyday carry, travel, desk, coffee, kitchen, and organization gifts.', href: practicalHref, ctaVariant: 'practical_men_everything_under_75', label: 'Practical' },
+		{ title: 'Outdoors and grilling under $100', description: 'Useful hobby accessories for weekends, food, travel, and gear routines.', href: outdoorsHref, ctaVariant: 'outdoors_men_everything_under_100', label: 'Outdoors' },
+		{ title: 'Experience gifts under $100', description: 'Classes, tastings, events, sports, concerts, and shared activities.', href: experienceHref, ctaVariant: 'experience_men_everything_under_100', label: 'Experience' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>
