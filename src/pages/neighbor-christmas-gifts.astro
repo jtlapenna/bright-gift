@@ -1,0 +1,175 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-q4-persona-expansion-202607';
+
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'neighbor',
+	interests: 'neighbor Christmas gifts, cookies, porch drop off, cocoa, candles, small useful gifts, thank-you note, winter gifts',
+	budget: 25,
+	styles: 'thoughtful,practical,cozy',
+	sourceCta: 'neighbor_christmas_hero',
+	sourceVariant: 'neighbor_christmas_gifts',
+	sourceExperiment: experimentId
+});
+
+const footerHref = buildGeneratorPrefillHref({
+	recipient: 'neighbor or nearby family',
+	interests: 'Christmas gift, porch gift, baked goods, cocoa, candles, useful small gifts, winter, thank you',
+	budget: 25,
+	styles: 'thoughtful,cozy',
+	sourceCta: 'neighbor_christmas_footer',
+	sourceVariant: 'neighbor_holiday_drop_off_gifts',
+	sourceExperiment: experimentId
+});
+
+const familyHref = buildGeneratorPrefillHref({
+	recipient: 'neighbor family',
+	interests: 'family Christmas gift, cocoa, cookies, board games, popcorn, porch drop off, winter treats',
+	budget: 35,
+	styles: 'cozy,thoughtful,practical',
+	sourceCta: 'neighbor_christmas_prompt',
+	sourceVariant: 'neighbor_family_christmas_gifts',
+	sourceExperiment: experimentId
+});
+
+const elderlyHref = buildGeneratorPrefillHref({
+	recipient: 'elderly neighbor',
+	interests: 'cozy gifts, tea, cocoa, warm socks, puzzle books, helpful gifts, winter, thank-you note',
+	budget: 25,
+	styles: 'thoughtful,cozy,practical',
+	sourceCta: 'neighbor_christmas_prompt',
+	sourceVariant: 'elderly_neighbor_christmas_gifts',
+	sourceExperiment: experimentId
+});
+
+const newNeighborHref = buildGeneratorPrefillHref({
+	recipient: 'new neighbor',
+	interests: 'welcome gift, local treats, candle, coffee, kitchen, porch drop off, useful small gifts',
+	budget: 25,
+	styles: 'thoughtful,practical',
+	sourceCta: 'neighbor_christmas_prompt',
+	sourceVariant: 'new_neighbor_christmas_gifts',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Gifts under $25',
+		description: 'Budget-safe small gifts for neighbors, coworkers, teachers, and casual recipients.',
+		href: '/gifts-under-25/',
+		label: 'Under $25',
+		tags: ['budget', 'small gifts', 'neighbor']
+	},
+	{
+		title: 'Stocking stuffers under $25',
+		description: 'Small cozy and useful gifts that also work as porch drop-off gifts.',
+		href: '/stocking-stuffers-under-25/',
+		label: 'Stocking',
+		tags: ['Christmas', 'small', 'cozy']
+	},
+	{
+		title: 'Last-minute Christmas gifts',
+		description: 'Fast backup paths when the neighbor gift needs to be ready today.',
+		href: '/last-minute-christmas-gifts/',
+		label: 'Last-minute',
+		tags: ['Christmas', 'rush', 'pickup']
+	}
+];
+
+const sections = [
+	{
+		title: 'Neighbor gifts by relationship',
+		description: 'Keep neighbor gifts warm and low-pressure. The best choices are easy to use, easy to share, and not too personal.',
+		links: [
+			{
+				title: 'Neighbor family gifts',
+				description: 'Treats, cocoa, popcorn, puzzles, and simple shared gifts for a whole household.',
+				href: familyHref,
+				label: 'Prefilled finder',
+				tags: ['family', 'shared', 'porch gift']
+			},
+			{
+				title: 'Elderly neighbor gifts',
+				description: 'Cozy, practical, and thoughtful gifts that feel caring without being intrusive.',
+				href: elderlyHref,
+				label: 'Prefilled finder',
+				tags: ['elderly neighbor', 'cozy', 'practical']
+			},
+			{
+				title: 'New neighbor gifts',
+				description: 'Small welcome gifts that work even if you do not know their taste yet.',
+				href: newNeighborHref,
+				label: 'Prefilled finder',
+				tags: ['new neighbor', 'welcome', 'useful']
+			}
+		]
+	},
+	{
+		title: 'Related low-pressure holiday gifts',
+		description: 'These pages help when the neighbor gift overlaps with a host, home, teacher, or casual Christmas gift.',
+		links: [
+			{
+				title: 'Holiday hostess gifts',
+				description: 'A natural next stop when your neighbor also hosted dinner, drinks, or a party.',
+				href: '/holiday-hostess-gifts/',
+				label: 'Hostess',
+				tags: ['host', 'home', 'thank you']
+			},
+			{
+				title: 'Housewarming gifts',
+				description: 'Useful home gifts for new neighbors, new homeowners, and nearby families.',
+				href: '/housewarming-gifts/',
+				label: 'Housewarming',
+				tags: ['home', 'new neighbor', 'practical']
+			},
+			{
+				title: 'Teacher Christmas gifts',
+				description: 'A similar appreciation lane for people you know through school or community.',
+				href: '/teacher-christmas-gifts/',
+				label: 'Teachers',
+				tags: ['teacher', 'community', 'thank you']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What is a good Christmas gift for neighbors?',
+		answer: 'Good neighbor Christmas gifts are simple and shareable: cookies, cocoa, coffee, tea, candles, winter treats, a small plant, or a useful home item with a short note.'
+	},
+	{
+		question: 'How much should I spend on a neighbor Christmas gift?',
+		answer: 'Most neighbor gifts should stay around $10 to $25. If they helped you a lot, hosted you, or are close friends, $25 to $50 can make sense.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Neighbor Christmas Gifts"
+	metaTitle="Neighbor Christmas Gifts | BrightGift"
+	description="Find neighbor Christmas gifts for porch drop-offs, neighbor families, elderly neighbors, and new neighbors with cozy under-$25 BrightGift finder paths."
+	canonicalPath="/neighbor-christmas-gifts/"
+	eyebrow="Neighbor gift finder"
+	heroTitle="Neighbor Christmas gifts that are warm, simple, and not awkward."
+	intro="Neighbor gifts should feel friendly without feeling too intimate. Start with how well you know them, then choose something shareable, cozy, practical, or easy to drop off with a note."
+	updatedAt="2026-07-03"
+	keywords={['neighbor Christmas gifts', 'Christmas gifts for neighbors', 'neighbor gifts', 'holiday gifts for neighbors', 'gifts for neighbors under 25']}
+	ctaVariant="neighbor_christmas_gifts"
+	primaryCtaLabel="Open the neighbor gift finder"
+	primaryCtaHref={heroHref}
+	footerCtaHref={footerHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Choose the neighbor situation"
+	generatorPromptDescription="A little context keeps the gift warm without making it too personal."
+	generatorPrompts={[
+		{ title: 'Neighbor family', description: 'Shared treats, cocoa, puzzles, popcorn, and cozy household gifts.', href: familyHref, ctaVariant: 'neighbor_family_christmas_gifts', label: 'Family' },
+		{ title: 'Elderly neighbor', description: 'Cozy, practical, thoughtful gifts with a friendly note.', href: elderlyHref, ctaVariant: 'elderly_neighbor_christmas_gifts', label: 'Elderly' },
+		{ title: 'New neighbor', description: 'Welcome gifts that work before you know their preferences.', href: newNeighborHref, ctaVariant: 'new_neighbor_christmas_gifts', label: 'New neighbor' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>

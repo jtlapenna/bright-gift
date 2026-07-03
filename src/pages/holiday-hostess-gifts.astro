@@ -1,0 +1,175 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-q4-persona-expansion-202607';
+
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'holiday host',
+	interests: 'hostess gifts, dinner party, holiday party, candles, gourmet food, tea, kitchen, flowers, thank-you gifts',
+	budget: 50,
+	styles: 'thoughtful,luxury,practical',
+	sourceCta: 'holiday_hostess_hero',
+	sourceVariant: 'holiday_hostess_gifts',
+	sourceExperiment: experimentId
+});
+
+const footerHref = buildGeneratorPrefillHref({
+	recipient: 'holiday host or hostess',
+	interests: 'thank-you gift, dinner party, overnight host, kitchen, wine, coffee, candles, gourmet treats',
+	budget: 50,
+	styles: 'thoughtful,practical',
+	sourceCta: 'holiday_hostess_footer',
+	sourceVariant: 'hostess_thank_you_gifts',
+	sourceExperiment: experimentId
+});
+
+const dinnerHref = buildGeneratorPrefillHref({
+	recipient: 'dinner party host',
+	interests: 'hosting, kitchen, entertaining, candles, olive oil, dessert, tea, coffee, flowers',
+	budget: 50,
+	styles: 'thoughtful,luxury',
+	sourceCta: 'holiday_hostess_prompt',
+	sourceVariant: 'dinner_party_host_gifts',
+	sourceExperiment: experimentId
+});
+
+const overnightHref = buildGeneratorPrefillHref({
+	recipient: 'overnight holiday host',
+	interests: 'guest room, breakfast, coffee, cozy gifts, thank-you note, home, useful host gifts',
+	budget: 75,
+	styles: 'thoughtful,cozy,practical',
+	sourceCta: 'holiday_hostess_prompt',
+	sourceVariant: 'overnight_host_gifts',
+	sourceExperiment: experimentId
+});
+
+const cookHref = buildGeneratorPrefillHref({
+	recipient: 'host who loves cooking',
+	interests: 'cooking, kitchen tools, pantry, olive oil, spices, baking, serving, entertaining',
+	budget: 50,
+	styles: 'practical,luxury',
+	sourceCta: 'holiday_hostess_prompt',
+	sourceVariant: 'host_who_cooks_gifts',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Housewarming gifts',
+		description: 'A home-focused gift path that overlaps well with hosts, new homeowners, and renters.',
+		href: '/housewarming-gifts/',
+		label: 'Home',
+		tags: ['home', 'host', 'housewarming']
+	},
+	{
+		title: 'Holiday gift ideas',
+		description: 'The broader Q4 hub for recipients, budgets, last-minute needs, and personalized paths.',
+		href: '/holiday-gift-ideas/',
+		label: 'Holiday hub',
+		tags: ['Christmas', 'Q4', 'gifts']
+	},
+	{
+		title: 'Last-minute Christmas gifts',
+		description: 'Use this when the party is tonight or shipping time is already tight.',
+		href: '/last-minute-christmas-gifts/',
+		label: 'Last-minute',
+		tags: ['Christmas', 'rush', 'shipping']
+	}
+];
+
+const sections = [
+	{
+		title: 'Host gifts by situation',
+		description: 'A good host gift should match what they did for you: dinner, overnight hosting, or a full holiday gathering.',
+		links: [
+			{
+				title: 'Dinner party host gifts',
+				description: 'Candles, pantry upgrades, dessert, tea, coffee, and small entertaining gifts.',
+				href: dinnerHref,
+				label: 'Prefilled finder',
+				tags: ['dinner party', 'hostess', 'food']
+			},
+			{
+				title: 'Overnight host gifts',
+				description: 'Slightly warmer thank-you gifts for someone who hosted you for a night or weekend.',
+				href: overnightHref,
+				label: 'Prefilled finder',
+				tags: ['overnight', 'cozy', 'thank you']
+			},
+			{
+				title: 'Gifts for a host who cooks',
+				description: 'Kitchen, pantry, serving, and cooking gifts that do not duplicate basic tools.',
+				href: cookHref,
+				label: 'Prefilled finder',
+				tags: ['cooking', 'kitchen', 'practical']
+			}
+		]
+	},
+	{
+		title: 'Related holiday gift paths',
+		description: 'Use these when the host also fits another common Q4 gifting angle.',
+		links: [
+			{
+				title: 'Personalized Christmas gifts',
+				description: 'Photo, monogram, custom home, and keepsake paths when you know the host well.',
+				href: '/personalized-christmas-gifts/',
+				label: 'Personalized',
+				tags: ['custom', 'Christmas', 'keepsake']
+			},
+			{
+				title: 'Gifts under $50',
+				description: 'A wider budget lane for polished host gifts that still feel reasonable.',
+				href: '/gifts-under-50/',
+				label: 'Under $50',
+				tags: ['budget', 'host', 'home']
+			},
+			{
+				title: 'Best home gifts on Amazon',
+				description: 'A blog guide for home-adjacent Amazon ideas that can support host shopping.',
+				href: '/blog/best-home-gifts-on-amazon-2024/',
+				label: 'Amazon home',
+				tags: ['home', 'Amazon', 'host']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What is a good holiday hostess gift?',
+		answer: 'A good holiday hostess gift is easy to receive and does not create work: candles, coffee, tea, pantry treats, flowers, dessert, napkins, serving items, or a small kitchen upgrade.'
+	},
+	{
+		question: 'How much should I spend on a holiday host gift?',
+		answer: 'For a dinner or party, $25 to $50 is usually enough. For an overnight stay or a major holiday, $50 to $75 can make sense if the relationship is close.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Holiday Hostess Gifts"
+	metaTitle="Holiday Hostess Gifts | BrightGift"
+	description="Find holiday hostess gifts for dinner parties, overnight hosts, home cooks, and Christmas gatherings with prefilled BrightGift finder paths."
+	canonicalPath="/holiday-hostess-gifts/"
+	eyebrow="Hostess gift finder"
+	heroTitle="Holiday hostess gifts that feel grateful, not generic."
+	intro="A strong host gift says thank you without adding clutter or extra work. Start with how they hosted you, then choose something consumable, useful, cozy, or quietly elevated."
+	updatedAt="2026-07-03"
+	keywords={['holiday hostess gifts', 'Christmas hostess gifts', 'hostess gifts', 'dinner party host gifts', 'holiday host gifts']}
+	ctaVariant="holiday_hostess_gifts"
+	primaryCtaLabel="Open the hostess gift finder"
+	primaryCtaHref={heroHref}
+	footerCtaHref={footerHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Choose the hosting situation"
+	generatorPromptDescription="Host gifts get easier when you match the level of effort they made for you."
+	generatorPrompts={[
+		{ title: 'Dinner party host', description: 'Candles, pantry gifts, dessert, and entertaining ideas.', href: dinnerHref, ctaVariant: 'dinner_party_host_gifts', label: 'Dinner' },
+		{ title: 'Overnight host', description: 'Warmer thank-you gifts for a weekend or guest-room stay.', href: overnightHref, ctaVariant: 'overnight_host_gifts', label: 'Overnight' },
+		{ title: 'Host who cooks', description: 'Kitchen, pantry, and serving gifts for someone who loves food.', href: cookHref, ctaVariant: 'host_who_cooks_gifts', label: 'Cooking' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>

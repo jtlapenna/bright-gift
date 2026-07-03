@@ -1,0 +1,175 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-q4-persona-expansion-202607';
+
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'white elephant gift exchange',
+	interests: 'white elephant gifts, funny gifts, useful gag gifts, office exchange, party games, under $25, crowd-pleasers',
+	budget: 25,
+	styles: 'funny,quirky,practical',
+	sourceCta: 'white_elephant_hero',
+	sourceVariant: 'white_elephant_gifts_under_25',
+	sourceExperiment: experimentId
+});
+
+const footerHref = buildGeneratorPrefillHref({
+	recipient: 'white elephant gift exchange',
+	interests: 'gift exchange, funny but useful gifts, holiday party, office-safe, under $25',
+	budget: 25,
+	styles: 'funny,practical',
+	sourceCta: 'white_elephant_footer',
+	sourceVariant: 'white_elephant_party_gifts',
+	sourceExperiment: experimentId
+});
+
+const officeHref = buildGeneratorPrefillHref({
+	recipient: 'office white elephant exchange',
+	interests: 'office-safe funny gifts, desk toys, coffee, snacks, useful gag gifts, under $25',
+	budget: 25,
+	styles: 'funny,professional,practical',
+	sourceCta: 'white_elephant_prompt',
+	sourceVariant: 'office_white_elephant_under_25',
+	sourceExperiment: experimentId
+});
+
+const familyHref = buildGeneratorPrefillHref({
+	recipient: 'family white elephant exchange',
+	interests: 'holiday party, funny gifts, cozy gifts, snacks, kitchen, games, useful gag gifts',
+	budget: 25,
+	styles: 'funny,cozy,practical',
+	sourceCta: 'white_elephant_prompt',
+	sourceVariant: 'family_white_elephant_under_25',
+	sourceExperiment: experimentId
+});
+
+const usefulHref = buildGeneratorPrefillHref({
+	recipient: 'white elephant gift exchange',
+	interests: 'useful gifts, funny gifts, coffee, kitchen gadgets, desk accessories, cozy gifts, under $25',
+	budget: 25,
+	styles: 'practical,funny',
+	sourceCta: 'white_elephant_prompt',
+	sourceVariant: 'useful_white_elephant_under_25',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Secret Santa gifts',
+		description: 'A nearby exchange guide for office-safe, cozy, useful, and funny gifts.',
+		href: '/secret-santa-gifts/',
+		label: 'Secret Santa',
+		tags: ['Secret Santa', 'office', 'under $25']
+	},
+	{
+		title: 'Gifts under $25',
+		description: 'Budget-safe small gifts for coworkers, teachers, friends, and holiday exchanges.',
+		href: '/gifts-under-25/',
+		label: 'Under $25',
+		tags: ['budget', 'small gifts', 'Q4']
+	},
+	{
+		title: 'Stocking stuffers under $25',
+		description: 'Small Christmas gifts that also work when the exchange needs something compact.',
+		href: '/stocking-stuffers-under-25/',
+		label: 'Stocking',
+		tags: ['stocking stuffers', 'Christmas', 'small']
+	}
+];
+
+const sections = [
+	{
+		title: 'White elephant gifts by exchange type',
+		description: 'The right gift depends on whether the room is coworkers, family, friends, or a mixed group.',
+		links: [
+			{
+				title: 'Office white elephant gifts',
+				description: 'Funny but safe ideas for coworkers, managers, and mixed workplace exchanges.',
+				href: officeHref,
+				label: 'Prefilled finder',
+				tags: ['office', 'funny', 'safe']
+			},
+			{
+				title: 'Family white elephant gifts',
+				description: 'Crowd-pleasers for mixed ages: cozy, snackable, useful, and easy to steal.',
+				href: familyHref,
+				label: 'Prefilled finder',
+				tags: ['family', 'party', 'cozy']
+			},
+			{
+				title: 'Useful white elephant gifts',
+				description: 'For exchanges where the best joke is a gift someone actually wants afterward.',
+				href: usefulHref,
+				label: 'Prefilled finder',
+				tags: ['useful', 'under $25', 'crowd-pleaser']
+			}
+		]
+	},
+	{
+		title: 'Holiday exchange pages to browse next',
+		description: 'Use these when the exchange rules are more specific than white elephant.',
+		links: [
+			{
+				title: 'Office holiday gifts',
+				description: 'Professional gift paths for coworkers, managers, teams, and office parties.',
+				href: '/office-holiday-gifts/',
+				label: 'Office',
+				tags: ['office', 'coworker', 'holiday']
+			},
+			{
+				title: 'Last-minute Christmas gifts',
+				description: 'Use this if the party is close and shipping time is the main constraint.',
+				href: '/last-minute-christmas-gifts/',
+				label: 'Last-minute',
+				tags: ['Christmas', 'rush', 'shipping']
+			},
+			{
+				title: 'Gifts for coworkers under $25',
+				description: 'A tighter work-gift path when the exchange is less jokey and more practical.',
+				href: '/gifts-for-coworkers-under-25/',
+				label: 'Coworkers',
+				tags: ['coworker', 'under $25', 'practical']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What is a good white elephant gift under $25?',
+		answer: 'A strong white elephant gift under $25 is funny enough to get attention but useful enough that people want to steal it. Think snacks, desk gadgets, cozy items, kitchen tools, games, or odd-but-practical everyday upgrades.'
+	},
+	{
+		question: 'Should a white elephant gift be funny or useful?',
+		answer: 'The safest answer is both. Pure gag gifts can fall flat, while useful gifts with a funny angle usually work for office, family, and friend exchanges.'
+	}
+];
+---
+
+<GiftHubPage
+	title="White Elephant Gifts Under $25"
+	metaTitle="White Elephant Gifts Under $25 | BrightGift"
+	description="Find white elephant gifts under $25 for office parties, family exchanges, and mixed holiday groups with funny, useful, and crowd-pleasing BrightGift finder paths."
+	canonicalPath="/white-elephant-gifts-under-25/"
+	eyebrow="White elephant gift finder"
+	heroTitle="White elephant gifts under $25 people actually want to steal."
+	intro="The best white elephant gift has a little personality without becoming useless clutter. Start with the room, the budget, and how risky the humor can be, then choose something funny, practical, or snackable enough to survive the swap."
+	updatedAt="2026-07-03"
+	keywords={['white elephant gifts under 25', 'white elephant gifts under $25', 'funny white elephant gifts', 'office white elephant gifts', 'holiday gift exchange ideas']}
+	ctaVariant="white_elephant_gifts_under_25"
+	primaryCtaLabel="Open the white elephant gift finder"
+	primaryCtaHref={heroHref}
+	footerCtaHref={footerHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Choose the exchange setting"
+	generatorPromptDescription="White elephant gifts work better when the finder knows whether the room is coworkers, family, or friends."
+	generatorPrompts={[
+		{ title: 'Office exchange', description: 'Funny but office-safe gifts under $25.', href: officeHref, ctaVariant: 'office_white_elephant_under_25', label: 'Office' },
+		{ title: 'Family exchange', description: 'Cozy, snackable, and mixed-age crowd-pleasers.', href: familyHref, ctaVariant: 'family_white_elephant_under_25', label: 'Family' },
+		{ title: 'Useful but funny', description: 'Gift-swap picks that are practical enough to keep.', href: usefulHref, ctaVariant: 'useful_white_elephant_under_25', label: 'Useful' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>
