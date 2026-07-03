@@ -7,20 +7,20 @@ const experimentId = 'bg-men-have-everything-202607';
 const heroHref = buildGeneratorPrefillHref({
 	recipient: 'man who has everything',
 	interests: 'useful upgrades, hobbies, coffee, grilling, outdoors, travel, desk setup, experiences',
-	budget: 75,
+	budget: 100,
 	styles: 'practical,thoughtful',
 	sourceCta: 'men_everything_hero',
-	sourceVariant: 'men_everything_under_75',
+	sourceVariant: 'men_everything_under_100',
 	sourceExperiment: experimentId
 });
 
 const practicalHref = buildGeneratorPrefillHref({
 	recipient: 'practical man who has everything',
 	interests: 'everyday carry, tools, coffee, desk setup, travel, kitchen, organization',
-	budget: 75,
+	budget: 100,
 	styles: 'practical,professional',
 	sourceCta: 'men_everything_prompt',
-	sourceVariant: 'practical_men_everything_under_75',
+	sourceVariant: 'practical_men_everything_under_100',
 	sourceExperiment: experimentId
 });
 
@@ -147,7 +147,7 @@ const faqs = [
 	intro="When he already owns the obvious gift, the best move is usually more specific: upgrade a routine, support a hobby, choose a consumable, or give an experience. Use this page to narrow the lane before opening the BrightGift finder."
 	updatedAt="2026-07-03"
 	keywords={['gifts for men who have everything', 'gift ideas for men who have everything', 'unique gifts for men', 'practical gifts for men', 'experience gifts for men']}
-	ctaVariant="men_everything_under_75"
+	ctaVariant="men_everything_under_100"
 	primaryCtaLabel="Open the men gift finder"
 	primaryCtaHref={heroHref}
 	footerCtaHref={heroHref}
@@ -155,7 +155,7 @@ const faqs = [
 	generatorPromptTitle="Pick the safest lane for him"
 	generatorPromptDescription="Use what he actually does: daily routines, outdoors/grilling, or experiences."
 	generatorPrompts={[
-		{ title: 'Practical upgrades under $75', description: 'Everyday carry, travel, desk, coffee, kitchen, and organization gifts.', href: practicalHref, ctaVariant: 'practical_men_everything_under_75', label: 'Practical' },
+		{ title: 'Practical upgrades under $100', description: 'Everyday carry, travel, desk, coffee, kitchen, and organization gifts.', href: practicalHref, ctaVariant: 'practical_men_everything_under_100', label: 'Practical' },
 		{ title: 'Outdoors and grilling under $100', description: 'Useful hobby accessories for weekends, food, travel, and gear routines.', href: outdoorsHref, ctaVariant: 'outdoors_men_everything_under_100', label: 'Outdoors' },
 		{ title: 'Experience gifts under $100', description: 'Classes, tastings, events, sports, concerts, and shared activities.', href: experienceHref, ctaVariant: 'experience_men_everything_under_100', label: 'Experience' }
 	]}

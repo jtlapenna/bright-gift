@@ -27,10 +27,10 @@ const noWishlistHref = buildGeneratorPrefillHref({
 const nicheTasteHref = buildGeneratorPrefillHref({
 	recipient: 'person with specific niche interests',
 	interests: 'niche hobby, books, games, plants, fitness, cooking, desk setup, collecting',
-	budget: 75,
+	budget: 100,
 	styles: 'quirky,thoughtful',
 	sourceCta: 'hard_to_shop_prompt',
-	sourceVariant: 'niche_taste_under_75',
+	sourceVariant: 'niche_taste_under_100',
 	sourceExperiment: experimentId
 });
 
@@ -163,7 +163,7 @@ const faqs = [
 	generatorPromptDescription="These paths keep the generator focused on the real obstacle: no wishlist, niche taste, or low-clutter preferences."
 	generatorPrompts={[
 		{ title: 'They never give a wishlist', description: 'Routine, snack, home, work, and hobby clues when they give you nothing.', href: noWishlistHref, ctaVariant: 'no_wishlist_under_50', label: 'No wishlist' },
-		{ title: 'They have niche taste', description: 'Safer hobby accessories and useful upgrades for specific interests.', href: nicheTasteHref, ctaVariant: 'niche_taste_under_75', label: 'Niche taste' },
+		{ title: 'They have niche taste', description: 'Safer hobby accessories and useful upgrades for specific interests.', href: nicheTasteHref, ctaVariant: 'niche_taste_under_100', label: 'Niche taste' },
 		{ title: 'They hate clutter', description: 'Consumables, experiences, and useful low-clutter gift ideas.', href: minimalistHref, ctaVariant: 'minimalist_hard_to_shop_under_50', label: 'Minimalist' }
 	]}
 	featuredLinks={featuredLinks}

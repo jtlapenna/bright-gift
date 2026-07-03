@@ -17,10 +17,10 @@ const heroHref = buildGeneratorPrefillHref({
 const libraryHref = buildGeneratorPrefillHref({
 	recipient: 'home library book lover',
 	interests: 'bookplates, book stamp, bookshelf organization, bookends, reading journal, home library',
-	budget: 75,
+	budget: 100,
 	styles: 'book-lover,thoughtful',
 	sourceCta: 'book_lovers_everything_prompt',
-	sourceVariant: 'home_library_book_lover_under_75',
+	sourceVariant: 'home_library_book_lover_under_100',
 	sourceExperiment: experimentId
 });
 
@@ -155,7 +155,7 @@ const faqs = [
 	generatorPromptTitle="Choose the reader gift lane"
 	generatorPromptDescription="These paths avoid risky book-title guessing and focus on reading rituals, home libraries, and fast gifts."
 	generatorPrompts={[
-		{ title: 'Home-library gifts under $75', description: 'Bookplates, custom stamps, bookends, shelf organization, and reading journals.', href: libraryHref, ctaVariant: 'home_library_book_lover_under_75', label: 'Home library' },
+		{ title: 'Home-library gifts under $100', description: 'Bookplates, custom stamps, bookends, shelf organization, and reading journals.', href: libraryHref, ctaVariant: 'home_library_book_lover_under_100', label: 'Home library' },
 		{ title: 'Cozy reading gifts under $50', description: 'Book lights, blankets, tea, mugs, lap desks, and reading comfort upgrades.', href: cozyHref, ctaVariant: 'cozy_book_lover_under_50', label: 'Cozy' },
 		{ title: 'Last-minute reader gifts', description: 'Bookstore credit, audiobook gifts, journals, book lights, and fast-shipping accessories.', href: lastMinuteHref, ctaVariant: 'last_minute_book_lover_under_50', label: 'Fast path' }
 	]}
