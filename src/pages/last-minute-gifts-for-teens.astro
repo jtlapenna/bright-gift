@@ -1,0 +1,184 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-q4-recipient-expansion-202607';
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'teen',
+	interests: 'last-minute gifts for teens, headphones, desk setup, skincare, books, gaming, art, cozy room',
+	budget: 50,
+	styles: 'techy,quirky',
+	sourceCta: 'last_minute_teen_hero',
+	sourceVariant: 'last_minute_gifts_for_teens',
+	sourceExperiment: experimentId
+});
+const footerHref = buildGeneratorPrefillHref({
+	recipient: 'teen or college student',
+	interests: 'quick gifts, hobbies, bedroom, school, gaming, books, beauty, creative supplies',
+	budget: 75,
+	styles: 'quirky,thoughtful',
+	sourceCta: 'last_minute_teen_footer',
+	sourceVariant: 'last_minute_teen_personalized',
+	sourceExperiment: experimentId
+});
+const techHref = buildGeneratorPrefillHref({
+	recipient: 'teen who likes tech',
+	interests: 'earbuds, phone accessories, charging, LED lights, desk setup, gaming accessories',
+	budget: 50,
+	styles: 'techy,practical',
+	sourceCta: 'last_minute_teen_prompt',
+	sourceVariant: 'teen_tech_last_minute',
+	sourceExperiment: experimentId
+});
+const beautyHref = buildGeneratorPrefillHref({
+	recipient: 'teen who likes beauty and self-care',
+	interests: 'skincare, hair accessories, cozy robe, lip balm, mirror, self-care gifts',
+	budget: 50,
+	styles: 'beauty,cozy',
+	sourceCta: 'last_minute_teen_prompt',
+	sourceVariant: 'teen_beauty_last_minute',
+	sourceExperiment: experimentId
+});
+const creativeHref = buildGeneratorPrefillHref({
+	recipient: 'creative teen',
+	interests: 'art supplies, books, journaling, music, crafts, room decor, creative projects',
+	budget: 50,
+	styles: 'quirky,handmade',
+	sourceCta: 'last_minute_teen_prompt',
+	sourceVariant: 'teen_creative_last_minute',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Stocking stuffers under $25',
+		description: 'Small teen-friendly gifts for quick Christmas, budget, and backup shopping.',
+		href: '/stocking-stuffers-under-25/',
+		label: 'Under $25',
+		tags: ['teen', 'stocking', 'budget']
+	},
+	{
+		title: 'Gifts for gamers under $50',
+		description: 'A stronger path for teens who care most about gaming and desk setup.',
+		href: '/blog/gifts-for-gamers-under-50/',
+		label: 'Gamers',
+		tags: ['gaming', 'tech', 'under $50']
+	},
+	{
+		title: 'Books to gift this holiday season',
+		description: 'Book and reader gift inspiration for teens who already have a reading lane.',
+		href: '/blog/25-books-to-gift-this-holiday-season/',
+		label: 'Books',
+		tags: ['books', 'reader', 'holiday']
+	}
+];
+
+const sections = [
+	{
+		title: 'Last-minute teen gifts by interest',
+		description: 'Teen gifts are easier when you know the lane: tech, beauty, creative, gaming, books, or room upgrades.',
+		links: [
+			{
+				title: 'Tech gifts for teens',
+				description: 'Charging, earbuds, desk setup, lights, phone accessories, and gaming add-ons.',
+				href: techHref,
+				label: 'Prefilled finder',
+				tags: ['tech', 'gaming', 'desk']
+			},
+			{
+				title: 'Beauty and self-care gifts',
+				description: 'Skincare, hair accessories, cozy room items, lip care, mirrors, and low-risk self-care.',
+				href: beautyHref,
+				label: 'Prefilled finder',
+				tags: ['beauty', 'self-care', 'cozy']
+			},
+			{
+				title: 'Creative teen gifts',
+				description: 'Art supplies, journals, music, crafts, book gifts, and room decor.',
+				href: creativeHref,
+				label: 'Prefilled finder',
+				tags: ['creative', 'art', 'books']
+			},
+			{
+				title: 'Little luxuries under $25',
+				description: 'Small upgrades that work for teens when you need a fast, affordable option.',
+				href: '/gifts-under-25/',
+				label: 'Budget',
+				tags: ['under $25', 'small gifts', 'affordable']
+			}
+		]
+	},
+	{
+		title: 'Fast backup routes',
+		description: 'Use these when you are not sure which trend or hobby is safest.',
+		links: [
+			{
+				title: 'Gift ideas by interest',
+				description: 'Browse book, gaming, wellness, home, and hobby-led gift paths.',
+				href: '/gift-ideas-by-interest/',
+				label: 'Interest hub',
+				tags: ['interest', 'hobby', 'browse']
+			},
+			{
+				title: 'Last-minute Christmas gifts',
+				description: 'A holiday deadline path for fast-shipping, digital, and pickup-friendly gifts.',
+				href: '/last-minute-christmas-gifts/',
+				label: 'Christmas',
+				tags: ['Q4', 'holiday', 'fast']
+			},
+			{
+				title: 'Personalized Christmas gifts',
+				description: 'Custom and photo gifts when you know the relationship but not the exact item.',
+				href: '/personalized-christmas-gifts/',
+				label: 'Personalized',
+				tags: ['custom', 'keepsake', 'holiday']
+			},
+			{
+				title: 'Random gift generator',
+				description: 'Use the full BrightGift generator when you only know budget, age, and one interest.',
+				href: '/gift-idea-generator/',
+				label: 'Generator',
+				tags: ['AI gift finder', 'random gift generator', 'personalized']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What is a safe last-minute gift for a teen?',
+		answer: 'Safer teen gifts are useful and interest-led: earbuds, charging accessories, room lighting, skincare basics, books, art supplies, gaming accessories, or a gift card tied to a hobby.'
+	},
+	{
+		question: 'What should I avoid buying a teen at the last minute?',
+		answer: 'Avoid clothes that require sizing, trend-specific items you cannot verify, and novelty gifts that do not connect to a real interest.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Last-Minute Gifts for Teens"
+	metaTitle="Last-Minute Gifts for Teens | BrightGift"
+	description="Find last-minute gifts for teens by interest, budget, and delivery risk, including tech gifts, beauty gifts, creative gifts, gaming gifts, stocking stuffers, and prefilled BrightGift finder paths."
+	canonicalPath="/last-minute-gifts-for-teens/"
+	eyebrow="Last-minute teen gifts"
+	heroTitle="Last-minute gifts for teens that are not just random trends."
+	intro="Teen gifts work best when you pick an interest lane before picking a product. Start with tech, beauty, gaming, books, art, room upgrades, or school-life routines, then use the generator to personalize the shortlist."
+	updatedAt="2026-07-03"
+	keywords={['last-minute gifts for teens', 'last minute teen gifts', 'gifts for teens', 'Christmas gifts for teens', 'stocking stuffers for teens', 'teen gift ideas']}
+	ctaVariant="last_minute_gifts_for_teens"
+	primaryCtaLabel="Open the teen gift finder"
+	primaryCtaHref={heroHref}
+	footerCtaHref={footerHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Start with their interest lane"
+	generatorPromptDescription="These paths avoid guessing at trends and start with categories that can still ship quickly."
+	generatorPrompts={[
+		{ title: 'Teen tech gifts', description: 'Charging, audio, lighting, desk, and gaming add-ons.', href: techHref, ctaVariant: 'teen_tech_last_minute', label: 'Tech' },
+		{ title: 'Beauty and self-care', description: 'Skincare, hair, cozy room, and low-risk self-care ideas.', href: beautyHref, ctaVariant: 'teen_beauty_last_minute', label: 'Beauty' },
+		{ title: 'Creative gifts', description: 'Art, music, books, journaling, and project-friendly gifts.', href: creativeHref, ctaVariant: 'teen_creative_last_minute', label: 'Creative' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>

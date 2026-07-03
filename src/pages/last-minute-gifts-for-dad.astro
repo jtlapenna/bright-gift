@@ -1,0 +1,184 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-q4-recipient-expansion-202607';
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'dad',
+	interests: 'last-minute gifts for dad, grilling, outdoors, tools, coffee, books, tech, family memories',
+	budget: 75,
+	styles: 'practical,thoughtful',
+	sourceCta: 'last_minute_dad_hero',
+	sourceVariant: 'last_minute_gifts_for_dad',
+	sourceExperiment: experimentId
+});
+const footerHref = buildGeneratorPrefillHref({
+	recipient: 'dad',
+	interests: 'quick gift ideas, hobbies, daily routine, outdoor gear, cooking, rest, books',
+	budget: 100,
+	styles: 'practical,thoughtful',
+	sourceCta: 'last_minute_dad_footer',
+	sourceVariant: 'last_minute_dad_personalized',
+	sourceExperiment: experimentId
+});
+const outdoorsHref = buildGeneratorPrefillHref({
+	recipient: 'dad who likes outdoors',
+	interests: 'camping, hiking, grilling, insulated bottle, field guide, backyard gear',
+	budget: 75,
+	styles: 'athletics,practical',
+	sourceCta: 'last_minute_dad_prompt',
+	sourceVariant: 'dad_outdoors_last_minute',
+	sourceExperiment: experimentId
+});
+const techHref = buildGeneratorPrefillHref({
+	recipient: 'dad who likes gadgets',
+	interests: 'tech gifts, charging station, bluetooth tracker, smart plug, desk setup, useful gadget',
+	budget: 75,
+	styles: 'techy,practical',
+	sourceCta: 'last_minute_dad_prompt',
+	sourceVariant: 'dad_tech_last_minute',
+	sourceExperiment: experimentId
+});
+const readerHref = buildGeneratorPrefillHref({
+	recipient: 'dad who likes books',
+	interests: 'book light, history book, sports book, mystery, audiobook, reading journal',
+	budget: 50,
+	styles: 'book-lover,thoughtful',
+	sourceCta: 'last_minute_dad_prompt',
+	sourceVariant: 'dad_reader_last_minute',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Gifts for dads who love outdoor adventures',
+		description: 'A deeper outdoors path for camping, hiking, grilling, and backyard dads.',
+		href: '/blog/best-gifts-for-dads-who-love-outdoor-adventures/',
+		label: 'Outdoor dads',
+		tags: ['dad', 'outdoors', 'practical']
+	},
+	{
+		title: 'Gifts for men who have everything',
+		description: 'Practical, hobby-led, and experience gifts when he already owns the obvious picks.',
+		href: '/gifts-for-men-who-have-everything/',
+		label: 'Hard to shop for',
+		tags: ['men', 'hobby', 'low clutter']
+	},
+	{
+		title: 'Christmas gifts for book lovers',
+		description: 'A reader-safe route for book lights, journals, bookstore credits, and cozy add-ons.',
+		href: '/christmas-gifts-for-book-lovers/',
+		label: 'Reader gifts',
+		tags: ['books', 'Christmas', 'cozy']
+	}
+];
+
+const sections = [
+	{
+		title: 'Last-minute dad gifts by clue',
+		description: 'The safest dad gifts start with what he actually does, not a generic dad stereotype.',
+		links: [
+			{
+				title: 'Outdoor and grilling gifts',
+				description: 'Field guides, insulated drinkware, grilling tools, camp lights, and backyard upgrades.',
+				href: outdoorsHref,
+				label: 'Prefilled finder',
+				tags: ['outdoors', 'grilling', 'camping']
+			},
+			{
+				title: 'Useful tech gifts',
+				description: 'Charging, trackers, smart plugs, desk gadgets, and practical electronics.',
+				href: techHref,
+				label: 'Prefilled finder',
+				tags: ['tech', 'gadgets', 'practical']
+			},
+			{
+				title: 'Book gifts for dad',
+				description: 'Book lights, audiobooks, history, sports, mystery, and reading add-ons.',
+				href: readerHref,
+				label: 'Prefilled finder',
+				tags: ['books', 'audiobook', 'reader']
+			},
+			{
+				title: 'Father gifts for every type of dad',
+				description: 'A broader guide for outdoor, tech, food, reader, new dad, and grandpa paths.',
+				href: '/blog/fathers-day-gifts-for-every-type-of-dad/',
+				label: 'Dad guide',
+				tags: ['dad', 'occasion', 'personalized']
+			}
+		]
+	},
+	{
+		title: 'Fast backup routes',
+		description: 'Use these when the deadline matters more than building a perfect product list.',
+		links: [
+			{
+				title: 'Last-minute Christmas gifts',
+				description: 'A Q4 page for recipient, budget, and shipping-risk decisions.',
+				href: '/last-minute-christmas-gifts/',
+				label: 'Christmas',
+				tags: ['Q4', 'holiday', 'fast']
+			},
+			{
+				title: 'Personalized book gifts',
+				description: 'Bookplates, stamps, journals, and reader gifts that can still feel personal.',
+				href: '/personalized-book-gifts/',
+				label: 'Personalized',
+				tags: ['books', 'custom', 'reader']
+			},
+			{
+				title: 'Gifts under $25',
+				description: 'Small useful gifts, stocking stuffers, and budget backup ideas.',
+				href: '/gifts-under-25/',
+				label: 'Budget',
+				tags: ['under $25', 'small gifts', 'stocking']
+			},
+			{
+				title: 'Gift ideas for hard-to-shop-for people',
+				description: 'Use this when you know his taste is specific but cannot name the perfect item.',
+				href: '/gift-ideas-for-hard-to-shop-for-people/',
+				label: 'Hard case',
+				tags: ['specific taste', 'low clutter', 'experience']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What is a good last-minute gift for dad?',
+		answer: 'Good last-minute gifts for dad usually improve a real routine: grilling, coffee, reading, outdoor time, desk setup, sleep, tools, or family memories.'
+	},
+	{
+		question: 'What should I avoid buying dad at the last minute?',
+		answer: 'Avoid sizing-dependent clothing, overly specific hobby gear you cannot verify, and novelty gifts that do not connect to a real habit.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Last-Minute Gifts for Dad"
+	metaTitle="Last-Minute Gifts for Dad | BrightGift"
+	description="Find last-minute gifts for dad by routine, budget, and delivery risk, including practical gifts, outdoor gifts, tech gifts, book gifts, and prefilled BrightGift finder paths."
+	canonicalPath="/last-minute-gifts-for-dad/"
+	eyebrow="Last-minute dad gifts"
+	heroTitle="Last-minute gifts for dad that do not feel random."
+	intro="Dad gifts get better when you start with a real habit: grilling, reading, tools, coffee, tech, outdoors, better sleep, or family time. Use this page to move from panic shopping to a focused shortlist."
+	updatedAt="2026-07-03"
+	keywords={['last-minute gifts for dad', 'last minute gifts for dad', 'gifts for dad', 'Christmas gifts for dad', 'practical gifts for dad', 'gifts for men']}
+	ctaVariant="last_minute_gifts_for_dad"
+	primaryCtaLabel="Open the dad gift finder"
+	primaryCtaHref={heroHref}
+	footerCtaHref={footerHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Start with his real habit"
+	generatorPromptDescription="These prefilled paths keep the gift useful, specific, and realistic for a short deadline."
+	generatorPrompts={[
+		{ title: 'Outdoor dad gifts', description: 'Camping, grilling, backyard, and travel-ready ideas.', href: outdoorsHref, ctaVariant: 'dad_outdoors_last_minute', label: 'Outdoors' },
+		{ title: 'Useful tech gifts', description: 'Practical gadget and desk upgrades with broad appeal.', href: techHref, ctaVariant: 'dad_tech_last_minute', label: 'Tech' },
+		{ title: 'Reader dad gifts', description: 'Book-adjacent ideas when you do not know his next title.', href: readerHref, ctaVariant: 'dad_reader_last_minute', label: 'Reader' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>

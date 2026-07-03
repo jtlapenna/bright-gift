@@ -1,0 +1,184 @@
+---
+import GiftHubPage from '../components/GiftHubPage.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
+
+const experimentId = 'bg-q4-recipient-expansion-202607';
+const heroHref = buildGeneratorPrefillHref({
+	recipient: 'mom',
+	interests: 'last-minute gifts for mom, self-care, cozy home, family keepsakes, gardening, reading, useful upgrades',
+	budget: 75,
+	styles: 'thoughtful,cozy',
+	sourceCta: 'last_minute_mom_hero',
+	sourceVariant: 'last_minute_gifts_for_mom',
+	sourceExperiment: experimentId
+});
+const footerHref = buildGeneratorPrefillHref({
+	recipient: 'mom',
+	interests: 'quick gift ideas, her routine, cozy gifts, beauty, books, home comfort, family memories',
+	budget: 100,
+	styles: 'thoughtful,luxury',
+	sourceCta: 'last_minute_mom_footer',
+	sourceVariant: 'last_minute_mom_personalized',
+	sourceExperiment: experimentId
+});
+const selfCareHref = buildGeneratorPrefillHref({
+	recipient: 'mom who needs rest',
+	interests: 'self-care, sleep, tea, cozy blanket, skin care, relaxing night, comfort gifts',
+	budget: 75,
+	styles: 'wellness,cozy',
+	sourceCta: 'last_minute_mom_prompt',
+	sourceVariant: 'mom_self_care_last_minute',
+	sourceExperiment: experimentId
+});
+const practicalHref = buildGeneratorPrefillHref({
+	recipient: 'practical mom',
+	interests: 'kitchen upgrade, daily routine, useful home gifts, organization, coffee, errands',
+	budget: 50,
+	styles: 'practical,thoughtful',
+	sourceCta: 'last_minute_mom_prompt',
+	sourceVariant: 'mom_practical_last_minute',
+	sourceExperiment: experimentId
+});
+const readerHref = buildGeneratorPrefillHref({
+	recipient: 'mom who likes reading',
+	interests: 'books, reading light, reading journal, cozy chair, bookstore gift card, audiobook',
+	budget: 50,
+	styles: 'book-lover,cozy',
+	sourceCta: 'last_minute_mom_prompt',
+	sourceVariant: 'mom_reader_last_minute',
+	sourceExperiment: experimentId
+});
+
+const featuredLinks = [
+	{
+		title: 'Mother gifts for every type of mom',
+		description: 'A deeper guide for practical, sentimental, cozy, and hobby-led mom gifts.',
+		href: '/blog/mothers-day-gifts-for-every-type-of-mom/',
+		label: 'Mom guide',
+		tags: ['mom', 'occasion', 'thoughtful']
+	},
+	{
+		title: 'Gift ideas for women',
+		description: 'A broader route for wellness, style, beauty, practical, and personalized gifts.',
+		href: '/gift-ideas-for-women/',
+		label: 'Women',
+		tags: ['women', 'wellness', 'style']
+	},
+	{
+		title: 'Personalized Christmas gifts',
+		description: 'Photo, custom, book, and keepsake paths when the gift needs to feel more personal.',
+		href: '/personalized-christmas-gifts/',
+		label: 'Personalized',
+		tags: ['custom', 'Christmas', 'keepsake']
+	}
+];
+
+const sections = [
+	{
+		title: 'Last-minute mom gifts by situation',
+		description: 'Use the path that matches what she would actually enjoy this week, not just the word mom.',
+		links: [
+			{
+				title: 'Self-care gifts for mom',
+				description: 'A prefilled finder for rest, sleep, cozy nights, tea, skin care, and comfort gifts.',
+				href: selfCareHref,
+				label: 'Prefilled finder',
+				tags: ['self-care', 'cozy', 'wellness']
+			},
+			{
+				title: 'Useful gifts for practical moms',
+				description: 'Kitchen, coffee, organization, daily-routine, and useful home upgrades.',
+				href: practicalHref,
+				label: 'Prefilled finder',
+				tags: ['practical', 'home', 'under $50']
+			},
+			{
+				title: 'Book gifts for moms',
+				description: 'Bookstore credits, book lights, reading journals, and cozy reader extras.',
+				href: readerHref,
+				label: 'Prefilled finder',
+				tags: ['books', 'reading', 'cozy']
+			},
+			{
+				title: 'Gifts for parents who have everything',
+				description: 'Low-clutter parent gifts when she already owns the obvious options.',
+				href: '/gifts-for-parents-who-have-everything/',
+				label: 'Parent gifts',
+				tags: ['parents', 'low clutter', 'experience']
+			}
+		]
+	},
+	{
+		title: 'Safe last-minute categories',
+		description: 'These choices work when shipping time is tight and you still want the gift to feel chosen.',
+		links: [
+			{
+				title: 'Personalized book gifts',
+				description: 'Bookplates, book stamps, reading journals, and reader gifts that can ship or deliver quickly.',
+				href: '/personalized-book-gifts/',
+				label: 'Book gifts',
+				tags: ['books', 'personalized', 'reader']
+			},
+			{
+				title: 'Last-minute Christmas gifts',
+				description: 'A Q4 gift route if this is part of a holiday list.',
+				href: '/last-minute-christmas-gifts/',
+				label: 'Christmas',
+				tags: ['Q4', 'last minute', 'holiday']
+			},
+			{
+				title: 'Gifts under $25',
+				description: 'Small add-ons, stocking stuffers, and useful budget gifts.',
+				href: '/gifts-under-25/',
+				label: 'Budget',
+				tags: ['under $25', 'small gifts', 'stocking']
+			},
+			{
+				title: 'Housewarming gifts',
+				description: 'Home and hosting ideas if the best clue is her kitchen, garden, or living space.',
+				href: '/housewarming-gifts/',
+				label: 'Home',
+				tags: ['home', 'hosting', 'cozy']
+			}
+		]
+	}
+];
+
+const faqs = [
+	{
+		question: 'What is a good last-minute gift for mom?',
+		answer: 'Good last-minute gifts for mom are tied to a real routine: better rest, coffee, reading, gardening, family memories, home comfort, or a useful kitchen upgrade.'
+	},
+	{
+		question: 'What can I send mom digitally?',
+		answer: 'Digital options include audiobook credits, bookstore gift cards, meal delivery credits, streaming subscriptions, photo-book gift cards, or a planned experience paired with a personal note.'
+	}
+];
+---
+
+<GiftHubPage
+	title="Last-Minute Gifts for Mom"
+	metaTitle="Last-Minute Gifts for Mom | BrightGift"
+	description="Find last-minute gifts for mom by routine, budget, and delivery risk, including self-care gifts, practical home upgrades, book gifts, keepsakes, and prefilled BrightGift finder paths."
+	canonicalPath="/last-minute-gifts-for-mom/"
+	eyebrow="Last-minute mom gifts"
+	heroTitle="Last-minute gifts for mom that still feel thoughtful."
+	intro="A rushed gift for mom does not have to feel generic. Start with the real clue you know: rest, reading, home comfort, gardening, coffee, family memories, or a practical upgrade she would actually use."
+	updatedAt="2026-07-03"
+	keywords={['last-minute gifts for mom', 'last minute gifts for mom', 'gifts for mom', 'Christmas gifts for mom', 'self-care gifts for mom', 'gift ideas for women']}
+	ctaVariant="last_minute_gifts_for_mom"
+	primaryCtaLabel="Open the mom gift finder"
+	primaryCtaHref={heroHref}
+	footerCtaHref={footerHref}
+	experimentId={experimentId}
+	generatorPromptTitle="Start with her actual routine"
+	generatorPromptDescription="These prefilled paths turn a broad mom gift search into a more specific shortlist."
+	generatorPrompts={[
+		{ title: 'Self-care gifts', description: 'Rest, comfort, tea, sleep, and quiet-night ideas.', href: selfCareHref, ctaVariant: 'mom_self_care_last_minute', label: 'Self-care' },
+		{ title: 'Practical gifts', description: 'Useful kitchen, coffee, home, and routine upgrades.', href: practicalHref, ctaVariant: 'mom_practical_last_minute', label: 'Practical' },
+		{ title: 'Book gifts', description: 'Reader-safe ideas when you do not know the exact title.', href: readerHref, ctaVariant: 'mom_reader_last_minute', label: 'Reader' }
+	]}
+	featuredLinks={featuredLinks}
+	sections={sections}
+	faqs={faqs}
+/>
