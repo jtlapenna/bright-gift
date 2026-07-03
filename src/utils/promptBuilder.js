@@ -16,7 +16,11 @@ function buildPrompt(data) {
         'athletics': 'sports equipment, athletic wear, fitness gear, workout accessories, or performance-enhancing items',
         'beauty': 'skincare, makeup, beauty tools, grooming products, or beauty-enhancing items',
         'book-lover': 'books from Bookshop.org (supporting independent bookstores), reading accessories from Amazon, literary-themed items, bookmarks, reading lights, or book-related gifts',
-        'black-owned': 'products from Black-owned businesses, supporting diverse entrepreneurs and inclusive shopping choices'
+        'black-owned': 'products from Black-owned businesses, supporting diverse entrepreneurs and inclusive shopping choices',
+        'practical': 'useful, everyday, problem-solving, durable, low-clutter, or routine-friendly items',
+        'thoughtful': 'personal, meaningful, appreciative, memory-making, or considerate items that show attention to the recipient',
+        'cozy': 'warm, comforting, relaxing, home-friendly, soft, or restful items',
+        'professional': 'polished, workplace-appropriate, client-safe, manager-safe, discreet, or office-friendly items'
     };
     
     // Build style-specific guidance
@@ -71,6 +75,18 @@ function buildPrompt(data) {
   * Endorf (wellness and supplements)
   * Caribe Coffee (sustainable coffee)
   * Cashblack (cashback programs)`;
+                    break;
+                case 'practical':
+                    styleGuidance += `\n- For practical: Prioritize useful, durable, low-clutter gifts that solve a real everyday problem for this recipient.`;
+                    break;
+                case 'thoughtful':
+                    styleGuidance += `\n- For thoughtful: Choose gifts that feel personal, appreciative, and connected to the recipient's real routines or interests.`;
+                    break;
+                case 'cozy':
+                    styleGuidance += `\n- For cozy: Focus on comfort, warmth, relaxation, home routines, soft textures, or calm rituals.`;
+                    break;
+                case 'professional':
+                    styleGuidance += `\n- For professional: Keep gifts polished, office-appropriate, manager-safe, client-safe, and not overly intimate.`;
                     break;
                 default:
                     styleGuidance += `\n- For ${style}: Incorporate ${style} elements appropriately.`;

@@ -413,6 +413,42 @@ const faqData = {
 												<span>Book Lover</span>
 											</div>
 										</button>
+										<button type="button"
+											data-style="practical"
+											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											aria-pressed="false">
+											<div class="flex flex-col items-center">
+												<span class="text-base mb-1">🧰</span>
+												<span>Practical</span>
+											</div>
+										</button>
+										<button type="button"
+											data-style="thoughtful"
+											class="style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											aria-pressed="false">
+											<div class="flex flex-col items-center">
+												<span class="text-base mb-1">💝</span>
+												<span>Thoughtful</span>
+											</div>
+										</button>
+										<button type="button"
+											data-style="cozy"
+											class="style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											aria-pressed="false">
+											<div class="flex flex-col items-center">
+												<span class="text-base mb-1">🧦</span>
+												<span>Cozy</span>
+											</div>
+										</button>
+										<button type="button"
+											data-style="professional"
+											class="style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1"
+											aria-pressed="false">
+											<div class="flex flex-col items-center">
+												<span class="text-base mb-1">💼</span>
+												<span>Professional</span>
+											</div>
+										</button>
 									</div>
 									<div class="mt-4 text-center">
 										<span class="text-xs text-[#1C2E4A] opacity-75 bg-white/50 px-3 py-1 rounded-full">
@@ -942,8 +978,16 @@ const faqData = {
 			'athletics': { bg: 'bg-[#FFDE59]', text: 'text-[#1C2E4A]', border: 'border-[#FFDE59]', hover: 'hover:bg-[#FFF9F3]' },
 			'beauty': { bg: 'bg-[#FF6B6B]', text: 'text-white', border: 'border-[#FF6B6B]', hover: 'hover:bg-[#ff4c4c]' },
 			'black-owned': { bg: 'bg-[#A3E4DB]', text: 'text-[#1C2E4A]', border: 'border-[#A3E4DB]', hover: 'hover:bg-[#FFF9F3]' },
-			'book-lover': { bg: 'bg-[#FFDE59]', text: 'text-[#1C2E4A]', border: 'border-[#FFDE59]', hover: 'hover:bg-[#FFF9F3]' }
+			'book-lover': { bg: 'bg-[#FFDE59]', text: 'text-[#1C2E4A]', border: 'border-[#FFDE59]', hover: 'hover:bg-[#FFF9F3]' },
+			'practical': { bg: 'bg-[#FFDE59]', text: 'text-[#1C2E4A]', border: 'border-[#FFDE59]', hover: 'hover:bg-[#FFF9F3]' },
+			'thoughtful': { bg: 'bg-[#FF6B6B]', text: 'text-white', border: 'border-[#FF6B6B]', hover: 'hover:bg-[#ff4c4c]' },
+			'cozy': { bg: 'bg-[#A3E4DB]', text: 'text-[#1C2E4A]', border: 'border-[#A3E4DB]', hover: 'hover:bg-[#FFF9F3]' },
+			'professional': { bg: 'bg-[#FFDE59]', text: 'text-[#1C2E4A]', border: 'border-[#FFDE59]', hover: 'hover:bg-[#FFF9F3]' }
 		};
+
+		const yellowStyles = new Set(['eco-friendly', 'quirky', 'techy', 'black-owned', 'practical', 'professional']);
+		const tealStyles = new Set(['handmade', 'luxury', 'wellness', 'book-lover', 'cozy']);
+		const coralStyles = new Set(['funny', 'pride-gifts', 'athletics', 'beauty', 'thoughtful']);
 
 		styleChips.forEach(button => {
 			button.addEventListener('click', () => {
@@ -980,22 +1024,22 @@ const faqData = {
 					button.className = `style-chip group bg-white text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-gray-200 hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1`;
 				} else if (selectedStyles.length === 0) {
 					// No styles selected - show truly random pattern (no column grouping)
-					if (style === 'eco-friendly' || style === 'quirky' || style === 'techy' || style === 'black-owned') {
+					if (yellowStyles.has(style)) {
 						button.className = `style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1`;
-					} else if (style === 'handmade' || style === 'luxury' || style === 'wellness' || style === 'book-lover') {
+					} else if (tealStyles.has(style)) {
 						button.className = `style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] hover:from-[#FFF9F3] hover:to-[#FFF9F3] hover:border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1`;
-					} else if (style === 'funny' || style === 'pride-gifts' || style === 'athletics' || style === 'beauty') {
+					} else if (coralStyles.has(style)) {
 						button.className = `style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] hover:from-[#ff4c4c] hover:to-[#ff6666] focus:outline-none focus:border-[#FF6B6B] shadow-md hover:shadow-lg transform hover:-translate-y-1`;
 					}
 				}
 
 				if (isSelected) {
 					// Selected state - make it more prominent with original color
-					if (style === 'eco-friendly' || style === 'quirky' || style === 'techy' || style === 'black-owned') {
+					if (yellowStyles.has(style)) {
 						button.className = `style-chip group bg-gradient-to-br from-[#FFDE59] to-[#FFE066] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FFDE59] focus:outline-none focus:border-[#FF6B6B] shadow-xl scale-105`;
-					} else if (style === 'handmade' || style === 'luxury' || style === 'wellness' || style === 'book-lover') {
+					} else if (tealStyles.has(style)) {
 						button.className = `style-chip group bg-gradient-to-br from-[#A3E4DB] to-[#B8E8E0] text-[#1C2E4A] px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#A3E4DB] focus:outline-none focus:border-[#FF6B6B] shadow-xl scale-105`;
-					} else if (style === 'funny' || style === 'pride-gifts' || style === 'athletics' || style === 'beauty') {
+					} else if (coralStyles.has(style)) {
 						button.className = `style-chip group bg-gradient-to-br from-[#FF6B6B] to-[#FF8585] text-white px-4 py-2.5 rounded-lg text-xs font-semibold border-2 border-[#FF6B6B] focus:outline-none focus:border-[#FF6B6B] shadow-xl scale-105`;
 					}
 				} else if (isDisabled) {
@@ -1033,23 +1077,79 @@ const faqData = {
 				}
 			}
 
+			const supportedBudgetValues = new Set(['25', '50', '100', '200']);
+			const styleAliases = {
+				appreciative: 'thoughtful',
+				books: 'book-lover',
+				comfort: 'cozy',
+				comforting: 'cozy',
+				custom: 'thoughtful',
+				elegant: 'luxury',
+				eco: 'eco-friendly',
+				fun: 'funny',
+				'office-safe': 'professional',
+				personal: 'thoughtful',
+				personalized: 'handmade',
+				playful: 'funny',
+				polished: 'luxury',
+				premium: 'luxury',
+				reader: 'book-lover',
+				romantic: 'thoughtful',
+				safe: 'practical',
+				sentimental: 'thoughtful',
+				shareable: 'practical',
+				sporty: 'athletics',
+				sustainable: 'eco-friendly',
+				unique: 'quirky',
+				useful: 'practical'
+			};
+
+			function normalizeBudgetValue(budget) {
+				const rawBudget = String(budget || '').trim();
+				const numericBudget = Number(rawBudget.replace(/[^0-9.]/g, ''));
+
+				if (!Number.isFinite(numericBudget) || numericBudget <= 0) {
+					return supportedBudgetValues.has(rawBudget) ? rawBudget : '';
+				}
+
+				if (numericBudget <= 25) return '25';
+				if (numericBudget <= 50) return '50';
+				if (numericBudget <= 100) return '100';
+				return '200';
+			}
+
+			function normalizeStyleValue(style) {
+				const normalizedStyle = String(style || '').trim().toLowerCase().replace(/_/g, '-');
+				return styleAliases[normalizedStyle] || normalizedStyle;
+			}
+
 			function getPresetStyles(styles) {
-				return String(styles || '')
+				const availableStyles = new Set(Array.from(styleChips).map(button => button.dataset.style).filter(Boolean));
+				const presetStyles = [];
+
+				String(styles || '')
 					.split(',')
-					.map(style => style.trim())
+					.map(normalizeStyleValue)
 					.filter(Boolean)
-					.slice(0, 3);
+					.forEach(style => {
+						if (availableStyles.has(style) && !presetStyles.includes(style) && presetStyles.length < 3) {
+							presetStyles.push(style);
+						}
+					});
+
+				return presetStyles;
 			}
 
 			function applyGeneratorPreset(preset) {
 				const recipientInput = document.getElementById('recipient');
 				const interestsInput = document.getElementById('interests');
 				const budgetInput = document.getElementById('budget');
+				const presetBudget = normalizeBudgetValue(preset.budget);
 				const presetStyles = getPresetStyles(preset.styles);
 
 				if (recipientInput) recipientInput.value = preset.recipient || '';
 				if (interestsInput) interestsInput.value = preset.interests || '';
-				if (budgetInput && preset.budget) budgetInput.value = preset.budget;
+				if (budgetInput && presetBudget) budgetInput.value = presetBudget;
 
 				selectedStyles = presetStyles;
 				styleChips.forEach(styleButton => {
@@ -1057,6 +1157,11 @@ const faqData = {
 				});
 				updateAllButtonStates();
 				updateSelectionCount();
+
+				return {
+					budget: presetBudget,
+					styles: selectedStyles.join(',')
+				};
 			}
 
 			function scrollToGeneratorForm() {
@@ -1074,15 +1179,15 @@ const faqData = {
 					budget: button.dataset.budget || '',
 					styles: button.dataset.styles || ''
 				};
-				applyGeneratorPreset(preset);
+				const appliedPreset = applyGeneratorPreset(preset);
 
 				trackBrightGiftEvent('gift_generator_preset_click', {
 					experiment_id: button.dataset.experimentId || '',
 					cta_position: button.dataset.ctaPosition || 'homepage_prompt_preset',
 					cta_variant: button.dataset.ctaVariant || '',
 					recipient: preset.recipient,
-					budget: preset.budget,
-					styles: selectedStyles.join(','),
+					budget: appliedPreset.budget,
+					styles: appliedPreset.styles,
 					content_type: 'home',
 					tracking_version: '2026-06-11'
 				});
@@ -1101,15 +1206,17 @@ const faqData = {
 					budget: params.get('budget') || '',
 					styles: params.get('styles') || ''
 				};
-				applyGeneratorPreset(preset);
+				const appliedPreset = applyGeneratorPreset(preset);
 
 				trackBrightGiftEvent('gift_generator_prefill', {
 					experiment_id: params.get('source_experiment') || 'bg-support-generator-cta-202606',
 					cta_position: params.get('source_cta') || 'generator_url_prefill',
 					cta_variant: params.get('source_variant') || '',
 					recipient: preset.recipient,
-					budget: preset.budget,
-					styles: selectedStyles.join(','),
+					budget: appliedPreset.budget,
+					styles: appliedPreset.styles,
+					raw_budget: preset.budget,
+					raw_styles: preset.styles,
 					content_type: 'home',
 					source: 'url_prefill',
 					tracking_version: '2026-06-12'
