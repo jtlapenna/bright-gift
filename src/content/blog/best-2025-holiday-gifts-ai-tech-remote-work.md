@@ -255,4 +255,4 @@ Whether you choose an AI-powered productivity tool for the remote worker in your
 - [Best Holiday Gifts for Dads](/blog/best-holiday-gifts-for-dads-2025/)
 - [How to Choose the Perfect Gift](/blog/how-to-choose-the-perfect-gift-complete-guide/)
 
-Ready to find the perfect 2025 holiday gift? Our [Gift Idea Generator](/#tool) can help you discover personalized recommendations based on your recipient's interests, budget, and lifestyle.
+Ready to find the perfect holiday gift? Our [prefilled tech and remote-work gift finder](/?recipient=tech%20lover%20or%20remote%20worker&interests=AI%20tools%2C%20remote%20work%2C%20productivity%2C%20smart%20gadgets%2C%20wellness%20tech&budget=100&styles=techy%2Cpractical&source_cta=holiday_ai_tech_footer&source_variant=tech_remote_work_gift_finder&source_experiment=bg-generator-prefill-qa-202607#tool) can help you discover personalized recommendations based on your recipient's interests, budget, and lifestyle.

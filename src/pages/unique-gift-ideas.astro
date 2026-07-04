@@ -1,7 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
 
 const metaDescription = "Skip generic gifts. Our AI finds unique, creative gift ideas tailored to each person's interests and personality. Discover gifts they'll actually remember.";
+const uniquePrefillHref = buildGeneratorPrefillHref({
+	recipient: 'friend or family member',
+	interests: 'unique gifts, creative surprises, hobbies, conversation starters, memorable gifts',
+	budget: 50,
+	styles: 'quirky,thoughtful',
+	sourceCta: 'unique_gift_page_cta',
+	sourceVariant: 'unique_gift_finder',
+	sourceExperiment: 'bg-generator-prefill-qa-202607'
+});
 ---
 
 <Layout 
@@ -46,7 +56,7 @@ const metaDescription = "Skip generic gifts. Our AI finds unique, creative gift 
 					<p class="mb-6">
 						Our AI analyzes their personality and suggests creative gifts you won't find in typical gift guides. Every recommendation is personalized.
 					</p>
-					<a href="/#tool" class="inline-block bg-white text-[#FF6B6B] font-bold py-4 px-8 rounded-full transition-colors text-lg shadow-lg hover:bg-gray-100">
+					<a href={uniquePrefillHref} class="inline-block bg-white text-[#FF6B6B] font-bold py-4 px-8 rounded-full transition-colors text-lg shadow-lg hover:bg-gray-100">
 						Find Unique Gifts Now →
 					</a>
 				</div>
@@ -59,11 +69,10 @@ const metaDescription = "Skip generic gifts. Our AI finds unique, creative gift 
 				<p class="text-lg text-[#1C2E4A] mb-8">
 					The more details you provide, the more unique and personalized the suggestions.
 				</p>
-				<a href="/#tool" class="inline-block bg-[#A3E4DB] hover:bg-[#8cd4ca] text-[#1C2E4A] font-bold py-3 px-8 rounded-full transition-colors text-lg shadow">
+				<a href={uniquePrefillHref} class="inline-block bg-[#A3E4DB] hover:bg-[#8cd4ca] text-[#1C2E4A] font-bold py-3 px-8 rounded-full transition-colors text-lg shadow">
 					Try the AI Gift Finder
 				</a>
 			</div>
 		</section>
 	</main>
 </Layout>
-

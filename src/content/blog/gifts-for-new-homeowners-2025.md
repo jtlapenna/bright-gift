@@ -52,7 +52,7 @@ Start here instead: [Housewarming Gifts for New Homeowners Under $75](/blog/25-t
 
 That guide is the main BrightGift page for practical move-in gifts, apartment-friendly ideas, first-time homeowner gifts, cozy home upgrades, and useful housewarming gifts under $75.
 
-If you want a more personalized shortlist, use the [AI Gift Idea Generator](/#tool) with the home type, relationship, budget, and what they care about most.
+If you want a more personalized shortlist, use the [prefilled housewarming gift finder](/?recipient=new%20homeowner&interests=housewarming%20gifts%2C%20kitchen%20upgrades%2C%20cozy%20home%2C%20move-in%20essentials%2C%20useful%20home%20gifts&budget=100&styles=practical%2Cthoughtful&source_cta=legacy_new_homeowners_intro&source_variant=housewarming_gift_finder&source_experiment=bg-generator-prefill-qa-202607#tool) with the home type, relationship, budget, and what they care about most.
 
 ## Related paths
 

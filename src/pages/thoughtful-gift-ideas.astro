@@ -1,7 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { buildGeneratorPrefillHref } from '../utils/generatorPrefill';
 
 const metaDescription = "Find thoughtful, meaningful gifts that show you care. Our AI suggests personalized gift ideas based on their interests, lifestyle, and what makes them unique.";
+const thoughtfulPrefillHref = buildGeneratorPrefillHref({
+	recipient: 'friend or loved one',
+	interests: 'thoughtful gifts, keepsakes, self-care, useful upgrades, meaningful surprises',
+	budget: 50,
+	styles: 'thoughtful,practical',
+	sourceCta: 'thoughtful_gift_page_cta',
+	sourceVariant: 'thoughtful_gift_finder',
+	sourceExperiment: 'bg-generator-prefill-qa-202607'
+});
 ---
 
 <Layout 
@@ -50,7 +60,7 @@ const metaDescription = "Find thoughtful, meaningful gifts that show you care. O
 					<p class="text-[#1C2E4A] mb-6">
 						Share what you know about them—their hobbies, recent life changes, what they care about. Our AI will suggest gifts that feel personal and meaningful.
 					</p>
-					<a href="/#tool" class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-4 px-8 rounded-full transition-colors text-lg shadow-lg">
+					<a href={thoughtfulPrefillHref} class="inline-block bg-[#FF6B6B] hover:bg-[#ff4c4c] text-white font-bold py-4 px-8 rounded-full transition-colors text-lg shadow-lg">
 						Find Thoughtful Gifts Now →
 					</a>
 				</div>
@@ -63,11 +73,10 @@ const metaDescription = "Find thoughtful, meaningful gifts that show you care. O
 				<p class="text-lg text-[#1C2E4A] mb-8">
 					The more context you provide, the more thoughtful the recommendations.
 				</p>
-				<a href="/#tool" class="inline-block bg-[#A3E4DB] hover:bg-[#8cd4ca] text-[#1C2E4A] font-bold py-3 px-8 rounded-full transition-colors text-lg shadow">
+				<a href={thoughtfulPrefillHref} class="inline-block bg-[#A3E4DB] hover:bg-[#8cd4ca] text-[#1C2E4A] font-bold py-3 px-8 rounded-full transition-colors text-lg shadow">
 					Try the AI Gift Finder
 				</a>
 			</div>
 		</section>
 	</main>
 </Layout>
-

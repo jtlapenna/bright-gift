@@ -76,7 +76,7 @@ Working from home is here to stay, and the right gift can make a real difference
 
 This list focuses on affordable upgrades that improve comfort, reduce desk clutter, and make long workdays feel smoother. If you want a wider range of price points, pair this guide with [Gifts for Remote Workers: 27 Home Office Essentials Under $100](/blog/gifts-for-remote-workers-and-wfh-professionals/), [Gifts Under $25 for Coworkers](/blog/gifts-under-25-for-coworkers/), our roundup of [best home-office upgrades on Amazon](/blog/best-home-gifts-on-amazon-2024/), and [Gifts for Plant Lovers](/blog/gifts-for-plant-lovers/) for lower-maintenance desk decor.
 
-For a custom shortlist by job type, desk size, and budget, start with the [AI gift idea generator](/#tool), then use the ideas below as proven remote-work lanes.
+For a custom shortlist by job type, desk size, and budget, start with the [prefilled remote-worker gift finder](/?recipient=remote%20worker&interests=home%20office%2C%20desk%20setup%2C%20productivity%2C%20coffee%2C%20comfort%20upgrades&budget=50&styles=techy%2Cpractical&source_cta=remote_worker_under_50_intro&source_variant=remote_worker_gift_finder&source_experiment=bg-generator-prefill-qa-202607#tool), then use the ideas below as proven remote-work lanes.
 
 ---
 
