@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import { buildGeneratorPrefillHref } from '../../utils/generatorPrefill';
 import { processAmazonLinks } from '../../utils/processAmazonLinks.js';
 import seasonalSeoExclusions from '../../data/seasonal-seo-exclusions.json';
 
@@ -68,6 +69,89 @@ function isStaleYearIntentPost(postLike) {
   return hasYearIntentSignal(postLike) && !sanitizeLastUpdated(postLike.data?.lastUpdated);
 }
 
+function normalizeKeywordList(value) {
+  if (Array.isArray(value)) return value.filter(Boolean).map((item) => String(item));
+  if (typeof value === 'string') return value.split(',').map((item) => item.trim()).filter(Boolean);
+  return [];
+}
+
+function combinedPostText({ title, description, slug, keywords }) {
+  return [title, description, slug, ...normalizeKeywordList(keywords)].join(' ').toLowerCase();
+}
+
+function inferFooterRecipient({ title, description, slug, keywords }) {
+  const text = combinedPostText({ title, description, slug, keywords });
+
+  const recipientMap = [
+    [/girlfriend|wife|partner|valentine|romantic/, 'girlfriend or partner'],
+    [/\bmom\b|mother|mothers-day/, 'mom'],
+    [/\bdad\b|father|fathers-day|fishing/, 'dad'],
+    [/coworker|office|colleague/, 'coworker'],
+    [/teacher|classroom/, 'teacher'],
+    [/remote worker|work from home|wfh|professional/, 'remote worker'],
+    [/new homeowner|housewarming|home gifts|move-in|hostess|neighbor/, 'new homeowner or host'],
+    [/parent|new parents|baby shower|grandparent/, 'new parent or grandparent'],
+    [/teen|youth|kid|children|student/, 'teen or kid'],
+    [/pet lover/, 'pet lover'],
+    [/book lover|reader|books/, 'book lover'],
+    [/gamer|gaming|dungeons|board game/, 'gamer'],
+    [/plant lover|gardening/, 'plant lover'],
+    [/yoga|fitness|outdoor|soccer/, 'active friend or family member'],
+    [/artist|creative|graduation/, 'creative person']
+  ];
+
+  const match = recipientMap.find(([pattern]) => pattern.test(text));
+  return match ? match[1] : 'friend or family member';
+}
+
+function inferFooterBudget({ title, description, slug, keywords }) {
+  const text = combinedPostText({ title, description, slug, keywords });
+  const budgetMatch = text.match(/under[\s-]*\$?(\d{2,3})/);
+  const amount = budgetMatch ? Number(budgetMatch[1]) : null;
+
+  if (amount && amount <= 25) return 25;
+  if (amount && amount <= 50) return 50;
+  if (amount && amount <= 100) return 100;
+  if (/luxury|premium|wedding|anniversary|parents|new homeowner|homeowner/.test(text)) return 100;
+  return 50;
+}
+
+function inferFooterStyles({ title, description, slug, keywords }) {
+  const text = combinedPostText({ title, description, slug, keywords });
+
+  if (/eco|sustainable|ethical/.test(text)) return 'eco-friendly,thoughtful';
+  if (/book|reader/.test(text)) return 'book-lover,thoughtful';
+  if (/gaming|tech|ai|gadgets|remote work|desk|productivity/.test(text)) return 'techy,practical';
+  if (/beauty|self-care|luxury|wedding|anniversary|romantic/.test(text)) return 'luxury,thoughtful';
+  if (/fun|funny|party|dungeons|board game|white elephant/.test(text)) return 'funny,quirky';
+  if (/home|housewarming|hostess|neighbor|plant|kitchen|cozy/.test(text)) return 'cozy,practical';
+  if (/teacher|coworker|office|professional/.test(text)) return 'professional,practical';
+  return 'thoughtful,practical';
+}
+
+function inferFooterInterests({ title, description, slug, keywords }) {
+  const keywordList = normalizeKeywordList(keywords).slice(0, 5);
+  const baseInterest = title || slug.replace(/-/g, ' ');
+  const fallbackInterests = ['thoughtful gifts', 'practical gifts', 'personalized gift ideas'];
+  const interests = [baseInterest, ...keywordList, ...fallbackInterests]
+    .filter(Boolean)
+    .map((item) => String(item).trim())
+    .filter((item, index, list) => list.indexOf(item) === index)
+    .slice(0, 7);
+
+  return interests.join(', ');
+}
+
+function slugToVariant(slug) {
+  const normalized = String(slug || 'blog')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '')
+    .slice(0, 70);
+
+  return `${normalized || 'blog'}_gift_finder`;
+}
+
 // Validate required fields
 const requiredFields = ['title', 'description', 'date', 'image', 'ogImage', 'keywords'];
 for (const field of requiredFields) {
@@ -131,7 +215,7 @@ const supportGeneratorCtas = {
     kicker: 'Housewarming gift finder',
     heading: 'Choose the gift by how they will use the new home.',
     body: 'Tell BrightGift whether they are first-time homeowners, apartment dwellers, frequent hosts, or practical minimalists. The generator will prefill a housewarming shortlist that matches the home, budget, and amount of clutter they can actually handle.',
-    href: '/?recipient=new%20homeowner&interests=kitchen%20upgrades%2C%20cozy%20home%2C%20hosting%2C%20move-in%20essentials&budget=75&styles=home%2Cpractical&source_cta=housewarming_intro&source_variant=housewarming_gift_finder&source_experiment=bg-housewarming-generator-cta-202606#tool',
+    href: '/?recipient=new%20homeowner&interests=kitchen%20upgrades%2C%20cozy%20home%2C%20hosting%2C%20move-in%20essentials&budget=100&styles=cozy%2Cpractical&source_cta=housewarming_intro&source_variant=housewarming_gift_finder&source_experiment=bg-housewarming-generator-cta-202606#tool',
     label: 'Build a housewarming shortlist',
     ctaPosition: 'housewarming_intro',
     ctaVariant: 'housewarming_gift_finder',
@@ -169,6 +253,22 @@ const supportGeneratorCtas = {
   },
 };
 const supportGeneratorCta = supportGeneratorCtas[postSlug as keyof typeof supportGeneratorCtas];
+const blogFooterRecipient = inferFooterRecipient({ title, description, slug: postSlug, keywords });
+const blogFooterInterests = inferFooterInterests({ title, description, slug: postSlug, keywords });
+const blogFooterBudget = inferFooterBudget({ title, description, slug: postSlug, keywords });
+const blogFooterStyles = inferFooterStyles({ title, description, slug: postSlug, keywords });
+const blogFooterSourceVariant = slugToVariant(postSlug);
+const blogFooterGeneratorHref = supportGeneratorCta?.href ?? buildGeneratorPrefillHref({
+  recipient: blogFooterRecipient,
+  interests: blogFooterInterests,
+  budget: blogFooterBudget,
+  styles: blogFooterStyles,
+  sourceCta: 'blog_footer_generator',
+  sourceVariant: blogFooterSourceVariant,
+  sourceExperiment: 'bg-generator-prefill-qa-202607'
+});
+const blogFooterExperimentId = supportGeneratorCta?.experimentId ?? 'bg-generator-prefill-qa-202607';
+const blogFooterCtaVariant = supportGeneratorCta?.ctaVariant ?? 'blog_footer_prefilled_gift_finder';
 
 // Debug logging in development
 if (import.meta.env.DEV && post.slug === '80th-birthday-gift-ideas-seniors') {
@@ -490,12 +590,12 @@ if (relatedPosts.length > 0) {
             <Content />
             <div class="text-center">
               <a
-                href="/#tool"
+                href={blogFooterGeneratorHref}
                 class="cta-button"
                 data-generator-cta
                 data-cta-position="blog_footer_generator"
-                data-cta-variant="try_ai_gift_generator"
-                data-experiment-id="bg-home-generator-sprint-202606"
+                data-cta-variant={blogFooterCtaVariant}
+                data-experiment-id={blogFooterExperimentId}
               >
                 Try the AI Gift Idea Generator
               </a>
