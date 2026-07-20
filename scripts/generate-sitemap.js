@@ -47,7 +47,6 @@ const staticPages = [
   { url: '/housewarming-gifts/', priority: '0.8', changefreq: 'monthly' },
   { url: '/gifts-for-people-who-have-everything/', priority: '0.7', changefreq: 'monthly' },
   { url: '/gift-ideas-for-hard-to-shop-for-people/', priority: '0.7', changefreq: 'monthly' },
-  { url: '/care-calculator/', priority: '0.5', changefreq: 'monthly' },
   { url: '/privacy/', priority: '0.3', changefreq: 'monthly' },
   { url: '/terms/', priority: '0.3', changefreq: 'monthly' },
   { url: '/contact/', priority: '0.3', changefreq: 'monthly' },
