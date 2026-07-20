@@ -922,7 +922,7 @@ const faqData = {
 					cta_variant: ctaVariant,
 					experiment_id: internalQaMarker || link.getAttribute('data-experiment-id') || 'bg-generator-result-click-202606',
 					traffic_type: internalQaMarker,
-					tracking_version: '2026-07-13',
+					tracking_version: '2026-07-20',
 					event_category: 'Affiliate',
 					event_label: `${partner} - ${productName}`
 				};
@@ -944,6 +944,7 @@ const faqData = {
 			function getEmptyResultSummary() {
 				return {
 					result_count: 0,
+					result_card_count: 0,
 					result_amazon_count: 0,
 					result_bookshop_count: 0,
 					result_afrofiliate_count: 0,
@@ -994,6 +995,9 @@ const faqData = {
 				});
 
 				summary.result_has_hybrid = summary.result_hybrid_count > 0;
+				summary.result_card_count = new Set(
+					ideas.map(idea => String(idea?.title || '').trim())
+				).size;
 				summary.result_partner_mix = [
 					['amazon', summary.result_amazon_count],
 					['bookshop', summary.result_bookshop_count],
@@ -1498,7 +1502,7 @@ const faqData = {
 					cta_variant: link.getAttribute('data-cta-variant') || 'generated_result',
 					experiment_id: getInternalQaMarker() || link.getAttribute('data-experiment-id') || 'bg-generator-result-click-202606',
 					content_type: 'home',
-					tracking_version: '2026-07-13'
+					tracking_version: '2026-07-20'
 				};
 
 				trackBrightGiftEvent('gift_generator_result_click', {
@@ -1506,12 +1510,8 @@ const faqData = {
 					...(standardPayload || {})
 				});
 
-				if (standardPayload) {
-					if (standardPayload.partner === 'amazon') {
-						trackBrightGiftEvent('amazon_click', standardPayload);
-					}
-					trackBrightGiftEvent('affiliate_click', standardPayload);
-				}
+				// Layout.astro owns affiliate_click and amazon_click. This handler adds
+				// only the generator-specific event and its result-set context.
 			});
 
 			// Share functionality
