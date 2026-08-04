@@ -411,25 +411,6 @@ function determineAffiliateSource(title: string, tag: string, styles: string[], 
   return 'amazon';
 }
 
-// Curated non-affiliate product: Little Hero Labs (personalized children's book, $29.99)
-const LITTLE_HERO_LABS_IDEA = {
-  title: "Little Hero Labs - Personalized Children's Book",
-  description: "A personalized storybook where the child is the hero. Perfect for kids who love reading and seeing themselves in a story.",
-  tag: "Books",
-  link: "https://www.littleherolabs.com",
-  icon: "Book",
-  affiliateType: "direct" as const,
-};
-
-/** True when recipient/interests suggest a child and budget allows ~$30 (>= 50). */
-function shouldIncludeLittleHeroLabs(recipient: string, interests: string, budget: string): boolean {
-  const budgetNum = Number(budget);
-  if (isNaN(budgetNum) || budgetNum < 50) return false;
-  const text = `${(recipient || '').toLowerCase().trim()} ${(interests || '').toLowerCase().trim()}`;
-  const keywords = ['child', 'kid', 'kids', 'toddler', 'niece', 'nephew', 'grandchild', 'grandson', 'granddaughter', 'daughter', 'son', 'baby', 'reading', 'books', 'personalized'];
-  return keywords.some(kw => text.includes(kw));
-}
-
 export async function GET() {
   return new Response(
     JSON.stringify({ error: 'This endpoint only supports POST for gift idea generation.' }),
@@ -616,11 +597,6 @@ export async function POST({ request, locals }: { request: any, locals: any }) {
         icon = getAmazonIcon(tag);
         ideas.push({ title, description, tag, link, icon, affiliateType: 'amazon' });
       }
-    }
-
-    // Inject curated Little Hero Labs when eligible (child/kids + budget >= 50)
-    if (shouldIncludeLittleHeroLabs(recipient, interests, budget)) {
-      ideas.unshift(LITTLE_HERO_LABS_IDEA);
     }
 
     // Always return an array; fallback if parsing fails
