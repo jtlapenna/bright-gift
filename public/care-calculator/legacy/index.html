@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <title>Old care plan recovery</title>
+  <style>
+    :root { color-scheme: light dark; font-family: "Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: light-dark(#f8f5ef, #211d19); color: light-dark(#30251d, #f2ebe2); }
+    main { width: min(100% - 32px, 640px); margin: 0 auto; padding: 32px 0 80px; }
+    a { color: light-dark(#265f91, #8cc7f4); text-underline-offset: 3px; }
+    .back { display: inline-block; margin-bottom: 52px; }
+    .eyebrow { margin: 0 0 8px; font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: light-dark(#75665a, #c1b2a3); }
+    h1 { margin: 0 0 16px; font-size: clamp(2.1rem, 7vw, 3.2rem); line-height: 1.08; letter-spacing: -.04em; }
+    p { line-height: 1.55; }
+    form, .result { margin-top: 30px; padding: 24px; border: 1px solid light-dark(#ddd2c5, #564b42); border-radius: 18px; background: light-dark(#fff, #2b251f); }
+    label { display: block; margin-bottom: 9px; font-weight: 700; }
+    .field-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    input { flex: 1 1 210px; min-width: 0; min-height: 46px; padding: 0 12px; border: 1px solid light-dark(#b9aea3, #77685c); border-radius: 9px; background: light-dark(#fff, #211d19); color: inherit; font: inherit; }
+    button { min-height: 46px; padding: 0 18px; border: 0; border-radius: 9px; background: light-dark(#30251d, #f2ebe2); color: light-dark(#fff, #211d19); font-family: inherit; font-size: 1rem; font-weight: 700; cursor: pointer; }
+    button:disabled { opacity: .55; cursor: wait; }
+    :focus-visible { outline: 3px solid #62b7ec; outline-offset: 3px; }
+    .status { min-height: 1.5em; margin: 16px 0 0; }
+    .result p { margin-top: 0; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="/care-calculator/">Back to care planner</a>
+    <p class="eyebrow">Old shared room</p>
+    <h1>Download your old plan</h1>
+    <p>This page can read an old shared room. It cannot change the room. Importing this file into the new planner keeps it as an archived plan; it will not fill a dated day.</p>
+    <form id="roomForm">
+      <label for="roomInput">Room name</label>
+      <div class="field-row"><input id="roomInput" autocomplete="off" required><button id="retrieveButton" type="submit">Retrieve plan</button></div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </form>
+    <section class="result" id="result" hidden>
+      <p id="resultSummary"></p>
+      <button id="downloadButton" type="button">Download JSON backup</button>
+    </section>
+  </main>
+  <script type="module">
+    const SUPABASE_URL = 'https://laqfvhpsacurgyulucwx.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxhcWZ2aHBzYWN1cmd5dWx1Y3d4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY3NDgzOTIsImV4cCI6MjA3MjMyNDM5Mn0.o2kMw3K-GYB2UlzSMb5C82-4a-rt3HmM0NLiP_eaa9M';
+    const form = document.getElementById('roomForm');
+    const input = document.getElementById('roomInput');
+    const status = document.getElementById('status');
+    const result = document.getElementById('result');
+    const summary = document.getElementById('resultSummary');
+    const retrieveButton = document.getElementById('retrieveButton');
+    let recovered = null;
+    let recoveredRoom = '';
+    input.value = new URLSearchParams(location.search).get('room') || 'default';
+
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      recovered = null;
+      result.hidden = true;
+      recoveredRoom = input.value.trim();
+      if (!recoveredRoom) return;
+      retrieveButton.disabled = true;
+      status.textContent = 'Reading room…';
+      try {
+        const url = new URL(`${SUPABASE_URL}/rest/v1/rooms`);
+        url.searchParams.set('select', '*');
+        url.searchParams.set('room_id', `eq.${recoveredRoom}`);
+        const response = await fetch(url, {
+          method: 'GET',
+          headers: { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` },
+        });
+        if (!response.ok) throw new Error(`Room request failed (${response.status}).`);
+        const rows = await response.json();
+        if (!Array.isArray(rows) || !rows.length) throw new Error('No saved plan was found for this room.');
+        const payload = rows[0].data ?? rows[0].state ?? rows[0].payload;
+        if (!payload || !Array.isArray(payload.items)) throw new Error('This room has no readable old plan.');
+        recovered = payload;
+        summary.textContent = `Found ${payload.items.length} old entries in room “${recoveredRoom}”.`;
+        result.hidden = false;
+        status.textContent = 'Plan retrieved. Download a copy below.';
+      } catch (error) {
+        status.textContent = error.message || 'Could not read this room.';
+      } finally {
+        retrieveButton.disabled = false;
+      }
+    });
+
+    document.getElementById('downloadButton').addEventListener('click', () => {
+      if (!recovered) return;
+      const file = new Blob([JSON.stringify(recovered, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(file);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `old-care-plan-${recoveredRoom.replace(/[^a-z0-9-]/gi, '-').slice(0, 40) || 'room'}.json`;
+      link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    });
+  </script>
+</body>
+</html>

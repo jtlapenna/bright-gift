@@ -1,4 +1,4 @@
-import { calculate, dateKind, fillOpen, formatClock, formatDuration, gaps, inputTime, newDay, parseTime, shiftDate, sortedBlocks, validateDay } from './core.mjs';
+import { calculate, dateKind, fillOpen, formatClock, formatDuration, gaps, inputTime, newDay, parseTime, shiftDate, sortedBlocks, STORAGE_KEY, validateDay } from './core.mjs';
 import { emptyStore, loadStore, parseBackup, saveStore, validateStore } from './storage.mjs';
 
 const $ = id => document.getElementById(id);
@@ -8,6 +8,7 @@ const todayKey = () => {
   return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
 };
 let store;
+let savedRaw;
 let dateKey = todayKey();
 let zoom = 1.5;
 let activeDrag = null;
@@ -24,11 +25,21 @@ function notice(message) {
   noticeTimer = setTimeout(() => { $('notice').hidden = true; }, 6500);
 }
 
+function saveFailure(error) {
+  if (error.code === 'STALE_STORE') {
+    $('saveStatus').textContent = 'Changed in another tab';
+    notice('This plan changed in another tab. Reload before making more changes.');
+  } else {
+    $('saveStatus').textContent = 'Could not save';
+    notice('Your edit was not saved. Free browser storage and try again.');
+  }
+}
+
 function save(next, message) {
   const problem = validateStore(next);
   if (problem) { notice(problem); return false; }
-  try { saveStore(storage, next); }
-  catch { $('saveStatus').textContent = 'Could not save'; notice('This browser could not save your plan. Export a backup before leaving.'); return false; }
+  try { savedRaw = saveStore(storage, next, savedRaw); }
+  catch (error) { saveFailure(error); return false; }
   undoStore = structuredClone(store);
   store = next;
   $('saveStatus').textContent = 'Saved on this device';
@@ -40,13 +51,33 @@ function save(next, message) {
 function day() { return store.days[dateKey]; }
 
 function openDate(nextDate) {
+  const previousDate = dateKey;
   if (nextDate !== dateKey) undoStore = null;
   dateKey = nextDate;
   if (!store.days[dateKey]) {
     const next = structuredClone(store);
     next.days[dateKey] = newDay(dateKey, next.settings.wake, next.settings.bed);
-    try { saveStore(storage, next); store = next; }
-    catch { store = next; $('saveStatus').textContent = 'Could not save'; notice('This browser could not save the new day. Export a backup before leaving.'); }
+    try { savedRaw = saveStore(storage, next, savedRaw); store = next; }
+    catch (error) {
+      if (error.code === 'STALE_STORE') {
+        try {
+          savedRaw = storage.getItem(STORAGE_KEY);
+          store = loadStore(storage);
+          if (!store.days[dateKey]) {
+            const updated = structuredClone(store);
+            updated.days[dateKey] = newDay(dateKey, updated.settings.wake, updated.settings.bed);
+            savedRaw = saveStore(storage, updated, savedRaw);
+            store = updated;
+          }
+          $('saveStatus').textContent = 'Saved on this device';
+          notice('Plan refreshed from another tab.');
+        } catch (retryError) { dateKey = previousDate; saveFailure(retryError); render(); return; }
+      } else {
+        store = next;
+        $('saveStatus').textContent = 'Could not save';
+        notice('This new day is only in this tab. Export a backup before leaving.');
+      }
+    }
   }
   render();
 }
@@ -429,8 +460,8 @@ function bindEvents() {
   $('undoButton').addEventListener('click', () => {
     if (!undoStore) return;
     const previous = undoStore;
-    try { saveStore(storage, previous); store = previous; undoStore = null; render(); notice('Last change undone.'); }
-    catch { notice('Could not undo because this browser could not save.'); }
+    try { savedRaw = saveStore(storage, previous, savedRaw); store = previous; undoStore = null; render(); notice('Last change undone.'); }
+    catch (error) { saveFailure(error); }
   });
   $('fillOpen').addEventListener('click', () => {
     const next = structuredClone(store);
@@ -488,6 +519,7 @@ function bindEvents() {
         next.legacySnapshot = JSON.stringify(oldPlan);
       }
       if (!confirm('Import this backup? It will replace the current saved plan.')) return;
+      if (!next.days[dateKey]) next.days[dateKey] = newDay(dateKey, next.settings.wake, next.settings.bed);
       save(next, next.legacySnapshot ? 'Backup imported. Its older undated plan is preserved in exports.' : 'Backup imported.');
     } catch (error) { notice(error.message || 'Could not import this file.'); }
     finally { event.target.value = ''; }
@@ -495,7 +527,7 @@ function bindEvents() {
 }
 
 function start() {
-  try { storage = window.localStorage; store = loadStore(storage); }
+  try { storage = window.localStorage; savedRaw = storage.getItem(STORAGE_KEY); store = loadStore(storage); }
   catch (error) {
     const shell = document.querySelector('.shell');
     shell.replaceChildren();
@@ -523,6 +555,17 @@ function start() {
     return;
   }
   bindEvents();
+  const room = new URLSearchParams(window.location.search);
+  if (room.has('room') || savedRaw === null) {
+    $('legacyRoomLink').href = `/care-calculator/legacy/?room=${encodeURIComponent(room.get('room') || 'default')}`;
+    $('roomNotice').hidden = false;
+  }
+  window.addEventListener('storage', event => {
+    if (event.key === STORAGE_KEY && event.newValue !== savedRaw) {
+      $('saveStatus').textContent = 'Changed in another tab';
+      notice('This plan changed in another tab. Reload before making more changes.');
+    }
+  });
   openDate(dateKey);
   if (store.legacySnapshot) notice('An older undated plan was found. It is preserved in exported backups.');
 }

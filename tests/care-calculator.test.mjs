@@ -80,3 +80,15 @@ test('malformed backup cannot discard dated plans on save', () => {
   invalidLabel.blocks[0].label = null;
   assert.equal(validateDay(invalidLabel), 'Schedule has an invalid label.');
 });
+
+test('stale tab cannot overwrite a plan saved by another tab', () => {
+  const storage = memoryStorage();
+  const firstTab = loadStore(storage);
+  const secondTab = loadStore(storage);
+  firstTab.days['2026-09-28'] = newDay('2026-09-28');
+  saveStore(storage, firstTab, null);
+  secondTab.days['2026-09-29'] = newDay('2026-09-29');
+  assert.throws(() => saveStore(storage, secondTab, null), /changed in another tab/);
+  assert.ok(loadStore(storage).days['2026-09-28']);
+  assert.equal(loadStore(storage).days['2026-09-29'], undefined);
+});

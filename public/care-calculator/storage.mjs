@@ -34,10 +34,17 @@ export function loadStore(storage) {
   return store;
 }
 
-export function saveStore(storage, store) {
+export function saveStore(storage, store, expectedRaw) {
   const problem = validateStore(store);
   if (problem) throw new Error(problem);
-  storage.setItem(STORAGE_KEY, JSON.stringify(store));
+  if (expectedRaw !== undefined && storage.getItem(STORAGE_KEY) !== expectedRaw) {
+    const error = new Error('This plan changed in another tab. Reload before saving.');
+    error.code = 'STALE_STORE';
+    throw error;
+  }
+  const raw = JSON.stringify(store);
+  storage.setItem(STORAGE_KEY, raw);
+  return raw;
 }
 
 export function parseBackup(text) {

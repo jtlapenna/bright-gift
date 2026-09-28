@@ -80,6 +80,7 @@ p { line-height: 1.5; text-wrap: pretty; }
 .danger-button { padding: 0 12px; background: var(--danger-soft); color: var(--danger); }
 .danger-button:hover { background: var(--danger); color: var(--surface); }
 .notice { margin-bottom: 18px; border-radius: 11px; background: var(--free-soft); color: var(--ink); padding: 12px 16px; font-size: .9rem; }
+.notice a, .legacy-recovery a { color: var(--john); text-underline-offset: 2px; }
 .notice[hidden], [hidden] { display: none !important; }
 .overview { display: grid; grid-template-columns: 1.18fr 1fr 1fr; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
 .overview > div { min-width: 0; padding: 24px; }
