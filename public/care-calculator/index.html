@@ -1,301 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baby Care Calculator</title>
-    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
-    <meta name="googlebot" content="noindex, nofollow">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <title>Care planner</title>
+  <link rel="stylesheet" href="/care-calculator/styles.css">
 </head>
 <body>
-    <!-- Notification Container -->
-    <div id="notificationContainer"></div>
-    
-    <h1 class="app-title">Baby Care Calculator</h1>
-    
-    <div class="planner">
-        <!-- Settings Bar -->
-        <div class="widget" id="settings-bar">
-            <h3>Settings</h3>
-            <div class="widget-content settings-content">
-                <div class="settings-row">
-                    <button id="autoFillBtn" class="autofill-btn" title="Auto-create shifts to balance today">Auto‑fill</button>
-                    <div class="setting-group">
-                        <label for="jeffExtra">Jeff's Extra Minutes:</label>
-                        <input type="number" id="jeffExtra" value="-25" min="-180" max="120" class="setting-input">
-                    </div>
-                    <div class="setting-group">
-                        <label for="johnExtra">John's Extra Minutes:</label>
-                        <input type="number" id="johnExtra" value="25" min="-180" max="120" class="setting-input">
-                    </div>
-                    <div class="setting-group">
-                        <label for="dayMode">Day Mode:</label>
-                        <div class="toggle-container">
-                            <button class="toggle-btn active" data-mode="full">
-                                <span class="toggle-label">Full</span>
-                            </button>
-                            <button class="toggle-btn" data-mode="partial">
-                                <span class="toggle-label">Partial</span>
-                            </button>
-                        </div>
-                    </div>
-                    <button id="pullBtn" class="sync-btn" title="Fetch latest from cloud">Pull</button>
-                    <button id="pushBtn" class="sync-btn" title="Save to cloud">Push</button>
-                    
-                    <button onclick="resetAllData()" class="reset-btn">Reset All Data</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="main-layout">
-            <div class="widget" id="daily-module">
-                <h3>Daily Segments</h3>
-                <div class="widget-content v1-daily"></div>
-            </div>
-            
-            <div class="right-panel">
-                <div class="widget">
-                    <h3>Progress Tracking</h3>
-                    <div class="widget-content progress-content">
-                        <div class="projected-time-display">
-                            <span class="label">Total Projected Wake Time:</span>
-                            <span class="value" id="totalProjectedWakeTime">0 min</span>
-                        </div>
-                        <div class="projected-time-display">
-                            <span class="label">Remaining Projected Wake Time:</span>
-                            <span class="value" id="remainingProjectedWakeTime">0 min</span>
-                        </div>
-                        <div class="progress-cards">
-                            <div class="progress-card">
-                                <h4>Jeff</h4>
-                                <div class="progress-bar-container">
-                                    <div class="progress-bar">
-                                        <div class="progress-fill jeff-progress" id="jeffProgress"></div>
-                                    </div>
-                                    <div class="progress-text" id="jeffProgressText">0%</div>
-                                </div>
-                                <div class="time-stats">
-                                    <div class="stat">
-                                        <span class="label">Logged:</span>
-                                        <span class="value" id="jeffLogged">0 min</span>
-                                    </div>
-                                    <div class="stat">
-                                        <span class="label">Remaining:</span>
-                                        <span class="value" id="jeffRemaining">0 min</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="progress-card">
-                                <h4>John</h4>
-                                <div class="progress-bar-container">
-                                    <div class="progress-bar">
-                                        <div class="progress-fill john-progress" id="johnProgress"></div>
-                                    </div>
-                                    <div class="progress-text" id="johnProgressText">0%</div>
-                                </div>
-                                <div class="time-stats">
-                                    <div class="stat">
-                                        <span class="label">Logged:</span>
-                                        <span class="value" id="johnLogged">0 min</span>
-                                    </div>
-                                    <div class="stat">
-                                        <span class="label">Remaining:</span>
-                                        <span class="value" id="johnRemaining">25 min</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="widget">
-                    <h3>Add Shift Log</h3>
-                    <div class="widget-content shift-log">
-                        <div class="shift-sections">
-                            <!-- Headers -->
-<!-- Jeff's Row -->
-                            <div class="person-row">
-                                <div class="who">Jeff</div>
-                                <select id="jeffCustomStart" class="time-select"></select>
-                                <select id="jeffCustomEnd" class="time-select"></select>
-                                <button onclick="addCustom('Jeff')" class="add-btn">Add</button>
-                                <div class="spacer"></div>
-                                <div class="quick-add-buttons">
-                                    <button onclick="addPreset('Jeff','07:15','09:50')" class="quick-btn">7:15AM - 9:50AM</button>
-                                    <button onclick="addPreset('Jeff','13:00','14:50')" class="quick-btn">1:00PM - 2:50PM</button>
-                                </div>
-                            </div>
-                            
-                            <!-- John's Row -->
-                            <div class="person-row">
-                                <div class="who">John</div>
-                                <select id="johnCustomStart" class="time-select"></select>
-                                <select id="johnCustomEnd" class="time-select"></select>
-                                <button onclick="addCustom('John')" class="add-btn">Add</button>
-                                <div class="spacer"></div>
-                                <div class="quick-add-buttons">
-                                    <button onclick="addPreset('John','11:00','13:00')" class="quick-btn">11:00AM - 1:00PM</button>
-                                    <button onclick="addPreset('John','16:20','19:50')" class="quick-btn">4:20PM - 7:50PM</button>
-                                </div>
-                            </div>
-                            
-                            <!-- Free Row -->
-                            <div class="person-row">
-                                <div class="who">Free</div>
-                                <select id="freeCustomStart" class="time-select"></select>
-                                <select id="freeCustomEnd" class="time-select"></select>
-                                <button onclick="addCustom('Free')" class="add-btn">Add</button>
-                                <div class="spacer"></div>
-                                <div class="quick-add-buttons single-button">
-                                    <button onclick="addPreset('Free','11:00','14:50')" class="quick-btn">11:00 AM - 2:50 PM</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>Care planner</span></div>
+      <span class="save-status" id="saveStatus" role="status">Saved on this device</span>
+    </header>
+    <section class="intro" aria-labelledby="pageTitle">
+      <div><p class="eyebrow" id="dayType">Daily plan</p><h1 id="pageTitle">Plan the day</h1><p class="intro-copy">Assign time to Jeff or John. School and naps stay outside both targets.</p></div>
+      <div class="date-controls" aria-label="Choose day">
+        <button type="button" id="previousDay" class="icon-button" aria-label="Previous day">‹</button>
+        <label class="date-label"><span class="sr-only">Plan date</span><input id="planDate" type="date"></label>
+        <button type="button" id="nextDay" class="icon-button" aria-label="Next day">›</button>
+        <button type="button" id="todayButton" class="text-button">Today</button>
+      </div>
+    </section>
+    <div class="notice" id="notice" role="status" aria-live="polite" hidden></div>
+    <section class="overview" aria-label="Daily totals">
+      <div class="open-total"><span class="eyebrow">Time left to assign</span><strong id="openTime">0m</strong><p id="openContext">Across today’s care hours</p><button type="button" id="undoButton" class="undo-button" hidden>Undo last change</button></div>
+      <div class="parent-total jeff-total"><div class="parent-heading"><span class="person-dot" aria-hidden="true"></span><h2>Jeff</h2><span id="jeffPercent">0%</span></div><div class="meter" role="progressbar" id="jeffMeter" aria-label="Jeff's planned target" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="jeffBar"></span></div><p><strong id="jeffScheduled">0m</strong> scheduled <span class="stat-divider">·</span> <strong id="jeffRemaining">0m</strong> left</p><p class="overage" id="jeffOver" hidden></p></div>
+      <div class="parent-total john-total"><div class="parent-heading"><span class="person-dot" aria-hidden="true"></span><h2>John</h2><span id="johnPercent">0%</span></div><div class="meter" role="progressbar" id="johnMeter" aria-label="John's planned target" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="johnBar"></span></div><p><strong id="johnScheduled">0m</strong> scheduled <span class="stat-divider">·</span> <strong id="johnRemaining">0m</strong> left</p><p class="overage" id="johnOver" hidden></p></div>
+    </section>
+    <div class="work-area">
+      <section class="schedule-section" aria-labelledby="scheduleTitle">
+        <div class="section-heading"><div><p class="eyebrow">Your plan</p><h2 id="scheduleTitle">Schedule</h2></div><button type="button" id="addBlock" class="primary-button">Add time</button></div>
+        <div class="schedule-list" id="blockList"></div>
+        <div class="schedule-footer"><span id="daySpan">Wake to bed</span><button type="button" id="fillOpen" class="quiet-button">Fill open time</button></div>
+      </section>
+      <aside class="timeline-section" aria-labelledby="timelineTitle">
+        <div class="section-heading timeline-heading"><div><p class="eyebrow">At a glance</p><h2 id="timelineTitle">Day timeline</h2></div><div class="zoom-controls" aria-label="Timeline zoom"><button type="button" id="zoomOut" aria-label="Zoom out">−</button><span id="zoomLabel">1×</span><button type="button" id="zoomIn" aria-label="Zoom in">+</button></div></div>
+        <p class="timeline-help">Use the schedule rows to edit. Zoom for more detail.</p><div class="timeline-viewport"><div class="timeline" id="timeline"></div></div>
+      </aside>
     </div>
-    
-    <script src="script.js?v=pp-2025-09-02-07"></script>
-
-<!-- Manual "Sync now" button handler (Supabase) -->
-<script type="module">
-
-console.log("%cSYNC UI wired: Auto-push & realtime (index v2025-09-02-05)","color:#22c55e;font-weight:700");
-
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-
-const SUPABASE_URL = "https://laqfvhpsacurgyulucwx.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxhcWZ2aHBzYWN1cmd5dWx1Y3d4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY3NDgzOTIsImV4cCI6MjA3MjMyNDM5Mn0.o2kMw3K-GYB2UlzSMb5C82-4a-rt3HmM0NLiP_eaa9M";
-
-// Client + room
-window.supabase = window.supabase || createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-window.room = window.room || (new URLSearchParams(location.search).get("room") || "default");
-
-// Safe import/export fallbacks (script.js provides the canonical ones)
-window.importState = window.importState || ((data) => {
-  if (!data) return;
-  if (Array.isArray(data.items)) window.v1Items = data.items;
-  const je = document.getElementById("jeffExtra");
-  const jo = document.getElementById("johnExtra");
-  if (je && data.extras && typeof data.extras.jeff === "number") je.value = data.extras.jeff;
-  if (jo && data.extras && typeof data.extras.john === "number") jo.value = data.extras.john;
-  if (data.dayMode && typeof window.handleDayModeChange === "function") window.handleDayModeChange(data.dayMode);
-  if (typeof window.renderTimeline === "function") window.renderTimeline();
-  if (typeof window.updateProgressDisplay === "function") window.updateProgressDisplay();
-});
-
-window.exportState = window.exportState || function(){
-  const je = document.getElementById('jeffExtra');
-  const jo = document.getElementById('johnExtra');
-  const extras = {
-    jeff: parseInt(je?.value || '-25') || -25,
-    john: parseInt(jo?.value || '25') || 25
-  };
-  const items = Array.isArray(window.v1Items) ? window.v1Items : [];
-  const dayModeBtn = document.querySelector('.toggle-btn.active');
-  const dayMode = dayModeBtn?.getAttribute('data-mode') || 'full';
-  return { items, extras, dayMode, ts: Date.now() };
-};
-
-async function pullFromCloud() {
-  const { data, error } = await window.supabase
-    .from("rooms")
-    .select("*")
-    .eq("room_id", window.room)
-    .single();
-  if (error) throw error;
-  const payload = data?.data ?? data?.state ?? data?.payload ?? null;
-  if (payload) { 
-    window.__sync=window.__sync||{}; window.__sync.isImporting=true; 
-    try{ window.importState(payload); } finally { window.__sync.isImporting=false; } 
-  }
-}
-
-async function pushToCloud() {
-  const payload = window.exportState();
-  const row = { room_id: window.room, data: payload, updated_at: new Date().toISOString() };
-  const { error } = await window.supabase
-    .from("rooms")
-    .upsert(row, { onConflict: 'room_id' });
-  if (error) throw error;
-  return payload?.ts;
-}
-
-// --- Auto-sync wiring (debounced auto-push on local saves) ---
-window.__sync = window.__sync || {};
-window.__sync.lastPushedTs = window.__sync.lastPushedTs || 0;
-window.__sync.isImporting = false;
-
-function debounce(fn, ms=1200){
-  let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args), ms); };
-}
-const pushDebounced = debounce(async () => {
-  try {
-    const ts = await pushToCloud();
-    window.__sync.lastPushedTs = ts || Date.now();
-  } catch(e){ console.warn("autoPush failed:", e); }
-}, 1200);
-window.__sync.pushDebounced = pushDebounced;
-window.__sync.pushToCloud = pushToCloud;
-window.__sync.pullFromCloud = pullFromCloud;
-
-// Listen for local persistence saves and auto-push them
-window.addEventListener('bcc:stateChanged', () => {
-  if (window.__sync.isImporting) return;
-  pushDebounced();
-});
-
-// Buttons (bind after DOM is ready to be robust)
-window.addEventListener('DOMContentLoaded', () => {
-  const pullBtn = document.getElementById("pullBtn");
-  const pushBtn = document.getElementById("pushBtn");
-
-  if (pullBtn) {
-    pullBtn.addEventListener("click", async () => {
-      const original = pullBtn.textContent;
-      pullBtn.disabled = true;
-      pullBtn.textContent = "Syncing…";
-      try { await pullFromCloud(); }
-      catch(e) { console.warn("Pull failed:", e); }
-      finally { pullBtn.disabled = false; pullBtn.textContent = original; }
-    });
-  }
-
-  if (pushBtn) {
-    pushBtn.addEventListener("click", async () => {
-      const original = pushBtn.textContent;
-      pushBtn.disabled = true;
-      pushBtn.textContent = "Pushing…";
-      try { window.__sync.lastPushedTs = await pushToCloud() || 0; }
-      catch(e) { console.warn("Push failed:", e); }
-      finally { pushBtn.disabled = false; pushBtn.textContent = original; }
-    });
-  }
-});
-
-// Realtime subscription (ignore our own echoes by ts)
-try {
-  const channel = window.supabase.channel(`room:${window.room}`);
-  channel.on(
-    'postgres_changes',
-    { event: '*', schema: 'public', table: 'rooms', filter: `room_id=eq.${window.room}` },
-    (payload) => {
-      const row = payload?.new;
-      const inbound = row?.data ?? row?.state ?? row?.payload ?? null;
-      if (inbound?.ts && inbound.ts === window.__sync.lastPushedTs) return;
-      if (inbound) { 
-        window.__sync.isImporting = true; 
-        try { window.importState(inbound); } finally { window.__sync.isImporting = false; } 
-      }
-    }
-  ).subscribe();
-} catch(e) { console.warn("Realtime subscribe failed:", e); }
-
-</script>
-
+    <details class="settings" id="settingsPanel">
+      <summary>Day settings and backup <span aria-hidden="true">⌄</span></summary>
+      <div class="settings-content">
+        <form id="settingsForm" novalidate><div class="settings-fields"><label>Wake time <input id="wakeInput" type="time" step="300" required></label><label>Bed time <input id="bedInput" type="time" step="300" required></label><label>John’s target lead <span class="input-suffix"><input id="leadInput" type="number" min="0" max="240" step="1" required><span>min</span></span></label></div><p class="setting-help">Wake and bed times apply to this day and future new days. John’s target lead applies to all days. Odd totals give John the spare minute.</p><p class="form-error" id="settingsError" role="alert" hidden></p><button type="submit" class="secondary-button">Save settings</button></form>
+        <div class="backup-actions"><p>Your plans stay in this browser. Export a backup before clearing browser data or changing devices.</p><div class="button-row"><button type="button" id="exportButton" class="quiet-button">Export backup</button><button type="button" id="importButton" class="quiet-button">Import backup</button><input id="importFile" type="file" accept="application/json,.json" hidden><button type="button" id="resetDay" class="danger-button">Reset this day</button></div><p class="legacy-note" id="legacyNote" hidden>An older plan is included in exported backups.</p></div>
+      </div>
+    </details>
+  </main>
+  <dialog id="blockDialog" aria-labelledby="dialogTitle">
+    <form id="blockForm" novalidate>
+      <div class="dialog-heading"><div><p class="eyebrow">Schedule block</p><h2 id="dialogTitle">Add time</h2></div><button type="button" id="closeDialog" class="icon-button" aria-label="Close editor">×</button></div>
+      <label>Assign to <select id="blockType" required><option value="jeff">Jeff</option><option value="john">John</option><option value="school">School / free</option><option value="nap">Nap</option><option value="free">Other free time</option></select></label>
+      <div class="time-fields"><label>Start <input id="blockStart" type="time" step="300" required></label><label>End <input id="blockEnd" type="time" step="300" required></label></div>
+      <p class="form-error" id="blockError" role="alert" hidden></p>
+      <div class="dialog-actions"><button type="button" id="deleteBlock" class="danger-button" hidden>Delete block</button><span></span><button type="button" id="cancelBlock" class="quiet-button">Cancel</button><button type="submit" class="primary-button">Save block</button></div>
+    </form>
+  </dialog>
+  <script type="module" src="/care-calculator/app.mjs"></script>
 </body>
 </html>
