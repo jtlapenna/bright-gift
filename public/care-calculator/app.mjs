@@ -9,7 +9,10 @@ const todayKey = () => {
 };
 let store;
 let dateKey = todayKey();
-let zoom = 1;
+let zoom = 1.5;
+let activeDrag = null;
+let pinchStart = null;
+let suppressTimelineClick = false;
 let editingId = null;
 let undoStore = null;
 let noticeTimer;
@@ -145,6 +148,7 @@ function renderTimeline(current) {
   while (minute < current.bed) {
     const line = document.createElement('div');
     line.className = 'timeline-hour';
+    line.dataset.minute = String(minute);
     line.style.top = `${(minute - current.wake) * pixelsPerMinute}px`;
     const label = document.createElement('span');
     label.textContent = formatClock(minute).replace(':00 ', ' ');
@@ -153,25 +157,220 @@ function renderTimeline(current) {
     minute += 60;
   }
   for (const block of sortedBlocks(current)) {
-    const button = document.createElement('div');
+    const button = document.createElement('button');
+    button.type = 'button';
     const short = block.end - block.start < 45;
+    const blockHeight = Math.max(10, (block.end - block.start) * pixelsPerMinute - 2);
     button.className = `timeline-block owner-${block.owner}${short ? ' short' : ''}`;
+    button.classList.toggle('has-resize', blockHeight >= 42);
+    button.dataset.blockId = block.id;
+    button.dataset.start = String(block.start);
+    button.dataset.end = String(block.end);
     button.style.top = `${(block.start - current.wake) * pixelsPerMinute}px`;
-    button.style.height = `${Math.max(10, (block.end - block.start) * pixelsPerMinute - 2)}px`;
+    button.style.height = `${blockHeight}px`;
     button.title = `${block.label}: ${formatClock(block.start)} to ${formatClock(block.end)}`;
+    button.setAttribute('aria-label', `Edit or drag ${block.label}, ${formatClock(block.start)} to ${formatClock(block.end)}`);
+    const content = document.createElement('span');
+    content.className = 'block-content';
     const label = document.createElement('strong');
     label.textContent = block.label;
-    button.append(label);
+    content.append(label);
     if (block.end - block.start >= 50) {
       const times = document.createElement('span');
+      times.className = 'block-times';
       times.textContent = `  ${formatClock(block.start)}–${formatClock(block.end)}`;
-      button.append(times);
+      content.append(times);
+    }
+    button.append(content);
+    if (blockHeight >= 42) {
+      for (const edge of ['start', 'end']) {
+        const handle = document.createElement('span');
+        handle.className = `resize-handle resize-${edge}`;
+        handle.dataset.resize = edge;
+        handle.setAttribute('aria-hidden', 'true');
+        button.append(handle);
+      }
     }
     timeline.append(button);
   }
   $('zoomLabel').textContent = `${zoom}×`;
   $('zoomOut').disabled = zoom === 1;
-  $('zoomIn').disabled = zoom === 2;
+  $('zoomIn').disabled = zoom === 3;
+}
+
+function layoutTimeline(current) {
+  const timeline = $('timeline');
+  const pixelsPerMinute = .49 * zoom;
+  timeline.style.height = `${Math.max(200, (current.bed - current.wake) * pixelsPerMinute + 16)}px`;
+  for (const line of timeline.querySelectorAll('.timeline-hour')) {
+    line.style.top = `${(Number(line.dataset.minute) - current.wake) * pixelsPerMinute}px`;
+  }
+  for (const element of timeline.querySelectorAll('.timeline-block')) {
+    const start = Number(element.dataset.start);
+    const end = Number(element.dataset.end);
+    const height = Math.max(10, (end - start) * pixelsPerMinute - 2);
+    element.classList.toggle('has-resize', height >= 42);
+    element.style.top = `${(start - current.wake) * pixelsPerMinute}px`;
+    element.style.height = `${height}px`;
+    if (height >= 42 && !element.querySelector('.resize-handle')) {
+      for (const edge of ['start', 'end']) {
+        const handle = document.createElement('span');
+        handle.className = `resize-handle resize-${edge}`;
+        handle.dataset.resize = edge;
+        handle.setAttribute('aria-hidden', 'true');
+        element.append(handle);
+      }
+    } else if (height < 42) element.querySelectorAll('.resize-handle').forEach(handle => handle.remove());
+  }
+  $('zoomLabel').textContent = `${zoom}×`;
+  $('zoomOut').disabled = zoom === 1;
+  $('zoomIn').disabled = zoom === 3;
+}
+
+function setZoom(value, anchor = null) {
+  const next = Math.max(1, Math.min(3, Math.round(value * 4) / 4));
+  if (next === zoom) return;
+  const viewport = $('timelineViewport');
+  let minute;
+  let viewportY;
+  if (anchor != null) {
+    minute = day().wake + (anchor - $('timeline').getBoundingClientRect().top) / (.49 * zoom);
+    viewportY = anchor - viewport.getBoundingClientRect().top;
+  }
+  zoom = next;
+  if (pinchStart) layoutTimeline(day());
+  else renderTimeline(day());
+  if (minute != null) viewport.scrollTop = Math.max(0, (minute - day().wake) * .49 * zoom + 15 - viewportY);
+}
+
+function timelineMinute(clientY) {
+  return day().wake + (clientY - $('timeline').getBoundingClientRect().top) / (.49 * zoom);
+}
+
+function bindTimelineGestures() {
+  const timeline = $('timeline');
+  const viewport = $('timelineViewport');
+  timeline.addEventListener('pointerdown', event => {
+    const element = event.target.closest('.timeline-block');
+    if (!element || event.button !== 0 || pinchStart || activeDrag) return;
+    const ordered = sortedBlocks(day());
+    const index = ordered.findIndex(block => block.id === element.dataset.blockId);
+    if (index < 0) return;
+    const block = ordered[index];
+    const resizeEdge = event.target.closest('[data-resize]')?.dataset.resize;
+    const waitForHold = event.pointerType === 'touch' && !resizeEdge;
+    activeDrag = {
+      element, id: block.id, pointerId: event.pointerId, mode: resizeEdge || (waitForHold ? 'pending' : 'move'),
+      startY: event.clientY, lastY: event.clientY, start: block.start, end: block.end,
+      lower: index ? ordered[index - 1].end : day().wake,
+      upper: index + 1 < ordered.length ? ordered[index + 1].start : day().bed,
+      nextStart: block.start, nextEnd: block.end, moved: false, holdTimer: null,
+    };
+    if (waitForHold) {
+      const drag = activeDrag;
+      drag.holdTimer = setTimeout(() => {
+        if (activeDrag === drag && !pinchStart) drag.mode = 'move';
+      }, 240);
+    }
+    element.setPointerCapture(event.pointerId);
+    event.preventDefault();
+  });
+  timeline.addEventListener('pointermove', event => {
+    const drag = activeDrag;
+    if (!drag || drag.pointerId !== event.pointerId || pinchStart) return;
+    if (drag.mode === 'pending' && Math.abs(event.clientY - drag.startY) >= 6) {
+      clearTimeout(drag.holdTimer);
+      drag.mode = 'pan';
+    }
+    if (drag.mode === 'pan') {
+      const change = event.clientY - drag.lastY;
+      const before = viewport.scrollTop;
+      viewport.scrollTop -= change;
+      window.scrollBy(0, -change - (viewport.scrollTop - before));
+      drag.lastY = event.clientY;
+      return;
+    }
+    if (drag.mode === 'pending') return;
+    if (Math.abs(event.clientY - drag.startY) < 5 && !drag.moved) return;
+    drag.moved = true;
+    const delta = Math.round((event.clientY - drag.startY) / (.49 * zoom * 5)) * 5;
+    if (drag.mode === 'start') {
+      drag.nextStart = Math.max(drag.lower, Math.min(drag.start + delta, drag.end - 5));
+    } else if (drag.mode === 'end') {
+      drag.nextEnd = Math.max(drag.start + 5, Math.min(drag.end + delta, drag.upper));
+    } else {
+      const duration = drag.end - drag.start;
+      drag.nextStart = Math.max(drag.lower, Math.min(drag.start + delta, drag.upper - duration));
+      drag.nextEnd = drag.nextStart + duration;
+    }
+    drag.element.style.top = `${(drag.nextStart - day().wake) * .49 * zoom}px`;
+    drag.element.style.height = `${Math.max(10, (drag.nextEnd - drag.nextStart) * .49 * zoom - 2)}px`;
+    drag.element.classList.add('dragging');
+    drag.element.title = `${formatClock(drag.nextStart)} to ${formatClock(drag.nextEnd)}`;
+    const times = drag.element.querySelector('.block-times');
+    if (times) times.textContent = `  ${formatClock(drag.nextStart)}–${formatClock(drag.nextEnd)}`;
+  });
+  const finishDrag = (event, canceled = false) => {
+    const drag = activeDrag;
+    if (!drag || drag.pointerId !== event.pointerId) return;
+    clearTimeout(drag.holdTimer);
+    activeDrag = null;
+    suppressTimelineClick = true;
+    setTimeout(() => { suppressTimelineClick = false; }, 400);
+    if (canceled) { renderTimeline(day()); return; }
+    if (drag.mode === 'pan') return;
+    if (!drag.moved) { editBlock(drag.id); return; }
+    if (drag.nextStart === drag.start && drag.nextEnd === drag.end) { renderTimeline(day()); notice('This block cannot move past another block.'); return; }
+    const next = structuredClone(store);
+    const block = next.days[dateKey].blocks.find(item => item.id === drag.id);
+    block.start = drag.nextStart;
+    block.end = drag.nextEnd;
+    next.days[dateKey].updatedAt = Date.now();
+    if (!save(next, 'Time updated. Use Undo to restore it.')) renderTimeline(day());
+  };
+  timeline.addEventListener('pointerup', event => finishDrag(event));
+  timeline.addEventListener('pointercancel', event => finishDrag(event, true));
+  timeline.addEventListener('click', event => {
+    if (suppressTimelineClick) { event.preventDefault(); return; }
+    const element = event.target.closest('.timeline-block');
+    if (element) { editBlock(element.dataset.blockId); return; }
+    const minute = Math.round(timelineMinute(event.clientY) / 5) * 5;
+    const gap = gaps(day()).find(item => minute >= item.start && minute < item.end);
+    if (!gap) { notice('Tap an open part of the timeline to add time.'); return; }
+    const start = Math.max(gap.start, Math.min(minute, gap.end - 5));
+    editBlock(null, { start, end: Math.min(start + 60, gap.end) });
+  });
+  const touchDistance = touches => Math.hypot(touches[0].clientX - touches[1].clientX, touches[0].clientY - touches[1].clientY);
+  viewport.addEventListener('touchstart', event => {
+    if (event.touches.length !== 2) return;
+    if (activeDrag) {
+      const drag = activeDrag;
+      clearTimeout(drag.holdTimer);
+      activeDrag = null;
+      drag.element.classList.remove('dragging');
+      drag.element.style.top = `${(drag.start - day().wake) * .49 * zoom}px`;
+      drag.element.style.height = `${Math.max(10, (drag.end - drag.start) * .49 * zoom - 2)}px`;
+      drag.element.title = `${formatClock(drag.start)} to ${formatClock(drag.end)}`;
+      const times = drag.element.querySelector('.block-times');
+      if (times) times.textContent = `  ${formatClock(drag.start)}–${formatClock(drag.end)}`;
+    }
+    pinchStart = { distance: touchDistance(event.touches), zoom };
+    event.preventDefault();
+  }, { passive: false });
+  viewport.addEventListener('touchmove', event => {
+    if (!pinchStart || event.touches.length !== 2) return;
+    event.preventDefault();
+    const centerY = (event.touches[0].clientY + event.touches[1].clientY) / 2;
+    setZoom(pinchStart.zoom * touchDistance(event.touches) / pinchStart.distance, centerY);
+  }, { passive: false });
+  viewport.addEventListener('touchend', event => {
+    if (pinchStart && event.touches.length < 2) {
+      pinchStart = null;
+      suppressTimelineClick = true;
+      setTimeout(() => { suppressTimelineClick = false; }, 400);
+    }
+  });
+  viewport.addEventListener('touchcancel', () => { pinchStart = null; });
 }
 
 function render() {
@@ -196,6 +395,7 @@ function render() {
 }
 
 function bindEvents() {
+  bindTimelineGestures();
   $('previousDay').addEventListener('click', () => openDate(shiftDate(dateKey, -1)));
   $('nextDay').addEventListener('click', () => openDate(shiftDate(dateKey, 1)));
   $('todayButton').addEventListener('click', () => openDate(todayKey()));
@@ -238,8 +438,8 @@ function bindEvents() {
     if (next.days[dateKey].blocks.length === day().blocks.length) { notice('No target time is left to fill.'); return; }
     save(next, 'Open time assigned. Use Undo if you want to revise it.');
   });
-  $('zoomOut').addEventListener('click', () => { zoom = Math.max(1, zoom - .5); renderTimeline(day()); });
-  $('zoomIn').addEventListener('click', () => { zoom = Math.min(2, zoom + .5); renderTimeline(day()); });
+  $('zoomOut').addEventListener('click', () => setZoom(zoom - .5));
+  $('zoomIn').addEventListener('click', () => setZoom(zoom + .5));
   $('settingsForm').addEventListener('submit', event => {
     event.preventDefault();
     const wake = parseTime($('wakeInput').value);
