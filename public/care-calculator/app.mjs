@@ -13,7 +13,8 @@ let dateKey = todayKey();
 let zoom = 1.5;
 let activeDrag = null;
 let pinchStart = null;
-let selectedCompactId = null;
+let selectedBlockId = null;
+let quickOwner = 'jeff';
 let suppressTimelineClick = false;
 let editingId = null;
 let undoStore = null;
@@ -53,7 +54,7 @@ function day() { return store.days[dateKey]; }
 
 function openDate(nextDate) {
   const previousDate = dateKey;
-  if (nextDate !== dateKey) { undoStore = null; selectedCompactId = null; }
+  if (nextDate !== dateKey) { undoStore = null; selectedBlockId = null; }
   dateKey = nextDate;
   if (!store.days[dateKey]) {
     const next = structuredClone(store);
@@ -92,6 +93,40 @@ function category(block) {
 
 function labelFor(type) {
   return { jeff: 'Jeff', john: 'John', school: 'School / free', nap: 'Nap', free: 'Free time' }[type];
+}
+
+function setSelectedBlock(current) {
+  const block = current.blocks.find(item => item.id === selectedBlockId);
+  if (!block) selectedBlockId = null;
+  $('timelineSelection').hidden = !block;
+  if (!block) return;
+  $('timelineSelectionText').textContent = `${block.label} · ${formatClock(block.start)}–${formatClock(block.end)}`;
+  for (const button of $('timelineSelection').querySelectorAll('[data-quick-owner]')) {
+    button.setAttribute('aria-pressed', String(button.dataset.quickOwner === block.owner));
+  }
+}
+
+function addTimelineBlock(start, end) {
+  const id = crypto.randomUUID();
+  const next = structuredClone(store);
+  next.days[dateKey].blocks.push({ id, owner: quickOwner, label: labelFor(quickOwner), start, end });
+  next.days[dateKey].updatedAt = Date.now();
+  const previousSelection = selectedBlockId;
+  selectedBlockId = id;
+  if (!save(next, `${labelFor(quickOwner)} time added. Use Undo to restore it.`)) selectedBlockId = previousSelection;
+}
+
+function changeBlockOwner(owner) {
+  const block = day().blocks.find(item => item.id === selectedBlockId);
+  if (!block || block.owner === owner) return;
+  const next = structuredClone(store);
+  const changed = next.days[dateKey].blocks.find(item => item.id === block.id);
+  changed.owner = owner;
+  changed.label = labelFor(owner);
+  next.days[dateKey].updatedAt = Date.now();
+  const previousOwner = quickOwner;
+  quickOwner = owner;
+  if (!save(next, `Assigned to ${labelFor(owner)}. Use Undo to restore it.`)) quickOwner = previousOwner;
 }
 
 function editBlock(id = null, suggested = null) {
@@ -201,10 +236,7 @@ function renderTimeline(current) {
     timeline.append(line);
     minute += 60;
   }
-  const selected = current.blocks.find(block => block.id === selectedCompactId && Math.max(10, (block.end - block.start) * pixelsPerMinute - 2) < 42);
-  if (!selected) selectedCompactId = null;
-  $('timelineSelection').hidden = !selected;
-  if (selected) $('timelineSelection').textContent = `${selected.label}: ${formatClock(selected.start)} to ${formatClock(selected.end)}. Drag arrows to resize; tap again to edit.`;
+  setSelectedBlock(current);
   for (const block of sortedBlocks(current)) {
     const button = document.createElement('button');
     button.type = 'button';
@@ -213,14 +245,15 @@ function renderTimeline(current) {
     button.className = `timeline-block owner-${block.owner}${short ? ' short' : ''}`;
     const compact = blockHeight < 42;
     button.classList.add(compact ? 'compact-resize' : 'has-resize');
-    if (compact && block.id === selectedCompactId) button.classList.add('compact-selected');
+    if (block.id === selectedBlockId) button.classList.add('selected');
+    if (compact && block.id === selectedBlockId) button.classList.add('compact-selected');
     button.dataset.blockId = block.id;
     button.dataset.start = String(block.start);
     button.dataset.end = String(block.end);
     button.style.top = `${(block.start - current.wake) * pixelsPerMinute}px`;
     button.style.height = `${blockHeight}px`;
     button.title = `${block.label}: ${formatClock(block.start)} to ${formatClock(block.end)}`;
-    button.setAttribute('aria-label', `Edit or drag ${block.label}, ${formatClock(block.start)} to ${formatClock(block.end)}`);
+    button.setAttribute('aria-label', `Select or drag ${block.label}, ${formatClock(block.start)} to ${formatClock(block.end)}`);
     const content = document.createElement('span');
     content.className = 'block-content';
     const label = document.createElement('strong');
@@ -233,7 +266,7 @@ function renderTimeline(current) {
       content.append(times);
     }
     button.append(content);
-    syncResizeHandles(button, !compact || block.id === selectedCompactId);
+    syncResizeHandles(button, !compact || block.id === selectedBlockId);
     timeline.append(button);
   }
   $('zoomLabel').textContent = `${zoom}×`;
@@ -244,9 +277,7 @@ function renderTimeline(current) {
 function layoutTimeline(current) {
   const timeline = $('timeline');
   const pixelsPerMinute = .49 * zoom;
-  const selected = current.blocks.find(block => block.id === selectedCompactId && Math.max(10, (block.end - block.start) * pixelsPerMinute - 2) < 42);
-  if (!selected) selectedCompactId = null;
-  $('timelineSelection').hidden = !selected;
+  setSelectedBlock(current);
   timeline.style.height = `${Math.max(200, (current.bed - current.wake) * pixelsPerMinute + 16)}px`;
   for (const line of timeline.querySelectorAll('.timeline-hour')) {
     line.style.top = `${(Number(line.dataset.minute) - current.wake) * pixelsPerMinute}px`;
@@ -257,7 +288,8 @@ function layoutTimeline(current) {
     const height = Math.max(10, (end - start) * pixelsPerMinute - 2);
     element.classList.toggle('has-resize', height >= 42);
     element.classList.toggle('compact-resize', height < 42);
-    const selected = height < 42 && element.dataset.blockId === selectedCompactId;
+    const selected = height < 42 && element.dataset.blockId === selectedBlockId;
+    element.classList.toggle('selected', element.dataset.blockId === selectedBlockId);
     element.classList.toggle('compact-selected', selected);
     syncResizeHandles(element, height >= 42 || selected);
     element.style.top = `${(start - current.wake) * pixelsPerMinute}px`;
@@ -361,12 +393,10 @@ function bindTimelineGestures() {
     if (canceled) { renderTimeline(day()); return; }
     if (drag.mode === 'pan') return;
     if (!drag.moved) {
-      if (drag.element.classList.contains('compact-resize') && selectedCompactId !== drag.id) {
-        selectedCompactId = drag.id;
+      if (selectedBlockId !== drag.id) {
+        selectedBlockId = drag.id;
         renderTimeline(day());
-        return;
       }
-      editBlock(drag.id);
       return;
     }
     if (drag.nextStart === drag.start && drag.nextEnd === drag.end) { renderTimeline(day()); notice('This block cannot move past another block.'); return; }
@@ -382,13 +412,16 @@ function bindTimelineGestures() {
   timeline.addEventListener('click', event => {
     if (suppressTimelineClick) { event.preventDefault(); return; }
     const element = event.target.closest('.timeline-block');
-    if (element) { editBlock(element.dataset.blockId); return; }
-    if (selectedCompactId) { selectedCompactId = null; renderTimeline(day()); }
+    if (element) {
+      if (selectedBlockId !== element.dataset.blockId) { selectedBlockId = element.dataset.blockId; renderTimeline(day()); }
+      if (event.detail === 0) $('timelineSelection').querySelector('[data-quick-owner]')?.focus({ preventScroll: true });
+      return;
+    }
     const minute = Math.round(timelineMinute(event.clientY) / 5) * 5;
     const gap = gaps(day()).find(item => minute >= item.start && minute < item.end);
     if (!gap) { notice('Tap an open part of the timeline to add time.'); return; }
     const start = Math.max(gap.start, Math.min(minute, gap.end - 5));
-    editBlock(null, { start, end: Math.min(start + 60, gap.end) });
+    addTimelineBlock(start, Math.min(start + 60, gap.end));
   });
   const touchDistance = touches => Math.hypot(touches[0].clientX - touches[1].clientX, touches[0].clientY - touches[1].clientY);
   viewport.addEventListener('touchstart', event => {
@@ -440,6 +473,7 @@ function render() {
   $('legacyNote').hidden = !store.legacySnapshot;
   $('addBlock').disabled = !info.open;
   $('fillOpen').disabled = !info.open || !(info.jeffRemaining || info.johnRemaining);
+  $('timelineHelp').textContent = `Tap open time to add up to one hour for ${labelFor(quickOwner)}. Tap a block to reassign it. Hold to move; drag handles to resize. Pinch to zoom.`;
   renderSummary(info);
   renderList(current);
   renderTimeline(current);
@@ -447,6 +481,11 @@ function render() {
 
 function bindEvents() {
   bindTimelineGestures();
+  $('timelineSelection').addEventListener('click', event => {
+    const owner = event.target.closest('[data-quick-owner]')?.dataset.quickOwner;
+    if (owner) changeBlockOwner(owner);
+  });
+  $('timelineEdit').addEventListener('click', () => { if (selectedBlockId) editBlock(selectedBlockId); });
   $('previousDay').addEventListener('click', () => openDate(shiftDate(dateKey, -1)));
   $('nextDay').addEventListener('click', () => openDate(shiftDate(dateKey, 1)));
   $('todayButton').addEventListener('click', () => openDate(todayKey()));
