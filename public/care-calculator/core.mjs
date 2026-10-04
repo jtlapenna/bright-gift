@@ -60,6 +60,18 @@ export function newDay(dateKey, wake = DEFAULT_WAKE, bed = DEFAULT_BED) {
   return { date: dateKey, kind, wake, bed, blocks: fitted, updatedAt: Date.now() };
 }
 
+export function changeDayHours(day, wake, bed) {
+  return {
+    ...day,
+    wake,
+    bed,
+    blocks: day.blocks
+      .map(block => ({ ...block, start: Math.max(wake, block.start), end: Math.min(bed, block.end) }))
+      .filter(block => block.end > block.start),
+    updatedAt: Date.now(),
+  };
+}
+
 export function sortedBlocks(day) {
   return [...day.blocks].sort((a, b) => a.start - b.start || a.end - b.end);
 }

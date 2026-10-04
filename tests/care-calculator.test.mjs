@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { calculate, fillOpen, gaps, newDay, unionLength, validateDay } from '../public/care-calculator/core.mjs';
+import { calculate, changeDayHours, fillOpen, gaps, newDay, unionLength, validateDay } from '../public/care-calculator/core.mjs';
 import { loadStore, parseBackup, saveStore } from '../public/care-calculator/storage.mjs';
 
 function memoryStorage(initial = {}) {
@@ -38,6 +38,19 @@ test('editing and removing defaults does not restore them', () => {
   day.blocks = day.blocks.filter(block => block.label !== 'Nap');
   assert.equal(validateDay(day), null);
   assert.equal(calculate(day).unavailable, 0);
+});
+
+test('changing day hours clips boundary blocks without mutating the source day', () => {
+  const monday = newDay('2026-09-28');
+  const changed = changeDayHours(monday, 8 * 60, 19 * 60);
+  assert.equal(validateDay(changed), null);
+  assert.deepEqual(changed.blocks.map(({ label, start, end }) => [label, start, end]), [
+    ['Jeff', 480, 500], ['School / free', 500, 1050], ['John', 1050, 1140],
+  ]);
+  assert.equal(monday.wake, 435);
+  assert.equal(monday.bed, 1190);
+  assert.equal(monday.blocks[0].start, 470);
+  assert.equal(monday.blocks[2].end, 1160);
 });
 
 test('fill open time assigns target minutes without overlaps', () => {

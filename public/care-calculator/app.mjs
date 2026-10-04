@@ -1,4 +1,4 @@
-import { calculate, dateKind, fillOpen, formatClock, formatDuration, gaps, inputTime, newDay, parseTime, shiftDate, sortedBlocks, STORAGE_KEY, validateDay } from './core.mjs';
+import { calculate, changeDayHours, dateKind, fillOpen, formatClock, formatDuration, gaps, inputTime, newDay, parseTime, shiftDate, sortedBlocks, STORAGE_KEY, validateDay } from './core.mjs';
 import { emptyStore, loadStore, parseBackup, saveStore, validateStore } from './storage.mjs';
 
 const $ = id => document.getElementById(id);
@@ -13,6 +13,7 @@ let dateKey = todayKey();
 let zoom = 1.5;
 let activeDrag = null;
 let pinchStart = null;
+let selectedCompactId = null;
 let suppressTimelineClick = false;
 let editingId = null;
 let undoStore = null;
@@ -52,7 +53,7 @@ function day() { return store.days[dateKey]; }
 
 function openDate(nextDate) {
   const previousDate = dateKey;
-  if (nextDate !== dateKey) undoStore = null;
+  if (nextDate !== dateKey) { undoStore = null; selectedCompactId = null; }
   dateKey = nextDate;
   if (!store.days[dateKey]) {
     const next = structuredClone(store);
@@ -170,6 +171,19 @@ function renderList(current) {
   }
 }
 
+function syncResizeHandles(button, enabled) {
+  if (!enabled) { button.querySelectorAll('.resize-handle').forEach(handle => handle.remove()); return; }
+  if (button.querySelector('.resize-handle')) return;
+  for (const edge of ['start', 'end']) {
+    const handle = document.createElement('span');
+    handle.className = `resize-handle resize-${edge}`;
+    handle.dataset.resize = edge;
+    handle.title = `Drag to change ${edge} time`;
+    handle.setAttribute('aria-hidden', 'true');
+    button.append(handle);
+  }
+}
+
 function renderTimeline(current) {
   const timeline = $('timeline');
   timeline.replaceChildren();
@@ -187,13 +201,19 @@ function renderTimeline(current) {
     timeline.append(line);
     minute += 60;
   }
+  const selected = current.blocks.find(block => block.id === selectedCompactId && Math.max(10, (block.end - block.start) * pixelsPerMinute - 2) < 42);
+  if (!selected) selectedCompactId = null;
+  $('timelineSelection').hidden = !selected;
+  if (selected) $('timelineSelection').textContent = `${selected.label}: ${formatClock(selected.start)} to ${formatClock(selected.end)}. Drag arrows to resize; tap again to edit.`;
   for (const block of sortedBlocks(current)) {
     const button = document.createElement('button');
     button.type = 'button';
     const short = block.end - block.start < 45;
     const blockHeight = Math.max(10, (block.end - block.start) * pixelsPerMinute - 2);
     button.className = `timeline-block owner-${block.owner}${short ? ' short' : ''}`;
-    button.classList.toggle('has-resize', blockHeight >= 42);
+    const compact = blockHeight < 42;
+    button.classList.add(compact ? 'compact-resize' : 'has-resize');
+    if (compact && block.id === selectedCompactId) button.classList.add('compact-selected');
     button.dataset.blockId = block.id;
     button.dataset.start = String(block.start);
     button.dataset.end = String(block.end);
@@ -213,15 +233,7 @@ function renderTimeline(current) {
       content.append(times);
     }
     button.append(content);
-    if (blockHeight >= 42) {
-      for (const edge of ['start', 'end']) {
-        const handle = document.createElement('span');
-        handle.className = `resize-handle resize-${edge}`;
-        handle.dataset.resize = edge;
-        handle.setAttribute('aria-hidden', 'true');
-        button.append(handle);
-      }
-    }
+    syncResizeHandles(button, !compact || block.id === selectedCompactId);
     timeline.append(button);
   }
   $('zoomLabel').textContent = `${zoom}×`;
@@ -232,6 +244,9 @@ function renderTimeline(current) {
 function layoutTimeline(current) {
   const timeline = $('timeline');
   const pixelsPerMinute = .49 * zoom;
+  const selected = current.blocks.find(block => block.id === selectedCompactId && Math.max(10, (block.end - block.start) * pixelsPerMinute - 2) < 42);
+  if (!selected) selectedCompactId = null;
+  $('timelineSelection').hidden = !selected;
   timeline.style.height = `${Math.max(200, (current.bed - current.wake) * pixelsPerMinute + 16)}px`;
   for (const line of timeline.querySelectorAll('.timeline-hour')) {
     line.style.top = `${(Number(line.dataset.minute) - current.wake) * pixelsPerMinute}px`;
@@ -241,17 +256,12 @@ function layoutTimeline(current) {
     const end = Number(element.dataset.end);
     const height = Math.max(10, (end - start) * pixelsPerMinute - 2);
     element.classList.toggle('has-resize', height >= 42);
+    element.classList.toggle('compact-resize', height < 42);
+    const selected = height < 42 && element.dataset.blockId === selectedCompactId;
+    element.classList.toggle('compact-selected', selected);
+    syncResizeHandles(element, height >= 42 || selected);
     element.style.top = `${(start - current.wake) * pixelsPerMinute}px`;
     element.style.height = `${height}px`;
-    if (height >= 42 && !element.querySelector('.resize-handle')) {
-      for (const edge of ['start', 'end']) {
-        const handle = document.createElement('span');
-        handle.className = `resize-handle resize-${edge}`;
-        handle.dataset.resize = edge;
-        handle.setAttribute('aria-hidden', 'true');
-        element.append(handle);
-      }
-    } else if (height < 42) element.querySelectorAll('.resize-handle').forEach(handle => handle.remove());
   }
   $('zoomLabel').textContent = `${zoom}×`;
   $('zoomOut').disabled = zoom === 1;
@@ -350,7 +360,15 @@ function bindTimelineGestures() {
     setTimeout(() => { suppressTimelineClick = false; }, 400);
     if (canceled) { renderTimeline(day()); return; }
     if (drag.mode === 'pan') return;
-    if (!drag.moved) { editBlock(drag.id); return; }
+    if (!drag.moved) {
+      if (drag.element.classList.contains('compact-resize') && selectedCompactId !== drag.id) {
+        selectedCompactId = drag.id;
+        renderTimeline(day());
+        return;
+      }
+      editBlock(drag.id);
+      return;
+    }
     if (drag.nextStart === drag.start && drag.nextEnd === drag.end) { renderTimeline(day()); notice('This block cannot move past another block.'); return; }
     const next = structuredClone(store);
     const block = next.days[dateKey].blocks.find(item => item.id === drag.id);
@@ -365,6 +383,7 @@ function bindTimelineGestures() {
     if (suppressTimelineClick) { event.preventDefault(); return; }
     const element = event.target.closest('.timeline-block');
     if (element) { editBlock(element.dataset.blockId); return; }
+    if (selectedCompactId) { selectedCompactId = null; renderTimeline(day()); }
     const minute = Math.round(timelineMinute(event.clientY) / 5) * 5;
     const gap = gaps(day()).find(item => minute >= item.start && minute < item.end);
     if (!gap) { notice('Tap an open part of the timeline to add time.'); return; }
@@ -407,13 +426,14 @@ function bindTimelineGestures() {
 function render() {
   const current = day();
   if (!current) return;
+  $('settingsSuccess').hidden = true;
   const info = calculate(current, store.settings.johnLead);
   const date = new Date(`${dateKey}T12:00:00`);
   const longDate = new Intl.DateTimeFormat(undefined, { weekday: 'long', month: 'long', day: 'numeric' }).format(date);
   $('pageTitle').textContent = longDate;
   $('dayType').textContent = `${dateKind(dateKey)} plan`;
   $('planDate').value = dateKey;
-  $('daySpan').textContent = `Wake ${formatClock(current.wake)} · Bed ${formatClock(current.bed)}`;
+  $('daySpan').textContent = `Wake ${formatClock(current.wake)} · Bed ${formatClock(current.bed)} · Edit`;
   $('wakeInput').value = inputTime(current.wake);
   $('bedInput').value = inputTime(current.bed);
   $('leadInput').value = String(store.settings.johnLead);
@@ -469,23 +489,50 @@ function bindEvents() {
     if (next.days[dateKey].blocks.length === day().blocks.length) { notice('No target time is left to fill.'); return; }
     save(next, 'Open time assigned. Use Undo if you want to revise it.');
   });
+  $('daySpan').addEventListener('click', () => {
+    $('settingsSuccess').hidden = true;
+    $('settingsPanel').open = true;
+    $('wakeInput').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    $('wakeInput').focus({ preventScroll: true });
+  });
   $('zoomOut').addEventListener('click', () => setZoom(zoom - .5));
   $('zoomIn').addEventListener('click', () => setZoom(zoom + .5));
+  $('settingsForm').addEventListener('input', () => {
+    $('settingsError').hidden = true;
+    $('settingsSuccess').hidden = true;
+  });
   $('settingsForm').addEventListener('submit', event => {
     event.preventDefault();
     const wake = parseTime($('wakeInput').value);
     const bed = parseTime($('bedInput').value);
     const lead = $('leadInput').value === '' ? NaN : Number($('leadInput').value);
+    if (!Number.isInteger(wake) || !Number.isInteger(bed) || wake >= bed) {
+      $('settingsError').textContent = 'Wake time must be before bed time.';
+      $('settingsError').hidden = false;
+      return;
+    }
+    if (!Number.isInteger(lead) || lead < 0 || lead > 240) {
+      $('settingsError').textContent = 'John’s target difference is invalid.';
+      $('settingsError').hidden = false;
+      return;
+    }
+    const affected = day().blocks.filter(block => block.start < wake || block.end > bed).length;
+    if (affected && !confirm(`New day hours will trim or remove ${affected} scheduled block${affected === 1 ? '' : 's'} on this day. Continue?`)) return;
     const next = structuredClone(store);
-    next.days[dateKey].wake = wake;
-    next.days[dateKey].bed = bed;
+    next.days[dateKey] = changeDayHours(next.days[dateKey], wake, bed);
     next.settings.wake = wake;
     next.settings.bed = bed;
     next.settings.johnLead = lead;
     const problem = validateStore(next);
-    if (problem) { $('settingsError').textContent = `${problem} Move blocks inside the new day bounds first.`; $('settingsError').hidden = false; return; }
+    if (problem) { $('settingsError').textContent = problem; $('settingsError').hidden = false; return; }
     $('settingsError').hidden = true;
-    save(next, 'Day settings saved.');
+    if (save(next, affected ? 'Day settings saved. Use Undo to restore changed blocks.' : 'Day settings saved.')) {
+      $('settingsSuccess').textContent = affected ? `${affected} block${affected === 1 ? '' : 's'} trimmed or removed. Scroll up to undo.` : 'Saved.';
+      $('settingsSuccess').hidden = false;
+    } else {
+      $('settingsError').textContent = $('notice').textContent || 'Could not save settings.';
+      $('settingsError').hidden = false;
+    }
   });
   $('resetDay').addEventListener('click', () => {
     if (!confirm('Replace this day with its usual weekday or weekend plan?')) return;
